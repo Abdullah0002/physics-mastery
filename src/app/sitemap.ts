@@ -1,67 +1,43 @@
 import { MetadataRoute } from "next";
-import { prisma } from "@/lib/prisma";
 import { siteConfig } from "@/config/site";
+import { CLASS_11_CHAPTERS, CLASS_12_CHAPTERS } from "@/config/curriculum";
+import { BLOG_POSTS } from "@/config/blog-data";
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+// Built entirely from static config (no database) so it prerenders at build time
+// without requiring DATABASE_URL. Chapters and blog posts are the same static
+// sources the pages themselves are generated from.
+export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.url;
+  const now = new Date();
 
-  // Static pages
   const staticPages: MetadataRoute.Sitemap = [
-    { url: baseUrl, lastModified: new Date(), changeFrequency: "daily", priority: 1 },
-    { url: `${baseUrl}/about`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${baseUrl}/chapters`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
-    { url: `${baseUrl}/practice`, lastModified: new Date(), changeFrequency: "daily", priority: 0.9 },
-    { url: `${baseUrl}/pyqs`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
-    { url: `${baseUrl}/mock-tests`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
-    { url: `${baseUrl}/formula-hub`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
-    { url: `${baseUrl}/resources`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
-    { url: `${baseUrl}/faculty`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${baseUrl}/blog`, lastModified: new Date(), changeFrequency: "daily", priority: 0.8 },
-    { url: `${baseUrl}/contact`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.5 },
+    { url: baseUrl, lastModified: now, changeFrequency: "daily", priority: 1 },
+    { url: `${baseUrl}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/chapters`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${baseUrl}/practice`, lastModified: now, changeFrequency: "daily", priority: 0.9 },
+    { url: `${baseUrl}/pyqs`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${baseUrl}/mock-tests`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${baseUrl}/formula-hub`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${baseUrl}/resources`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${baseUrl}/faculty`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${baseUrl}/blog`, lastModified: now, changeFrequency: "daily", priority: 0.8 },
+    { url: `${baseUrl}/contact`, lastModified: now, changeFrequency: "yearly", priority: 0.5 },
   ];
 
-  // Dynamic chapter pages
-  const chapters = await prisma.chapter.findMany({
-    where: { isPublished: true },
-    select: { slug: true, updatedAt: true },
-  });
-
-  const chapterPages: MetadataRoute.Sitemap = chapters.flatMap((ch) => [
-    {
-      url: `${baseUrl}/chapters/${ch.slug}`,
-      lastModified: ch.updatedAt,
+  const chapters = [...CLASS_11_CHAPTERS, ...CLASS_12_CHAPTERS];
+  const subRoutes = ["", "/theory", "/formulas", "/problems", "/practice", "/pyqs"];
+  const chapterPages: MetadataRoute.Sitemap = chapters.flatMap((ch) =>
+    subRoutes.map((s) => ({
+      url: `${baseUrl}/chapters/${ch.slug}${s}`,
+      lastModified: now,
       changeFrequency: "weekly" as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/chapters/${ch.slug}/practice`,
-      lastModified: ch.updatedAt,
-      changeFrequency: "daily" as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/chapters/${ch.slug}/pyqs`,
-      lastModified: ch.updatedAt,
-      changeFrequency: "monthly" as const,
-      priority: 0.75,
-    },
-    {
-      url: `${baseUrl}/chapters/${ch.slug}/formulas`,
-      lastModified: ch.updatedAt,
-      changeFrequency: "monthly" as const,
-      priority: 0.75,
-    },
-  ]);
+      priority: s === "" ? 0.85 : 0.75,
+    }))
+  );
 
-  // Dynamic blog pages
-  const blogPosts = await prisma.blogPost.findMany({
-    where: { isPublished: true },
-    select: { slug: true, updatedAt: true },
-  });
-
-  const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+  const blogPages: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: post.updatedAt,
+    lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));

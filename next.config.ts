@@ -4,11 +4,10 @@ const nextConfig: NextConfig = {
   // .mdx files treated as pages (without plugins — LaTeX processed at runtime via next-mdx-remote)
   pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
 
-  // NOTE: The codebase carries pre-existing TypeScript/ESLint debt (it had never
-  // completed a production build before deployment was set up). These flags let
-  // `next build` succeed on Vercel; re-enable them and fix the errors as a
+  // NOTE: The codebase carries pre-existing TypeScript debt (it had never
+  // completed a production build before deployment was set up). This lets
+  // `next build` succeed on Vercel; re-enable and fix the errors as a
   // follow-up (`npm run type-check` lists the TypeScript issues).
-  eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
 
   // Keep these pure-ESM packages as native Node.js imports — Turbopack can't bundle them as CJS
