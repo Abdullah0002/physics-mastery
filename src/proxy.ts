@@ -59,8 +59,19 @@ export default auth((req: NextRequest & { auth: { user?: { role?: string } } | n
   return response;
 });
 
+// Only run the auth middleware on routes that actually need it. Public content
+// (home, /chapters, /blog, marketing pages, etc.) bypasses it entirely, so the
+// site works even before auth env vars (AUTH_SECRET, …) are configured. Global
+// security headers are applied separately in next.config.ts.
 export const config = {
   matcher: [
-    "/((?!api|_next/static|_next/image|favicon.ico|public|images|icons|fonts).*)",
+    "/dashboard/:path*",
+    "/study-planner/:path*",
+    "/ai-tutor/:path*",
+    "/practice/weak-areas/:path*",
+    "/admin/:path*",
+    "/faculty/manage/:path*",
+    "/login",
+    "/register",
   ],
 };
