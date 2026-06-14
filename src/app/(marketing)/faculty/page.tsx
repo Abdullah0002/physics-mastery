@@ -11,11 +11,11 @@ import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: `Faculty — ${siteConfig.author.name} | ${siteConfig.name}`,
-  description: `Meet ${siteConfig.author.name}, ${siteConfig.author.designation} with 8+ years of experience and 12,000+ students. Founder of ${siteConfig.name}.`,
+  description: `Meet ${siteConfig.author.name}, ${siteConfig.author.designation} with 5 years of experience and 3,000+ students. Founder of ${siteConfig.name}.`,
   alternates: { canonical: "/faculty" },
   openGraph: {
     title: `${siteConfig.author.name} — ${siteConfig.author.designation}`,
-    description: `Expert JEE & NEET Physics teacher. 200+ AIR < 1000 selections. Founder of AbdOfPhysics.`,
+    description: `Expert JEE & NEET Physics teacher. 10 AIR < 1000 selections. Founder of AbdOfPhysics.`,
     url: `${siteConfig.url}/faculty`,
   },
 };
@@ -44,7 +44,7 @@ export default function FacultyPage() {
             Ready to master Physics?
           </h2>
           <p className="text-muted-foreground text-sm sm:text-base max-w-md">
-            Join 12,000+ students who have transformed their understanding of Physics — one concept at a time.
+            Join 3,000+ students who have transformed their understanding of Physics — one concept at a time.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link

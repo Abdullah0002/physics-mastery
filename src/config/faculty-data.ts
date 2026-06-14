@@ -9,9 +9,9 @@ export interface FacultyStat {
 }
 
 export const FACULTY_STATS: FacultyStat[] = [
-  { value: "12,000+", label: "Students Taught" },
-  { value: "8+", label: "Years Teaching" },
-  { value: "200+", label: "AIR < 1000 Selections" },
+  { value: "3,000+", label: "Students Taught" },
+  { value: "5", label: "Years Teaching" },
+  { value: "10", label: "AIR < 1000 Selections" },
   { value: "4.9 / 5", label: "Average Rating" },
 ];
 
@@ -116,7 +116,7 @@ export interface Achievement {
 export const ACHIEVEMENTS: Achievement[] = [
   {
     emoji: "🏆",
-    title: "200+ AIR < 1000 Selections",
+    title: "10 AIR < 1000 Selections",
     description: "Students clearing JEE Advanced with top 1000 ranks under direct mentorship.",
   },
   {
@@ -133,7 +133,7 @@ export const ACHIEVEMENTS: Achievement[] = [
   },
   {
     emoji: "🎓",
-    title: "12,000+ Students Mentored",
+    title: "3,000+ Students Mentored",
     description: "Students from Class 11, 12, and repeaters across every state in India.",
   },
   {

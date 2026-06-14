@@ -43,7 +43,7 @@ export function FacultyHero() {
                   Senior Faculty
                 </span>
                 <span className="rounded-full bg-emerald-500/10 px-3 py-0.5 text-xs font-semibold text-emerald-600 dark:text-emerald-400">
-                  8+ Years Experience
+                  5 Years Experience
                 </span>
               </div>
               <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">
