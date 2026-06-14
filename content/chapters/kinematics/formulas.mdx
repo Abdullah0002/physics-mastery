@@ -1,0 +1,288 @@
+---
+title: Kinematics — Formula Sheet
+description: Complete formula reference for Kinematics — vectors, equations of motion, chasing, graphs, stopping distance, and Irodov-style variable acceleration. JEE Main & Advanced.
+---
+
+## Position, Displacement & Vectors
+
+<Formula label="Position Vector">
+$$\vec{r} = x\hat{i} + y\hat{j} + z\hat{k}$$
+</Formula>
+
+<Formula label="Displacement (vector subtraction)">
+$$\Delta\vec{r} = \vec{r}_f - \vec{r}_i$$
+</Formula>
+
+<Formula label="Displacement Magnitude (cosine rule)">
+$$|\Delta\vec{r}| = \sqrt{r_f^2 + r_i^2 - 2r_f r_i\cos\theta}$$
+</Formula>
+
+<Callout type="important">
+$|\Delta\vec{r}| \leq s$ (displacement $\leq$ distance). Equality only for straight, one-directional motion.
+</Callout>
+
+---
+
+## Velocity & Speed
+
+<Formula label="Average Velocity">
+$$\vec{v}_{avg} = \frac{\Delta\vec{r}}{\Delta t}$$
+</Formula>
+
+<Formula label="Instantaneous Velocity">
+$$\vec{v} = \frac{d\vec{r}}{dt}$$
+</Formula>
+
+<Formula label="Displacement from Velocity (Integration)">
+$$\Delta\vec{r} = \int_{t_1}^{t_2}\vec{v}\,dt$$
+</Formula>
+
+<Formula label="Average Speed — Equal Distances (Harmonic Mean)">
+$$\langle v \rangle = \frac{2v_1 v_2}{v_1 + v_2}$$
+</Formula>
+
+<Formula label="Average Speed — Equal Times (Arithmetic Mean)">
+$$\langle v \rangle = \frac{v_1 + v_2}{2}$$
+</Formula>
+
+<Formula label="Average Speed — N Equal-Distance Segments">
+$$\frac{1}{\langle v\rangle} = \frac{1}{N}\sum_{i=1}^{N}\frac{1}{v_i}$$
+</Formula>
+
+---
+
+## Average Velocity & Acceleration on a Circle *(JEE Advanced)*
+
+<Formula label="Average Velocity on Arc (angle θ, speed v)">
+$$|\vec{v}_{avg}| = v\cdot\frac{\sin(\theta/2)}{\theta/2}$$
+</Formula>
+
+<Formula label="Average Acceleration on Arc">
+$$|\langle\vec{a}\rangle| = \frac{v^2}{R}\cdot\frac{\sin(\theta/2)}{\theta/2}$$
+</Formula>
+
+| Arc angle $\theta$ | $ \vert \vec{v}_{avg} \vert $ |
+|---|---|
+| $\to 0$ | $v$ |
+| $\pi/2$ | $2\sqrt{2}\,v/\pi$ |
+| $\pi$ | $2v/\pi$ |
+| $2\pi$ | $0$ |
+
+---
+
+## Acceleration
+
+<Formula label="Average Acceleration">
+$$\langle\vec{a}\rangle = \frac{\Delta\vec{v}}{\Delta t}$$
+</Formula>
+
+<Formula label="Instantaneous Acceleration">
+$$\vec{a} = \frac{d\vec{v}}{dt} = \frac{d^2\vec{r}}{dt^2}$$
+</Formula>
+
+<Formula label="Tangential Acceleration (speed change)">
+$$a_t = \frac{dv}{dt}$$
+</Formula>
+
+<Formula label="Centripetal Acceleration (direction change)">
+$$a_c = \frac{v^2}{\rho}$$
+</Formula>
+
+<Formula label="Total Acceleration Magnitude">
+$$|\vec{a}| = \sqrt{a_t^2 + a_c^2}$$
+</Formula>
+
+---
+
+## Equations of Motion (Uniform Acceleration)
+
+<Formula label="v = u + at">
+$$v = u + at$$
+</Formula>
+
+<Formula label="s = ut + ½at²">
+$$s = ut + \frac{1}{2}at^2$$
+</Formula>
+
+<Formula label="v² = u² + 2as">
+$$v^2 = u^2 + 2as$$
+</Formula>
+
+<Formula label="Average-Velocity Form">
+$$s = \frac{u + v}{2}\cdot t$$
+</Formula>
+
+<Formula label="Displacement in the nth Second">
+$$s_n = u + a\!\left(n - \frac{1}{2}\right)$$
+</Formula>
+
+<Callout type="tip">
+From rest ($u = 0$): distances in successive seconds are in ratio **1 : 3 : 5 : 7 ...** (odd numbers). Appears frequently in JEE/NEET.
+</Callout>
+
+---
+
+## Chasing & Collision Problems
+
+<Formula label="Meeting Time (same starting point, u₁ > u₂, a₂ > a₁)">
+$$t_{meet} = \frac{2(u_1 - u_2)}{a_2 - a_1}$$
+</Formula>
+
+<Formula label="Time of Maximum Separation">
+$$t^* = \frac{u_1 - u_2}{a_2 - a_1} = \frac{t_{meet}}{2}$$
+</Formula>
+
+<Formula label="Minimum Safe Following Distance (no collision)">
+$$d_{min} = \frac{(v_2 - v_1)^2}{2a_r}$$
+</Formula>
+
+---
+
+## Stopping Distance
+
+<Formula label="Stopping Distance — Case I (constant speed during reaction)">
+$$S_1 = v_0\tau + \frac{v_0^2}{2a_r}$$
+</Formula>
+
+<Formula label="Stopping Distance — Case II (accelerating during reaction)">
+$$S_2 = v_0\tau + \frac{1}{2}a\tau^2 + \frac{(v_0 + a\tau)^2}{2a_r}$$
+</Formula>
+
+<Formula label="Minimum Braking Distance (stop before wall)">
+$$d_{min} = \frac{v_0^2}{2a_r}$$
+</Formula>
+
+---
+
+## Motion Graphs — Master Rules
+
+| Graph | Slope | Area |
+|---|---|---|
+| $x$-$t$ | velocity $v$ | — |
+| $v$-$t$ | acceleration $a$ | displacement $\Delta x$ |
+| $a$-$t$ | jerk $da/dt$ | velocity change $\Delta v$ |
+
+---
+
+## Triangle & Trapezoid Journeys
+
+<Formula label="Peak Speed — Triangle Journey (from rest to rest)">
+$$v_{peak} = \frac{\alpha\beta\tau}{\alpha + \beta}$$
+</Formula>
+
+<Formula label="Total Distance — Triangle Journey">
+$$S = \frac{1}{2}\cdot\frac{\alpha\beta}{\alpha + \beta}\cdot\tau^2$$
+</Formula>
+
+where $\alpha$ = acceleration, $\beta$ = deceleration, $\tau$ = total time.
+
+---
+
+## Non-Standard Graph Axes *(JEE Advanced)*
+
+<Formula label="Acceleration from v²-s graph slope">
+$$a = \frac{1}{2}\cdot\frac{d(v^2)}{ds} = \frac{1}{2}\tan\theta$$
+</Formula>
+
+<Formula label="Speed change from area under a-s graph">
+$$\int_{s_1}^{s_2} a\,ds = \frac{v_2^2 - v_1^2}{2}$$
+</Formula>
+
+<Callout type="warning">
+Slope of $v^2$-$s$ graph $= 2a$, not $a$. The factor of 2 is the most common error on these problems.
+</Callout>
+
+---
+
+## Variable Acceleration (Irodov Style) *(JEE Advanced)*
+
+| Goal | Form to use |
+|---|---|
+| Find displacement | $a = v\,\dfrac{dv}{ds}$ |
+| Find time | $a = \dfrac{dv}{dt}$ |
+
+<Formula label="Stopping Distance for a = –α√v">
+$$s_{stop} = \frac{2v_0^{3/2}}{3\alpha}$$
+</Formula>
+
+<Formula label="Stopping Time for a = –α√v">
+$$T_{stop} = \frac{2\sqrt{v_0}}{\alpha}$$
+</Formula>
+
+| Retardation | Stops in finite distance? | Stops in finite time? |
+|---|---|---|
+| Constant $a_r$ | Yes — $v_0^2/(2a_r)$ | Yes — $v_0/a_r$ |
+| $\alpha\sqrt{v}$ | Yes — $2v_0^{3/2}/(3\alpha)$ | Yes — $2\sqrt{v_0}/\alpha$ |
+| $kv^2$ | No | No |
+
+---
+
+## Free Fall / Vertical Motion
+
+<Formula label="Velocity at height h (thrown upward)">
+$$v^2 = u^2 - 2gh$$
+</Formula>
+
+<Formula label="Maximum Height">
+$$H = \frac{u^2}{2g}$$
+</Formula>
+
+<Formula label="Time to reach maximum height">
+$$t_{top} = \frac{u}{g}$$
+</Formula>
+
+<Formula label="Total time of flight">
+$$T = \frac{2u}{g}$$
+</Formula>
+
+---
+
+## Projectile Motion
+
+<Formula label="Horizontal Range">
+$$R = \frac{u^2\sin 2\theta}{g}$$
+</Formula>
+
+<Formula label="Maximum Height">
+$$H = \frac{u^2\sin^2\theta}{2g}$$
+</Formula>
+
+<Formula label="Time of Flight">
+$$T = \frac{2u\sin\theta}{g}$$
+</Formula>
+
+<Formula label="Equation of Trajectory">
+$$y = x\tan\theta - \frac{gx^2}{2u^2\cos^2\theta}$$
+</Formula>
+
+<Formula label="Maximum Range (at θ = 45°)">
+$$R_{max} = \frac{u^2}{g}$$
+</Formula>
+
+<Callout type="important">
+Angles $\theta$ and $(90° - \theta)$ give the **same range** — use this to eliminate MCQ options quickly.
+</Callout>
+
+---
+
+## Relative Motion
+
+<Formula label="Relative Velocity">
+$$\vec{v}_{AB} = \vec{v}_A - \vec{v}_B$$
+</Formula>
+
+<Formula label="Rain-man Umbrella Angle">
+$$\tan\alpha = \frac{v_{man}}{v_{rain}}$$
+</Formula>
+
+---
+
+## Key Results Cheat-Sheet
+
+| Result | Formula |
+|---|---|
+| Object dropped from height $h$ | $v = \sqrt{2gh}$, $t = \sqrt{2h/g}$ |
+| Distances from rest in successive seconds | $1 : 3 : 5 : 7 \ldots$ |
+| Complementary angles give same range | $R(\theta) = R(90°-\theta)$ |
+| Ball thrown up returns with same speed | $v_{return} = u$ |
+| Stopping distance scales as | $v_0^2$ (double speed → 4× stopping distance) |

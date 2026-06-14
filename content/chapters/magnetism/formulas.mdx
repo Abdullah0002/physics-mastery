@@ -1,0 +1,150 @@
+---
+title: Magnetism — Formula Sheet
+description: Key formulas for Magnetism for JEE & NEET.
+---
+
+## Lorentz Force
+
+<Formula label="Lorentz Force on Moving Charge">
+$$\vec{F} = q(\vec{E} + \vec{v}\times\vec{B})$$
+$$\text{Magnetic component: } \vec{F}_B = q\vec{v}\times\vec{B}, \quad |\vec{F}_B| = qvB\sin\theta$$
+</Formula>
+
+<Formula label="Force on Current-Carrying Conductor">
+$$d\vec{F} = I\,d\vec{l}\times\vec{B}, \quad \vec{F} = I\vec{L}\times\vec{B}$$
+$$|\vec{F}| = BIl\sin\theta$$
+</Formula>
+
+---
+
+## Motion of Charged Particle in Magnetic Field
+
+<Formula label="Circular Motion in Magnetic Field">
+$$r = \frac{mv}{qB} = \frac{p}{qB}$$
+$$T = \frac{2\pi m}{qB} \quad \text{(cyclotron period, independent of speed)}$$
+$$\omega_c = \frac{qB}{m} \quad \text{(cyclotron angular frequency)}$$
+</Formula>
+
+<Formula label="Helical Motion (v has component along B)">
+$$r = \frac{mv_\perp}{qB}, \quad \text{pitch} = v_\parallel T = \frac{2\pi m v_\parallel}{qB}$$
+</Formula>
+
+<Formula label="Cyclotron Maximum Kinetic Energy">
+$$KE_{\max} = \frac{q^2B^2R^2}{2m} \quad (R = \text{radius of dee})$$
+$$v_{\max} = \frac{qBR}{m}$$
+</Formula>
+
+---
+
+## Biot-Savart Law
+
+<Formula label="Biot-Savart Law">
+$$d\vec{B} = \frac{\mu_0}{4\pi}\frac{I\,d\vec{l}\times\hat{r}}{r^2}, \quad \mu_0 = 4\pi\times10^{-7}\ \text{T m A}^{-1}$$
+</Formula>
+
+<Formula label="Magnetic Field at Centre of Circular Loop">
+$$B = \frac{\mu_0 I}{2R} \quad \text{(at center of full circular loop)}$$
+$$B = \frac{\mu_0 I \theta}{4\pi R} \quad \text{(for arc subtending angle } \theta\text{)}$$
+</Formula>
+
+<Formula label="Field on Axis of Circular Loop">
+$$B = \frac{\mu_0 IR^2}{2(R^2 + x^2)^{3/2}} \quad \text{(x = distance along axis)}$$
+</Formula>
+
+<Formula label="Infinite Straight Wire">
+$$B = \frac{\mu_0 I}{2\pi r}$$
+</Formula>
+
+<Formula label="Finite Straight Wire (between angles α₁, α₂)">
+$$B = \frac{\mu_0 I}{4\pi r}(\sin\alpha_1 + \sin\alpha_2)$$
+$$\text{Semi-infinite wire: } B = \frac{\mu_0 I}{4\pi r}$$
+</Formula>
+
+---
+
+## Ampere's Law
+
+<Formula label="Ampere's Circuital Law">
+$$\oint \vec{B}\cdot d\vec{l} = \mu_0 I_{\text{enc}}$$
+</Formula>
+
+<Formula label="Solenoid (infinite, n turns per unit length)">
+$$B = \mu_0 nI \quad \text{(inside)}, \quad B = 0 \quad \text{(outside)}$$
+$$n = N/L \quad \text{(turns per unit length)}$$
+</Formula>
+
+<Formula label="Toroid">
+$$B = \frac{\mu_0 NI}{2\pi r} \quad \text{(inside toroid at radius r)}$$
+$$B = 0 \quad \text{(outside toroid)}$$
+</Formula>
+
+---
+
+## Force between Two Parallel Wires
+
+<Formula label="Force per Unit Length between Two Parallel Wires">
+$$\frac{F}{L} = \frac{\mu_0 I_1 I_2}{2\pi d}$$
+$$\text{Parallel currents attract; antiparallel currents repel}$$
+</Formula>
+
+<Formula label="Definition of Ampere">
+$$1\ \text{A} \text{ defined such that } F/L = 2\times10^{-7}\ \text{N m}^{-1} \text{ when } d = 1\ \text{m, } I_1=I_2=1\ \text{A}$$
+</Formula>
+
+---
+
+## Magnetic Dipole
+
+<Formula label="Magnetic Dipole Moment">
+$$\vec{m} = I A \hat{n} = NIA\hat{n}$$
+$$\text{(N = turns, A = area, } \hat{n} \text{ = normal using right-hand rule)}$$
+</Formula>
+
+<Formula label="Torque on Magnetic Dipole in Field">
+$$\vec{\tau} = \vec{m}\times\vec{B}, \quad |\tau| = mB\sin\theta$$
+</Formula>
+
+<Formula label="Potential Energy of Dipole">
+$$U = -\vec{m}\cdot\vec{B} = -mB\cos\theta$$
+$$U_{\min} = -mB\ (\theta=0),\quad U_{\max} = +mB\ (\theta=180°)$$
+</Formula>
+
+<Formula label="Magnetic Field of Bar Magnet (on axis)">
+$$B_{\text{axis}} = \frac{\mu_0}{4\pi}\frac{2m}{r^3}$$
+</Formula>
+
+<Formula label="Magnetic Field of Bar Magnet (on equator)">
+$$B_{\text{equator}} = \frac{\mu_0}{4\pi}\frac{m}{r^3}$$
+</Formula>
+
+---
+
+## Hall Effect
+
+<Formula label="Hall Voltage">
+$$V_H = \frac{IB}{ned} = \frac{BI}{ned}$$
+$$\text{(n = carrier density, e = charge, d = thickness in direction of B)}$$
+</Formula>
+
+<Formula label="Hall Coefficient">
+$$R_H = \frac{1}{ne} \quad \text{(for negative carriers: } R_H = -1/ne\text{)}$$
+$$V_H = R_H \frac{IB}{d}$$
+</Formula>
+
+---
+
+## Moving Coil Galvanometer
+
+<Formula label="Galvanometer Deflection">
+$$\tau = NIAB = k\phi \implies \phi = \frac{NIAB}{k}$$
+$$\text{(k = torsional constant of suspension)}$$
+$$I = \left(\frac{k}{NAB}\right)\phi = G\phi, \quad G = \frac{k}{NAB}\ \text{(galvanometer constant)}$$
+</Formula>
+
+<Formula label="Conversion to Ammeter (shunt S)">
+$$S = \frac{I_g G}{I - I_g}$$
+</Formula>
+
+<Formula label="Conversion to Voltmeter (series R)">
+$$R = \frac{V}{I_g} - G$$
+</Formula>

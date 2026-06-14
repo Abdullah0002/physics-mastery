@@ -1,0 +1,130 @@
+---
+title: Sound Waves — Formula Sheet
+description: Key formulas for Sound Waves for JEE & NEET.
+---
+
+## Speed of Sound
+
+<Formula label="Newton's Formula (Isothermal)">
+$$v = \sqrt{\frac{B}{\rho}} = \sqrt{\frac{P}{\rho}} \quad \text{(Newton assumed isothermal, incorrect: 280 m/s at 0°C)}$$
+</Formula>
+
+<Formula label="Laplace Correction (Adiabatic)">
+$$v = \sqrt{\frac{\gamma P}{\rho}} = \sqrt{\frac{\gamma RT}{M}} \quad \text{(correct: ~332 m/s at 0°C)}$$
+</Formula>
+
+<Formula label="Speed of Sound — Temperature Dependence">
+$$v \propto \sqrt{T}, \quad v_T = v_0 + 0.6\,t \ \text{m/s} \quad (t \text{ in }°C)$$
+$$v_{T} = v_0\sqrt{\frac{T}{T_0}} \quad (T \text{ in K})$$
+</Formula>
+
+<Formula label="Speed of Sound in Different Media">
+$$v_{\text{solid}} = \sqrt{\frac{Y}{\rho}}, \quad v_{\text{liquid}} = \sqrt{\frac{B}{\rho}}, \quad v_{\text{gas}} = \sqrt{\frac{\gamma P}{\rho}}$$
+$$v_{\text{solid}} > v_{\text{liquid}} > v_{\text{gas}} \text{ (generally)}$$
+</Formula>
+
+---
+
+## Sound Wave Equations
+
+<Formula label="Displacement Wave">
+$$s = s_0\cos(kx - \omega t)$$
+</Formula>
+
+<Formula label="Pressure Wave">
+$$\Delta P = -B\frac{\partial s}{\partial x} = Bks_0\sin(kx-\omega t) = \Delta P_0\sin(kx-\omega t)$$
+$$\Delta P_0 = Bks_0 = \rho\omega v s_0$$
+</Formula>
+
+<Formula label="Pressure and Displacement Phase Relation">
+$$\text{Pressure wave is } 90° \text{ ahead of displacement wave}$$
+$$\text{Displacement antinodes} \equiv \text{Pressure nodes (and vice versa)}$$
+</Formula>
+
+---
+
+## Intensity and Loudness
+
+<Formula label="Intensity of Sound Wave">
+$$I = \frac{1}{2}\rho\omega^2 s_0^2 v = \frac{(\Delta P_0)^2}{2\rho v}$$
+</Formula>
+
+<Formula label="Intensity Level (Decibel)">
+$$\beta = 10\log_{10}\frac{I}{I_0} \quad \text{dB}$$
+$$I_0 = 10^{-12}\ \text{W m}^{-2} \quad \text{(threshold of hearing)}$$
+</Formula>
+
+<Formula label="Intensity vs Distance">
+$$I \propto \frac{1}{r^2} \quad \text{(point source, no absorption)}$$
+$$\Delta\beta = 10\log_{10}\frac{r_1^2}{r_2^2} = 20\log_{10}\frac{r_1}{r_2}$$
+</Formula>
+
+---
+
+## Organ Pipes
+
+<Formula label="Open Pipe — Resonance Frequencies">
+$$f_n = \frac{nv}{2L}, \quad n = 1,2,3,\ldots$$
+$$f_1 = \frac{v}{2L} \quad \text{(fundamental)}$$
+$$\text{All harmonics present}$$
+</Formula>
+
+<Formula label="Closed Pipe — Resonance Frequencies">
+$$f_n = \frac{(2n-1)v}{4L}, \quad n = 1,2,3,\ldots$$
+$$f_1 = \frac{v}{4L} \quad \text{(fundamental)}$$
+$$\text{Only odd harmonics present}$$
+</Formula>
+
+<Formula label="End Correction (Rayleigh)">
+$$e = 0.3d \quad (d = \text{diameter of pipe})$$
+$$L_{\text{effective}} = L + e \text{ (closed)}, \quad L + 2e \text{ (open)}$$
+</Formula>
+
+<Callout type="important">
+For same length, fundamental frequency of open pipe is TWICE that of closed pipe. Open pipe produces richer sound (all harmonics).
+</Callout>
+
+---
+
+## Beats in Organ Pipes
+
+<Formula label="Beats between Two Sources">
+$$f_{\text{beat}} = |f_1 - f_2|$$
+</Formula>
+
+<Formula label="Identifying Unknown Frequency by Beats">
+$$f_{\text{unknown}} = f_{\text{known}} \pm f_{\text{beat}}$$
+$$\text{(load the fork to increase/decrease frequency and check beat direction)}$$
+</Formula>
+
+---
+
+## Resonance in Closed Pipe — Experimental
+
+<Formula label="First Resonance (Quarter Wave)">
+$$l_1 + e = \frac{\lambda}{4} \implies \lambda = 4(l_1 + e)$$
+</Formula>
+
+<Formula label="Second Resonance (Three-Quarter Wave)">
+$$l_2 + e = \frac{3\lambda}{4}$$
+$$\lambda = 2(l_2 - l_1) \implies v = f \cdot \lambda = 2f(l_2 - l_1)$$
+</Formula>
+
+---
+
+## Doppler Effect for Sound
+
+<Formula label="Doppler Formula">
+$$f' = f\frac{v \pm v_o}{v \mp v_s}$$
+$$\text{(+ numerator: observer moves toward source; − denominator: source moves toward observer)}$$
+</Formula>
+
+<Formula label="Doppler Shift for Moving Medium">
+$$f' = f\frac{(v+v_m) \pm v_o}{(v+v_m) \mp v_s}$$
+$$\text{(} v_m \text{: wind speed along direction of sound propagation)}$$
+</Formula>
+
+<Formula label="Mach Number">
+$$M = \frac{v_s}{v_{\text{sound}}}, \quad \text{Sonic boom at } M = 1$$
+$$\sin\theta = \frac{1}{M} \quad \text{(half-angle of Mach cone)}$$
+</Formula>

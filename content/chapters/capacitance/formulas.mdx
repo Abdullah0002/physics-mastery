@@ -1,0 +1,127 @@
+---
+title: Capacitance — Formula Sheet
+description: Key formulas for Capacitance for JEE & NEET.
+---
+
+## Capacitance and Capacitors
+
+<Formula label="Definition of Capacitance">
+$$C = \frac{Q}{V} \quad \text{[F = C V}^{-1}\text{]}$$
+</Formula>
+
+<Formula label="Parallel Plate Capacitor (vacuum)">
+$$C_0 = \frac{\varepsilon_0 A}{d}$$
+$$\varepsilon_0 = 8.854\times10^{-12}\ \text{F m}^{-1}$$
+</Formula>
+
+<Formula label="Parallel Plate Capacitor with Dielectric">
+$$C = \frac{K\varepsilon_0 A}{d} = KC_0 \quad (K = \text{dielectric constant} \geq 1)$$
+</Formula>
+
+<Formula label="Spherical Capacitor (inner R₁, outer R₂)">
+$$C = \frac{4\pi\varepsilon_0 R_1 R_2}{R_2 - R_1}$$
+$$\text{Isolated sphere: } C = 4\pi\varepsilon_0 R$$
+</Formula>
+
+<Formula label="Cylindrical Capacitor (length L, radii a, b)">
+$$C = \frac{2\pi\varepsilon_0 L}{\ln(b/a)}$$
+</Formula>
+
+---
+
+## Combinations of Capacitors
+
+<Formula label="Series Combination">
+$$\frac{1}{C_{\text{eff}}} = \frac{1}{C_1} + \frac{1}{C_2} + \cdots$$
+$$\text{Charge same on each; voltage divides inversely}$$
+$$V_i = \frac{Q}{C_i}, \quad V_{\text{total}} = Q\sum\frac{1}{C_i}$$
+</Formula>
+
+<Formula label="Parallel Combination">
+$$C_{\text{eff}} = C_1 + C_2 + \cdots$$
+$$\text{Voltage same on each; charge divides proportionally}$$
+$$Q_i = C_i V, \quad Q_{\text{total}} = V\sum C_i$$
+</Formula>
+
+---
+
+## Energy in a Capacitor
+
+<Formula label="Energy Stored in Capacitor">
+$$U = \frac{Q^2}{2C} = \frac{1}{2}CV^2 = \frac{QV}{2}$$
+</Formula>
+
+<Formula label="Energy Density in Electric Field">
+$$u = \frac{1}{2}\varepsilon_0 E^2 = \frac{1}{2}\varepsilon_0 K E^2 \text{ (with dielectric)}$$
+</Formula>
+
+---
+
+## Effect of Dielectric
+
+<Formula label="With Dielectric — Battery Connected (V constant)">
+$$C' = KC, \quad Q' = KQ, \quad E' = E, \quad U' = KU$$
+</Formula>
+
+<Formula label="With Dielectric — Battery Disconnected (Q constant)">
+$$C' = KC, \quad V' = V/K, \quad E' = E/K, \quad U' = U/K$$
+</Formula>
+
+<Formula label="Force on Dielectric Slab (partially inserted, battery connected)">
+$$F = \frac{\varepsilon_0(K-1)V^2 b}{2d} \quad (b = \text{width of slab})$$
+</Formula>
+
+---
+
+## Electric Field in Capacitor
+
+<Formula label="Electric Field between Plates">
+$$E = \frac{\sigma}{\varepsilon_0} = \frac{V}{d} \quad \text{(uniform field, no fringe)}$$
+$$\sigma = \frac{Q}{A}$$
+</Formula>
+
+<Formula label="Field with Dielectric (inside slab)">
+$$E_{\text{medium}} = \frac{E_0}{K} = \frac{\sigma}{K\varepsilon_0}$$
+</Formula>
+
+---
+
+## RC Circuit
+
+<Formula label="Charging a Capacitor (through R, connected to EMF ε)">
+$$q(t) = C\varepsilon\left(1 - e^{-t/RC}\right) = Q_0\left(1 - e^{-t/\tau}\right)$$
+$$V_C(t) = \varepsilon\left(1 - e^{-t/\tau}\right)$$
+$$I(t) = \frac{\varepsilon}{R}e^{-t/\tau}$$
+$$\tau = RC \quad \text{(time constant)}$$
+</Formula>
+
+<Formula label="Discharging a Capacitor (through R)">
+$$q(t) = Q_0 e^{-t/\tau}$$
+$$V_C(t) = V_0 e^{-t/\tau}$$
+$$I(t) = \frac{V_0}{R}e^{-t/\tau}$$
+</Formula>
+
+<Formula label="Energy Dissipated in Charging (Heat in R)">
+$$U_R = \frac{1}{2}C\varepsilon^2 = U_C$$
+$$\text{(Half of energy from source is stored; half dissipated regardless of R)}$$
+</Formula>
+
+<Callout type="important">
+Energy dissipated in R = Energy stored in C = $\frac{1}{2}C\varepsilon^2$, regardless of R. This is a fundamental result.
+</Callout>
+
+---
+
+## Capacitors in Various Arrangements
+
+<Formula label="Capacitor with Conducting Slab (thickness t)">
+$$C = \frac{\varepsilon_0 A}{d - t}$$
+</Formula>
+
+<Formula label="Capacitor with Multiple Dielectric Slabs (series)">
+$$C = \frac{\varepsilon_0 A}{t_1/K_1 + t_2/K_2 + \cdots}$$
+</Formula>
+
+<Formula label="Capacitor with Multiple Dielectric Slabs (parallel)">
+$$C = \frac{\varepsilon_0}{d}\left(K_1 A_1 + K_2 A_2 + \cdots\right)$$
+</Formula>

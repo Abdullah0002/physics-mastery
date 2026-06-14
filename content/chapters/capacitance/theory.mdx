@@ -1,0 +1,146 @@
+---
+title: Capacitance — Theory
+description: Capacitors, capacitance formula, combinations, energy stored, dielectrics, and RC circuits for JEE & NEET.
+difficulty: HARD
+tags: [capacitance, capacitor, dielectric, energy, RC-circuit]
+---
+
+## 1. Capacitance
+
+A capacitor stores charge. Capacitance $C$ relates charge to voltage:
+
+<Formula label="Capacitance">
+$$C = \frac{Q}{V} \quad \text{(SI unit: farad, F = C/V)}$$
+</Formula>
+
+---
+
+## 2. Parallel Plate Capacitor
+
+Two plates of area $A$ separated by distance $d$ (with vacuum):
+
+<Formula label="Capacitance — Parallel Plate">
+$$C_0 = \frac{\varepsilon_0 A}{d}$$
+</Formula>
+
+With dielectric (dielectric constant $K$):
+
+<Formula label="With Dielectric">
+$$C = KC_0 = \frac{K\varepsilon_0 A}{d}$$
+</Formula>
+
+**Electric field inside (uniform):** $E = V/d = \sigma/\varepsilon_0 = \sigma K/\varepsilon$ (with dielectric: $E = V/d = Q/(KC_0 d)$).
+
+---
+
+## 3. Spherical Capacitor
+
+Isolated sphere of radius $R$:
+
+$$C = 4\pi\varepsilon_0 R$$
+
+Concentric spheres ($a < b$):
+
+$$C = 4\pi\varepsilon_0\frac{ab}{b-a}$$
+
+---
+
+## 4. Cylindrical Capacitor
+
+Two coaxial cylinders, inner radius $a$, outer radius $b$, length $L$:
+
+$$C = \frac{2\pi\varepsilon_0 L}{\ln(b/a)}$$
+
+---
+
+## 5. Combinations of Capacitors
+
+### Series
+
+$$\frac{1}{C_{eq}} = \frac{1}{C_1} + \frac{1}{C_2} + \cdots$$
+
+Same charge $Q$ on each. Voltages add: $V = V_1 + V_2$.
+
+### Parallel
+
+$$C_{eq} = C_1 + C_2 + \cdots$$
+
+Same voltage $V$ across each. Charges add: $Q = Q_1 + Q_2$.
+
+<Callout type="tip">
+For two capacitors in series: $C_{eq} = C_1C_2/(C_1+C_2)$ and the voltage divides inversely with capacitance ($V_1/V_2 = C_2/C_1$).
+</Callout>
+
+---
+
+## 6. Energy Stored in a Capacitor
+
+<Formula label="Energy Stored">
+$$U = \frac{1}{2}QV = \frac{1}{2}CV^2 = \frac{Q^2}{2C}$$
+</Formula>
+
+**Energy density in the electric field:**
+
+$$u = \frac{U}{Ad} = \frac{1}{2}\varepsilon_0 E^2 = \frac{1}{2}K\varepsilon_0 E^2 \text{ (with dielectric)}$$
+
+---
+
+## 7. Dielectrics in Capacitors
+
+When a dielectric is inserted (isolated capacitor, $Q$ constant):
+- $C$ increases by factor $K$
+- $V$ decreases by factor $K$
+- $E$ decreases by factor $K$
+- $U$ decreases by factor $K$
+
+When dielectric is inserted with battery connected ($V$ constant):
+- $C$ increases by factor $K$
+- $Q$ increases by factor $K$
+- $E$ unchanged
+- $U$ increases by factor $K$
+
+<Callout type="important">
+These two scenarios give opposite energy results! With isolated capacitor: inserting dielectric releases energy (it's pulled in). With battery: energy increases (battery must supply extra charge).
+</Callout>
+
+---
+
+## 8. Charge Sharing Between Capacitors
+
+When two charged capacitors ($C_1, Q_1$) and ($C_2, Q_2$) are connected (positive to positive):
+
+$$V_{common} = \frac{Q_1+Q_2}{C_1+C_2}$$
+
+Energy lost (as heat in resistance):
+
+$$\Delta U = \frac{C_1 C_2(V_1-V_2)^2}{2(C_1+C_2)}$$
+
+---
+
+## 9. RC Circuit
+
+When a capacitor $C$ charges through resistance $R$ from voltage $V_0$:
+
+<Formula label="Charging">
+$$q(t) = Q_0\left(1 - e^{-t/RC}\right), \quad V_C = V_0\left(1-e^{-t/RC}\right)$$
+</Formula>
+
+<Formula label="Discharging">
+$$q(t) = Q_0\,e^{-t/RC}, \quad V_C = V_0\,e^{-t/RC}$$
+</Formula>
+
+**Time constant:** $\tau = RC$. After time $\tau$: capacitor is ~63% charged.
+
+---
+
+## 10. Summary
+
+| Quantity | Formula |
+|---|---|
+| Parallel plate $C$ | $\varepsilon_0 A/d$ |
+| With dielectric | $K\varepsilon_0 A/d$ |
+| Series combo | $1/C_{eq} = \Sigma(1/C_i)$ |
+| Parallel combo | $C_{eq} = \Sigma C_i$ |
+| Energy stored | $\frac{1}{2}CV^2 = Q^2/2C$ |
+| Energy density | $\frac{1}{2}\varepsilon_0 E^2$ |
+| RC time constant | $\tau = RC$ |

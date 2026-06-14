@@ -1,0 +1,139 @@
+---
+title: Communication Systems — Theory
+description: Analog and digital signals, modulation, AM/FM, bandwidth, antennas, and satellite communication for JEE & NEET.
+difficulty: MEDIUM
+tags: [communication, modulation, AM, FM, bandwidth, satellite, antenna]
+---
+
+## 1. Elements of a Communication System
+
+```
+[Information source] → [Transmitter] → [Channel/Medium] → [Receiver] → [Destination]
+```
+
+Key components:
+- **Transducer:** Converts information to electrical signal.
+- **Modulator:** Superimposes signal on carrier wave.
+- **Demodulator:** Extracts original signal from modulated wave.
+- **Amplifier:** Strengthens weak signals.
+
+---
+
+## 2. Signal Types
+
+**Analog signal:** Continuous variation with time (e.g., speech waveform).
+
+**Digital signal:** Discrete levels (0 and 1). More noise-resistant; easier to store/process.
+
+---
+
+## 3. Terminology
+
+| Term | Meaning |
+|---|---|
+| Bandwidth | Range of frequencies in a signal |
+| Noise | Unwanted electrical disturbance |
+| Attenuation | Decrease in signal strength during transmission |
+| Repeater | Regenerates signal to overcome attenuation |
+| SNR | Signal-to-noise ratio |
+
+---
+
+## 4. Modulation
+
+Modulation = varying one property (amplitude, frequency, or phase) of a high-frequency **carrier wave** in accordance with the lower-frequency **message signal**.
+
+**Why modulate?**
+- Transmit over large distances.
+- Allow multiple simultaneous transmissions (multiplexing).
+- Impractical antenna size for direct transmission at audio frequencies.
+
+---
+
+## 5. Amplitude Modulation (AM)
+
+The amplitude of the carrier is varied proportional to the message signal.
+
+Carrier: $c(t) = A_c\cos(\omega_c t)$; message: $m(t) = A_m\cos(\omega_m t)$.
+
+$$s_{AM}(t) = A_c[1 + \mu\cos(\omega_m t)]\cos(\omega_c t)$$
+
+**Modulation index:**
+
+<Formula label="Modulation Index (AM)">
+$$\mu_a = \frac{A_m}{A_c}$$
+</Formula>
+
+For undistorted AM: $0 \leq \mu_a \leq 1$.
+
+**Sidebands:** AM signal contains 3 frequencies: $f_c$, $f_c+f_m$, $f_c-f_m$.
+
+**Bandwidth of AM:** $B = 2f_m$ (twice the message bandwidth).
+
+---
+
+## 6. Frequency Modulation (FM)
+
+The frequency of the carrier is varied. FM is more noise-resistant than AM.
+
+**Bandwidth (Carson's rule):** $B = 2(f_m + \Delta f)$ where $\Delta f$ = maximum frequency deviation.
+
+FM broadcasting: 87.5–108 MHz range (wide bandwidth allows high-fidelity audio).
+
+---
+
+## 7. Propagation of EM Waves
+
+| Mode | How | Frequency range | Range |
+|---|---|---|---|
+| Ground (surface) wave | Along Earth's surface | < 30 MHz | Short to medium |
+| Sky wave | Reflected by ionosphere | 2–30 MHz (HF) | Long range |
+| Space wave (LOS) | Line of sight | > 30 MHz (VHF/UHF) | Limited by horizon |
+
+**Range of LOS transmission:**
+
+<Formula label="Range of Antenna">
+$$d = \sqrt{2Rh}$$
+</Formula>
+
+where $R$ = Earth's radius ($6.4\times10^6$ m), $h$ = antenna height.
+
+**Total range (two antennas, heights $h_T$ and $h_R$):**
+
+$$d = \sqrt{2Rh_T} + \sqrt{2Rh_R}$$
+
+---
+
+## 8. Ionosphere
+
+Layer of ionised gases (~60–1000 km altitude). Reflects HF radio waves back to Earth (sky wave propagation). The maximum frequency reflected = **critical frequency** $f_c = 9\sqrt{N_{max}}$ Hz (where $N_{max}$ = electron number density).
+
+---
+
+## 9. Satellite Communication
+
+Geostationary satellites (at ~36,000 km altitude) appear stationary relative to Earth. Used for: TV broadcasting, telephone, weather forecasting, GPS.
+
+**Uplink:** Earth → satellite. **Downlink:** satellite → Earth. Different frequencies used to avoid interference.
+
+---
+
+## 10. Mobile Telephony and Internet
+
+- **AM band:** 540 kHz – 1600 kHz
+- **FM band:** 88 MHz – 108 MHz
+- **TV:** VHF (47–230 MHz) and UHF (470–960 MHz)
+- **Mobile/cellular:** 900 MHz, 1800 MHz, and higher bands (3G/4G/5G)
+
+---
+
+## 11. Summary
+
+| Concept | Formula / Key Fact |
+|---|---|
+| AM modulation index | $\mu = A_m/A_c \leq 1$ |
+| AM bandwidth | $2f_m$ |
+| FM: noise resistance | Better than AM |
+| LOS range | $d = \sqrt{2Rh}$ |
+| Satellite height | ~36,000 km (geostationary) |
+| Sky wave range | HF band, up to 4000 km |

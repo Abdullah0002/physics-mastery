@@ -1,0 +1,137 @@
+---
+title: Simple Harmonic Motion — Formula Sheet
+description: Key formulas for Simple Harmonic Motion for JEE & NEET.
+---
+
+## Defining Equation of SHM
+
+<Formula label="Defining Condition">
+$$a = -\omega^2 x \quad \text{(acceleration proportional to, and directed towards, equilibrium)}$$
+</Formula>
+
+<Formula label="Equation of Motion">
+$$\frac{d^2x}{dt^2} + \omega^2 x = 0$$
+</Formula>
+
+---
+
+## Displacement, Velocity, Acceleration
+
+<Formula label="General Solution">
+$$x(t) = A\sin(\omega t + \phi)$$
+$$\text{or equivalently: } x(t) = A\cos(\omega t + \phi')$$
+</Formula>
+
+<Formula label="Velocity">
+$$v = \frac{dx}{dt} = A\omega\cos(\omega t + \phi) = \omega\sqrt{A^2 - x^2}$$
+</Formula>
+
+<Formula label="Acceleration">
+$$a = -\omega^2 x = -\omega^2 A\sin(\omega t + \phi)$$
+</Formula>
+
+<Formula label="Maximum Values">
+$$x_{\max} = A,\quad v_{\max} = A\omega,\quad a_{\max} = A\omega^2$$
+$$\text{(at equilibrium: } v = v_{\max}, a = 0\text{; at extreme: } v = 0, a = a_{\max}\text{)}$$
+</Formula>
+
+---
+
+## Energy in SHM
+
+<Formula label="Kinetic Energy">
+$$KE = \frac{1}{2}m\omega^2(A^2 - x^2) = \frac{1}{2}mv^2$$
+$$KE_{\max} = \frac{1}{2}m\omega^2 A^2 \quad \text{(at equilibrium)}$$
+</Formula>
+
+<Formula label="Potential Energy">
+$$PE = \frac{1}{2}m\omega^2 x^2 = \frac{1}{2}kx^2$$
+$$PE_{\max} = \frac{1}{2}m\omega^2 A^2 \quad \text{(at extremes)}$$
+</Formula>
+
+<Formula label="Total Mechanical Energy">
+$$E = KE + PE = \frac{1}{2}m\omega^2 A^2 = \frac{1}{2}kA^2$$
+$$\text{(constant; independent of position)}$$
+</Formula>
+
+<Formula label="Average KE and PE over Full Cycle">
+$$\langle KE \rangle = \langle PE \rangle = \frac{E}{2} = \frac{1}{4}m\omega^2 A^2$$
+</Formula>
+
+---
+
+## Spring-Mass Systems
+
+<Formula label="Spring-Mass System (horizontal)">
+$$\omega = \sqrt{\frac{k}{m}}, \quad T = 2\pi\sqrt{\frac{m}{k}}, \quad f = \frac{1}{2\pi}\sqrt{\frac{k}{m}}$$
+</Formula>
+
+<Formula label="Spring-Mass System (vertical)">
+$$T = 2\pi\sqrt{\frac{m}{k}} \quad \text{(same as horizontal; gravity shifts equilibrium only)}$$
+$$\delta_{\text{eq}} = \frac{mg}{k} \quad \text{(static equilibrium extension)}$$
+</Formula>
+
+<Formula label="Springs in Series">
+$$\frac{1}{k_{\text{eff}}} = \frac{1}{k_1} + \frac{1}{k_2} \implies T \propto \sqrt{\frac{1}{k_{\text{eff}}}}$$
+</Formula>
+
+<Formula label="Springs in Parallel">
+$$k_{\text{eff}} = k_1 + k_2 \implies T = 2\pi\sqrt{\frac{m}{k_1+k_2}}$$
+</Formula>
+
+<Formula label="Two-Body Oscillation on Spring">
+$$T = 2\pi\sqrt{\frac{\mu}{k}}, \quad \mu = \frac{m_1 m_2}{m_1+m_2}$$
+</Formula>
+
+---
+
+## Pendulums
+
+<Formula label="Simple Pendulum Period">
+$$T = 2\pi\sqrt{\frac{L}{g}} \quad \text{(for small angles } \theta < 5°\text{)}$$
+$$\omega = \sqrt{\frac{g}{L}}$$
+</Formula>
+
+<Formula label="Simple Pendulum — Effective g in Accelerating Frame">
+$$g_{\text{eff}} = \sqrt{(g+a_v)^2 + a_h^2}$$
+$$\text{(for lift accelerating up at } a_v\text{, or horizontal acceleration } a_h\text{)}$$
+</Formula>
+
+<Formula label="Physical (Compound) Pendulum">
+$$T = 2\pi\sqrt{\frac{I_{\text{pivot}}}{Mgd}}$$
+$$\text{(d = distance from pivot to CoM, } I_{\text{pivot}} = I_{\text{cm}} + Md^2\text{)}$$
+</Formula>
+
+<Formula label="Torsional Pendulum">
+$$T = 2\pi\sqrt{\frac{I}{C}}, \quad \tau = -C\theta$$
+</Formula>
+
+---
+
+## LC Oscillations
+
+<Formula label="LC Circuit Oscillation">
+$$\omega = \frac{1}{\sqrt{LC}}, \quad T = 2\pi\sqrt{LC}$$
+</Formula>
+
+<Formula label="Charge Oscillation">
+$$q = Q_0\cos(\omega t + \phi)$$
+$$I = -Q_0\omega\sin(\omega t + \phi)$$
+</Formula>
+
+<Formula label="Energy in LC Circuit">
+$$U_E = \frac{q^2}{2C}, \quad U_B = \frac{LI^2}{2}, \quad U_{\text{total}} = \frac{Q_0^2}{2C} = \text{const}$$
+</Formula>
+
+---
+
+## Damped and Driven Oscillations
+
+<Formula label="Damped Oscillation Amplitude">
+$$A(t) = A_0 e^{-bt/(2m)}$$
+$$\omega_d = \sqrt{\omega_0^2 - \left(\frac{b}{2m}\right)^2}$$
+</Formula>
+
+<Formula label="Resonance Condition">
+$$\omega_{\text{drive}} = \omega_0 \implies \text{maximum amplitude}$$
+</Formula>

@@ -1,0 +1,143 @@
+---
+title: Thermodynamics — Formula Sheet
+description: Key formulas for Thermodynamics for JEE & NEET.
+---
+
+## First Law of Thermodynamics
+
+<Formula label="First Law">
+$$\Delta U = Q - W$$
+$$dU = dQ - dW, \quad dW = P\,dV$$
+</Formula>
+
+<Formula label="Internal Energy (Ideal Gas)">
+$$\Delta U = nC_v\Delta T \quad \text{(valid for ANY process of ideal gas)}$$
+</Formula>
+
+---
+
+## Thermodynamic Processes
+
+### Isothermal Process ($T = $ const)
+
+<Formula label="Isothermal: ΔU and Q">
+$$\Delta U = 0, \quad Q = W$$
+</Formula>
+
+<Formula label="Isothermal Work Done by Gas">
+$$W = nRT\ln\frac{V_2}{V_1} = nRT\ln\frac{P_1}{P_2} = 2.303\,nRT\log\frac{V_2}{V_1}$$
+</Formula>
+
+---
+
+### Adiabatic Process ($Q = 0$)
+
+<Formula label="Adiabatic Condition">
+$$PV^\gamma = \text{const}, \quad TV^{\gamma-1} = \text{const}, \quad T P^{(1-\gamma)/\gamma} = \text{const}$$
+$$P_1 V_1^\gamma = P_2 V_2^\gamma$$
+</Formula>
+
+<Formula label="Adiabatic Work Done">
+$$W = \frac{P_1V_1 - P_2V_2}{\gamma - 1} = \frac{nR(T_1 - T_2)}{\gamma - 1} = -\Delta U$$
+</Formula>
+
+---
+
+### Isochoric Process ($V = $ const)
+
+<Formula label="Isochoric: W and Q">
+$$W = 0, \quad Q = \Delta U = nC_v\Delta T$$
+</Formula>
+
+---
+
+### Isobaric Process ($P = $ const)
+
+<Formula label="Isobaric Work Done">
+$$W = P\Delta V = nR\Delta T$$
+</Formula>
+
+<Formula label="Isobaric Heat">
+$$Q = nC_p\Delta T, \quad \Delta U = nC_v\Delta T$$
+</Formula>
+
+---
+
+### Polytropic Process ($PV^n = $ const)
+
+<Formula label="Polytropic Work Done">
+$$W = \frac{P_1V_1 - P_2V_2}{n-1} = \frac{nR(T_1-T_2)}{n-1}$$
+</Formula>
+
+<Formula label="Effective Specific Heat for Polytropic">
+$$C = C_v\frac{\gamma - n}{1-n} = C_v - \frac{R}{n-1}$$
+</Formula>
+
+| Process | n |
+|---------|---|
+| Isothermal | 1 |
+| Adiabatic | γ |
+| Isochoric | ∞ |
+| Isobaric | 0 |
+
+---
+
+## Summary of Processes
+
+| Process | Q | W | ΔU |
+|---------|---|---|-----|
+| Isothermal | $nRT\ln(V_2/V_1)$ | $nRT\ln(V_2/V_1)$ | 0 |
+| Adiabatic | 0 | $nC_v(T_1-T_2)$ | $nC_v(T_2-T_1)$ |
+| Isochoric | $nC_v\Delta T$ | 0 | $nC_v\Delta T$ |
+| Isobaric | $nC_p\Delta T$ | $nR\Delta T$ | $nC_v\Delta T$ |
+
+---
+
+## Second Law and Carnot Engine
+
+<Formula label="Carnot Efficiency">
+$$\eta_{\text{Carnot}} = 1 - \frac{T_L}{T_H} = \frac{T_H - T_L}{T_H}$$
+$$\text{(temperatures in Kelvin)}$$
+</Formula>
+
+<Formula label="Carnot COP (Refrigerator)">
+$$\text{COP} = \frac{Q_L}{W} = \frac{T_L}{T_H - T_L}$$
+</Formula>
+
+<Formula label="Carnot COP (Heat Pump)">
+$$\text{COP}_{\text{HP}} = \frac{Q_H}{W} = \frac{T_H}{T_H - T_L} = \text{COP}_{\text{ref}} + 1$$
+</Formula>
+
+<Callout type="important">
+No real engine can have efficiency greater than the Carnot engine operating between the same two temperatures. $\eta_{\text{Carnot}}$ is a function of temperatures ONLY.
+</Callout>
+
+---
+
+## Entropy
+
+<Formula label="Entropy Change">
+$$\Delta S = \frac{Q_{\text{rev}}}{T} = \int \frac{dQ_{\text{rev}}}{T}$$
+</Formula>
+
+<Formula label="Entropy Change for Ideal Gas">
+$$\Delta S = nC_v\ln\frac{T_2}{T_1} + nR\ln\frac{V_2}{V_1}$$
+$$\Delta S = nC_p\ln\frac{T_2}{T_1} - nR\ln\frac{P_2}{P_1}$$
+</Formula>
+
+<Formula label="Second Law (Entropy Statement)">
+$$\Delta S_{\text{universe}} \geq 0 \quad \text{(= 0 for reversible, > 0 for irreversible)}$$
+</Formula>
+
+---
+
+## P-V Diagrams
+
+<Formula label="Work = Area under P-V Curve">
+$$W = \int P\,dV = \text{Area under curve in P-V diagram}$$
+$$\text{(positive for expansion, negative for compression)}$$
+</Formula>
+
+<Formula label="Efficiency from Indicator Diagram">
+$$\eta = \frac{W_{\text{net}}}{Q_{\text{absorbed}}} = \frac{\text{Area enclosed in cycle}}{Q_{\text{absorbed}}}$$
+</Formula>

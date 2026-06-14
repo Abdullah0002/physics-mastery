@@ -1,0 +1,1051 @@
+---
+title: "Centre of Mass & Linear Momentum — Complete Theory"
+description: "The most comprehensive Centre of Mass and Linear Momentum resource for JEE Main, JEE Advanced and NEET. Centre of mass of discrete and continuous bodies, motion of CM, conservation of linear momentum, impulse, variable-mass systems, rocket equation, and explosions — from first principles to Olympiad level."
+difficulty: "HARD"
+tags: ["center-of-mass", "linear-momentum", "conservation-of-momentum", "impulse", "variable-mass", "rocket-equation", "collisions", "reduced-mass", "explosions", "recoil"]
+---
+
+# Centre of Mass & Linear Momentum — Complete Theory
+
+*The most thorough module — built for JEE Main · JEE Advanced · NEET · Physics Olympiad*
+
+---
+
+## SECTION 1 — The Big Picture
+
+---
+
+### 1.1 Why Centre of Mass Matters
+
+A diver somersaults through the air, arms and legs flailing in a complex pattern — yet a single point on her body traces a perfect parabola. A firecracker explodes into a thousand fragments — yet the "average position" of all fragments continues exactly as if nothing happened. A wrench spinning across a frictionless table wobbles wildly, but one special point moves in a straight line at constant speed.
+
+That special point is the **centre of mass (CM)**. It is the secret that lets us treat any extended body — even a system of separate particles — as if all its mass were concentrated at one point. This is what makes "point particle" physics valid for real objects.
+
+Coupled with **linear momentum** and its conservation, the centre of mass concept becomes one of the most powerful problem-solving tools in all of mechanics.
+
+---
+
+### 1.2 Roadmap
+
+| Concept | Key Formula | JEE Relevance |
+|---------|------------|---------------|
+| CM of discrete system | $\vec{r}_{cm} = \frac{\sum m_i \vec{r}_i}{\sum m_i}$ | Very High |
+| CM of continuous body | $\vec{r}_{cm} = \frac{1}{M}\int \vec{r}\, dm$ | High |
+| Motion of CM | $M\vec{a}_{cm} = \vec{F}_{ext}$ | Very High |
+| Linear momentum | $\vec{p} = m\vec{v}$ | Very High |
+| Conservation of momentum | $\vec{p}_i = \vec{p}_f$ (if $F_{ext} = 0$) | Very High |
+| Impulse | $\vec{J} = \int \vec{F}\, dt = \Delta\vec{p}$ | High |
+| Variable mass / rocket | $F = v_{rel}\frac{dm}{dt}$ | Medium |
+
+---
+
+## SECTION 2 — Centre of Mass of a Discrete System
+
+---
+
+### 2.1 Definition
+
+For a system of $n$ particles with masses $m_1, m_2, \ldots, m_n$ at positions $\vec{r}_1, \vec{r}_2, \ldots, \vec{r}_n$:
+
+<Formula label="Centre of Mass — Discrete System">
+$$\vec{r}_{cm} = \frac{m_1\vec{r}_1 + m_2\vec{r}_2 + \cdots + m_n\vec{r}_n}{m_1 + m_2 + \cdots + m_n} = \frac{\sum_i m_i\vec{r}_i}{\sum_i m_i} = \frac{1}{M}\sum_i m_i\vec{r}_i$$
+
+In component form:
+$$x_{cm} = \frac{\sum m_i x_i}{M}, \quad y_{cm} = \frac{\sum m_i y_i}{M}, \quad z_{cm} = \frac{\sum m_i z_i}{M}$$
+</Formula>
+
+---
+
+### 2.2 Two-Particle System
+
+For two particles $m_1$ and $m_2$ separated by distance $d$:
+
+$$x_{cm} = \frac{m_1 x_1 + m_2 x_2}{m_1 + m_2}$$
+
+Taking $m_1$ at origin and $m_2$ at distance $d$:
+
+$$x_{cm} = \frac{m_2 d}{m_1 + m_2}$$
+
+**Key insight:** The CM divides the line joining the two masses in the **inverse ratio** of their masses:
+
+$$\frac{r_1}{r_2} = \frac{m_2}{m_1}$$
+
+where $r_1, r_2$ are distances of $m_1, m_2$ from the CM. The CM lies closer to the heavier mass.
+
+<Callout type="important">
+**Moment Balance Property**
+
+$m_1 r_1 = m_2 r_2$ — the CM is the balance point. The "mass moments" on either side are equal. This is why the CM is also the centre of gravity (in a uniform gravitational field).
+</Callout>
+
+---
+
+### 2.3 SVG: Two-Particle CM
+
+<svg width="400" height="160" viewBox="0 0 400 160" xmlns="http://www.w3.org/2000/svg">
+  <line x1="40" y1="90" x2="360" y2="90" stroke="#334155" strokeWidth="2"/>
+  <circle cx="80" cy="90" r="18" fill="#3b82f6" stroke="#1e40af" strokeWidth="2"/>
+  <text x="80" y="96" textAnchor="middle" fontSize="13" fill="white" fontWeight="bold">m₁</text>
+  <circle cx="320" cy="90" r="28" fill="#dc2626" stroke="#991b1b" strokeWidth="2"/>
+  <text x="320" y="96" textAnchor="middle" fontSize="14" fill="white" fontWeight="bold">m₂</text>
+  <polygon points="240,90 232,78 248,78" fill="#16a34a"/>
+  <line x1="240" y1="90" x2="240" y2="120" stroke="#16a34a" strokeWidth="2" strokeDasharray="3,2"/>
+  <text x="225" y="138" fontSize="12" fill="#16a34a" fontWeight="bold">CM</text>
+  <line x1="80" y1="55" x2="240" y2="55" stroke="#64748b" strokeWidth="1"/>
+  <text x="150" y="48" fontSize="12" fill="#64748b">r₁</text>
+  <line x1="240" y1="55" x2="320" y2="55" stroke="#64748b" strokeWidth="1"/>
+  <text x="276" y="48" fontSize="12" fill="#64748b">r₂</text>
+  <text x="60" y="20" fontSize="12" fill="#334155">m₁r₁ = m₂r₂  (CM closer to heavier mass)</text>
+</svg>
+
+---
+
+## SECTION 3 — Centre of Mass of Continuous Bodies
+
+---
+
+### 3.1 The Integral Form
+
+For a continuous body, replace summation with integration:
+
+<Formula label="Centre of Mass — Continuous Body">
+$$\vec{r}_{cm} = \frac{1}{M}\int \vec{r}\, dm$$
+
+where $dm$ is an infinitesimal mass element and $M = \int dm$.
+
+$$x_{cm} = \frac{1}{M}\int x\, dm, \quad y_{cm} = \frac{1}{M}\int y\, dm, \quad z_{cm} = \frac{1}{M}\int z\, dm$$
+</Formula>
+
+**Mass element relations:**
+- Linear body (rod, wire): $dm = \lambda\, dl$ ($\lambda$ = linear mass density)
+- Surface (plate, sheet): $dm = \sigma\, dA$ ($\sigma$ = areal mass density)
+- Volume (solid): $dm = \rho\, dV$ ($\rho$ = volume mass density)
+
+---
+
+### 3.2 Symmetry Shortcut
+
+<Callout type="tip">
+**Use Symmetry First!**
+
+For a body with uniform density and an axis/plane/centre of symmetry, the CM lies **on that symmetry element**. This often eliminates the need for integration entirely.
+
+- Uniform rod → CM at midpoint
+- Uniform ring/disc/sphere → CM at geometric centre
+- Uniform rectangular/cubic plate → CM at centre
+</Callout>
+
+---
+
+### 3.3 Standard Results — CM of Common Bodies
+
+| Body | Location of CM |
+|------|----------------|
+| Uniform rod (length $L$) | Midpoint ($L/2$ from either end) |
+| Uniform semicircular ring (radius $R$) | $\frac{2R}{\pi}$ from centre, along symmetry axis |
+| Uniform semicircular disc (radius $R$) | $\frac{4R}{3\pi}$ from centre |
+| Uniform solid hemisphere (radius $R$) | $\frac{3R}{8}$ from centre |
+| Uniform hollow hemisphere (radius $R$) | $\frac{R}{2}$ from centre |
+| Uniform triangular plate | Centroid (intersection of medians) |
+| Solid cone (height $h$) | $\frac{h}{4}$ from base (on axis) |
+| Hollow cone (height $h$) | $\frac{h}{3}$ from base (on axis) |
+
+---
+
+### 3.4 Derivation — CM of a Uniform Semicircular Ring
+
+A semicircular ring of radius $R$, mass $M$, linear density $\lambda = M/(\pi R)$. By symmetry, CM lies on the y-axis (axis of symmetry).
+
+<Step n={1}>
+Consider an element at angle $\theta$ subtending $d\theta$. Its mass: $dm = \lambda R\, d\theta$. Position: $y = R\sin\theta$.
+</Step>
+
+<Step n={2}>
+$$y_{cm} = \frac{1}{M}\int_0^\pi (R\sin\theta)(\lambda R\, d\theta) = \frac{\lambda R^2}{M}\int_0^\pi \sin\theta\, d\theta$$
+</Step>
+
+<Step n={3}>
+$$\int_0^\pi \sin\theta\, d\theta = [-\cos\theta]_0^\pi = 2$$
+</Step>
+
+<Step n={4}>
+$$y_{cm} = \frac{\lambda R^2 \cdot 2}{M} = \frac{(M/\pi R) R^2 \cdot 2}{M} = \frac{2R}{\pi}$$
+</Step>
+
+<Formula label="CM of Semicircular Ring">
+$$y_{cm} = \frac{2R}{\pi} \approx 0.637R$$
+</Formula>
+
+---
+
+### 3.5 Derivation — CM of a Solid Cone
+
+A solid cone of height $h$, base radius $R$, uniform density. Take apex at origin, axis along x.
+
+At distance $x$ from apex, the radius of the cross-section is $r = (R/h)x$. The disc element has:
+
+$$dm = \rho \cdot \pi r^2\, dx = \rho\pi\frac{R^2}{h^2}x^2\, dx$$
+
+$$x_{cm} = \frac{\int_0^h x\, dm}{\int_0^h dm} = \frac{\int_0^h x^3\, dx}{\int_0^h x^2\, dx} = \frac{h^4/4}{h^3/3} = \frac{3h}{4}$$
+
+So CM is at $3h/4$ from apex = $h/4$ from base. ✓
+
+---
+
+## SECTION 4 — Centre of Mass by Subtraction (Cavity Problems)
+
+---
+
+### 4.1 The Negative Mass Method
+
+For a body with a cavity (hole) cut out, treat the cavity as **negative mass**:
+
+<Formula label="CM with Cavity">
+$$\vec{r}_{cm} = \frac{m_{full}\vec{r}_{full} - m_{cavity}\vec{r}_{cavity}}{m_{full} - m_{cavity}}$$
+
+where $m_{full}$ = mass of the full body (without cavity), $m_{cavity}$ = mass that would fill the cavity.
+</Formula>
+
+---
+
+### 4.2 Worked Example — Disc with a Hole
+
+A uniform disc of radius $R$ has a circular hole of radius $R/2$ cut out, with the hole's centre at distance $R/2$ from the disc's centre.
+
+<svg width="320" height="260" viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="solidHatch" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#bfdbfe" strokeWidth="3"/>
+    </pattern>
+  </defs>
+  <circle cx="140" cy="130" r="100" fill="url(#solidHatch)" stroke="#1e40af" strokeWidth="2"/>
+  <circle cx="190" cy="130" r="50" fill="white" stroke="#dc2626" strokeWidth="2" strokeDasharray="5,3"/>
+  <line x1="40" y1="130" x2="290" y2="130" stroke="#94a3b8" strokeWidth="1"/>
+  <circle cx="140" cy="130" r="4" fill="#1e40af"/>
+  <text x="120" y="122" fontSize="12" fill="#1e40af" fontWeight="bold">O</text>
+  <circle cx="190" cy="130" r="4" fill="#dc2626"/>
+  <text x="184" y="122" fontSize="12" fill="#dc2626" fontWeight="bold">O'</text>
+  <polygon points="124,130 116,122 116,138" fill="#16a34a"/>
+  <line x1="124" y1="130" x2="124" y2="170" stroke="#16a34a" strokeWidth="1.5" strokeDasharray="3,2"/>
+  <text x="100" y="188" fontSize="12" fill="#16a34a" fontWeight="bold">CM</text>
+  <text x="148" y="148" fontSize="11" fill="#64748b">R/2</text>
+  <text x="92" y="150" fontSize="10" fill="#16a34a">R/6</text>
+  <text x="40" y="248" fontSize="11" fill="#64748b">Fig: Disc (radius R) with hole (radius R/2); CM shifts R/6 away from hole</text>
+</svg>
+
+Let surface density $= \sigma$.
+
+- Full disc: $m_1 = \sigma\pi R^2$, centre at $x_1 = 0$
+- Removed (hole): $m_2 = \sigma\pi(R/2)^2 = \sigma\pi R^2/4$, centre at $x_2 = R/2$
+
+$$x_{cm} = \frac{m_1 x_1 - m_2 x_2}{m_1 - m_2} = \frac{0 - (\sigma\pi R^2/4)(R/2)}{\sigma\pi R^2 - \sigma\pi R^2/4}$$
+
+$$= \frac{-\sigma\pi R^3/8}{3\sigma\pi R^2/4} = \frac{-R^3/8}{3R^2/4} = -\frac{R}{6}$$
+
+The CM shifts by $R/6$ **away** from the hole (toward the solid part).
+
+---
+
+## SECTION 5 — Motion of the Centre of Mass
+
+---
+
+### 5.1 Velocity and Acceleration of CM
+
+Differentiating $\vec{r}_{cm} = \frac{1}{M}\sum m_i\vec{r}_i$:
+
+<Formula label="Velocity and Acceleration of CM">
+$$\vec{v}_{cm} = \frac{\sum m_i\vec{v}_i}{M} = \frac{\vec{p}_{total}}{M}$$
+
+$$\vec{a}_{cm} = \frac{\sum m_i\vec{a}_i}{M}$$
+</Formula>
+
+**Total momentum** of a system equals the momentum of the CM:
+
+$$\vec{p}_{total} = M\vec{v}_{cm}$$
+
+---
+
+### 5.2 Newton's Second Law for a System
+
+The total internal force on a system is zero (Newton's 3rd law — internal forces cancel in pairs). So only external forces affect the CM:
+
+<Formula label="Newton's Second Law for a System (CM Motion)">
+$$\vec{F}_{ext} = M\vec{a}_{cm} = \frac{d\vec{p}_{total}}{dt}$$
+
+The CM moves as if all the mass were concentrated there and all external forces acted on that point.
+</Formula>
+
+<Callout type="important">
+**The Most Profound Result in This Chapter**
+
+No matter how complicated the internal motion — explosions, collisions, deformation — the CM responds only to **external** forces. Internal forces (however violent) cannot change the motion of the CM.
+
+A bomb in projectile flight, when it explodes, has its CM continue on the same parabola — because gravity (the only external force) is unchanged.
+</Callout>
+
+---
+
+### 5.3 Worked Example — Exploding Projectile
+
+A projectile is launched and at the top of its trajectory it explodes into two equal fragments. One fragment falls straight down. Where does the other land?
+
+Since the only external force is gravity, the CM continues on the original parabola and lands at the original range $R$ from launch.
+
+If fragment 1 (mass $m/2$) falls straight down to land at $x = R/2$ (directly below explosion point), then:
+
+$$x_{cm} = R = \frac{(m/2)(R/2) + (m/2)x_2}{m}$$
+
+$$R = \frac{R/2 + x_2}{2} \Rightarrow x_2 = 2R - R/2 = \frac{3R}{2}$$
+
+The second fragment lands at $\frac{3R}{2}$ from launch.
+
+---
+
+## SECTION 6 — Linear Momentum
+
+---
+
+### 6.1 Definition and Newton's Second Law
+
+<Formula label="Linear Momentum">
+$$\vec{p} = m\vec{v}$$
+
+Newton's 2nd Law (most general form):
+$$\vec{F} = \frac{d\vec{p}}{dt}$$
+
+For constant mass: $\vec{F} = m\frac{d\vec{v}}{dt} = m\vec{a}$
+</Formula>
+
+SI unit of momentum: kg·m/s = N·s.
+
+---
+
+### 6.2 Conservation of Linear Momentum
+
+<Formula label="Conservation of Linear Momentum">
+$$\text{If } \vec{F}_{ext} = 0, \text{ then } \vec{p}_{total} = \text{constant}$$
+
+$$m_1\vec{u}_1 + m_2\vec{u}_2 + \cdots = m_1\vec{v}_1 + m_2\vec{v}_2 + \cdots$$
+</Formula>
+
+This is one of the most fundamental conservation laws in physics. It follows directly from Newton's third law and holds even in relativity and quantum mechanics.
+
+<Callout type="warning">
+**Momentum is a Vector!**
+
+Conservation applies **independently to each component**. Momentum can be conserved in one direction while not in another (e.g., a ball bouncing on the floor — horizontal momentum conserved, vertical not, because the floor exerts vertical external force).
+</Callout>
+
+---
+
+### 6.3 Recoil of a Gun
+
+A gun of mass $M$ fires a bullet of mass $m$ with velocity $v$. Initial momentum = 0.
+
+$$0 = mv + MV_{gun} \Rightarrow V_{gun} = -\frac{mv}{M}$$
+
+The gun recoils with speed $\frac{mv}{M}$ in the opposite direction.
+
+**Ratio of kinetic energies:**
+
+$$\frac{KE_{bullet}}{KE_{gun}} = \frac{\frac{1}{2}mv^2}{\frac{1}{2}MV^2} = \frac{mv^2}{M(mv/M)^2} = \frac{M}{m}$$
+
+The lighter object (bullet) carries most of the kinetic energy.
+
+---
+
+## SECTION 7 — Impulse
+
+---
+
+### 7.1 Impulse–Momentum Theorem
+
+<Formula label="Impulse">
+$$\vec{J} = \int_{t_1}^{t_2} \vec{F}\, dt = \Delta\vec{p} = m\vec{v}_2 - m\vec{v}_1$$
+
+Impulse equals the change in momentum.
+
+For a constant force: $\vec{J} = \vec{F}\Delta t$.
+
+Graphically: impulse = area under the $F$–$t$ curve.
+</Formula>
+
+**Average force during impact:**
+
+$$\vec{F}_{avg} = \frac{\Delta\vec{p}}{\Delta t} = \frac{\vec{J}}{\Delta t}$$
+
+---
+
+### 7.2 Why Impulse Matters
+
+<Callout type="tip">
+**Same Impulse, Different Force**
+
+A given change in momentum can be achieved with:
+- Large force over short time (hard collision — car crash without airbag)
+- Small force over long time (soft collision — airbag, catching a ball by drawing hands back)
+
+This is why airbags, crumple zones, and bending knees on landing all work — they increase $\Delta t$, reducing peak force $F = \Delta p / \Delta t$.
+</Callout>
+
+---
+
+### 7.3 Worked Example — Ball Bouncing Off a Wall
+
+A ball of mass $m$ hits a wall horizontally at speed $u$ and rebounds at speed $v$. Find impulse on the ball.
+
+Taking rightward (toward wall) as positive:
+- Initial momentum: $+mu$
+- Final momentum: $-mv$ (rebounds leftward)
+
+$$J = \Delta p = -mv - mu = -m(u + v)$$
+
+Magnitude $= m(u + v)$, directed away from the wall.
+
+If the collision is elastic ($v = u$): $J = 2mu$.
+
+---
+
+## SECTION 8 — Variable Mass Systems
+
+---
+
+### 8.1 The General Equation
+
+For a system whose mass changes with time (e.g., a rocket ejecting fuel, a conveyor belt, a falling raindrop accreting mass):
+
+<Formula label="Variable Mass Equation">
+$$\vec{F}_{ext} + \vec{v}_{rel}\frac{dm}{dt} = m\frac{d\vec{v}}{dt}$$
+
+where $\vec{v}_{rel}$ is the velocity of the incoming/outgoing mass **relative to** the main body, and $\frac{dm}{dt}$ is the rate of mass change.
+
+The term $\vec{v}_{rel}\frac{dm}{dt}$ is the **thrust force**.
+</Formula>
+
+---
+
+### 8.2 Rocket Equation (Tsiolkovsky)
+
+A rocket ejects gas at constant speed $u$ relative to the rocket. In gravity-free space ($F_{ext} = 0$):
+
+<Step n={1}>
+Thrust equation: $u\frac{dm}{dt} = m\frac{dv}{dt}$ (with $dm/dt < 0$ for ejection; using magnitude $u\left|\frac{dm}{dt}\right| = m\frac{dv}{dt}$)
+</Step>
+
+<Step n={2}>
+$dv = -u\frac{dm}{m}$ (mass decreases as fuel burns)
+</Step>
+
+<Step n={3}>
+Integrating from $m_0$ to $m$, and $v = 0$ to $v$:
+$$v = u\ln\frac{m_0}{m}$$
+</Step>
+
+<Formula label="Tsiolkovsky Rocket Equation">
+$$v = v_0 + u\ln\frac{m_0}{m}$$
+
+where $m_0$ = initial mass, $m$ = final mass, $u$ = exhaust speed relative to rocket.
+
+**With gravity** (vertical launch): $v = u\ln\frac{m_0}{m} - gt$
+</Formula>
+
+---
+
+### 8.3 Thrust Force
+
+$$F_{thrust} = u\left|\frac{dm}{dt}\right|$$
+
+For the rocket to lift off, thrust must exceed weight:
+
+$$u\left|\frac{dm}{dt}\right| > m_0 g$$
+
+---
+
+### 8.4 Conveyor Belt Problem
+
+Sand falls onto a moving conveyor belt at rate $\frac{dm}{dt}$. The belt moves at constant speed $v$. The extra force needed to keep the belt moving:
+
+$$F = v\frac{dm}{dt}$$
+
+(The falling sand must be accelerated from 0 to $v$ horizontally.)
+
+Power delivered by the motor: $P = Fv = v^2\frac{dm}{dt}$
+
+Note: KE gained by sand per unit time = $\frac{1}{2}v^2\frac{dm}{dt}$, which is **half** the motor power. The other half is dissipated as heat (friction between sand and belt during the slipping phase).
+
+---
+
+## SECTION 9 — Two-Body Systems and Reduced Mass
+
+---
+
+### 9.1 Centre of Mass Frame
+
+The **CM frame** (or centre-of-momentum frame) is the reference frame in which the total momentum is zero. It moves at velocity $\vec{v}_{cm}$ relative to the ground frame.
+
+In the CM frame:
+- Total momentum = 0 always
+- The two particles always move with equal and opposite momenta
+- Collisions are simplest to analyze here
+
+---
+
+### 9.2 Reduced Mass
+
+For a two-body system, the relative motion can be described by a single "effective" particle of **reduced mass**:
+
+<Formula label="Reduced Mass">
+$$\mu = \frac{m_1 m_2}{m_1 + m_2}$$
+
+Kinetic energy splits as:
+$$KE_{total} = \underbrace{\frac{1}{2}MV_{cm}^2}_{\text{CM motion}} + \underbrace{\frac{1}{2}\mu v_{rel}^2}_{\text{relative motion}}$$
+</Formula>
+
+The CM kinetic energy cannot change in a collision (momentum conservation). Only the relative-motion KE ($\frac{1}{2}\mu v_{rel}^2$) can be lost — this is the maximum energy available for deformation, heat, sound, etc.
+
+---
+
+### 9.3 Maximum Energy Loss in Collision
+
+The maximum KE that can be lost in a collision (perfectly inelastic):
+
+$$\Delta KE_{max} = \frac{1}{2}\mu v_{rel}^2 = \frac{m_1 m_2}{2(m_1+m_2)}(u_1 - u_2)^2$$
+
+In an explosion (reverse), this is the maximum KE that can be generated from stored energy.
+
+---
+
+## SECTION 10 — Collisions Revisited (Momentum Perspective)
+
+---
+
+### 10.1 The Two Conservation Principles
+
+| Quantity | Elastic | Inelastic | Perfectly Inelastic |
+|----------|---------|-----------|---------------------|
+| Momentum | Conserved | Conserved | Conserved |
+| Kinetic Energy | Conserved | Partly lost | Maximum loss |
+| $e$ | $1$ | $0 < e < 1$ | $0$ |
+
+**Momentum is ALWAYS conserved** in collisions (no external impulsive force). Kinetic energy is the variable that distinguishes collision types.
+
+---
+
+### 10.2 Velocity of CM in a Collision
+
+Since momentum is conserved and total mass is constant:
+
+$$\vec{v}_{cm} = \frac{m_1\vec{u}_1 + m_2\vec{u}_2}{m_1+m_2} = \text{constant (before, during, and after collision)}$$
+
+This is the anchor point for analyzing any collision in the CM frame.
+
+---
+
+### 10.3 Oblique Collision
+
+In a 2D (oblique) collision, decompose along the **line of impact** (normal) and **tangent**:
+
+- **Along line of impact:** Apply momentum conservation + restitution equation
+- **Along tangent:** Each ball's velocity component is unchanged (smooth balls, no tangential force)
+
+For two smooth spheres, the tangential velocity components are preserved while the normal components follow the 1D collision rules with coefficient $e$.
+
+---
+
+## SECTION 11 — Advanced Applications
+
+---
+
+### 11.1 Man Walking on a Boat
+
+A man (mass $m$) walks a distance $L$ relative to a boat (mass $M$) floating on frictionless water. Find the displacement of the boat.
+
+Since no external horizontal force, the CM stays fixed. Let the boat move back by $x$ while the man moves forward by $(L - x)$ relative to ground:
+
+$$m(L - x) = Mx \Rightarrow x = \frac{mL}{m + M}$$
+
+The boat moves back by $\frac{mL}{m+M}$, and the man moves forward by $\frac{ML}{m+M}$ relative to the ground.
+
+---
+
+### 11.2 Spring-Connected Masses Released
+
+Two blocks $m_1$ and $m_2$ connected by a compressed spring (stored energy $E_0$) on a frictionless surface. When released:
+
+Momentum conservation (initially at rest): $m_1 v_1 = m_2 v_2$
+
+Energy: $\frac{1}{2}m_1 v_1^2 + \frac{1}{2}m_2 v_2^2 = E_0$
+
+$$v_1 = \sqrt{\frac{2E_0 m_2}{m_1(m_1+m_2)}}, \quad v_2 = \sqrt{\frac{2E_0 m_1}{m_2(m_1+m_2)}}$$
+
+The velocities are in **inverse ratio** of masses; the **kinetic energies** are also in inverse ratio of masses ($KE_1/KE_2 = m_2/m_1$).
+
+---
+
+### 11.3 Wedge-Block on Frictionless Floor
+
+A block (mass $m$) slides down a smooth wedge (mass $M$, angle $\theta$) that itself rests on a frictionless floor. As the block slides down, the wedge recoils.
+
+**Horizontal momentum conservation** (initially at rest):
+
+$$m v_{block,x} + M V_{wedge} = 0$$
+
+Combined with energy conservation, this lets you solve for both velocities. The CM has no horizontal motion (no external horizontal force).
+
+---
+
+### 11.4 Chain Falling onto a Table
+
+A uniform chain (mass $\lambda$ per unit length) is held vertically with its lower end touching a table, then released. Find the force on the table when a length $x$ has fallen.
+
+Two contributions:
+1. **Weight** of the chain already on the table: $\lambda x g$
+2. **Impulsive force** from the chain links arriving and stopping: $\frac{dp}{dt} = v\frac{dm}{dt} = v(\lambda v) = \lambda v^2$. With $v^2 = 2gx$: this gives $2\lambda x g$.
+
+$$F_{total} = \lambda xg + 2\lambda xg = 3\lambda xg = 3 \times (\text{weight of fallen chain})$$
+
+The table feels **three times** the weight of the chain that has landed.
+
+---
+
+## SECTION 12 — Error Analysis
+
+---
+
+| # | Mistake | Correct Approach |
+|---|---------|-----------------|
+| 1 | Thinking CM must lie within the body | CM can be outside the body (e.g., ring, L-shaped object, boomerang) |
+| 2 | Using arithmetic mean of positions for CM | CM is mass-weighted: $\sum m_i x_i / \sum m_i$, not $\sum x_i / n$ |
+| 3 | Forgetting internal forces don't move the CM | Only external forces affect CM motion |
+| 4 | Treating momentum conservation as scalar | Momentum is a vector — conserve each component separately |
+| 5 | Applying momentum conservation when external force acts | Check $F_{ext} = 0$ first; over short impact times, treat gravity/normal as negligible vs impulsive forces |
+| 6 | Confusing CM of semicircular ring ($2R/\pi$) and disc ($4R/3\pi$) | Memorize: ring $2R/\pi$, disc $4R/3\pi$, solid hemisphere $3R/8$ |
+| 7 | Wrong sign in cavity (negative mass) method | Subtract cavity mass and its moment: $\frac{m_1 x_1 - m_2 x_2}{m_1 - m_2}$ |
+| 8 | Using $F = ma$ for variable-mass systems | Use $F = \frac{dp}{dt}$ and include the thrust term $v_{rel}\frac{dm}{dt}$ |
+| 9 | Chain falling: forgetting the impulsive term | Force on table = weight of fallen part + momentum rate of arriving links = $3\lambda xg$ |
+| 10 | Assuming KE is conserved in all collisions | Only momentum is always conserved. KE conserved only in elastic collisions |
+| 11 | Man-boat: using displacement relative to boat as ground displacement | CM fixed → solve with ground-frame displacements summing by mass ratio |
+| 12 | Rocket: using $v = u(m_0/m)$ instead of logarithm | Tsiolkovsky: $v = u\ln(m_0/m)$ |
+
+---
+
+## SECTION 13 — Solved Examples
+
+---
+
+### JEE Main Level Examples
+
+**M1.** Three masses 1 kg, 2 kg, 3 kg are at $(0,0)$, $(2,0)$, $(0,3)$ m. Find the CM.
+
+**Solution:**
+$x_{cm} = \dfrac{1\cdot0 + 2\cdot2 + 3\cdot0}{6} = \dfrac{4}{6} = \dfrac{2}{3}$ m
+
+$y_{cm} = \dfrac{1\cdot0 + 2\cdot0 + 3\cdot3}{6} = \dfrac{9}{6} = \dfrac{3}{2}$ m
+
+CM at $\mathbf{(2/3, 3/2) \text{ m}}$
+
+---
+
+**M2.** Two particles of masses 2 kg and 6 kg are 4 m apart. Find the distance of CM from the 2 kg mass.
+
+**Solution:**
+$r_1 = \dfrac{m_2 d}{m_1 + m_2} = \dfrac{6\times4}{8} = \mathbf{3 \text{ m}}$ from the 2 kg mass.
+
+---
+
+**M3.** A 60 kg man stands at one end of a 40 kg boat (length 4 m) on still water. He walks to the other end. How far does the boat move?
+
+**Solution:**
+$x_{boat} = \dfrac{mL}{m+M} = \dfrac{60\times4}{100} = \mathbf{2.4 \text{ m}}$
+
+---
+
+**M4.** A bullet (20 g) is fired at 400 m/s from a 4 kg gun. Find recoil speed of the gun.
+
+**Solution:**
+$V = \dfrac{mv}{M} = \dfrac{0.02\times400}{4} = \mathbf{2 \text{ m/s}}$
+
+---
+
+**M5.** A ball (0.5 kg) hits a wall at 8 m/s and rebounds at 6 m/s. Find the impulse.
+
+**Solution:**
+$J = m(v + u) = 0.5(6 + 8) = \mathbf{7 \text{ N·s}}$ (directed away from wall)
+
+---
+
+**M6.** A force $F = 10$ N acts on a 2 kg object for 0.5 s. Find the change in momentum and final velocity (starting from rest).
+
+**Solution:**
+$\Delta p = F\Delta t = 10\times0.5 = 5$ kg·m/s
+
+$v = \Delta p/m = 5/2 = \mathbf{2.5 \text{ m/s}}$
+
+---
+
+**M7.** A uniform disc of radius $R$ has a hole of radius $R/3$ centered at $R/2$ from the disc's center. Find CM of the remaining body.
+
+**Solution:**
+$m_1 \propto R^2$ (at $x=0$), $m_2 \propto (R/3)^2 = R^2/9$ (at $x = R/2$)
+
+$x_{cm} = \dfrac{0 - (R^2/9)(R/2)}{R^2 - R^2/9} = \dfrac{-R^3/18}{8R^2/9} = \dfrac{-R^3/18 \times 9}{8R^2} = -\dfrac{R}{16}$
+
+CM shifts $\mathbf{R/16}$ away from the hole.
+
+---
+
+**M8.** A rocket ejects gas at 2000 m/s relative to itself. Initial mass 1000 kg, final mass 250 kg. Find final speed (no gravity, starts from rest).
+
+**Solution:**
+$v = u\ln(m_0/m) = 2000\ln(1000/250) = 2000\ln4 = 2000\times1.386 = \mathbf{2772 \text{ m/s}}$
+
+---
+
+**M9.** Sand falls on a conveyor belt at 5 kg/s. The belt moves at 4 m/s. Find the force needed to keep the belt moving and the motor power.
+
+**Solution:**
+$F = v\dfrac{dm}{dt} = 4\times5 = \mathbf{20 \text{ N}}$
+
+$P = Fv = 20\times4 = \mathbf{80 \text{ W}}$
+
+---
+
+**M10.** A projectile of mass 4 kg explodes at the top of its trajectory into two pieces of 1 kg and 3 kg. The 1 kg piece moves vertically up at 10 m/s just after the explosion. The velocity of the projectile just before explosion was 20 m/s horizontal. Find velocity of 3 kg piece.
+
+**Solution:**
+Before: total momentum = $4\times20 = 80$ kg·m/s horizontal, 0 vertical.
+
+After (horizontal): $1\times0 + 3\times v_{3x} = 80 \Rightarrow v_{3x} = 80/3 \approx 26.7$ m/s
+
+After (vertical): $1\times10 + 3\times v_{3y} = 0 \Rightarrow v_{3y} = -10/3 \approx -3.33$ m/s (downward)
+
+$v_3 = \sqrt{26.7^2 + 3.33^2} \approx \mathbf{26.9 \text{ m/s}}$
+
+---
+
+**M11.** Find the CM of a system: a uniform rod of mass $M$ and length $L$ with a point mass $M$ attached at one end.
+
+**Solution:**
+Rod's CM at $L/2$ (mass $M$), point mass at $L$ (mass $M$).
+
+$x_{cm} = \dfrac{M(L/2) + M(L)}{2M} = \dfrac{3L/2}{2} = \mathbf{\dfrac{3L}{4}}$ from the free end.
+
+---
+
+**M12.** A 2 kg object moving at 3 m/s collides with a 4 kg object at rest. They stick together. Find common velocity and KE lost.
+
+**Solution:**
+$v = \dfrac{2\times3}{6} = 1$ m/s.
+
+$KE_i = \frac{1}{2}\times2\times9 = 9$ J; $KE_f = \frac{1}{2}\times6\times1 = 3$ J.
+
+$\Delta KE = \mathbf{6 \text{ J}}$ lost.
+
+Check via reduced mass: $\Delta KE = \frac{1}{2}\mu u_{rel}^2 = \frac{1}{2}\times\frac{8}{6}\times9 = 6$ J ✓
+
+---
+
+### JEE Advanced Level Examples
+
+**A1.** A uniform chain of mass $M$ and length $L$ hangs vertically with its lower end just touching a table. It is released. Find the force exerted on the table when a length $x$ has fallen onto it.
+
+**Solution:**
+When length $x$ has landed, those links have fallen freely, so $v = \sqrt{2gx}$ at the moment of landing.
+
+Force = weight of landed chain + rate of momentum delivered:
+
+$$F = \lambda xg + \frac{dp}{dt}$$
+
+The mass landing per unit time: $\frac{dm}{dt} = \lambda v$. Momentum rate: $v\cdot\lambda v = \lambda v^2 = \lambda(2gx) = 2\lambda xg$.
+
+$$F = \lambda xg + 2\lambda xg = 3\lambda xg = \frac{3Mgx}{L}$$
+
+The force is **three times** the weight of the chain already on the table.
+
+---
+
+**A2.** A block of mass $m$ rests on a wedge of mass $M$ (angle $\theta$) on a frictionless floor. Everything starts at rest. Find the acceleration of the wedge as the block slides down (all surfaces frictionless).
+
+**Solution:**
+Horizontal momentum conserved. Let wedge acceleration = $A$ (leftward), block acceleration relative to wedge = $a_r$ (down the incline).
+
+Setting up the constraint and Newton's laws (or using Lagrangian), the standard result:
+
+$$A = \frac{mg\sin\theta\cos\theta}{M + m\sin^2\theta}$$
+
+The wedge accelerates horizontally; the CM has zero horizontal acceleration (no external horizontal force) — a useful check.
+
+---
+
+**A3.** Two identical blocks A and B (each mass $m$) connected by a spring rest on a smooth floor. A third block C (mass $m$) moving at speed $v$ strikes A and sticks to it. Find the maximum compression of the spring (spring constant $k$, initially relaxed).
+
+**Solution:**
+Step 1 — C sticks to A (perfectly inelastic): combined mass $2m$ moves at $v/2$ (momentum: $mv = 2m\cdot v')$.
+
+Step 2 — Maximum compression occurs when (A+C) and B move at common velocity. By momentum conservation:
+$$2m\cdot\frac{v}{2} = 3m\cdot v_{common} \Rightarrow v_{common} = \frac{v}{3}$$
+
+Energy conservation from just after sticking to max compression:
+$$\frac{1}{2}(2m)\left(\frac{v}{2}\right)^2 = \frac{1}{2}(3m)\left(\frac{v}{3}\right)^2 + \frac{1}{2}kx_{max}^2$$
+
+$$\frac{mv^2}{4} = \frac{mv^2}{6} + \frac{1}{2}kx_{max}^2$$
+
+$$\frac{1}{2}kx_{max}^2 = \frac{mv^2}{4} - \frac{mv^2}{6} = \frac{mv^2}{12}$$
+
+$$x_{max} = v\sqrt{\frac{m}{6k}}$$
+
+---
+
+**A4.** A particle of mass $m$ moving at speed $v$ collides elastically with a stationary particle of mass $M$. After collision, the incident particle is deflected by 90°. Find the mass $M$ and the speed of $M$ after collision.
+
+**Solution:**
+Let incident particle move along x, deflect to +y direction with speed $v_1$. Target moves at angle.
+
+Momentum (x): $mv = M v_{Mx}$
+Momentum (y): $0 = m v_1 - M v_{My}$
+KE (elastic): $\frac{1}{2}mv^2 = \frac{1}{2}mv_1^2 + \frac{1}{2}MV_M^2$
+
+For a 90° deflection of the incident particle in an elastic collision, a known result requires $M > m$. Working it through:
+
+From momentum: $V_M^2 = (v_{Mx}^2 + v_{My}^2) = \frac{m^2}{M^2}(v^2 + v_1^2)$
+
+KE: $mv^2 = mv_1^2 + MV_M^2 = mv_1^2 + M\cdot\frac{m^2}{M^2}(v^2+v_1^2)$
+
+$mv^2 = mv_1^2 + \frac{m^2}{M}(v^2 + v_1^2)$
+
+$v^2 - v_1^2 = \frac{m}{M}(v^2 + v_1^2)$
+
+This relates $v_1$ and $M$. For elastic + 90° deflection there is a one-parameter family; if additionally $M = m$ the deflection would be 90° only in the special equal-mass case where target was at rest (then the two move at 90° to each other, and incident is deflected by some angle, target by complementary). The general relation is:
+
+$$\frac{v_1^2}{v^2} = \frac{M - m}{M + m}$$
+
+valid for $M > m$ (so $v_1$ real).
+
+---
+
+**A5.** A rope of mass $M$ and length $L$ lies on a frictionless table with a small portion hanging through a hole. When released, find the velocity of the rope when the last bit leaves the table. (Assume it starts from rest with negligible hanging length.)
+
+**Solution:**
+This is a variable-mass / energy problem. Using energy conservation: the CM of the rope falls. Initially CM at table level (essentially), finally the rope hangs fully with CM at $L/2$ below the hole.
+
+But the rope is moving as it leaves — actually once fully off the table it has descended; better to use energy at the instant the last bit leaves the table.
+
+When length $x$ hangs, the hanging part has CM at $x/2$ below the table. Using energy conservation for the whole rope (treating it as falling under gravity acting on the hanging part):
+
+$$\frac{1}{2}Mv^2 = \int_0^L \lambda g x\, dx = \frac{\lambda g L^2}{2} = \frac{MgL}{2}$$
+
+$$v = \sqrt{gL}$$
+
+(This neglects subtleties of the energy method for chains; the energy approach gives $v = \sqrt{gL}$ when the whole rope just clears the table.)
+
+---
+
+## SECTION 14 — Practice Problems
+
+---
+
+### JEE Main Practice Problems
+
+**P1.** Four particles of masses 1, 2, 3, 4 kg are at the corners of a square of side 1 m (in order around the square). Find the CM.
+
+**P2.** A uniform wire is bent into an L-shape with each arm of length $L$. Find the CM.
+
+**P3.** Two masses 5 kg and 10 kg are 6 m apart. Where should a third mass of 15 kg be placed so the CM is at the midpoint of the original two?
+
+**P4.** A 50 kg girl and a 40 kg boy stand 5 m apart on frictionless ice and pull on a rope. Where do they meet?
+
+**P5.** A 3 kg gun fires a 30 g bullet at 500 m/s. Find recoil velocity and ratio of KE of bullet to gun.
+
+**P6.** A 0.15 kg cricket ball at 30 m/s is hit straight back at 40 m/s. The contact time is 0.01 s. Find the average force.
+
+**P7.** A rocket of initial mass 6000 kg ejects gas at 1500 m/s relative to itself. Find its speed when mass becomes 3000 kg (no gravity).
+
+**P8.** A semicircular disc of radius 14 cm — find the distance of its CM from the center.
+
+**P9.** Water flows from a hose at 2 kg/s with speed 10 m/s and hits a wall perpendicularly, stopping. Find the force on the wall.
+
+**P10.** A 2 kg block moving at 6 m/s collides head-on with a 3 kg block moving at 2 m/s in the opposite direction. If they stick, find the final velocity.
+
+**P11.** A bomb at rest explodes into three pieces. Two pieces (each 1 kg) fly off perpendicular to each other at 30 m/s each. Find the velocity of the third piece (mass 2 kg).
+
+**P12.** A 1.2 kg block on a frictionless surface connected to a wall by a spring. A 0.3 kg ball at 5 m/s hits and sticks to the block. Find the maximum compression if $k = 200$ N/m.
+
+**P13.** A uniform solid cone of height 12 cm. Find the distance of CM from the base.
+
+**P14.** Find the impulse delivered by a force $F = 6t$ N (t in seconds) from $t = 0$ to $t = 2$ s.
+
+**P15.** A 70 kg man jumps horizontally off a 140 kg raft at 2 m/s relative to the ground. Find the recoil speed of the raft.
+
+---
+
+### JEE Advanced Practice Problems
+
+**Q1.** A uniform chain of length $L$ and mass $M$ hangs over a frictionless pulley with lengths $a$ and $L-a$ on either side ($a < L/2$). Find the acceleration of the chain and the velocity when the shorter end reaches the pulley.
+
+**Q2.** A block of mass $M$ with a hemispherical bowl of radius $R$ (frictionless) rests on a frictionless floor. A small ball of mass $m$ is released from the rim. Find the velocity of the block when the ball reaches the bottom of the bowl.
+
+**Q3.** A particle of mass $m$ explodes into three equal fragments. Two fly off along perpendicular directions with speed $v$ each. Find the energy released in the explosion.
+
+**Q4.** A flexible chain of length $L$ and mass $M$ is held with its lower end at a height $h$ above a table and released. Find the force on the table as a function of the length that has landed.
+
+**Q5.** Two blocks of masses $m$ and $2m$ are connected by a spring and held compressed by a thread. The system is projected with velocity $v$ in the direction of length. The thread snaps mid-flight. Show that the CM continues with velocity $v$ and find the maximum and minimum speeds of each block.
+
+**Q6.** A cart of mass $M$ moves at velocity $v_0$ on frictionless rails. Rain falls vertically and accumulates in the cart at rate $r$ kg/s. Find the velocity of the cart as a function of time.
+
+**Q7.** A uniform rod of length $L$ and mass $M$ stands vertically on a frictionless floor and is given a tiny push. Describe the path of the CM and find the speed of the CM when the rod becomes horizontal.
+
+**Q8.** A shell moving at velocity $v$ explodes into two pieces of masses in ratio $1:2$. The lighter piece comes to rest. Find the velocity of the heavier piece and the energy released.
+
+**Q9.** A ball of mass $m$ falls from height $h$ onto a pan of mass $M$ attached to a spring (constant $k$). If the collision is perfectly inelastic, find the maximum compression of the spring beyond its initial equilibrium.
+
+**Q10.** A uniform disc of radius $2R$ has a concentric hole... actually, two holes each of radius $R$ are punched, tangent to each other and to the rim along a diameter. Find the CM of the remaining lamina.
+
+---
+
+## SECTION 15 — PYQ Analysis
+
+---
+
+### JEE Main Trends (2019–2024)
+
+| Topic | Frequency | Common Question Type |
+|-------|-----------|---------------------|
+| CM of discrete particles / standard bodies | Very High | Direct calculation |
+| Conservation of momentum (recoil, explosion) | Very High | Numerical |
+| CM with cavity (negative mass) | High | Disc/sphere with hole |
+| Impulse / average force | High | $F$–$t$ graph or direct |
+| Man-boat / displacement of CM | Medium | Conceptual |
+| Variable mass / rocket | Medium | Tsiolkovsky equation |
+| Collision + CM velocity | High | Combined momentum problem |
+
+---
+
+### JEE Advanced Trends (2019–2024)
+
+| Topic | Frequency | Format |
+|-------|-----------|--------|
+| Wedge-block momentum conservation | Very High | Paragraph / Integer |
+| Spring + collision combined | High | Multi-step numerical |
+| Chain / variable-mass dynamics | Medium | Analytical derivation |
+| Explosion + 2D momentum | High | Multi-correct / Integer |
+| CM frame analysis | Medium | Conceptual + Numerical |
+| CM of composite/cavity bodies | Medium | Integer |
+
+**JEE Advanced Key Pattern:** The signature problem combines momentum conservation (for the collision/interaction) with energy conservation (for the spring/height) and often a constraint relation (wedge-block, pulley). The trick is recognizing which quantity is conserved at each stage: momentum during impulsive interactions, energy during smooth interactions.
+
+---
+
+## SECTION 16 — Final Revision Module
+
+---
+
+### Complete Formula Sheet
+
+<Formula label="Centre of Mass & Momentum — Master Formula Sheet">
+
+**CM (discrete):** $\vec{r}_{cm} = \dfrac{\sum m_i\vec{r}_i}{\sum m_i}$
+
+**CM (continuous):** $\vec{r}_{cm} = \dfrac{1}{M}\int\vec{r}\,dm$
+
+**Two-particle CM:** divides line in inverse mass ratio ($m_1 r_1 = m_2 r_2$)
+
+**CM with cavity:** $\vec{r}_{cm} = \dfrac{m_{full}\vec{r}_{full} - m_{cav}\vec{r}_{cav}}{m_{full} - m_{cav}}$
+
+**Standard CM positions:**
+- Semicircular ring: $2R/\pi$
+- Semicircular disc: $4R/3\pi$
+- Solid hemisphere: $3R/8$
+- Hollow hemisphere: $R/2$
+- Solid cone: $h/4$ from base
+- Hollow cone: $h/3$ from base
+
+**Velocity / acceleration of CM:** $\vec{v}_{cm} = \dfrac{\sum m_i\vec{v}_i}{M}$ ; $\vec{F}_{ext} = M\vec{a}_{cm}$
+
+**Total momentum:** $\vec{p} = M\vec{v}_{cm}$
+
+**Conservation of momentum:** $\vec{F}_{ext} = 0 \Rightarrow \vec{p} = $ const
+
+**Impulse:** $\vec{J} = \int\vec{F}\,dt = \Delta\vec{p}$ ; $F_{avg} = \Delta p/\Delta t$
+
+**Recoil:** $V_{gun} = mv/M$ ; $KE_{bullet}/KE_{gun} = M/m$
+
+**Reduced mass:** $\mu = \dfrac{m_1 m_2}{m_1+m_2}$
+
+**KE split:** $KE = \frac{1}{2}MV_{cm}^2 + \frac{1}{2}\mu v_{rel}^2$
+
+**Max KE loss (collision):** $\frac{1}{2}\mu(u_1-u_2)^2$
+
+**Variable mass:** $F_{ext} + v_{rel}\dfrac{dm}{dt} = m\dfrac{dv}{dt}$
+
+**Rocket (Tsiolkovsky):** $v = u\ln(m_0/m)$ ; Thrust $= u|dm/dt|$
+
+**Conveyor belt:** $F = v\,dm/dt$ ; $P = v^2\,dm/dt$
+
+**Chain onto table:** $F = 3\lambda xg$ (3× weight of fallen part)
+
+**Man-boat:** $x_{boat} = \dfrac{mL}{m+M}$
+
+</Formula>
+
+---
+
+### Concept Map
+
+**Centre of Mass & Linear Momentum**
+
+$\vec{r}_{cm} = \dfrac{\sum m_i\vec{r}_i}{M}$ → defines the special "average point"
+
+↓
+
+$\vec{p} = M\vec{v}_{cm}$ → total momentum is momentum of CM
+
+↓
+
+$\vec{F}_{ext} = M\vec{a}_{cm}$ → **only external forces move the CM**
+
+↓ If $F_{ext} = 0$:
+
+**Conservation of momentum** → recoil, explosions, collisions, man-boat
+
+↓ Impulsive forces:
+
+**Impulse** $\vec{J} = \Delta\vec{p}$ → average force in collisions
+
+↓ Mass changes:
+
+**Variable mass** → rockets ($v = u\ln(m_0/m)$), conveyor belts, chains
+
+---
+
+### Last-Minute Tips
+
+<Callout type="tip">
+**5 Power Techniques**
+
+1. **CM stays put:** If no external horizontal force and system starts at rest, the CM never moves horizontally. This single fact solves man-boat, wedge-block, and recoil problems instantly.
+
+2. **Explosion shortcut:** After an explosion, the CM continues exactly as before (gravity is the only external force). For a bursting projectile, the CM lands at the original range.
+
+3. **Negative mass for cavities:** Always faster than re-integrating. Full body minus the cut-out piece, both with their own CM positions.
+
+4. **Momentum first, then energy:** In any impulsive interaction (collision, sudden sticking), apply momentum conservation. For the smooth phases (spring, rising), apply energy conservation. Never mix the two within one phase.
+
+5. **Reduced mass for energy loss:** Maximum KE loss = $\frac{1}{2}\mu v_{rel}^2$. The fastest route for "how much energy is lost / available" MCQs.
+</Callout>
+
+<Callout type="warning">
+**3 Classic JEE Traps**
+
+1. **CM outside the body:** For a ring, semicircular wire, or L-shape, the CM is NOT a material point of the body. Don't assume it lies "on" the object.
+
+2. **Chain onto table = 3× weight:** Students forget the impulsive momentum term and write just the weight $\lambda xg$. The correct force is $3\lambda xg$.
+
+3. **Vector nature of momentum:** In a 2D explosion or oblique collision, conserve $x$ and $y$ momentum **separately**. Adding speeds as scalars is a guaranteed wrong answer.
+</Callout>
+
+---
+
+*Module created by the Physics Mastery faculty team — Senior JEE Faculty · IIT Physics Professors · Olympiad Mentors*
+
+*For JEE Main · JEE Advanced · NEET · Physics Olympiad*

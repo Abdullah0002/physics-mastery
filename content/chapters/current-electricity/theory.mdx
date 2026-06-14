@@ -1,0 +1,1839 @@
+---
+title: Current Electricity — Complete JEE Advanced Theory Module
+description: From the microscopic origin of current to advanced network theorems — the most comprehensive Current Electricity theory module for JEE Main, JEE Advanced, and NEET.
+difficulty: HARD
+tags: [current-electricity, drift-velocity, ohm's-law, kirchhoff, wheatstone-bridge, potentiometer, RC-circuits, star-delta, JEE-Advanced, NEET]
+---
+
+---
+
+## PART I — THE BIG PICTURE
+
+---
+
+### Why Does This Chapter Exist?
+
+In Electrostatics you studied charges *at rest* — fields, potentials, capacitors storing energy. But nature is restless. The moment you connect two points at different potentials with a conductor, charges begin to flow — and the entire machinery of modern civilisation follows.
+
+**Current Electricity is the physics of charges in motion through conductors.** It answers:
+
+- Why does a wire heat up?
+- How does a battery drive a current?
+- Why do resistors in parallel draw more current than each alone?
+- How do engineers measure unknown resistances to milliohm precision?
+
+**Historical Timeline**
+
+| Year | Scientist | Discovery |
+|------|-----------|-----------|
+| 1780 | Luigi Galvani | Biological electricity (frog leg) |
+| 1800 | Alessandro Volta | First electrochemical battery (voltaic pile) |
+| 1826 | Georg Ohm | $V = IR$ — quantitative relationship |
+| 1841 | James Joule | $P = I^2R$ — heat produced by current |
+| 1845 | Gustav Kirchhoff | Laws of current and voltage in networks |
+| 1847 | Charles Wheatstone | Resistance bridge for precision measurement |
+| 1880 | Thomas Edison | First practical incandescent lamp |
+
+**Connection Roadmap**
+
+$$\underbrace{\text{Electrostatics}}_{\text{Charges at rest}} \xrightarrow{\text{close the circuit}} \underbrace{\text{Current Electricity}}_{\text{Charges in motion}} \xrightarrow{\text{moving charges create fields}} \underbrace{\text{Magnetism}}_{\text{Biot-Savart, Ampere}}$$
+
+Current Electricity also feeds directly into:
+- **Electromagnetic Induction** (changing currents create changing fields)
+- **AC Circuits** (time-varying currents and impedance)
+- **Electronics** (transistors, diodes — all circuit analysis built on this foundation)
+
+**Real-World Significance (JEE Context)**
+
+Every year JEE Advanced allocates **2–3 questions** from this chapter with significant marks. NEET consistently tests **Kirchhoff's Laws, Wheatstone Bridge, and Potentiometer**. JEE Main tests **combination circuits and power calculations**. Mastery here guarantees marks that students often leave on the table.
+
+---
+
+## PART II — COMPLETE THEORY
+
+---
+
+## Section 1 — Electric Current: The Microscopic Reality
+
+---
+
+### 1.1 What Is Electric Current?
+
+**Definition:** Electric current is the **net rate of flow of electric charge** through any cross-section of a conductor.
+
+$$\boxed{i = \frac{dq}{dt}}$$
+
+If $\Delta q$ coulombs flow in time $\Delta t$:
+$$i_{\text{avg}} = \frac{\Delta q}{\Delta t}$$
+
+**SI Unit:** Ampere (A). $1\,\text{A} = 1\,\text{C s}^{-1}$.
+
+**Dimension:** $[A] = [QT^{-1}] = [AT]$ — current is a base SI quantity.
+
+**Physical Meaning — The Water Pipe Analogy**
+
+Think of a water pipe. The *flow rate* (litres per second) is analogous to current. The *pressure difference* driving the flow is analogous to potential difference (voltage). The *resistance of the pipe* (narrow, long, rough) resists the flow exactly like electrical resistance.
+
+But the analogy breaks down here: in water pipes, each water molecule moves bodily from one end to the other. In a wire, electrons move *very slowly* ($\sim 0.1\,\text{mm/s}$) — yet a bulb lights up *instantly*. Why? Because the electric field propagates through the wire at near light-speed, setting *all* electrons in motion *simultaneously*, like a rigid rod being pushed — the far end moves the instant the near end is pushed.
+
+**Conventional Current vs. Electron Flow**
+
+| Property | Conventional Current | Electron Drift |
+|----------|---------------------|----------------|
+| Direction | $+ \to -$ (outside battery) | $- \to +$ (opposite to $E$) |
+| Carrier | Positive charge (hypothetical) | Electrons (negative) |
+| Usefulness | Circuit analysis, Kirchhoff's laws | Microscopic physics |
+
+<Callout type="warning">
+**JEE Trap:** Current is a scalar quantity — it does NOT obey vector addition. At a junction, currents add algebraically (Kirchhoff's Current Law), not as vectors. However, *current density* $\vec{J}$ IS a vector.
+</Callout>
+
+**Types of Current**
+
+1. **Steady (DC):** Constant direction and magnitude. Battery-driven circuits.
+2. **Alternating (AC):** Periodically reverses direction. House supply (50 Hz in India).
+3. **Pulsating DC:** Varying magnitude, constant direction.
+
+For JEE, all problems in this chapter involve steady DC unless stated.
+
+---
+
+### 1.2 Drift Velocity — The Core Microscopic Concept
+
+This is the single most tested microscopic concept in JEE. Understand every step.
+
+#### The State Without an Electric Field
+
+A metallic conductor contains free electrons — roughly one per atom. These electrons behave like a *gas* trapped in the crystal lattice. They move with high thermal speeds:
+
+$$v_{\text{thermal}} \sim \sqrt{\frac{3k_BT}{m}} \approx 10^5 \text{ to } 10^6\,\text{m/s at room temperature}$$
+
+But their directions are completely random. Over any macroscopic time interval, just as many electrons move left as right. **Net average velocity = 0. Net current = 0.**
+
+<Diagram src="/diagrams/current-electricity/drift-velocity.svg" alt="Drift Velocity: electrons in conductor with and without electric field" caption="Left: No field — random thermal motion, zero net displacement. Right: With field E — superimposed drift opposite to E." />
+
+#### Applying an Electric Field
+
+Connect a battery. An electric field $\vec{E}$ is established throughout the wire (almost instantaneously — within nanoseconds). Each free electron now experiences a force:
+
+$$\vec{F} = q\vec{E} = (-e)\vec{E} \quad \Rightarrow \quad \vec{F} = -e\vec{E}$$
+
+This force gives an acceleration:
+
+$$\vec{a} = \frac{\vec{F}}{m} = -\frac{e\vec{E}}{m}$$
+
+(directed *opposite* to $\vec{E}$, since the electron has negative charge)
+
+#### The Role of Collisions
+
+An electron does NOT accelerate indefinitely. After acquiring some velocity, it **collides with a lattice ion** (or impurity or phonon) and its velocity is **randomised** — it starts fresh from a random direction.
+
+Let $\tau$ = **relaxation time** (mean time between successive collisions). Typical value: $\tau \sim 10^{-14}$ s.
+
+#### Derivation of Drift Velocity
+
+Consider $N$ electrons. Just after the $i$-th electron's last collision, its velocity is $\vec{u}_i$ (random thermal velocity). In time $t_i$ since that collision, it accelerates:
+
+$$\vec{v}_i = \vec{u}_i + \vec{a}\,t_i$$
+
+Average over all electrons:
+
+$$\vec{v}_{\text{drift}} = \langle\vec{v}_i\rangle = \langle\vec{u}_i\rangle + \vec{a}\langle t_i\rangle$$
+
+Since thermal velocities are random: $\langle\vec{u}_i\rangle = 0$.
+Since collisions are random with mean time $\tau$: $\langle t_i\rangle = \tau$.
+
+<Formula label="Drift Velocity">
+$$\boxed{\vec{v}_d = \vec{a}\,\tau = -\frac{e\tau}{m}\vec{E}}$$
+</Formula>
+
+**Magnitude:** $v_d = \frac{e\tau}{m}E$
+
+**Direction:** Opposite to $\vec{E}$ (electrons drift against the field).
+
+**Typical Value:** For copper wire carrying 1 A with cross-section $1\,\text{mm}^2$:
+
+$$v_d \approx 7.4 \times 10^{-5}\,\text{m/s} \approx 0.074\,\text{mm/s}$$
+
+This is *shockingly slow* — slower than a snail!
+
+<Callout type="info">
+**The Paradox Resolved:** Electrons drift at $\sim 0.1\,\text{mm/s}$ but the light turns on instantly. Reason: The *electric field signal* travels at $\sim 2 \times 10^8\,\text{m/s}$ through the wire. All electrons start drifting simultaneously. It's like a queue: you push the person at the back and the person at the front exits immediately — no individual needs to travel the full length.
+</Callout>
+
+---
+
+### 1.3 Relation Between Current and Drift Velocity
+
+**Derivation:**
+
+Consider a conductor of cross-sectional area $A$, with $n$ free electrons per unit volume (number density), each drifting with speed $v_d$.
+
+In time $\Delta t$, all electrons within a cylinder of length $v_d \Delta t$ pass through the cross-section:
+
+$$\text{Volume of cylinder} = A \cdot v_d \Delta t$$
+$$\text{Number of electrons} = n \cdot A \cdot v_d \Delta t$$
+$$\text{Charge flowing} = \Delta q = e \cdot n \cdot A \cdot v_d \Delta t$$
+
+Therefore:
+
+<Formula label="Current–Drift Velocity Relation">
+$$\boxed{I = \frac{\Delta q}{\Delta t} = neAv_d}$$
+</Formula>
+
+**Physical Insight:** Current increases if:
+- More charge carriers ($n$ ↑) — better conductor
+- Larger cross-section ($A$ ↑) — more carriers in path
+- Faster drift ($v_d$ ↑) — stronger field or longer $\tau$
+
+**Important Corollary:** Since $v_d = \frac{eE\tau}{m}$:
+
+$$I = neA \cdot \frac{eE\tau}{m} = \frac{ne^2\tau}{m} \cdot AE$$
+
+This is the microscopic derivation of Ohm's Law! (See Section 2.)
+
+---
+
+### 1.4 Current Density
+
+**Definition:** Current density $\vec{J}$ is the current per unit area of cross-section (normal to flow):
+
+$$\vec{J} = \frac{I}{A}\hat{n} \quad \text{or equivalently} \quad I = \int \vec{J}\cdot d\vec{A}$$
+
+**Units:** A/m²
+
+**Relation to Electric Field (Microscopic Ohm's Law):**
+
+$$\vec{J} = \frac{I}{A}\hat{n} = \frac{neAv_d}{A}\hat{n} = nev_d\hat{n}$$
+
+Since $v_d = \frac{e\tau}{m}E$:
+
+<Formula label="Microscopic Ohm's Law">
+$$\boxed{\vec{J} = \underbrace{\frac{ne^2\tau}{m}}_{\sigma}\vec{E} = \sigma\vec{E}}$$
+</Formula>
+
+where $\sigma = \frac{ne^2\tau}{m}$ is the **electrical conductivity** of the material.
+
+**Physical Insight:** The conductor responds to an applied field by producing a current density proportional to that field. This is the fundamental statement of Ohm's Law at the microscopic level.
+
+---
+
+## Section 2 — Ohm's Law: Microscopic to Macroscopic
+
+---
+
+### 2.1 Macroscopic Ohm's Law
+
+<Diagram src="/diagrams/current-electricity/ohm-law-vi.svg" alt="V-I characteristic graph for ohmic and non-ohmic conductors" caption="V–I graph: ohmic conductors show a straight line (constant slope R). Non-ohmic devices (diodes, filaments) show a curve." />
+
+**Experiment:** If we apply potential difference $V$ across a metallic conductor at constant temperature and measure the current $I$, we find:
+
+$$I \propto V \quad \Rightarrow \quad V = IR$$
+
+<Formula label="Ohm's Law">
+$$\boxed{V = IR}$$
+</Formula>
+
+where $R$ is the **resistance** of the conductor (unit: Ohm, $\Omega$).
+
+**Why does this work?** Because $V = E \cdot L$ (for a uniform field) and $I = J \cdot A = \sigma E \cdot A$, so:
+
+$$I = \sigma E \cdot A = \sigma \cdot \frac{V}{L} \cdot A = \frac{\sigma A}{L} \cdot V$$
+
+Therefore: $\frac{V}{I} = \frac{L}{\sigma A} = R$. ✓
+
+**The V–I Characteristic:**
+
+An ohmic material has a *linear* V–I graph through the origin. The slope $\frac{V}{I} = R$ is constant.
+
+Non-ohmic devices (diodes, bulbs at different temperatures, LDRs) have *non-linear* V–I curves.
+
+<Callout type="warning">
+**JEE Trap:** Ohm's Law is NOT a fundamental law of nature — it is an empirical approximation valid for metallic conductors at constant temperature. The resistance of a tungsten filament increases 10× from cold to hot. A diode conducts in one direction only. Never apply Ohm's Law blindly to non-linear devices.
+</Callout>
+
+---
+
+### 2.2 Resistance: Complete Theory
+
+**Definition:** Resistance is the opposition a conductor offers to the flow of electric current. It quantifies how much potential difference is required to drive a unit current.
+
+$$R = \frac{V}{I}$$
+
+**Microscopic Origin:** Resistance arises from collisions of drifting electrons with:
+1. Lattice ions (vibrating with thermal energy)
+2. Impurity atoms
+3. Crystal defects
+4. Grain boundaries
+
+Each collision destroys the acquired drift velocity, requiring the field to re-accelerate the electron. This energy dissipation manifests as heat (Joule heating).
+
+**Factors Affecting Resistance:**
+
+$$\boxed{R = \rho \frac{L}{A}}$$
+
+| Factor | Effect | Reason |
+|--------|--------|--------|
+| Length $L$ ↑ | $R$ ↑ | More collisions in longer path |
+| Area $A$ ↑ | $R$ ↓ | More parallel paths for electrons |
+| Resistivity $\rho$ ↑ | $R$ ↑ | Material property — more collisions per unit length |
+| Temperature ↑ | $R$ ↑ (metals) | Increased lattice vibrations |
+
+**Resistivity $\rho$:**
+- Pure material property (independent of shape/size)
+- Unit: $\Omega\cdot\text{m}$
+- Related to conductivity: $\rho = \frac{1}{\sigma} = \frac{m}{ne^2\tau}$
+- Copper: $\rho \approx 1.7 \times 10^{-8}\,\Omega\cdot\text{m}$
+- Silicon: $\rho \approx 6.4 \times 10^2\,\Omega\cdot\text{m}$
+- Glass: $\rho \approx 10^{10}\text{–}10^{14}\,\Omega\cdot\text{m}$
+
+<Callout type="info">
+**Order of Magnitude Trick (JEE):** Resistivity spans 25 orders of magnitude from the best conductors (silver: $10^{-8}\,\Omega\cdot\text{m}$) to the best insulators ($10^{16}\,\Omega\cdot\text{m}$). Semiconductors sit in between — and their resistivity DECREASES with temperature (opposite to metals).
+</Callout>
+
+---
+
+### 2.3 Temperature Dependence of Resistance
+
+**For Metals:**
+
+Increasing temperature → ions vibrate more vigorously → $\tau$ decreases → $\sigma$ decreases → $\rho$ increases → $R$ increases.
+
+$$\boxed{R_T = R_0\left[1 + \alpha(T - T_0)\right]}$$
+
+where $\alpha$ is the **temperature coefficient of resistance** (unit: K$^{-1}$ or °C$^{-1}$).
+
+For copper: $\alpha \approx 3.9 \times 10^{-3}\,\text{K}^{-1}$
+For platinum: $\alpha \approx 3.85 \times 10^{-3}\,\text{K}^{-1}$
+For nichrome: $\alpha \approx 0.4 \times 10^{-3}\,\text{K}^{-1}$ (low — hence used in heaters)
+
+**For Semiconductors:**
+
+More temperature → more electron-hole pairs generated → $n$ increases rapidly → conductivity increases → $\rho$ decreases.
+
+$$\rho \propto e^{E_g/2k_BT}$$
+
+For semiconductors, $\alpha$ is **negative** (and large in magnitude).
+
+**For Alloys (Manganin, Constantan):**
+
+$\alpha \approx 0$ — nearly temperature-independent resistance. Used in standard resistors and Wheatstone bridge arms.
+
+**Superconductors:**
+
+Below critical temperature $T_c$: $\rho \to 0$ exactly. No collisions — electrons form Cooper pairs and flow without resistance. (Beyond JEE syllabus but excellent context.)
+
+**JEE Application:** A tungsten filament lamp starts at room temperature $R_0$ and reaches $\sim 10 R_0$ at operating temperature ($\sim 2700\,\text{K}$). The cold resistance is used to find surge current; hot resistance determines operating power.
+
+---
+
+## Section 3 — EMF and Internal Resistance
+
+---
+
+### 3.1 What Is EMF? (Most Misunderstood Concept)
+
+**The Problem:** Ohm's Law says $I = V/R$. If we connect a resistor to a battery, where does the continuous potential difference come from? A capacitor can supply charge briefly, but as it discharges, the potential drops to zero. A battery maintains a (nearly) constant potential difference indefinitely.
+
+**Answer:** A battery is an **energy converter** — it converts chemical energy to electrical energy. The **Electromotive Force (EMF)** is the work done by this non-electrostatic force per unit charge moved from the negative to the positive terminal *inside* the battery:
+
+$$\boxed{\varepsilon = \frac{W_{\text{non-electrostatic}}}{q}}$$
+
+**Critical Point:** EMF is NOT a force — it is energy per unit charge (like potential), measured in Volts. The word "force" is a historical misnomer.
+
+**Why is EMF not the same as terminal voltage?**
+
+Inside the battery, the electrolyte has its own resistance — called **internal resistance** $r$. When current flows, some EMF is "used up" driving current through $r$. The terminal voltage is what remains:
+
+$$V_{\text{terminal}} = \varepsilon - Ir$$
+
+**Physical Analogy:** Imagine a water pump in a pipe loop. The pump's pressure (EMF) drives water. But the pump itself has friction (internal resistance). The pressure difference *across the external pipe* (terminal voltage) = pump pressure $-$ pressure lost in pump friction.
+
+---
+
+### 3.2 The Complete EMF Circuit
+
+<Diagram src="/diagrams/current-electricity/emf-circuit.svg" alt="EMF circuit showing battery with internal resistance r and external resistance R" caption="Battery of EMF ε and internal resistance r driving external resistance R. Terminal voltage V_T = ε - Ir." />
+
+**Current in the circuit:**
+
+For a single loop with EMF $\varepsilon$, internal resistance $r$, external resistance $R$:
+
+By conservation of energy (work done by EMF = heat dissipated):
+$$\varepsilon \cdot q = I^2(R+r) \cdot t = I(R+r) \cdot It = I(R+r) \cdot q$$
+
+<Formula label="Current in EMF Circuit">
+$$\boxed{I = \frac{\varepsilon}{R + r}}$$
+</Formula>
+
+**Terminal Voltage Analysis:**
+
+$$V_{AB} = \varepsilon - Ir = \varepsilon - \frac{\varepsilon r}{R+r} = \frac{\varepsilon R}{R+r}$$
+
+Three important cases:
+
+| Condition | Terminal Voltage | Physical Situation |
+|-----------|-----------------|-------------------|
+| $R = 0$ (short circuit) | $V = 0$ | All EMF drops across internal resistance |
+| $R \to \infty$ (open circuit) | $V = \varepsilon$ | No current, no internal drop |
+| $R = r$ (matched load) | $V = \varepsilon/2$ | Maximum power transfer |
+
+**When Battery is Charging (current flows into + terminal):**
+
+$$V_{\text{terminal}} = \varepsilon + Ir > \varepsilon$$
+
+The terminal voltage EXCEEDS the EMF! This is because the external charger does work *against* the battery's EMF and *against* the internal resistance.
+
+<Callout type="warning">
+**JEE Trap:** During charging, $V = \varepsilon + Ir$. During discharging, $V = \varepsilon - Ir$. The sign depends on the direction of current relative to the EMF polarity. Students who memorise only one formula lose marks on charging problems.
+</Callout>
+
+---
+
+### 3.3 Cells in Combination
+
+#### Series Combination
+
+$n$ cells of EMF $\varepsilon_1, \varepsilon_2, \ldots, \varepsilon_n$ and internal resistances $r_1, r_2, \ldots, r_n$ connected in series:
+
+<Formula label="Series Cells">
+$$\varepsilon_{\text{eq}} = \sum_{i=1}^n \varepsilon_i \qquad r_{\text{eq}} = \sum_{i=1}^n r_i$$
+</Formula>
+
+**Use when:** External resistance $R \gg r$ (each cell). Series combination boosts EMF while internal resistance also accumulates.
+
+**Special case — $n$ identical cells in series:** $\varepsilon_{\text{eq}} = n\varepsilon$, $r_{\text{eq}} = nr$.
+
+$$I = \frac{n\varepsilon}{R + nr}$$
+
+When $R \gg r$: $I \approx \frac{n\varepsilon}{R}$ — series beneficial.
+When $R \ll r$: $I \approx \frac{\varepsilon}{r}$ — all cells barely help.
+
+**Cells in opposition (one reversed):**
+
+$$\varepsilon_{\text{eq}} = \varepsilon_1 - \varepsilon_2, \qquad r_{\text{eq}} = r_1 + r_2$$
+
+(Net EMF is the algebraic sum; internal resistances always add)
+
+#### Parallel Combination
+
+$n$ identical cells ($\varepsilon$, $r$ each) in parallel:
+
+<Formula label="Parallel Identical Cells">
+$$\varepsilon_{\text{eq}} = \varepsilon \qquad r_{\text{eq}} = \frac{r}{n}$$
+</Formula>
+
+$$I = \frac{\varepsilon}{R + r/n}$$
+
+**Use when:** External resistance $R \ll r$. Parallel combination reduces internal resistance, allowing each cell to contribute current without excessive internal voltage drop.
+
+**General case — two non-identical cells in parallel:**
+
+Using superposition (or treating as a Thevenin equivalent):
+
+$$\varepsilon_{\text{eq}} = \frac{\varepsilon_1/r_1 + \varepsilon_2/r_2}{1/r_1 + 1/r_2} = \frac{\varepsilon_1 r_2 + \varepsilon_2 r_1}{r_1 + r_2}$$
+
+$$r_{\text{eq}} = \frac{r_1 r_2}{r_1 + r_2}$$
+
+<Callout type="info">
+**JEE Insight:** The equivalent EMF for parallel cells looks like a *weighted average* of individual EMFs, weighted by their *conductances* ($1/r$). This makes physical sense: a cell with smaller internal resistance dominates the equivalent EMF.
+</Callout>
+
+---
+
+## Section 4 — Kirchhoff's Laws: The Foundation of Network Analysis
+
+---
+
+### 4.1 Why We Need Kirchhoff's Laws
+
+Ohm's Law handles one loop. Real circuits have multiple loops, multiple batteries, nodes where currents divide. Kirchhoff's Laws (1845) are the tool for ALL such networks.
+
+They follow directly from two fundamental conservation laws:
+- **KCL** → Conservation of Charge
+- **KVL** → Conservation of Energy
+
+---
+
+### 4.2 Kirchhoff's Current Law (KCL)
+
+<Diagram src="/diagrams/current-electricity/kirchhoff-laws.svg" alt="Kirchhoff's Current Law (KCL) and Voltage Law (KVL) illustrated" caption="Left: KCL — currents in = currents out at every junction. Right: KVL — sum of EMFs equals sum of IR drops around any closed loop." />
+
+**Statement:** At any node (junction) in a circuit, the sum of currents entering equals the sum of currents leaving.
+
+$$\boxed{\sum I_{\text{in}} = \sum I_{\text{out}} \quad \Leftrightarrow \quad \sum_{\text{all}} I_k = 0}$$
+
+**Physical Basis:** Charge cannot accumulate at a junction (steady-state DC). Conservation of charge demands: charge in = charge out per unit time.
+
+**Sign Convention:** Assign positive sign to currents entering the junction; negative to those leaving. Then the algebraic sum = 0.
+
+**Example:**
+At a junction where currents $I_1, I_2$ enter and $I_3, I_4$ leave:
+$$I_1 + I_2 = I_3 + I_4 \quad \Rightarrow \quad I_1 + I_2 - I_3 - I_4 = 0$$
+
+---
+
+### 4.3 Kirchhoff's Voltage Law (KVL)
+
+**Statement:** The algebraic sum of all potential differences (EMFs and $IR$ drops) around any closed loop is zero.
+
+$$\boxed{\sum_{\text{loop}} V = 0}$$
+
+**Physical Basis:** Electric potential is defined at each point; it is a state function (like height in gravity). If you walk around a closed loop and return to start, the net change in height = 0. Similarly, the net change in potential around a closed loop = 0.
+
+**Sign Convention for KVL:**
+
+Choose a direction to traverse the loop (clockwise or counterclockwise — your choice, result is the same).
+
+For a **resistor:**
+- Traverse in direction of assumed current: voltage *drops* (−$IR$)
+- Traverse against assumed current: voltage *rises* (+$IR$)
+
+For a **battery:**
+- Traverse from − to + terminal: voltage *rises* (+$\varepsilon$)
+- Traverse from + to − terminal: voltage *drops* (−$\varepsilon$)
+
+**Example — Two-Loop Circuit:**
+
+Consider two loops with batteries $\varepsilon_1$, $\varepsilon_2$ and resistors $R_1$, $R_2$, $R_3$.
+
+Assign currents $I_1, I_2, I_3$ and write:
+
+**Junction A (KCL):** $I_1 = I_2 + I_3$
+
+**Loop 1 (KVL):** $\varepsilon_1 - I_1R_1 - I_2R_2 = 0$
+
+**Loop 2 (KVL):** $\varepsilon_2 - I_3R_3 + I_2R_2 = 0$ (note: traversing $R_2$ against $I_2$)
+
+Solve the system of three equations for $I_1, I_2, I_3$.
+
+<Callout type="info">
+**Strategy for Kirchhoff Problems:**
+1. Label ALL branch currents (use KCL at junctions to reduce unknowns)
+2. Choose as many independent loops as (branches − nodes + 1)
+3. Apply KVL to each independent loop
+4. Solve the linear system
+5. Verify: negative current means your assumed direction was wrong (current flows opposite)
+</Callout>
+
+---
+
+## Section 5 — Resistance Networks
+
+---
+
+### 5.1 Series Combination
+
+<Diagram src="/diagrams/current-electricity/resistors-series-parallel.svg" alt="Series and parallel resistor combinations" caption="Top: Series — same current through each, voltages add, R_eq = R₁+R₂+R₃. Bottom: Parallel — same voltage across each, currents add, 1/R_eq = 1/R₁+1/R₂+1/R₃." />
+
+**Definition:** Resistors are in series if the same current flows through each.
+
+**Derivation:** Apply KVL across the combination:
+$$V = V_1 + V_2 + V_3 = IR_1 + IR_2 + IR_3 = I(R_1 + R_2 + R_3) = IR_{\text{eq}}$$
+
+<Formula label="Series Resistance">
+$$\boxed{R_{\text{eq}} = R_1 + R_2 + R_3 + \cdots = \sum_{i} R_i}$$
+</Formula>
+
+**Key Properties:**
+- Same current through all
+- Voltages add
+- $R_{\text{eq}} > R_{\text{max}}$ (always greater than largest individual)
+- Removing one resistor breaks the circuit (infinite resistance path)
+
+---
+
+### 5.2 Parallel Combination
+
+**Definition:** Resistors are in parallel if the same potential difference is across each.
+
+**Derivation:** Apply KCL at the top junction:
+$$I = I_1 + I_2 + I_3 = \frac{V}{R_1} + \frac{V}{R_2} + \frac{V}{R_3} = V\left(\frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}\right) = \frac{V}{R_{\text{eq}}}$$
+
+<Formula label="Parallel Resistance">
+$$\boxed{\frac{1}{R_{\text{eq}}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \cdots}$$
+</Formula>
+
+**Special Case — Two Resistors in Parallel:**
+
+$$R_{\text{eq}} = \frac{R_1 R_2}{R_1 + R_2} \qquad \text{("product over sum")}$$
+
+**Key Properties:**
+- Same voltage across all
+- Currents add
+- $R_{\text{eq}} < R_{\text{min}}$ (always smaller than smallest individual)
+- Removing one resistor does not break the circuit
+
+**Intuition:** Adding a parallel branch provides an additional path for current — like adding lanes to a highway, total traffic increases.
+
+---
+
+### 5.3 Voltage Divider and Current Divider
+
+**Voltage Divider** (series):
+
+$$V_1 = V \cdot \frac{R_1}{R_1 + R_2}, \qquad V_2 = V \cdot \frac{R_2}{R_1 + R_2}$$
+
+The larger resistor gets the larger share of voltage.
+
+**Current Divider** (parallel):
+
+$$I_1 = I \cdot \frac{R_2}{R_1 + R_2}, \qquad I_2 = I \cdot \frac{R_1}{R_1 + R_2}$$
+
+The smaller resistor gets the larger share of current. (Note: the "other" resistance appears in numerator — this is a common trap!)
+
+---
+
+## Section 6 — Electrical Power and Energy
+
+---
+
+### 6.1 Power in a Circuit Element
+
+**Work done** by electric field in moving charge $dq$ across potential difference $V$:
+$$dW = V\,dq$$
+
+**Power** (rate of work):
+$$\boxed{P = \frac{dW}{dt} = V\frac{dq}{dt} = VI}$$
+
+For a **resistor** (using $V = IR$):
+
+<Formula label="Power in a Resistor">
+$$\boxed{P = VI = I^2R = \frac{V^2}{R}}$$
+</Formula>
+
+Choose the formula based on what's known:
+- Known $I$ and $R$: use $P = I^2R$
+- Known $V$ and $R$: use $P = V^2/R$
+- Known $V$ and $I$: use $P = VI$
+
+**Joule's Law of Heating:**
+
+Heat generated in time $t$:
+$$H = Pt = I^2Rt = VIt = \frac{V^2}{R}t$$
+
+Units: Joule (J). $1\,\text{kWh} = 3.6 \times 10^6\,\text{J}$ (commercial unit of electrical energy).
+
+---
+
+### 6.2 Maximum Power Transfer Theorem
+
+**Problem:** Given a source with EMF $\varepsilon$ and internal resistance $r$, what value of external resistance $R$ maximises power delivered to $R$?
+
+**Power delivered to external resistance:**
+$$P = I^2R = \frac{\varepsilon^2 R}{(R+r)^2}$$
+
+**Maximise $P$ with respect to $R$:**
+$$\frac{dP}{dR} = \varepsilon^2 \cdot \frac{(R+r)^2 - R \cdot 2(R+r)}{(R+r)^4} = 0$$
+
+$$\Rightarrow (R+r) - 2R = 0 \quad \Rightarrow \quad R = r$$
+
+<Formula label="Maximum Power Transfer">
+$$\boxed{P_{\max} = \frac{\varepsilon^2}{4r} \quad \text{when } R = r}$$
+</Formula>
+
+**At matched load ($R = r$):** 50% of total power goes to external load, 50% is wasted internally.
+
+This is important in audio amplifiers, RF transmitters, and any impedance-matching application.
+
+---
+
+### 6.3 Efficiency of Power Transfer
+
+$$\eta = \frac{P_{\text{external}}}{P_{\text{total}}} = \frac{I^2R}{I^2(R+r)} = \frac{R}{R+r}$$
+
+At $R = r$: $\eta = 50\%$ — maximum power, but only 50% efficiency.
+
+As $R \to \infty$: $\eta \to 100\%$, but $P \to 0$.
+
+**JEE insight:** Maximum power transfer and maximum efficiency are *mutually exclusive*. In power systems, we want high efficiency ($R \gg r$). In signal processing, we want maximum power transfer ($R = r$).
+
+---
+
+## Section 7 — Wheatstone Bridge
+
+---
+
+### 7.1 The Circuit
+
+The Wheatstone Bridge is a four-resistance network shaped like a diamond (rhombus), used for **precision measurement of unknown resistance**.
+
+**Configuration:** Four resistances $P$, $Q$, $R$, $S$ connected in a diamond:
+
+<Diagram src="/diagrams/current-electricity/wheatstone-bridge.svg" alt="Wheatstone Bridge circuit diagram" caption="Wheatstone Bridge: P, Q, R, S are four arms. G is the galvanometer in the middle diagonal. Battery across A-C, galvanometer across B-D." />
+
+- Nodes: A (top), B (right), C (bottom), D (left)
+- $P$ from A to B, $Q$ from B to C, $R$ from A to D, $S$ from D to C
+- Battery across A–C
+- Galvanometer $G$ across B–D
+
+---
+
+### 7.2 Balance Condition — Complete Derivation
+
+**At balance:** No current through galvanometer ($I_G = 0$). This means $V_B = V_D$.
+
+**Apply KCL and Ohm's Law:**
+
+Since $I_G = 0$, the current through $P$ equals current through $Q$ (call it $I_1$), and current through $R$ equals current through $S$ (call it $I_2$).
+
+Potential at B: $V_A - I_1 P = V_B$, so $V_B = V_A - I_1 P$
+
+Potential at D: $V_A - I_2 R = V_D$, so $V_D = V_A - I_2 R$
+
+Setting $V_B = V_D$:
+$$V_A - I_1 P = V_A - I_2 R \quad \Rightarrow \quad I_1 P = I_2 R \quad \cdots (1)$$
+
+Similarly, from B to C and D to C:
+$$V_B - I_1 Q = V_C \quad \text{and} \quad V_D - I_2 S = V_C$$
+
+So: $V_B - I_1 Q = V_D - I_2 S$
+
+Since $V_B = V_D$: $I_1 Q = I_2 S \quad \cdots (2)$
+
+Dividing (1) by (2):
+
+<Formula label="Wheatstone Balance Condition">
+$$\boxed{\frac{P}{Q} = \frac{R}{S}}$$
+</Formula>
+
+Or equivalently: $PS = QR$ (products of opposite arms are equal).
+
+**Physical Interpretation:** When balanced, the bridge divides the supply voltage in the same ratio on both sides — no potential difference exists across the galvanometer, so no current flows.
+
+---
+
+### 7.3 Sensitivity of Wheatstone Bridge
+
+The galvanometer deflects by $\theta$ when the bridge is off-balance. **Sensitivity** = $\theta / \Delta R$.
+
+Maximum sensitivity occurs when all four arms are equal ($P = Q = R = S$). This is why Wheatstone bridge measurements are most accurate near the balance point with approximately equal arms.
+
+<Callout type="warning">
+**JEE Trap:** The balance condition is INDEPENDENT of the internal resistance of the battery and the resistance of the galvanometer. This is why the bridge is so powerful — the result depends only on the four arm resistances.
+</Callout>
+
+---
+
+## Section 8 — Meter Bridge
+
+---
+
+### 8.1 The Principle
+
+The Meter Bridge is a **practical implementation of the Wheatstone Bridge** using a uniform resistance wire.
+
+<Diagram src="/diagrams/current-electricity/meter-bridge.svg" alt="Meter Bridge circuit diagram" caption="Meter bridge: known resistance R in one gap, unknown X in the other. Wire AC is 100 cm. Jockey J touches at balance point at distance ℓ from A." />
+
+**Setup:**
+- A 1-metre long wire of uniform resistance (resistance wire) stretched on a wooden board
+- One gap contains known resistance $R$; the other gap contains unknown $X$
+- A jockey (sliding contact) touches the wire to find the balance point
+- Galvanometer reads zero at balance
+
+**The wire resistance is proportional to length** (since $R = \rho L/A$ with uniform $\rho$ and $A$):
+
+If balance point is at distance $\ell$ cm from end A:
+- Resistance of wire from A to junction: $r \propto \ell$
+- Resistance of wire from junction to C: $r \propto (100 - \ell)$
+
+At balance (Wheatstone condition):
+$$\frac{X}{R} = \frac{\ell}{100 - \ell}$$
+
+<Formula label="Meter Bridge Formula">
+$$\boxed{X = R \cdot \frac{\ell}{100 - \ell}}$$
+</Formula>
+
+---
+
+### 8.2 End Corrections
+
+In practice, the copper strips connecting the wire to the gaps have some resistance. This shifts the effective zero of the wire. The corrected formula:
+
+$$X = R \cdot \frac{\ell + \alpha}{(100 - \ell) + \beta}$$
+
+where $\alpha$, $\beta$ are **end corrections**.
+
+**Method to find end corrections:** Measure with $R$ and $X$ swapped. Let $\ell_1$ be balance with $X$ in left gap, $\ell_2$ with $X$ in right gap:
+
+$$\alpha = \frac{R\ell_2 - X\ell_1}{X + R}, \quad \beta = \frac{X(100-\ell_1) - R(100-\ell_2)}{X+R}$$
+
+**JEE Insight:** The balance point should lie between 30–70 cm for accurate results. Near the ends, the sensitivity is low (small change in $X$ produces small change in $\ell$).
+
+---
+
+## Section 9 — Potentiometer
+
+---
+
+### 9.1 Principle
+
+A potentiometer is an instrument that **measures EMF without drawing any current from the source being measured**, using the *null deflection* principle.
+
+<Diagram src="/diagrams/current-electricity/potentiometer.svg" alt="Potentiometer circuit for EMF comparison" caption="Potentiometer: driver cell drives steady current through wire AB. Unknown EMF ε₂ is balanced against the potential drop across length ℓ." />
+
+**Setup:**
+- A long uniform wire AB (usually 4m or 10m, with per-unit resistance $r_{\text{wire}}$)
+- A **driver cell** (known EMF $\varepsilon_1$, small internal resistance) sends a *steady current* $I_0$ through the wire
+- The EMF to be measured ($\varepsilon_2$) is connected via a galvanometer from A to jockey J
+- Balance point: jockey position where galvanometer reads zero
+
+**At balance:**
+- No current through $\varepsilon_2$ branch (zero-deflection method)
+- Potential of A = potential of J (galvanometer reads 0, no current flows)
+- Potential drop from A to J = $I_0 \cdot r_{\text{wire}} \cdot \ell$ = $\varepsilon_2$
+
+$$\boxed{\varepsilon_2 = I_0 \cdot r_{\text{wire}} \cdot \ell = k\ell}$$
+
+where $k = I_0 \cdot r_{\text{wire}}$ = potential gradient (V/m or mV/cm).
+
+**Advantage over voltmeter:** At balance, zero current is drawn from $\varepsilon_2$. The measured EMF is the true EMF — not terminal voltage. A voltmeter always draws some current, reducing terminal voltage below EMF.
+
+---
+
+### 9.2 Comparison of EMFs
+
+Balance with cell 1 at $\ell_1$, balance with cell 2 at $\ell_2$:
+
+$$\varepsilon_1 = k\ell_1, \qquad \varepsilon_2 = k\ell_2$$
+
+<Formula label="EMF Comparison">
+$$\boxed{\frac{\varepsilon_1}{\varepsilon_2} = \frac{\ell_1}{\ell_2}}$$
+</Formula>
+
+---
+
+### 9.3 Measurement of Internal Resistance
+
+**Method:**
+1. Balance with cell (EMF $\varepsilon$, internal resistance $r$) open-circuit → balance at $\ell_1$: $\varepsilon = k\ell_1$
+2. Connect external resistance $R_0$ across cell; balance at $\ell_2$: terminal voltage $V = k\ell_2 = \varepsilon - Ir = \varepsilon \cdot \frac{R_0}{R_0+r}$
+
+$$\frac{\ell_2}{\ell_1} = \frac{V}{\varepsilon} = \frac{R_0}{R_0 + r}$$
+
+<Formula label="Internal Resistance via Potentiometer">
+$$\boxed{r = R_0\left(\frac{\ell_1 - \ell_2}{\ell_2}\right) = R_0\left(\frac{\ell_1}{\ell_2} - 1\right)}$$
+</Formula>
+
+---
+
+### 9.4 Sensitivity of Potentiometer
+
+**Sensitivity** increases (smaller potential gradient $k$) when:
+- The wire is longer
+- A series resistance in the driver circuit increases
+
+A lower $k$ means a small change in $\varepsilon_2$ produces a larger change in $\ell$ → easier to detect → more accurate.
+
+**Condition for balance to exist:**
+$$\varepsilon_{\text{driver}} > \varepsilon_{\text{unknown}}$$
+
+If the unknown EMF exceeds the driver cell's potential drop across the wire, balance is never achieved.
+
+---
+
+## Section 10 — Advanced Network Techniques
+
+---
+
+### 10.1 Symmetry in Resistance Networks
+
+Before applying Kirchhoff's Laws or any formal method, **always look for symmetry**. Symmetric networks can often be solved by inspection.
+
+**Types of symmetry:**
+
+1. **Mirror Symmetry:** If a circuit is symmetric about a line, nodes on the line have no current between them → can be removed (open circuit) OR shorted without affecting other currents.
+
+2. **Rotational Symmetry (Identical branches):** Nodes that are equivalent by symmetry have the same potential → can be connected by a wire (short circuit) without drawing current.
+
+3. **Node Folding:** Identify pairs of equipotential nodes → merge them → simplify the network.
+
+**Example:** In a Wheatstone bridge at balance, B and D are at the same potential → the galvanometer (or any element between B and D) carries zero current → can be removed.
+
+---
+
+### 10.2 Star (Y) to Delta (Δ) Transformation
+
+<Diagram src="/diagrams/current-electricity/star-delta.svg" alt="Star and Delta network configurations" caption="Left: Star (Y) with center node O. Right: Delta (Δ). Transformation formulas allow conversion between the two." />
+
+**When to use:** Networks that are neither purely series nor purely parallel can often be broken by converting a star to delta (or vice versa), enabling simplification.
+
+**Star → Delta Conversion:**
+
+Given star with resistances $R_1$ (A–O), $R_2$ (B–O), $R_3$ (C–O):
+
+$$\boxed{R_{AB} = R_1 + R_2 + \frac{R_1 R_2}{R_3}}$$
+$$R_{BC} = R_2 + R_3 + \frac{R_2 R_3}{R_1}$$
+$$R_{CA} = R_3 + R_1 + \frac{R_3 R_1}{R_2}$$
+
+**Mnemonic:** $R_{AB} = \sum\text{two adjacent} + \frac{\text{product of two adjacent}}{\text{third}}$
+
+**Delta → Star Conversion:**
+
+Given delta with resistances $R_{AB}$, $R_{BC}$, $R_{CA}$:
+
+$$\boxed{R_1 = R_A = \frac{R_{AB} \cdot R_{CA}}{R_{AB} + R_{BC} + R_{CA}}}$$
+
+**Mnemonic:** "Sum of delta / product of two adjacent" = star resistance at that node.
+
+---
+
+### 10.3 Infinite Ladder Network
+
+<Diagram src="/diagrams/current-electricity/infinite-ladder.svg" alt="Infinite ladder resistor network" caption="Infinite ladder: series resistance R₁, shunt resistance R₂. Extends infinitely to the right." />
+
+**Key Insight:** An infinite network looks the same whether you add one more section or not. The equivalent resistance of the infinite ladder equals the equivalent resistance of the ladder plus one more cell.
+
+Let the input resistance be $X$ (what we want to find):
+
+Adding one more cell to an infinite ladder gives: a section of $R_1$ in series with ($R_2$ parallel to $X$):
+
+$$X = R_1 + \frac{R_2 \cdot X}{R_2 + X}$$
+
+$$X(R_2 + X) = R_1(R_2 + X) + R_2 X$$
+
+$$X^2 + XR_2 = R_1 R_2 + R_1 X + R_2 X$$
+
+$$X^2 - R_1 X - R_1 R_2 = 0$$
+
+<Formula label="Infinite Ladder Network">
+$$\boxed{X = \frac{R_1 + \sqrt{R_1^2 + 4R_1 R_2}}{2}}$$
+</Formula>
+
+(Taking the positive root, since resistance must be positive)
+
+**Special Case:** $R_1 = R_2 = R$:
+$$X = \frac{R + \sqrt{5}R}{2} = \frac{(1+\sqrt{5})}{2}R = \phi R$$
+where $\phi = 1.618...$ is the golden ratio!
+
+---
+
+### 10.4 Cube of Resistors
+
+<Diagram src="/diagrams/current-electricity/cube-resistors.svg" alt="Cube of 12 equal resistors" caption="Cube: 12 edges each with resistance R. Three cases: input at adjacent vertices, face-diagonal vertices, or body-diagonal vertices." />
+
+All three standard JEE cases, derived using symmetry:
+
+**Case 1: Current enters at A, leaves at G (body diagonal — space diagonal)**
+
+By 3-fold rotational symmetry: 3 equivalent paths from A, then 6 equivalent, then 3 equivalent.
+
+Effective resistance: $R_{AG} = \frac{5R}{6}$
+
+**Derivation:**
+- Current $I$ enters A, splits equally into 3 branches (A→B, A→D, A→E): each carries $I/3$
+- At each intermediate node (B, D, E), current splits: $I/3$ continues + recombines
+- By symmetry, at body-diagonal node group (F, H, C): each carries $I/3$
+- These merge at G
+
+Using KVL on any path: A→B→C→G:
+
+$$V_A - V_G = \frac{I}{3}R + \frac{I}{6}R + \frac{I}{3}R = \frac{5IR}{6}$$
+
+$$R_{\text{eff}} = \frac{V_A - V_G}{I} = \frac{5R}{6}$$
+
+**Case 2: Face diagonal (e.g., A to C on same face)**
+
+$$R_{\text{eff}} = \frac{3R}{4}$$
+
+**Case 3: Adjacent vertices (e.g., A to B)**
+
+$$R_{\text{eff}} = \frac{7R}{12}$$
+
+<Callout type="info">
+**Memory Hook for Cube:** "5/6 for space, 3/4 for face, 7/12 for edge" — these three results come up directly in JEE every few years.
+</Callout>
+
+---
+
+## PART III — ALL DERIVATIONS (Complete Mathematical Treatment)
+
+---
+
+## Derivation 1 — Ohm's Law from Free Electron Model
+
+**Assumptions:**
+- Free electrons form a classical ideal gas
+- Thermal velocities randomised at each collision
+- Collisions are instantaneous, isotropic
+- Mean free time $\tau$ is constant (independent of electron velocity)
+- Electric field is uniform throughout the conductor
+
+**Setup:** Conductor of length $L$, cross-section $A$, with $n$ free electrons per unit volume. Electric field $E$ applied along the length.
+
+**Step 1 — Drift velocity:**
+$$v_d = \frac{eE\tau}{m}$$
+
+**Step 2 — Current:**
+$$I = neAv_d = \frac{ne^2\tau}{m} \cdot AE$$
+
+**Step 3 — Potential difference:**
+$$V = EL \quad \Rightarrow \quad E = \frac{V}{L}$$
+
+**Step 4 — Resistance:**
+$$I = \frac{ne^2\tau}{m} \cdot A \cdot \frac{V}{L}$$
+
+$$\frac{V}{I} = \frac{mL}{ne^2\tau A} = \rho \frac{L}{A} = R$$
+
+**Result:**
+
+$$\boxed{V = IR, \quad R = \rho\frac{L}{A}, \quad \rho = \frac{m}{ne^2\tau}}$$
+
+**Physical Interpretation:**
+- $m$ large → heavy electrons → hard to accelerate → high $\rho$
+- $n$ large → more carriers → low $\rho$
+- $e$ large → stronger force per unit field → low $\rho$
+- $\tau$ large → long mean free time → more drift per collision cycle → low $\rho$
+
+**Limitations of this model (Drude model):**
+- Treats electrons as classical particles (ignores quantum mechanics)
+- Predicts $\tau \propto T^{-1/2}$, but experiment gives $\rho \propto T$ (different temperature dependence)
+- Correct in predicting $\rho = m/(ne^2\tau)$ but wrong in exact $\tau(T)$ dependence
+- Quantum mechanical treatment (Fermi-Dirac statistics, phonon scattering) resolves discrepancies
+
+---
+
+## Derivation 2 — Wheatstone Bridge Balance (Rigorous Treatment)
+
+**Assumptions:**
+- Steady DC; galvanometer has finite resistance $G$
+- Battery has EMF $\varepsilon$, internal resistance $r$
+
+**Setup:** Assign currents as follows (using KCL to minimise unknowns):
+
+- $I$ through battery
+- $I_1$ through $P$, $I-I_1$ through $R$
+- $I_G$ through galvanometer
+- $I_1 - I_G$ through $Q$, $I - I_1 + I_G$ through $S$
+
+**Apply KVL to three independent loops:**
+
+**Loop ABDA (left-top triangle):**
+$$-I_1 P - I_G G + (I - I_1)R = 0 \quad \cdots(1)$$
+
+**Loop BCDB (right-top triangle):**
+$$-(I_1 - I_G)Q + (I - I_1 + I_G)S + I_G G = 0 \quad \cdots(2)$$
+
+**Outer loop:**
+$$\varepsilon - r \cdot I - I_1 P - (I_1-I_G)Q = 0 \quad \cdots(3)$$
+
+**At balance condition:** $I_G = 0$
+
+From (1): $-I_1 P + (I-I_1)R = 0 \Rightarrow I_1 P = (I-I_1)R$
+
+$$\frac{I_1}{I-I_1} = \frac{R}{P} \quad \cdots(4)$$
+
+From (2): $-I_1 Q + (I-I_1)S = 0 \Rightarrow I_1 Q = (I-I_1)S$
+
+$$\frac{I_1}{I-I_1} = \frac{S}{Q} \quad \cdots(5)$$
+
+Equating (4) and (5):
+
+$$\frac{R}{P} = \frac{S}{Q} \quad \Rightarrow \quad \boxed{\frac{P}{Q} = \frac{R}{S}}$$
+
+**Note:** $\varepsilon$, $r$, $G$ do not appear in the balance condition. ✓
+
+**Alternate Method (Potential method):**
+
+Let $V_A - V_B = I_1 P$ and $V_A - V_D = (I-I_1)R$.
+
+Balance: $V_B = V_D$
+
+$$\Rightarrow I_1 P = (I-I_1)R \quad \text{and} \quad I_1 Q = (I-I_1)S$$
+
+Dividing: $\frac{P}{Q} = \frac{R}{S}$. ✓ (Same result, faster.)
+
+---
+
+## Derivation 3 — Infinite Ladder Network (Quadratic Method)
+
+**Setup:** Series resistance $R_1$ per rung, shunt resistance $R_2$ per rung. Extends infinitely.
+
+**Key Insight:** Removing one rung from an infinite ladder still leaves an infinite ladder. Therefore, if $X$ = input resistance of the infinite network, then looking into the first rung:
+
+$$X = R_1 + (R_2 \| X) = R_1 + \frac{R_2 X}{R_2 + X}$$
+
+**Algebra:**
+
+$$X(R_2 + X) = R_1(R_2 + X) + R_2 X$$
+
+$$X^2 + XR_2 = R_1 R_2 + R_1 X + R_2 X$$
+
+$$X^2 = R_1 R_2 + R_1 X$$
+
+$$X^2 - R_1 X - R_1 R_2 = 0$$
+
+Quadratic formula ($X > 0$ required):
+
+$$X = \frac{R_1 + \sqrt{R_1^2 + 4R_1 R_2}}{2}$$
+
+**Physical Interpretation:**
+- For $R_2 \to \infty$ (no shunts): $X \to R_1 + R_1/2 + \cdots \to \infty$ — just a series of $R_1$'s
+- For $R_2 \to 0$ (shunts → wires): $X = R_1 + 0 = R_1$ ... wait: $X = (R_1+0)/2 = R_1/2$ — the first shunt shorts the output, leaving only $R_1$. ✓
+
+---
+
+## Derivation 4 — Cube Resistance (Body Diagonal): Symmetry + Kirchhoff
+
+**Setup:** 12 resistors, each of resistance $R$, on the 12 edges of a cube. Battery connected between body-diagonal vertices A and G.
+
+**Label vertices:** A (input), B, C, D, E, F, H, G (output).
+- A connects to: B, D, E (3 edges from input)
+- G connects to: C, F, H (3 edges to output)
+- Middle edges: B–C, B–F, D–H, D–C, E–F, E–H
+
+**Symmetry Analysis:**
+
+By the 3-fold rotational symmetry about axis A–G:
+- Nodes B, D, E are equivalent (same potential $V_1$)
+- Nodes C, F, H are equivalent (same potential $V_2$)
+- Current from A to each of B, D, E: $I/3$
+- By symmetry on the middle edges: from each of B, D, E to two middle nodes:
+
+**Apply KCL at node B**, which connects to three edges — A (edge AB), C (edge BC), and F (edge BF):
+- Current into B from A: $I/3$
+- Current out of B: splits into B→C and B→F
+
+By equivalence of nodes D and E (same as B), the network from B is exactly the same as from D and E.
+
+By symmetry B→C and B→F each carry $I/6$.
+
+**Check:** B has 3 connections. In: $I/3$. Out: $I/6 + I/6 = I/3$. ✓ (KCL satisfied)
+
+**Calculate voltage drop A to G:**
+
+Along the path A → B → C → G, the three resistors carry currents $I/3$, $I/6$, and $I/3$ respectively:
+
+$$V_A - V_B = \frac{I}{3} \cdot R$$
+$$V_B - V_C = \frac{I}{6} \cdot R$$  
+$$V_C - V_G = \frac{I}{3} \cdot R$$
+
+$$V_A - V_G = \frac{I}{3}R + \frac{I}{6}R + \frac{I}{3}R = \frac{5IR}{6}$$
+
+$$R_{\text{eff}} = \frac{V_A - V_G}{I} = \boxed{\frac{5R}{6}}$$
+
+**Alternate (Equipotential shortcut):**
+
+Since B, D, E are equipotential and C, F, H are equipotential, we can:
+1. Short B, D, E together (no current flows in these shortcuts since they're already equipotential)
+2. Short C, F, H together
+
+Now the circuit is simple:
+- A to (B, D, E): 3 resistors in parallel → $R/3$
+- (B, D, E) to (C, F, H): 6 resistors in parallel → $R/6$
+- (C, F, H) to G: 3 resistors in parallel → $R/3$
+
+$$R_{\text{total}} = \frac{R}{3} + \frac{R}{6} + \frac{R}{3} = \frac{2R + R + 2R}{6} = \frac{5R}{6}$$ ✓
+
+This is the power of symmetry: a 12-resistor problem becomes a 3-step series calculation.
+
+---
+
+## Derivation 5 — RC Circuit (Charging and Discharging)
+
+<Diagram src="/diagrams/current-electricity/rc-circuit.svg" alt="RC circuit diagram and charge-time graph for charging and discharging" caption="RC circuit: capacitor charges exponentially to Cε; discharges exponentially to zero. Time constant τ = RC." />
+
+### Charging of a Capacitor
+
+**Setup:** EMF $\varepsilon$, resistance $R$, capacitor $C$ in series. Initially capacitor uncharged.
+
+**At time $t$:** Charge on capacitor = $q$. Voltage across capacitor = $q/C$. Current = $I = dq/dt$.
+
+**KVL around loop:**
+
+$$\varepsilon - IR - \frac{q}{C} = 0$$
+
+$$\varepsilon - R\frac{dq}{dt} - \frac{q}{C} = 0$$
+
+$$R\frac{dq}{dt} = \varepsilon - \frac{q}{C} = \frac{C\varepsilon - q}{C}$$
+
+**Separating variables:**
+
+$$\frac{dq}{C\varepsilon - q} = \frac{dt}{RC}$$
+
+**Integrating** (from $q=0$ at $t=0$):
+
+$$-\ln(C\varepsilon - q)\Big|_0^q = \frac{t}{RC}$$
+
+$$\ln\frac{C\varepsilon}{C\varepsilon - q} = \frac{t}{RC}$$
+
+$$C\varepsilon - q = C\varepsilon\,e^{-t/RC}$$
+
+<Formula label="RC Charging">
+$$\boxed{q(t) = C\varepsilon\left(1 - e^{-t/RC}\right) = Q_0\left(1 - e^{-t/\tau}\right)}$$
+$$\boxed{I(t) = \frac{\varepsilon}{R}e^{-t/RC} = I_0\,e^{-t/\tau}}$$
+</Formula>
+
+where $Q_0 = C\varepsilon$ (maximum charge), $I_0 = \varepsilon/R$ (initial current), $\tau = RC$ (time constant).
+
+**At $t = \tau = RC$:**
+- $q = Q_0(1 - e^{-1}) = 0.632\,Q_0$ (63.2% of maximum charge)
+- $I = I_0/e = 0.368\,I_0$
+
+**At $t = 5\tau$:** $q \approx 0.993\,Q_0$ (practically fully charged).
+
+### Discharging of a Capacitor
+
+**Setup:** Charged capacitor $Q_0 = C\varepsilon$ discharged through $R$.
+
+**KVL:** $\frac{q}{C} - IR = 0$, with $I = -dq/dt$ (charge decreasing):
+
+$$\frac{q}{C} + R\frac{dq}{dt} = 0$$
+
+$$\frac{dq}{q} = -\frac{dt}{RC}$$
+
+<Formula label="RC Discharging">
+$$\boxed{q(t) = Q_0\,e^{-t/RC}}$$
+$$\boxed{I(t) = \frac{Q_0}{RC}\,e^{-t/RC} = I_0\,e^{-t/\tau}}$$
+</Formula>
+
+**Energy Analysis (Charging):**
+
+- Energy stored in capacitor: $U_C = \frac{1}{2}C\varepsilon^2 = \frac{Q_0^2}{2C}$
+- Total energy supplied by battery: $W = \varepsilon \cdot Q_0 = C\varepsilon^2$
+- Energy dissipated in resistor: $W_R = C\varepsilon^2 - \frac{1}{2}C\varepsilon^2 = \frac{1}{2}C\varepsilon^2$
+
+**Remarkable result:** Exactly **50% of the energy from the battery is wasted** as heat in the resistor during charging — regardless of $R$! (Even with a superconducting wire, the energy loss is the same — it all goes to electromagnetic radiation.)
+
+<Callout type="warning">
+**JEE Trap:** The 50% energy loss during capacitor charging is independent of resistance $R$. Students often think larger $R$ means more heat — it does mean slower charging and same total heat. The total heat is fixed at $\frac{1}{2}C\varepsilon^2$.
+</Callout>
+
+---
+
+## Derivation 6 — Potentiometer Balance Condition
+
+**Setup:** Driver cell EMF $\varepsilon_0$, internal resistance $r_0$, in series with rheostat $R_h$ and potentiometer wire AB (resistance $R_W$, length $L$).
+
+**Primary current:**
+$$I_0 = \frac{\varepsilon_0}{r_0 + R_h + R_W}$$
+
+**Potential gradient along wire:**
+$$k = \frac{I_0 R_W}{L} = \frac{\varepsilon_0 R_W}{(r_0 + R_h + R_W)L}$$
+
+(volts per unit length of wire)
+
+**At balance** (jockey at distance $\ell$ from A, galvanometer reads 0):
+- No current through secondary circuit
+- $V_{AJ} = k\ell$ exactly equals secondary EMF $\varepsilon_2$
+
+$$\varepsilon_2 = k\ell = I_0 r_w \ell$$
+
+**Why zero current is crucial:**
+A non-zero current would mean the secondary cell is driving current through its own internal resistance → terminal voltage ≠ EMF → wrong measurement. Only at zero current does the potentiometer measure true EMF.
+
+**Adjustment of potential gradient:**
+- Increase $R_h$: $I_0$ decreases → $k$ decreases → more sensitive potentiometer (larger $\ell$ needed for same EMF)
+- Decrease $R_h$ (or use longer wire): $k$ decreases similarly
+
+**Balance condition for existence:**
+$$\varepsilon_2 \leq \varepsilon_0 \cdot \frac{R_W}{r_0 + R_h + R_W}$$
+
+(The maximum potential that can be balanced equals the voltage drop across the full wire.)
+
+---
+
+## PART IV — ADVANCED VISUALIZATIONS
+
+---
+
+## The Water-Pipe Analogy (Full Scientific Treatment)
+
+| Electrical Quantity | Water Analogy | Formula |
+|---------------------|---------------|---------|
+| Charge $q$ (C) | Volume of water (L) | — |
+| Current $I$ (A) | Flow rate (L/s) | $I = dq/dt$ |
+| Voltage $V$ (V) | Pressure difference (Pa) | — |
+| Resistance $R$ (Ω) | Pipe resistance (narrower = higher) | $R = \rho L/A$ |
+| EMF $\varepsilon$ | Pump pressure | work/charge |
+| Capacitor | Storage tank (with elastic membrane) | $Q = CV$ |
+| Inductor | Inertia of water (flywheel pump) | $V = L\,dI/dt$ |
+
+**Where the analogy BREAKS DOWN:**
+1. Water molecules move at flow speed ($\sim 1$ m/s). Electrical signal moves at $c$ (light speed). Electrons drift at $\sim 10^{-4}$ m/s.
+2. Water flow can be turbulent (non-linear). Ohm's Law is linear.
+3. Water pressure depends on column height (gravity). Voltage depends on charge distribution.
+4. Water conservation is obvious. Charge conservation is profound (KCL).
+
+**Energy Transfer Analogy:**
+
+The battery doesn't push electrons from one end to the other like a pump moves water. Instead, the battery establishes an electric field *throughout* the circuit, and the field does work on *every* electron simultaneously. Energy is transferred from the field (battery) to the electrons (wire) to heat (resistor) — like a chain of people passing buckets: nobody travels far, but the bucket moves quickly.
+
+---
+
+## PART V — SPECIAL TOPICS (JEE Advanced Level)
+
+---
+
+## Thevenin's Theorem
+
+**Statement:** Any linear circuit with voltage sources and resistors can be replaced by a single voltage source $V_{Th}$ in series with a single resistance $R_{Th}$, as seen from two terminals.
+
+**Finding $V_{Th}$:** Open-circuit voltage between the terminals.
+
+**Finding $R_{Th}$:** Resistance seen from terminals with all independent sources deactivated (voltage sources → short circuit; current sources → open circuit).
+
+**Application (JEE):** Find current through one specific element by Thevenising the rest of the circuit. This converts a complex multi-loop problem into a single loop.
+
+**Example:**
+Circuit has: $\varepsilon_1 = 10\,\text{V}$, $\varepsilon_2 = 6\,\text{V}$, $R_1 = 2\,\Omega$, $R_2 = 3\,\Omega$, $R_L = 5\,\Omega$ (the "load").
+
+Thevenise across $R_L$:
+
+$V_{Th}$: Remove $R_L$. Find open-circuit voltage by current divider/KVL.
+
+$R_{Th}$: Short $\varepsilon_1$ and $\varepsilon_2$. Find resistance looking into terminals.
+
+$I_L = \frac{V_{Th}}{R_{Th} + R_L}$
+
+---
+
+## Superposition Theorem
+
+**Statement:** In a linear circuit with multiple sources, the current (or voltage) in any element equals the algebraic sum of currents (voltages) due to each source acting alone (others replaced by their internal resistances).
+
+**Procedure:**
+1. Consider one source at a time; deactivate others
+2. Calculate current through the desired branch due to that source
+3. Sum all contributions with proper signs
+
+**Note:** Superposition applies only to linear elements. Does NOT apply to power calculations ($P = I^2R$ — non-linear in $I$).
+
+---
+
+## Thevenin Equivalent for Wheatstone Bridge (Off-Balance)
+
+When the bridge is not balanced, we need to find the current through the galvanometer.
+
+**Method:** Thevenise the circuit at the galvanometer terminals B-D.
+
+**$V_{Th}$ (open-circuit voltage $V_{BD}$):**
+
+With galvanometer removed: $I_1 = \frac{\varepsilon}{P+Q}$ through $P$, $Q$ and $I_2 = \frac{\varepsilon}{R+S}$ through $R$, $S$.
+
+$$V_B = V_A - I_1 P = \varepsilon - \frac{\varepsilon P}{P+Q} = \frac{\varepsilon Q}{P+Q}$$
+
+$$V_D = V_A - I_2 R = \varepsilon - \frac{\varepsilon R}{R+S} = \frac{\varepsilon S}{R+S}$$
+
+$$V_{Th} = V_B - V_D = \varepsilon\left(\frac{Q}{P+Q} - \frac{S}{R+S}\right) = \varepsilon\cdot\frac{QR - PS}{(P+Q)(R+S)}$$
+
+**$R_{Th}$:** Short battery ($\varepsilon = 0$, leave $r$). Resistance between B and D:
+$$R_{Th} = \frac{PQ}{P+Q} + \frac{RS}{R+S}$$
+(P parallel Q, in series with R parallel S)
+
+**Galvanometer current:**
+$$I_G = \frac{V_{Th}}{R_{Th} + G} = \frac{\varepsilon(QR-PS)}{(P+Q)(R+S)}\cdot\frac{1}{R_{Th}+G}$$
+
+At balance: $QR = PS$ → $I_G = 0$. ✓
+
+---
+
+## Section 11 — Complete Error Analysis
+
+---
+
+### Top Mistakes in This Chapter
+
+**Mistake 1: Wrong sign in KVL**
+
+*Error:* Traversing a battery from + to – and writing +ε instead of –ε.
+
+*Fix:* Always mark + and – on batteries. Traverse from – to + → +ε (gaining energy). Traverse from + to – → –ε (losing energy).
+
+**Mistake 2: Applying parallel resistance formula when elements aren't in parallel**
+
+*Error:* Two resistors connected between the same pair of nodes in a complex network — but the path through them doesn't have the same voltage across each.
+
+*Fix:* Resistors are in parallel ONLY if *both terminals of each are connected to the exact same pair of nodes* with no other branches in between.
+
+**Mistake 3: Forgetting internal resistance when finding maximum power**
+
+*Error:* Taking $R_{ext} \to 0$ for maximum current and assuming this gives maximum power to the external resistance.
+
+*Fix:* $P_{ext} = I^2 R_{ext}$. As $R_{ext} \to 0$, $P_{ext} \to 0$. Maximum power occurs at $R_{ext} = r$.
+
+**Mistake 4: Using terminal voltage instead of EMF in potentiometer**
+
+*Error:* When asked to measure "EMF using potentiometer," students use $V = \varepsilon - Ir$.
+
+*Fix:* The whole point of the potentiometer is that at balance, no current flows through the secondary. So terminal voltage = EMF at that condition. The formula $\varepsilon = k\ell$ gives the true EMF.
+
+**Mistake 5: Current divider formula (reversed)**
+
+*Error:* $I_1 = I \cdot R_1/(R_1 + R_2)$ (wrong — current proportional to its own resistance).
+
+*Fix:* $I_1 = I \cdot R_2/(R_1 + R_2)$. Current through a branch is proportional to the *other* branch's resistance. (Smaller resistance → larger current fraction.)
+
+**Mistake 6: Drift velocity vs. thermal velocity confusion**
+
+*Error:* Confusing $v_d$ ($\sim 10^{-4}$ m/s) with $v_{thermal}$ ($\sim 10^6$ m/s) when calculating mean free path or $\tau$.
+
+*Fix:* The mean free path is $\lambda = v_{thermal} \cdot \tau$ (using thermal speed, since random motion dominates). The drift velocity is tiny compared to thermal speed. $v_d \ll v_{thermal}$ always in normal conductors.
+
+**Mistake 7: RC time constant in complex circuits**
+
+*Error:* Using $\tau = RC$ where $R$ is just the given resistor, ignoring other resistors in the Thevenin equivalent.
+
+*Fix:* $\tau = R_{Th} \cdot C$, where $R_{Th}$ is the Thevenin resistance seen from the capacitor terminals (with all voltage sources shorted).
+
+**Mistake 8: Energy stored in charged capacitor during RC charging**
+
+*Error:* Thinking that for a larger $R$, less energy is wasted (because slower charging).
+
+*Fix:* Total heat = $\frac{1}{2}C\varepsilon^2$ regardless of $R$. Larger $R$ means the same energy is dissipated over a longer time (lower power for longer duration).
+
+---
+
+## Section 12 — JEE Advanced Insights and Hidden Traps
+
+---
+
+**Insight 1 — Kirchhoff's Laws are exact (no approximation involved)**
+
+KCL follows from conservation of charge (exact in DC steady state). KVL follows from the existence of a well-defined electric potential (exact for DC). These are not approximations — they are consequences of Maxwell's equations in the quasi-static limit.
+
+**Insight 2 — Resistance of a non-uniform cross-section conductor**
+
+For a conductor whose cross-section varies as $A(x)$:
+$$R = \int_0^L \frac{\rho\,dx}{A(x)}$$
+
+For a truncated cone (common JEE problem) with radii $r_1$ (at $x=0$) and $r_2$ (at $x=L$):
+$$A(x) = \pi\left[r_1 + (r_2-r_1)\frac{x}{L}\right]^2$$
+$$R = \frac{\rho L}{\pi r_1 r_2}$$
+
+**Insight 3 — Joule heating is the same regardless of current direction**
+
+$H = I^2Rt$ is positive whether $I$ is positive or negative. Joule heating is irreversible — a resistor always heats, never cools, regardless of current direction.
+
+**Insight 4 — In the Wheatstone Bridge, balancing is achieved by adjusting R (the known variable resistance)**
+
+In a practical bridge, you vary the ratio $P/Q$ (decade box) until the galvanometer reads zero. The accuracy depends on the ratio, not on the galvanometer sensitivity (at balance, $I_G = 0$ exactly for the correct ratio regardless of $G$).
+
+**Insight 5 — Superposition of currents vs. superposition of power**
+
+Power is non-linear: $P \neq P_1 + P_2$ where $P_1$, $P_2$ are powers due to individual sources. You must find the actual current first (by superposing currents), then calculate total power.
+
+**Insight 6 — The potentiometer wire length doesn't matter, only the ratio**
+
+$\frac{\varepsilon_1}{\varepsilon_2} = \frac{\ell_1}{\ell_2}$. This ratio is independent of: wire resistance per unit length, current in primary circuit, length of wire. This is why potentiometers are so robust — the ratio measurement eliminates most systematic errors.
+
+**Insight 7 — Star-Delta and Delta-Star: Which to use?**
+
+Use **Delta→Star** when you have three terminals all connected to each other (like the top face of a cube). Converting to Star removes one of the "crossing" connections.
+
+Use **Star→Delta** when you have a central node connected to three peripheral nodes (like an internal node in a complex network). Converting to Delta eliminates the internal node.
+
+**Insight 8 — Equivalent resistance between any two nodes of an n-node symmetric network**
+
+For a regular $n$-polyhedron: use symmetry to identify equipotential nodes and simplify directly. Always look for: (a) Nodes that must be at the same potential by symmetry → short them. (b) Branches that carry zero current by symmetry → open-circuit them.
+
+**Insight 9 — Sensitivity of meter bridge**
+
+Meter bridge is most sensitive when the balance point is near $\ell = 50$ cm. For ratio arms $P:Q$, the sensitivity is proportional to $PQ/(P+Q)^2$, which is maximum at $P = Q$.
+
+**Insight 10 — Multiple-battery networks: Algebraic sum of EMFs**
+
+When applying KVL to a loop with multiple batteries, the EMF contribution is algebraic (sign depends on traversal direction relative to battery polarity). The total EMF driving the loop is $\sum \pm\varepsilon_i$, and total resistance is $\sum R_j$.
+
+---
+
+## Section 13 — Concept Summary
+
+---
+
+The structure of Current Electricity follows a clean logical hierarchy:
+
+$$\text{Free electrons} \xrightarrow{\text{field applied}} \text{Drift velocity} \xrightarrow{I = neAv_d} \text{Current}$$
+
+$$\text{Current} \xrightarrow{V=IR} \text{Ohm's Law} \xrightarrow{R = \rho L/A} \text{Material property}$$
+
+$$\text{Source of current} \xrightarrow{\varepsilon, r} \text{EMF circuit} \xrightarrow{\text{complex network}} \text{Kirchhoff's Laws}$$
+
+$$\text{Kirchhoff} \xrightarrow{\text{bridge}} \text{Wheatstone} \xrightarrow{\text{implements}} \text{Meter Bridge}$$
+
+$$\text{Precision measurement} \xrightarrow{\text{null method}} \text{Potentiometer}$$
+
+$$\text{Complex networks} \xrightarrow{\text{symmetry, Y-Δ}} \text{Equivalent resistance}$$
+
+Every concept in this chapter flows from the **microscopic model of conduction** — drifting electrons colliding with a lattice. Everything else follows by applying fundamental conservation laws (charge, energy) in systematic ways.
+
+The mastery of this chapter requires:
+1. **Microscopic clarity** — understand WHY Ohm's Law holds and when it fails
+2. **Circuit algebra** — Kirchhoff's Laws applied systematically without sign errors
+3. **Symmetry recognition** — spot equipotential nodes to simplify complex networks instantly
+4. **Measurement principles** — understand the null-deflection advantage of the potentiometer
+5. **Advanced techniques** — Star-Delta, Thevenin, infinite networks — for JEE Advanced problems
+
+---
+
+## PART VI — JEE MAIN FORMULA SHEET
+
+---
+
+<Callout type="info">
+Every formula below comes with its conditions and the most common place JEE tests it. Study the **Conditions** column as carefully as the formula itself.
+</Callout>
+
+### Group A — Microscopic Quantities
+
+| Formula | Name | Conditions | Units | JEE Tip |
+|---------|------|-----------|-------|---------|
+| $I = \dfrac{dq}{dt}$ | Instantaneous current | Any charge flow | A | Use $I_{\text{avg}} = \Delta q/\Delta t$ for uniform flow |
+| $v_d = \dfrac{eE\tau}{m}$ | Drift velocity | Metallic conductor, steady field | m/s | $v_d \sim 10^{-4}$ m/s; signal travels at $c$ |
+| $I = neAv_d$ | Current–drift relation | $n$ = carrier density, $A$ = area | A | All four quantities tested together |
+| $\vec{J} = \sigma\vec{E}$ | Microscopic Ohm's Law | Linear (ohmic) material | A/m² | Basis of all macroscopic resistance formulas |
+| $\sigma = \dfrac{ne^2\tau}{m}$ | Conductivity | Drude model | (Ωm)⁻¹ | $\sigma = 1/\rho$ |
+| $\rho = \dfrac{m}{ne^2\tau}$ | Resistivity | Classical free electron | Ω·m | Increases with $T$ for metals |
+
+---
+
+### Group B — Resistance and Ohm's Law
+
+| Formula | Name | Conditions | Units | JEE Tip |
+|---------|------|-----------|-------|---------|
+| $V = IR$ | Ohm's Law | Ohmic material, constant $T$ | V | Fails for diodes, bulbs at different $T$ |
+| $R = \rho\dfrac{L}{A}$ | Resistance formula | Uniform cross-section | Ω | $R \propto L$, $R \propto 1/A$ |
+| $R_T = R_0[1 + \alpha(T-T_0)]$ | Temperature dependence | Metals ($\alpha > 0$); semiconductors ($\alpha < 0$) | Ω | $\alpha_{\text{Cu}} \approx 4\times10^{-3}$ K$^{-1}$ |
+| $R_{\text{series}} = \sum R_i$ | Series combination | Same current through all | Ω | $R_{\text{eq}} > R_{\text{max}}$ |
+| $\dfrac{1}{R_{\text{parallel}}} = \sum \dfrac{1}{R_i}$ | Parallel combination | Same voltage across all | Ω | $R_{\text{eq}} < R_{\text{min}}$ |
+| $R_{\text{parallel}} = \dfrac{R_1 R_2}{R_1+R_2}$ | Two in parallel | Only two resistors | Ω | "Product over sum" — memorise |
+| $R = \displaystyle\int_0^L \dfrac{\rho\,dx}{A(x)}$ | Non-uniform conductor | Variable $A(x)$ | Ω | Cone: $R = \rho L/(\pi r_1 r_2)$ |
+
+---
+
+### Group C — EMF and Cells
+
+| Formula | Name | Conditions | Units | JEE Tip |
+|---------|------|-----------|-------|---------|
+| $\varepsilon = \dfrac{W}{q}$ | EMF definition | Non-electrostatic work per charge | V | EMF ≠ force; it is energy/charge |
+| $I = \dfrac{\varepsilon}{R+r}$ | Circuit current | Single cell, external $R$ | A | $r$ always in denominator |
+| $V_T = \varepsilon - Ir$ | Terminal voltage (discharge) | Current flows out of + terminal | V | $V_T < \varepsilon$ always during discharge |
+| $V_T = \varepsilon + Ir$ | Terminal voltage (charge) | Current flows into + terminal | V | $V_T > \varepsilon$ during charging |
+| $\varepsilon_{\text{series}} = \sum \varepsilon_i$ | Cells in series | Series connection | V | EMFs add algebraically |
+| $r_{\text{series}} = \sum r_i$ | Internal resistance (series) | Any series combination | Ω | $r$ always adds |
+| $\varepsilon_{\text{parallel}} = \varepsilon$ | Identical cells in parallel | All cells identical | V | EMF unchanged in parallel |
+| $r_{\text{parallel}} = r/n$ | Internal resistance (parallel) | $n$ identical cells | Ω | Effective internal resistance divided by $n$ |
+| $\varepsilon_{\text{eq}} = \dfrac{\varepsilon_1/r_1 + \varepsilon_2/r_2}{1/r_1 + 1/r_2}$ | Two unequal cells in parallel | Different $\varepsilon$, different $r$ | V | Weighted average by conductance |
+
+---
+
+### Group D — Power and Energy
+
+| Formula | Name | Conditions | Units | JEE Tip |
+|---------|------|-----------|-------|---------|
+| $P = VI = I^2R = V^2/R$ | Power | Any resistor | W | Choose formula based on what's given |
+| $H = I^2Rt$ | Joule heating | Constant $I$ and $R$ | J | $H > 0$ always (irreversible) |
+| $P_{\max} = \varepsilon^2/(4r)$ | Max. power transfer | When $R_{\text{ext}} = r$ | W | 50% efficiency at max power |
+| $\eta = R/(R+r)$ | Efficiency | Any load $R$ | — | Max efficiency at $R \gg r$ |
+| $U_C = \tfrac{1}{2}CV^2$ | Energy in capacitor | Fully charged | J | Half the battery energy wasted as heat |
+
+---
+
+### Group E — Kirchhoff's Laws
+
+| Law | Mathematical Form | Physical Basis | Application |
+|-----|------------------|----------------|-------------|
+| KCL | $\sum I_{\text{in}} = \sum I_{\text{out}}$ | Charge conservation | At every junction |
+| KVL | $\sum V = 0$ (around any loop) | Energy conservation (potential is a state function) | For each independent loop |
+
+**Sign rules for KVL:**
+
+| Element | Traversal direction | Voltage change |
+|---------|--------------------|-----------------------|
+| Resistor $R$ | Along current $I$ | $-IR$ (drop) |
+| Resistor $R$ | Against current $I$ | $+IR$ (rise) |
+| Battery | − to + terminal | $+\varepsilon$ (rise) |
+| Battery | + to − terminal | $-\varepsilon$ (drop) |
+
+---
+
+### Group F — Wheatstone Bridge and Meter Bridge
+
+| Formula | Name | Conditions | Notes |
+|---------|------|-----------|-------|
+| $\dfrac{P}{Q} = \dfrac{R}{S}$ | Balance condition | $I_G = 0$ | Independent of battery and galvanometer |
+| $X = R \cdot \dfrac{\ell}{100-\ell}$ | Meter bridge | Uniform wire; balance at $\ell$ cm | Best accuracy at $\ell \approx 50$ cm |
+| $I_G = \dfrac{\varepsilon(QR-PS)}{(P+Q)(R+S)(R_{Th}+G)}$ | Off-balance current | Full Thevenin formula | For unbalanced bridge sensitivity |
+
+---
+
+### Group G — Potentiometer
+
+| Formula | Name | Conditions | Notes |
+|---------|------|-----------|-------|
+| $k = I_0 \cdot (R_W/L)$ | Potential gradient | Uniform wire, steady $I_0$ | Units: V/m or mV/cm |
+| $\varepsilon = k\ell$ | Balance condition | Zero galvanometer current | True EMF, not terminal voltage |
+| $\dfrac{\varepsilon_1}{\varepsilon_2} = \dfrac{\ell_1}{\ell_2}$ | EMF comparison | Same $k$ for both | Eliminates $k$ from result |
+| $r = R_0\!\left(\dfrac{\ell_1}{\ell_2}-1\right)$ | Internal resistance | $\ell_1$ open, $\ell_2$ with $R_0$ | $\ell_1 > \ell_2$ always |
+| $k = \dfrac{\varepsilon_0 \cdot R_W}{(r_0+R_h+R_W)\cdot L}$ | Full expression for $k$ | Driver circuit details | Lower $k$ → higher sensitivity |
+
+---
+
+### Group H — Special Networks
+
+| Network | Formula | Conditions | Memory Hook |
+|---------|---------|-----------|-------------|
+| Cube (body diagonal) | $R_{\text{eff}} = \dfrac{5R}{6}$ | 12 equal edges $R$ | "Space: 5/6" |
+| Cube (face diagonal) | $R_{\text{eff}} = \dfrac{3R}{4}$ | 12 equal edges $R$ | "Face: 3/4" |
+| Cube (edge) | $R_{\text{eff}} = \dfrac{7R}{12}$ | 12 equal edges $R$ | "Edge: 7/12" |
+| Infinite ladder | $X = \dfrac{R_1+\sqrt{R_1^2+4R_1R_2}}{2}$ | Semi-infinite; $R_1$ series, $R_2$ shunt | Quadratic — positive root only |
+| Star → Delta | $R_{AB} = R_1+R_2+\dfrac{R_1R_2}{R_3}$ | 3-terminal network | "Sum of two + product/third" |
+| Delta → Star | $R_A = \dfrac{R_{AB}\cdot R_{CA}}{R_{AB}+R_{BC}+R_{CA}}$ | 3-terminal network | "Product of adjacent / sum of all three" |
+
+---
+
+### Group I — RC Circuits
+
+| Formula | Name | Conditions | Notes |
+|---------|------|-----------|-------|
+| $q(t) = Q_0(1-e^{-t/RC})$ | Charging | Initially uncharged; $Q_0=C\varepsilon$ | Asymptotically approaches $Q_0$ |
+| $I(t) = I_0\,e^{-t/RC}$ | Charging current | $I_0 = \varepsilon/R$ | Decays exponentially |
+| $q(t) = Q_0\,e^{-t/RC}$ | Discharging | Initially $Q_0$ | Exponential decay |
+| $\tau = RC$ | Time constant | Any RC circuit | $63.2\%$ of final value at $t = \tau$ |
+| $U = \tfrac{1}{2}C\varepsilon^2$ | Final stored energy | Fully charged | Half the total energy from battery |
+| $H_R = \tfrac{1}{2}C\varepsilon^2$ | Heat in resistor | Total during full charging | Independent of $R$ |
+
+---
+
+## PART VII — QUICK REVISION NOTES
+
+---
+
+<Callout type="info">
+Use this section the night before the exam. Each point is a complete concept in one sentence.
+</Callout>
+
+### Microscopic Physics (Must Know)
+
+- Free electrons drift **opposite** to $\vec{E}$; conventional current flows **along** $\vec{E}$.
+- Drift speed: $v_d = eE\tau/m \approx 10^{-4}$ m/s — a thousand times slower than a snail, yet light turns on instantly.
+- Signal speed ≈ $c$ because the **field** propagates fast, not the electrons themselves.
+- $I = neAv_d$ — four quantities: number density, charge, area, drift speed.
+- Resistivity $\rho = m/(ne^2\tau)$ — increases with temperature for metals (more vibrations → shorter $\tau$).
+- Semiconductor $\rho$ **decreases** with temperature ($\alpha < 0$) — more carriers generated thermally.
+
+---
+
+### Ohm's Law and Resistance (Must Know)
+
+- $V = IR$ is **empirical**, not fundamental — it fails for diodes, thermistors, gas discharges.
+- $R = \rho L/A$: double the length → double $R$; double the cross-section → halve $R$.
+- **Series**: same current; voltages add; $R_{\text{eq}}$ is largest.
+- **Parallel**: same voltage; currents add; $R_{\text{eq}}$ is smallest.
+- Current divider: current through branch ∝ **other** branch's resistance (not its own).
+- Voltage divider: voltage across element ∝ **its own** resistance.
+
+---
+
+### EMF and Internal Resistance (Must Know)
+
+- Terminal voltage = $\varepsilon - Ir$ (discharge) and $\varepsilon + Ir$ (charge). Sign of $Ir$ depends on current direction.
+- Open circuit ($R \to \infty$): $V_T = \varepsilon$ (no current, no drop across $r$).
+- Short circuit ($R = 0$): $I = \varepsilon/r$ — **maximum** current; $V_T = 0$.
+- Max power to external load when $R_{\text{ext}} = r$ → $P_{\max} = \varepsilon^2/(4r)$.
+- **Series cells**: use when $R \gg r$ (boost EMF). **Parallel cells**: use when $R \ll r$ (reduce effective $r$).
+
+---
+
+### Kirchhoff's Laws (Must Know)
+
+- KCL = charge conservation at junction; KVL = energy conservation around a loop.
+- KVL: traverse battery from **−** to **+** → **gain** $+\varepsilon$; traverse resistor **along** current → **lose** $-IR$.
+- Number of independent KVL equations = Branches − Nodes + 1 (for connected graph).
+- Negative answer for assumed current → actual current is in opposite direction.
+- **Always check**: sum all currents meeting at every node → must equal zero.
+
+---
+
+### Wheatstone Bridge (Must Know)
+
+- Balance: $P/Q = R/S$ → $I_G = 0$. Galvanometer and battery resistance irrelevant at balance.
+- Off balance: find $I_G$ using Thevenin equivalent at galvanometer terminals.
+- Battery and galvanometer can be **interchanged** without affecting balance — bridge is symmetric.
+- Most sensitive when all four arms are equal.
+
+---
+
+### Meter Bridge (Must Know)
+
+- Unknown: $X = R \cdot \ell/(100-\ell)$ — just the Wheatstone ratio applied to wire lengths.
+- Best accuracy: balance point between **30–70 cm** (away from ends where sensitivity is low).
+- End corrections: swap $X$ and $R$, take two readings to eliminate systematic error.
+- Wire must be **uniform** (constant $\rho$, $A$) — any kink or irregularity invalidates the result.
+
+---
+
+### Potentiometer (Must Know)
+
+- Measures **true EMF** (not terminal voltage) because zero current is drawn at balance.
+- $\varepsilon_1/\varepsilon_2 = \ell_1/\ell_2$ — the wire properties cancel out of the ratio.
+- Internal resistance: $r = R_0(\ell_1/\ell_2 - 1)$; open circuit gives $\ell_1$, loaded gives $\ell_2$.
+- Condition for balance to exist: $\varepsilon_{\text{driver}} > \varepsilon_{\text{unknown}}$.
+- Lower potential gradient $k$ → higher sensitivity (longer wire or larger $R_h$).
+- If galvanometer deflects in the **same direction** for all jockey positions → $\varepsilon_2 > \varepsilon_1$ (no balance possible).
+
+---
+
+### Special Networks (Must Know for JEE Advanced)
+
+- **Symmetry first**: identify equipotential nodes → short them; identify zero-current branches → remove them.
+- Cube results: $5R/6$ (body diagonal), $3R/4$ (face diagonal), $7R/12$ (edge). Derive using equipotential shortcut.
+- Infinite ladder: self-similarity → quadratic equation → $X = (R_1 + \sqrt{R_1^2 + 4R_1R_2})/2$.
+- Star–Delta: use when network cannot be simplified by series/parallel alone.
+
+---
+
+### RC Circuits (Must Know)
+
+- Time constant $\tau = R_{\text{Th}}C$ — use **Thevenin** $R$ seen from capacitor, not just the given $R$.
+- At $t = \tau$: capacitor is 63.2% charged; current is 36.8% of initial.
+- "Fully charged" in practice means $t \geq 5\tau$.
+- Heat in resistor during complete charging = $\frac{1}{2}C\varepsilon^2$ regardless of $R$.
+- Energy stored in capacitor = $\frac{1}{2}C\varepsilon^2$. Total from battery = $C\varepsilon^2$.
+
+---
+
+## PART VIII — PREVIOUS YEAR TREND ANALYSIS
+
+---
+
+### JEE Main (2015–2024) — Topic Frequency
+
+| Topic | No. of Questions | Avg. Marks | Difficulty |
+|-------|-----------------|------------|------------|
+| Combination of resistors (series/parallel) | 18 | 4 | Easy–Medium |
+| Kirchhoff's Laws and network analysis | 15 | 4 | Medium |
+| Power and Joule heating | 14 | 4 | Easy |
+| EMF, terminal voltage, internal resistance | 12 | 4 | Easy–Medium |
+| Wheatstone / Meter bridge | 10 | 4 | Medium |
+| Drift velocity and microscopic current | 8 | 4 | Easy |
+| Potentiometer (EMF and $r$ measurement) | 7 | 4 | Medium |
+| RC circuits (charging/discharging) | 5 | 4 | Medium–Hard |
+| Temperature coefficient of resistance | 4 | 4 | Easy |
+| Special networks (cube, ladder) | 3 | 4 | Hard |
+
+**JEE Main Trend:** The exam consistently tests **1–2 direct application problems** per year from this chapter. Kirchhoff's Laws and resistance networks account for 40% of chapter questions.
+
+---
+
+### JEE Advanced (2010–2024) — Topic Frequency
+
+| Topic | Frequency | Question Type | Key Skill Required |
+|-------|-----------|--------------|-------------------|
+| Complex network (symmetry + KVL) | High | Integer / MCQ-multiple | Symmetry recognition |
+| Potentiometer (combined with EMF) | High | Paragraph / MCQ | Null-deflection principle |
+| RC transient circuits | High | Integer / Matrix Match | Differential equation |
+| Wheatstone bridge (unbalanced) | Medium | MCQ / Integer | Thevenin equivalent |
+| Star-Delta transformation | Medium | MCQ | Network topology |
+| Cube of resistors | Medium | Integer | 3D symmetry |
+| EMF with multiple cells | Medium | MCQ | KVL in multi-loop |
+| Non-uniform resistors (integration) | Low | Integer | Calculus in physics |
+
+**JEE Advanced Trend:** Problems increasingly combine this chapter with:
+- **Capacitors + RC** (from Electrostatics)
+- **Magnetic force on current** (from Moving Charges)
+- **Graph interpretation** (V-I, Q-t, I-t characteristics)
+
+---
+
+### NEET (2015–2024) — Topic Frequency
+
+| Topic | No. of Questions | Marks |
+|-------|-----------------|-------|
+| Ohm's Law and resistance | 12 | 4 each |
+| Power and energy | 10 | 4 each |
+| Kirchhoff's Laws | 8 | 4 each |
+| Potentiometer | 7 | 4 each |
+| Wheatstone bridge | 6 | 4 each |
+| Combination of cells | 5 | 4 each |
+| Drift velocity | 4 | 4 each |
+
+**NEET Trend:** NEET focuses on **direct formula application** and **conceptual understanding**. One potentiometer question and one Wheatstone bridge question appear almost every year.
+
+---
+
+### High-Priority Topics by Exam
+
+| Priority | JEE Main | JEE Advanced | NEET |
+|----------|---------|--------------|------|
+| **Must Master** | Kirchhoff's Laws, Series/Parallel, Power | Symmetry networks, RC circuits, Potentiometer | Ohm's Law, Power, Kirchhoff |
+| **Very Important** | Wheatstone, Potentiometer, EMF | Wheatstone Thevenin, Star-Delta, EMF combos | Wheatstone, Potentiometer |
+| **Important** | RC circuits, Temperature effect | Cube, Infinite ladder, Non-uniform $R$ | Drift velocity, Cells |
+| **Good to Know** | Infinite ladder | Superposition, Drude model limits | RC circuits |
+
+---
+
+### Most Repeated Concepts in JEE (Exam Observation)
+
+**1. Potentiometer + Internal Resistance:** Every 2–3 years, JEE Advanced has a full paragraph problem combining potentiometer principle with EMF comparison and internal resistance measurement.
+
+**2. Symmetric Networks:** The cube of resistors appears roughly every 3–4 years. The infinite ladder appears less frequently but is highly rewarding when it does.
+
+**3. RC Charging with Complex Circuit:** JEE Advanced regularly combines a multi-battery Kirchhoff network with a capacitor. The trick: find the Thevenin equivalent seen from the capacitor first, then use $\tau = R_{Th}C$.
+
+**4. Off-Balance Wheatstone + Galvanometer Current:** JEE Advanced tests whether students can apply Thevenin's theorem to find current when the bridge is not balanced.
+
+**5. Drift Velocity Calculation:** JEE Main tests $I = neAv_d$ directly — calculate any one of $n$, $A$, $v_d$ given the others and the current.
+
+---
+
+### Difficulty Evolution
+
+**JEE Main (2019–2024):** Introduction of NTA format (single correct, numerical answer type) increased share of calculation-heavy problems. Pure theory questions declined; numerical answers with specific values increased.
+
+**JEE Advanced (2017–2024):** Multi-concept problems dominate. A single JEE Advanced question from Current Electricity may simultaneously require:
+- Kirchhoff's Laws (to set up equations)
+- Symmetry (to reduce variables)
+- Thevenin's theorem (to find galvanometer current)
+- Graph reading (to extract resistance from slope)
+
+Students who treat this as a formula-application chapter consistently underperform at JEE Advanced level. Deep physical understanding of each concept is the only reliable preparation.
+
+---
+
+## PART IX — ONE-PAGE MASTER REVISION SHEET
+
+---
+
+<Callout type="warning">
+**Exam Day Checklist** — verify you can write these from memory in under 2 minutes.
+</Callout>
+
+**Microscopic:**
+$v_d = eE\tau/m$ → $I = neAv_d$ → $J = \sigma E$ → $\sigma = ne^2\tau/m$ → $\rho = 1/\sigma$
+
+**Macroscopic:**
+$V = IR$ → $R = \rho L/A$ → $R_T = R_0(1+\alpha\Delta T)$
+
+**Series:** $R_{eq} = \Sigma R_i$ | **Parallel:** $1/R_{eq} = \Sigma 1/R_i$ | **Two parallel:** $R_1R_2/(R_1+R_2)$
+
+**Dividers:** $V_1 = V \cdot R_1/(R_1+R_2)$ | $I_1 = I \cdot R_2/(R_1+R_2)$ ← (other $R$ in numerator!)
+
+**EMF:** $I = \varepsilon/(R+r)$ | $V_T = \varepsilon - Ir$ (discharge) | $V_T = \varepsilon + Ir$ (charge)
+
+**Power:** $P = VI = I^2R = V^2/R$ | $P_{max} = \varepsilon^2/4r$ at $R=r$
+
+**KCL:** $\Sigma I = 0$ at node | **KVL:** $\Sigma V = 0$ around loop
+
+**Bridge:** $P/Q = R/S$ | **Meter bridge:** $X = R\ell/(100-\ell)$
+
+**Potentiometer:** $\varepsilon_1/\varepsilon_2 = \ell_1/\ell_2$ | $r = R_0(\ell_1/\ell_2 - 1)$
+
+**Cube:** $5R/6$ (body) | $3R/4$ (face) | $7R/12$ (edge)
+
+**Ladder:** $X^2 - R_1X - R_1R_2 = 0$ → $X = (R_1 + \sqrt{R_1^2+4R_1R_2})/2$
+
+**Star→Delta:** $R_{AB} = R_1 + R_2 + R_1R_2/R_3$
+
+**Delta→Star:** $R_A = R_{AB} \cdot R_{CA}/(R_{AB}+R_{BC}+R_{CA})$
+
+**RC charge:** $q = Q_0(1-e^{-t/RC})$ | $I = (\varepsilon/R)e^{-t/RC}$ | $\tau = RC$
+
+**RC discharge:** $q = Q_0 e^{-t/RC}$ | Heat in $R$ = $\frac{1}{2}C\varepsilon^2$ (independent of $R$)
+
+---
+
+**3 Things to Do First in Any Network Problem:**
+1. Mark ALL given voltages and currents with correct polarity/direction
+2. Check for symmetry (equipotential nodes → short; zero-current branches → open)
+3. Count unknowns → choose minimum independent equations (KCL reduces them; KVL solves them)

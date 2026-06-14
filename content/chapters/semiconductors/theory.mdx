@@ -1,0 +1,161 @@
+---
+title: Semiconductors — Theory
+description: Energy bands, p-n junction, transistors, logic gates, and optoelectronic devices for JEE & NEET.
+difficulty: HARD
+tags: [semiconductors, p-n-junction, transistor, diode, logic-gates, LED]
+---
+
+## 1. Energy Bands in Solids
+
+| Material | Band gap | Conductivity |
+|---|---|---|
+| Conductor (metal) | Overlapping bands or half-filled | High |
+| Semiconductor (Si, Ge) | Small gap (~1 eV) | Intermediate |
+| Insulator (diamond) | Large gap (~5 eV) | Very low |
+
+- **Valence band:** Fully occupied at 0 K.
+- **Conduction band:** Empty at 0 K; carries current when electrons are excited.
+- **Fermi level:** Energy level with 50% probability of occupation.
+
+---
+
+## 2. Intrinsic Semiconductors
+
+Pure semiconductor. At room temperature, thermal excitation creates electron-hole pairs.
+
+$$n_e = n_h = n_i \quad \text{(intrinsic carrier density)}$$
+
+Both electrons (in conduction band) and holes (in valence band) conduct.
+
+---
+
+## 3. Extrinsic Semiconductors (Doping)
+
+Adding impurities (dopants) creates extra carriers.
+
+### n-type
+
+Donor impurity (Group V: P, As, Sb). Extra electron available.
+
+$$n_e \gg n_h, \quad \text{majority carriers: electrons}$$
+
+### p-type
+
+Acceptor impurity (Group III: B, Al, Ga). Creates holes.
+
+$$n_h \gg n_e, \quad \text{majority carriers: holes}$$
+
+**Mass action law:**
+
+$$n_e \cdot n_h = n_i^2 \quad \text{(constant at fixed temperature)}$$
+
+---
+
+## 4. p-n Junction
+
+When p-type and n-type are joined:
+- Diffusion of electrons to p-side, holes to n-side.
+- Creates **depletion region** (no free carriers).
+- Built-in potential $V_0$ (contact potential): ~0.7 V for Si, ~0.3 V for Ge.
+
+---
+
+## 5. Biasing a p-n Junction
+
+### Forward Bias
+
+Positive to p-side, negative to n-side. Reduces potential barrier → current flows easily above threshold (~0.7 V for Si).
+
+### Reverse Bias
+
+Positive to n-side, negative to p-side. Increases potential barrier → only tiny reverse saturation current $I_0$.
+
+**At breakdown** (Zener or avalanche): large current at fixed reverse voltage — used in Zener diode for voltage regulation.
+
+---
+
+## 6. Junction Diode — Ideal Characteristics
+
+**Diode equation:** $I = I_0(e^{eV/k_BT} - 1)$
+
+Forward bias: exponential increase. Reverse bias: $I \approx -I_0$ (very small).
+
+---
+
+## 7. Rectifier Circuits
+
+**Half-wave rectifier:** Single diode — passes only positive half cycles.
+
+$$V_{dc} = V_m/\pi, \quad \text{ripple factor} = 1.21$$
+
+**Full-wave rectifier (bridge):** 4 diodes — passes both half cycles.
+
+$$V_{dc} = 2V_m/\pi, \quad \text{ripple factor} = 0.482$$
+
+---
+
+## 8. Zener Diode
+
+Works in reverse breakdown (Zener region). Maintains constant voltage across load.
+
+Used for **voltage regulation**.
+
+---
+
+## 9. Transistor (BJT)
+
+Three terminals: Emitter (E), Base (B), Collector (C). Two types: npn and pnp.
+
+**Modes of operation:** Cutoff (off), Saturation (on), Active (amplifier).
+
+**In active mode:**
+
+$$I_E = I_C + I_B, \quad \beta = \frac{I_C}{I_B} \quad (\text{current gain, typically 50–300})$$
+
+$$\alpha = \frac{I_C}{I_E} = \frac{\beta}{\beta+1}$$
+
+**Transistor as switch:** In cutoff: OFF ($I_C \approx 0$). In saturation: ON ($V_{CE} \approx 0$).
+
+**Transistor as amplifier (CE configuration):**
+
+$$A_V = \frac{\Delta V_C}{\Delta V_B} = -\beta\frac{R_C}{R_i} \quad (\text{voltage gain, inverted})$$
+
+---
+
+## 10. Logic Gates
+
+| Gate | Symbol | Output |
+|---|---|---|
+| AND | $A\cdot B$ | 1 only if both inputs 1 |
+| OR | $A+B$ | 1 if at least one input 1 |
+| NOT | $\bar{A}$ | Output inverted |
+| NAND | $\overline{A\cdot B}$ | AND then NOT (universal gate) |
+| NOR | $\overline{A+B}$ | OR then NOT (universal gate) |
+| XOR | $A\oplus B$ | 1 if inputs differ |
+
+<Callout type="important">
+NAND and NOR are **universal gates** — any logic function can be built from NAND alone or NOR alone.
+</Callout>
+
+---
+
+## 11. Optoelectronic Devices
+
+| Device | Principle |
+|---|---|
+| LED (Light Emitting Diode) | Forward-biased junction; recombination emits photons |
+| Photodiode | Reverse-biased; photons generate electron-hole pairs → current |
+| Solar cell | Photovoltaic: photons create current, no external bias needed |
+| Phototransistor | Light controls base current |
+
+---
+
+## 12. Summary
+
+| Quantity | Formula |
+|---|---|
+| Mass action law | $n_e n_h = n_i^2$ |
+| Transistor $\beta$ | $I_C/I_B$ |
+| $\alpha$–$\beta$ relation | $\beta = \alpha/(1-\alpha)$ |
+| Full-wave $V_{dc}$ | $2V_m/\pi$ |
+| CE voltage gain | $\beta R_C/R_i$ |

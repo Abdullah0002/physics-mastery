@@ -1,0 +1,138 @@
+---
+title: Properties of Matter — Formula Sheet
+description: Key formulas for Properties of Matter for JEE & NEET.
+---
+
+## Elasticity
+
+<Formula label="Stress">
+$$\sigma = \frac{F}{A} \quad \text{[N m}^{-2}\text{] or [Pa]}$$
+</Formula>
+
+<Formula label="Strain">
+$$\epsilon = \frac{\Delta L}{L} \quad \text{(longitudinal)}, \quad \frac{\Delta V}{V} \quad \text{(volume)}, \quad \frac{\Delta x}{l} = \tan\phi \quad \text{(shear)}$$
+</Formula>
+
+<Formula label="Young's Modulus">
+$$Y = \frac{\text{Longitudinal Stress}}{\text{Longitudinal Strain}} = \frac{F/A}{\Delta L/L} = \frac{FL}{A\,\Delta L}$$
+</Formula>
+
+<Formula label="Bulk Modulus">
+$$K = -\frac{\Delta P}{\Delta V/V} = -V\frac{\Delta P}{\Delta V}$$
+</Formula>
+
+<Formula label="Modulus of Rigidity (Shear Modulus)">
+$$G = \frac{\text{Shear Stress}}{\text{Shear Strain}} = \frac{F/A}{\Delta x/l}$$
+</Formula>
+
+<Formula label="Poisson's Ratio">
+$$\sigma_P = -\frac{\text{Lateral Strain}}{\text{Longitudinal Strain}} = -\frac{\Delta D/D}{\Delta L/L}$$
+$$-1 \leq \sigma_P \leq 0.5$$
+</Formula>
+
+<Formula label="Elastic Potential Energy">
+$$U = \frac{1}{2}\times\text{Stress}\times\text{Strain}\times V = \frac{1}{2}\frac{F^2 L}{AY} = \frac{F\,\Delta L}{2}$$
+$$u = \frac{U}{V} = \frac{1}{2}Y\epsilon^2 = \frac{\sigma^2}{2Y}$$
+</Formula>
+
+<Formula label="Relation between Elastic Constants">
+$$Y = 3K(1 - 2\sigma_P) = 2G(1 + \sigma_P)$$
+$$\frac{9}{Y} = \frac{3}{G} + \frac{1}{K}$$
+$$K = \frac{Y}{3(1-2\sigma_P)}, \quad G = \frac{Y}{2(1+\sigma_P)}$$
+</Formula>
+
+---
+
+## Fluid Statics
+
+<Formula label="Pressure at Depth h">
+$$P = P_0 + \rho g h$$
+</Formula>
+
+<Formula label="Pascal's Law">
+$$\Delta P = \frac{F_1}{A_1} = \frac{F_2}{A_2} \implies \frac{F_2}{F_1} = \frac{A_2}{A_1}$$
+</Formula>
+
+<Formula label="Archimedes' Principle — Buoyant Force">
+$$F_b = \rho_{\text{fluid}} V_{\text{submerged}} g$$
+</Formula>
+
+<Formula label="Condition for Floating">
+$$\rho_{\text{body}} \cdot V_{\text{total}} = \rho_{\text{fluid}} \cdot V_{\text{submerged}}$$
+$$\frac{V_{\text{sub}}}{V_{\text{total}}} = \frac{\rho_{\text{body}}}{\rho_{\text{fluid}}}$$
+</Formula>
+
+---
+
+## Surface Tension
+
+<Formula label="Surface Tension T">
+$$T = \frac{F}{l} = \frac{W}{A} \quad \text{[N m}^{-1}\text{]}$$
+</Formula>
+
+<Formula label="Excess Pressure Inside a Bubble">
+$$\Delta P_{\text{soap bubble}} = \frac{4T}{R} \quad \text{(two surfaces)}$$
+$$\Delta P_{\text{liquid drop}} = \frac{2T}{R} \quad \text{(one surface)}$$
+$$\Delta P_{\text{air bubble in liquid}} = \frac{2T}{R}$$
+</Formula>
+
+<Formula label="Capillary Rise">
+$$h = \frac{2T\cos\theta}{\rho g r}$$
+$$\text{(Jurin's Law: } hr = \text{constant for given liquid)}$$
+</Formula>
+
+<Formula label="Work Done in Forming a Film">
+$$W = T \times \Delta A$$
+</Formula>
+
+---
+
+## Viscosity
+
+<Formula label="Newton's Law of Viscosity">
+$$F = \eta A \frac{dv}{dx}$$
+$$\eta \text{ = coefficient of viscosity [Pa·s or poise (1 P = 0.1 Pa·s)]}$$
+</Formula>
+
+<Formula label="Stokes' Law">
+$$F_{\text{viscous}} = 6\pi\eta r v$$
+</Formula>
+
+<Formula label="Terminal Velocity">
+$$v_t = \frac{2r^2(\rho - \sigma)g}{9\eta}$$
+$$\text{(} \rho \text{ = density of sphere, } \sigma \text{ = density of fluid)}$$
+</Formula>
+
+<Formula label="Poiseuille's Law (Flow Rate through Tube)">
+$$Q = \frac{\pi P r^4}{8\eta L} = \frac{\pi (P_1 - P_2) r^4}{8\eta L}$$
+</Formula>
+
+<Formula label="Reynolds Number">
+$$R_e = \frac{\rho v D}{\eta}$$
+$$R_e < 1000 \text{ (laminar)}, \quad R_e > 2000 \text{ (turbulent)}$$
+</Formula>
+
+---
+
+## Fluid Dynamics — Bernoulli's Equation
+
+<Formula label="Equation of Continuity">
+$$A_1 v_1 = A_2 v_2 \quad (\text{incompressible fluid})$$
+$$\rho_1 A_1 v_1 = \rho_2 A_2 v_2 \quad (\text{compressible})$$
+</Formula>
+
+<Formula label="Bernoulli's Equation">
+$$P + \frac{1}{2}\rho v^2 + \rho g h = \text{constant}$$
+</Formula>
+
+<Formula label="Torricelli's Theorem (Speed of Efflux)">
+$$v = \sqrt{2gh}$$
+</Formula>
+
+<Formula label="Venturi Meter Flow Rate">
+$$Q = A_1 A_2 \sqrt{\frac{2\Delta P}{\rho(A_1^2 - A_2^2)}}$$
+</Formula>
+
+<Formula label="Dynamic Lift (Magnus Effect)">
+$$F_L = \frac{1}{2}\rho A (v_2^2 - v_1^2) \cdot A$$
+</Formula>

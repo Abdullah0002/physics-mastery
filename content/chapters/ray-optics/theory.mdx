@@ -1,0 +1,147 @@
+---
+title: Ray Optics — Theory
+description: Reflection, refraction, lenses, mirrors, prisms, optical instruments, and total internal reflection for JEE & NEET.
+difficulty: HARD
+tags: [ray-optics, refraction, lens, mirror, prism, TIR, optical-instruments]
+---
+
+## 1. Reflection of Light
+
+**Laws of reflection:**
+1. Angle of incidence = Angle of reflection (both measured from normal).
+2. Incident ray, reflected ray, and normal are coplanar.
+
+---
+
+## 2. Spherical Mirrors
+
+Sign convention: distances measured from the pole (P). Distances in the direction of incident light are positive.
+
+<Formula label="Mirror Formula">
+$$\frac{1}{v} + \frac{1}{u} = \frac{1}{f} = \frac{2}{R}$$
+</Formula>
+
+<Formula label="Magnification">
+$$m = -\frac{v}{u} = \frac{h_i}{h_o}$$
+</Formula>
+
+| Mirror | $f$ | Image (object beyond $C$) |
+|---|---|---|
+| Concave | Negative (real focus) | Real, inverted |
+| Convex | Positive | Always virtual, upright, diminished |
+
+---
+
+## 3. Refraction — Snell's Law
+
+<Formula label="Snell's Law">
+$$n_1\sin\theta_1 = n_2\sin\theta_2$$
+</Formula>
+
+$$n = \frac{c}{v} = \frac{\lambda_{vacuum}}{\lambda_{medium}}$$
+
+---
+
+## 4. Total Internal Reflection (TIR)
+
+When light goes from denser ($n_1$) to rarer ($n_2$) medium:
+
+<Formula label="Critical Angle">
+$$\sin\theta_c = \frac{n_2}{n_1} \quad (n_1 > n_2)$$
+</Formula>
+
+For $\theta > \theta_c$: TIR occurs. Applications: optical fibre, prism binoculars, diamonds.
+
+---
+
+## 5. Refraction at Spherical Surface
+
+Single refracting surface separating media $n_1$ and $n_2$ (radius $R$):
+
+<Formula label="Refraction at Spherical Surface">
+$$\frac{n_2}{v} - \frac{n_1}{u} = \frac{n_2 - n_1}{R}$$
+</Formula>
+
+---
+
+## 6. Thin Lens Formula
+
+<Formula label="Lens Formula">
+$$\frac{1}{v} - \frac{1}{u} = \frac{1}{f}$$
+</Formula>
+
+<Formula label="Lensmaker's Equation">
+$$\frac{1}{f} = (n-1)\left(\frac{1}{R_1} - \frac{1}{R_2}\right)$$
+</Formula>
+
+<Formula label="Magnification">
+$$m = \frac{v}{u}$$
+</Formula>
+
+| Lens | $f$ | Converging/Diverging |
+|---|---|---|
+| Convex | Positive | Converging |
+| Concave | Negative | Diverging |
+
+**Two thin lenses in contact:** $\dfrac{1}{f} = \dfrac{1}{f_1} + \dfrac{1}{f_2}$, Power $P = P_1 + P_2$ (dioptre, D).
+
+---
+
+## 7. Prism
+
+For a prism (apex angle $A$, refractive index $n$):
+
+**At minimum deviation $D_m$:**
+
+<Formula label="Prism — Minimum Deviation">
+$$n = \frac{\sin\left(\frac{A+D_m}{2}\right)}{\sin(A/2)}$$
+</Formula>
+
+At $D_m$: ray passes symmetrically through prism, $r_1 = r_2 = A/2$.
+
+**Thin prism:** $D = (n-1)A$ (small angle approximation).
+
+**Angular dispersion:** $D_{blue} - D_{red} = (n_b - n_r)A$
+
+**Dispersive power:** $\omega = (n_b - n_r)/(n_{mean} - 1)$
+
+---
+
+## 8. Optical Instruments
+
+### Simple Microscope (magnifier)
+
+$$M = \frac{D}{f} + 1 \approx \frac{D}{f} \quad (D = 25\ \text{cm})$$
+
+### Compound Microscope
+
+$$M = m_o \times m_e = \frac{L}{f_o}\cdot\frac{D}{f_e}$$
+
+### Telescope (refracting, normal adjustment)
+
+<Formula label="Telescope Magnification">
+$$M = -\frac{f_o}{f_e}$$
+</Formula>
+
+Length of tube: $f_o + f_e$ (normal adjustment).
+
+---
+
+## 9. Power of a Lens
+
+$$P = \frac{1}{f(\text{metres})} \quad \text{(dioptre, D)}$$
+
+Concave lens: negative power. Convex: positive.
+
+---
+
+## 10. Summary
+
+| Formula | Use |
+|---|---|
+| $1/v + 1/u = 1/f$ | Mirrors |
+| $1/v - 1/u = 1/f$ | Lenses |
+| Snell: $n_1\sin\theta_1 = n_2\sin\theta_2$ | Refraction |
+| Critical angle: $\sin\theta_c = n_2/n_1$ | TIR |
+| Prism: $n = \sin((A+D_m)/2)/\sin(A/2)$ | Minimum deviation |
+| Telescope: $M = f_o/f_e$ | Magnification |

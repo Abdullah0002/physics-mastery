@@ -1,0 +1,147 @@
+---
+title: Wave Optics — Theory
+description: Huygens' principle, Young's double slit, interference, diffraction, and polarization for JEE & NEET.
+difficulty: HARD
+tags: [wave-optics, interference, diffraction, polarization, YDSE, Huygens]
+---
+
+## 1. Huygens' Principle
+
+Every point on a wavefront is the source of secondary spherical wavelets. The new wavefront is the forward tangent to all secondary wavelets.
+
+Used to derive: reflection, refraction, and the laws of wave propagation.
+
+---
+
+## 2. Coherence
+
+**Coherent sources:** Same frequency, constant phase difference. Required for sustained interference.
+
+**Incoherent sources:** Random phase difference — no permanent interference pattern.
+
+---
+
+## 3. Principle of Superposition
+
+The net displacement at any point = algebraic sum of individual displacements.
+
+**Constructive interference:** Waves in phase → amplitude = $A_1 + A_2$
+
+**Destructive interference:** Waves exactly out of phase ($\pi$) → amplitude = $|A_1 - A_2|$
+
+---
+
+## 4. Young's Double Slit Experiment (YDSE)
+
+Two coherent slits $S_1$ and $S_2$ separated by $d$, at distance $D$ from screen.
+
+**Path difference:** $\Delta = d\sin\theta \approx \frac{dy}{D}$ for small $\theta$.
+
+**Condition for bright fringe (constructive):** $\Delta = n\lambda$
+
+**Condition for dark fringe (destructive):** $\Delta = (2n+1)\lambda/2$
+
+<Formula label="Fringe width">
+$$\beta = \frac{\lambda D}{d}$$
+</Formula>
+
+<Formula label="Position of nth bright fringe">
+$$y_n = \frac{n\lambda D}{d}$$
+</Formula>
+
+<Callout type="important">
+Fringe width $\beta$ is the same for all fringes (bright and dark). The central bright fringe is at $y=0$.
+</Callout>
+
+### Effect of Thin Film / Medium
+
+If a thin transparent sheet (refractive index $n$, thickness $t$) is placed over one slit:
+
+**Extra path length introduced:** $(n-1)t$
+
+**Shift of central fringe toward the side of the slab:**
+
+$$y_{shift} = \frac{(n-1)t\cdot D}{d}$$
+
+---
+
+## 5. Intensity in YDSE
+
+For two coherent sources of amplitude $A$:
+
+$$I = 4I_0\cos^2\frac{\delta}{2}$$
+
+where $\delta = 2\pi\Delta/\lambda$ = phase difference.
+
+At maxima ($\delta = 2n\pi$): $I = 4I_0$. At minima ($\delta = (2n+1)\pi$): $I = 0$.
+
+**Average intensity = $2I_0$** (energy conserved).
+
+---
+
+## 6. Single Slit Diffraction
+
+For a slit of width $a$:
+
+**First minimum:** $a\sin\theta = \lambda$
+
+<Formula label="Angular width of central maximum">
+$$2\theta \approx \frac{2\lambda}{a}$$
+</Formula>
+
+**Linear width of central maximum:** $w = 2\lambda D/a$
+
+<Callout type="tip">
+In diffraction, minima occur at $a\sin\theta = n\lambda$ ($n\neq 0$). In double-slit, maxima at $d\sin\theta = n\lambda$. Different conditions — don't confuse them.
+</Callout>
+
+---
+
+## 7. Resolving Power
+
+**Rayleigh criterion:** Two sources are just resolved when the central maximum of one falls on the first minimum of the other.
+
+**Limiting angle:** $\theta_{min} = 1.22\lambda/D$ (for circular aperture of diameter $D$).
+
+---
+
+## 8. Polarization
+
+Light is a transverse wave — $\vec{E}$ can oscillate in any direction perpendicular to propagation.
+
+**Unpolarized light:** $\vec{E}$ oscillates randomly in all transverse directions.
+
+**Plane polarized (linearly polarized):** $\vec{E}$ oscillates in one plane only.
+
+### Malus's Law
+
+When polarized light of intensity $I_0$ passes through a polarizer at angle $\theta$ to the polarization direction:
+
+<Formula label="Malus's Law">
+$$I = I_0\cos^2\theta$$
+</Formula>
+
+### Brewster's Law
+
+When light is incident at Brewster's angle $\theta_B$, the reflected light is completely polarized:
+
+<Formula label="Brewster's Angle">
+$$\tan\theta_B = n$$
+</Formula>
+
+At Brewster's angle: reflected ray $\perp$ refracted ray.
+
+---
+
+## 9. Summary
+
+| Quantity | Formula |
+|---|---|
+| Fringe width (YDSE) | $\beta = \lambda D/d$ |
+| Bright fringe positions | $y_n = n\lambda D/d$ |
+| Phase difference | $\delta = 2\pi\Delta/\lambda$ |
+| Intensity YDSE | $4I_0\cos^2(\delta/2)$ |
+| Single slit: 1st min | $a\sin\theta = \lambda$ |
+| Central max width | $2\lambda D/a$ |
+| Malus's Law | $I = I_0\cos^2\theta$ |
+| Brewster's angle | $\tan\theta_B = n$ |

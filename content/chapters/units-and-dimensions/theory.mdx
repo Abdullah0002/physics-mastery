@@ -1,0 +1,169 @@
+---
+title: Units & Dimensions — Theory
+description: SI units, dimensional analysis, error analysis, and significant figures for JEE & NEET.
+difficulty: EASY
+tags: [units, dimensions, SI, error-analysis, significant-figures]
+---
+
+## 1. Physical Quantities
+
+A **physical quantity** is anything that can be measured. All physical quantities have:
+- A **numerical value** (magnitude)
+- A **unit** (reference standard)
+
+**Fundamental (base) quantities** are independent: length, mass, time, temperature, electric current, luminous intensity, amount of substance.
+
+**Derived quantities** are combinations of fundamental ones: velocity, force, energy, etc.
+
+---
+
+## 2. SI Base Units
+
+| Quantity | Unit | Symbol |
+|---|---|---|
+| Length | metre | m |
+| Mass | kilogram | kg |
+| Time | second | s |
+| Temperature | kelvin | K |
+| Electric current | ampere | A |
+| Luminous intensity | candela | cd |
+| Amount of substance | mole | mol |
+
+---
+
+## 3. Dimensional Formula
+
+Dimensions express a physical quantity in terms of base quantities: $[M^a L^b T^c A^d \Theta^e]$.
+
+### Key Dimensional Formulas
+
+| Quantity | Dimensions |
+|---|---|
+| Force | $[MLT^{-2}]$ |
+| Energy / Work | $[ML^2T^{-2}]$ |
+| Power | $[ML^2T^{-3}]$ |
+| Pressure / Stress | $[ML^{-1}T^{-2}]$ |
+| Momentum / Impulse | $[MLT^{-1}]$ |
+| Torque | $[ML^2T^{-2}]$ |
+| Frequency | $[T^{-1}]$ |
+| Gravitational constant $G$ | $[M^{-1}L^3T^{-2}]$ |
+| Planck's constant $h$ | $[ML^2T^{-1}]$ |
+| Coefficient of viscosity $\eta$ | $[ML^{-1}T^{-1}]$ |
+| Surface tension | $[MT^{-2}]$ |
+| Electric charge | $[AT]$ |
+| Permittivity $\varepsilon_0$ | $[M^{-1}L^{-3}T^4A^2]$ |
+
+<Callout type="important">
+Torque ($[ML^2T^{-2}]$) and Work ($[ML^2T^{-2}]$) have the **same dimensions** even though they are physically different quantities. Dimensional analysis cannot distinguish them.
+</Callout>
+
+---
+
+## 4. Principle of Homogeneity
+
+Every term in a correct physical equation must have the **same dimensions**.
+
+**Uses of dimensional analysis:**
+1. Check the correctness of an equation.
+2. Derive relationships between physical quantities (up to a dimensionless constant).
+3. Convert units from one system to another.
+
+---
+
+## 5. Dimensional Analysis — Deriving Formulas
+
+**Method:** Assume the quantity depends on certain variables. Write $Q = k\,A^a\,B^b\,C^c$ and equate dimensions on both sides.
+
+**Example — Period of a simple pendulum:** Assume $T = k\,L^a\,g^b$.
+
+<Step n={1}>Write dimensions: $[T] = [L^a][LT^{-2}]^b = [L^{a+b}T^{-2b}]$</Step>
+<Step n={2}>Equate powers of $T$: $1 = -2b \Rightarrow b = -1/2$</Step>
+<Step n={3}>Equate powers of $L$: $0 = a+b \Rightarrow a = 1/2$</Step>
+<Step n={4}>Result: $T \propto \sqrt{L/g}$ (the constant $k = 2\pi$ from experiment)</Step>
+
+<Callout type="tip">
+Dimensional analysis cannot determine dimensionless constants (like $2\pi$) or distinguish between sine and cosine functions.
+</Callout>
+
+---
+
+## 6. Limitations of Dimensional Analysis
+
+1. Cannot determine dimensionless constants.
+2. Cannot derive equations involving trigonometric/logarithmic/exponential functions.
+3. Cannot determine if a sum or difference of two terms is correct.
+4. Cannot identify the correct formula when multiple dimensionally consistent formulas exist.
+
+---
+
+## 7. Errors in Measurement
+
+Every measurement has some **uncertainty (error)**.
+
+### Types of Errors
+
+| Type | Description |
+|---|---|
+| Systematic | Consistent, one-directional; due to faulty instrument or method |
+| Random | Unpredictable, fluctuate; reduced by averaging many readings |
+| Gross (blunder) | Human mistakes; readings discarded |
+
+### Definitions
+
+**Absolute error:** $\Delta a = |a_{mean} - a_i|$
+
+**Mean absolute error:** $\overline{\Delta a} = \frac{1}{n}\sum|\Delta a_i|$
+
+**Relative (fractional) error:** $\dfrac{\overline{\Delta a}}{a_{mean}}$
+
+**Percentage error:** $\dfrac{\overline{\Delta a}}{a_{mean}} \times 100\%$
+
+---
+
+## 8. Error Propagation
+
+For derived quantities:
+
+<Formula label="Sum/Difference — Absolute errors add">
+$$z = a \pm b \Rightarrow \Delta z = \Delta a + \Delta b$$
+</Formula>
+
+<Formula label="Product/Quotient — Relative errors add">
+$$z = \frac{a^m b^n}{c^p} \Rightarrow \frac{\Delta z}{z} = m\frac{\Delta a}{a} + n\frac{\Delta b}{b} + p\frac{\Delta c}{c}$$
+</Formula>
+
+<Callout type="important">
+**Maximum possible error** — always add errors (never subtract). This gives the worst-case scenario. The actual error is usually smaller.
+</Callout>
+
+**Example — Volume of a sphere:** $V = \frac{4}{3}\pi r^3$
+
+$$\frac{\Delta V}{V} = 3\frac{\Delta r}{r}$$
+
+If radius has 2% error, volume has 6% error.
+
+---
+
+## 9. Significant Figures
+
+Rules:
+1. All non-zero digits are significant.
+2. Zeros **between** non-zero digits are significant (e.g., 1005 → 4 sig figs).
+3. Leading zeros are **not** significant (0.004 → 1 sig fig).
+4. Trailing zeros **after** the decimal are significant (3.00 → 3 sig figs).
+
+**Rounding in calculations:**
+- **Addition/Subtraction:** Result has the same number of decimal places as the least precise number.
+- **Multiplication/Division:** Result has the same number of significant figures as the least precise number.
+
+---
+
+## 10. Dimensions of Common Constants
+
+| Constant | Value | Dimensions |
+|---|---|---|
+| $G$ (gravitational) | $6.67\times10^{-11}$ | $[M^{-1}L^3T^{-2}]$ |
+| $h$ (Planck) | $6.626\times10^{-34}$ | $[ML^2T^{-1}]$ |
+| $k_B$ (Boltzmann) | $1.38\times10^{-23}$ | $[ML^2T^{-2}K^{-1}]$ |
+| $c$ (speed of light) | $3\times10^8$ | $[LT^{-1}]$ |
+| $\varepsilon_0$ | $8.85\times10^{-12}$ | $[M^{-1}L^{-3}T^4A^2]$ |

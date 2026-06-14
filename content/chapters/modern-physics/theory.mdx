@@ -1,0 +1,149 @@
+---
+title: Modern Physics — Theory
+description: Photoelectric effect, Compton scattering, de Broglie wavelength, Bohr model, X-rays, and nuclear physics for JEE & NEET.
+difficulty: ADVANCED
+tags: [modern-physics, photoelectric-effect, Bohr, de-Broglie, X-rays, quantum]
+---
+
+## 1. Blackbody Radiation and Planck's Hypothesis
+
+A **blackbody** absorbs all incident radiation. Planck proposed energy is quantised:
+
+$$E = nh\nu, \quad h = 6.626\times10^{-34}\ \text{J·s}$$
+
+This resolved the ultraviolet catastrophe. Wien's law and Stefan's law follow from Planck's distribution.
+
+---
+
+## 2. Photoelectric Effect (Einstein, 1905)
+
+Light hits a metal → electrons are ejected (photoelectrons).
+
+**Observations:**
+- Photoelectric effect occurs only if $\nu \geq \nu_0$ (threshold frequency) — independent of intensity.
+- Number of photoelectrons $\propto$ intensity.
+- Max KE of photoelectrons is independent of intensity but depends on frequency.
+
+<Formula label="Einstein's Photoelectric Equation">
+$$KE_{max} = h\nu - \phi = h(\nu - \nu_0)$$
+</Formula>
+
+$\phi = h\nu_0$ = work function of the metal.
+
+<Formula label="Stopping Potential">
+$$eV_s = KE_{max} = h\nu - \phi$$
+</Formula>
+
+**Plank's constant from experiment:**
+
+$$h = \frac{e(V_{s2}-V_{s1})}{\nu_2-\nu_1}$$
+
+---
+
+## 3. Photon Properties
+
+| Property | Formula |
+|---|---|
+| Energy | $E = h\nu = hc/\lambda$ |
+| Momentum | $p = h\nu/c = h/\lambda$ |
+| Mass | 0 (rest mass); $E/c^2$ effective |
+
+---
+
+## 4. Compton Effect
+
+X-rays scattered by electrons have increased wavelength:
+
+<Formula label="Compton Shift">
+$$\Delta\lambda = \lambda' - \lambda = \frac{h}{m_e c}(1-\cos\phi)$$
+</Formula>
+
+$h/m_e c = 2.426\ \text{pm}$ (Compton wavelength). Confirms photon has momentum.
+
+---
+
+## 5. de Broglie Wavelength
+
+Every particle has an associated wavelength:
+
+<Formula label="de Broglie Wavelength">
+$$\lambda = \frac{h}{p} = \frac{h}{mv}$$
+</Formula>
+
+For a particle accelerated through potential $V$:
+
+$$\lambda = \frac{h}{\sqrt{2meV}}$$
+
+<Callout type="tip">
+For electron at 100 V: $\lambda \approx 1.23/\sqrt{V}$ Å $= 0.123$ nm. This is atomic-scale — justifies electron diffraction.
+</Callout>
+
+---
+
+## 6. Heisenberg's Uncertainty Principle
+
+$$\Delta x\cdot\Delta p_x \geq \frac{h}{4\pi}$$
+
+$$\Delta E\cdot\Delta t \geq \frac{h}{4\pi}$$
+
+You cannot simultaneously know position and momentum with arbitrary precision.
+
+---
+
+## 7. Bohr's Model of Hydrogen Atom
+
+<Step n={1}>Electrons orbit the nucleus in allowed circular orbits without radiating.</Step>
+<Step n={2}>Angular momentum is quantised: $mvr_n = nh/(2\pi)$.</Step>
+<Step n={3}>Radiation emitted/absorbed when electron transitions between orbits: $E_{photon} = E_i - E_f$.</Step>
+
+<Formula label="Radius of nth orbit">
+$$r_n = n^2 a_0 = n^2\times0.529\ \text{Å} \quad \text{(hydrogen)}$$
+</Formula>
+
+<Formula label="Energy of nth orbit">
+$$E_n = -\frac{13.6}{n^2}\ \text{eV} \quad \text{(hydrogen)}$$
+</Formula>
+
+<Formula label="Speed in nth orbit">
+$$v_n = \frac{v_1}{n} = \frac{2.18\times10^6}{n}\ \text{m/s}$$
+</Formula>
+
+---
+
+## 8. Spectral Series of Hydrogen
+
+$$\frac{1}{\lambda} = R_H Z^2\left(\frac{1}{n_1^2} - \frac{1}{n_2^2}\right), \quad R_H = 1.097\times10^7\ \text{m}^{-1}$$
+
+| Series | $n_1$ | Region |
+|---|---|---|
+| Lyman | 1 | UV |
+| Balmer | 2 | Visible |
+| Paschen | 3 | IR |
+| Brackett | 4 | Far IR |
+| Pfund | 5 | Far IR |
+
+---
+
+## 9. X-rays
+
+**Continuous X-rays (Bremsstrahlung):** deceleration of electrons. Min wavelength:
+
+$$\lambda_{min} = \frac{hc}{eV}$$
+
+**Characteristic X-rays:** transitions between inner electron shells. Gives sharp lines ($K_\alpha$, $K_\beta$, etc.).
+
+**Moseley's law:** $\sqrt{\nu} = a(Z - b)$ (links characteristic X-ray frequency to atomic number $Z$).
+
+---
+
+## 10. Summary
+
+| Quantity | Formula |
+|---|---|
+| Photon energy | $E = hc/\lambda$ |
+| Photoelectric KE | $h\nu - \phi$ |
+| Compton shift | $(h/m_ec)(1-\cos\phi)$ |
+| de Broglie $\lambda$ | $h/mv$ |
+| Bohr radius | $n^2 \times 0.529$ Å |
+| Bohr energy | $-13.6/n^2$ eV |
+| Rydberg formula | $1/\lambda = R_H(1/n_1^2 - 1/n_2^2)$ |

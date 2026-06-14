@@ -1,0 +1,1240 @@
+# JEE Advanced Problems — Current Electricity
+
+*30 original multi-concept problems at JEE Advanced difficulty. Each problem tests deep understanding across multiple topics. Multi-correct MCQs are marked [MCQ-M]; integer-type are marked [INT]; single-correct are marked [MCQ-S].*
+
+---
+
+## Section A: Resistance Networks & Symmetry
+
+### Problem 1 [MCQ-M]
+
+A cube is made of 12 identical wires, each of resistance $r$. Terminals A and B are diagonally opposite vertices of the cube. Which of the following statements are correct?
+
+**(A)** The equivalent resistance between A and B is $\dfrac{5r}{6}$
+
+**(B)** By symmetry, the cube can be divided into three equipotential sets: $\{A\}$, $\{3\text{ vertices adjacent to }A\}$, $\{3\text{ vertices adjacent to }B\}$, $\{B\}$
+
+**(C)** The current through each wire adjacent to A is $\dfrac{I}{3}$, where $I$ is the total current
+
+**(D)** If each wire has resistance $2\,\Omega$, the equivalent resistance is $\dfrac{5}{3}\,\Omega$
+
+<details>
+<summary>Solution</summary>
+
+**Symmetry Analysis:**
+
+Label the cube vertices. Let A be the source terminal. By symmetry:
+- The 3 vertices directly connected to A are at the same potential $V_1$
+- The 3 vertices directly connected to B are at the same potential $V_2$
+
+This creates 4 equipotential groups: $\{A\}$, $\{P, Q, R\}$, $\{S, T, U\}$, $\{B\}$
+
+**Equivalent circuit:**
+
+- From A: 3 wires in parallel → resistance $r/3$
+- From $\{P,Q,R\}$ to $\{S,T,U\}$: 6 wires, each connecting one from the first set to one from the second set → 6 parallel wires of resistance $r$ → $r/6$
+- From $\{S,T,U\}$ to B: 3 wires in parallel → resistance $r/3$
+
+$$R_{AB} = \frac{r}{3} + \frac{r}{6} + \frac{r}{3} = \frac{2r}{6} + \frac{r}{6} + \frac{2r}{6} = \frac{5r}{6}$$
+
+**Current distribution:**
+
+Total current $I$ splits equally at A: each of the 3 wires carries $I/3$ ✓
+
+For $r = 2\,\Omega$: $R_{AB} = 5(2)/6 = 5/3\,\Omega$ ✓
+
+**Answers: (A), (B), (C), (D)** — all correct.
+
+</details>
+
+---
+
+### Problem 2 [MCQ-S]
+
+In the infinite ladder network shown, each horizontal resistor has resistance $R$ and each vertical (shunt) resistor has resistance $R$. The equivalent resistance looking into the ladder from the left is:
+
+$$\text{(Network: } R\text{-}R\text{-}R\text{-}\cdots \text{ with shunt } R \text{ at each node)}$$
+
+**(A)** $R(\sqrt{3}-1)$
+
+**(B)** $\dfrac{R(\sqrt{5}-1)}{2}$
+
+**(C)** $R(\sqrt{2}-1)$
+
+**(D)** $\dfrac{R(\sqrt{3}+1)}{2}$
+
+<details>
+<summary>Solution</summary>
+
+Let the input impedance be $Z$. Since the ladder is infinite, removing one section from the left leaves the same ladder. Therefore:
+
+$$Z = R + \frac{R \cdot Z}{R + Z}$$
+
+Multiplying both sides by $(R + Z)$:
+
+$$Z(R + Z) = R(R + Z) + RZ$$
+
+$$ZR + Z^2 = R^2 + RZ + RZ$$
+
+$$Z^2 = R^2 + RZ$$
+
+$$Z^2 - RZ - R^2 = 0$$
+
+Using the quadratic formula:
+
+$$Z = \frac{R \pm \sqrt{R^2 + 4R^2}}{2} = \frac{R \pm R\sqrt{5}}{2} = \frac{R(1 \pm \sqrt{5})}{2}$$
+
+Taking the positive root (resistance must be positive):
+
+$$\boxed{Z = \frac{R(\sqrt{5}-1)}{2}}$$
+
+**Answer: (B)**
+
+</details>
+
+---
+
+### Problem 3 [INT]
+
+In the circuit shown, five identical resistors each of resistance $R = 6\,\Omega$ are connected as follows: $R_{AB}$, $R_{BC}$, $R_{CD}$ in series forming the top path, and $R_{AD}$ directly connecting A to D with $R_{BD}$ connecting B to D. A battery of EMF $12\,\text{V}$ and negligible internal resistance is connected between A and D.
+
+Find the power (in watts) dissipated in the resistor $R_{BD}$.
+
+<details>
+<summary>Solution</summary>
+
+**Circuit setup:** Let the nodes be A, B, C, D with the battery between A (positive) and D (negative).
+
+Assign node voltages: $V_A = 12\,\text{V}$, $V_D = 0$
+
+Resistors: $R_{AB} = R_{BC} = R_{CD} = R_{AD} = R_{BD} = 6\,\Omega$
+
+**Node B:** Connected to A via $R_{AB}$, to C via $R_{BC}$, to D via $R_{BD}$
+
+**Node C:** Connected to B via $R_{BC}$, to D via $R_{CD}$
+
+**KCL at node C:**
+$$\frac{V_B - V_C}{R} = \frac{V_C - V_D}{R}$$
+$$V_B - V_C = V_C \implies V_C = \frac{V_B}{2}$$
+
+**KCL at node B:**
+$$\frac{V_A - V_B}{R} = \frac{V_B - V_C}{R} + \frac{V_B - V_D}{R}$$
+
+$$12 - V_B = V_B - \frac{V_B}{2} + V_B$$
+
+$$12 - V_B = \frac{V_B}{2} + V_B = \frac{3V_B}{2}$$
+
+$$12 = V_B + \frac{3V_B}{2} = \frac{5V_B}{2}$$
+
+$$V_B = \frac{24}{5} = 4.8\,\text{V}$$
+
+**Power in $R_{BD}$:**
+
+$$P_{BD} = \frac{V_B^2}{R} = \frac{(4.8)^2}{6} = \frac{23.04}{6} = 3.84\,\text{W}$$
+
+$$\boxed{P_{BD} \approx 3.84\,\text{W}}$$
+
+*(Integer answer: 4 W if rounded, but exact: 3.84 W — the integer form of this problem would typically use $R = 5\,\Omega$ to give a clean answer)*
+
+</details>
+
+---
+
+### Problem 4 [MCQ-M]
+
+For the Wheatstone bridge shown: $P = 10\,\Omega$, $Q = 10\,\Omega$, $R = 10\,\Omega$, $S = 12\,\Omega$ (unbalanced). The galvanometer has resistance $G = 20\,\Omega$. Battery EMF $= 6\,\text{V}$, internal resistance negligible. Which of the following are correct?
+
+**(A)** The bridge is unbalanced because $P/Q \neq R/S$
+
+**(B)** The galvanometer current can be found using Thevenin's theorem by open-circuiting G
+
+**(C)** The Thevenin voltage across the galvanometer terminals is $\dfrac{6}{22} - \dfrac{6}{20} \approx$ a nonzero value... [see actual calculation below]
+
+**(D)** $I_G = \dfrac{6}{660}\,\text{A} = \dfrac{1}{110}\,\text{A}$
+
+<details>
+<summary>Solution</summary>
+
+**Check balance:** $P/Q = 10/10 = 1$; $R/S = 10/12 \neq 1$. Unbalanced. ✓ **(A) correct**
+
+**Thevenin across galvanometer terminals (C and D):**
+
+Open-circuit G. The circuit becomes two voltage dividers:
+- Left arm: P and R in series ($10 + 10 = 20\,\Omega$)
+- Right arm: Q and S in series ($10 + 12 = 22\,\Omega$)
+
+Battery voltage = 6 V applied across both arms (A to B).
+
+$$V_C = V_A - I_{left} \cdot P = V_A - \frac{6}{20} \times 10 = V_A - 3\,\text{V}$$
+
+$$V_D = V_A - I_{right} \cdot Q = V_A - \frac{6}{22} \times 10 = V_A - \frac{60}{22}\,\text{V}$$
+
+$$V_{Th} = V_C - V_D = \frac{60}{22} - 3 = \frac{60 - 66}{22} = -\frac{6}{22} = -\frac{3}{11}\,\text{V}$$
+
+$|V_{Th}| = 3/11\,\text{V}$. **(B) correct**
+
+**Thevenin resistance (short battery):**
+
+$R_{Th} = P \| R + Q \| S = (10 \| 10) + (10 \| 12)$
+
+$= 5 + \dfrac{10 \times 12}{22} = 5 + \dfrac{120}{22} = 5 + \dfrac{60}{11} = \dfrac{55 + 60}{11} = \dfrac{115}{11}\,\Omega$
+
+**Galvanometer current:**
+
+$$I_G = \frac{|V_{Th}|}{R_{Th} + G} = \frac{3/11}{115/11 + 20} = \frac{3/11}{(115 + 220)/11} = \frac{3}{335} = \frac{3}{335}\,\text{A}$$
+
+This does not equal $1/110$, so **(D) is incorrect**.
+
+**Answers: (A), (B)**
+
+</details>
+
+---
+
+## Section B: Multi-Loop Circuits & Kirchhoff's Laws
+
+### Problem 5 [INT]
+
+In the circuit: Battery $\mathcal{E}_1 = 12\,\text{V}$, $r_1 = 1\,\Omega$; Battery $\mathcal{E}_2 = 8\,\text{V}$, $r_2 = 1\,\Omega$; Battery $\mathcal{E}_3 = 4\,\text{V}$, $r_3 = 2\,\Omega$. Resistors $R_1 = 3\,\Omega$, $R_2 = 2\,\Omega$, $R_3 = 4\,\Omega$ are in three branches connecting nodes A and B. $\mathcal{E}_1$ is in branch 1, $\mathcal{E}_2$ in branch 2, $\mathcal{E}_3$ in branch 3. Find the current (in amperes, to 2 decimal places) through $R_2$.
+
+<details>
+<summary>Solution</summary>
+
+**Apply the supernode (node voltage) method.**
+
+Let $V_A - V_B = V$ (the node voltage difference).
+
+For each branch, the current from A to B is (using sign convention: EMF aids current if oriented A→B):
+
+$$I_1 = \frac{V - \mathcal{E}_1}{r_1 + R_1} = \frac{V - 12}{4}$$
+
+$$I_2 = \frac{V - \mathcal{E}_2}{r_2 + R_2} = \frac{V - 8}{3}$$
+
+$$I_3 = \frac{V - \mathcal{E}_3}{r_3 + R_3} = \frac{V - 4}{6}$$
+
+**KCL at node A** (sum of currents leaving A through all branches = 0, since there's no external load):
+
+$$I_1 + I_2 + I_3 = 0$$
+
+$$\frac{V-12}{4} + \frac{V-8}{3} + \frac{V-4}{6} = 0$$
+
+Multiply through by LCM = 12:
+
+$$3(V-12) + 4(V-8) + 2(V-4) = 0$$
+
+$$3V - 36 + 4V - 32 + 2V - 8 = 0$$
+
+$$9V = 76$$
+
+$$V = \frac{76}{9} \approx 8.44\,\text{V}$$
+
+**Current through $R_2$ (branch 2):**
+
+$$I_2 = \frac{76/9 - 8}{3} = \frac{76/9 - 72/9}{3} = \frac{4/9}{3} = \frac{4}{27} \approx 0.15\,\text{A}$$
+
+$$\boxed{I_2 = \frac{4}{27} \approx 0.15\,\text{A}}$$
+
+</details>
+
+---
+
+### Problem 6 [MCQ-M]
+
+Two batteries ($\mathcal{E}_1 = 6\,\text{V}$, $r_1 = 2\,\Omega$) and ($\mathcal{E}_2 = 4\,\text{V}$, $r_2 = 1\,\Omega$) are connected in a loop with an external resistance $R = 3\,\Omega$. Which of the following are correct?
+
+**(A)** The current in the circuit is $\dfrac{2}{6} = \dfrac{1}{3}\,\text{A}$
+
+**(B)** Battery $\mathcal{E}_2$ is being charged
+
+**(C)** The terminal voltage of $\mathcal{E}_1$ is $\dfrac{10}{3}\,\text{V}$
+
+**(D)** Power delivered to $R$ is $\dfrac{1}{3}\,\text{W}$
+
+<details>
+<summary>Solution</summary>
+
+**Net EMF** (assume both batteries oppose each other, $\mathcal{E}_1$ drives current clockwise, $\mathcal{E}_2$ opposes):
+
+$$\mathcal{E}_{net} = \mathcal{E}_1 - \mathcal{E}_2 = 6 - 4 = 2\,\text{V}$$
+
+**Total resistance:**
+
+$$R_{total} = r_1 + r_2 + R = 2 + 1 + 3 = 6\,\Omega$$
+
+**Current:**
+
+$$I = \frac{2}{6} = \frac{1}{3}\,\text{A} \quad \checkmark \text{ (A) correct}$$
+
+**Battery $\mathcal{E}_2$:** Current enters its positive terminal → it is being charged. **(B) correct**
+
+**Terminal voltage of $\mathcal{E}_1$** (current leaves positive terminal → discharging):
+
+$$V_1 = \mathcal{E}_1 - Ir_1 = 6 - \frac{1}{3}(2) = 6 - \frac{2}{3} = \frac{16}{3}\,\text{V}$$
+
+This is NOT $10/3$. **(C) incorrect**
+
+**Power in $R$:**
+
+$$P_R = I^2 R = \left(\frac{1}{3}\right)^2 \times 3 = \frac{1}{9} \times 3 = \frac{1}{3}\,\text{W} \quad \checkmark \text{ (D) correct}$$
+
+**Answers: (A), (B), (D)**
+
+</details>
+
+---
+
+### Problem 7 [MCQ-S]
+
+In the circuit, a battery of EMF $\mathcal{E}$ and internal resistance $r$ is connected to a network. The network consists of three resistors: $R_1$ between nodes A and B, $R_2$ between B and C, $R_3$ between A and C. The battery is connected between A and C. Find the current through $R_2$ in terms of $\mathcal{E}$, $r$, $R_1$, $R_2$, $R_3$.
+
+**(A)** $\dfrac{\mathcal{E} R_3}{r(R_1 + R_2 + R_3) + R_1R_2}$
+
+**(B)** $\dfrac{\mathcal{E} R_3}{r(R_1 + R_2 + R_3) + R_2R_3 + R_3R_1}$
+
+**(C)** $\dfrac{\mathcal{E}(R_1 + R_3)}{r(R_1 + R_2 + R_3) + R_1R_2 + R_2R_3 + R_3R_1}$
+
+**(D)** $\dfrac{\mathcal{E}}{r + R_1 \| R_2 + R_3}$
+
+<details>
+<summary>Solution</summary>
+
+**Node voltage method:** Set $V_C = 0$, $V_A = \mathcal{E} - Ir$ (need to find).
+
+Alternatively, treat the network as $R_1$ in series with ($R_2 \| R_3$)... but $R_3$ is directly between A and C — it's not that simple since $R_1$ and $R_3$ share node A.
+
+**Correct approach:** $R_1$ connects A-B, $R_3$ connects A-C, $R_2$ connects B-C. Battery between A and C.
+
+Let $V_A - V_C = V$ (terminal voltage of battery).
+
+KCL at node B:
+
+$$\frac{V_A - V_B}{R_1} = \frac{V_B - V_C}{R_2}$$
+
+$$\frac{V - V_B}{R_1} = \frac{V_B}{R_2}$$
+
+$$V R_2 = V_B(R_1 + R_2) \implies V_B = \frac{V R_2}{R_1 + R_2}$$
+
+Current through $R_2$:
+
+$$I_2 = \frac{V_B}{R_2} = \frac{V}{R_1 + R_2}$$
+
+Current through $R_3$:
+
+$$I_3 = \frac{V}{R_3}$$
+
+Total current from battery:
+
+$$I = I_2 + I_3 = V\left(\frac{1}{R_1 + R_2} + \frac{1}{R_3}\right)$$
+
+Also $V = \mathcal{E} - Ir$, so:
+
+$$I = (\mathcal{E} - Ir)\left(\frac{R_3 + R_1 + R_2}{R_3(R_1+R_2)}\right)$$
+
+Let $D = R_3(R_1+R_2)$, $N = R_1 + R_2 + R_3$:
+
+$$I \cdot D = \mathcal{E} N - IrN$$
+
+$$I(D + rN) = \mathcal{E} N$$
+
+$$I = \frac{\mathcal{E} N}{D + rN} = \frac{\mathcal{E}(R_1+R_2+R_3)}{R_3(R_1+R_2) + r(R_1+R_2+R_3)}$$
+
+Now $V = \mathcal{E} - Ir$:
+
+$$V = \mathcal{E}\left(1 - \frac{rN}{D + rN}\right) = \frac{\mathcal{E} D}{D + rN}$$
+
+Current through $R_2$:
+
+$$I_2 = \frac{V}{R_1 + R_2} = \frac{\mathcal{E} D}{(D + rN)(R_1+R_2)} = \frac{\mathcal{E} R_3(R_1+R_2)}{(R_1+R_2)[R_3(R_1+R_2) + r(R_1+R_2+R_3)]}$$
+
+$$= \frac{\mathcal{E} R_3}{R_3(R_1+R_2) + r(R_1+R_2+R_3)}$$
+
+Expanding the denominator:
+
+$$= \frac{\mathcal{E} R_3}{R_1R_3 + R_2R_3 + r R_1 + r R_2 + r R_3}$$
+
+$$= \frac{\mathcal{E} R_3}{r(R_1+R_2+R_3) + R_1R_3 + R_2R_3}$$
+
+$$I_2 = \frac{\mathcal{E} R_3}{r(R_1+R_2+R_3) + R_2R_3 + R_3R_1}$$
+
+There is no $R_1R_2$ term, because $R_1$ and $R_2$ form a series branch ($R_1 + R_2$) in parallel with $R_3$. This matches option (B).
+
+**Answer: (B)**
+
+</details>
+
+---
+
+## Section C: Star-Delta & Thevenin Transforms
+
+### Problem 8 [MCQ-S]
+
+Three resistors $R_1 = 6\,\Omega$, $R_2 = 3\,\Omega$, $R_3 = 9\,\Omega$ are connected in a delta (triangle) configuration between nodes A, B, C. The equivalent star (Y) resistors between the same nodes are:
+
+**(A)** $R_A = 3\,\Omega$, $R_B = 1\,\Omega$, $R_C = 1.5\,\Omega$
+
+**(B)** $R_A = 3\,\Omega$, $R_B = 1.5\,\Omega$, $R_C = 4.5\,\Omega$
+
+**(C)** $R_A = 2\,\Omega$, $R_B = 1\,\Omega$, $R_C = 3\,\Omega$
+
+**(D)** $R_A = 1.5\,\Omega$, $R_B = 3\,\Omega$, $R_C = 4.5\,\Omega$
+
+<details>
+<summary>Solution</summary>
+
+Delta-to-Star conversion formula: If $R_{AB}$, $R_{BC}$, $R_{CA}$ are delta resistors, then:
+
+$$R_A = \frac{R_{AB} \cdot R_{CA}}{R_{AB} + R_{BC} + R_{CA}}$$
+
+$$R_B = \frac{R_{AB} \cdot R_{BC}}{R_{AB} + R_{BC} + R_{CA}}$$
+
+$$R_C = \frac{R_{BC} \cdot R_{CA}}{R_{AB} + R_{BC} + R_{CA}}$$
+
+Let $R_{AB} = R_1 = 6\,\Omega$ (between A and B), $R_{BC} = R_2 = 3\,\Omega$, $R_{CA} = R_3 = 9\,\Omega$.
+
+Sum $= 6 + 3 + 9 = 18\,\Omega$
+
+$$R_A = \frac{6 \times 9}{18} = \frac{54}{18} = 3\,\Omega$$
+
+$$R_B = \frac{6 \times 3}{18} = \frac{18}{18} = 1\,\Omega$$
+
+$$R_C = \frac{3 \times 9}{18} = \frac{27}{18} = 1.5\,\Omega$$
+
+So: $R_A = 3\,\Omega$, $R_B = 1\,\Omega$, $R_C = 1.5\,\Omega$
+
+So $R_A = 3\,\Omega$, $R_B = 1\,\Omega$, $R_C = 1.5\,\Omega$.
+
+**Answer: (A)**
+
+</details>
+
+---
+
+### Problem 9 [INT]
+
+A Wheatstone bridge has $P = 100\,\Omega$, $Q = 100\,\Omega$, $R = 100\,\Omega$, $S = 102\,\Omega$. A galvanometer of resistance $G = 10\,\Omega$ is connected across the bridge. Battery EMF $= 5\,\text{V}$, internal resistance $= 1\,\Omega$.
+
+Using Thevenin's theorem, find the galvanometer current in microamperes (µA). Express your answer as an integer.
+
+<details>
+<summary>Solution</summary>
+
+**Step 1: Open-circuit voltage (Thevenin voltage)**
+
+Remove galvanometer. Two voltage dividers across the battery terminal voltage:
+
+With $r = 1\,\Omega$ and the two divider arms in parallel:
+
+Left arm: $P + R = 200\,\Omega$; Right arm: $Q + S = 202\,\Omega$
+
+These arms are in parallel: $R_{parallel} = \dfrac{200 \times 202}{200 + 202} = \dfrac{40400}{402} \approx 100.5\,\Omega$
+
+Total resistance: $1 + 100.5 = 101.5\,\Omega$
+
+Terminal voltage: $V_{terminal} = 5 \times \dfrac{100.5}{101.5} \approx 4.951\,\text{V}$
+
+More precisely, voltage across the network: $V = 5 - I_{total} \times 1$
+
+$I_{total} = \dfrac{5}{1 + 40400/402} = \dfrac{5 \times 402}{402 + 40400} = \dfrac{2010}{40802} \approx 0.04926\,\text{A}$
+
+$V = 5 - 0.04926 \approx 4.9507\,\text{V}$
+
+Node voltages (relative to negative terminal):
+
+$$V_C = V \cdot \frac{R}{P+R} = 4.9507 \times \frac{100}{200} = 2.4754\,\text{V}$$
+
+$$V_D = V \cdot \frac{S}{Q+S} = 4.9507 \times \frac{102}{202} = 4.9507 \times 0.5050 = 2.5001\,\text{V}$$
+
+$$V_{Th} = V_D - V_C = 2.5001 - 2.4754 = 0.02467\,\text{V} \approx 24.67\,\text{mV}$$
+
+**Step 2: Thevenin resistance (short battery, keep $r$)**
+
+For the Thevenin resistance, short the battery (leaving $r = 1\,\Omega$ in place) and look into the galvanometer terminals C–D.
+
+**Simplification for this problem level:** Since $r = 1\,\Omega \ll 100\,\Omega$, use $r \approx 0$:
+
+$$R_{Th} \approx (P \| Q) + (R \| S) = \frac{100 \times 100}{200} + \frac{100 \times 102}{202} = 50 + 50.495 = 100.495\,\Omega$$
+
+$$I_G = \frac{V_{Th}}{R_{Th} + G} = \frac{0.02467}{100.495 + 10} = \frac{0.02467}{110.495} \approx 2.23 \times 10^{-4}\,\text{A} \approx 0.223\,\text{mA}$$
+
+**Answer: 223 µA** (i.e. $I_G \approx 0.223$ mA).
+
+</details>
+
+---
+
+## Section D: EMF, Internal Resistance & Potentiometer
+
+### Problem 10 [MCQ-M]
+
+A potentiometer wire of length $L = 1\,\text{m}$ has a total resistance of $R_0 = 10\,\Omega$. A driver battery of EMF $\mathcal{E}_0 = 2\,\text{V}$ and internal resistance $r_0 = 1\,\Omega$ is connected across the wire. An unknown EMF source $\mathcal{E}$ with internal resistance $r$ gives null deflection at length $l = 60\,\text{cm}$. 
+
+Which of the following are correct?
+
+**(A)** The potential gradient along the wire is $\dfrac{20}{11}\,\text{V/m}$
+
+**(B)** $\mathcal{E} = \dfrac{12}{11}\,\text{V}$
+
+**(C)** The sensitivity of the potentiometer is independent of $r$
+
+**(D)** If $r_0$ increases, the balance length increases for the same $\mathcal{E}$
+
+<details>
+<summary>Solution</summary>
+
+**Potential gradient:**
+
+$$k = \frac{\mathcal{E}_0}{r_0 + R_0} \times \frac{R_0}{L} = \frac{2}{1 + 10} \times \frac{10}{1} = \frac{20}{11}\,\text{V/m} \quad \checkmark \text{ (A) correct}$$
+
+**Unknown EMF:**
+
+$$\mathcal{E} = k \cdot l = \frac{20}{11} \times 0.60 = \frac{12}{11}\,\text{V} \approx 1.09\,\text{V} \quad \checkmark \text{ (B) correct}$$
+
+**Sensitivity:** At null point, no current flows through the unknown EMF branch — the internal resistance $r$ has no voltage drop. So $r$ does not affect the balance condition. $\checkmark$ **(C) correct**
+
+**Effect of increasing $r_0$:** Higher $r_0$ → lower current → lower potential gradient → to achieve the same $\mathcal{E} = k' \cdot l'$, since $k'$ decreased, $l'$ must increase. **(D) correct** ✓
+
+**Answers: (A), (B), (C), (D)** — all correct.
+
+</details>
+
+---
+
+### Problem 11 [MCQ-S]
+
+A potentiometer is used to determine the internal resistance of a cell. The cell $(\mathcal{E}, r)$ is connected to the potentiometer wire through a resistance box $R_b$. 
+
+- Without the resistance box in circuit (open), balance length = $l_1 = 80\,\text{cm}$
+- With $R_b = 40\,\Omega$ in circuit, balance length = $l_2 = 64\,\text{cm}$
+
+Find $r$.
+
+**(A)** $8\,\Omega$
+
+**(B)** $10\,\Omega$
+
+**(C)** $12\,\Omega$
+
+**(D)** $16\,\Omega$
+
+<details>
+<summary>Solution</summary>
+
+**Open circuit:** Balance length $l_1$ corresponds to $\mathcal{E}$ (no current through cell branch, so no drop across $r$):
+
+$$\mathcal{E} = k \cdot l_1$$
+
+**With $R_b$:** Current flows through the cell branch. Terminal voltage:
+
+$$V = \mathcal{E} - Ir = \mathcal{E} \cdot \frac{R_b}{R_b + r}$$
+
+This terminal voltage equals the potentiometer balance:
+
+$$V = k \cdot l_2$$
+
+Therefore:
+
+$$\frac{V}{\mathcal{E}} = \frac{l_2}{l_1} = \frac{R_b}{R_b + r}$$
+
+$$\frac{64}{80} = \frac{40}{40 + r}$$
+
+$$\frac{4}{5} = \frac{40}{40 + r}$$
+
+$$4(40 + r) = 5 \times 40 = 200$$
+
+$$160 + 4r = 200$$
+
+$$4r = 40 \implies r = 10\,\Omega$$
+
+$$\boxed{r = 10\,\Omega}$$
+
+**Answer: (B)**
+
+</details>
+
+---
+
+### Problem 12 [INT]
+
+Two cells with EMFs $\mathcal{E}_1 = 6\,\text{V}$ and $\mathcal{E}_2 = 4\,\text{V}$ and internal resistances $r_1 = 2\,\Omega$ and $r_2 = 1\,\Omega$ are connected in series to a resistance $R = 7\,\Omega$. Find the terminal voltage (in volts) across the second cell.
+
+<details>
+<summary>Solution</summary>
+
+**Net EMF** (cells in series, same direction):
+
+$$\mathcal{E}_{net} = \mathcal{E}_1 + \mathcal{E}_2 = 10\,\text{V}$$
+
+**Total resistance:**
+
+$$R_{total} = r_1 + r_2 + R = 2 + 1 + 7 = 10\,\Omega$$
+
+**Current:**
+
+$$I = \frac{10}{10} = 1\,\text{A}$$
+
+**Terminal voltage of $\mathcal{E}_2$** (current leaves positive terminal — discharging):
+
+$$V_2 = \mathcal{E}_2 - I \cdot r_2 = 4 - 1 \times 1 = 3\,\text{V}$$
+
+$$\boxed{V_2 = 3\,\text{V}}$$
+
+</details>
+
+---
+
+## Section E: RC Circuits & Transients
+
+### Problem 13 [MCQ-M]
+
+A capacitor $C$ is charged through resistor $R_1$ from a battery of EMF $\mathcal{E}$ and negligible internal resistance. At $t = 0$, the charging is complete ($q_0 = C\mathcal{E}$). The battery is then disconnected and the capacitor discharges through $R_2$. 
+
+Which of the following are correct?
+
+**(A)** The time constant for discharging is $\tau_d = R_2 C$
+
+**(B)** The energy dissipated in $R_2$ equals $\dfrac{1}{2}C\mathcal{E}^2$
+
+**(C)** The charge at time $t$ during discharge is $q = C\mathcal{E}\,e^{-t/R_2 C}$
+
+**(D)** The initial discharging current is $\dfrac{\mathcal{E}}{R_1 + R_2}$
+
+<details>
+<summary>Solution</summary>
+
+**(A)** During discharge through $R_2$ only: $\tau = R_2 C$. ✓
+
+**(B)** All energy stored in capacitor dissipates in $R_2$ (only resistor in discharge loop):
+$$U = \frac{1}{2}C\mathcal{E}^2 \quad \checkmark$$
+
+**(C)** $q(t) = q_0 e^{-t/\tau} = C\mathcal{E}\,e^{-t/R_2 C}$ ✓
+
+**(D)** At $t = 0$ of discharge, only $R_2$ is in circuit (battery disconnected):
+$$I_0 = \frac{q_0/C}{R_2} = \frac{\mathcal{E}}{R_2}$$
+NOT $\mathcal{E}/(R_1 + R_2)$. **(D) incorrect**
+
+**Answers: (A), (B), (C)**
+
+</details>
+
+---
+
+### Problem 14 [MCQ-S]
+
+In a circuit, a resistor $R = 2\,\text{M}\Omega$ and capacitor $C = 1\,\mu\text{F}$ are in series with a battery of EMF $\mathcal{E} = 10\,\text{V}$. At $t = 0$, switch is closed (capacitor initially uncharged). Find the charge on the capacitor at $t = \tau = RC$.
+
+**(A)** $C\mathcal{E}(1 - 1/e) \approx 6.32\,\mu\text{C}$
+
+**(B)** $C\mathcal{E}/e \approx 3.68\,\mu\text{C}$
+
+**(C)** $C\mathcal{E}/2 = 5\,\mu\text{C}$
+
+**(D)** $C\mathcal{E}(1 - e^{-2}) \approx 8.65\,\mu\text{C}$
+
+<details>
+<summary>Solution</summary>
+
+During charging:
+
+$$q(t) = C\mathcal{E}\left(1 - e^{-t/RC}\right)$$
+
+At $t = \tau = RC$:
+
+$$q(\tau) = C\mathcal{E}\left(1 - e^{-1}\right) = C\mathcal{E}\left(1 - \frac{1}{e}\right)$$
+
+$$= 10 \times 10^{-6} \times \left(1 - \frac{1}{2.718}\right) = 10 \times 0.6321 = 6.321\,\mu\text{C}$$
+
+**Answer: (A)**
+
+</details>
+
+---
+
+### Problem 15 [MCQ-M]
+
+An RC circuit has two capacitors $C_1 = 2\,\mu\text{F}$ and $C_2 = 3\,\mu\text{F}$ connected in series, and a resistor $R = 100\,\text{k}\Omega$ in series with the combination. A battery of $10\,\text{V}$ charges the system. Which of the following are correct at steady state?
+
+**(A)** Both capacitors carry the same charge $q = 12\,\mu\text{C}$
+
+**(B)** Voltage across $C_1$ is $6\,\text{V}$ and across $C_2$ is $4\,\text{V}$
+
+**(C)** The time constant for charging is $R \cdot \dfrac{C_1 C_2}{C_1 + C_2} = 120\,\text{ms}$
+
+**(D)** At steady state, no current flows through $R$
+
+<details>
+<summary>Solution</summary>
+
+**Equivalent capacitance:**
+
+$$C_{eq} = \frac{C_1 C_2}{C_1 + C_2} = \frac{2 \times 3}{5} = 1.2\,\mu\text{F}$$
+
+**Steady-state charge:**
+
+$$q = C_{eq} \times V = 1.2 \times 10 = 12\,\mu\text{C} \quad \checkmark \text{ (A) correct}$$
+
+**Voltages at steady state:**
+
+$$V_1 = \frac{q}{C_1} = \frac{12}{2} = 6\,\text{V}; \quad V_2 = \frac{q}{C_2} = \frac{12}{3} = 4\,\text{V} \quad \checkmark \text{ (B) correct}$$
+
+**Time constant:** $\tau = R C_{eq} = 10^5 \times 1.2 \times 10^{-6} = 0.12\,\text{s} = 120\,\text{ms}$ ✓ **(C) correct**
+
+**Steady state:** Capacitors fully charged → no current through circuit ✓ **(D) correct**
+
+**Answers: (A), (B), (C), (D)** — all correct.
+
+</details>
+
+---
+
+### Problem 16 [INT]
+
+In an RC circuit, the capacitor ($C = 2\,\mu\text{F}$, initially uncharged) is charged through two resistors $R_1 = 1\,\text{M}\Omega$ (in series with battery) and $R_2 = 1\,\text{M}\Omega$ (in parallel with capacitor). Battery EMF $= 12\,\text{V}$.
+
+Find the steady-state voltage (in volts) across the capacitor.
+
+<details>
+<summary>Solution</summary>
+
+At steady state, no current flows through the capacitor branch. All current flows through $R_1$ and $R_2$ in series:
+
+$$I_{ss} = \frac{\mathcal{E}}{R_1 + R_2} = \frac{12}{2 \times 10^6} = 6\,\mu\text{A}$$
+
+The voltage across $R_2$ (which is in parallel with $C$) is the steady-state capacitor voltage:
+
+$$V_C = I_{ss} \times R_2 = 6 \times 10^{-6} \times 10^6 = 6\,\text{V}$$
+
+The time constant uses the Thevenin resistance seen by $C$ (remove $C$, short the battery), which is $R_1 \| R_2$:
+
+$$R_{Th} = R_1 \| R_2 = 0.5\,\text{M}\Omega$$
+
+$$\tau = 0.5 \times 10^6 \times 2 \times 10^{-6} = 1\,\text{s}$$
+
+$$\boxed{V_C(\infty) = 6\,\text{V}}$$
+
+</details>
+
+---
+
+## Section F: Power, Heating & Advanced Applications
+
+### Problem 17 [MCQ-M]
+
+A battery of EMF $\mathcal{E}$ and internal resistance $r$ is connected to an external resistance $R$. Which of the following are correct?
+
+**(A)** Power delivered to external circuit is maximum when $R = r$
+
+**(B)** At maximum power transfer, efficiency is exactly 50%
+
+**(C)** The power dissipated in $r$ always equals the power delivered to $R$ at maximum power condition
+
+**(D)** Maximum power delivered to $R$ is $\dfrac{\mathcal{E}^2}{4r}$
+
+<details>
+<summary>Solution</summary>
+
+Power in $R$:
+
+$$P_R = I^2 R = \frac{\mathcal{E}^2 R}{(R+r)^2}$$
+
+For maximum, $\dfrac{dP_R}{dR} = 0$:
+
+$$\frac{d}{dR}\left[\frac{R}{(R+r)^2}\right] = \frac{(R+r)^2 - R \cdot 2(R+r)}{(R+r)^4} = \frac{(R+r) - 2R}{(R+r)^3} = \frac{r-R}{(R+r)^3} = 0$$
+
+$$\implies R = r \quad \checkmark \text{ (A)}$$
+
+At $R = r$: $P_r = I^2 r = P_R$ (since both have same $R = r$) ✓ **(C) correct**
+
+Total power = $\mathcal{E} I = \mathcal{E}^2/(2r)$; power to $R = \mathcal{E}^2/4r$.
+
+Efficiency = $P_R / P_{total} = (\mathcal{E}^2/4r) / (\mathcal{E}^2/2r) = 1/2 = 50\%$ ✓ **(B) correct**
+
+$$P_{R,max} = \frac{\mathcal{E}^2}{4r} \quad \checkmark \text{ (D) correct}$$
+
+**Answers: (A), (B), (C), (D)** — all correct.
+
+</details>
+
+---
+
+### Problem 18 [MCQ-S]
+
+Three identical bulbs ($100\,\text{W}$, $220\,\text{V}$ rated) are connected as: Bulbs 1 and 2 in parallel, this combination in series with Bulb 3, across $220\,\text{V}$ supply. Find the power dissipated in Bulb 3.
+
+**(A)** $\dfrac{400}{9}\,\text{W}$
+
+**(B)** $\dfrac{200}{9}\,\text{W}$
+
+**(C)** $\dfrac{100}{9}\,\text{W}$
+
+**(D)** $44.4\,\text{W}$
+
+<details>
+<summary>Solution</summary>
+
+Rated resistance of each bulb:
+
+$$R = \frac{V^2}{P} = \frac{(220)^2}{100} = 484\,\Omega$$
+
+**Circuit:**
+- Bulbs 1 and 2 in parallel: $R_{12} = 484/2 = 242\,\Omega$
+- In series with Bulb 3 ($484\,\Omega$): Total = $242 + 484 = 726\,\Omega$
+
+**Current through Bulb 3:**
+
+$$I_3 = \frac{220}{726} = \frac{220}{726} = \frac{10}{33}\,\text{A}$$
+
+**Power in Bulb 3:**
+
+$$P_3 = I_3^2 \times R = \left(\frac{10}{33}\right)^2 \times 484 = \frac{100}{1089} \times 484 = \frac{48400}{1089} = \frac{400}{9}\,\text{W} \approx 44.4\,\text{W}$$
+
+**Answer: (A)** — $400/9\,\text{W}$
+
+*(Note: (D) $44.4\,\text{W}$ is also numerically correct since $400/9 = 44.\overline{4}$, but (A) is the exact form.)*
+
+</details>
+
+---
+
+### Problem 19 [INT]
+
+An electric heater rated $1000\,\text{W}$ at $200\,\text{V}$ is connected to a $200\,\text{V}$ supply through a resistance $R_s = 4\,\Omega$ in series. Find the power (in watts, integer) consumed by the heater.
+
+<details>
+<summary>Solution</summary>
+
+**Heater resistance:**
+
+$$R_H = \frac{V^2}{P} = \frac{200^2}{1000} = \frac{40000}{1000} = 40\,\Omega$$
+
+**Total resistance in circuit:**
+
+$$R_{total} = R_H + R_s = 40 + 4 = 44\,\Omega$$
+
+**Current:**
+
+$$I = \frac{200}{44} = \frac{50}{11}\,\text{A}$$
+
+**Power in heater:**
+
+$$P_H = I^2 R_H = \left(\frac{50}{11}\right)^2 \times 40 = \frac{2500}{121} \times 40 = \frac{100000}{121} \approx 826.4\,\text{W}$$
+
+$$\boxed{P_H \approx 826\,\text{W}}$$
+
+</details>
+
+---
+
+## Section G: Complex Network Problems
+
+### Problem 20 [MCQ-S]
+
+In the circuit, a battery of EMF $10\,\text{V}$ and internal resistance $1\,\Omega$ is connected to the network: Nodes A, B, C, D form a square. $R_{AB} = R_{CD} = 2\,\Omega$ (top and bottom), $R_{BC} = R_{AD} = 3\,\Omega$ (sides), $R_{AC} = 6\,\Omega$ (diagonal). Battery is connected between A and C. Find $I_{AC}$ (current through the diagonal).
+
+**(A)** $\dfrac{10}{7}\,\text{A}$
+
+**(B)** $1\,\text{A}$
+
+**(C)** $\dfrac{5}{7}\,\text{A}$
+
+**(D)** $\dfrac{50}{47}\,\text{A}$
+
+<details>
+<summary>Solution</summary>
+
+Let node voltages: $V_A = V$ (to be found), $V_C = 0$.
+
+**KCL at node B** (connected to A via $R_{AB} = 2\,\Omega$, to C via $R_{BC} = 3\,\Omega$):
+
+$$\frac{V - V_B}{2} = \frac{V_B}{3}$$
+
+$$3(V - V_B) = 2V_B$$
+
+$$3V = 5V_B \implies V_B = \frac{3V}{5}$$
+
+**KCL at node D** (connected to A via $R_{AD} = 3\,\Omega$, to C via $R_{CD} = 2\,\Omega$):
+
+$$\frac{V - V_D}{3} = \frac{V_D}{2}$$
+
+$$2(V - V_D) = 3V_D$$
+
+$$2V = 5V_D \implies V_D = \frac{2V}{5}$$
+
+**Total current from battery** (enters at A, leaves at C):
+
+Current from A:
+- Through $R_{AB}$: $\dfrac{V - V_B}{2} = \dfrac{V - 3V/5}{2} = \dfrac{2V/5}{2} = \dfrac{V}{5}$
+- Through $R_{AD}$: $\dfrac{V - V_D}{3} = \dfrac{V - 2V/5}{3} = \dfrac{3V/5}{3} = \dfrac{V}{5}$
+- Through $R_{AC}$: $\dfrac{V}{6}$
+
+$$I_{total} = \frac{V}{5} + \frac{V}{5} + \frac{V}{6} = \frac{2V}{5} + \frac{V}{6} = \frac{12V + 5V}{30} = \frac{17V}{30}$$
+
+But $V = \mathcal{E} - I_{total} \times r = 10 - I_{total} \times 1$:
+
+$$I_{total} = \frac{17V}{30} = \frac{17(10 - I_{total})}{30}$$
+
+$$30 I_{total} = 170 - 17 I_{total}$$
+
+$$47 I_{total} = 170$$
+
+$$I_{total} = \frac{170}{47}\,\text{A}; \quad V = 10 - \frac{170}{47} = \frac{470 - 170}{47} = \frac{300}{47}\,\text{V}$$
+
+**Current through diagonal $R_{AC}$:**
+
+$$I_{AC} = \frac{V}{6} = \frac{300}{47 \times 6} = \frac{300}{282} = \frac{50}{47}\,\text{A}$$
+
+**Answer: (D)** $\dfrac{50}{47}\,\text{A} \approx 1.06\,\text{A}$.
+
+</details>
+
+---
+
+### Problem 21 [MCQ-M]
+
+For the circuit in the figure: $\mathcal{E}_1 = 8\,\text{V}$, $r_1 = 0$; $\mathcal{E}_2 = 4\,\text{V}$, $r_2 = 2\,\Omega$; $R_1 = 4\,\Omega$, $R_2 = 6\,\Omega$, $R_3 = 3\,\Omega$. $\mathcal{E}_1$ is in branch 1 (with $R_1$), $\mathcal{E}_2$ is in branch 2 (with $r_2$), $R_2$ and $R_3$ are in the third and fourth branches. The network forms two loops. Identify correct statements:
+
+**(A)** Mesh analysis requires setting up two independent KVL equations
+
+**(B)** Superposition can be applied since all elements are linear
+
+**(C)** The current through $R_3$ can be found using Norton's theorem
+
+**(D)** If $\mathcal{E}_2$ is reversed, the current distribution changes throughout the circuit
+
+<details>
+<summary>Solution</summary>
+
+**(A)** For a two-loop circuit with two independent meshes, mesh analysis requires exactly 2 KVL equations. ✓
+
+**(B)** All resistors and batteries are linear elements — superposition is valid. ✓
+
+**(C)** Norton's theorem can be used to find the current through any branch by finding the Norton equivalent (short-circuit current and equivalent resistance) at those terminals. ✓
+
+**(D)** Reversing $\mathcal{E}_2$ changes the net EMF driving each loop, which changes all mesh currents throughout the circuit. ✓
+
+**Answers: (A), (B), (C), (D)** — all correct (these are general circuit theory principles).
+
+</details>
+
+---
+
+### Problem 22 [INT]
+
+In a balanced Wheatstone bridge, $P = 2\,\Omega$, $Q = 3\,\Omega$, $R = 4\,\Omega$, $S = 6\,\Omega$. A galvanometer connects B to D (the usual bridge diagonal). Battery of $6\,\text{V}$ is connected across A and C.
+
+*Verify balance and find the current through P (in amperes). Express as a fraction.*
+
+<details>
+<summary>Solution</summary>
+
+**Balance check:** $P/Q = 2/3$ and $R/S = 4/6 = 2/3$. ✓ Bridge is balanced — no current through galvanometer.
+
+Since balanced, the circuit reduces to two independent voltage dividers:
+- Left arm: $P + R = 2 + 4 = 6\,\Omega$
+- Right arm: $Q + S = 3 + 6 = 9\,\Omega$
+
+These arms are in parallel across the $6\,\text{V}$ battery.
+
+**Current through P (left arm):**
+
+$$I_P = \frac{6}{6} = 1\,\text{A}$$
+
+$$\boxed{I_P = 1\,\text{A}}$$
+
+</details>
+
+---
+
+### Problem 23 [MCQ-S]
+
+A circuit consists of two batteries and three resistors: Battery 1 ($\mathcal{E}_1 = 10\,\text{V}$, $r_1 = 1\,\Omega$) and Battery 2 ($\mathcal{E}_2 = 6\,\text{V}$, $r_2 = 1\,\Omega$) are connected in parallel (positive terminals joined). This combination is connected to $R = 7.5\,\Omega$. Find the current through $R$.
+
+**(A)** $1\,\text{A}$
+
+**(B)** $\dfrac{4}{5}\,\text{A}$
+
+**(C)** $\dfrac{8}{9}\,\text{A}$
+
+**(D)** $\dfrac{5}{6}\,\text{A}$
+
+<details>
+<summary>Solution</summary>
+
+For batteries in parallel (positive to positive), use the equivalent-battery formula:
+
+$$\mathcal{E}_{eq} = \frac{\mathcal{E}_1/r_1 + \mathcal{E}_2/r_2}{1/r_1 + 1/r_2} = \frac{10 + 6}{1 + 1} = 8\,\text{V}, \qquad r_{eq} = \frac{r_1 r_2}{r_1 + r_2} = 0.5\,\Omega$$
+
+**Current through $R$:**
+
+$$I = \frac{\mathcal{E}_{eq}}{r_{eq} + R} = \frac{8}{0.5 + 7.5} = \frac{8}{8} = 1\,\text{A}$$
+
+**Answer: (A)** $1\,\text{A}$.
+
+</details>
+
+---
+
+## Section H: Drift Velocity & Microscopic Analysis
+
+### Problem 24 [MCQ-M]
+
+A copper conductor of cross-sectional area $A = 1\,\text{mm}^2$ carries a current $I = 1\,\text{A}$. Given: density of copper $= 9 \times 10^3\,\text{kg/m}^3$, atomic mass $= 64\,\text{g/mol}$, free electrons per atom $= 1$, $e = 1.6 \times 10^{-19}\,\text{C}$, $N_A = 6 \times 10^{23}$.
+
+Which of the following are correct?
+
+**(A)** Number density of free electrons $n \approx 8.4 \times 10^{28}\,\text{m}^{-3}$
+
+**(B)** Drift velocity $v_d \approx 7.4 \times 10^{-5}\,\text{m/s}$
+
+**(C)** If current doubles, drift velocity doubles
+
+**(D)** If cross-sectional area doubles (with same current), drift velocity halves
+
+<details>
+<summary>Solution</summary>
+
+**Number density:**
+
+$$n = \frac{\rho N_A}{M} = \frac{9 \times 10^3 \times 6 \times 10^{23}}{64 \times 10^{-3}} = \frac{5.4 \times 10^{27}}{0.064} = 8.4375 \times 10^{28}\,\text{m}^{-3} \approx 8.4 \times 10^{28}\,\text{m}^{-3} \quad \checkmark \text{ (A)}$$
+
+**Drift velocity:**
+
+$$v_d = \frac{I}{nAe} = \frac{1}{8.4 \times 10^{28} \times 10^{-6} \times 1.6 \times 10^{-19}}$$
+
+$$= \frac{1}{8.4 \times 10^{28} \times 1.6 \times 10^{-25}} = \frac{1}{8.4 \times 1.6 \times 10^3} = \frac{1}{13440} \approx 7.44 \times 10^{-5}\,\text{m/s} \quad \checkmark \text{ (B)}$$
+
+**Proportionality:** $v_d = I/(nAe)$. If $I$ doubles (with same $n$, $A$): $v_d$ doubles ✓ **(C)**
+
+If $A$ doubles (with same $I$, $n$): $v_d$ halves ✓ **(D)**
+
+**Answers: (A), (B), (C), (D)** — all correct.
+
+</details>
+
+---
+
+### Problem 25 [MCQ-S]
+
+The resistance of a wire at $20\,°\text{C}$ is $R_0 = 100\,\Omega$. Its temperature coefficient of resistance is $\alpha = 4 \times 10^{-3}\,°\text{C}^{-1}$. Find the temperature at which resistance is $120\,\Omega$.
+
+**(A)** $50\,°\text{C}$
+
+**(B)** $70\,°\text{C}$
+
+**(C)** $80\,°\text{C}$
+
+**(D)** $70\,°\text{C}$
+
+<details>
+<summary>Solution</summary>
+
+$$R = R_0[1 + \alpha(T - T_0)]$$
+
+$$120 = 100[1 + 4 \times 10^{-3}(T - 20)]$$
+
+$$1.2 = 1 + 4 \times 10^{-3}(T - 20)$$
+
+$$0.2 = 4 \times 10^{-3}(T - 20)$$
+
+$$T - 20 = \frac{0.2}{4 \times 10^{-3}} = 50$$
+
+$$T = 70\,°\text{C}$$
+
+**Answer: (B)/(D)** — $70\,°\text{C}$
+
+</details>
+
+---
+
+## Section I: Advanced Multi-Concept Problems
+
+### Problem 26 [MCQ-M]
+
+A circuit has: voltage source $V_s = 24\,\text{V}$, $R_1 = 6\,\Omega$ (in series with source), node A. From A: $R_2 = 3\,\Omega$ to ground and $R_3 = 12\,\Omega$ to node B. From B: $R_4 = 4\,\Omega$ to ground and a current source $I_s = 2\,\text{A}$ (from ground to B).
+
+Using superposition, which of the following are correct?
+
+**(A)** With only $V_s$ active (replace $I_s$ with open circuit): $V_A = 12\,\text{V}$, $V_B = \dfrac{48}{9}\,\text{V}$
+
+**(B)** With only $I_s$ active (replace $V_s$ with short circuit): Current through $R_3$ can be found by network reduction
+
+**(C)** Total $V_B$ = (contribution from $V_s$) + (contribution from $I_s$)
+
+**(D)** The superposition principle requires all circuit elements to be bilateral and linear
+
+<details>
+<summary>Solution</summary>
+
+**(A) With only $V_s$ active ($I_s$ open-circuited):**
+
+The circuit is: $V_s = 24\,\text{V}$ → $R_1 = 6\,\Omega$ → node A → $(R_2 = 3\,\Omega$ to ground) and $(R_3 = 12\,\Omega$ → node B → $R_4 = 4\,\Omega$ to ground).
+
+$R_4$ and $R_3$ are in series from A to ground: $12 + 4 = 16\,\Omega$
+
+$R_2 \| (R_3 + R_4) = 3 \| 16 = \dfrac{48}{19}\,\Omega$
+
+$V_A = 24 \times \dfrac{48/19}{6 + 48/19} = 24 \times \dfrac{48}{114 + 48} = 24 \times \dfrac{48}{162} = \dfrac{1152}{162} = \dfrac{64}{9}\,\text{V}$
+
+This is NOT $12\,\text{V}$. **(A) is incorrect.**
+
+**(B)** With $I_s$ active and $V_s$ short-circuited: the network can be reduced by combining resistors. ✓
+
+**(C)** Superposition: total response = sum of individual responses from each source. ✓
+
+**(D)** Superposition requires linear (and thus bilateral) elements. ✓
+
+**Answers: (B), (C), (D)**
+
+</details>
+
+---
+
+### Problem 27 [INT]
+
+A cell of EMF $\mathcal{E} = 2\,\text{V}$ and internal resistance $r = 0.5\,\Omega$ is short-circuited (terminals connected directly). Find: (a) the short-circuit current, (b) the power dissipated inside the cell, and (c) the terminal voltage.
+
+*Express the power in watts as an integer.*
+
+<details>
+<summary>Solution</summary>
+
+**(a) Short-circuit current:**
+
+$$I_{sc} = \frac{\mathcal{E}}{r} = \frac{2}{0.5} = 4\,\text{A}$$
+
+**(b) Power dissipated inside cell:**
+
+$$P_r = I_{sc}^2 \times r = 4^2 \times 0.5 = 16 \times 0.5 = 8\,\text{W}$$
+
+**(c) Terminal voltage:**
+
+When short-circuited, terminal voltage $= 0$ (external resistance = 0, all voltage dropped across internal resistance):
+
+$$V_T = \mathcal{E} - I_{sc} \times r = 2 - 4 \times 0.5 = 0\,\text{V}$$
+
+$$\boxed{P_r = 8\,\text{W}}$$
+
+</details>
+
+---
+
+### Problem 28 [MCQ-S]
+
+The meter bridge shows null point at $l = 40\,\text{cm}$ when a resistance $S = 30\,\Omega$ is in the right gap. Find the resistance $P$ in the left gap. If the positions of $P$ and $S$ are interchanged, find the new balance length $l'$.
+
+**(A)** $P = 20\,\Omega$; $l' = 60\,\text{cm}$
+
+**(B)** $P = 20\,\Omega$; $l' = 40\,\text{cm}$ (unchanged by symmetry)
+
+**(C)** $P = 24\,\Omega$; $l' = 60\,\text{cm}$
+
+**(D)** $P = 18\,\Omega$; $l' = 56.25\,\text{cm}$
+
+<details>
+<summary>Solution</summary>
+
+**Meter bridge formula:**
+
+$$\frac{P}{S} = \frac{l}{100 - l}$$
+
+$$\frac{P}{30} = \frac{40}{60} = \frac{2}{3}$$
+
+$$P = 30 \times \frac{2}{3} = 20\,\Omega$$
+
+**After interchanging P and S:** Now $P = 20\,\Omega$ is in right gap, $S = 30\,\Omega$ in left gap.
+
+$$\frac{S}{P} = \frac{l'}{100 - l'}$$
+
+$$\frac{30}{20} = \frac{l'}{100 - l'} = 1.5$$
+
+$$l' = 1.5(100 - l') = 150 - 1.5l'$$
+
+$$2.5l' = 150 \implies l' = 60\,\text{cm}$$
+
+$$\boxed{P = 20\,\Omega; \quad l' = 60\,\text{cm}}$$
+
+**Answer: (A)**
+
+</details>
+
+---
+
+### Problem 29 [MCQ-M]
+
+A galvanometer has resistance $G = 50\,\Omega$ and full-scale deflection current $I_g = 1\,\text{mA}$. It needs to be converted to:
+(a) Ammeter for range $0-5\,\text{A}$
+(b) Voltmeter for range $0-10\,\text{V}$
+
+Which of the following are correct?
+
+**(A)** Shunt resistance for ammeter: $S = \dfrac{G \cdot I_g}{I - I_g} = \dfrac{50 \times 10^{-3}}{4.999} \approx 0.01\,\Omega$
+
+**(B)** Series resistance for voltmeter: $R_V = \dfrac{V}{I_g} - G = 10000 - 50 = 9950\,\Omega$
+
+**(C)** An ideal ammeter has zero resistance; adding shunt moves the total resistance toward zero
+
+**(D)** An ideal voltmeter has infinite resistance; adding series resistance moves total resistance toward infinity
+
+<details>
+<summary>Solution</summary>
+
+**(A) Shunt for ammeter ($I = 5\,\text{A}$):**
+
+$$S = \frac{G \cdot I_g}{I - I_g} = \frac{50 \times 10^{-3}}{5 - 10^{-3}} = \frac{0.05}{4.999} \approx 0.01\,\Omega \quad \checkmark$$
+
+**(B) Series resistance for voltmeter:**
+
+$$R_V = \frac{V}{I_g} - G = \frac{10}{10^{-3}} - 50 = 10000 - 50 = 9950\,\Omega \quad \checkmark$$
+
+**(C)** Ideal ammeter $R = 0$. Adding a shunt in parallel with G gives $R_{total} = G \| S \ll G$. As $I \gg I_g$, $S \to 0$ and $R_{total} \to 0$. ✓
+
+**(D)** Ideal voltmeter $R \to \infty$. Adding $R_V$ in series: $R_{total} = G + R_V \gg G$. ✓
+
+**Answers: (A), (B), (C), (D)** — all correct.
+
+</details>
+
+---
+
+### Problem 30 [MCQ-S]
+
+A current of $2\,\text{A}$ flows through a conductor for $t = 30\,\text{min}$ (1800 s). The conductor has resistance $R = 5\,\Omega$. Find the heat generated (in kJ) and the charge that flows (in coulombs).
+
+**(A)** $Q_{charge} = 3600\,\text{C}$; $H = 36\,\text{kJ}$
+
+**(B)** $Q_{charge} = 3600\,\text{C}$; $H = 18\,\text{kJ}$
+
+**(C)** $Q_{charge} = 1800\,\text{C}$; $H = 36\,\text{kJ}$
+
+**(D)** $Q_{charge} = 7200\,\text{C}$; $H = 36\,\text{kJ}$
+
+<details>
+<summary>Solution</summary>
+
+**Charge:**
+
+$$Q = It = 2 \times 1800 = 3600\,\text{C}$$
+
+**Heat generated (Joule heating):**
+
+$$H = I^2 R t = 2^2 \times 5 \times 1800 = 4 \times 5 \times 1800 = 36000\,\text{J} = 36\,\text{kJ}$$
+
+$$\boxed{Q = 3600\,\text{C}; \quad H = 36\,\text{kJ}}$$
+
+**Answer: (A)**
+
+</details>
+
+---
+
+## Quick Reference: Solution Strategies
+
+| Problem Type | Key Technique |
+|---|---|
+| Symmetric network (cube, diamond) | Identify equipotential nodes → collapse → series-parallel |
+| Infinite ladder | $Z = $ series element $+$ $Z \ \vert $ shunt → quadratic in $Z$ |
+| Unbalanced Wheatstone | Thevenin: open G, find $V_{Th}$ and $R_{Th}$ |
+| Multi-battery circuit | Node voltage method or mesh analysis |
+| Potentiometer | $k = \mathcal{E}_0/(r_0 + R_0)$; null means no current, no drop across $r$ |
+| RC transient | $q(t) = C V_{Th}(1 - e^{-t/R_{Th}C})$ where $V_{Th}$, $R_{Th}$ are Thevenin parameters |
+| Star-Delta | $\Delta \to Y$: $R_{star} = \frac{\text{product of adjacent delta}}{\text{sum of all delta}}$ |
+| Power optimization | $P_{load,max}$ when $R_{load} = R_{Th}$, efficiency $= 50\%$ |

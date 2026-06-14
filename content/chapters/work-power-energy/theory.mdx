@@ -1,0 +1,1179 @@
+---
+title: "Work, Power & Energy — Complete Theory"
+description: "The most comprehensive Work, Power & Energy resource for JEE Main, JEE Advanced and NEET. Work–energy theorem, conservative and non-conservative forces, potential energy, mechanical energy conservation, power, collisions, and variable-force problems — from first principles to Olympiad level."
+difficulty: "MEDIUM"
+tags: ["work", "energy", "power", "kinetic-energy", "potential-energy", "conservation-of-energy", "work-energy-theorem", "conservative-forces", "collisions", "elastic", "inelastic", "spring-energy"]
+---
+
+# Work, Power & Energy — Complete Theory
+
+*The most thorough module — built for JEE Main · JEE Advanced · NEET · Physics Olympiad*
+
+---
+
+## SECTION 1 — The Big Picture
+
+---
+
+### 1.1 Why This Chapter Is Central
+
+Newton's laws tell us **how** forces cause acceleration. Work and energy give us a **shortcut** — we can often find speed, height, or compression without ever solving differential equations or drawing free body diagrams at every instant.
+
+The **work–energy theorem** is one of the most powerful tools in classical mechanics. The **conservation of energy** is one of the deepest laws in all of physics — it holds even in quantum mechanics, relativity, and thermodynamics.
+
+At the JEE Advanced level, this chapter fuses with every other topic: circular motion, springs, friction, rotation, and fluids. Mastering it now pays dividends throughout the entire curriculum.
+
+---
+
+### 1.2 Roadmap
+
+| Concept | Key Formula | JEE Relevance |
+|---------|------------|---------------|
+| Work by constant force | $W = \vec{F}\cdot\vec{d} = Fd\cos\theta$ | Very High |
+| Work by variable force | $W = \int \vec{F}\cdot d\vec{r}$ | High |
+| Work–energy theorem | $W_{net} = \Delta KE$ | Very High |
+| Conservative forces & PE | $W_{cons} = -\Delta PE$ | Very High |
+| Mechanical energy conservation | $\Delta KE + \Delta PE = 0$ | Very High |
+| Power | $P = \vec{F}\cdot\vec{v}$ | Medium |
+| Spring energy | $PE = \frac{1}{2}kx^2$ | Very High |
+| Elastic collision | $e = 1$, momentum + KE conserved | High |
+| Inelastic collision | $e < 1$, momentum conserved only | High |
+
+---
+
+## SECTION 2 — Work Done by a Force
+
+---
+
+### 2.1 Work by a Constant Force
+
+Work done by a constant force $\vec{F}$ when the displacement is $\vec{d}$:
+
+<Formula label="Work by Constant Force">
+$$W = \vec{F} \cdot \vec{d} = Fd\cos\theta$$
+
+where $\theta$ is the angle between $\vec{F}$ and $\vec{d}$.
+
+SI unit: joule (J) = N·m = kg·m²/s²
+</Formula>
+
+**Key sign analysis:**
+
+| $\theta$ | $\cos\theta$ | Sign of $W$ | Physical meaning |
+|----------|-------------|-------------|-----------------|
+| $0°$ | $+1$ | Positive | Force helps motion |
+| $90°$ | $0$ | Zero | Force ⊥ displacement |
+| $180°$ | $-1$ | Negative | Force opposes motion |
+
+**Agents of zero work:**
+- Normal force on a surface (always ⊥ to motion on flat surface)
+- Centripetal force (always ⊥ to velocity)
+- Magnetic force on a charge (always ⊥ to velocity)
+- Tension when string is inextensible and mass moves in a circle
+
+---
+
+### 2.2 Work by a Variable Force
+
+When force varies with position, work is found by integration:
+
+<Formula label="Work by Variable Force">
+$$W = \int_{\vec{r}_1}^{\vec{r}_2} \vec{F} \cdot d\vec{r} = \int_{x_1}^{x_2} F_x\, dx + \int_{y_1}^{y_2} F_y\, dy + \int_{z_1}^{z_2} F_z\, dz$$
+
+Graphically: $W$ = area under the $F$-$x$ graph (signed area).
+</Formula>
+
+**Spring force example:**
+$F = -kx$ (restoring, toward equilibrium). Work done by spring as block moves from $x_1$ to $x_2$:
+
+$$W_{spring} = \int_{x_1}^{x_2} (-kx)\, dx = -\frac{1}{2}k(x_2^2 - x_1^2) = \frac{1}{2}kx_1^2 - \frac{1}{2}kx_2^2$$
+
+---
+
+### 2.3 Work–Energy Theorem — Derivation
+
+Starting from Newton's 2nd Law:
+
+<Step n={1}>
+$F_{net} = ma = m\dfrac{dv}{dt}$
+</Step>
+
+<Step n={2}>
+$W_{net} = \int F_{net}\, dx = \int m\dfrac{dv}{dt}\, dx = \int m\dfrac{dv}{dt}\cdot\dfrac{dx}{dt}\, dt = \int mv\, dv$
+</Step>
+
+<Step n={3}>
+$W_{net} = m\int_{v_1}^{v_2} v\, dv = \frac{1}{2}mv_2^2 - \frac{1}{2}mv_1^2$
+</Step>
+
+<Formula label="Work–Energy Theorem">
+$$W_{net} = \Delta KE = \frac{1}{2}mv_2^2 - \frac{1}{2}mv_1^2$$
+
+The net work done on an object equals the change in its kinetic energy.
+</Formula>
+
+<Callout type="important">
+**The Most Powerful Tool in This Chapter**
+
+The work–energy theorem is a scalar equation — no direction needed. It connects the **cause** (net work, which sums contributions from ALL forces) to the **effect** (change in KE). When you can't easily track forces at every instant, this theorem gives you start-and-end information directly.
+</Callout>
+
+---
+
+### 2.4 Kinetic Energy
+
+<Formula label="Kinetic Energy">
+$$KE = \frac{1}{2}mv^2 = \frac{p^2}{2m}$$
+
+where $p = mv$ is the linear momentum.
+</Formula>
+
+**Key relationships:**
+- Same KE, different mass: $v \propto 1/\sqrt{m}$ → lighter object moves faster
+- Same momentum, different mass: $KE = p^2/2m$ → lighter object has more KE
+- Same velocity, different mass: heavier object has more KE
+
+---
+
+## SECTION 3 — Conservative and Non-Conservative Forces
+
+---
+
+### 3.1 Conservative Forces — Definition
+
+A force is **conservative** if:
+1. Work done depends only on the initial and final positions (not the path taken)
+2. Work done in any closed loop is zero: $\oint \vec{F}\cdot d\vec{r} = 0$
+3. A potential energy function $U$ can be defined: $W_{cons} = -\Delta U$
+
+**Conservative forces:** Gravity, spring force, electrostatic force, gravitational force.
+
+**Non-conservative forces:** Friction, air drag, viscous force, normal force (when object leaves surface), tension in a rope during extension.
+
+<Callout type="warning">
+**Important:** Normal force is not conservative in general (path-dependent). Tension in an ideal inextensible string does **zero** net work on the system (but can do work on individual parts).
+</Callout>
+
+---
+
+### 3.2 Potential Energy — Definition
+
+For conservative forces, potential energy is defined by:
+
+<Formula label="Potential Energy — Fundamental Definition">
+$$W_{conservative} = -\Delta U = -(U_f - U_i) = U_i - U_f$$
+
+Equivalently: $\vec{F} = -\nabla U = -\left(\frac{\partial U}{\partial x}\hat{i} + \frac{\partial U}{\partial y}\hat{j} + \frac{\partial U}{\partial z}\hat{k}\right)$
+
+In 1D: $F = -\dfrac{dU}{dx}$
+</Formula>
+
+**Physical meaning:** When a conservative force does positive work, potential energy decreases (and vice versa). A stretched spring stores PE. An object raised against gravity stores PE.
+
+---
+
+### 3.3 Gravitational Potential Energy
+
+Near Earth's surface (uniform $g$):
+
+<Formula label="Gravitational Potential Energy">
+$$U_g = mgh$$
+
+where $h$ is height above the chosen reference level. Reference ($U = 0$) can be chosen anywhere — only $\Delta U$ matters.
+</Formula>
+
+Work done by gravity as object descends height $h$: $W_g = +mgh$ (positive).
+
+Work done by gravity as object rises height $h$: $W_g = -mgh$ (negative).
+
+---
+
+### 3.4 Spring Potential Energy
+
+For a spring with constant $k$ compressed/stretched by $x$ from natural length:
+
+<Formula label="Spring Potential Energy">
+$$U_s = \frac{1}{2}kx^2$$
+
+Work done by spring going from $x_1$ to $x_2$: $W_s = \frac{1}{2}kx_1^2 - \frac{1}{2}kx_2^2 = -\Delta U_s$
+</Formula>
+
+**Note:** $U_s$ is always non-negative ($x^2 \geq 0$). The spring stores energy both when compressed and stretched.
+
+---
+
+## SECTION 4 — Conservation of Mechanical Energy
+
+---
+
+### 4.1 Derivation
+
+Total mechanical energy: $E = KE + PE = \frac{1}{2}mv^2 + U$
+
+Work–energy theorem: $W_{net} = \Delta KE$
+
+Splitting work into conservative and non-conservative parts:
+
+$$W_{cons} + W_{nc} = \Delta KE$$
+
+Since $W_{cons} = -\Delta U$:
+
+$$-\Delta U + W_{nc} = \Delta KE$$
+
+$$W_{nc} = \Delta KE + \Delta U = \Delta E$$
+
+<Formula label="Conservation of Mechanical Energy">
+$$W_{nc} = \Delta E_{mechanical} = (KE_f + U_f) - (KE_i + U_i)$$
+
+**Special case:** If $W_{nc} = 0$ (no friction, no non-conservative forces):
+
+$$KE_i + U_i = KE_f + U_f \qquad \Rightarrow \qquad E_{mechanical} = \text{constant}$$
+</Formula>
+
+<Callout type="tip">
+**When to use energy conservation:**
+- Smooth surfaces, ideal strings/springs (no friction)
+- When you need speed at a point but don't care about time or acceleration
+- When forces vary along the path (springs, gravity on incline, circular motion)
+
+**When NOT to use it alone:**
+- Friction present → use $W_{nc} = \Delta E$ (with friction work = $-\mu mg d$)
+- Need reaction forces (tension, normal) → still need Newton's Law separately
+</Callout>
+
+---
+
+### 4.2 Applications of Energy Conservation
+
+**Free fall:** $\frac{1}{2}mv^2 + mgh = \text{const}$. At bottom ($h=0$): $v = \sqrt{2gh}$.
+
+**Pendulum:** At bottom, $v = \sqrt{2gL(1-\cos\theta)}$ where $\theta$ is initial angle.
+
+**Spring-block on frictionless surface:**
+- Maximum compression $x_m$ when all KE converts to spring PE: $\frac{1}{2}mv^2 = \frac{1}{2}kx_m^2 \Rightarrow x_m = v\sqrt{m/k}$
+
+**Block on incline:** $v = \sqrt{2gh} = \sqrt{2g\cdot d\sin\alpha}$ (smooth incline, height $h$, length $d$, angle $\alpha$).
+
+---
+
+## SECTION 5 — Potential Energy Curves and Equilibrium
+
+---
+
+### 5.1 $U$–$x$ Graphs and Force
+
+From $F = -dU/dx$:
+
+- Where slope of $U$–$x$ is positive: force is negative (toward left)
+- Where slope is negative: force is positive (toward right)
+- At a minimum of $U$: $F = 0$ (stable equilibrium)
+- At a maximum of $U$: $F = 0$ (unstable equilibrium)
+- On a flat section of $U$: $F = 0$ (neutral equilibrium)
+
+<svg width="400" height="260" viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="peA" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#334155"/>
+    </marker>
+  </defs>
+  <line x1="30" y1="220" x2="380" y2="220" stroke="#334155" strokeWidth="2" markerEnd="url(#peA)"/>
+  <line x1="30" y1="220" x2="30" y2="20" stroke="#334155" strokeWidth="2" markerEnd="url(#peA)"/>
+  <text x="385" y="224" fontSize="12" fill="#334155">x</text>
+  <text x="18" y="16" fontSize="12" fill="#334155">U</text>
+  <path d="M 50,80 C 90,180 130,220 170,160 C 210,100 230,60 260,80 C 290,100 310,150 350,130" fill="none" stroke="#3b82f6" strokeWidth="2.5"/>
+  <circle cx="170" cy="160" r="5" fill="#16a34a"/>
+  <text x="158" y="185" fontSize="11" fill="#16a34a">Stable</text>
+  <text x="150" y="197" fontSize="11" fill="#16a34a">(min)</text>
+  <circle cx="260" cy="80" r="5" fill="#dc2626"/>
+  <text x="248" y="68" fontSize="11" fill="#dc2626">Unstable</text>
+  <text x="253" y="80" fontSize="11" fill="#dc2626">(max)</text>
+  <line x1="170" y1="160" x2="170" y2="220" stroke="#16a34a" strokeWidth="1" strokeDasharray="4,3"/>
+  <line x1="260" y1="80" x2="260" y2="220" stroke="#dc2626" strokeWidth="1" strokeDasharray="4,3"/>
+  <text x="40" y="248" fontSize="11" fill="#64748b">Fig: Stable equilibrium at potential minimum, unstable at maximum</text>
+</svg>
+
+---
+
+### 5.2 Allowed Regions and Turning Points
+
+If a particle has total mechanical energy $E$, it can only exist at positions where $U(x) \leq E$ (otherwise KE would be negative).
+
+**Turning points:** Where $U(x) = E$ → $KE = 0$ → particle momentarily at rest.
+
+**Bound state:** Particle oscillates between two turning points if $E < U_{max}$.
+
+**Unbound motion:** If $E > U_{max}$ for all $x$, particle can escape to infinity.
+
+---
+
+## SECTION 6 — Power
+
+---
+
+### 6.1 Definition
+
+Power is the rate of doing work:
+
+<Formula label="Power">
+$$P = \frac{dW}{dt} = \vec{F}\cdot\vec{v} = Fv\cos\theta$$
+
+where $\theta$ is the angle between $\vec{F}$ and $\vec{v}$.
+
+SI unit: watt (W) = J/s = kg·m²/s³. Also: 1 horsepower (hp) = 746 W.
+</Formula>
+
+**Average power:** $P_{avg} = W/t$
+
+**Instantaneous power:** $P = \vec{F}\cdot\vec{v}$
+
+---
+
+### 6.2 Power in Common Situations
+
+**Constant force, constant velocity:** $P = Fv$ (force parallel to velocity).
+
+**Engine driving a vehicle at terminal speed:** Engine power = power against drag.
+$P = f_{drag} \times v$. If $f_{drag} = \mu mg$: $P = \mu mgv$.
+
+**Pumping water:** $P = \rho g H Q$ where $\rho$ = density, $H$ = height, $Q$ = volume flow rate (m³/s).
+
+**Force varying with time/position:** $P = F(t) \cdot v(t)$ at each instant.
+
+---
+
+### 6.3 Vehicle Dynamics — Engine Power
+
+A vehicle of mass $m$ has engine power $P$ and friction force $f$.
+
+Net force: $F_{engine} - f = ma$
+
+At constant speed: $F_{engine} = f$, so $v_{max} = P/f$.
+
+At acceleration from rest (friction dominant): $P/v - f = ma$
+
+As $v$ increases, $F_{engine} = P/v$ decreases → $a$ decreases → vehicle reaches $v_{max}$ asymptotically.
+
+---
+
+## SECTION 7 — Work Done Against Friction
+
+---
+
+### 7.1 Friction as a Non-Conservative Force
+
+Kinetic friction $f_k = \mu_k N$ always opposes motion. Work done by friction is:
+
+$$W_{friction} = -f_k \times d = -\mu_k N d$$
+
+This is **always negative** (friction always removes kinetic energy from the system).
+
+The energy removed by friction appears as **heat** (thermal energy), not as stored mechanical energy.
+
+---
+
+### 7.2 Energy Equation with Friction
+
+$$KE_i + PE_i = KE_f + PE_f + Q$$
+
+where $Q = f_k \times d$ = heat generated by friction (always positive).
+
+Equivalently: $W_{friction} = \Delta E_{mechanical}$
+
+$-f_k d = (KE_f + PE_f) - (KE_i + PE_i)$
+
+**Heat generated on an incline (block slides distance $d$):**
+
+$$Q = f_k \cdot d = \mu_k mg\cos\alpha \cdot d$$
+
+where $\alpha$ is the angle of the incline.
+
+---
+
+## SECTION 8 — Springs — Advanced Analysis
+
+---
+
+### 8.1 Spring-Block System — Key Results
+
+**Block of mass $m$ on frictionless surface, attached to spring (stiffness $k$, natural length $L_0$):**
+
+Maximum compression when spring is compressed by $x_0$ and block released from rest:
+
+$$PE_i = KE_f \Rightarrow \frac{1}{2}kx_0^2 = \frac{1}{2}mv^2 \Rightarrow v_{max} = x_0\sqrt{k/m}$$
+
+**Block projected toward spring at speed $v$:**
+
+Maximum compression $x_m$: $\frac{1}{2}mv^2 = \frac{1}{2}kx_m^2 \Rightarrow x_m = v\sqrt{m/k}$
+
+---
+
+### 8.2 Two-Mass Spring System
+
+Two masses $m_1$ and $m_2$ connected by spring (constant $k$). $m_1$ pushed toward $m_2$ (or spring compressed by $x_0$):
+
+**Maximum KE of each mass** (at natural length, in centre-of-mass frame):
+
+$$v_1 = x_0\sqrt{\frac{k\mu}{m_1^2}} \quad ; \quad v_2 = x_0\sqrt{\frac{k\mu}{m_2^2}}$$
+
+where $\mu = m_1 m_2/(m_1 + m_2)$ is the reduced mass.
+
+Or simply: use momentum conservation + energy conservation together.
+
+---
+
+### 8.3 Spring Compressed Between Two Blocks
+
+Two blocks $A$ (mass $m_1$) and $B$ (mass $m_2$) are held together with a compressed spring (energy $E_0$) between them on a frictionless surface. When released:
+
+Momentum conservation: $m_1 v_1 + m_2 v_2 = 0$ (initial momentum = 0)
+
+$v_1 = -\dfrac{m_2}{m_1}v_2$
+
+Energy: $\frac{1}{2}m_1 v_1^2 + \frac{1}{2}m_2 v_2^2 = E_0$
+
+Substituting: $v_2 = \sqrt{\dfrac{2E_0 m_1}{m_2(m_1+m_2)}}$
+
+$$v_1 = -\sqrt{\frac{2E_0 m_2}{m_1(m_1+m_2)}} \qquad v_2 = +\sqrt{\frac{2E_0 m_1}{m_2(m_1+m_2)}}$$
+
+---
+
+### 8.4 Spring on an Incline
+
+A block of mass $m$ slides down a smooth incline (angle $\alpha$) and hits a spring (constant $k$) at the bottom. Find maximum compression $x$.
+
+Let distance from initial position to spring's natural-length end = $d$.
+
+Energy conservation from initial position to maximum compression:
+
+$$mg(d\sin\alpha + x\sin\alpha) = \frac{1}{2}kx^2$$
+
+$$mg\sin\alpha \cdot (d + x) = \frac{1}{2}kx^2$$
+
+$$\frac{1}{2}kx^2 - mgx\sin\alpha - mgd\sin\alpha = 0$$
+
+Solve using quadratic formula:
+
+$$x = \frac{mg\sin\alpha + \sqrt{(mg\sin\alpha)^2 + 2k \cdot mgd\sin\alpha}}{k}$$
+
+---
+
+## SECTION 9 — Collisions
+
+---
+
+### 9.1 Coefficient of Restitution
+
+The **coefficient of restitution** $e$ characterizes how "bouncy" a collision is:
+
+<Formula label="Coefficient of Restitution">
+$$e = \frac{\text{relative speed of separation}}{\text{relative speed of approach}} = \frac{v_2' - v_1'}{u_1 - u_2}$$
+
+where $u_1, u_2$ = velocities before; $v_1', v_2'$ = velocities after (both along the line of collision).
+
+$e = 1$: perfectly elastic (no KE loss)
+$0 < e < 1$: partially inelastic (some KE lost)
+$e = 0$: perfectly inelastic (maximum KE loss; objects stick together)
+</Formula>
+
+---
+
+### 9.2 Elastic Collision (1D)
+
+Two objects of mass $m_1$ (velocity $u_1$) and $m_2$ (velocity $u_2$), elastic collision:
+
+<svg width="380" height="190" viewBox="0 0 380 190" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="colV" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#334155"/>
+    </marker>
+  </defs>
+  <text x="10" y="30" fontSize="13" fill="#334155" fontWeight="bold">BEFORE</text>
+  <circle cx="90" cy="55" r="18" fill="#3b82f6"/>
+  <text x="90" y="60" textAnchor="middle" fontSize="12" fill="white" fontWeight="bold">m₁</text>
+  <line x1="112" y1="55" x2="160" y2="55" stroke="#334155" strokeWidth="2" markerEnd="url(#colV)"/>
+  <text x="125" y="48" fontSize="12" fill="#334155">u₁</text>
+  <circle cx="240" cy="55" r="26" fill="#dc2626"/>
+  <text x="240" y="60" textAnchor="middle" fontSize="12" fill="white" fontWeight="bold">m₂</text>
+  <line x1="274" y1="55" x2="300" y2="55" stroke="#334155" strokeWidth="2" markerEnd="url(#colV)"/>
+  <text x="280" y="48" fontSize="12" fill="#334155">u₂</text>
+  <line x1="20" y1="95" x2="360" y2="95" stroke="#e2e8f0" strokeWidth="1"/>
+  <text x="10" y="130" fontSize="13" fill="#334155" fontWeight="bold">AFTER</text>
+  <circle cx="90" cy="155" r="18" fill="#3b82f6"/>
+  <text x="90" y="160" textAnchor="middle" fontSize="12" fill="white" fontWeight="bold">m₁</text>
+  <line x1="68" y1="155" x2="40" y2="155" stroke="#334155" strokeWidth="2" markerEnd="url(#colV)"/>
+  <text x="44" y="148" fontSize="12" fill="#334155">v₁</text>
+  <circle cx="240" cy="155" r="26" fill="#dc2626"/>
+  <text x="240" y="160" textAnchor="middle" fontSize="12" fill="white" fontWeight="bold">m₂</text>
+  <line x1="274" y1="155" x2="320" y2="155" stroke="#334155" strokeWidth="2" markerEnd="url(#colV)"/>
+  <text x="288" y="148" fontSize="12" fill="#334155">v₂</text>
+  <text x="120" y="185" fontSize="11" fill="#64748b">Momentum conserved (both); KE conserved (elastic only)</text>
+</svg>
+
+<Step n={1}>
+Momentum conservation: $m_1 u_1 + m_2 u_2 = m_1 v_1 + m_2 v_2$
+</Step>
+
+<Step n={2}>
+KE conservation: $\frac{1}{2}m_1 u_1^2 + \frac{1}{2}m_2 u_2^2 = \frac{1}{2}m_1 v_1^2 + \frac{1}{2}m_2 v_2^2$
+</Step>
+
+<Step n={3}>
+Solving the two equations simultaneously:
+$$v_1 = \frac{(m_1-m_2)u_1 + 2m_2 u_2}{m_1+m_2} \qquad v_2 = \frac{(m_2-m_1)u_2 + 2m_1 u_1}{m_1+m_2}$$
+</Step>
+
+<Formula label="Elastic Collision (1D) — Final Velocities">
+$$v_1 = \frac{(m_1-m_2)u_1 + 2m_2 u_2}{m_1+m_2} \qquad v_2 = \frac{(m_2-m_1)u_2 + 2m_1 u_1}{m_1+m_2}$$
+</Formula>
+
+**Special cases:**
+
+| Case | Result |
+|------|--------|
+| $m_1 = m_2$, $u_2 = 0$ | $v_1 = 0$, $v_2 = u_1$ (complete transfer) |
+| $m_1 \gg m_2$, $u_2 = 0$ | $v_1 \approx u_1$, $v_2 \approx 2u_1$ (heavy hits light) |
+| $m_1 \ll m_2$, $u_2 = 0$ | $v_1 \approx -u_1$, $v_2 \approx 0$ (bounces back) |
+| Equal masses, head-on | Velocities exchange |
+
+---
+
+### 9.3 Perfectly Inelastic Collision ($e = 0$)
+
+Objects stick together. Final velocity:
+
+$$v = \frac{m_1 u_1 + m_2 u_2}{m_1 + m_2}$$
+
+**KE lost:**
+
+$$\Delta KE = \frac{1}{2}m_1 u_1^2 + \frac{1}{2}m_2 u_2^2 - \frac{1}{2}(m_1+m_2)v^2 = \frac{m_1 m_2(u_1 - u_2)^2}{2(m_1+m_2)}$$
+
+<Formula label="KE Lost in Perfectly Inelastic Collision">
+$$\Delta KE = \frac{\mu (u_1 - u_2)^2}{2}$$
+
+where $\mu = \dfrac{m_1 m_2}{m_1 + m_2}$ is the reduced mass.
+
+Maximum KE loss occurs in perfectly inelastic collision (not zero — "zero KE loss" is elastic!).
+</Formula>
+
+---
+
+### 9.4 Partially Inelastic Collision
+
+Combine momentum conservation with the restitution equation:
+
+$$m_1 u_1 + m_2 u_2 = m_1 v_1 + m_2 v_2 \qquad \text{...(1)}$$
+
+$$v_2 - v_1 = e(u_1 - u_2) \qquad \text{...(2)}$$
+
+(2) can be rewritten as: $v_2 = v_1 + e(u_1 - u_2)$
+
+Substituting in (1) and solving:
+
+$$v_1 = \frac{m_1 u_1 + m_2 u_2 - m_2 e(u_1 - u_2)}{m_1 + m_2}$$
+
+$$v_2 = \frac{m_1 u_1 + m_2 u_2 + m_1 e(u_1 - u_2)}{m_1 + m_2}$$
+
+---
+
+### 9.5 Elastic Collision in 2D
+
+Momentum is conserved as a vector (separately in $x$ and $y$):
+
+$$m_1 u_{1x} + m_2 u_{2x} = m_1 v_{1x} + m_2 v_{2x}$$
+
+$$m_1 u_{1y} + m_2 u_{2y} = m_1 v_{1y} + m_2 v_{2y}$$
+
+Plus KE conservation:
+
+$$\frac{1}{2}m_1(u_{1x}^2 + u_{1y}^2) + \frac{1}{2}m_2(u_{2x}^2 + u_{2y}^2) = \frac{1}{2}m_1(v_{1x}^2 + v_{1y}^2) + \frac{1}{2}m_2(v_{2x}^2 + v_{2y}^2)$$
+
+**Key result for equal masses, 2D elastic:** If $m_1 = m_2$ and $m_2$ is at rest, after collision the two objects move at **90°** to each other.
+
+---
+
+### 9.6 Collision with a Wall
+
+A ball of mass $m$, speed $u$, hits a wall at angle $\theta$ with coefficient of restitution $e$:
+
+- Component along wall: unchanged (no friction assumed): $v_\parallel = u\cos\theta$
+- Component normal to wall: reverses with factor $e$: $v_\perp = eu\sin\theta$
+
+Final speed: $v = \sqrt{(u\cos\theta)^2 + (eu\sin\theta)^2} = u\sqrt{\cos^2\theta + e^2\sin^2\theta}$
+
+---
+
+### 9.7 Ballistic Pendulum
+
+A bullet of mass $m$ and velocity $v$ embeds in a pendulum bob of mass $M$ (string length $L$).
+
+**Step 1 — Collision** (perfectly inelastic, time $\ll$ swing time):
+
+$$mv = (m+M)V \Rightarrow V = \frac{mv}{m+M}$$
+
+**Step 2 — Pendulum swing** (energy conservation):
+
+$$\frac{1}{2}(m+M)V^2 = (m+M)gh \Rightarrow h = \frac{V^2}{2g}$$
+
+$$h = \frac{m^2 v^2}{2g(m+M)^2}$$
+
+To find $v$ from observed $h$: $v = \dfrac{m+M}{m}\sqrt{2gh}$
+
+---
+
+## SECTION 10 — Work Done by Gravity — Advanced
+
+---
+
+### 10.1 Work Against Gravity on Any Path
+
+Since gravity is conservative, work depends only on height difference, not path:
+
+$$W_{gravity} = -mg(h_f - h_i) = mg(h_i - h_f)$$
+
+If the object returns to its starting height: $W_{gravity} = 0$ (closed path).
+
+---
+
+### 10.2 Work Against Variable Gravity
+
+For height $h$ above Earth's surface (large distances, gravity not uniform):
+
+$$U = -\frac{GMm}{r}$$
+
+Work done by gravity going from $r_1$ to $r_2$:
+
+$$W_g = -\Delta U = U_i - U_f = -\frac{GMm}{r_1} + \frac{GMm}{r_2} = GMm\left(\frac{1}{r_2} - \frac{1}{r_1}\right)$$
+
+**Escape velocity** derivation (from $r = R$ to $r = \infty$, $v_f = 0$):
+
+$$\frac{1}{2}mv_{esc}^2 + \left(-\frac{GMm}{R}\right) = 0 + 0$$
+
+$$v_{esc} = \sqrt{\frac{2GM}{R}} = \sqrt{2gR}$$
+
+---
+
+## SECTION 11 — Energy Methods in Complex Systems
+
+---
+
+### 11.1 System of Two Particles — Internal Energy
+
+For a two-particle system, KE can be split into:
+- KE of centre of mass: $KE_{CM} = \frac{1}{2}(m_1+m_2)V_{CM}^2$
+- KE in CM frame (internal KE): $KE_{internal} = \frac{1}{2}\mu v_{rel}^2$
+
+$$KE_{total} = KE_{CM} + KE_{internal}$$
+
+In any collision, $KE_{CM}$ is conserved (momentum is conserved → CM velocity doesn't change). Only $KE_{internal}$ can be lost.
+
+**Maximum KE loss** (in perfectly inelastic collision) = entire $KE_{internal}$:
+
+$$\Delta KE_{max} = \frac{1}{2}\mu u_{rel}^2 = \frac{m_1 m_2 (u_1-u_2)^2}{2(m_1+m_2)}$$
+
+---
+
+### 11.2 Rocket Propulsion — Thrust Power
+
+A rocket of mass $m$ at instant has exhaust speed $v_e$ relative to rocket. Mass burned per unit time: $|dm/dt|$.
+
+Thrust: $F_{thrust} = v_e |dm/dt|$
+
+Power delivered by thrust: $P = F_{thrust} \cdot v_{rocket} = v_e |dm/dt| \cdot v$
+
+---
+
+### 11.3 Chain Problems — Energy Method
+
+A uniform chain of length $L$ and mass $M$ (linear density $\lambda = M/L$) lies on a frictionless table with a length $\ell$ hanging over the edge. Find the work needed to pull the hanging part back onto the table.
+
+The hanging part has mass $\lambda\ell$ and its centre of mass sits a depth $\ell/2$ below the table edge. Pulling it up raises that CM by $\ell/2$, so the work done against gravity is:
+
+$$W = (\lambda\ell)\, g \cdot \frac{\ell}{2} = \frac{Mg\ell^2}{2L}$$
+
+**Classic JEE form** — a fraction $\tfrac{1}{n}$ of the chain hangs ($\ell = L/n$):
+
+$$W = \frac{Mg}{2L}\left(\frac{L}{n}\right)^2 = \frac{MgL}{2n^2}$$
+
+If the entire chain hangs ($\ell = L$), this reduces to $W = \dfrac{MgL}{2}$, consistent with raising the CM of a fully hanging chain by $L/2$.
+
+For chains in various configurations, the key is to track centre of mass displacement.
+
+---
+
+## SECTION 12 — Error Analysis
+
+---
+
+| # | Mistake | Correct Approach |
+|---|---------|-----------------|
+| 1 | $W = F \times d$ without considering angle | $W = Fd\cos\theta$ — angle between $\vec{F}$ and displacement matters |
+| 2 | Saying centripetal force does work | Centripetal force ⊥ velocity → zero work → KE unchanged in UCM |
+| 3 | Including normal force work when surface is flat and horizontal | $N \perp$ horizontal displacement → $W_N = 0$ |
+| 4 | Using $W_{net} = \Delta KE$ but forgetting to include ALL forces | ALL forces contribute to net work — gravity, friction, tension, normal, applied |
+| 5 | Confusing maximum KE loss with elastic collision | Elastic: no KE loss. Perfectly inelastic: maximum KE loss |
+| 6 | Applying energy conservation when friction is present | Use $\Delta E = W_{friction} = -f_k d$ (negative) |
+| 7 | Wrong sign for spring PE — $U = -\frac{1}{2}kx^2$ | Spring PE is always $+\frac{1}{2}kx^2$ |
+| 8 | In collision, applying energy conservation before and after impact | KE may not be conserved; momentum is. Use $e$ for post-collision velocities |
+| 9 | Forgetting to account for height of spring compression on incline | On incline, spring compression $x$ also lowers height by $x\sin\alpha$ |
+| 10 | Stating $v \propto \sqrt{KE}$ implies equal KE → equal speed | $v = \sqrt{2KE/m}$ — same KE + different mass → different speeds |
+| 11 | Using $v_{max} = P/f$ without checking if friction force is given | Only applies at constant/terminal speed where engine force equals friction |
+| 12 | Equal mass elastic collision: thinking velocities don't change | Equal mass elastic: velocities **exchange** (if $m_1 = m_2$ and $u_2 = 0$: $v_1 = 0$, $v_2 = u_1$) |
+| 13 | Potential energy reference confusion | PE values are reference-dependent, but $\Delta PE$ is not. Always compute $\Delta PE$ |
+| 14 | Power = $Fv$ only when $\vec{F} \parallel \vec{v}$ | General: $P = \vec{F}\cdot\vec{v} = Fv\cos\theta$ |
+
+---
+
+## SECTION 13 — Solved Examples
+
+---
+
+### JEE Main Level Examples
+
+**M1.** A force $F = (3x^2 + 2x)$ N acts along the x-axis. Find work done from $x = 0$ to $x = 3$ m.
+
+**Solution:**
+$$W = \int_0^3 (3x^2 + 2x)\, dx = \left[x^3 + x^2\right]_0^3 = 27 + 9 = \mathbf{36 \text{ J}}$$
+
+---
+
+**M2.** A 2 kg block slides from rest down a 37° incline (length 5 m, $\mu_k = 0.25$). Find speed at the bottom. ($g = 10$ m/s², $\sin 37° = 0.6$, $\cos 37° = 0.8$)
+
+**Solution:**
+Height $h = 5\times0.6 = 3$ m. $W_{gravity} = mgh = 60$ J.
+
+$W_{friction} = -\mu_k mg\cos\alpha \cdot d = -0.25\times2\times10\times0.8\times5 = -20$ J.
+
+$W_{net} = 60 - 20 = 40$ J $= \frac{1}{2}mv^2$
+
+$v = \sqrt{2\times40/2} = \sqrt{40} = 2\sqrt{10} \approx \mathbf{6.32 \text{ m/s}}$
+
+---
+
+**M3.** A spring (k = 500 N/m) is compressed by 0.2 m. A 0.5 kg block is released from rest. Find maximum speed (frictionless surface).
+
+**Solution:**
+$\frac{1}{2}kx^2 = \frac{1}{2}mv^2$
+
+$v = x\sqrt{k/m} = 0.2\sqrt{500/0.5} = 0.2\sqrt{1000} = 0.2\times31.6 = \mathbf{6.32 \text{ m/s}}$
+
+---
+
+**M4.** A 1500 kg car engine generates 60 kW. Friction = 3000 N. Find maximum speed.
+
+**Solution:**
+At maximum speed: $P = f \times v_{max}$
+
+$v_{max} = P/f = 60000/3000 = \mathbf{20 \text{ m/s}}$
+
+---
+
+**M5.** A 0.1 kg ball moving at 10 m/s undergoes elastic collision with 0.3 kg ball at rest. Find post-collision velocities.
+
+**Solution:**
+$v_1 = \dfrac{(m_1-m_2)}{m_1+m_2}u_1 = \dfrac{(0.1-0.3)}{0.4}\times10 = \dfrac{-0.2}{0.4}\times10 = \mathbf{-5 \text{ m/s}}$ (bounces back)
+
+$v_2 = \dfrac{2m_1}{m_1+m_2}u_1 = \dfrac{0.2}{0.4}\times10 = \mathbf{5 \text{ m/s}}$
+
+Check: $p_i = 1$ N·s = $p_f = -0.5 + 1.5 = 1$ N·s ✓
+
+---
+
+**M6.** A 10 g bullet at 200 m/s embeds in a 990 g wooden block on a frictionless surface. Find: (a) final velocity, (b) KE lost. 
+
+**Solution:**
+(a) $v = \dfrac{0.01\times200}{1} = \mathbf{2 \text{ m/s}}$
+
+(b) $KE_i = \frac{1}{2}\times0.01\times200^2 = 200$ J
+
+$KE_f = \frac{1}{2}\times1\times4 = 2$ J
+
+$\Delta KE = \mathbf{198 \text{ J}}$
+
+---
+
+**M7.** A ball is dropped from height 4 m and bounces with $e = 0.5$. Find height reached after first bounce.
+
+**Solution:**
+Speed before impact: $v = \sqrt{2\times10\times4} = \sqrt{80}$ m/s.
+
+Speed after impact: $v' = ev = 0.5\sqrt{80}$.
+
+Height reached: $h' = v'^2/(2g) = (0.25\times80)/20 = \mathbf{1 \text{ m}}$
+
+Or directly: $h' = e^2 h = 0.25\times4 = 1$ m ✓
+
+---
+
+**M8.** A 2 kg block connected to spring ($k = 200$ N/m) is on a surface with $\mu_k = 0.1$. Spring compressed 0.3 m from equilibrium. Find maximum speed of block. ($g = 10$ m/s²)
+
+**Solution:**
+Maximum speed occurs where the net force is zero — where the spring force just balances friction: $kx^* = f_k = \mu mg$, giving
+
+$$x^* = \frac{\mu mg}{k} = \frac{0.1\times2\times10}{200} = 0.01 \text{ m from the natural length.}$$
+
+Apply the work–energy theorem from the compressed position ($x_0 = 0.3$ m) to $x^*$:
+
+$$\frac{1}{2}kx_0^2 - f_k(x_0 - x^*) = \frac{1}{2}mv^2 + \frac{1}{2}k{x^*}^2$$
+
+$$\frac{1}{2}(200)(0.09) - (2)(0.29) = \frac{1}{2}(2)v^2 + \frac{1}{2}(200)(0.01)^2$$
+
+$$9 - 0.58 = v^2 + 0.01 \;\Rightarrow\; v^2 = 8.41$$
+
+$$v \approx \mathbf{2.9 \text{ m/s}}$$
+
+(Because $x^*$ is tiny here, approximating the maximum at the natural length gives $v = \sqrt{8.4} \approx 2.9$ m/s — the same to two significant figures.)
+
+---
+
+**M9.** A pendulum (mass 0.5 kg, length 2 m) is pulled to 60° from vertical and released. Find speed at the bottom. ($g = 10$ m/s²)
+
+**Solution:**
+$h = L(1 - \cos60°) = 2(1 - 0.5) = 1$ m.
+
+$v = \sqrt{2gh} = \sqrt{20} = 2\sqrt{5} \approx \mathbf{4.47 \text{ m/s}}$
+
+---
+
+**M10.** An engine lifts water from a well of depth 20 m at rate 10 kg/s. Power of engine if efficiency = 80%. ($g = 10$ m/s²)
+
+**Solution:**
+Useful power = $mgh/t = 10\times10\times20 = 2000$ W.
+
+Input power = useful power / efficiency = $2000/0.8 = \mathbf{2500 \text{ W}}$
+
+---
+
+**M11.** A force $\vec{F} = 2\hat{i} + 3\hat{j}$ N displaces a particle from $(1,2)$ to $(4,6)$ m. Find work done.
+
+**Solution:**
+$\vec{d} = (4-1)\hat{i} + (6-2)\hat{j} = 3\hat{i} + 4\hat{j}$
+
+$W = \vec{F}\cdot\vec{d} = 2\times3 + 3\times4 = 6 + 12 = \mathbf{18 \text{ J}}$
+
+---
+
+**M12.** Two identical balls ($m$ each), one moving at $v$ and one at rest. After collision $e = 0.6$. Find post-collision velocities.
+
+**Solution:**
+Using $m_1 = m_2 = m$:
+
+$v_1 = \dfrac{(1-e)u}{2} = \dfrac{(1-0.6)v}{2} = \dfrac{0.4v}{2} = \mathbf{0.2v}$
+
+$v_2 = \dfrac{(1+e)u}{2} = \dfrac{1.6v}{2} = \mathbf{0.8v}$
+
+Check: $v_2 - v_1 = 0.6v = e \times v$ ✓
+
+---
+
+**M13.** A 60 kg person runs up a staircase (height 10 m) in 20 s. Find power output. ($g = 10$ m/s²)
+
+**Solution:**
+$P = mgh/t = 60\times10\times10/20 = \mathbf{300 \text{ W}}$
+
+---
+
+**M14.** A spring gun (spring constant $k = 800$ N/m, compressed 5 cm) fires a 50 g ball vertically. Find maximum height. ($g = 10$ m/s²)
+
+**Solution:**
+All spring PE converts to gravitational PE: $\frac{1}{2}kx^2 = mgh$
+
+$h = \dfrac{kx^2}{2mg} = \dfrac{800\times0.0025}{2\times0.05\times10} = \dfrac{2}{1} = \mathbf{2 \text{ m}}$
+
+---
+
+**M15.** Find $U(x)$ given $F(x) = -4x + 2x^3$ N, with $U(0) = 0$.
+
+**Solution:**
+$F = -dU/dx \Rightarrow dU = -F\, dx = (4x - 2x^3)\, dx$
+
+$U(x) = \int_0^x (4x' - 2x'^3)\, dx' = 2x^2 - \dfrac{x^4}{2}$
+
+At $x = 1$: $U = 2 - 0.5 = 1.5$ J. ✓
+
+---
+
+### JEE Advanced Level Examples
+
+**A1.** A particle of mass $m$ moves in a potential $U(x) = U_0(e^{-2\alpha x} - 2e^{-\alpha x})$. Find: (a) equilibrium position, (b) nature of equilibrium, (c) period of small oscillations.
+
+**Solution:**
+
+(a) $F = -dU/dx = -U_0(-2\alpha e^{-2\alpha x} + 2\alpha e^{-\alpha x}) = 2\alpha U_0(e^{-2\alpha x} - e^{-\alpha x})$
+
+$F = 0$: $e^{-2\alpha x} = e^{-\alpha x} \Rightarrow e^{-\alpha x} = 1 \Rightarrow \alpha x = 0 \Rightarrow x = 0$
+
+(b) $d^2U/dx^2 = U_0(4\alpha^2 e^{-2\alpha x} - 2\alpha^2 e^{-\alpha x})$
+
+At $x = 0$: $d^2U/dx^2 = U_0(4\alpha^2 - 2\alpha^2) = 2\alpha^2 U_0 > 0$ (if $U_0 > 0$) → **stable** equilibrium.
+
+(c) For small displacement $\delta x$ near $x = 0$: restoring force $F \approx -k_{eff}\delta x$
+
+$k_{eff} = \left.\dfrac{d^2U}{dx^2}\right|_{x=0} = 2\alpha^2 U_0$
+
+$T = 2\pi\sqrt{m/k_{eff}} = 2\pi\sqrt{\dfrac{m}{2\alpha^2 U_0}} = \dfrac{\pi}{\alpha}\sqrt{\dfrac{2m}{U_0}}$
+
+---
+
+**A2.** Ball A (mass $3m$) moving at $2v$ collides head-on elastically with ball B (mass $m$) at rest. After collision, B undergoes perfectly inelastic collision with ball C (mass $m$) at rest. Find final kinetic energy of B+C system.
+
+**Solution:**
+
+Step 1 — Elastic collision (A and B):
+$v_B = \dfrac{2m_A}{m_A + m_B}u_A = \dfrac{6m}{4m}\times2v = 3v$
+
+Step 2 — Perfectly inelastic (B and C, $u_B = 3v$, $u_C = 0$):
+$V = \dfrac{m\times3v + m\times0}{2m} = \dfrac{3v}{2}$
+
+$KE_{BC} = \dfrac{1}{2}(2m)\left(\dfrac{3v}{2}\right)^2 = m\times\dfrac{9v^2}{4} = \dfrac{9mv^2}{4}$
+
+---
+
+**A3.** A block of mass $m$ is pushed against a spring (constant $k$) on a rough incline (angle $\theta$, $\mu$). Spring compressed by $x_0$. When released, the block travels a total distance $d$ up the incline (from equilibrium position). Find $d$.
+
+**Solution:**
+Energy: Initial PE (spring) = Final PE (gravity) + Work done against friction
+
+$$\frac{1}{2}kx_0^2 = mgd\sin\theta + \mu mg\cos\theta \cdot (x_0 + d)$$
+
+$$\frac{1}{2}kx_0^2 - \mu mgx_0\cos\theta = mgd(\sin\theta + \mu\cos\theta)$$
+
+$$d = \frac{\frac{1}{2}kx_0^2 - \mu mgx_0\cos\theta}{mg(\sin\theta + \mu\cos\theta)}$$
+
+---
+
+**A4.** A ball of mass $m$ is projected from a cliff of height $H$ with speed $v_0$ at angle $\theta$ above horizontal. Find speed just before hitting the ground. (Using energy, not kinematics.)
+
+**Solution:**
+Energy conservation (no friction in air):
+
+$$\frac{1}{2}mv_0^2 + mgH = \frac{1}{2}mv_f^2$$
+
+$$v_f = \sqrt{v_0^2 + 2gH}$$
+
+Note: This result is **independent of** $\theta$ — energy doesn't care about direction, only magnitudes!
+
+---
+
+**A5.** A $U$–$x$ graph has $U(x) = x^4 - 4x^2$ J (where $x$ in metres). A particle with total energy $E = -3$ J starts from rest. Find all turning points and regions of motion.
+
+**Solution:**
+Turning points: $U(x) = E$ → $x^4 - 4x^2 = -3$ → $x^4 - 4x^2 + 3 = 0$
+
+Let $y = x^2$: $y^2 - 4y + 3 = 0$ → $(y-1)(y-3) = 0$ → $y = 1$ or $y = 3$
+
+$x = \pm 1$ or $x = \pm\sqrt{3}$
+
+Check allowed regions ($U \leq E = -3$):
+At $x = 0$: $U = 0 > -3$ → NOT allowed (KE would be negative).
+
+So the particle is trapped in two separate wells: between $x = -\sqrt{3}$ and $x = -1$, and between $x = 1$ and $x = \sqrt{3}$.
+
+Equilibrium points (dU/dx = 0): $4x^3 - 8x = 0$ → $x(x^2 - 2) = 0$ → $x = 0$ or $x = \pm\sqrt{2}$.
+
+At $x = \pm\sqrt{2}$: $U = 4 - 8 = -4 < -3$ → within allowed region → stable equilibria.
+
+---
+
+## SECTION 14 — Practice Problems
+
+---
+
+### JEE Main Practice Problems
+
+**P1.** A force $F = (5 + 3x)$ N acts along the $x$-axis. Find work done from $x = 2$ to $x = 4$ m.
+
+**P2.** A block (5 kg) is pushed 3 m on a rough surface ($\mu_k = 0.2$) by a horizontal force of 30 N. Find: (a) work by applied force, (b) work by friction, (c) net work, (d) change in KE.
+
+**P3.** A spring ($k = 1000$ N/m, natural length 1 m) has one end fixed. A 2 kg block on a frictionless table is attached to the other end and moving in a circle of radius 1.5 m. Find the speed of the block.
+
+**P4.** Two blocks ($m$ and $3m$) are connected by a spring and initially at rest. The system is placed on a frictionless table and the spring is compressed by 0.1 m. If $k = 2000$ N/m, find speeds after the spring returns to natural length.
+
+**P5.** A ball (0.2 kg) moving at 4 m/s hits a wall at 30° and bounces with $e = 0.8$. Find speed and direction after collision.
+
+**P6.** A car (mass 1200 kg) accelerates from 0 to 72 km/h in 10 s. Find average power output (ignore friction).
+
+**P7.** Find the work done by gravity on a 2 kg block sliding from a height of 5 m down a curved frictionless slide to the bottom. Does the path matter?
+
+**P8.** A bullet (mass $m = 10$ g, speed 300 m/s) passes through a 3 kg block and exits at 200 m/s. Find the speed of the block after and the heat generated.
+
+**P9.** An object's potential energy is $U = 3x^2 - 2x + 5$ J. Find: (a) equilibrium position, (b) force at $x = 2$ m.
+
+**P10.** A 500 W motor pumps water from a reservoir 8 m below to a tank 2 m above (total height = 10 m). Find mass flow rate ($g = 10$ m/s²).
+
+**P11.** Two identical balls collide in a 1D elastic collision. The first is moving at $5$ m/s and the second at $-3$ m/s (opposite direction). Find post-collision velocities.
+
+**P12.** A 60 kg person jumps off a 5 m high wall and lands on the ground. Find the speed at impact using energy (no air resistance). Then find work done by normal force during the fall.
+
+**P13.** A spring-block system: block 4 kg, $k = 500$ N/m, initial compression 0.2 m. Surface has friction $\mu_k = 0.1$ for the first 1 m, then frictionless. Find speed when block reaches the frictionless section.
+
+**P14.** A ball dropped from height $H$ bounces and reaches height $H/4$. Find $e$.
+
+**P15.** An engine operates at 75% efficiency. It lifts 200 kg to a height of 10 m in 40 s. Find the input power ($g = 10$ m/s²).
+
+---
+
+### JEE Advanced Practice Problems
+
+**Q1.** Potential energy of two-particle system: $U(r) = -A/r + B/r^2$ (Lennard-Jones type). Find: (a) equilibrium separation, (b) minimum PE, (c) period of small oscillations for total mass $\mu$.
+
+**Q2.** A block of mass $m$ on a spring ($k$) is on an incline (angle $\theta$). The spring is horizontal. Find: (a) equilibrium extension, (b) frequency of oscillations, (c) amplitude if block released from natural length.
+
+**Q3.** Ball A (mass $2m$, speed $u$) collides elastically with ball B (mass $m$, at rest), which then hits a wall elastically and comes back to collide again with A (mass $2m$). Find final speeds of A and B after the second collision.
+
+**Q4.** A bead of mass $m$ slides on a frictionless wire in the shape $y = x^2$ (parabola). It starts from rest at $(1, 1)$. Find the speed at the origin and the normal force at the origin.
+
+**Q5.** A block of mass $m$ is released from the top of a wedge (angle $\theta$, mass $M$) on a frictionless floor. Find: (a) speed of the wedge when the block reaches the bottom, (b) speed of the block relative to the ground. Use momentum conservation + energy conservation.
+
+**Q6.** Prove that in an elastic collision in 2D, if one particle is initially at rest and masses are equal, the two particles move at 90° after the collision.
+
+**Q7.** A chain of length $L$ and mass $M$ lies coiled on a table. One end is lifted vertically at constant speed $v$. Find the force required to lift the chain at time $t$ (when a length $x = vt$ is hanging).
+
+**Q8.** A particle moves under force $F = -kx + \alpha x^3$. Sketch the potential energy curve and identify stable/unstable equilibria for $k, \alpha > 0$.
+
+**Q9.** In a ballistic pendulum, bullet mass $m$ = 10 g, block mass $M$ = 990 g, string $L$ = 1.5 m. After impact, pendulum swings to max angle 37°. Find bullet speed. ($g = 10$ m/s², $\cos37° = 0.8$)
+
+**Q10.** A variable power source $P(t) = P_0(1 - t/T)$ accelerates a mass $m$ from rest (no friction). Find speed at $t = T/2$.
+
+---
+
+## SECTION 15 — PYQ Analysis
+
+---
+
+### JEE Main Trends (2019–2024)
+
+| Topic | Frequency | Common Question Type |
+|-------|-----------|---------------------|
+| Work–energy theorem with friction | Very High | Numerical (direct formula) |
+| Spring PE + block problems | Very High | $\frac{1}{2}kx^2$ calculations |
+| Power of engine / motor | High | $P = Fv$ or efficiency |
+| Elastic/inelastic collision velocities | High | Formula application |
+| Work by variable force (integration) | Medium | Definite integral calculation |
+| Conservation of energy (incline, pendulum) | Medium | $mgh = \frac{1}{2}mv^2$ |
+| Coefficient of restitution | Medium | Conceptual + Numerical |
+| Ballistic pendulum | Low–Medium | Combination of momentum + energy |
+
+---
+
+### JEE Advanced Trends (2019–2024)
+
+| Topic | Frequency | Format |
+|-------|-----------|--------|
+| Potential energy curve analysis | Very High | Multi-correct / Graph-based |
+| Work–energy theorem in complex systems | High | Multi-step numerical |
+| Elastic collision + secondary collision | Medium | Multi-correct / Integer |
+| Spring-block with friction on incline | High | Paragraph / Integer |
+| Power + acceleration analysis | Medium | Multi-correct |
+| Energy methods in rotation (combined) | Very High | Paragraph |
+
+**JEE Advanced Key Pattern:** Work–energy problems here almost never test plain formulas. They test whether you can: (1) correctly identify which forces do work, (2) handle variable forces and non-trivial paths, (3) combine energy methods with momentum and equilibrium analysis.
+
+---
+
+## SECTION 16 — Final Revision Module
+
+---
+
+### Complete Formula Sheet
+
+<Formula label="Work, Power & Energy — Master Formula Sheet">
+
+**Work:**
+
+$W = Fd\cos\theta = \vec{F}\cdot\vec{d}$
+
+$W_{variable} = \int F\, dx$ (area under $F$–$x$ graph)
+
+$W_{spring} = \frac{1}{2}kx_1^2 - \frac{1}{2}kx_2^2$
+
+$W_{gravity} = mg(h_1 - h_2)$
+
+**Work–Energy Theorem:** $W_{net} = \Delta KE = \frac{1}{2}mv_2^2 - \frac{1}{2}mv_1^2$
+
+**Kinetic Energy:** $KE = \frac{1}{2}mv^2 = p^2/(2m)$
+
+**Potential Energy:** $F = -dU/dx$ ; $W_{cons} = -\Delta U$
+
+$U_{gravity} = mgh$ ; $U_{spring} = \frac{1}{2}kx^2$ ; $U_{gravity,large} = -GMm/r$
+
+**Mechanical Energy Conservation** (no friction): $KE_i + U_i = KE_f + U_f$
+
+**With friction:** $\Delta E_{mech} = W_{nc} = -f_k d$
+
+**Power:** $P = dW/dt = \vec{F}\cdot\vec{v} = Fv\cos\theta$
+
+$v_{max}$ of vehicle $= P/f_{friction}$
+
+**Collision — Momentum:** $m_1u_1 + m_2u_2 = m_1v_1 + m_2v_2$ (always)
+
+**Elastic 1D:** $v_1 = \frac{(m_1-m_2)u_1 + 2m_2u_2}{m_1+m_2}$ ; $v_2 = \frac{(m_2-m_1)u_2 + 2m_1u_1}{m_1+m_2}$
+
+**Perfectly inelastic:** $v = (m_1u_1 + m_2u_2)/(m_1+m_2)$
+
+**$\Delta KE$ in perfectly inelastic:** $\frac{m_1m_2(u_1-u_2)^2}{2(m_1+m_2)} = \frac{\mu u_{rel}^2}{2}$
+
+**Coefficient of restitution:** $e = \frac{v_2 - v_1}{u_1 - u_2}$ ; Bounce height: $h' = e^2 h$
+
+**Ballistic pendulum:** $v_{bullet} = \frac{m+M}{m}\sqrt{2gH}$
+
+**Spring compressed, blocks released:** $v_2 = \sqrt{\frac{2E_0 m_1}{m_2(m_1+m_2)}}$
+
+**Escape velocity:** $v_{esc} = \sqrt{2gR} = \sqrt{2GM/R}$
+
+</Formula>
+
+---
+
+### Concept Map
+
+**Work, Power & Energy**
+
+$W = \vec{F}\cdot\vec{d}$ → **Work–Energy Theorem**: $W_{net} = \Delta KE$
+
+↓ Split forces:
+
+$W_{conservative} = -\Delta PE$ → leads to **Conservation of Mechanical Energy**
+
+$W_{non-conservative}$ (friction) → thermal energy, $\Delta E_{mech} = W_{nc}$
+
+↓ Rate of doing work:
+
+**Power** $P = \vec{F}\cdot\vec{v}$ → maximum speed when $P = f\times v$
+
+↓ Collisions (momentum + energy):
+
+Elastic ($e=1$): KE conserved | Inelastic ($e<1$): KE partially lost | Perfectly inelastic ($e=0$): max KE loss
+
+---
+
+### Last-Minute Tips
+
+<Callout type="tip">
+**5 Power Techniques**
+
+1. **Work–energy shortcut:** When a multi-step problem asks for speed at some point, don't track forces throughout — just compute total work done by all forces between start and end, then apply $W_{net} = \Delta KE$.
+
+2. **Potential energy route:** Identify conservative forces → compute $\Delta PE$ → use $\Delta KE = -\Delta PE$ (if no friction). Especially powerful for springs + gravity combined.
+
+3. **Collision split:** In ballistic pendulum and similar: treat the collision (momentum conserved) and the subsequent motion (energy conserved) as two separate steps — NEVER mix them.
+
+4. **$F$–$x$ graph area:** In JEE problems, variable force work is often tested via graphs. The area under the curve is $W$ — including sign (area below $x$-axis = negative work).
+
+5. **Reduced mass shortcut:** Maximum KE loss in perfectly inelastic collision = $\frac{1}{2}\mu u_{rel}^2$, where $\mu = m_1m_2/(m_1+m_2)$. Fastest way to compute in MCQ.
+</Callout>
+
+<Callout type="warning">
+**3 Classic JEE Traps**
+
+1. **Bullet-block problem:** When bullet embeds in block, apply momentum conservation first (instantaneous), then energy for subsequent motion. Using energy for the collision itself gives wrong answer because energy is not conserved in an inelastic collision.
+
+2. **Spring on incline — height of compression:** If block compresses spring by $x$ while sliding down an incline, the block's height also decreases by $x\sin\theta$ during compression. Include this height change in energy conservation.
+
+3. **Equal-mass elastic collision:** If $m_1 = m_2$ and both are moving, velocities **exchange**: $v_1' = u_2$, $v_2' = u_1$. Not "both keep their velocities" and not "both reverse." This is an extremely common MCQ trap.
+</Callout>
+
+---
+
+*Module created by the Physics Mastery faculty team — Senior JEE Faculty · IIT Physics Professors · Olympiad Mentors*
+
+*For JEE Main · JEE Advanced · NEET · Physics Olympiad*

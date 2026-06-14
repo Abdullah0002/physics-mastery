@@ -1,0 +1,147 @@
+---
+title: Sound Waves — Theory
+description: Speed of sound, organ pipes, resonance, beats, intensity, and musical scale for JEE & NEET.
+difficulty: MEDIUM
+tags: [sound, organ-pipes, resonance, beats, intensity, Doppler]
+---
+
+## 1. Nature of Sound
+
+Sound is a **longitudinal mechanical wave** — particles oscillate parallel to propagation direction. Requires a medium.
+
+**Speed of sound in a medium:**
+
+<Formula label="Speed of sound (general)">
+$$v = \sqrt{\frac{B}{\rho}}$$
+</Formula>
+
+where $B$ = bulk modulus, $\rho$ = density.
+
+---
+
+## 2. Speed of Sound in Air
+
+Newton assumed isothermal: $v = \sqrt{P/\rho}$. This underestimates.
+
+**Laplace's correction** (adiabatic propagation):
+
+<Formula label="Laplace's Formula">
+$$v = \sqrt{\frac{\gamma P}{\rho}} = \sqrt{\frac{\gamma RT}{M}}$$
+</Formula>
+
+At 0°C in air: $v \approx 331\ \text{m/s}$.
+
+**Effect of temperature:** $v \propto \sqrt{T}$
+
+$$v_T \approx 331 + 0.61\,T_{°C} \quad (\text{m/s})$$
+
+**Effect of humidity:** Humid air is less dense → sound travels faster in humid air.
+
+---
+
+## 3. Organ Pipes
+
+### Open Pipe (both ends open)
+
+Both ends are **antinodes**. Standing wave condition:
+
+$$L = n\frac{\lambda}{2}, \quad f_n = \frac{nv}{2L}, \quad n = 1, 2, 3, \ldots$$
+
+All harmonics (fundamental + even + odd overtones) are present.
+
+<Formula label="Fundamental — Open Pipe">
+$$f_1 = \frac{v}{2L}$$
+</Formula>
+
+### Closed Pipe (one end closed)
+
+Closed end = **node**, open end = **antinode**.
+
+$$L = (2n-1)\frac{\lambda}{4}, \quad f_n = \frac{(2n-1)v}{4L}, \quad n = 1, 2, 3, \ldots$$
+
+Only **odd harmonics** present: $f_1, 3f_1, 5f_1, \ldots$
+
+<Formula label="Fundamental — Closed Pipe">
+$$f_1 = \frac{v}{4L}$$
+</Formula>
+
+<Callout type="important">
+Fundamental of **open pipe = twice** that of closed pipe of same length. Open pipe has richer tone (more harmonics).
+</Callout>
+
+### End Correction
+
+Real pipes have an antinode slightly beyond the open end. End correction $e \approx 0.6r$ (r = radius).
+
+Effective length: $L_{eff} = L + e$ (closed: $+e$; open: $+2e$).
+
+---
+
+## 4. Resonance with a Tuning Fork
+
+First resonance: $L_1 = \lambda/4$; second resonance: $L_2 = 3\lambda/4$.
+
+$$\lambda = 2(L_2 - L_1), \quad v = f\lambda = 2f(L_2 - L_1)$$
+
+---
+
+## 5. Beats
+
+Two sound sources with frequencies $f_1$ and $f_2$ ($|f_1-f_2|$ small):
+
+$$f_{beat} = |f_1 - f_2|$$
+
+Each beat = one loudness maximum per second.
+
+**Application:** Tuning instruments — when beat frequency → 0, the two sources are in tune.
+
+---
+
+## 6. Sound Intensity
+
+<Formula label="Intensity">
+$$I = \frac{P}{4\pi r^2} \quad \text{(point source, W/m}^2\text{)}$$
+</Formula>
+
+**Intensity level (decibels):**
+
+$$\beta = 10\log_{10}\frac{I}{I_0}, \quad I_0 = 10^{-12}\ \text{W/m}^2$$
+
+$I \propto A^2$: doubling amplitude quadruples intensity (+6 dB).
+
+---
+
+## 7. Doppler Effect (Sound)
+
+(See Waves chapter for full formula.)
+
+<Formula label="Doppler (sound)">
+$$f' = f\cdot\frac{v + v_O}{v - v_S}$$
+</Formula>
+
+**Sonic boom / Mach number:**
+
+$$M = \frac{v_{source}}{v_{sound}}$$
+
+When $M > 1$ (supersonic), shock waves form.
+
+---
+
+## 8. Reflection and Echo
+
+Minimum distance to hear a distinct echo: $d = vt/2$ where $t \geq 0.1\ \text{s}$ (human persistence of hearing).
+
+$$d_{min} = \frac{331\times0.1}{2} \approx 16.5\ \text{m}$$
+
+---
+
+## 9. Summary
+
+| Quantity | Formula |
+|---|---|
+| Speed in air (Laplace) | $\sqrt{\gamma RT/M}$ |
+| Open pipe fundamental | $v/(2L)$ |
+| Closed pipe fundamental | $v/(4L)$ |
+| Beat frequency | $\ \vert f_1 - f_2\ \vert $ |
+| Intensity level | $10\log(I/I_0)$ dB |
+| Doppler | $f(v+v_O)/(v-v_S)$ |

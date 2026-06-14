@@ -1,0 +1,49 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" font-family="Georgia,serif" font-size="13">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#374151"/></marker>
+  </defs>
+  <rect width="520" height="360" fill="#fafafa" rx="8"/>
+  <text x="260" y="22" text-anchor="middle" font-size="15" font-weight="bold" fill="#111">Velocity–Time (v-t) Graph</text>
+  <!-- axes -->
+  <line x1="60" y1="200" x2="490" y2="200" stroke="#374151" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="60" y1="320" x2="60" y2="40" stroke="#374151" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="495" y="204" font-size="13" fill="#374151">t</text>
+  <text x="50" y="36" font-size="13" fill="#374151">v</text>
+  <!-- Phase 1: acceleration (0 to t1=150) rise from 0 to v_max(120) -->
+  <polygon points="60,200 150,200 150,100 60,100" fill="#dbeafe" opacity="0.7"/>
+  <line x1="60" y1="200" x2="150" y2="100" stroke="#2563eb" stroke-width="2.5"/>
+  <!-- Phase 2: constant velocity (t1=150 to t2=300) at v=100 -->
+  <polygon points="150,100 300,100 300,200" fill="none"/>
+  <polygon points="150,100 300,100 300,200 150,200" fill="#dcfce7" opacity="0.7"/>
+  <line x1="150" y1="100" x2="300" y2="100" stroke="#16a34a" stroke-width="2.5"/>
+  <!-- Phase 3: deceleration (t2=300 to t3=400) drop from v=100 to 0 -->
+  <polygon points="300,100 400,100 400,200 300,200" fill="#fef9c3" opacity="0.8"/>
+  <line x1="300" y1="100" x2="400" y2="200" stroke="#f59e0b" stroke-width="2.5"/>
+  <!-- Phase 4: negative velocity (t3=400 to t4=470) -->
+  <polygon points="400,200 470,200 470,260 400,260" fill="#fee2e2" opacity="0.7"/>
+  <line x1="400" y1="200" x2="470" y2="260" stroke="#dc2626" stroke-width="2.5"/>
+  <!-- tick marks on t axis -->
+  <line x1="150" y1="196" x2="150" y2="204" stroke="#374151" stroke-width="1.5"/>
+  <text x="148" y="216" font-size="12" fill="#374151">t₁</text>
+  <line x1="300" y1="196" x2="300" y2="204" stroke="#374151" stroke-width="1.5"/>
+  <text x="298" y="216" font-size="12" fill="#374151">t₂</text>
+  <line x1="400" y1="196" x2="400" y2="204" stroke="#374151" stroke-width="1.5"/>
+  <text x="398" y="216" font-size="12" fill="#374151">t₃</text>
+  <!-- v_max tick -->
+  <line x1="56" y1="100" x2="64" y2="100" stroke="#374151" stroke-width="1.5"/>
+  <text x="20" y="104" font-size="12" fill="#374151">v_max</text>
+  <!-- labels for areas -->
+  <text x="100" y="165" text-anchor="middle" font-size="12" fill="#1d4ed8" font-style="italic">A₁</text>
+  <text x="225" y="165" text-anchor="middle" font-size="12" fill="#15803d" font-style="italic">A₂</text>
+  <text x="350" y="165" text-anchor="middle" font-size="12" fill="#b45309" font-style="italic">A₃</text>
+  <text x="435" y="235" text-anchor="middle" font-size="12" fill="#b91c1c" font-style="italic">A₄</text>
+  <!-- slope labels -->
+  <text x="85" y="140" font-size="11" fill="#2563eb">slope=a&gt;0</text>
+  <text x="195" y="90" font-size="11" fill="#16a34a">slope=0</text>
+  <text x="315" y="140" font-size="11" fill="#f59e0b">slope=a&lt;0</text>
+  <!-- legend -->
+  <rect x="54" y="276" width="410" height="70" fill="#fff" stroke="#e5e7eb" rx="5"/>
+  <text x="65" y="293" font-size="12" fill="#374151">Slope = instantaneous acceleration</text>
+  <text x="65" y="311" font-size="12" fill="#374151">Signed area (above axis) = positive displacement &#x2192; A₁+A₂+A₃ − A₄</text>
+  <text x="65" y="329" font-size="12" fill="#374151">Distance = |A₁|+|A₂|+|A₃|+|A₄| (all areas positive)</text>
+</svg>

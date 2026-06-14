@@ -1,0 +1,121 @@
+---
+title: Atoms — Formula Sheet
+description: Key formulas for Atoms for JEE & NEET.
+---
+
+## Rutherford Scattering
+
+<Formula label="Distance of Closest Approach">
+$$r_0 = \frac{1}{4\pi\varepsilon_0}\frac{2Ze^2}{KE_{\text{initial}}} = \frac{Ze^2}{2\pi\varepsilon_0 mv^2}$$
+</Formula>
+
+<Formula label="Impact Parameter">
+$$b = \frac{Ze^2}{4\pi\varepsilon_0 KE}\cot\!\left(\frac{\theta}{2}\right)$$
+</Formula>
+
+---
+
+## Bohr's Model of Hydrogen Atom
+
+<Formula label="Bohr's Quantisation Condition">
+$$m_e v_n r_n = \frac{nh}{2\pi} = n\hbar, \quad n = 1,2,3,\ldots$$
+</Formula>
+
+<Formula label="Radius of nth Orbit">
+$$r_n = \frac{n^2 a_0}{Z}, \quad a_0 = 0.529\ \text{Å} = 0.0529\ \text{nm}$$
+$$r_n = \frac{n^2 \times 0.529}{Z}\ \text{Å}$$
+</Formula>
+
+<Formula label="Speed of Electron in nth Orbit">
+$$v_n = \frac{Ze^2}{4\pi\varepsilon_0 n\hbar} = \frac{Z\alpha c}{n}$$
+$$v_n = \frac{v_1}{n}\cdot Z, \quad v_1 = 2.18\times10^6\ \text{m s}^{-1}$$
+$$\alpha = \frac{e^2}{4\pi\varepsilon_0\hbar c} \approx \frac{1}{137} \text{ (fine structure constant)}$$
+</Formula>
+
+<Formula label="Kinetic Energy of Electron">
+$$KE_n = \frac{1}{2}m_e v_n^2 = \frac{Z^2 E_1}{n^2}\ \text{(positive)}$$
+$$KE_1 = 13.6\ \text{eV (for H)}$$
+</Formula>
+
+<Formula label="Potential Energy of Electron">
+$$PE_n = -\frac{Ze^2}{4\pi\varepsilon_0 r_n} = -2KE_n = \frac{-Z^2 \times 27.2}{n^2}\ \text{eV}$$
+</Formula>
+
+<Formula label="Total Energy of Electron">
+$$E_n = KE_n + PE_n = -KE_n = -\frac{Z^2 E_1}{n^2} = -\frac{Z^2 \times 13.6}{n^2}\ \text{eV}$$
+$$E_1 = -13.6\ \text{eV (for H, ground state)}$$
+</Formula>
+
+<Formula label="Time Period of Revolution">
+$$T_n = \frac{2\pi r_n}{v_n} = T_1\frac{n^3}{Z^2}$$
+$$T_1 = 1.52\times10^{-16}\ \text{s (for H)}$$
+</Formula>
+
+<Formula label="Frequency of Revolution">
+$$f_n = \frac{v_n}{2\pi r_n} = \frac{Z^2}{n^3}f_1$$
+</Formula>
+
+<Callout type="important">
+For hydrogen-like atoms with atomic number Z: replace $e^2 \to Ze^2$ everywhere. $E_n = -13.6Z^2/n^2$ eV, $r_n = 0.529n^2/Z$ Å.
+</Callout>
+
+---
+
+## Spectral Lines — Rydberg Formula
+
+<Formula label="Rydberg Formula">
+$$\bar{\nu} = \frac{1}{\lambda} = R_\infty Z^2\left(\frac{1}{n_1^2} - \frac{1}{n_2^2}\right), \quad n_2 > n_1$$
+$$R_\infty = 1.097\times10^7\ \text{m}^{-1} = 1.097\times10^{-3}\ \text{nm}^{-1}$$
+</Formula>
+
+| Series | $n_1$ | Region |
+|--------|-------|--------|
+| Lyman | 1 | UV |
+| Balmer | 2 | Visible |
+| Paschen | 3 | IR |
+| Brackett | 4 | IR |
+| Pfund | 5 | IR |
+
+<Formula label="First Line of Balmer Series (H-α)">
+$$\lambda = \frac{36}{5R} = 656.3\ \text{nm (red)}$$
+</Formula>
+
+<Formula label="Series Limit (Shortest Wavelength in Series)">
+$$\frac{1}{\lambda_{\min}} = R\left(\frac{1}{n_1^2} - 0\right) = \frac{R}{n_1^2}$$
+</Formula>
+
+---
+
+## Number of Spectral Lines
+
+<Formula label="Number of Lines in Transition from Level n">
+$$N = \frac{n(n-1)}{2} \quad \text{(maximum possible spectral lines)}$$
+</Formula>
+
+<Formula label="Number of Lines Between Levels m and n (m > n)">
+$$N = \frac{(m-n)(m-n+1)}{2}$$
+</Formula>
+
+---
+
+## Ionisation and Excitation
+
+<Formula label="Ionisation Energy">
+$$E_{\text{ion}} = -E_1 = 13.6\ \text{eV (for H from ground state)}$$
+$$E_{\text{ion}} = \frac{13.6Z^2}{n^2}\ \text{eV (from nth level)}$$
+</Formula>
+
+<Formula label="Excitation Energy">
+$$E_{\text{exc}} = E_n - E_1 = 13.6\left(1 - \frac{1}{n^2}\right)\ \text{eV}$$
+</Formula>
+
+---
+
+## Atomic Models Summary
+
+| Model | Key Feature | Failure |
+|-------|-------------|---------|
+| Thomson (plum pudding) | Positive sphere, electrons embedded | Rutherford's experiment |
+| Rutherford | Dense +ve nucleus, electrons orbit | Spiral collapse, no discrete spectra |
+| Bohr | Quantised orbits, photon emission | Multi-electron atoms, Zeeman effect |
+| Quantum (Schrödinger) | Probability clouds, orbitals | — |

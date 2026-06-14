@@ -1,0 +1,153 @@
+---
+title: Electromagnetic Induction — Formula Sheet
+description: Key formulas for Electromagnetic Induction for JEE & NEET.
+---
+
+## Faraday's Laws of Electromagnetic Induction
+
+<Formula label="Faraday's First Law">
+$$\text{EMF is induced whenever magnetic flux through a circuit changes}$$
+</Formula>
+
+<Formula label="Faraday's Second Law (Induced EMF)">
+$$\varepsilon = -\frac{d\Phi_B}{dt} = -N\frac{d\Phi}{dt}$$
+$$\text{(N = number of turns)}$$
+</Formula>
+
+<Formula label="Magnetic Flux">
+$$\Phi_B = \int \vec{B}\cdot d\vec{A} = BA\cos\theta$$
+$$\text{(for uniform B: } \Phi = NBA\cos\theta\ \text{ for N-turn coil)}$$
+</Formula>
+
+---
+
+## Lenz's Law
+
+<Formula label="Lenz's Law">
+$$\varepsilon = -\frac{d\Phi}{dt} \quad \text{(negative sign encodes Lenz's Law)}$$
+$$\text{Induced current opposes the cause producing it}$$
+</Formula>
+
+---
+
+## Motional EMF
+
+<Formula label="Motional EMF (rod moving in magnetic field)">
+$$\varepsilon = Blv\sin\theta$$
+$$\varepsilon = Blv \quad \text{(when } v \perp B \perp l\text{)}$$
+</Formula>
+
+<Formula label="EMF of Rotating Rod (one end fixed)">
+$$\varepsilon = \frac{1}{2}B\omega L^2 = \frac{1}{2}BvL$$
+</Formula>
+
+<Formula label="EMF of Rotating Coil (N turns, area A)">
+$$\varepsilon = NBA\omega\sin(\omega t + \phi) = \varepsilon_0\sin(\omega t + \phi)$$
+$$\varepsilon_0 = NBA\omega$$
+</Formula>
+
+---
+
+## Self-Inductance
+
+<Formula label="Self-Inductance Definition">
+$$\Phi = LI, \quad L = \frac{N\Phi}{I}$$
+$$\varepsilon = -L\frac{dI}{dt}$$
+</Formula>
+
+<Formula label="Inductance of Solenoid">
+$$L = \mu_0 n^2 V = \frac{\mu_0 N^2 A}{l}$$
+$$\text{(n = turns per unit length, V = volume, N = total turns, l = length)}$$
+</Formula>
+
+<Formula label="Energy Stored in Inductor">
+$$U = \frac{1}{2}LI^2$$
+</Formula>
+
+<Formula label="Energy Density in Magnetic Field">
+$$u = \frac{B^2}{2\mu_0}$$
+</Formula>
+
+---
+
+## Mutual Inductance
+
+<Formula label="Mutual Inductance Definition">
+$$M = \frac{N_2\Phi_{21}}{I_1} = \frac{N_1\Phi_{12}}{I_2}$$
+$$\varepsilon_2 = -M\frac{dI_1}{dt}, \quad \varepsilon_1 = -M\frac{dI_2}{dt}$$
+</Formula>
+
+<Formula label="Mutual Inductance — Coaxial Solenoids">
+$$M = \frac{\mu_0 N_1 N_2 A}{l}$$
+</Formula>
+
+<Formula label="Coupling Coefficient">
+$$M = k\sqrt{L_1 L_2}, \quad 0 \leq k \leq 1$$
+$$\text{(k = 1 for perfect coupling)}$$
+</Formula>
+
+---
+
+## Inductors in Combination
+
+<Formula label="Inductors in Series (no mutual coupling)">
+$$L_{\text{eff}} = L_1 + L_2 + \cdots$$
+</Formula>
+
+<Formula label="Inductors in Parallel (no mutual coupling)">
+$$\frac{1}{L_{\text{eff}}} = \frac{1}{L_1} + \frac{1}{L_2} + \cdots$$
+</Formula>
+
+<Formula label="Inductors in Series with Mutual Coupling">
+$$L_{\text{eff}} = L_1 + L_2 \pm 2M \quad \text{(+ aiding, − opposing)}$$
+</Formula>
+
+---
+
+## RL Circuit
+
+<Formula label="Current Growth in RL Circuit">
+$$I(t) = \frac{\varepsilon}{R}\left(1 - e^{-t/\tau_L}\right), \quad \tau_L = \frac{L}{R}$$
+</Formula>
+
+<Formula label="Current Decay in RL Circuit">
+$$I(t) = I_0 e^{-t/\tau_L}$$
+</Formula>
+
+---
+
+## Transformer
+
+<Formula label="Transformer Equation">
+$$\frac{V_s}{V_p} = \frac{N_s}{N_p} = \frac{I_p}{I_s}$$
+</Formula>
+
+<Formula label="Efficiency of Transformer">
+$$\eta = \frac{V_s I_s}{V_p I_p} \times 100\%$$
+</Formula>
+
+<Formula label="Ideal Transformer Power">
+$$V_p I_p = V_s I_s \quad \text{(ideal)}$$
+</Formula>
+
+<Callout type="important">
+Step-up transformer: $N_s > N_p$, voltage increases but current decreases. Step-down: $N_s < N_p$.
+</Callout>
+
+---
+
+## LC Oscillations
+
+<Formula label="LC Circuit Natural Frequency">
+$$\omega_0 = \frac{1}{\sqrt{LC}}, \quad T = 2\pi\sqrt{LC}$$
+</Formula>
+
+<Formula label="Charge Oscillation">
+$$q(t) = Q_0\cos(\omega_0 t + \phi)$$
+$$I = -Q_0\omega_0\sin(\omega_0 t + \phi)$$
+</Formula>
+
+<Formula label="Total Energy Conservation">
+$$U_E + U_B = \frac{Q_0^2}{2C} = \frac{1}{2}LI_{\max}^2$$
+$$I_{\max} = Q_0\omega_0 = Q_0/\sqrt{LC}$$
+</Formula>

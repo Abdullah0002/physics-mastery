@@ -1,0 +1,132 @@
+---
+title: Nuclei — Theory
+description: Nuclear structure, binding energy, radioactivity, nuclear reactions, fission, and fusion for JEE & NEET.
+difficulty: HARD
+tags: [nuclei, radioactivity, binding-energy, fission, fusion, half-life, decay]
+---
+
+## 1. Nuclear Structure
+
+A nucleus has $Z$ protons and $N$ neutrons; mass number $A = Z + N$.
+
+**Nuclear radius:**
+
+<Formula label="Nuclear Radius">
+$$R = R_0 A^{1/3}, \quad R_0 \approx 1.2\ \text{fm} = 1.2\times10^{-15}\ \text{m}$$
+</Formula>
+
+**Nuclear density:** Nearly constant for all nuclei ($\approx 2.3\times10^{17}\ \text{kg/m}^3$). This is because $R \propto A^{1/3}$ and volume $\propto A$.
+
+---
+
+## 2. Mass Defect and Binding Energy
+
+**Mass defect:**
+
+$$\Delta m = Zm_p + Nm_n - M_{nucleus}$$
+
+where $M_{nucleus}$ = mass of the nucleus.
+
+<Formula label="Binding Energy">
+$$BE = \Delta m\cdot c^2 = \Delta m\times931.5\ \text{MeV/u}$$
+</Formula>
+
+<Formula label="Binding Energy per Nucleon">
+$$BE/A = \frac{\Delta m\cdot c^2}{A}$$
+</Formula>
+
+<Callout type="important">
+$BE/A$ peaks around iron (Fe, $A=56$) at ~8.8 MeV. Lighter nuclei gain energy by **fusion**; heavier by **fission** — both release energy.
+</Callout>
+
+---
+
+## 3. Nuclear Forces
+
+- Strong nuclear force: extremely strong, short-range ($\sim 1-3$ fm), charge-independent.
+- Overcomes electrostatic repulsion between protons.
+- Attractive for $r > 0.7$ fm; repulsive for $r < 0.7$ fm.
+
+---
+
+## 4. Radioactive Decay
+
+Three types:
+
+| Decay | Emission | Change in $Z$, $A$ |
+|---|---|---|
+| Alpha ($\alpha$) | ${}^4_2\text{He}$ nucleus | $Z-2$, $A-4$ |
+| Beta minus ($\beta^-$) | Electron + antineutrino | $Z+1$, $A$ unchanged |
+| Beta plus ($\beta^+$) | Positron + neutrino | $Z-1$, $A$ unchanged |
+| Gamma ($\gamma$) | High-energy photon | $Z$, $A$ unchanged |
+
+---
+
+## 5. Radioactive Decay Law
+
+<Formula label="Activity">
+$$N(t) = N_0\,e^{-\lambda t}, \quad A(t) = \lambda N(t) = A_0\,e^{-\lambda t}$$
+</Formula>
+
+<Formula label="Half-life">
+$$T_{1/2} = \frac{\ln 2}{\lambda} = \frac{0.693}{\lambda}$$
+</Formula>
+
+<Formula label="Mean life">
+$$\tau = \frac{1}{\lambda} = \frac{T_{1/2}}{0.693} = 1.44\,T_{1/2}$$
+</Formula>
+
+**Activity:** $A = \lambda N$ (SI unit: becquerel, Bq = 1 decay/s; also curie: $1\ \text{Ci} = 3.7\times10^{10}\ \text{Bq}$).
+
+---
+
+## 6. Successive Decay (Decay Series)
+
+If parent $A \to$ daughter $B \to$ stable $C$:
+
+**Secular equilibrium:** When $T_{1/2,A} \gg T_{1/2,B}$, activity of $A \approx$ activity of $B$ after long time.
+
+---
+
+## 7. Nuclear Fission
+
+Heavy nucleus splits into two lighter nuclei + neutrons + energy.
+
+$${}^{235}_{92}\text{U} + {}^1_0\text{n} \to {}^{141}_{56}\text{Ba} + {}^{92}_{36}\text{Kr} + 3{}^1_0\text{n} + \text{energy}$$
+
+**Energy released:** ~200 MeV per fission of ${}^{235}$U.
+
+**Chain reaction:** If $k\geq1$ (each fission triggers $\geq1$ more), self-sustaining reaction occurs. Critical mass controls this.
+
+---
+
+## 8. Nuclear Fusion
+
+Light nuclei combine to form heavier nucleus + energy.
+
+$${}^2_1\text{H} + {}^3_1\text{H} \to {}^4_2\text{He} + {}^1_0\text{n} + 17.6\ \text{MeV}$$
+
+Requires extremely high temperature (~$10^7$ K) to overcome Coulomb barrier — **thermonuclear reaction**.
+
+**Energy per nucleon** from fusion $>$ fission.
+
+---
+
+## 9. Q-value of a Nuclear Reaction
+
+$$Q = (m_{reactants} - m_{products})c^2$$
+
+If $Q > 0$: exothermic (energy released). If $Q < 0$: endothermic (energy required).
+
+---
+
+## 10. Summary
+
+| Quantity | Formula |
+|---|---|
+| Nuclear radius | $R_0 A^{1/3}$ |
+| Binding energy | $\Delta m \times 931.5$ MeV/u |
+| Decay law | $N = N_0 e^{-\lambda t}$ |
+| Half-life | $T_{1/2} = 0.693/\lambda$ |
+| Mean life | $\tau = 1/\lambda$ |
+| Q-value | $(m_i - m_f)c^2$ |

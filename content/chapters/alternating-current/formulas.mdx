@@ -1,0 +1,141 @@
+---
+title: Alternating Current — Formula Sheet
+description: Key formulas for Alternating Current for JEE & NEET.
+---
+
+## AC Fundamentals
+
+<Formula label="AC Voltage and Current">
+$$v = V_0\sin(\omega t + \phi_v), \quad i = I_0\sin(\omega t + \phi_i)$$
+$$V_0 = \text{peak voltage},\quad I_0 = \text{peak current}$$
+</Formula>
+
+<Formula label="RMS Values">
+$$V_{\text{rms}} = \frac{V_0}{\sqrt{2}}, \quad I_{\text{rms}} = \frac{I_0}{\sqrt{2}}$$
+$$\text{(for sinusoidal waveforms)}$$
+</Formula>
+
+<Formula label="Average Values (full cycle)">
+$$V_{\text{avg}} = 0 \quad \text{(over full cycle)}, \quad V_{\text{avg}} = \frac{2V_0}{\pi} \quad \text{(over half cycle)}$$
+</Formula>
+
+<Formula label="Form Factor and Peak Factor">
+$$k_f = \frac{V_{\text{rms}}}{V_{\text{avg, half}} } = \frac{\pi}{2\sqrt{2}} \approx 1.11 \quad \text{(sinusoidal)}$$
+$$k_p = \frac{V_0}{V_{\text{rms}}} = \sqrt{2} \approx 1.414$$
+</Formula>
+
+---
+
+## Impedance in AC Circuits
+
+<Formula label="Inductive Reactance">
+$$X_L = \omega L = 2\pi f L$$
+$$V_L = IX_L, \quad \text{voltage LEADS current by } 90°$$
+</Formula>
+
+<Formula label="Capacitive Reactance">
+$$X_C = \frac{1}{\omega C} = \frac{1}{2\pi f C}$$
+$$V_C = IX_C, \quad \text{voltage LAGS current by } 90°$$
+</Formula>
+
+<Formula label="Impedance of RLC Series Circuit">
+$$Z = \sqrt{R^2 + (X_L - X_C)^2}$$
+$$\tan\phi = \frac{X_L - X_C}{R}$$
+</Formula>
+
+<Callout type="tip">
+CIVIL mnemonic: In Capacitor (C), current (I) leads voltage (V); in inductor (L), current (I) lags voltage (V) — i.e., **CIV**IL.
+</Callout>
+
+---
+
+## Phasor Diagrams (RLC Series)
+
+<Formula label="Phase Angle">
+$$\phi = \arctan\left(\frac{X_L - X_C}{R}\right)$$
+$$\phi > 0 \text{: inductive; } \phi < 0 \text{: capacitive; } \phi = 0 \text{: resistive (resonance)}$$
+</Formula>
+
+<Formula label="Voltage Relations in RLC">
+$$V = \sqrt{V_R^2 + (V_L - V_C)^2}$$
+$$V_R = IR,\quad V_L = IX_L,\quad V_C = IX_C$$
+</Formula>
+
+---
+
+## Resonance in Series RLC
+
+<Formula label="Resonance Condition">
+$$X_L = X_C \implies \omega_0 L = \frac{1}{\omega_0 C} \implies \omega_0 = \frac{1}{\sqrt{LC}}$$
+$$f_0 = \frac{1}{2\pi\sqrt{LC}}$$
+</Formula>
+
+<Formula label="At Resonance">
+$$Z_{\min} = R, \quad I_{\max} = \frac{V}{R}, \quad \phi = 0$$
+$$V_L = V_C = Q\cdot V_R = QV$$
+</Formula>
+
+<Formula label="Quality Factor (Q-Factor)">
+$$Q = \frac{\omega_0 L}{R} = \frac{1}{\omega_0 CR} = \frac{1}{R}\sqrt{\frac{L}{C}}$$
+$$Q = \frac{f_0}{f_2 - f_1} = \frac{f_0}{\text{bandwidth}}$$
+$$\text{(sharper resonance peak for higher Q)}$$
+</Formula>
+
+<Formula label="Bandwidth">
+$$\Delta\omega = \frac{R}{L} = \frac{\omega_0}{Q}$$
+$$\omega_{1,2} = \omega_0 \mp \frac{R}{2L}$$
+</Formula>
+
+---
+
+## Parallel Resonance
+
+<Formula label="Parallel RLC Resonance">
+$$\omega_0 = \sqrt{\frac{1}{LC} - \frac{R^2}{L^2}}$$
+$$\text{At resonance: impedance is MAXIMUM (anti-resonance)}$$
+$$Z_{\max} = \frac{L}{CR}$$
+</Formula>
+
+---
+
+## Power in AC Circuits
+
+<Formula label="Instantaneous Power">
+$$p = vi = V_0 I_0 \sin(\omega t)\sin(\omega t - \phi)$$
+</Formula>
+
+<Formula label="Average Power">
+$$P_{\text{avg}} = V_{\text{rms}}I_{\text{rms}}\cos\phi = I_{\text{rms}}^2 R$$
+</Formula>
+
+<Formula label="Power Factor">
+$$\cos\phi = \frac{R}{Z} = \frac{P}{S}$$
+$$P = S\cos\phi, \quad Q_r = S\sin\phi, \quad S = V_{\text{rms}}I_{\text{rms}}$$
+$$\text{(P = real power [W], S = apparent power [VA], Q_r = reactive power [VAR])}$$
+</Formula>
+
+<Callout type="important">
+Pure inductor or pure capacitor: $\cos\phi = 0$, so average power = 0 (only reactive power). Pure resistor: $\cos\phi = 1$.
+</Callout>
+
+---
+
+## Wattless (Reactive) Component
+
+<Formula label="Wattless Current">
+$$I_{\text{wattless}} = I_{\text{rms}}\sin\phi$$
+$$\text{(This component does no work)}$$
+</Formula>
+
+---
+
+## Transformer
+
+<Formula label="Ideal Transformer">
+$$\frac{V_s}{V_p} = \frac{N_s}{N_p}, \quad \frac{I_s}{I_p} = \frac{N_p}{N_s}$$
+$$V_p I_p = V_s I_s \quad \text{(power conserved)}$$
+</Formula>
+
+<Formula label="Transformer Efficiency">
+$$\eta = \frac{P_{\text{out}}}{P_{\text{in}}} = \frac{V_s I_s}{V_p I_p} \times 100\%$$
+</Formula>

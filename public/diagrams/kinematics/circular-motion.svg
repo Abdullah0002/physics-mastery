@@ -1,0 +1,36 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 380" font-family="Georgia,serif" font-size="13">
+  <defs>
+    <marker id="arr-g" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#16a34a"/></marker>
+    <marker id="arr-r" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#dc2626"/></marker>
+    <marker id="arr-k" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#374151"/></marker>
+    <marker id="arr-b" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#7c3aed"/></marker>
+  </defs>
+  <rect width="420" height="380" fill="#fafafa" rx="8"/>
+  <text x="210" y="22" text-anchor="middle" font-size="15" font-weight="bold" fill="#111">Uniform Circular Motion</text>
+  <!-- circle -->
+  <circle cx="200" cy="200" r="120" stroke="#374151" stroke-width="2" fill="#eff6ff" opacity="0.6"/>
+  <!-- centre -->
+  <circle cx="200" cy="200" r="4" fill="#374151"/>
+  <text x="207" y="204" font-size="12" fill="#374151">O</text>
+  <!-- radius line to particle -->
+  <line x1="200" y1="200" x2="285" y2="115" stroke="#374151" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr-k)"/>
+  <text x="248" y="155" font-size="13" fill="#374151" font-style="italic">R</text>
+  <!-- particle -->
+  <circle cx="285" cy="115" r="8" fill="#2563eb"/>
+  <!-- velocity (tangent, perpendicular to radius, green) -->
+  <line x1="285" y1="115" x2="350" y2="150" stroke="#16a34a" stroke-width="3" marker-end="url(#arr-g)"/>
+  <text x="355" y="148" font-size="14" fill="#16a34a" font-weight="bold">v</text>
+  <!-- centripetal acceleration (toward center, red) -->
+  <line x1="285" y1="115" x2="218" y2="163" stroke="#dc2626" stroke-width="3" marker-end="url(#arr-r)"/>
+  <text x="216" y="110" font-size="13" fill="#dc2626">a_c = v&#178;/R</text>
+  <!-- angular velocity arc -->
+  <path d="M 200 100 A 100 100 0 0 1 290 148" stroke="#7c3aed" stroke-width="1.5" fill="none" stroke-dasharray="4,3" marker-end="url(#arr-b)"/>
+  <text x="258" y="94" font-size="13" fill="#7c3aed" font-style="italic">&#x3C9;</text>
+  <!-- perpendicularity indicator (small square) -->
+  <rect x="276" y="117" width="8" height="8" fill="none" stroke="#9ca3af" stroke-width="1.2" transform="rotate(-50,280,121)"/>
+  <!-- formulas box -->
+  <rect x="26" y="304" width="368" height="64" fill="#fff" stroke="#e5e7eb" rx="5"/>
+  <text x="38" y="322" font-size="13" fill="#374151">v = R&#x3C9; &nbsp;&nbsp; a_c = v&#178;/R = R&#x3C9;&#178; &nbsp;&nbsp; T = 2&#x3C0;/&#x3C9;</text>
+  <text x="38" y="342" font-size="13" fill="#16a34a">v &#x22A5; R (velocity &#x27A1; tangent to circle always)</text>
+  <text x="38" y="360" font-size="13" fill="#dc2626">a_c &#x27A1; toward centre &nbsp; (centripetal, not centrifugal)</text>
+</svg>

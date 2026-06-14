@@ -1,0 +1,1509 @@
+---
+title: "Newton's Laws of Motion — Complete Theory"
+description: "The most comprehensive Newton's Laws resource for JEE Main, JEE Advanced and NEET. From absolute basics to Olympiad level — force, inertia, FBD, friction, pseudo force, pulley systems, and constraint motion."
+difficulty: "HARD"
+tags: ["newton", "FBD", "friction", "tension", "pseudo-force", "pulley", "inertia", "momentum", "impulse", "normal-force", "wedge", "atwood"]
+---
+
+# Newton's Laws of Motion — Complete Theory
+
+*The most thorough dynamics module available — built for JEE Main · JEE Advanced · NEET · Physics Olympiad*
+
+---
+
+## SECTION 1 — The Big Picture of Newtonian Mechanics
+
+---
+
+### 1.1 What Is Force?
+
+Push a book across a table. Throw a ball. Pull a spring. Watch a magnet attract iron filings. In each case, something is causing a change — in motion, in shape, in speed, in direction.
+
+That "something" is a **force**.
+
+Force is a vector quantity that describes an **interaction between two objects**. It is not a property of a single object — it always involves at least two participants. When you push a wall, the wall pushes back on you with equal magnitude in the opposite direction.
+
+<Callout type="info">
+**Force: Working Definition**
+
+A force is an interaction between two objects that can cause acceleration, deformation, or both. Every force has a source object (the one exerting it) and a target object (the one receiving it).
+</Callout>
+
+Forces fall into two broad categories:
+
+| Category | Examples | Range |
+|----------|----------|-------|
+| **Contact forces** | Normal reaction, friction, tension, spring force | Short range (requires physical contact) |
+| **Field forces** | Gravity, electrostatic force, magnetic force | Long range (acts through empty space) |
+
+At the fundamental level, all forces in nature reduce to four interactions: gravitational, electromagnetic, strong nuclear, and weak nuclear. In JEE Physics, you work almost entirely with gravity, normal reaction, tension, friction, and spring forces — all of which are either gravitational or electromagnetic at the microscopic level.
+
+---
+
+### 1.2 Kinematics vs Dynamics
+
+**Kinematics** describes *how* objects move: position, velocity, acceleration, displacement. It asks: "What is happening?"
+
+**Dynamics** asks *why*: what forces cause changes in motion. It says: "A net force is required to change velocity."
+
+Newton's Laws are the foundation of dynamics. They connect the forces acting on an object to the resulting acceleration.
+
+---
+
+### 1.3 From Aristotle to Newton — A Historical Journey
+
+**Aristotle (384–322 BCE):** Believed that objects naturally come to rest. A force is required to keep something moving. This seems intuitive — a rolling ball does slow down. But this intuition is wrong because it ignores friction.
+
+**Galileo Galilei (1564–1642):** Performed inclined plane experiments. Realised that on a perfectly smooth surface, a ball would roll indefinitely. The "natural state" is *uniform motion*, not rest. This was revolutionary.
+
+**René Descartes (1596–1650):** Formulated the principle of inertia in words, close to what Newton would later state.
+
+**Isaac Newton (1643–1727):** Published *Principia Mathematica* in 1687. In this single work, he unified Galileo's terrestrial mechanics with Kepler's planetary laws, gave a mathematical framework for force and acceleration, and laid the foundation of classical mechanics that stood unchallenged for 226 years.
+
+<Callout type="tip">
+**Why Newton's Laws Transformed Physics**
+
+Before Newton, the heavens and the Earth were governed by separate rules. Newton showed that the same laws that govern a falling apple also govern the Moon's orbit. This unification was one of the greatest intellectual achievements in human history.
+</Callout>
+
+---
+
+### 1.4 Limitations of Newtonian Mechanics
+
+Newton's Laws are extraordinarily accurate for everyday situations but break down in three regimes:
+
+| Regime | When it fails | Correct theory |
+|--------|---------------|----------------|
+| Very high speeds | $v \approx c$ (speed of light) | Special Relativity |
+| Very small scales | Atomic, subatomic | Quantum Mechanics |
+| Very strong gravity | Near black holes | General Relativity |
+
+For JEE, everything operates well within the Newtonian regime. However, understanding these limitations deepens conceptual clarity.
+
+---
+
+## SECTION 2 — Inertia
+
+---
+
+### 2.1 The Concept of Inertia
+
+Inertia is the **tendency of an object to resist any change in its state of motion**.
+
+It is not a force. It is a *property* — a measure of how stubbornly an object clings to its current state.
+
+Three types of inertia:
+
+**Inertia of Rest:** A body at rest tends to stay at rest.
+- *Example:* Passengers jerk backward when a stationary bus suddenly starts. The passengers resist the change from rest to motion.
+- *Example:* A coin on a card placed over a glass falls into the glass when the card is flicked away — the coin's inertia keeps it at rest while the card moves.
+
+**Inertia of Motion:** A body in uniform motion tends to continue with the same speed in the same direction.
+- *Example:* Passengers jerk forward when a moving bus brakes suddenly. Their bodies resist the change from motion to rest.
+- *Example:* A satellite in orbit continues orbiting because there is no friction in space to stop it.
+
+**Inertia of Direction:** A body in motion tends to continue in the same direction.
+- *Example:* Passengers tilt outward when a bus turns a corner. Their bodies resist the change in direction.
+- *Example:* Water droplets fly tangentially off a spinning wet umbrella.
+
+---
+
+### 2.2 Mass as the Measure of Inertia
+
+Not all objects resist changes equally. A cricket ball and a bowling ball, both at rest, both require force to move — but the bowling ball requires much more.
+
+**Mass is the quantitative measure of inertia.** The greater the mass, the greater the resistance to change in motion.
+
+<Callout type="important">
+**Key Distinction: Mass vs Weight**
+
+- **Mass** is the measure of inertia — an intrinsic property. It is a scalar and does not depend on location.
+- **Weight** is the gravitational force on an object: $W = mg$. It depends on $g$ and therefore on location.
+
+On the Moon, your mass is the same as on Earth, but your weight is $\dfrac{1}{6}$ of what it is on Earth.
+</Callout>
+
+---
+
+## SECTION 3 — Newton's First Law
+
+---
+
+### 3.1 Statement
+
+<Formula label="Newton's First Law">
+An object remains in its state of rest or of uniform motion in a straight line unless acted upon by a net external force.
+</Formula>
+
+Mathematically: If $\sum \vec{F} = \vec{0}$, then $\vec{a} = \vec{0}$ (i.e., $\vec{v}$ = constant).
+
+---
+
+### 3.2 Physical Meaning
+
+The First Law has two profound implications:
+
+1. **Definition of force:** A force is whatever is required to change an object's state of motion. If motion is unchanging, no net force is acting (even if individual forces are present and cancel out).
+
+2. **Existence of inertial frames:** The First Law defines a special class of reference frames — *inertial frames* — in which it holds. An inertial frame is one that is not accelerating.
+
+<Callout type="warning">
+**Common Misconception**
+
+Many students think: "A body moving with constant velocity has no force acting on it."
+
+This is **wrong**. A body moving with constant velocity has **no *net* force** acting on it. Many forces may be present — they just cancel. Example: A car moving at constant speed on a level road has engine thrust balanced by friction and air resistance.
+</Callout>
+
+---
+
+### 3.3 Inertial Frames of Reference
+
+A **reference frame** is a coordinate system with respect to which motion is measured.
+
+An **inertial frame** is one in which Newton's First Law holds — an object with no net force on it moves in a straight line at constant speed (or stays at rest).
+
+The ground is approximately an inertial frame for most JEE problems (it is actually non-inertial because Earth rotates, but the effect is negligible).
+
+A **non-inertial frame** is an accelerating frame. In such a frame, Newton's laws fail unless a "pseudo force" is introduced (see Section 12).
+
+---
+
+## SECTION 4 — Newton's Second Law
+
+---
+
+### 4.1 Derivation from Momentum
+
+Linear momentum is defined as:
+
+$$\vec{p} = m\vec{v}$$
+
+Newton's Second Law in its most general form states:
+
+$$\vec{F}_{net} = \frac{d\vec{p}}{dt}$$
+
+For **constant mass**:
+
+$$\vec{F}_{net} = \frac{d(m\vec{v})}{dt} = m\frac{d\vec{v}}{dt} = m\vec{a}$$
+
+<Formula label="Newton's Second Law (constant mass)">
+$$\vec{F}_{net} = m\vec{a}$$
+</Formula>
+
+<Step n={1}>
+Start from momentum: $\vec{p} = m\vec{v}$
+</Step>
+
+<Step n={2}>
+Differentiate with respect to time: $\dfrac{d\vec{p}}{dt} = \dfrac{d(m\vec{v})}{dt}$
+</Step>
+
+<Step n={3}>
+For constant mass: $= m\dfrac{d\vec{v}}{dt} = m\vec{a}$
+</Step>
+
+<Step n={4}>
+Setting equal to net force: $\vec{F}_{net} = m\vec{a}$
+</Step>
+
+---
+
+### 4.2 Physical Meaning
+
+- The **net force** (vector sum of all forces) determines acceleration.
+- Acceleration is **in the direction of the net force**.
+- Doubling the net force doubles the acceleration (for constant mass).
+- Doubling the mass halves the acceleration (for constant force).
+
+**Units:** $[F] = [m][a] = \text{kg} \cdot \text{m/s}^2 = \text{Newton (N)}$
+
+**Dimensions:** $[F] = MLT^{-2}$
+
+---
+
+### 4.3 Component Form
+
+Since $\vec{F} = m\vec{a}$ is a vector equation, it holds independently in each direction:
+
+$$F_x = ma_x \qquad F_y = ma_y \qquad F_z = ma_z$$
+
+This allows us to solve 2D and 3D problems by decomposing forces along convenient axes.
+
+---
+
+### 4.4 Variable Mass — Qualitative Discussion
+
+When mass changes with time (rocket ejecting fuel, chain falling on a table), the full form $\vec{F} = \dfrac{d\vec{p}}{dt}$ must be used. For a rocket:
+
+$$F_{thrust} = v_{exhaust} \cdot \left(-\frac{dm}{dt}\right)$$
+
+where $-\dfrac{dm}{dt}$ is the rate of mass ejection.
+
+---
+
+### 4.5 Graphical Interpretation
+
+For a body of constant mass:
+
+- **$F$ vs $a$ graph:** Straight line through origin with slope $m$
+- **$a$ vs $\frac{1}{m}$ graph (constant $F$):** Straight line through origin
+
+<Callout type="tip">
+**JEE Insight**
+
+The slope of an $F$ vs $a$ graph equals mass. If you see two lines with different slopes on the same graph, the steeper line corresponds to the larger mass.
+</Callout>
+
+---
+
+## SECTION 5 — Momentum
+
+---
+
+### 5.1 Definition and Physical Meaning
+
+<Formula label="Linear Momentum">
+$$\vec{p} = m\vec{v}$$
+</Formula>
+
+Momentum captures both *how much* mass is moving and *how fast* it is moving. A slow-moving truck and a fast-moving bullet can have the same momentum.
+
+**Units:** kg·m/s = N·s | **Dimensions:** $[p] = MLT^{-1}$ | **Direction:** Same as velocity
+
+---
+
+### 5.2 Momentum vs Kinetic Energy
+
+| Property | Momentum $\vec{p}$ | Kinetic Energy $K$ |
+|----------|--------------------|--------------------|
+| Type | Vector | Scalar |
+| Formula | $m\vec{v}$ | $\dfrac{1}{2}mv^2$ |
+| Units | kg·m/s | J |
+| Conserved in | All collisions (isolated system) | Only elastic collisions |
+| Relation | $K = \dfrac{p^2}{2m}$ | $p = \sqrt{2mK}$ |
+
+---
+
+### 5.3 Conservation of Momentum
+
+<Formula label="Conservation of Linear Momentum">
+If $\vec{F}_{net,external} = \vec{0}$, then $\vec{p}_{total} = \text{constant}$
+
+$$m_1\vec{v}_1 + m_2\vec{v}_2 = m_1\vec{v}_1' + m_2\vec{v}_2'$$
+</Formula>
+
+This holds for any isolated system regardless of the nature of internal forces — elastic, inelastic, or explosive.
+
+<Callout type="info">
+**Why Momentum is Conserved**
+
+From Newton's Third Law: $\vec{F}_{12} = -\vec{F}_{21}$
+
+Internal forces come in equal and opposite pairs. When you sum over the entire system, all internal forces cancel. So the total momentum changes only due to **external** forces.
+</Callout>
+
+---
+
+## SECTION 6 — Impulse
+
+---
+
+### 6.1 Derivation
+
+From Newton's Second Law: $\vec{F} = \dfrac{d\vec{p}}{dt}$, so $d\vec{p} = \vec{F}\,dt$
+
+Integrating over time interval $t_1$ to $t_2$:
+
+<Formula label="Impulse-Momentum Theorem">
+$$\vec{J} = \int_{t_1}^{t_2} \vec{F}\,dt = \Delta\vec{p} = \vec{p}_f - \vec{p}_i$$
+</Formula>
+
+For a **constant force**: $\vec{J} = \vec{F} \cdot \Delta t$
+
+---
+
+### 6.2 Force-Time Graph
+
+The **area under an $F$-$t$ graph equals the impulse**:
+
+$$J = \int F\,dt = \text{area under } F\text{-}t \text{ curve}$$
+
+Even if force varies with time, total impulse is the area. A triangular $F$-$t$ pulse of peak $F_0$ over time $\Delta t$ gives $J = \dfrac{1}{2}F_0\Delta t$.
+
+---
+
+### 6.3 Real-Life Applications
+
+**Airbags:** On collision, $\Delta p$ is fixed. Airbag increases $\Delta t$, dramatically reducing peak force $F = \Delta p / \Delta t$.
+
+**Cricket wicket-keeper:** Pulling hands backward increases $\Delta t$, reducing force on hands.
+
+**Landing on foam vs concrete:** Same $\Delta p$, but foam extends $\Delta t$, reducing peak force.
+
+<Callout type="tip">
+**JEE Formula**
+
+Average force during impact: $\bar{F} = \dfrac{\Delta p}{\Delta t} = \dfrac{m(v_f - v_i)}{\Delta t}$
+
+Be careful with signs — define positive direction first.
+</Callout>
+
+---
+
+## SECTION 7 — Newton's Third Law
+
+---
+
+### 7.1 Statement
+
+<Formula label="Newton's Third Law">
+For every action force, there is an equal and opposite reaction force. Forces always occur in pairs.
+
+$$\vec{F}_{A \to B} = -\vec{F}_{B \to A}$$
+</Formula>
+
+---
+
+### 7.2 Why Action and Reaction Do NOT Cancel
+
+This is the single most common misconception in the entire chapter.
+
+Action and reaction forces **act on different bodies**. They cannot be added together to find the net force on a single body.
+
+**Example:** A book rests on a table.
+- Earth pulls book down with weight $W = mg$ (acts **on book**)
+- Book pulls Earth up with $W' = mg$ (Newton's 3rd pair, acts **on Earth**)
+
+These act on **different objects** and do NOT cancel each other.
+
+What cancels the book's weight? The **normal reaction from the table** acting on the book upward. This is NOT a Newton's third law pair — it is a different force entirely.
+
+<Callout type="warning">
+**The Classic Trap**
+
+**Wrong:** "Weight and normal reaction are action-reaction pairs."
+
+**Correct:**
+- Weight (Earth pulls book) pairs with: book pulling Earth upward.
+- Normal reaction (table pushes book) pairs with: book pushing table downward.
+- Weight and normal reaction are equal and opposite but act on the SAME body. They balance under Newton's First Law, not Third Law.
+</Callout>
+
+---
+
+### 7.3 Identifying Newton's Third Law Pairs
+
+1. They act on **different bodies**
+2. **Equal in magnitude**, **opposite in direction**
+3. Same **type of force** (both gravitational, or both contact)
+4. **Simultaneous** — no time delay
+
+---
+
+### 7.4 Examples
+
+**Walking:** You push ground backward → Ground pushes you forward (this propels you).
+
+**Swimming:** You push water backward → Water pushes you forward.
+
+**Rocket propulsion:** Engine expels gas backward → Gas pushes rocket forward. Works perfectly in vacuum — no air needed.
+
+**Ball bouncing:** Ball pushes floor down → Floor pushes ball up (causing bounce).
+
+---
+
+## SECTION 8 — Free Body Diagrams
+
+---
+
+### 8.1 What Is a Free Body Diagram?
+
+A free body diagram (FBD) is an isolated diagram of a single body showing **all forces acting on that body only**. It is the most essential tool for applying Newton's laws.
+
+---
+
+### 8.2 Systematic Method
+
+<Step n={1}>
+**Isolate the body.** Draw the object separated from its surroundings (as a dot or box).
+</Step>
+
+<Step n={2}>
+**Identify every force ON that body.** Check for: gravity, normal force, tension, friction, applied force, spring force. Include only forces acting on this body.
+</Step>
+
+<Step n={3}>
+**Draw force vectors** from the body in correct directions, labelled with symbols ($W$, $N$, $T$, $f$, etc.).
+</Step>
+
+<Step n={4}>
+**Choose coordinate axes.** For inclined problems, tilt axes along and perpendicular to the incline.
+</Step>
+
+<Step n={5}>
+**Resolve all forces** into components along each axis.
+</Step>
+
+<Step n={6}>
+**Apply Newton's Second Law** along each axis: $\sum F_x = ma_x$, $\sum F_y = ma_y$.
+</Step>
+
+---
+
+### 8.3 FBD: Block on Inclined Plane
+
+<svg width="460" height="300" viewBox="0 0 460 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="fbdR" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#dc2626"/>
+    </marker>
+    <marker id="fbdG" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#16a34a"/>
+    </marker>
+    <marker id="fbdY" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#d97706"/>
+    </marker>
+  </defs>
+  <polygon points="40,250 400,250 400,42" fill="#e8f4f8" stroke="#334155" strokeWidth="2"/>
+  <path d="M 86,250 A 46,46 0 0,0 80,227" fill="none" stroke="#334155" strokeWidth="1.5"/>
+  <text x="90" y="242" fontSize="14" fill="#334155" fontStyle="italic">θ</text>
+  <rect x="189" y="118" width="46" height="30" rx="4" fill="#3b82f6" stroke="#1e40af" strokeWidth="2" transform="rotate(-30, 212, 133)"/>
+  <line x1="212" y1="133" x2="212" y2="215" stroke="#dc2626" strokeWidth="2.5" markerEnd="url(#fbdR)"/>
+  <text x="218" y="210" fontSize="13" fill="#dc2626" fontWeight="bold">mg</text>
+  <line x1="212" y1="133" x2="172" y2="64" stroke="#16a34a" strokeWidth="2.5" markerEnd="url(#fbdG)"/>
+  <text x="150" y="58" fontSize="13" fill="#16a34a" fontWeight="bold">N</text>
+  <line x1="212" y1="133" x2="158" y2="164" stroke="#d97706" strokeWidth="1.8" strokeDasharray="5,3" markerEnd="url(#fbdY)"/>
+  <text x="84" y="168" fontSize="11" fill="#d97706">mg sin θ</text>
+  <line x1="212" y1="133" x2="246" y2="192" stroke="#d97706" strokeWidth="1.8" strokeDasharray="5,3" markerEnd="url(#fbdY)"/>
+  <text x="250" y="200" fontSize="11" fill="#d97706">mg cos θ</text>
+  <text x="40" y="288" fontSize="12" fill="#64748b">FBD: weight resolved into mg sin θ (down the incline) and mg cos θ (into the surface)</text>
+</svg>
+
+**Axis choice:** $x$ along incline (down = positive), $y$ perpendicular to incline.
+
+Along $y$ (no acceleration): $N = mg\cos\theta$
+
+Along $x$: $mg\sin\theta = ma \Rightarrow a = g\sin\theta$ (smooth incline)
+
+---
+
+## SECTION 9 — Common Forces
+
+---
+
+### 9.1 Normal Reaction
+
+**Origin:** Electromagnetic repulsion between atoms at the contact interface.
+
+**Direction:** Always **perpendicular to the contact surface**, pointing away from the surface into the body. It can only push, never pull.
+
+**Magnitude:** Determined by Newton's Second Law — it adjusts automatically.
+
+<Callout type="warning">
+**$N = mg$ is NOT always true**
+
+| Situation | Normal Force |
+|-----------|-------------|
+| Horizontal surface, no vertical acceleration | $N = mg$ |
+| Inclined plane (angle $\theta$) | $N = mg\cos\theta$ |
+| Elevator accelerating upward at $a$ | $N = m(g+a)$ |
+| Elevator accelerating downward at $a$ | $N = m(g-a)$ |
+| Force $F$ applied at angle $\alpha$ above horizontal | $N = mg - F\sin\alpha$ |
+</Callout>
+
+---
+
+### 9.2 Tension
+
+**Definition:** Force transmitted through a taut string, rope, or cable.
+
+**Ideal String Assumptions:**
+1. Massless (unless stated otherwise)
+2. Inextensible (does not stretch)
+3. Always taut
+
+For a **massless string**, tension is uniform throughout. (Any segment has $m = 0$, so net force = 0 → tension same at both ends.)
+
+For a **massive string** (mass $M$, length $L$) being pulled with force $F$:
+
+At distance $x$ from the free end:
+
+$$T(x) = \frac{F \cdot x}{L} \quad \text{(linear variation)}$$
+
+Tension is maximum at the pulled end ($= F$) and zero at the free end.
+
+---
+
+### 9.3 Spring Force — Hooke's Law
+
+<Formula label="Hooke's Law">
+$$F_{spring} = kx$$
+</Formula>
+
+where $k$ = spring constant (N/m), $x$ = deformation from natural length.
+
+The spring **opposes** deformation — it pulls back if stretched, pushes back if compressed.
+
+| Configuration | Effective Spring Constant |
+|---------------|--------------------------|
+| Springs in series | $\dfrac{1}{k_{eff}} = \dfrac{1}{k_1} + \dfrac{1}{k_2}$ |
+| Springs in parallel | $k_{eff} = k_1 + k_2$ |
+
+---
+
+## SECTION 10 — Friction
+
+---
+
+### 10.1 Origin of Friction
+
+Friction arises from electromagnetic interactions between atoms at the contact interface. Even apparently smooth surfaces have microscopic asperities (bumps) that interlock. Breaking these interlocks requires force.
+
+---
+
+### 10.2 Types of Friction
+
+**Static Friction ($f_s$):** Acts when there is no relative sliding. Self-adjusting:
+
+$$0 \leq f_s \leq \mu_s N$$
+
+**Limiting (Maximum) Static Friction:** $f_{s,max} = \mu_s N$
+
+**Kinetic Friction ($f_k$):** Acts during sliding:
+
+$$f_k = \mu_k N$$
+
+where $\mu_k < \mu_s$ always.
+
+---
+
+### 10.3 The Friction Graph
+
+<svg width="400" height="260" viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="fgAx" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#334155"/>
+    </marker>
+  </defs>
+  <line x1="50" y1="210" x2="370" y2="210" stroke="#334155" strokeWidth="2" markerEnd="url(#fgAx)"/>
+  <line x1="50" y1="210" x2="50" y2="25" stroke="#334155" strokeWidth="2" markerEnd="url(#fgAx)"/>
+  <text x="375" y="215" fontSize="12" fill="#334155">F (applied)</text>
+  <text x="12" y="28" fontSize="12" fill="#334155">f (friction)</text>
+  <line x1="50" y1="210" x2="185" y2="75" stroke="#3b82f6" strokeWidth="3"/>
+  <line x1="185" y1="75" x2="205" y2="95" stroke="#3b82f6" strokeWidth="2.5" strokeDasharray="4,3"/>
+  <line x1="205" y1="95" x2="355" y2="95" stroke="#dc2626" strokeWidth="3"/>
+  <line x1="185" y1="75" x2="185" y2="210" stroke="#94a3b8" strokeWidth="1" strokeDasharray="4,3"/>
+  <line x1="50" y1="75" x2="185" y2="75" stroke="#94a3b8" strokeWidth="1" strokeDasharray="4,3"/>
+  <line x1="50" y1="95" x2="205" y2="95" stroke="#94a3b8" strokeWidth="1" strokeDasharray="4,3"/>
+  <text x="10" y="79" fontSize="11" fill="#3b82f6">μₛN</text>
+  <text x="10" y="99" fontSize="11" fill="#dc2626">μₖN</text>
+  <text x="168" y="225" fontSize="10" fill="#64748b">F_lim</text>
+  <text x="85" y="155" fontSize="11" fill="#3b82f6" fontStyle="italic">Static (f = F)</text>
+  <text x="250" y="83" fontSize="11" fill="#dc2626" fontStyle="italic">Kinetic (const)</text>
+  <text x="60" y="250" fontSize="11" fill="#64748b">Fig: Friction vs Applied Force</text>
+</svg>
+
+| Applied Force Range | Friction | Motion |
+|--------------------|----------|--------|
+| $F < \mu_s N$ | $f = F$ (adjusts) | Stationary |
+| $F = \mu_s N$ | $f = \mu_s N$ (limiting) | About to slide |
+| $F > \mu_s N$ | $f_k = \mu_k N$ (constant) | Sliding |
+
+---
+
+### 10.4 Direction of Friction
+
+Friction always opposes **relative motion** (kinetic) or **tendency of relative motion** (static).
+
+<Callout type="warning">
+**Most Common Friction Mistake**
+
+Friction opposes relative motion between the two surfaces in contact — NOT the absolute motion of the body.
+
+Example: A block placed on an accelerating conveyor belt. If the belt moves faster than the block, friction on the block points **forward** (in the direction of belt motion) to accelerate the block to match belt speed.
+</Callout>
+
+---
+
+### 10.5 Angle of Friction and Angle of Repose
+
+**Angle of friction $\lambda$:** $\tan\lambda = \mu_s$
+
+**Angle of repose $\theta_r$:** Maximum incline angle at which block stays without sliding.
+
+$$\tan\theta_r = \mu_s$$
+
+Note: angle of friction = angle of repose. If $\theta > \theta_r$, block slides.
+
+---
+
+## SECTION 11 — Applications of Newton's Laws
+
+---
+
+### 11.1 Connected Blocks — Horizontal Surface
+
+**Two blocks $m_1$ and $m_2$, force $F$ on $m_1$, frictionless:**
+
+$$a = \frac{F}{m_1 + m_2}$$
+
+$$T = \frac{m_2 F}{m_1 + m_2}$$
+
+**With kinetic friction $\mu_k$:**
+
+$$a = \frac{F - \mu_k(m_1+m_2)g}{m_1+m_2}$$
+
+---
+
+### 11.2 Atwood Machine
+
+<svg width="300" height="350" viewBox="0 0 300 350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="atwUp" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#16a34a"/>
+    </marker>
+    <marker id="atwDn" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#dc2626"/>
+    </marker>
+  </defs>
+  <rect x="80" y="8" width="140" height="12" fill="#94a3b8" rx="2"/>
+  <circle cx="150" cy="48" r="20" fill="none" stroke="#334155" strokeWidth="3"/>
+  <circle cx="150" cy="48" r="5" fill="#334155"/>
+  <line x1="131" y1="48" x2="90" y2="135" stroke="#334155" strokeWidth="2"/>
+  <line x1="169" y1="48" x2="210" y2="135" stroke="#334155" strokeWidth="2"/>
+  <rect x="60" y="135" width="60" height="52" rx="6" fill="#3b82f6" stroke="#1e40af" strokeWidth="2"/>
+  <text x="90" y="166" textAnchor="middle" fontSize="15" fill="white" fontWeight="bold">m₁</text>
+  <rect x="180" y="135" width="60" height="40" rx="6" fill="#8b5cf6" stroke="#6d28d9" strokeWidth="2"/>
+  <text x="210" y="161" textAnchor="middle" fontSize="15" fill="white" fontWeight="bold">m₂</text>
+  <line x1="90" y1="135" x2="90" y2="95" stroke="#16a34a" strokeWidth="2.5" markerEnd="url(#atwUp)"/>
+  <text x="96" y="113" fontSize="12" fill="#16a34a" fontWeight="bold">T</text>
+  <line x1="210" y1="135" x2="210" y2="100" stroke="#16a34a" strokeWidth="2.5" markerEnd="url(#atwUp)"/>
+  <text x="216" y="118" fontSize="12" fill="#16a34a" fontWeight="bold">T</text>
+  <line x1="90" y1="187" x2="90" y2="230" stroke="#dc2626" strokeWidth="2.5" markerEnd="url(#atwDn)"/>
+  <text x="96" y="226" fontSize="12" fill="#dc2626">m₁g</text>
+  <line x1="210" y1="175" x2="210" y2="215" stroke="#dc2626" strokeWidth="2.5" markerEnd="url(#atwDn)"/>
+  <text x="216" y="212" fontSize="12" fill="#dc2626">m₂g</text>
+  <text x="40" y="260" fontSize="11" fill="#f59e0b">↓ a (heavier side)</text>
+  <text x="210" y="245" fontSize="11" fill="#f59e0b">↑ a</text>
+  <text x="55" y="335" fontSize="11" fill="#64748b">Atwood Machine (m₁ > m₂)</text>
+</svg>
+
+**FBD of $m_1$ (down positive):** $m_1 g - T = m_1 a$
+
+**FBD of $m_2$ (up positive):** $T - m_2 g = m_2 a$
+
+Adding both equations:
+
+<Formula label="Atwood Machine">
+$$a = \frac{(m_1 - m_2)g}{m_1 + m_2} \qquad T = \frac{2m_1 m_2 g}{m_1 + m_2}$$
+</Formula>
+
+<Callout type="info">
+**Limiting Cases**
+
+| Condition | Result |
+|-----------|--------|
+| $m_1 = m_2$ | $a = 0$, $T = mg$ |
+| $m_2 \to 0$ | $a \to g$, $T \to 0$ (free fall) |
+| $m_1 \gg m_2$ | $a \to g$, $T \to 2m_2 g$ |
+</Callout>
+
+---
+
+### 11.3 Elevator Problems
+
+<svg width="340" height="300" viewBox="0 0 340 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="elvUp" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#16a34a"/>
+    </marker>
+    <marker id="elvDn" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#dc2626"/>
+    </marker>
+    <marker id="elvAcc" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+  </defs>
+  <line x1="128" y1="8" x2="128" y2="55" stroke="#334155" strokeWidth="3"/>
+  <line x1="202" y1="8" x2="202" y2="55" stroke="#334155" strokeWidth="3"/>
+  <rect x="75" y="55" width="180" height="175" rx="8" fill="#f1f5f9" stroke="#334155" strokeWidth="3"/>
+  <circle cx="165" cy="110" r="14" fill="none" stroke="#3b82f6" strokeWidth="2.5"/>
+  <line x1="165" y1="124" x2="165" y2="172" stroke="#3b82f6" strokeWidth="2.5"/>
+  <line x1="140" y1="147" x2="190" y2="147" stroke="#3b82f6" strokeWidth="2.5"/>
+  <line x1="165" y1="172" x2="140" y2="205" stroke="#3b82f6" strokeWidth="2.5"/>
+  <line x1="165" y1="172" x2="190" y2="205" stroke="#3b82f6" strokeWidth="2.5"/>
+  <line x1="78" y1="216" x2="252" y2="216" stroke="#94a3b8" strokeWidth="2"/>
+  <line x1="132" y1="210" x2="132" y2="118" stroke="#16a34a" strokeWidth="3" markerEnd="url(#elvUp)"/>
+  <text x="115" y="116" fontSize="13" fill="#16a34a" fontWeight="bold">N</text>
+  <line x1="200" y1="150" x2="200" y2="205" stroke="#dc2626" strokeWidth="2.5" markerEnd="url(#elvDn)"/>
+  <text x="206" y="200" fontSize="13" fill="#dc2626" fontWeight="bold">mg</text>
+  <line x1="280" y1="130" x2="280" y2="72" stroke="#f59e0b" strokeWidth="3" markerEnd="url(#elvAcc)"/>
+  <text x="286" y="108" fontSize="13" fill="#f59e0b" fontWeight="bold">a</text>
+  <text x="50" y="292" fontSize="11" fill="#64748b">Elevator accelerating upward → N = m(g + a)</text>
+</svg>
+
+| Elevator State | Apparent Weight ($N$) |
+|----------------|----------------------|
+| Rest or uniform motion | $mg$ |
+| Accelerating upward ($a$) | $m(g+a)$ — feels heavier |
+| Decelerating upward ($a$ down) | $m(g-a)$ — feels lighter |
+| Accelerating downward ($a$) | $m(g-a)$ — feels lighter |
+| Free fall ($a = g$) | $0$ — weightlessness |
+
+---
+
+### 11.4 Inclined Plane
+
+**Smooth incline (block slides down):**
+
+$$a = g\sin\theta \qquad N = mg\cos\theta$$
+
+**Rough incline (block slides down):**
+
+$$a = g(\sin\theta - \mu_k\cos\theta) \qquad N = mg\cos\theta$$
+
+**Condition for block to stay stationary on rough incline:**
+
+$$\tan\theta \leq \mu_s$$
+
+---
+
+### 11.5 Pulley Systems — Constraint Method
+
+**Fixed pulley (massless, frictionless):** Changes direction of string only. Tension same on both sides. Speed of both string ends equal.
+
+**Movable pulley:** Both string segments support the pulley load. If movable pulley (with mass $M$) is in equilibrium: $2T = Mg$.
+
+**Constraint relation for movable pulley:**
+
+If movable pulley moves down by $x$, each string segment on either side shortens by $x$ → the free end of string moves $2x$.
+
+$$\boxed{a_{block} = 2a_{pulley}}$$
+
+---
+
+### 11.6 Wedge Problems
+
+For a block (mass $m$) on a frictionless wedge (mass $M$, angle $\theta$) on a frictionless floor:
+
+The normal force $N$ from wedge on block acts perpendicular to the incline surface.
+
+<Formula label="Wedge Acceleration">
+$$a_{wedge} = \frac{mg\sin\theta\cos\theta}{M + m\sin^2\theta}$$
+</Formula>
+
+**Strategy:** Use constraint (block stays on wedge surface) to relate accelerations, then apply Newton's laws to each body separately.
+
+---
+
+## SECTION 12 — Non-Inertial Frames and Pseudo Force
+
+---
+
+### 12.1 Why Newton's Laws Fail in Accelerating Frames
+
+Inside an accelerating car, a ball on the seat appears to accelerate backward with no force pushing it. Newton's First Law seems violated. The issue: you are in a **non-inertial frame**.
+
+---
+
+### 12.2 Pseudo Force
+
+To apply Newton's laws in a non-inertial frame, add a **pseudo force** to every object:
+
+<Formula label="Pseudo Force">
+$$\vec{F}_{pseudo} = -m\vec{a}_{frame}$$
+</Formula>
+
+Properties:
+- **Not a real force** (no physical agent exerts it)
+- Acts on every mass in the non-inertial frame
+- Always **opposite** to the frame's acceleration
+- **Proportional to mass** of the object
+
+---
+
+### 12.3 Elevator via Pseudo Force
+
+Elevator accelerating upward at $a$. In elevator's frame, apply pseudo force $ma$ downward on person:
+
+$$N - mg - ma = 0 \Rightarrow N = m(g+a) \checkmark$$
+
+Same result as ground frame — as it should be.
+
+---
+
+### 12.4 Block on Accelerating Wedge
+
+Block on wedge; wedge accelerates at $a$ horizontally. In wedge frame, pseudo force $ma$ acts horizontally (backward) on block.
+
+Resolving along incline (taking down-incline as positive):
+
+$$ma_{rel} = mg\sin\theta - ma\cos\theta$$
+
+The block's acceleration relative to wedge: $a_{rel} = g\sin\theta - a\cos\theta$
+
+<Callout type="tip">
+**Frame Selection Guide**
+
+- **Ground (inertial) frame:** Use when you need absolute velocities/positions or when nothing is at rest in a moving frame.
+- **Non-inertial (body) frame:** Use when a body is stationary relative to the accelerating frame — then pseudo force replaces the acceleration and equilibrium equations apply.
+</Callout>
+
+---
+
+## SECTION 13 — Advanced JEE Insights
+
+---
+
+### 13.1 Constraint Relations — Systematic Method
+
+<Step n={1}>
+**Identify all movable parts** — each block, each pulley that can move.
+</Step>
+
+<Step n={2}>
+**Write the total string length** (constant) as a sum of distances measured from fixed reference points.
+</Step>
+
+<Step n={3}>
+**Differentiate once** to get velocity relations.
+</Step>
+
+<Step n={4}>
+**Differentiate again** to get acceleration relations.
+</Step>
+
+**Example — Double Atwood Machine:**
+
+Fixed pulley P₁ at ceiling. String over P₁: left side has $m_1$, right side has movable pulley P₂. String over P₂: $m_2$ on one side, $m_3$ on the other.
+
+Let $y_1$, $y_2$, $y_3$ = positions of $m_1$, $m_2$, $m_3$ below ceiling; $y_{P2}$ = position of P₂.
+
+Constraint 1 (string over P₁): $y_1 + y_{P2} = L_1$ → $\dot{y}_1 + \dot{y}_{P2} = 0$ → $a_1 + a_{P2} = 0$
+
+Constraint 2 (string over P₂): $(y_2 - y_{P2}) + (y_3 - y_{P2}) = L_2$ → $a_2 + a_3 = 2a_{P2}$
+
+From constraint 1: $a_{P2} = -a_1$, so $a_2 + a_3 = -2a_1$.
+
+---
+
+### 13.2 Hidden Assumptions in Pulley Problems
+
+1. **Massless frictionless pulley:** Tension same on both sides. If pulley has mass, use torque equations.
+2. **Inextensible string:** Length constraint holds exactly.
+3. **String stays taut:** Verify $T > 0$. If $T < 0$, string went slack.
+4. **Surface is rigid:** Normal force $N \geq 0$. If $N < 0$, object left the surface.
+
+---
+
+### 13.3 Symmetry Arguments
+
+- Two identical masses in symmetric Atwood: $a = 0$ by symmetry, $T = mg$.
+- Force between equal masses connected symmetrically: both accelerate equally.
+- A symmetric structure (equal forces at equal angles) has zero net horizontal force.
+
+Always check symmetry before computing.
+
+---
+
+### 13.4 Choosing the Best Frame
+
+| Scenario | Best Frame |
+|----------|-----------|
+| Absolute velocity/position needed | Ground (inertial) |
+| Block stationary on accelerating truck | Truck frame + pseudo force |
+| Block sliding on accelerating wedge | Ground frame (constraint + Newton's laws) |
+| Rotating system | Rotating frame + pseudo (centrifugal) force |
+
+---
+
+### 13.5 Limiting Case Verification
+
+After solving, always verify:
+
+| Limit | Expected result |
+|-------|----------------|
+| $\theta \to 0$ (flat) | Incline formula → flat surface formula |
+| $m_2 \to 0$ (Atwood) | $a \to g$ |
+| $\mu \to 0$ (smooth) | Friction terms vanish |
+| $M \to \infty$ (massive object) | Acceleration $\to 0$ |
+
+---
+
+## SECTION 14 — Complete Error Analysis
+
+---
+
+| # | Mistake | Correct Approach |
+|---|---------|-----------------|
+| 1 | Drawing forces exerted BY the body in its own FBD | Include only forces exerted ON the body |
+| 2 | Assuming $N = mg$ always | $N$ is determined by Newton's 2nd Law each time |
+| 3 | Treating weight and normal reaction as Newton's 3rd pair | They are NOT — they act on the same body |
+| 4 | Adding accelerations of different bodies without constraint check | Use constraint equations to relate accelerations |
+| 5 | Forgetting friction on incline when "smooth" is not stated | Always read problem statement carefully |
+| 6 | Using $f_k = \mu_k mg$ on an incline | Use $f_k = \mu_k N = \mu_k mg\cos\theta$ |
+| 7 | Assuming tension is same through a massive pulley | True only for massless frictionless pulley |
+| 8 | Forgetting pseudo force in non-inertial frame | Add $-m\vec{a}_{frame}$ to every object in the frame |
+| 9 | Thinking static friction is always zero for stationary objects | Static friction is zero only when no horizontal force is applied |
+| 10 | Applying momentum conservation with external forces present | Check: net external force = 0 is required |
+| 11 | Thinking action-reaction forces cancel | They act on different bodies and never cancel for a single body |
+| 12 | Sign error in Atwood machine | Define positive direction consistently for each FBD (down for heavier, up for lighter) |
+| 13 | Forgetting to check if block actually slides before using $f_k$ | First check if $F_{applied} > f_{s,max}$; if not, block is stationary |
+| 14 | Applying $F = ma$ to entire system when parts have different accelerations | Use individual FBDs for each body |
+
+---
+
+## SECTION 15 — Solved Examples
+
+---
+
+### JEE Main Level Examples
+
+**M1.** A 5 kg block on a frictionless surface has 20 N applied horizontally. Find acceleration.
+
+**Solution:** $a = F/m = 20/5 = \mathbf{4 \ m/s^2}$
+
+---
+
+**M2.** A 10 kg block on a horizontal surface ($\mu_s = 0.4$, $\mu_k = 0.3$, $g = 10$ m/s²). Applied force = 30 N horizontal. Find friction and acceleration.
+
+**Solution:**
+$f_{s,max} = 0.4 \times 10 \times 10 = 40$ N. Since $30 < 40$, block does not move. $f_s = 30$ N, $a = 0$.
+
+---
+
+**M3.** Repeat M2 with 50 N applied.
+
+**Solution:**
+$50 > 40$ N → block slides. $f_k = 0.3 \times 100 = 30$ N.
+$$a = \frac{50 - 30}{10} = \mathbf{2 \ m/s^2}$$
+
+---
+
+**M4.** Blocks 3 kg and 5 kg connected on frictionless surface, 24 N on 5 kg block. Find $a$ and $T$.
+
+**Solution:**
+$a = 24/8 = 3$ m/s². FBD of 3 kg: $T = 3 \times 3 = \mathbf{9 \ N}$.
+
+---
+
+**M5.** Block 4 kg on smooth 30° incline. Find $a$ and $N$. ($g = 10$ m/s²)
+
+**Solution:**
+$a = g\sin 30° = 5$ m/s². $N = 4 \times 10 \times \cos 30° = 20\sqrt{3} \approx \mathbf{34.6 \ N}$.
+
+---
+
+**M6.** 60 kg person in elevator accelerating upward at 2 m/s². Apparent weight?
+
+**Solution:**
+$N = 60(10 + 2) = \mathbf{720 \ N}$
+
+---
+
+**M7.** 2 kg body moving at 10 m/s brought to rest in 0.5 s. Find braking force.
+
+**Solution:**
+$F = \Delta p / \Delta t = 2 \times 10 / 0.5 = \mathbf{40 \ N}$
+
+---
+
+**M8.** Atwood: $m_1 = 8$ kg, $m_2 = 4$ kg. Find $a$ and $T$.
+
+**Solution:**
+$$a = \frac{(8-4) \times 10}{12} = \frac{10}{3} \approx \mathbf{3.33 \ m/s^2}$$
+$$T = \frac{2 \times 8 \times 4 \times 10}{12} \approx \mathbf{53.3 \ N}$$
+
+---
+
+**M9.** Block 3 kg on rough surface ($\mu_k = 0.25$), 15 N applied. Find $a$.
+
+**Solution:**
+$f_k = 0.25 \times 3 \times 10 = 7.5$ N. $a = (15 - 7.5)/3 = \mathbf{2.5 \ m/s^2}$
+
+---
+
+**M10.** Bullet 10 g, 500 m/s enters wall, exits at 100 m/s in 0.01 s. Average resistive force?
+
+**Solution:**
+$\Delta p = 0.01(100 - 500) = -4$ kg·m/s. $F = -4/0.01 = \mathbf{400 \ N}$
+
+---
+
+**M11.** Block 5 kg on rough incline (37°, $\mu_k = 0.3$) slides down. Find $a$. ($g = 10$ m/s²)
+
+**Solution:**
+$N = 5 \times 10 \times 0.8 = 40$ N. $f_k = 12$ N. $mg\sin 37° = 30$ N.
+$$a = \frac{30 - 12}{5} = \mathbf{3.6 \ m/s^2}$$
+
+---
+
+**M12.** Block A (4 kg) on frictionless table, string over pulley to hanging block B (2 kg). Find $a$ and $T$.
+
+**Solution:**
+$m_B g - T = m_B a$ → $20 - T = 2a$ ...(i)
+$T = m_A a = 4a$ ...(ii)
+Adding: $20 = 6a$ → $a = 10/3$ m/s². $T = 40/3 \approx \mathbf{13.3 \ N}$
+
+---
+
+**M13.** Ball (0.5 kg): before impact $-20$ m/s, after $+30$ m/s, contact 0.01 s. Average force?
+
+**Solution:**
+$\Delta p = 0.5(30 - (-20)) = 25$ N·s. $F = 25/0.01 = \mathbf{2500 \ N}$
+
+---
+
+**M14.** Block 5 kg suspended by two strings at 30° and 60° with vertical. Find tensions.
+
+**Solution:**
+Horizontal: $T_1\sin 30° = T_2\sin 60°$ → $T_1 = T_2\sqrt{3}$
+
+Vertical: $T_1\cos 30° + T_2\cos 60° = 50$
+
+Substituting: $T_2\sqrt{3} \cdot \frac{\sqrt{3}}{2} + T_2 \cdot \frac{1}{2} = 50$ → $2T_2 = 50$ → $T_2 = 25$ N, $T_1 = 25\sqrt{3} \approx \mathbf{43.3 \ N}$
+
+---
+
+**M15.** Block 2 kg pulled on rough surface ($\mu_k = 0.3$) by force 10 N at 30° above horizontal. Find $a$. ($g = 10$ m/s²)
+
+**Solution:**
+$F_y = 10\sin 30° = 5$ N (up). $N = 20 - 5 = 15$ N. $f_k = 4.5$ N.
+$a = (10\cos 30° - 4.5)/2 = (8.66 - 4.5)/2 \approx \mathbf{2.08 \ m/s^2}$
+
+---
+
+**M16.** Three blocks A (2 kg), B (3 kg), C (5 kg) in contact on frictionless surface, 50 N on A. Find contact forces.
+
+**Solution:**
+$a = 50/10 = 5$ m/s². Force on C = $5 \times 5 = 25$ N. Force on (B+C) from A = $(3+5) \times 5 = \mathbf{40 \ N}$
+
+---
+
+**M17.** 2 kg particle: force $F = 3t^2$ N. Impulse in first 2 s. Find velocity at $t = 2$ s.
+
+**Solution:**
+$J = \int_0^2 3t^2\, dt = [t^3]_0^2 = 8$ N·s. The body starts from rest, so $\Delta p = J$ gives $v = J/m = 8/2 = \mathbf{4 \ m/s}$.
+
+---
+
+**M18.** 1200 kg car at 20 m/s stopped in 5 s. Braking force?
+
+**Solution:**
+$a = (0 - 20)/5 = -4$ m/s². $F = 1200 \times 4 = \mathbf{4800 \ N}$
+
+---
+
+**M19.** Box (5 kg) in elevator decelerating at 2 m/s² while going up. Apparent weight?
+
+**Solution:**
+Decelerating upward = accelerating downward. $N = 5(10 - 2) = \mathbf{40 \ N}$
+
+---
+
+**M20.** Blocks 2 kg and 3 kg connected by string on rough incline (37°, $\mu_k = 0.2$) and hanging pulley. 3 kg hangs, 2 kg on incline. Find $a$. ($g = 10$ m/s²)
+
+**Solution:**
+$N = 2 \times 10 \times 0.8 = 16$ N. $f_k = 0.2 \times 16 = 3.2$ N.
+
+FBD 3 kg: $30 - T = 3a$ ...(i)
+
+FBD 2 kg (up incline): $T - 2 \times 10 \times 0.6 - 3.2 = 2a$
+
+$T - 12 - 3.2 = 2a$ → $T - 15.2 = 2a$ ...(ii)
+
+Adding: $14.8 = 5a$ → $a \approx \mathbf{2.96 \ m/s^2}$
+
+---
+
+### JEE Advanced Level Examples
+
+---
+
+**A1.** Block A (mass $m$) on rough surface ($\mu$). Block B (mass $m$) on top. Force $F$ applied to A. Find max $F$ for them to move together.
+
+**Solution:**
+Together: $a = F/(2m)$
+
+For B not to slip on A: $f_s = ma = F/2 \leq \mu mg$
+
+$$F_{max} = 2\mu mg$$
+
+If $F > 2\mu mg$: B has $a_B = \mu g$, A has $a_A = (F - \mu mg)/m$.
+
+---
+
+**A2.** Chain (mass $M$, length $L$) on rough table ($\mu$). Maximum hanging fraction without sliding?
+
+**Solution:**
+Hanging fraction $f$, hanging mass $= fM$.
+
+For equilibrium: $fMg \leq \mu(1-f)Mg$
+
+$$f_{max} = \frac{\mu}{1 + \mu}$$
+
+---
+
+**A3.** Block on rough incline (angle $\theta$, $\mu$). Horizontal force $P$ applied. Find $P$ to just move block up.
+
+**Solution:**
+When about to move up, friction acts down.
+
+$N = mg\cos\theta + P\sin\theta$
+
+Along incline: $P\cos\theta = mg\sin\theta + \mu N = mg\sin\theta + \mu(mg\cos\theta + P\sin\theta)$
+
+$$P = \frac{mg(\sin\theta + \mu\cos\theta)}{\cos\theta - \mu\sin\theta} = mg\tan(\theta + \lambda)$$
+
+where $\lambda = \arctan\mu$ is the angle of friction.
+
+---
+
+**A4.** Block on rough incline ($\theta$, $\mu$). Force $P$ at angle $\phi$ above incline. Find $\phi$ that minimises $P$ to just move block up.
+
+**Solution:**
+$N = mg\cos\theta - P\sin\phi$
+
+Along incline: $P\cos\phi = mg\sin\theta + \mu N = mg\sin\theta + \mu(mg\cos\theta - P\sin\phi)$
+
+$P(\cos\phi + \mu\sin\phi) = mg(\sin\theta + \mu\cos\theta)$
+
+$$P = \frac{mg(\sin\theta + \mu\cos\theta)}{\cos\phi + \mu\sin\phi}$$
+
+To minimise $P$, maximise denominator $\cos\phi + \mu\sin\phi$:
+
+$\frac{d}{d\phi}(\cos\phi + \mu\sin\phi) = 0 \Rightarrow -\sin\phi + \mu\cos\phi = 0$
+
+$$\boxed{\phi = \arctan\mu = \lambda}$$
+
+Minimum force is applied at angle equal to the angle of friction above the incline.
+
+---
+
+**A5.** Double Atwood: fixed pulley P₁, hanging pulley P₂ (massless). Over P₂: $m_2$ and $m_3$. Over P₁: $m_1$ (left), P₂ (right). Find accelerations.
+
+**Solution:**
+Take upward as positive. Let $T_2$ be the tension in the string over the movable pulley P₂. Since P₂ is massless, the string over the fixed pulley P₁ has tension $T_1 = 2T_2$.
+
+**Constraints.** Over P₁, if $m_1$ accelerates up at $a_1$, then P₂ accelerates down at $a_1$. Let $a_0$ be the acceleration of $m_2$ relative to P₂; then $m_3$ has relative acceleration $-a_0$. The absolute accelerations are:
+
+$$a_{m_2} = -a_1 + a_0, \qquad a_{m_3} = -a_1 - a_0$$
+
+**Newton's second law** for each mass:
+
+$$2T_2 - m_1 g = m_1 a_1 \quad (1)$$
+$$T_2 - m_2 g = m_2(-a_1 + a_0) \quad (2)$$
+$$T_2 - m_3 g = m_3(-a_1 - a_0) \quad (3)$$
+
+Eliminating $T_2$ and $a_0$ from these three equations gives the acceleration of $m_1$:
+
+$$a_1 = g\cdot\frac{m_1(m_2+m_3) - 4m_2m_3}{m_1(m_2+m_3) + 4m_2m_3}$$
+
+---
+
+**A6.** Block A (2m) on smooth floor, Block B (m) on top of A ($\mu$ between A–B). Force $F$ on A (forward), force $F$ on B (backward, opposite). Find $a_A$ and $a_B$.
+
+**Solution:**
+Take the forward direction (direction of $F$ on A) as positive. The force $F$ on B points backward, so B tends to slide backward relative to A; kinetic friction on B from A therefore acts **forward**, and its reaction on A acts **backward**. With $N = mg$, the friction magnitude when slipping is $f = \mu mg$.
+
+**Block B** (forces: $-F$ from the applied force, $+f$ from friction):
+
+$$-F + \mu mg = m\,a_B \quad\Rightarrow\quad a_B = \mu g - \frac{F}{m}$$
+
+**Block A** (forces: $+F$ applied, $-f$ friction reaction):
+
+$$F - \mu mg = 2m\,a_A \quad\Rightarrow\quad a_A = \frac{F - \mu mg}{2m}$$
+
+**Consistency check:** for $F/m > \mu g$ we get $a_A > a_B$, so B does slide backward relative to A — confirming friction on B acts forward, as assumed.
+
+---
+
+**A7.** Find the tension in a rope of mass $m$ and length $L$ hanging from the ceiling, at a point distance $x$ from the ceiling.
+
+**Solution:**
+Mass below point at distance $x$ from ceiling = $\dfrac{L - x}{L} \cdot m$
+
+This mass hangs in equilibrium, supported by tension $T$:
+
+$$T = \frac{(L-x)}{L} \cdot mg = mg\left(1 - \frac{x}{L}\right)$$
+
+At $x = 0$ (ceiling): $T = mg$ ✓. At $x = L$ (bottom): $T = 0$ ✓
+
+---
+
+**A8.** A block (mass $M$) is on a wedge (mass $m$, angle $\theta$) on a smooth floor. All surfaces frictionless. Find the normal force between block and wedge.
+
+**Solution:**
+Let $a_w$ = wedge acceleration (rightward), $a_{rel}$ = block's acceleration relative to wedge (down the incline).
+
+Block horizontal equation: $-N\sin\theta = M(a_w - a_{rel}\cos\theta)$ ...(1)
+
+Block vertical equation: $N\cos\theta - Mg = M(-a_{rel}\sin\theta)$ ...(2)
+
+Wedge horizontal: $N\sin\theta = ma_w$ ...(3)
+
+From (3): $a_w = N\sin\theta/m$ ...(4)
+
+From (2): $a_{rel} = \frac{Mg - N\cos\theta}{M\sin\theta}$ ...(5)
+
+Substitute (4) and (5) into (1):
+
+$$-N\sin\theta = M\left(\frac{N\sin\theta}{m} - \frac{(Mg - N\cos\theta)\cos\theta}{\sin\theta}\right)$$
+
+After algebra:
+
+Using $(M+m)\sin^2\theta + m\cos^2\theta = M\sin^2\theta + m$, this simplifies to:
+
+$$\boxed{N = \frac{Mmg\sin\theta\cos\theta}{M\sin^2\theta + m}}$$
+
+---
+
+**A9.** A truck accelerates at $a$ m/s². A box (mass $m$) is on the truck floor ($\mu_s$). What is the maximum $a$ such that the box doesn't slip?
+
+**Solution:**
+In ground frame: friction from floor on box provides box's acceleration.
+
+For box not to slip: $f_s \leq \mu_s mg$
+
+$f_s = ma$ (required friction)
+
+Condition: $ma \leq \mu_s mg$
+
+$$a_{max} = \mu_s g$$
+
+---
+
+**A10.** Block of mass $m$ is on a rough incline ($\theta$, $\mu_s$). Find the range of horizontal force $P$ (applied to the block) for the block to remain in equilibrium.
+
+**Solution:**
+**Case 1: Block about to slide up** (friction acts down the incline)
+
+$N = mg\cos\theta + P\sin\theta$
+
+$P\cos\theta = mg\sin\theta + \mu_s(mg\cos\theta + P\sin\theta)$
+
+$P(\cos\theta - \mu_s\sin\theta) = mg(\sin\theta + \mu_s\cos\theta)$
+
+$P_{max} = mg\tan(\theta + \lambda)$
+
+**Case 2: Block about to slide down** (friction acts up the incline)
+
+$P\cos\theta + \mu_s N = mg\sin\theta$
+
+$P(\cos\theta + \mu_s\sin\theta) = mg(\sin\theta - \mu_s\cos\theta)$
+
+$P_{min} = mg\tan(\theta - \lambda)$ (only valid if $\theta > \lambda$; otherwise $P_{min} = 0$)
+
+**Range of $P$:**
+
+$$mg\tan(\theta - \lambda) \leq P \leq mg\tan(\theta + \lambda)$$
+
+---
+
+## SECTION 16 — Practice Problems
+
+---
+
+### JEE Main Practice Problems
+
+**P1.** A block of 5 kg on a frictionless surface. Forces 10 N east and 10 N north are applied simultaneously. Find magnitude and direction of acceleration.
+
+**P2.** A 4 kg body is acted on by two perpendicular forces 3 N and 4 N. Find acceleration.
+
+**P3.** A 2 kg block slides down a smooth 30° incline from rest. Find time to travel 5 m.
+
+**P4.** A 50 kg person in an elevator reads 600 N on a scale. Is the elevator accelerating up or down? Find magnitude of acceleration. ($g = 10$ m/s²)
+
+**P5.** A 1000 kg rocket has a thrust of 15,000 N. Find initial vertical acceleration. ($g = 10$ m/s²)
+
+**P6.** A bullet (20 g, 300 m/s) embeds in a 500 g stationary block. Find block's velocity.
+
+**P7.** In an Atwood machine, masses are 2 kg and 4 kg. Find velocity of masses 2 s after release.
+
+**P8.** A block (mass $m$) on a horizontal surface ($\mu_k = 0.3$) is connected by a string over a pulley to another block of the same mass hanging vertically. Find acceleration. ($g = 10$ m/s²)
+
+**P9.** A block of 3 kg rests on a rough floor ($\mu_s = 0.6$). Find minimum horizontal force to start motion.
+
+**P10.** A conveyor belt moves at 4 m/s. A 2 kg block is placed gently on it. $\mu_k = 0.3$. How long before block reaches belt speed? How far does it travel in this time?
+
+**P11.** A 70 kg man is in a lift accelerating downward at 3 m/s². Find apparent weight.
+
+**P12.** A force of 30 N acts on a 6 kg block at 60° above horizontal on a rough surface. $\mu_k = 0.2$. Find acceleration. ($g = 10$ m/s²)
+
+**P13.** A block of 10 kg on a 45° smooth incline. Find horizontal force to hold it in place.
+
+**P14.** A rocket ejects 10 kg/s of gas at 2000 m/s relative to rocket. Find thrust force.
+
+**P15.** A block slides down a rough incline (37°, $\mu_k = 0.4$). Find acceleration. ($g = 10$ m/s²)
+
+**P16.** Objects 3 kg and 5 kg collide head-on at 4 m/s and 2 m/s respectively. They stick together. Find final velocity.
+
+**P17.** A 10 kg block is on a 30° rough incline ($\mu_s = 0.4$). Find minimum force along incline (upward) to prevent sliding. ($g = 10$ m/s²)
+
+**P18.** A 2 kg block in an elevator accelerating up at 3 m/s² has an 8 N horizontal force applied. Find horizontal acceleration.
+
+**P19.** Two blocks (1 kg, 3 kg) connected by string on smooth floor. Force 12 N applied on 3 kg block (pulling away from 1 kg block). Find tension.
+
+**P20.** A block (5 kg) on rough floor ($\mu_k = 0.4$) is connected via string over a smooth pulley to a hanging block (3 kg). Find acceleration and tension. ($g = 10$ m/s²)
+
+---
+
+### JEE Advanced Practice Problems
+
+**Q1.** Block A (3 kg) on frictionless floor; Block B (2 kg) on top of A ($\mu_{AB} = 0.4$). Force $F$ applied horizontally to A. Find (a) max $F$ for no slipping, (b) accelerations if $F = 30$ N. ($g = 10$ m/s²)
+
+**Q2.** A block (mass $m$) rests on a rough plank (mass $M$) on a frictionless floor. $\mu$ between block and plank. Horizontal force $F$ on plank. Find (a) condition for no slipping, (b) accelerations when they slip.
+
+**Q3.** Three blocks in a pulley system: fixed pulley P₁ at ceiling, block $m_1$ hangs from left side of P₁'s string. Right side of P₁'s string supports movable pulley P₂ (massless). Masses $m_2$ and $m_3$ hang from the two sides of a string over P₂. Find all accelerations.
+
+**Q4.** Chain (mass $M$, length $L$) on rough table ($\mu_s = 0.35$). Find maximum fraction that can hang over the edge without sliding.
+
+**Q5.** A block is on a rough incline ($\theta = 45°$, $\mu = 0.5$). A horizontal force $P$ is applied. Find the range of $P$ for block to stay in equilibrium (block mass = 2 kg, $g = 10$ m/s²).
+
+**Q6.** Block A (5 kg) on smooth floor, Block B (3 kg) on top of A. $\mu_{AB} = 0.3$. Forces: $F_1 = 20$ N on A (forward), $F_2 = 10$ N on B (backward). Do they move together? If not, find accelerations. ($g = 10$ m/s²)
+
+**Q7.** A bead (mass $m$) on a smooth inclined rod (angle $\theta$ to vertical) rotated about vertical axis with angular speed $\omega$. Find equilibrium distance from bottom.
+
+**Q8.** A block of mass $m$ hangs from a string that passes over a smooth fixed pulley and is attached to a block of mass $M$ on a rough inclined plane (angle $\theta$, coefficient $\mu$). Find range of $m$ for system equilibrium.
+
+**Q9.** A truck accelerates at $3$ m/s². A box (60 kg, $\mu_s = 0.4$) is in the truck. Will it slip? Find friction on box. ($g = 10$ m/s²)
+
+**Q10.** Two blocks A (2 kg) and B (6 kg) are connected by a string over a pulley at the top of a rough incline. A is on the incline (30°, $\mu = 0.3$), B hangs vertically. Find acceleration and direction of motion. ($g = 10$ m/s²)
+
+---
+
+## SECTION 17 — PYQ Analysis
+
+---
+
+### JEE Main Trends (2019–2024)
+
+| Topic | Frequency | Typical Format |
+|-------|-----------|---------------|
+| Connected blocks + FBD | Very High | Single correct, numerical |
+| Atwood machine variants | High | Single correct |
+| Friction (static/kinetic) | High | Single correct, numerical |
+| Impulse-Momentum | Medium | Single correct |
+| Elevator problems | Medium | Single correct |
+| Pseudo force | Medium | Single correct |
+| Constraint motion (pulley) | Medium–High | Numerical |
+| Massive string tension | Low–Medium | Single correct |
+
+**Most Repeated JEE Main Pattern:** Two-block system (one on surface, one hanging) with friction — always requires individual FBDs.
+
+---
+
+### JEE Advanced Trends (2019–2024)
+
+| Topic | Frequency | Format |
+|-------|-----------|--------|
+| Multi-pulley constraint problems | High | Integer / Multi-correct |
+| Wedge + block systems | High | Numerical |
+| Block-on-block (friction) | High | Multi-correct |
+| Non-inertial frame analysis | Medium | Analytical |
+| Variable mass / chains | Medium | Multi-correct |
+| Symmetry + limiting cases | Medium | Paragraph-based |
+
+**JEE Advanced Key Insight:** Problems combine two or more concepts simultaneously. A wedge problem often involves both constraint motion AND the pseudo-force concept. A pulley problem often requires both constraint equations AND Newton's 3rd Law pairs.
+
+---
+
+### Important Concept Rankings
+
+| Rank | Concept | Marks Potential |
+|------|---------|----------------|
+| 1 | Free Body Diagram technique | Foundation for all problems |
+| 2 | $\vec{F}_{net} = m\vec{a}$ per body | Core equation |
+| 3 | Friction (direction + magnitude) | High-frequency in JEE Main |
+| 4 | Constraint equations | Essential for Advanced |
+| 5 | Pseudo force + non-inertial frame | Medium-high in Advanced |
+| 6 | Atwood machine and variants | Direct application |
+| 7 | Impulse-Momentum | Direct marks |
+
+---
+
+## SECTION 18 — Final Revision Module
+
+---
+
+### Complete Formula Sheet
+
+<Formula label="Newton's Laws — Master Formula Sheet">
+
+**Newton's First Law:** $\sum \vec{F} = 0 \Leftrightarrow \vec{a} = 0$
+
+**Newton's Second Law:** $\vec{F}_{net} = m\vec{a} = \dfrac{d\vec{p}}{dt}$
+
+**Newton's Third Law:** $\vec{F}_{AB} = -\vec{F}_{BA}$
+
+**Linear Momentum:** $\vec{p} = m\vec{v}$ ; dimensions $[MLT^{-1}]$
+
+**Impulse:** $\vec{J} = \Delta\vec{p} = \vec{F}_{avg}\Delta t = \displaystyle\int F\,dt$
+
+**Conservation of Momentum:** $\vec{F}_{ext} = 0 \Rightarrow \sum m_i\vec{v}_i = \text{const}$
+
+**Friction:** $f_s \leq \mu_s N$ ; $f_k = \mu_k N$ ; $\mu_k < \mu_s$
+
+**Angle of repose:** $\tan\theta_r = \mu_s$
+
+**Inclined plane:** $a = g(\sin\theta \mp \mu_k\cos\theta)$ ; $N = mg\cos\theta$
+
+**Atwood machine:** $a = \dfrac{(m_1 - m_2)g}{m_1 + m_2}$ ; $T = \dfrac{2m_1m_2g}{m_1+m_2}$
+
+**Elevator (upward $a$):** $N = m(g+a)$ ; **(downward $a$):** $N = m(g-a)$
+
+**Pseudo force:** $\vec{F}_{pseudo} = -m\vec{a}_{frame}$
+
+**Wedge acceleration (frictionless):** $a_W = \dfrac{mg\sin\theta\cos\theta}{M + m\sin^2\theta}$
+
+**Hooke's Law:** $F = kx$
+
+**Massive string tension at distance $x$ from pulled end:** $T(x) = \dfrac{F \cdot x}{L}$
+
+</Formula>
+
+---
+
+### Last-Minute Revision Tips
+
+<Callout type="tip">
+**5 Golden Rules — Newton's Laws**
+
+1. **Always draw FBDs** — one for each body. Never mix forces from different bodies.
+
+2. **Choose axes wisely** — along the incline (not horizontal/vertical) saves enormous calculation.
+
+3. **State Newton's 2nd Law explicitly** — write $\sum F = ma$ for each axis before substituting numbers.
+
+4. **Check limiting cases** — verify your formula with $\theta = 0$, $m = 0$, or $\mu = 0$.
+
+5. **Verify string tension is positive** — if $T < 0$, the string is slack and the setup changes.
+</Callout>
+
+<Callout type="warning">
+**3 Traps That Kill Marks in Exam**
+
+1. **Atwood tension trap:** Tension $T$ is NOT equal to $m_1g$ or $m_2g$. It lies between them: $m_2g < T < m_1g$.
+
+2. **Friction direction trap:** On a rough incline with an applied force, friction can be up or down the incline. Determine which way the block *tends* to move, then oppose that tendency.
+
+3. **Non-inertial frame trap:** Pseudo force acts on EVERY mass in the frame — including objects at rest relative to the frame. Don't forget it even for stationary objects.
+</Callout>
+
+<Callout type="info">
+**Concept Connections**
+
+Newton's Laws connect to almost every chapter in mechanics:
+- **Work-Energy Theorem:** Derived directly from $F = ma$
+- **Circular Motion:** Centripetal force is net force toward center ($F_{net} = mv^2/r$)
+- **Rotational Mechanics:** Torque is the rotational analogue of force ($\tau = I\alpha$)
+- **Gravitation:** $mg$ is the gravitational force; weightlessness when in free fall
+- **SHM:** Restoring force $F = -kx$ is Newton's 2nd Law applied to a spring
+</Callout>
+
+---
+
+*Module created by the Physics Mastery faculty team — Senior JEE Faculty · IIT Physics Professors · Olympiad Mentors*
+
+*For JEE Main · JEE Advanced · NEET · Physics Olympiad*

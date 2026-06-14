@@ -1,0 +1,107 @@
+---
+title: "From First Principles: Deriving the Equations of Motion"
+excerpt: "Most students memorise the three kinematic equations. Here is how to derive all three from a single definition — so you never need to memorise them again."
+category: "Content"
+tags: ["Kinematics", "Derivations", "First Principles", "Class 11"]
+publishedAt: "2026-04-08"
+---
+
+The three equations of motion are the backbone of kinematics. Most students memorise them. That is a mistake — because a derived formula is impossible to forget. Here is the full derivation starting from the definition of acceleration.
+
+## What We Start With
+
+**Assumption:** uniform acceleration $a$ (constant).
+
+**Definition of acceleration:**
+
+$$a = \frac{dv}{dt}$$
+
+This is the *only* equation we need. Everything else follows.
+
+## Deriving the First Equation: $v = u + at$
+
+Rearrange the definition:
+
+$$dv = a \, dt$$
+
+Integrate both sides. The velocity starts at $u$ (at $t = 0$) and ends at $v$ (at time $t$):
+
+$$\int_u^v dv = \int_0^t a \, dt$$
+
+Since $a$ is constant, it comes out of the integral:
+
+$$v - u = at$$
+
+$$\boxed{v = u + at}$$
+
+Done. This is the first equation.
+
+## Deriving the Second Equation: $s = ut + \frac{1}{2}at^2$
+
+Now use the definition of velocity:
+
+$$v = \frac{ds}{dt} \implies ds = v \, dt$$
+
+Substitute $v = u + at$:
+
+$$ds = (u + at) \, dt$$
+
+Integrate from $s = 0$ at $t = 0$ to $s = s$ at time $t$:
+
+$$\int_0^s ds = \int_0^t (u + at) \, dt$$
+
+$$s = \left[ ut + \frac{1}{2}at^2 \right]_0^t$$
+
+$$\boxed{s = ut + \frac{1}{2}at^2}$$
+
+## Deriving the Third Equation: $v^2 = u^2 + 2as$
+
+We want to eliminate $t$. From the first equation:
+
+$$t = \frac{v - u}{a}$$
+
+Substitute into the second equation:
+
+$$s = u \cdot \frac{v-u}{a} + \frac{1}{2}a \left(\frac{v-u}{a}\right)^2$$
+
+$$s = \frac{u(v-u)}{a} + \frac{(v-u)^2}{2a}$$
+
+Multiply through by $2a$:
+
+$$2as = 2u(v-u) + (v-u)^2$$
+
+$$2as = 2uv - 2u^2 + v^2 - 2uv + u^2$$
+
+$$2as = v^2 - u^2$$
+
+$$\boxed{v^2 = u^2 + 2as}$$
+
+## The Alternative Calculus Derivation
+
+For the third equation, there is an elegant alternative using the chain rule:
+
+$$a = \frac{dv}{dt} = \frac{dv}{ds} \cdot \frac{ds}{dt} = v\frac{dv}{ds}$$
+
+Therefore:
+
+$$v \, dv = a \, ds$$
+
+Integrate:
+
+$$\int_u^v v \, dv = \int_0^s a \, ds$$
+
+$$\frac{v^2 - u^2}{2} = as$$
+
+$$\boxed{v^2 = u^2 + 2as}$$
+
+This is the version preferred in JEE Advanced solutions because it is compact and general.
+
+## Why Derivation Matters
+
+If you know these derivations, you also know **when the equations apply**: only under constant acceleration. The moment acceleration becomes variable, these equations fail and you must use calculus directly — which is exactly what JEE Advanced tests.
+
+Understanding the proof tells you the limits of the result. That is why first-principles derivation is non-negotiable.
+
+---
+
+*Continue with projectile motion — the next step where the same three equations are applied independently in two directions simultaneously.*

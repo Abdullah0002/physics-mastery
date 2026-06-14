@@ -1,0 +1,141 @@
+---
+title: Electrostatics — Formula Sheet
+description: All key formulas for Electrostatics — Coulomb's law, fields, potential, Gauss's law, and capacitors.
+---
+
+## Fundamental Constants
+
+| Symbol | Value | Meaning |
+|---|---|---|
+| $e$ | $1.6 \times 10^{-19}$ C | Elementary charge |
+| $k$ | $9 \times 10^9$ N·m²·C⁻² | Coulomb constant |
+| $\varepsilon_0$ | $8.85 \times 10^{-12}$ C²·N⁻¹·m⁻² | Permittivity of free space |
+
+---
+
+## Coulomb's Law
+
+<Formula label="Coulomb's Force">
+$$F = k\frac{q_1 q_2}{r^2} = \frac{q_1 q_2}{4\pi\varepsilon_0 r^2}$$
+</Formula>
+
+---
+
+## Electric Field
+
+<Formula label="Field from a Point Charge">
+$$E = k\frac{Q}{r^2}$$
+</Formula>
+
+| Charge Distribution | $E$ |
+|---|---|
+| Infinite line (charge density $\lambda$) | $\dfrac{\lambda}{2\pi\varepsilon_0 r}$ |
+| Infinite plane (charge density $\sigma$) | $\dfrac{\sigma}{2\varepsilon_0}$ |
+| Outside sphere (charge $Q$, radius $R$) | $\dfrac{kQ}{r^2}$ |
+| Inside uniformly charged sphere | $\dfrac{kQr}{R^3}$ |
+| Just outside conductor surface | $\dfrac{\sigma}{\varepsilon_0}$ |
+| Inside conductor | $0$ |
+
+---
+
+## Gauss's Law
+
+<Formula label="Gauss's Law">
+$$\oint \vec{E}\cdot d\vec{A} = \frac{Q_{enc}}{\varepsilon_0}$$
+</Formula>
+
+---
+
+## Electric Potential
+
+<Formula label="Potential from Point Charge">
+$$V = k\frac{Q}{r}$$
+</Formula>
+
+<Formula label="E–V Relation">
+$$E = -\frac{dV}{dr}$$
+</Formula>
+
+<Formula label="Work done by external agent">
+$$W = q(V_f - V_i) = q\,\Delta V$$
+</Formula>
+
+---
+
+## Potential Energy
+
+<Formula label="Two Point Charges">
+$$U = k\frac{q_1 q_2}{r}$$
+</Formula>
+
+---
+
+## Electric Dipole
+
+<Formula label="Dipole Moment">
+$$p = q \cdot 2a$$
+</Formula>
+
+<Formula label="Axial Field">
+$$E_{axial} = \frac{2kp}{r^3}$$
+</Formula>
+
+<Formula label="Equatorial Field">
+$$E_{eq} = \frac{kp}{r^3}$$
+</Formula>
+
+<Formula label="Torque in Uniform Field">
+$$\tau = pE\sin\theta$$
+</Formula>
+
+<Formula label="Potential Energy of Dipole">
+$$U = -pE\cos\theta = -\vec{p}\cdot\vec{E}$$
+</Formula>
+
+---
+
+## Capacitance
+
+<Formula label="Capacitance Definition">
+$$C = \frac{Q}{V}$$
+</Formula>
+
+<Formula label="Parallel Plate (vacuum)">
+$$C = \frac{\varepsilon_0 A}{d}$$
+</Formula>
+
+<Formula label="Parallel Plate (dielectric κ)">
+$$C = \frac{\kappa\varepsilon_0 A}{d}$$
+</Formula>
+
+<Formula label="Energy Stored">
+$$U = \frac{1}{2}CV^2 = \frac{Q^2}{2C} = \frac{QV}{2}$$
+</Formula>
+
+<Formula label="Energy Density in Field">
+$$u = \frac{1}{2}\varepsilon_0 E^2$$
+</Formula>
+
+### Capacitor Combinations
+
+**Series:**
+$$\frac{1}{C_{eq}} = \frac{1}{C_1} + \frac{1}{C_2} + \cdots$$
+
+**Parallel:**
+$$C_{eq} = C_1 + C_2 + \cdots$$
+
+---
+
+## Quick Reference: Key Results
+
+| Result | Formula |
+|---|---|
+| Charge ratio on connected spheres | $q_1 : q_2 = r_1 : r_2$ |
+| Surface charge density ratio | $\sigma_1 : \sigma_2 = r_2 : r_1$ |
+| No field inside hollow conductor | $E_{inside} = 0$ |
+| Axial field = 2 × equatorial field | $E_{ax} = 2E_{eq}$ |
+| Force on conductor surface | $\frac{\sigma^2}{2\varepsilon_0}$ per unit area |
+
+<Callout type="tip">
+For JEE, always check whether a question involves a conductor (charge on surface, $E$ inside = 0) or an insulator (charge throughout the volume). The approach differs completely.
+</Callout>

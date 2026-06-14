@@ -1,0 +1,130 @@
+---
+title: Friction — Formula Sheet
+description: Key formulas for Friction for JEE & NEET.
+---
+
+## Types of Friction
+
+<Formula label="Static Friction (up to maximum)">
+$$f_s \leq \mu_s N$$
+</Formula>
+
+<Formula label="Maximum Static Friction (limiting friction)">
+$$f_{s,\max} = \mu_s N$$
+</Formula>
+
+<Formula label="Kinetic (Sliding) Friction">
+$$f_k = \mu_k N$$
+</Formula>
+
+<Formula label="Relationship between coefficients">
+$$\mu_s > \mu_k$$
+</Formula>
+
+<Callout type="important">
+Kinetic friction is independent of speed and area of contact (for standard JEE/NEET problems).
+</Callout>
+
+---
+
+## Angle of Friction and Angle of Repose
+
+<Formula label="Angle of Friction λ">
+$$\tan\lambda = \mu_s \implies \lambda = \arctan(\mu_s)$$
+</Formula>
+
+<Formula label="Resultant of Normal and Friction">
+$$F_{\text{resultant}} = \sqrt{N^2 + f^2} = \frac{N}{\cos\lambda}$$
+</Formula>
+
+<Formula label="Angle of Repose α">
+$$\tan\alpha = \mu_s \implies \alpha = \lambda$$
+</Formula>
+
+<Callout type="tip">
+The angle of repose equals the angle of friction. A block just starts to slip when the incline angle equals the angle of repose.
+</Callout>
+
+---
+
+## Inclined Plane
+
+<Formula label="Block at Rest on Incline — Friction condition">
+$$f = mg\sin\theta,\quad N = mg\cos\theta \quad (\theta \leq \alpha)$$
+</Formula>
+
+<Formula label="Acceleration Down Incline (kinetic friction)">
+$$a = g(\sin\theta - \mu_k\cos\theta)$$
+</Formula>
+
+<Formula label="Acceleration Up Incline (friction opposes motion)">
+$$a = -g(\sin\theta + \mu_k\cos\theta)$$
+</Formula>
+
+<Formula label="Minimum force to move block up incline">
+$$F_{\min} = mg\sin\theta + \mu_s mg\cos\theta = mg(\sin\theta + \mu_s\cos\theta)$$
+</Formula>
+
+<Formula label="Minimum force to push block at angle φ to horizontal">
+$$F_{\min} = \frac{\mu_s mg}{\sqrt{1+\mu_s^2}} = mg\sin\lambda \quad \text{(applied at angle }\lambda\text{ above horizontal)}$$
+</Formula>
+
+---
+
+## Pulling vs Pushing
+
+<Formula label="Normal Force while Pulling at angle θ">
+$$N = mg - F\sin\theta$$
+$$\implies f = \mu(mg - F\sin\theta)$$
+</Formula>
+
+<Formula label="Normal Force while Pushing at angle θ">
+$$N = mg + F\sin\theta$$
+$$\implies f = \mu(mg + F\sin\theta)$$
+</Formula>
+
+<Callout type="tip">
+Pulling is easier than pushing because pulling reduces the normal force and hence friction.
+</Callout>
+
+---
+
+## Two-Block Problems (Friction between blocks)
+
+<Formula label="Acceleration (no sliding between blocks — F applied to lower block m1)">
+$$a = \frac{F}{m_1 + m_2}, \quad f_{12} = \frac{m_2 F}{m_1 + m_2}$$
+</Formula>
+
+<Formula label="Condition for no sliding">
+$$f_{12} \leq \mu_s m_2 g \implies F \leq \mu_s(m_1 + m_2)g$$
+</Formula>
+
+<Formula label="When blocks slide relative to each other">
+$$a_1 = \frac{F - \mu_k m_2 g}{m_1},\quad a_2 = \mu_k g$$
+</Formula>
+
+---
+
+## Rolling Friction
+
+<Formula label="Rolling Friction Force">
+$$f_r = \mu_r N = \frac{\mu_r mg}{R} \cdot R = \mu_r mg$$
+$$\text{(where } \mu_r \text{ is coefficient of rolling friction, much smaller than } \mu_k\text{)}$$
+</Formula>
+
+<Formula label="Hierarchy of friction coefficients">
+$$\mu_r \ll \mu_k < \mu_s$$
+</Formula>
+
+---
+
+## Circular Motion with Friction
+
+<Formula label="Maximum speed on a circular road (no banking)">
+$$v_{\max} = \sqrt{\mu_s R g}$$
+</Formula>
+
+<Formula label="Minimum and Maximum speed on banked road with friction">
+$$v_{\min} = \sqrt{Rg\tan(\theta - \lambda)}, \quad v_{\max} = \sqrt{Rg\tan(\theta + \lambda)}$$
+$$\text{where } \tan\lambda = \mu_s$$
+</Formula>

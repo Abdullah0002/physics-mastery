@@ -1,0 +1,147 @@
+---
+title: Kinetic Theory of Gases — Theory
+description: Ideal gas law, kinetic theory assumptions, molecular speeds, degrees of freedom, and equipartition for JEE & NEET.
+difficulty: MEDIUM
+tags: [kinetic-theory, ideal-gas, rms-speed, equipartition, degrees-of-freedom]
+---
+
+## 1. Ideal Gas Law
+
+<Formula label="Ideal Gas Law">
+$$PV = nRT = Nk_BT$$
+</Formula>
+
+- $n$ = number of moles, $R = 8.314\ \text{J mol}^{-1}\text{K}^{-1}$
+- $N$ = number of molecules, $k_B = 1.38\times10^{-23}\ \text{J K}^{-1}$
+
+**Avogadro's number:** $N_A = 6.022\times10^{23}\ \text{mol}^{-1}$; $k_B = R/N_A$.
+
+---
+
+## 2. Assumptions of Kinetic Theory
+
+1. Gas consists of a large number of identical, point-sized molecules.
+2. Molecules are in constant random motion; no preferred direction.
+3. Collisions between molecules and with walls are **perfectly elastic**.
+4. No intermolecular forces except during collisions (instantaneous).
+5. Average kinetic energy is proportional to absolute temperature.
+
+---
+
+## 3. Pressure from Kinetic Theory
+
+<Formula label="Pressure of Ideal Gas">
+$$P = \frac{1}{3}\rho\overline{v^2} = \frac{1}{3}\frac{mN}{V}\overline{v^2}$$
+</Formula>
+
+where $\overline{v^2}$ = mean square speed.
+
+---
+
+## 4. Molecular Speeds
+
+| Speed | Formula | Numerical ratio |
+|---|---|---|
+| RMS speed | $v_{rms} = \sqrt{3RT/M} = \sqrt{3k_BT/m}$ | 1.732 |
+| Mean speed | $\bar{v} = \sqrt{8RT/\pi M}$ | 1.596 |
+| Most probable speed | $v_p = \sqrt{2RT/M}$ | 1.414 |
+
+(All proportional to $\sqrt{T/M}$.)
+
+<Callout type="important">
+$v_p < \bar{v} < v_{rms}$. The ratio is $v_p : \bar{v} : v_{rms} = \sqrt{2} : \sqrt{8/\pi} : \sqrt{3} \approx 1 : 1.13 : 1.22$.
+</Callout>
+
+---
+
+## 5. Kinetic Energy and Temperature
+
+<Formula label="Average KE per molecule">
+$$\overline{KE} = \frac{1}{2}m\overline{v^2} = \frac{3}{2}k_BT$$
+</Formula>
+
+<Formula label="Total internal energy (monatomic, N molecules)">
+$$U = N\cdot\frac{3}{2}k_BT = \frac{3}{2}nRT$$
+</Formula>
+
+---
+
+## 6. Degrees of Freedom (DoF)
+
+| Gas type | Translational | Rotational | Vibrational | Total $f$ (at room temp) |
+|---|---|---|---|---|
+| Monatomic (He, Ar) | 3 | 0 | 0 | 3 |
+| Diatomic (N₂, O₂) | 3 | 2 | 0 | 5 |
+| Polyatomic (non-linear, NH₃) | 3 | 3 | 0 | 6 |
+
+**Vibrational modes** contribute at high temperatures only (each vibrational mode = 2 DoF: KE + PE).
+
+---
+
+## 7. Law of Equipartition of Energy
+
+Each degree of freedom contributes $\frac{1}{2}k_BT$ of energy per molecule.
+
+<Formula label="Average energy per molecule">
+$$\overline{E} = \frac{f}{2}k_BT$$
+</Formula>
+
+<Formula label="Total internal energy">
+$$U = \frac{f}{2}nRT$$
+</Formula>
+
+---
+
+## 8. Specific Heats of Gases
+
+Using equipartition:
+
+<Formula label="Molar heat capacity at constant volume">
+$$C_V = \frac{f}{2}R$$
+</Formula>
+
+<Formula label="Molar heat capacity at constant pressure">
+$$C_P = C_V + R = \frac{f+2}{2}R$$
+</Formula>
+
+<Formula label="Ratio of heat capacities">
+$$\gamma = \frac{C_P}{C_V} = \frac{f+2}{f}$$
+</Formula>
+
+| Gas type | $f$ | $C_V$ | $C_P$ | $\gamma$ |
+|---|---|---|---|---|
+| Monatomic | 3 | $\frac{3}{2}R$ | $\frac{5}{2}R$ | 5/3 |
+| Diatomic | 5 | $\frac{5}{2}R$ | $\frac{7}{2}R$ | 7/5 |
+| Polyatomic | 6 | $3R$ | $4R$ | 4/3 |
+
+---
+
+## 9. Mean Free Path
+
+Average distance a molecule travels between successive collisions:
+
+<Formula label="Mean Free Path">
+$$\lambda = \frac{1}{\sqrt{2}\pi d^2 n}$$
+</Formula>
+
+where $d$ = molecular diameter, $n = N/V$ = number density.
+
+Using ideal gas: $\lambda = \frac{k_BT}{\sqrt{2}\pi d^2 P}$.
+
+---
+
+## 10. Dalton's Law of Partial Pressures
+
+For a mixture of ideal gases:
+
+$$P_{total} = P_1 + P_2 + P_3 + \cdots$$
+
+Each gas exerts pressure independently.
+
+---
+
+## 11. Graham's Law of Diffusion
+
+$$\frac{r_1}{r_2} = \sqrt{\frac{M_2}{M_1}} = \frac{v_{rms,1}}{v_{rms,2}}$$
+
+Lighter gas diffuses faster.

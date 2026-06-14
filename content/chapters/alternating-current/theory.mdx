@@ -1,0 +1,141 @@
+---
+title: Alternating Current — Theory
+description: AC circuits, phasors, impedance, resonance, power factor, and transformers for JEE & NEET.
+difficulty: HARD
+tags: [AC, impedance, resonance, power-factor, phasor, LCR]
+---
+
+## 1. AC Voltage and Current
+
+<Formula label="AC Voltage">
+$$V = V_0\sin(\omega t), \quad I = I_0\sin(\omega t + \phi)$$
+</Formula>
+
+**RMS values:**
+
+$$V_{rms} = \frac{V_0}{\sqrt{2}}, \quad I_{rms} = \frac{I_0}{\sqrt{2}}$$
+
+---
+
+## 2. AC Across Individual Elements
+
+### Resistor
+
+$V_R = IR$. Voltage and current **in phase**.
+
+### Inductor
+
+$$X_L = \omega L, \quad V_L = IX_L$$
+
+Current **lags** voltage by $90°$.
+
+### Capacitor
+
+$$X_C = \frac{1}{\omega C}, \quad V_C = IX_C$$
+
+Current **leads** voltage by $90°$.
+
+<Callout type="tip">
+Mnemonic: **CIVIL** — In a **C**apacitor, **I** leads **V**. In an Inductor (**L**), **V** leads **I**.
+</Callout>
+
+---
+
+## 3. Series LCR Circuit
+
+Impedance:
+
+<Formula label="Impedance">
+$$Z = \sqrt{R^2 + (X_L - X_C)^2}$$
+</Formula>
+
+<Formula label="Phase angle">
+$$\tan\phi = \frac{X_L - X_C}{R}$$
+</Formula>
+
+<Formula label="Current amplitude">
+$$I_0 = \frac{V_0}{Z}$$
+</Formula>
+
+---
+
+## 4. Phasor Diagram
+
+- $V_R$ along current direction (in phase).
+- $V_L$ leads current by $90°$.
+- $V_C$ lags current by $90°$.
+- Total voltage = vector sum.
+
+---
+
+## 5. Resonance in Series LCR
+
+At resonance: $X_L = X_C$, so $Z = R$ (minimum).
+
+<Formula label="Resonant Frequency">
+$$\omega_0 = \frac{1}{\sqrt{LC}}, \quad f_0 = \frac{1}{2\pi\sqrt{LC}}$$
+</Formula>
+
+Current is maximum at resonance: $I_{max} = V_0/R$.
+
+**Quality factor (Q):**
+
+$$Q = \frac{\omega_0 L}{R} = \frac{1}{\omega_0 CR} = \frac{1}{R}\sqrt{\frac{L}{C}}$$
+
+$Q$ measures sharpness of resonance. High $Q$ = narrow bandwidth.
+
+---
+
+## 6. Parallel LCR Circuit
+
+At resonance: $X_L = X_C$, current through $L$ and $C$ cancel. Impedance is **maximum** (ideally infinite for ideal components).
+
+---
+
+## 7. Power in AC Circuits
+
+<Formula label="Average Power">
+$$P = V_{rms}I_{rms}\cos\phi$$
+</Formula>
+
+**Power factor:** $\cos\phi = R/Z$
+
+| Circuit | $\phi$ | $\cos\phi$ | Power |
+|---|---|---|---|
+| Pure resistor | 0 | 1 | $V_{rms}I_{rms}$ |
+| Pure inductor | $90°$ | 0 | 0 (wattless) |
+| Pure capacitor | $-90°$ | 0 | 0 (wattless) |
+| LCR at resonance | 0 | 1 | Maximum |
+
+**Wattless current:** The reactive component of current that contributes no power.
+
+---
+
+## 8. Transformer (recap)
+
+$$\frac{V_s}{V_p} = \frac{N_s}{N_p}, \quad P_p = P_s \text{ (ideal)}$$
+
+---
+
+## 9. AC Generator
+
+A coil of $N$ turns, area $A$, rotating at $\omega$ in field $B$:
+
+$$\mathcal{E} = NBA\omega\sin(\omega t) = \mathcal{E}_0\sin(\omega t)$$
+
+$$\mathcal{E}_0 = NBA\omega$$
+
+---
+
+## 10. Summary
+
+| Quantity | Formula |
+|---|---|
+| $X_L$ | $\omega L$ |
+| $X_C$ | $1/(\omega C)$ |
+| Impedance $Z$ | $\sqrt{R^2+(X_L-X_C)^2}$ |
+| Resonant $\omega_0$ | $1/\sqrt{LC}$ |
+| Power factor | $\cos\phi = R/Z$ |
+| Average power | $V_{rms}I_{rms}\cos\phi$ |
+| Quality factor | $\omega_0 L/R$ |
+| $V_{rms}$ | $V_0/\sqrt{2}$ |

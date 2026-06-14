@@ -1,0 +1,161 @@
+---
+title: Ray Optics — Formula Sheet
+description: Key formulas for Ray Optics for JEE & NEET.
+---
+
+## Reflection — Plane Mirrors
+
+<Formula label="Angle of Reflection">
+$$\angle i = \angle r$$
+</Formula>
+
+<Formula label="Number of Images in Two Mirrors at Angle θ">
+$$n = \frac{360°}{\theta} - 1 \quad \text{(if } 360°/\theta \text{ is even)}$$
+$$n = \frac{360°}{\theta} \quad \text{(if } 360°/\theta \text{ is odd and object not on bisector)}$$
+</Formula>
+
+---
+
+## Reflection — Curved Mirrors
+
+<Formula label="Mirror Formula">
+$$\frac{1}{v} + \frac{1}{u} = \frac{1}{f} = \frac{2}{R}$$
+$$\text{Sign convention: object on left, distances measured from pole}$$
+$$\text{Real is negative (for objects and images on same side as incoming light)}$$
+</Formula>
+
+<Formula label="Linear Magnification — Mirror">
+$$m = -\frac{v}{u} = \frac{f}{f - u} = \frac{f - v}{f}$$
+$$|m| > 1 \text{: enlarged; } |m| < 1 \text{: diminished}$$
+$$m > 0 \text{: virtual/erect; } m < 0 \text{: real/inverted}$$
+</Formula>
+
+---
+
+## Refraction — Snell's Law
+
+<Formula label="Snell's Law">
+$$n_1\sin\theta_1 = n_2\sin\theta_2, \quad \frac{\sin\theta_i}{\sin\theta_r} = \frac{n_2}{n_1} = \mu_{12}$$
+</Formula>
+
+<Formula label="Refractive Index">
+$$n = \frac{c}{v} = \frac{\lambda_{\text{vacuum}}}{\lambda_{\text{medium}}} = \frac{\sin\theta_i}{\sin\theta_r}$$
+$$n_1\lambda_1 = n_2\lambda_2 \quad \text{(frequency unchanged)}$$
+</Formula>
+
+---
+
+## Total Internal Reflection
+
+<Formula label="Critical Angle">
+$$\sin\theta_c = \frac{n_2}{n_1} = \frac{1}{\mu} \quad \text{(when } n_1 > n_2\text{)}$$
+$$\theta_c = \arcsin\!\left(\frac{1}{\mu}\right)$$
+</Formula>
+
+<Callout type="important">
+TIR occurs when: (1) light travels from denser to rarer medium AND (2) angle of incidence $> \theta_c$.
+</Callout>
+
+---
+
+## Refraction at Spherical Surface
+
+<Formula label="Refraction at Spherical Interface">
+$$\frac{n_2}{v} - \frac{n_1}{u} = \frac{n_2 - n_1}{R}$$
+</Formula>
+
+<Formula label="Lateral Magnification at Spherical Surface">
+$$m = \frac{n_1 v}{n_2 u}$$
+</Formula>
+
+---
+
+## Lens Formulas
+
+<Formula label="Thin Lens Formula">
+$$\frac{1}{v} - \frac{1}{u} = \frac{1}{f}$$
+</Formula>
+
+<Formula label="Lensmaker's Equation">
+$$\frac{1}{f} = (n-1)\left(\frac{1}{R_1} - \frac{1}{R_2}\right)$$
+$$\text{(Cartesian sign convention)}$$
+</Formula>
+
+<Formula label="Lens Power">
+$$P = \frac{1}{f(\text{in metres})} \quad \text{[Dioptres, D]}$$
+</Formula>
+
+<Formula label="Lens Magnification">
+$$m = \frac{v}{u} = \frac{f}{f+u} = \frac{f-v}{f}$$
+</Formula>
+
+<Formula label="Lenses in Contact">
+$$\frac{1}{f_{\text{eq}}} = \frac{1}{f_1} + \frac{1}{f_2}, \quad P_{\text{eq}} = P_1 + P_2$$
+</Formula>
+
+---
+
+## Displacement Method for Focal Length
+
+<Formula label="Focal Length by Displacement Method">
+$$f = \frac{D^2 - d^2}{4D}$$
+$$\text{(D = distance between object and screen, d = distance between two positions of lens)}$$
+$$m_1 m_2 = 1 \quad \text{(magnifications for two positions)}$$
+</Formula>
+
+---
+
+## Prism
+
+<Formula label="Angle of Deviation in Prism">
+$$\delta = (i_1 + i_2) - A, \quad A = r_1 + r_2$$
+</Formula>
+
+<Formula label="Minimum Deviation">
+$$\delta_m = 2i_m - A, \quad r_1 = r_2 = A/2\ \text{(at min. dev.)}$$
+$$n = \frac{\sin\!\left(\frac{A+\delta_m}{2}\right)}{\sin(A/2)}$$
+</Formula>
+
+<Formula label="Thin Prism (Small A)">
+$$\delta = (n-1)A$$
+</Formula>
+
+---
+
+## Dispersion
+
+<Formula label="Angular Dispersion">
+$$\Delta\delta = \delta_v - \delta_r = (n_v - n_r)A = \overline{\omega}A$$
+$$\overline{\omega} = \frac{n_v - n_r}{n_{\text{mean}} - 1} \quad \text{(dispersive power)}$$
+</Formula>
+
+<Formula label="Achromatic Combination (two prisms)">
+$$A_1\omega_1 = -A_2\omega_2 \implies \frac{A_1}{A_2} = -\frac{\omega_2}{\omega_1}$$
+</Formula>
+
+---
+
+## Optical Instruments
+
+<Formula label="Simple Microscope — Magnification">
+$$M = 1 + \frac{D}{f} \quad \text{(image at near point)}$$
+$$M = \frac{D}{f} \quad \text{(image at infinity)}$$
+$$D = 25\ \text{cm (least distance of distinct vision)}$$
+</Formula>
+
+<Formula label="Compound Microscope — Magnification">
+$$M = m_o \times m_e = \frac{L}{f_o}\left(1 + \frac{D}{f_e}\right)$$
+$$M_{\text{relaxed eye}} = \frac{L}{f_o}\cdot\frac{D}{f_e}$$
+$$\text{(L = tube length, } f_o, f_e \text{ = focal lengths of objective and eyepiece)}$$
+</Formula>
+
+<Formula label="Astronomical Telescope — Magnification">
+$$M = -\frac{f_o}{f_e} \quad \text{(image at infinity)}$$
+$$M = -\frac{f_o}{f_e}\left(1 + \frac{f_e}{D}\right) \quad \text{(image at near point)}$$
+$$\text{Tube length: } L = f_o + f_e$$
+</Formula>
+
+<Formula label="Resolving Power of Telescope">
+$$\text{Limit of resolution: } \theta = \frac{1.22\lambda}{D}$$
+$$\text{Resolving power} = \frac{D}{1.22\lambda}$$
+</Formula>

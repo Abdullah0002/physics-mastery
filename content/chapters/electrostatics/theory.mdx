@@ -1,0 +1,237 @@
+---
+title: Electrostatics — Theory
+description: Complete theory notes for Electrostatics covering Coulomb's law, electric field, potential, Gauss's law, and capacitors.
+difficulty: HARD
+tags: [electrostatics, coulomb, electric-field, gauss-law, potential, capacitor]
+---
+
+## Introduction
+
+Electrostatics deals with **electric charges at rest** and the forces, fields, and potentials they create. It is the highest-weightage topic in Class 12 Physics for JEE, carrying approximately 9% of marks.
+
+<Callout type="tip">
+Electrostatics is heavily conceptual. Focus on the physical meaning of each quantity — rushing straight to formula-plugging leads to errors in multi-step problems.
+</Callout>
+
+---
+
+## 1. Electric Charge
+
+Charge is a fundamental property of matter. The SI unit is the **coulomb (C)**.
+
+- Proton: $q = +1.6 \times 10^{-19}\ \text{C}$
+- Electron: $q = -1.6 \times 10^{-19}\ \text{C}$
+
+**Properties:**
+1. **Quantisation:** Charge exists in integer multiples of $e = 1.6 \times 10^{-19}\ \text{C}$
+2. **Conservation:** Net charge of an isolated system is constant
+3. **Additivity:** Total charge = algebraic sum of all charges
+
+---
+
+## 2. Coulomb's Law
+
+The electrostatic force between two **point charges** $q_1$ and $q_2$ separated by distance $r$:
+
+<Formula label="Coulomb's Law">
+$$F = k\frac{q_1 q_2}{r^2} = \frac{1}{4\pi\varepsilon_0}\cdot\frac{q_1 q_2}{r^2}$$
+</Formula>
+
+where $k = 9 \times 10^9\ \text{N m}^2 \text{C}^{-2}$ and $\varepsilon_0 = 8.85 \times 10^{-12}\ \text{C}^2 \text{N}^{-1}\text{m}^{-2}$.
+
+<Callout type="important">
+Coulomb's law is valid for **point charges** or spherically symmetric charge distributions. For the force to be repulsive, charges must have the same sign; attractive for opposite signs.
+</Callout>
+
+### Vector Form
+
+$$\vec{F}_{12} = k\frac{q_1 q_2}{r^2}\hat{r}_{12}$$
+
+where $\hat{r}_{12}$ is the unit vector from $q_1$ to $q_2$.
+
+**Superposition Principle:** The net force on a charge is the **vector sum** of forces due to all other charges.
+
+---
+
+## 3. Electric Field
+
+The electric field $\vec{E}$ at a point is the force per unit **positive** test charge:
+
+<Formula label="Electric Field Definition">
+$$\vec{E} = \frac{\vec{F}}{q_0} = k\frac{Q}{r^2}\hat{r}$$
+</Formula>
+
+### Electric Field Due to Common Distributions
+
+| Distribution | Location | $E$ |
+|---|---|---|
+| Point charge $Q$ | Distance $r$ | $kQ/r^2$ |
+| Infinite line charge (linear density $\lambda$) | Distance $r$ | $\lambda/(2\pi\varepsilon_0 r)$ |
+| Infinite plane (surface density $\sigma$) | Any point | $\sigma/(2\varepsilon_0)$ |
+| Uniformly charged sphere (total charge $Q$) | Outside ($r > R$) | $kQ/r^2$ |
+| Uniformly charged sphere | Inside ($r < R$) | $kQr/R^3$ |
+| Conducting sphere | Inside | $0$ |
+
+<Callout type="derivation">
+The electric field inside a conductor is always **zero** in electrostatic equilibrium. Free electrons redistribute until the internal field is cancelled. This is the basis of **electrostatic shielding**.
+</Callout>
+
+---
+
+## 4. Electric Field Lines
+
+- Start on positive charges, end on negative charges
+- **Never cross** (the field is unique at every point)
+- Density of lines indicates field strength
+- Perpendicular to conductor surfaces
+
+---
+
+## 5. Gauss's Law
+
+The total electric flux through any **closed surface** (Gaussian surface) equals the enclosed charge divided by $\varepsilon_0$:
+
+<Formula label="Gauss's Law">
+$$\Phi_E = \oint \vec{E} \cdot d\vec{A} = \frac{Q_{enc}}{\varepsilon_0}$$
+</Formula>
+
+### Applying Gauss's Law
+
+Choose a Gaussian surface that exploits the **symmetry** of the charge distribution:
+
+- **Spherical symmetry** → spherical Gaussian surface
+- **Cylindrical symmetry** → cylindrical Gaussian surface
+- **Planar symmetry** → pillbox (flat cylinder) Gaussian surface
+
+<Step n={1}>Identify the symmetry of the charge distribution</Step>
+<Step n={2}>Choose a Gaussian surface where $\vec{E}$ is either constant or zero on each part</Step>
+<Step n={3}>Calculate $\Phi_E = E \cdot A$ (since $E$ is constant on the surface)</Step>
+<Step n={4}>Set equal to $Q_{enc}/\varepsilon_0$ and solve for $E$</Step>
+
+---
+
+## 6. Electric Potential
+
+The electric potential $V$ at a point is the work done per unit positive charge to bring it from infinity to that point:
+
+<Formula label="Electric Potential (Point Charge)">
+$$V = k\frac{Q}{r} = \frac{Q}{4\pi\varepsilon_0 r}$$
+</Formula>
+
+### Relation between $E$ and $V$
+
+$$\vec{E} = -\nabla V = -\frac{dV}{dr}\hat{r}$$
+
+In one dimension: $E = -\frac{dV}{dx}$
+
+<Callout type="important">
+$E$ is related to the **gradient** of $V$. If $V$ is constant in a region, $E = 0$ there. The direction of $\vec{E}$ is from high potential to low potential.
+</Callout>
+
+### Potential Due to Multiple Charges
+
+$$V = k\sum_i \frac{q_i}{r_i}$$
+
+Potential is a **scalar** — just add algebraically (no vectors!).
+
+### Equipotential Surfaces
+
+- Surfaces of constant potential
+- **Perpendicular** to electric field lines
+- No work done moving a charge along an equipotential surface
+
+---
+
+## 7. Electric Potential Energy
+
+The potential energy stored when charge $q$ is at potential $V$:
+
+<Formula label="Potential Energy">
+$$U = qV$$
+</Formula>
+
+For a system of two point charges:
+
+<Formula label="Two-Charge Potential Energy">
+$$U = k\frac{q_1 q_2}{r}$$
+</Formula>
+
+**Work-energy theorem for electric charges:**
+
+$$W_{external} = \Delta U = q(V_f - V_i)$$
+
+$$W_{electric\ force} = -\Delta U = q(V_i - V_f)$$
+
+---
+
+## 8. Conductors in Electrostatic Equilibrium
+
+1. $\vec{E} = 0$ inside the conductor
+2. All excess charge resides on the **surface**
+3. $\vec{E}$ is perpendicular to the surface at every point
+4. Surface is an equipotential
+5. Electric field just outside: $E = \sigma/\varepsilon_0$
+
+---
+
+## 9. Capacitance
+
+A capacitor stores charge. The capacitance $C$ is defined as:
+
+<Formula label="Capacitance">
+$$C = \frac{Q}{V}$$
+</Formula>
+
+The SI unit is the **farad (F)**.
+
+### Parallel Plate Capacitor
+
+<Formula label="Parallel Plate Capacitor">
+$$C = \frac{\varepsilon_0 A}{d}$$
+</Formula>
+
+With dielectric of constant $\kappa$:
+
+$$C = \frac{\kappa\varepsilon_0 A}{d}$$
+
+### Energy Stored in a Capacitor
+
+<Formula label="Energy in Capacitor">
+$$U = \frac{1}{2}CV^2 = \frac{Q^2}{2C} = \frac{QV}{2}$$
+</Formula>
+
+### Combinations
+
+**Series:** $\frac{1}{C_{eq}} = \frac{1}{C_1} + \frac{1}{C_2} + \cdots$
+
+**Parallel:** $C_{eq} = C_1 + C_2 + \cdots$
+
+<Callout type="tip">
+Capacitors in series have **equal charge**; capacitors in parallel have **equal voltage**. This is the dual of resistors (series = equal current, parallel = equal voltage).
+</Callout>
+
+---
+
+## 10. JEE Advanced Concepts
+
+### Charge Distribution on Connected Conductors
+
+When two conducting spheres of radii $r_1$ and $r_2$ are connected by a wire, they reach the same potential:
+
+$$V_1 = V_2 \Rightarrow \frac{q_1}{r_1} = \frac{q_2}{r_2}$$
+
+Charge distributes in the ratio $q_1 : q_2 = r_1 : r_2$.
+
+### Electric Dipole
+
+A dipole consists of $-q$ and $+q$ separated by distance $2a$. Dipole moment: $p = q \cdot 2a$.
+
+$$E_{axial} = \frac{2kp}{r^3}, \quad E_{equatorial} = \frac{kp}{r^3}$$
+
+Torque on dipole in uniform field: $\tau = pE\sin\theta$
+
+Energy: $U = -pE\cos\theta = -\vec{p}\cdot\vec{E}$
+
+<Callout type="important">
+At the axial position, $E = 2kp/r^3$; at the equatorial position, $E = kp/r^3$. The axial field is exactly twice the equatorial field at the same distance.
+</Callout>

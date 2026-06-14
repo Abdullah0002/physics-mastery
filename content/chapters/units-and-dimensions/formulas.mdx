@@ -1,0 +1,175 @@
+---
+title: Units and Dimensions — Formula Sheet
+description: Key formulas for Units and Dimensions for JEE & NEET.
+---
+
+## Fundamental & Derived Quantities
+
+<Formula label="Dimensional Formula Notation">
+$$[M^a L^b T^c A^d K^e mol^f cd^g]$$
+</Formula>
+
+<Formula label="Density">
+$$[\rho] = [M L^{-3}]$$
+</Formula>
+
+<Formula label="Force">
+$$[F] = [M L T^{-2}]$$
+</Formula>
+
+<Formula label="Work / Energy / Torque">
+$$[W] = [M L^2 T^{-2}]$$
+</Formula>
+
+<Formula label="Power">
+$$[P] = [M L^2 T^{-3}]$$
+</Formula>
+
+<Formula label="Pressure / Stress">
+$$[P] = [M L^{-1} T^{-2}]$$
+</Formula>
+
+<Formula label="Momentum / Impulse">
+$$[p] = [M L T^{-1}]$$
+</Formula>
+
+<Formula label="Angular Momentum">
+$$[L] = [M L^2 T^{-1}]$$
+</Formula>
+
+<Formula label="Moment of Inertia">
+$$[I] = [M L^2]$$
+</Formula>
+
+<Formula label="Gravitational Constant G">
+$$[G] = [M^{-1} L^3 T^{-2}]$$
+</Formula>
+
+<Formula label="Planck's Constant h">
+$$[h] = [M L^2 T^{-1}]$$
+</Formula>
+
+<Formula label="Boltzmann Constant k_B">
+$$[k_B] = [M L^2 T^{-2} K^{-1}]$$
+</Formula>
+
+<Formula label="Universal Gas Constant R">
+$$[R] = [M L^2 T^{-2} mol^{-1} K^{-1}]$$
+</Formula>
+
+<Formula label="Coefficient of Viscosity η">
+$$[\eta] = [M L^{-1} T^{-1}]$$
+</Formula>
+
+<Formula label="Surface Tension T">
+$$[T] = [M T^{-2}]$$
+</Formula>
+
+<Formula label="Electric Charge q">
+$$[q] = [A\,T]$$
+</Formula>
+
+<Formula label="Electric Potential V">
+$$[V] = [M L^2 T^{-3} A^{-1}]$$
+</Formula>
+
+<Formula label="Resistance R">
+$$[R] = [M L^2 T^{-3} A^{-2}]$$
+</Formula>
+
+<Formula label="Capacitance C">
+$$[C] = [M^{-1} L^{-2} T^4 A^2]$$
+</Formula>
+
+<Formula label="Magnetic Field B">
+$$[B] = [M T^{-2} A^{-1}]$$
+</Formula>
+
+<Formula label="Magnetic Flux Φ">
+$$[\Phi] = [M L^2 T^{-2} A^{-1}]$$
+</Formula>
+
+<Formula label="Inductance L">
+$$[L] = [M L^2 T^{-2} A^{-2}]$$
+</Formula>
+
+---
+
+## Dimensional Analysis — Checking & Deriving
+
+<Formula label="Principle of Homogeneity">
+$$\text{Dimensions of LHS} = \text{Dimensions of RHS}$$
+</Formula>
+
+<Formula label="Period of Simple Pendulum (derived)">
+$$T \propto l^a\, g^b \implies [T] = [L]^a [LT^{-2}]^b \implies a = \tfrac{1}{2},\ b = -\tfrac{1}{2}$$
+</Formula>
+
+<Callout type="tip">
+Dimensional analysis cannot determine dimensionless constants (like $2\pi$), and it fails when a quantity depends on more than 3 unknowns involving M, L, T.
+</Callout>
+
+---
+
+## Error Analysis
+
+<Formula label="Absolute Error">
+$$\Delta a_i = |a_{\text{mean}} - a_i|, \quad \overline{\Delta a} = \frac{\sum |\Delta a_i|}{n}$$
+</Formula>
+
+<Formula label="Relative / Fractional Error">
+$$\frac{\overline{\Delta a}}{a_{\text{mean}}}$$
+</Formula>
+
+<Formula label="Percentage Error">
+$$\text{Percentage error} = \frac{\overline{\Delta a}}{a_{\text{mean}}} \times 100\%$$
+</Formula>
+
+<Formula label="Error in Sum / Difference">
+$$Z = A \pm B \implies \Delta Z = \Delta A + \Delta B$$
+</Formula>
+
+<Formula label="Error in Product / Quotient">
+$$Z = \frac{A^p B^q}{C^r} \implies \frac{\Delta Z}{Z} = p\frac{\Delta A}{A} + q\frac{\Delta B}{B} + r\frac{\Delta C}{C}$$
+</Formula>
+
+<Formula label="Error in Power">
+$$Z = A^n \implies \frac{\Delta Z}{Z} = n\frac{\Delta A}{A}$$
+</Formula>
+
+<Callout type="important">
+In subtraction of nearly equal quantities, relative error can be very large — a major source of experimental error.
+</Callout>
+
+---
+
+## Significant Figures
+
+| Rule | Example |
+|------|---------|
+| All non-zero digits significant | 2345 → 4 sig. figs |
+| Zeros between non-zero digits | 2005 → 4 sig. figs |
+| Leading zeros NOT significant | 0.0045 → 2 sig. figs |
+| Trailing zeros after decimal | 3.200 → 4 sig. figs |
+| Trailing zeros before decimal (ambiguous) | 2500 → 2 or 4 (use sci. notation) |
+
+<Formula label="Rounding Rule">
+$$\text{If dropped digit} > 5 \Rightarrow \text{round up};\quad = 5 \Rightarrow \text{round to even}$$
+</Formula>
+
+---
+
+## Common Dimensional Equivalences
+
+| Physical Quantity | SI Unit | Dimensional Formula |
+|---|---|---|
+| Frequency | Hz | $[T^{-1}]$ |
+| Velocity | m s⁻¹ | $[LT^{-1}]$ |
+| Acceleration | m s⁻² | $[LT^{-2}]$ |
+| Impulse | N·s | $[MLT^{-1}]$ |
+| Latent Heat | J kg⁻¹ | $[L^2T^{-2}]$ |
+| Thermal Conductivity | W m⁻¹K⁻¹ | $[MLT^{-3}K^{-1}]$ |
+| Electric Field | N C⁻¹ | $[MLT^{-3}A^{-1}]$ |
+| Permittivity ε₀ | F m⁻¹ | $[M^{-1}L^{-3}T^4A^2]$ |
+| Permeability μ₀ | H m⁻¹ | $[MLT^{-2}A^{-2}]$ |
+| Stefan's constant σ | W m⁻²K⁻⁴ | $[MT^{-3}K^{-4}]$ |

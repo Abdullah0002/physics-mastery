@@ -1,0 +1,124 @@
+---
+title: Atoms — Theory
+description: Atomic models, Bohr model, hydrogen spectrum, energy levels, and hydrogen-like ions for JEE & NEET.
+difficulty: HARD
+tags: [atoms, Bohr-model, hydrogen-spectrum, energy-levels, Rutherford]
+---
+
+## 1. Atomic Models — Historical
+
+### Thomson's Plum-Pudding Model
+Electrons embedded in a diffuse positive charge. Disproved by Rutherford's experiment.
+
+### Rutherford's Nuclear Model (1911)
+
+**α-scattering experiment:** A beam of α-particles aimed at a thin gold foil showed:
+- Most passed straight through.
+- A few deflected at large angles.
+- Very few (1 in 8000) bounced back.
+
+**Conclusion:** The atom is mostly empty space; positive charge + most mass concentrated in a tiny **nucleus**; electrons orbit around it.
+
+**Limitation:** Classical orbits would cause electrons to spiral inward (radiating energy) — atom would collapse in ~$10^{-8}$ s. Rutherford's model could not explain atomic stability.
+
+### Bohr's Model (1913)
+
+Three postulates:
+<Step n={1}>Electrons move in circular orbits (stationary states) without radiating.</Step>
+<Step n={2}>Angular momentum is quantised: $L = mvr = nh/(2\pi) = n\hbar$.</Step>
+<Step n={3}>Radiation emitted/absorbed as electron transitions between levels: $E_{photon} = |E_i - E_f|$.</Step>
+
+---
+
+## 2. Bohr Model Results for Hydrogen ($Z=1$)
+
+<Formula label="Radius of nth orbit">
+$$r_n = \frac{n^2 a_0}{Z}, \quad a_0 = 0.529\ \text{Å}$$
+</Formula>
+
+<Formula label="Speed in nth orbit">
+$$v_n = \frac{Z\alpha c}{n} = \frac{2.18\times10^6 Z}{n}\ \text{m/s}$$
+</Formula>
+
+<Formula label="Energy of nth level">
+$$E_n = -\frac{13.6\,Z^2}{n^2}\ \text{eV}$$
+</Formula>
+
+**For hydrogen:** $E_1 = -13.6$ eV, $E_2 = -3.4$ eV, $E_3 = -1.51$ eV, …
+
+**Ionisation energy:** Energy to remove electron from $n=1$: $13.6$ eV.
+
+---
+
+## 3. Hydrogen Spectrum — Spectral Series
+
+<Formula label="Rydberg Formula">
+$$\frac{1}{\lambda} = R_H Z^2\left(\frac{1}{n_1^2} - \frac{1}{n_2^2}\right), \quad R_H = 1.097\times10^7\ \text{m}^{-1}$$
+</Formula>
+
+| Series | Transition ($n_2 \to n_1$) | Region | $n_1$ |
+|---|---|---|---|
+| Lyman | $n\to1$ | Ultraviolet | 1 |
+| Balmer | $n\to2$ | Visible | 2 |
+| Paschen | $n\to3$ | Infrared | 3 |
+| Brackett | $n\to4$ | Far IR | 4 |
+| Pfund | $n\to5$ | Far IR | 5 |
+
+**Number of lines** when electron falls from level $n$ to 1: $n(n-1)/2$.
+
+---
+
+## 4. Hydrogen-Like Ions
+
+For ions with nuclear charge $Z$ and one electron (He$^+$, Li$^{2+}$, etc.):
+
+$$E_n = -\frac{13.6\,Z^2}{n^2}\ \text{eV}, \quad r_n = \frac{n^2 a_0}{Z}$$
+
+**Example:** He$^+$ ($Z=2$): $E_1 = -54.4$ eV, $r_1 = 0.265$ Å.
+
+---
+
+## 5. Excitation and Ionisation
+
+**Excitation energy:** Energy needed to raise electron from ground state to higher level.
+
+$$E_{exc} = E_n - E_1 = 13.6\left(1 - \frac{1}{n^2}\right)\ \text{eV}$$
+
+**Ionisation energy** from $n$th level:
+
+$$E_{ion,n} = \frac{13.6}{n^2}\ \text{eV}$$
+
+---
+
+## 6. Limitations of Bohr's Model
+
+1. Cannot explain spectra of multi-electron atoms.
+2. Cannot explain fine structure of spectral lines (spin, relativistic effects).
+3. No explanation for relative intensities of spectral lines.
+4. Fails for molecules.
+5. The concept of a "definite orbit" contradicts the uncertainty principle.
+
+---
+
+## 7. Quantum Numbers (Beyond Bohr)
+
+In the full quantum mechanical treatment:
+
+| Quantum number | Symbol | Values | Physical meaning |
+|---|---|---|---|
+| Principal | $n$ | 1, 2, 3, … | Shell, energy |
+| Azimuthal | $l$ | 0 to $n-1$ | Orbital angular momentum |
+| Magnetic | $m_l$ | $-l$ to $+l$ | Orientation of orbital |
+| Spin | $m_s$ | $+1/2$, $-1/2$ | Electron spin |
+
+---
+
+## 8. Summary
+
+| Quantity | Formula |
+|---|---|
+| Bohr radius | $r_n = n^2 a_0/Z$ |
+| Orbital speed | $v_n = 2.18\times10^6 Z/n$ m/s |
+| Energy level | $E_n = -13.6Z^2/n^2$ eV |
+| Rydberg formula | $1/\lambda = R_H Z^2(1/n_1^2 - 1/n_2^2)$ |
+| Lines from level $n$ | $n(n-1)/2$ |

@@ -1,0 +1,143 @@
+---
+title: Vectors — Theory
+description: Vector algebra, dot product, cross product, resolution of vectors, and Lami's theorem for JEE & NEET.
+difficulty: MEDIUM
+tags: [vectors, dot-product, cross-product, resolution, Lami]
+---
+
+## 1. Scalars and Vectors
+
+**Scalar:** Magnitude only. Examples: mass, time, temperature, energy.
+
+**Vector:** Magnitude + direction. Examples: displacement, velocity, acceleration, force.
+
+---
+
+## 2. Representation
+
+A vector $\vec{A}$ is written with an arrow. Magnitude: $|\vec{A}|$ or $A$.
+
+**Unit vector:** $\hat{A} = \vec{A}/|\vec{A}|$ — points in the direction of $\vec{A}$, magnitude = 1.
+
+Standard basis: $\hat{i}$ (x-axis), $\hat{j}$ (y-axis), $\hat{k}$ (z-axis).
+
+$$\vec{A} = A_x\hat{i} + A_y\hat{j} + A_z\hat{k}$$
+
+$$|\vec{A}| = \sqrt{A_x^2 + A_y^2 + A_z^2}$$
+
+---
+
+## 3. Vector Addition
+
+### Triangle / Parallelogram Law
+
+$$\vec{R} = \vec{A} + \vec{B}$$
+
+<Formula label="Magnitude of Resultant">
+$$R = \sqrt{A^2 + B^2 + 2AB\cos\theta}$$
+</Formula>
+
+<Formula label="Direction of Resultant (angle with A)">
+$$\tan\alpha = \frac{B\sin\theta}{A + B\cos\theta}$$
+</Formula>
+
+where $\theta$ is the angle between $\vec{A}$ and $\vec{B}$.
+
+**Special cases:**
+- $\theta = 0°$: $R = A+B$ (maximum)
+- $\theta = 180°$: $R = |A-B|$ (minimum)
+- $\theta = 90°$: $R = \sqrt{A^2+B^2}$
+- $A = B$: $R = 2A\cos(\theta/2)$
+
+<Callout type="tip">
+For **two equal vectors** at angle $\theta$: resultant $= 2A\cos(\theta/2)$. This comes from the identity $\sqrt{2+2\cos\theta} = 2\cos(\theta/2)$.
+</Callout>
+
+---
+
+## 4. Dot (Scalar) Product
+
+<Formula label="Dot Product">
+$$\vec{A}\cdot\vec{B} = AB\cos\theta = A_xB_x + A_yB_y + A_zB_z$$
+</Formula>
+
+**Properties:**
+- Commutative: $\vec{A}\cdot\vec{B} = \vec{B}\cdot\vec{A}$
+- Result is a **scalar**
+- $\hat{i}\cdot\hat{i} = 1$, $\hat{i}\cdot\hat{j} = 0$
+- $\vec{A}\cdot\vec{A} = A^2$
+
+**Physical examples:** Work = $\vec{F}\cdot\vec{d}$; Power = $\vec{F}\cdot\vec{v}$.
+
+---
+
+## 5. Cross (Vector) Product
+
+<Formula label="Cross Product Magnitude">
+$$|\vec{A}\times\vec{B}| = AB\sin\theta$$
+</Formula>
+
+Direction: perpendicular to both $\vec{A}$ and $\vec{B}$ (right-hand rule).
+
+$$\vec{A}\times\vec{B} = \begin{vmatrix}\hat{i}&\hat{j}&\hat{k}\\A_x&A_y&A_z\\B_x&B_y&B_z\end{vmatrix}$$
+
+**Properties:**
+- **Anti-commutative:** $\vec{A}\times\vec{B} = -\vec{B}\times\vec{A}$
+- $\hat{i}\times\hat{j} = \hat{k}$, $\hat{j}\times\hat{k} = \hat{i}$, $\hat{k}\times\hat{i} = \hat{j}$
+- $\vec{A}\times\vec{A} = \vec{0}$
+
+**Physical examples:** Torque $= \vec{r}\times\vec{F}$; Angular momentum $= \vec{r}\times\vec{p}$.
+
+<Callout type="important">
+**Key test:** If $\vec{A}\cdot\vec{B} = |\vec{A}\times\vec{B}|$, then $\cos\theta = \sin\theta$, giving $\theta = 45°$.
+</Callout>
+
+---
+
+## 6. Resolution of Vectors
+
+Any vector in a plane can be resolved into two perpendicular components:
+
+$$A_x = A\cos\theta, \qquad A_y = A\sin\theta$$
+
+In 3D: project onto all three axes.
+
+**Lami's Theorem:** If three concurrent coplanar forces $P$, $Q$, $R$ are in equilibrium, and the angles between them (opposite to each force) are $\alpha$, $\beta$, $\gamma$:
+
+<Formula label="Lami's Theorem">
+$$\frac{P}{\sin\alpha} = \frac{Q}{\sin\beta} = \frac{R}{\sin\gamma}$$
+</Formula>
+
+---
+
+## 7. Position & Displacement Vectors
+
+**Position vector** of point $(x, y, z)$: $\vec{r} = x\hat{i}+y\hat{j}+z\hat{k}$
+
+**Displacement vector:** $\Delta\vec{r} = \vec{r}_2 - \vec{r}_1$
+
+---
+
+## 8. Conditions for Special Results
+
+| Condition | Meaning |
+|---|---|
+| $\vec{A}\cdot\vec{B} = 0$ | $\vec{A}\perp\vec{B}$ (or one is zero) |
+| $ \vert \vec{A}\times\vec{B} \vert  = 0$ | $\vec{A}\parallel\vec{B}$ (or one is zero) |
+| $\vec{A} + \vec{B} = \vec{A} - \vec{B}$ | $\vec{B} = \vec{0}$ |
+| $ \vert \vec{A}+\vec{B} \vert  =  \vert \vec{A}-\vec{B} \vert $ | $\vec{A}\perp\vec{B}$ |
+| $ \vert \vec{A}+\vec{B} \vert  =  \vert \vec{A} \vert  =  \vert \vec{B} \vert $ | Angle between them is $120°$ |
+
+---
+
+## 9. Component Form Summary
+
+| Operation | Result |
+|---|---|
+| $\vec{A}+\vec{B}$ | $(A_x+B_x)\hat{i}+(A_y+B_y)\hat{j}+(A_z+B_z)\hat{k}$ |
+| $\vec{A}\cdot\vec{B}$ | $A_xB_x+A_yB_y+A_zB_z$ (scalar) |
+| $\vec{A}\times\vec{B}$ | $(A_yB_z-A_zB_y)\hat{i}-(A_xB_z-A_zB_x)\hat{j}+(A_xB_y-A_yB_x)\hat{k}$ |
+
+<Callout type="derivation">
+The cross product determinant formula is the standard method. Expand along the first row. Be careful with the sign of the $\hat{j}$ term (negative).
+</Callout>

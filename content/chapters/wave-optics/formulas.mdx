@@ -1,0 +1,154 @@
+---
+title: Wave Optics — Formula Sheet
+description: Key formulas for Wave Optics for JEE & NEET.
+---
+
+## Huygens' Principle
+
+<Formula label="Huygens' Principle Statement">
+$$\text{Every point on a wavefront acts as a secondary source of spherical wavelets.}$$
+$$\text{The new wavefront is the envelope (tangent surface) of these secondary wavelets.}$$
+</Formula>
+
+---
+
+## Young's Double Slit Experiment (YDSE)
+
+<Formula label="Path Difference">
+$$\Delta x = d\sin\theta \approx \frac{yd}{D} \quad \text{(for small angles)}$$
+$$\text{(d = slit separation, D = screen distance, y = position on screen)}$$
+</Formula>
+
+<Formula label="Condition for Bright Fringe (Constructive)">
+$$\Delta x = n\lambda, \quad n = 0,\pm1,\pm2,\ldots$$
+$$y_n = \frac{n\lambda D}{d}$$
+</Formula>
+
+<Formula label="Condition for Dark Fringe (Destructive)">
+$$\Delta x = \left(n + \frac{1}{2}\right)\lambda$$
+$$y_n = \frac{(2n-1)\lambda D}{2d}$$
+</Formula>
+
+<Formula label="Fringe Width">
+$$\beta = \frac{\lambda D}{d}$$
+</Formula>
+
+<Callout type="important">
+In YDSE, fringe width is same for all bright and dark fringes (equally spaced). Fringe width increases with $\lambda$, D and decreases with d.
+</Callout>
+
+---
+
+## Intensity Distribution in YDSE
+
+<Formula label="Phase Difference and Path Difference">
+$$\phi = \frac{2\pi}{\lambda}\Delta x = \frac{2\pi}{\lambda}\cdot\frac{yd}{D}$$
+</Formula>
+
+<Formula label="Resultant Intensity">
+$$I = I_1 + I_2 + 2\sqrt{I_1 I_2}\cos\phi$$
+$$I = 4I_0\cos^2\!\left(\frac{\phi}{2}\right) \quad \text{(when } I_1 = I_2 = I_0\text{)}$$
+</Formula>
+
+<Formula label="Maximum and Minimum Intensities">
+$$I_{\max} = (\sqrt{I_1}+\sqrt{I_2})^2 = 4I_0$$
+$$I_{\min} = (\sqrt{I_1}-\sqrt{I_2})^2 = 0 \quad \text{(when } I_1 = I_2\text{)}$$
+</Formula>
+
+<Formula label="Ratio of Intensities">
+$$\frac{I_{\max}}{I_{\min}} = \left(\frac{\sqrt{I_1}+\sqrt{I_2}}{\sqrt{I_1}-\sqrt{I_2}}\right)^2 = \left(\frac{a_1+a_2}{a_1-a_2}\right)^2$$
+</Formula>
+
+---
+
+## YDSE with Oblique Incidence and Slab
+
+<Formula label="Extra Path Difference due to Slab (thickness t, refractive index n)">
+$$\Delta x_{\text{slab}} = (n-1)t$$
+</Formula>
+
+<Formula label="Shift of Central Fringe">
+$$y_{\text{shift}} = \frac{(n-1)t\,D}{d}$$
+$$\text{(fringe shifts TOWARDS the side where slab is placed)}$$
+</Formula>
+
+<Formula label="Number of Fringes Shifted">
+$$N = \frac{(n-1)t}{\lambda}$$
+</Formula>
+
+---
+
+## Single Slit Diffraction
+
+<Formula label="Minima Positions in Single Slit Diffraction">
+$$a\sin\theta = n\lambda, \quad n = \pm1,\pm2,\ldots$$
+$$y_n = \frac{n\lambda D}{a} \quad \text{(a = slit width)}$$
+</Formula>
+
+<Formula label="Width of Central Maximum">
+$$\beta_{\text{central}} = \frac{2\lambda D}{a}$$
+$$\text{(twice the width of secondary maxima)}$$
+</Formula>
+
+<Formula label="Intensity Pattern in Single Slit">
+$$I(\theta) = I_0\left(\frac{\sin\alpha}{\alpha}\right)^2, \quad \alpha = \frac{\pi a\sin\theta}{\lambda}$$
+</Formula>
+
+---
+
+## Rayleigh Criterion
+
+<Formula label="Rayleigh Criterion (limit of resolution)">
+$$\theta_R = 1.22\frac{\lambda}{D} \quad \text{(circular aperture)}$$
+$$\theta_R = \frac{\lambda}{d} \quad \text{(rectangular slit)}$$
+</Formula>
+
+<Formula label="Resolving Power of Microscope">
+$$\text{RP} = \frac{2n\sin\theta}{\lambda} = \frac{2\text{NA}}{\lambda}$$
+$$\text{NA} = n\sin\theta \quad \text{(numerical aperture)}$$
+</Formula>
+
+---
+
+## Polarisation
+
+<Formula label="Malus's Law">
+$$I = I_0\cos^2\theta$$
+$$\text{(} \theta \text{ = angle between polariser and analyser transmission axes)}$$
+</Formula>
+
+<Formula label="Brewster's Angle">
+$$\tan\theta_B = n_{21} = \frac{n_2}{n_1}$$
+$$\text{At Brewster's angle: reflected ray is completely polarised (s-polarised)}$$
+$$\theta_B + \theta_r = 90°$$
+</Formula>
+
+<Formula label="Degree of Polarisation">
+$$P = \frac{I_{\max} - I_{\min}}{I_{\max} + I_{\min}}$$
+$$P = 1 \text{: completely plane polarised}; P = 0 \text{: unpolarised}$$
+</Formula>
+
+---
+
+## Thin Film Interference
+
+<Formula label="Condition for Constructive Interference in Thin Film (reflected)">
+$$2\mu t\cos r = (2n-1)\frac{\lambda}{2} = \left(n - \frac{1}{2}\right)\lambda$$
+$$\text{(due to phase reversal at denser medium)}$$
+</Formula>
+
+<Formula label="Condition for Destructive Interference in Thin Film (reflected)">
+$$2\mu t\cos r = n\lambda, \quad n = 0,1,2,\ldots$$
+</Formula>
+
+---
+
+## Coherence
+
+<Formula label="Coherence Length">
+$$l_c = c\tau_c = \frac{\lambda^2}{\Delta\lambda}$$
+</Formula>
+
+<Formula label="Temporal Coherence Time">
+$$\tau_c = \frac{1}{\Delta\nu}$$
+</Formula>

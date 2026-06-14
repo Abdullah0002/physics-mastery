@@ -1,0 +1,153 @@
+---
+title: Thermodynamics — Theory
+description: Laws of thermodynamics, thermodynamic processes, Carnot engine, entropy, and heat engines for JEE & NEET.
+difficulty: HARD
+tags: [thermodynamics, Carnot, entropy, first-law, second-law, isothermal, adiabatic]
+---
+
+## 1. Basic Terminology
+
+- **System:** The region under study.
+- **Surroundings:** Everything outside the system.
+- **State variables:** $P$, $V$, $T$, $n$ — describe thermodynamic state.
+- **Process:** Change from one state to another.
+
+---
+
+## 2. Zeroth Law of Thermodynamics
+
+If system A is in thermal equilibrium with system B, and B with C, then A and C are also in equilibrium. This defines **temperature**.
+
+---
+
+## 3. First Law of Thermodynamics
+
+<Formula label="First Law">
+$$\Delta U = Q - W$$
+</Formula>
+
+- $Q$ = heat absorbed by the system
+- $W$ = work done **by** the system
+- $\Delta U$ = change in internal energy
+
+**Work done by gas:** $W = \int P\,dV$ = area under $P$–$V$ diagram.
+
+<Callout type="important">
+Sign convention: $Q$ positive = heat absorbed; $W$ positive = work done BY the gas. Some textbooks use $W$ = work done ON the gas (then $\Delta U = Q + W$). JEE uses $\Delta U = Q - W$ (work done by gas).
+</Callout>
+
+---
+
+## 4. Thermodynamic Processes
+
+### Isothermal (constant $T$)
+
+$\Delta U = 0$ (ideal gas), so $Q = W$.
+
+$$W = nRT\ln\frac{V_f}{V_i} = nRT\ln\frac{P_i}{P_f}$$
+
+On $P$–$V$ diagram: hyperbola ($PV = \text{const}$).
+
+### Adiabatic (no heat exchange, $Q=0$)
+
+$\Delta U = -W$, so work done at the expense of internal energy.
+
+$$PV^\gamma = \text{const}, \quad TV^{\gamma-1} = \text{const}, \quad T P^{-\gamma/(\gamma-1)} = \text{const}$$
+
+<Formula label="Work in adiabatic process">
+$$W = \frac{P_1V_1 - P_2V_2}{\gamma-1} = \frac{nR(T_1-T_2)}{\gamma-1}$$
+</Formula>
+
+### Isochoric (constant $V$, $W=0$)
+
+$$Q = \Delta U = nC_V\Delta T$$
+
+### Isobaric (constant $P$)
+
+$$Q = nC_P\Delta T, \quad W = P\Delta V = nR\Delta T$$
+
+---
+
+## 5. Comparison of Processes
+
+| Process | Condition | $W$ | $Q$ | $\Delta U$ |
+|---|---|---|---|---|
+| Isothermal | $T = c$ | $nRT\ln(V_f/V_i)$ | = $W$ | 0 |
+| Adiabatic | $Q = 0$ | $nR\Delta T/(\gamma-1)$ | 0 | = $-W$ |
+| Isochoric | $V = c$ | 0 | $nC_V\Delta T$ | = $Q$ |
+| Isobaric | $P = c$ | $P\Delta V$ | $nC_P\Delta T$ | $nC_V\Delta T$ |
+
+---
+
+## 6. Slope of P–V Diagram
+
+- **Isothermal:** slope $= -P/V$
+- **Adiabatic:** slope $= -\gamma P/V$
+
+Since $\gamma > 1$, the adiabatic curve is **steeper** than the isothermal at the same point.
+
+---
+
+## 7. Second Law of Thermodynamics
+
+**Kelvin–Planck statement:** No heat engine can convert all heat into work in a cyclic process. There must be a heat sink.
+
+**Clausius statement:** Heat cannot spontaneously flow from a cold body to a hot body.
+
+Both are equivalent.
+
+---
+
+## 8. Heat Engine Efficiency
+
+$$\eta = 1 - \frac{Q_C}{Q_H} = \frac{W}{Q_H}$$
+
+where $Q_H$ = heat absorbed from hot reservoir, $Q_C$ = heat rejected to cold reservoir.
+
+---
+
+## 9. Carnot Cycle
+
+The most efficient cycle operating between temperatures $T_H$ and $T_C$:
+
+1. Isothermal expansion at $T_H$ (absorbs $Q_H$)
+2. Adiabatic expansion ($T_H \to T_C$)
+3. Isothermal compression at $T_C$ (rejects $Q_C$)
+4. Adiabatic compression ($T_C \to T_H$)
+
+<Formula label="Carnot Efficiency">
+$$\eta_{Carnot} = 1 - \frac{T_C}{T_H}$$
+</Formula>
+
+<Callout type="important">
+The Carnot efficiency is the **maximum** efficiency any engine can achieve between $T_H$ and $T_C$. No real engine equals it (due to irreversibilities). It depends only on temperatures, not the working substance.
+</Callout>
+
+---
+
+## 10. Coefficient of Performance (Refrigerator)
+
+$$\text{COP} = \frac{Q_C}{W} = \frac{Q_C}{Q_H - Q_C} = \frac{T_C}{T_H - T_C} \quad \text{(Carnot)}$$
+
+---
+
+## 11. Entropy
+
+$$dS = \frac{dQ_{rev}}{T}$$
+
+For a reversible process: $\Delta S = 0$ (cyclic). For irreversible: $\Delta S > 0$.
+
+**Second Law (entropy form):** The entropy of an isolated system never decreases.
+
+---
+
+## 12. Key Formulas Summary
+
+| Process | PV relation | Work |
+|---|---|---|
+| Isothermal | $PV = c$ | $nRT\ln(V_f/V_i)$ |
+| Adiabatic | $PV^\gamma = c$ | $nR\Delta T/(\gamma-1)$ |
+| Isobaric | $V/T = c$ | $P\Delta V$ |
+| Isochoric | $P/T = c$ | 0 |
+
+$$\eta_{Carnot} = 1 - \frac{T_C}{T_H}, \quad \text{COP}_{Carnot} = \frac{T_C}{T_H-T_C}$$

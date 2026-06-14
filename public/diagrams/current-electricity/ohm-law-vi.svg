@@ -1,0 +1,30 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 320" width="460" height="320" font-family="Arial, sans-serif">
+  <rect width="460" height="320" fill="#f8f9fa" rx="10"/>
+  <text x="230" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a2d5a">Ohm's Law: V–I Characteristics</text>
+
+  <!-- Axes -->
+  <line x1="60" y1="270" x2="420" y2="270" stroke="#333" stroke-width="2"/>
+  <line x1="60" y1="270" x2="60"  y2="40"  stroke="#333" stroke-width="2"/>
+  <text x="425" y="274" font-size="13" fill="#333">I</text>
+  <text x="56"  y="36"  font-size="13" fill="#333">V</text>
+
+  <!-- Ohmic (linear) -->
+  <line x1="60" y1="270" x2="380" y2="70"  stroke="#e05252" stroke-width="2.5"/>
+  <text x="355" y="62" font-size="12" fill="#e05252" font-weight="bold">Ohmic</text>
+  <text x="355" y="78" font-size="10" fill="#e05252">(slope = R)</text>
+
+  <!-- Non-ohmic curve (diode-like) -->
+  <path d="M60,270 Q120,268 160,240 Q220,190 300,120 Q350,84 400,74" fill="none" stroke="#2980b9" stroke-width="2.5" stroke-dasharray="8,4"/>
+  <text x="360" y="95"  font-size="12" fill="#2980b9" font-weight="bold">Non-ohmic</text>
+  <text x="360" y="110" font-size="10" fill="#2980b9">(e.g. diode)</text>
+
+  <!-- Origin label -->
+  <text x="48" y="286" font-size="11" fill="#555">O</text>
+
+  <!-- Slope annotation -->
+  <line x1="180" y1="182" x2="250" y2="182" stroke="#e05252" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="250" y1="182" x2="250" y2="126" stroke="#e05252" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="215" y="197" text-anchor="middle" font-size="10" fill="#e05252">ΔI</text>
+  <text x="262" y="160" font-size="10" fill="#e05252">ΔV</text>
+  <text x="230" y="302" text-anchor="middle" font-size="11" fill="#555">Slope = ΔV/ΔI = R (constant for ohmic)</text>
+</svg>

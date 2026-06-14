@@ -1,0 +1,572 @@
+/* KaTeX for LaTeX rendering — must be first */
+@import "katex/dist/katex.min.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================================
+   CSS Custom Properties — AbdOfPhysics Design System
+   ============================================================================ */
+
+@layer base {
+  :root {
+    /* Background & Foreground */
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+
+    /* Card */
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+
+    /* Primary — Deep Indigo (brand) */
+    --primary: 243 75% 59%;
+    --primary-foreground: 210 20% 98%;
+
+    /* Secondary */
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+
+    /* Muted */
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+
+    /* Accent */
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+
+    /* Destructive */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+
+    /* Border & Input */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 243 75% 59%;
+
+    /* Border radius */
+    --radius: 0.75rem;
+
+    /* Brand palette — AbdOfPhysics Indigo */
+    --brand-50:  243 100% 97%;
+    --brand-100: 244 96%  93%;
+    --brand-200: 243 96%  87%;
+    --brand-300: 245 96%  77%;
+    --brand-400: 248 95%  65%;
+    --brand-500: 243 75%  59%; /* primary */
+    --brand-600: 239 68%  52%;
+    --brand-700: 237 63%  44%;
+    --brand-800: 234 54%  37%;
+    --brand-900: 231 48%  31%;
+    --brand-950: 234 53%  19%;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 243 75% 67%;
+    --primary-foreground: 224 71.4% 4.1%;
+
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 243 75% 67%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+/* ============================================================================
+   Base styles
+   ============================================================================ */
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Focus visible outline */
+  :focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+
+  /* Selection color */
+  ::selection {
+    @apply bg-primary/20 text-foreground;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/50;
+  }
+}
+
+/* ============================================================================
+   Typography
+   ============================================================================ */
+
+@layer base {
+  h1 { @apply scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl; }
+  h2 { @apply scroll-m-20 text-3xl font-semibold tracking-tight; }
+  h3 { @apply scroll-m-20 text-2xl font-semibold tracking-tight; }
+  h4 { @apply scroll-m-20 text-xl font-semibold tracking-tight; }
+  p  { @apply leading-7; }
+
+  /* KaTeX display math */
+  .katex-display {
+    @apply my-4 overflow-x-auto;
+  }
+}
+
+/* ============================================================================
+   Component utilities
+   ============================================================================ */
+
+@layer components {
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-brand-500 via-violet-500 to-brand-400 bg-clip-text text-transparent;
+  }
+
+  .gradient-text-warm {
+    @apply bg-gradient-to-r from-orange-500 via-rose-500 to-pink-500 bg-clip-text text-transparent;
+  }
+
+  /* Glass morphism */
+  .glass {
+    @apply bg-white/80 backdrop-blur-xl dark:bg-background/80 border border-white/20 dark:border-white/10;
+  }
+
+  .glass-card {
+    @apply glass rounded-2xl shadow-xl;
+  }
+
+  /* Shimmer loading skeleton */
+  .shimmer {
+    @apply relative overflow-hidden bg-muted;
+    background: linear-gradient(
+      90deg,
+      hsl(var(--muted)) 25%,
+      hsl(var(--muted-foreground) / 0.1) 50%,
+      hsl(var(--muted)) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  /* Gradient border */
+  .gradient-border {
+    @apply relative;
+    background: linear-gradient(hsl(var(--background)), hsl(var(--background))) padding-box,
+      linear-gradient(135deg, hsl(var(--brand-400)), hsl(var(--brand-600))) border-box;
+    border: 1.5px solid transparent;
+  }
+
+  /* Physics-inspired dot grid background */
+  .dot-grid {
+    background-image: radial-gradient(
+      circle,
+      hsl(var(--foreground) / 0.08) 1px,
+      transparent 1px
+    );
+    background-size: 28px 28px;
+  }
+
+  /* Noise texture overlay */
+  .noise {
+    position: relative;
+  }
+
+  .noise::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    border-radius: inherit;
+  }
+
+  /* Sticky sidebar nav item */
+  .nav-item {
+    @apply flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground;
+  }
+
+  .nav-item.active {
+    @apply bg-primary/10 text-primary;
+  }
+
+  /* Question option card */
+  .option-card {
+    @apply flex cursor-pointer items-start gap-3 rounded-xl border-2 border-border p-4 transition-all duration-150 hover:border-primary/50 hover:bg-primary/5;
+  }
+
+  .option-card.selected {
+    @apply border-primary bg-primary/10;
+  }
+
+  .option-card.correct {
+    @apply border-easy bg-easy/10;
+  }
+
+  .option-card.incorrect {
+    @apply border-hard bg-hard/10;
+  }
+}
+
+/* ============================================================================
+   Utility classes
+   ============================================================================ */
+
+@layer utilities {
+  /* Text balance */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Hide scrollbar but keep functionality */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Prevent layout shift */
+  .contain-layout {
+    contain: layout;
+  }
+}
+
+/* ============================================================================
+   Rendered MDX content — rich, themed styling (.prose-content)
+   Plain CSS (outside @layer) so it reliably wins over the typography plugin.
+   ============================================================================ */
+
+.prose-content {
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+/* ---- Headings with brand accent ---- */
+.prose-content h2 {
+  position: relative;
+  margin-top: 2.75rem;
+  margin-bottom: 1rem;
+  padding: 0 0 0.4rem 0.9rem;
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  border-bottom: 2px solid hsl(var(--border));
+}
+.prose-content h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.12em;
+  bottom: 0.5rem;
+  width: 4px;
+  border-radius: 4px;
+  background: linear-gradient(to bottom, hsl(var(--brand-400)), hsl(var(--brand-600)));
+}
+.prose-content h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
+  font-size: 1.3rem;
+  font-weight: 650;
+  color: hsl(var(--brand-700));
+}
+.dark .prose-content h3 { color: hsl(var(--brand-300)); }
+.prose-content h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* ---- Paragraphs, lists, rules ---- */
+.prose-content p { margin: 0.9rem 0; }
+.prose-content ul,
+.prose-content ol { margin: 0.9rem 0; padding-left: 1.5rem; }
+.prose-content ul { list-style: none; }
+.prose-content ul > li { position: relative; padding-left: 0.35rem; margin: 0.3rem 0; }
+.prose-content ul > li::before {
+  content: "";
+  position: absolute;
+  left: -0.9rem;
+  top: 0.7em;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: hsl(var(--brand-500));
+}
+.prose-content ol > li { margin: 0.3rem 0; padding-left: 0.25rem; }
+.prose-content ol > li::marker { color: hsl(var(--brand-600)); font-weight: 700; }
+.dark .prose-content ol > li::marker { color: hsl(var(--brand-300)); }
+
+.prose-content hr {
+  border: none;
+  height: 2px;
+  margin: 2.25rem 0;
+  background: linear-gradient(to right, transparent, hsl(var(--brand-400) / 0.6), transparent);
+}
+
+/* ---- Problem & solution lead-ins (e.g. "M1.", "P3.", "Solution:") ---- */
+.prose-content p > strong:first-child {
+  color: hsl(var(--brand-600));
+  font-weight: 700;
+}
+.dark .prose-content p > strong:first-child { color: hsl(var(--brand-300)); }
+
+/* ---- Inline code (exclude KaTeX math spans) ---- */
+.prose-content :not(pre) > code:not([class*="math"]) {
+  background: hsl(var(--brand-500) / 0.1);
+  color: hsl(var(--brand-700));
+  padding: 0.12em 0.4em;
+  border-radius: 0.35rem;
+  font-size: 0.88em;
+  font-weight: 500;
+}
+.dark .prose-content :not(pre) > code:not([class*="math"]) { color: hsl(var(--brand-200)); }
+.prose-content code::before,
+.prose-content code::after { content: none; }
+
+/* ---- Blockquote ---- */
+.prose-content blockquote {
+  margin: 1.25rem 0;
+  padding: 0.6rem 1rem;
+  border-left: 4px solid hsl(var(--brand-500));
+  background: hsl(var(--brand-500) / 0.06);
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-style: italic;
+  color: hsl(var(--muted-foreground));
+}
+
+/* ---- Tables: gradient header, zebra rows, hover ---- */
+.prose-content .pm-table-wrap {
+  margin: 1.6rem 0;
+  overflow-x: auto;
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.85rem;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.04);
+}
+.prose-content .pm-table-wrap table {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+.prose-content .pm-table-wrap thead th {
+  background: linear-gradient(to right, hsl(var(--brand-600)), hsl(var(--brand-500)));
+  color: #fff;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.7rem 0.95rem;
+  border: none;
+}
+.prose-content .pm-table-wrap tbody td {
+  padding: 0.6rem 0.95rem;
+  border-top: 1px solid hsl(var(--border));
+  vertical-align: top;
+}
+.prose-content .pm-table-wrap tbody tr:nth-child(even) { background: hsl(var(--muted) / 0.45); }
+.prose-content .pm-table-wrap tbody tr:hover { background: hsl(var(--brand-500) / 0.08); }
+
+/* ---- Callouts ---- */
+.prose-content .pm-callout {
+  --c: #3b82f6;
+  position: relative;
+  margin: 1.6rem 0;
+  padding: 1rem 1.2rem;
+  border-radius: 0.9rem;
+  border: 1px solid color-mix(in srgb, var(--c) 28%, transparent);
+  border-left: 4px solid var(--c);
+  background: color-mix(in srgb, var(--c) 7%, transparent);
+}
+.prose-content .pm-callout-info       { --c: #3b82f6; }
+.prose-content .pm-callout-tip        { --c: #22c55e; }
+.prose-content .pm-callout-warning    { --c: #f59e0b; }
+.prose-content .pm-callout-important  { --c: #ef4444; }
+.prose-content .pm-callout-derivation { --c: #8b5cf6; }
+.dark .prose-content .pm-callout-info       { --c: #60a5fa; }
+.dark .prose-content .pm-callout-tip        { --c: #4ade80; }
+.dark .prose-content .pm-callout-warning    { --c: #fbbf24; }
+.dark .prose-content .pm-callout-important  { --c: #f87171; }
+.dark .prose-content .pm-callout-derivation { --c: #a78bfa; }
+.prose-content .pm-callout-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--c);
+}
+.prose-content .pm-callout-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 999px;
+  background: var(--c);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  font-style: normal;
+}
+.prose-content .pm-callout-body > :first-child { margin-top: 0; }
+.prose-content .pm-callout-body > :last-child { margin-bottom: 0; }
+
+/* ---- Formula cards ---- */
+.prose-content .pm-formula {
+  margin: 1.6rem 0;
+  padding: 1.1rem 1.3rem;
+  border-radius: 1rem;
+  border: 1px solid hsl(var(--brand-300));
+  background: linear-gradient(135deg, hsl(var(--brand-50)), hsl(var(--brand-100) / 0.5));
+  box-shadow: 0 2px 10px hsl(var(--brand-500) / 0.08);
+}
+.dark .prose-content .pm-formula {
+  border-color: hsl(var(--brand-800));
+  background: linear-gradient(135deg, hsl(var(--brand-950)), hsl(var(--brand-900) / 0.35));
+}
+.prose-content .pm-formula-label {
+  display: inline-block;
+  margin-bottom: 0.6rem;
+  padding: 0.2rem 0.65rem;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 999px;
+  background: linear-gradient(to right, hsl(var(--brand-500)), hsl(var(--brand-600)));
+}
+.prose-content .pm-formula-body {
+  overflow-x: auto;
+  text-align: center;
+  font-size: 1.08rem;
+}
+.prose-content .pm-formula-body > :first-child { margin-top: 0; }
+.prose-content .pm-formula-body > :last-child { margin-bottom: 0; }
+
+/* ---- Derivation steps ---- */
+.prose-content .pm-step {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  margin: 0.9rem 0;
+}
+.prose-content .pm-step-num {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, hsl(var(--brand-400)), hsl(var(--brand-600)));
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.82rem;
+  box-shadow: 0 2px 6px hsl(var(--brand-500) / 0.35);
+}
+.prose-content .pm-step-body { flex: 1 1 auto; min-width: 0; }
+.prose-content .pm-step-body > :first-child { margin-top: 0; }
+.prose-content .pm-step-body > :last-child { margin-bottom: 0; }
+
+/* ---- Diagrams: hand-authored SVGs (have <text>) sit on a light card so the
+   slate labels stay readable in both themes. Scoped via :has(text) to avoid
+   touching KaTeX's internal SVGs (which never contain <text>). ---- */
+.prose-content svg:has(text) {
+  display: block;
+  margin: 1.5rem auto;
+  max-width: 100%;
+  height: auto;
+  background: #fff;
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.85rem;
+  padding: 0.75rem;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.05);
+}
+.prose-content .pm-figure { margin: 1.6rem 0; text-align: center; }
+.prose-content .pm-figure img {
+  display: inline-block;
+  max-height: 22rem;
+  border-radius: 0.75rem;
+  border: 1px solid hsl(var(--border));
+}
+.prose-content .pm-figure figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: hsl(var(--muted-foreground));
+}

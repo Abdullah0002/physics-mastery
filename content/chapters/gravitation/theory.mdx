@@ -1,0 +1,897 @@
+---
+title: "Gravitation — Complete Theory"
+description: "The most comprehensive Gravitation resource for JEE Main, JEE Advanced and NEET. Newton's law of gravitation, gravitational field and potential, variation of g, shell theorem, escape and orbital velocity, satellite energetics, geostationary orbits, and Kepler's laws — from first principles to Olympiad level."
+difficulty: "HARD"
+tags: ["gravitation", "gravitational-field", "gravitational-potential", "escape-velocity", "orbital-velocity", "satellite", "kepler-laws", "shell-theorem", "geostationary", "binding-energy"]
+---
+
+# Gravitation — Complete Theory
+
+*The most thorough module — built for JEE Main · JEE Advanced · NEET · Physics Olympiad*
+
+---
+
+## SECTION 1 — The Big Picture
+
+---
+
+### 1.1 The Force That Holds the Universe Together
+
+The same force that makes an apple fall holds the Moon in orbit, binds the Solar System, and shapes galaxies. Newton's profound insight was that **gravity is universal** — every particle of matter attracts every other particle, with the very same law governing a falling stone and an orbiting planet.
+
+Gravitation is where mechanics meets astronomy. It rewards the student who can move fluently between three viewpoints: **force** (Newton's law), **energy** (potential and orbital energetics), and **geometry** (Kepler's laws of orbits).
+
+---
+
+### 1.2 Roadmap
+
+| Concept | Key Formula | JEE Relevance |
+|---------|------------|---------------|
+| Universal gravitation | $F = \frac{Gm_1m_2}{r^2}$ | Very High |
+| Acceleration due to gravity | $g = \frac{GM}{R^2}$ | Very High |
+| Variation of $g$ | height, depth, latitude | Very High |
+| Gravitational potential | $V = -\frac{GM}{r}$ | High |
+| Escape velocity | $v_e = \sqrt{2gR}$ | Very High |
+| Orbital velocity | $v_o = \sqrt{\frac{GM}{r}}$ | Very High |
+| Orbital energy | $E = -\frac{GMm}{2r}$ | High |
+| Kepler's laws | $T^2 \propto a^3$ | Very High |
+
+---
+
+## SECTION 2 — Newton's Law of Universal Gravitation
+
+---
+
+### 2.1 The Law
+
+<Formula label="Newton's Law of Gravitation">
+$$F = \frac{Gm_1m_2}{r^2}$$
+
+Every particle attracts every other along the line joining them, with a force proportional to the product of their masses and inversely proportional to the square of their separation.
+
+$G = 6.674\times10^{-11}$ N·m²/kg² (universal gravitational constant)
+</Formula>
+
+In vector form, the force on mass 1 due to mass 2:
+
+$$\vec{F}_{12} = -\frac{Gm_1m_2}{r^2}\hat{r}_{12}$$
+
+the minus sign indicating attraction (force opposite to the position vector pointing away).
+
+---
+
+### 2.2 Key Properties
+
+- **Always attractive** (unlike electrostatic force).
+- **Central force** — acts along the line joining the masses → angular momentum is conserved.
+- **Conservative** — work done is path-independent; a potential energy exists.
+- **Obeys superposition** — the net force is the vector sum of pairwise forces.
+- **Independent of the medium** — no shielding or screening of gravity is possible.
+
+<Callout type="important">
+**The Shell Theorem (Newton's Crowning Result)**
+
+1. A uniform spherical shell attracts an external particle **as if all its mass were concentrated at its centre**.
+2. A uniform spherical shell exerts **zero** net gravitational force on a particle located **anywhere inside** it.
+
+These two results let us treat planets and stars as point masses — the foundation of all orbital mechanics.
+</Callout>
+
+---
+
+## SECTION 3 — Gravitational Field
+
+---
+
+### 3.1 Definition
+
+The **gravitational field** $\vec{E}_g$ at a point is the force per unit mass that a small test mass would experience there:
+
+<Formula label="Gravitational Field">
+$$\vec{E}_g = \frac{\vec{F}}{m} \qquad |\vec{E}_g| = \frac{GM}{r^2}$$
+
+SI unit: N/kg = m/s². It is a vector pointing toward the source mass.
+</Formula>
+
+The field of a point mass (or a body treated as one) at distance $r$ is $GM/r^2$, directed inward.
+
+---
+
+### 3.2 Field of Spherical Bodies
+
+| Region | Uniform Solid Sphere | Spherical Shell |
+|--------|---------------------|-----------------|
+| Outside ($r > R$) | $\frac{GM}{r^2}$ | $\frac{GM}{r^2}$ |
+| Surface ($r = R$) | $\frac{GM}{R^2}$ | $\frac{GM}{R^2}$ |
+| Inside ($r < R$) | $\frac{GMr}{R^3}$ (∝ $r$) | $0$ |
+
+<svg width="420" height="220" viewBox="0 0 420 220" xmlns="http://www.w3.org/2000/svg">
+  <line x1="40" y1="180" x2="400" y2="180" stroke="#334155" strokeWidth="1.5"/>
+  <line x1="40" y1="180" x2="40" y2="30" stroke="#334155" strokeWidth="1.5"/>
+  <text x="405" y="184" fontSize="12" fill="#334155">r</text>
+  <text x="10" y="40" fontSize="12" fill="#334155">E</text>
+  <text x="20" y="190" fontSize="10" fill="#64748b">0</text>
+  <line x1="160" y1="180" x2="160" y2="30" stroke="#94a3b8" strokeWidth="1" strokeDasharray="4,3"/>
+  <text x="150" y="200" fontSize="11" fill="#64748b">R</text>
+  <text x="60" y="25" fontSize="11" fill="#1e40af" fontWeight="bold">Solid sphere</text>
+  <line x1="40" y1="180" x2="160" y2="70" stroke="#1e40af" strokeWidth="2.5"/>
+  <path d="M 160,70 Q 250,120 400,160" fill="none" stroke="#1e40af" strokeWidth="2.5"/>
+  <text x="245" y="50" fontSize="11" fill="#dc2626" fontWeight="bold">Shell</text>
+  <line x1="40" y1="180" x2="160" y2="180" stroke="#dc2626" strokeWidth="2.5" strokeDasharray="5,3"/>
+  <line x1="160" y1="70" x2="160" y2="70" stroke="#dc2626" strokeWidth="2.5"/>
+  <circle cx="160" cy="70" r="4" fill="#dc2626"/>
+  <text x="35" y="215" fontSize="11" fill="#64748b">Solid: rises ∝ r inside, falls ∝ 1/r² outside.  Shell: zero inside, jumps to GM/R² at surface.</text>
+</svg>
+
+---
+
+## SECTION 4 — Acceleration Due to Gravity
+
+---
+
+### 4.1 Surface Value
+
+For a body of mass $M$ and radius $R$, the acceleration due to gravity at the surface is:
+
+<Formula label="Acceleration Due to Gravity">
+$$g = \frac{GM}{R^2} = \frac{4}{3}\pi G \rho R$$
+
+(the second form uses $M = \frac{4}{3}\pi R^3\rho$, showing $g \propto \rho R$ for a uniform body)
+</Formula>
+
+---
+
+### 4.2 Variation With Height
+
+At a height $h$ above the surface:
+
+<Formula label="Variation of g With Height">
+$$g_h = \frac{GM}{(R+h)^2} = g\left(\frac{R}{R+h}\right)^2$$
+
+For $h \ll R$: $\quad g_h \approx g\left(1 - \dfrac{2h}{R}\right)$
+</Formula>
+
+---
+
+### 4.3 Variation With Depth
+
+At a depth $d$ below the surface, only the mass within radius $(R-d)$ contributes (shell theorem). For a uniform Earth:
+
+<Formula label="Variation of g With Depth">
+$$g_d = g\left(1 - \frac{d}{R}\right)$$
+
+At the centre ($d = R$): $g = 0$.
+</Formula>
+
+<Callout type="tip">
+**Height vs Depth**
+
+For small distances, going **up** by $h$ reduces $g$ by a factor $\frac{2h}{R}$, but going **down** by $d$ reduces it by only $\frac{d}{R}$. So $g$ falls **twice as fast** with height as with depth. Both reach extremes: $g \to 0$ at infinity and $g = 0$ at the centre.
+</Callout>
+
+---
+
+### 4.4 Variation With Latitude (Earth's Rotation)
+
+Earth's rotation makes the apparent (effective) gravity depend on latitude $\lambda$. A body at latitude $\lambda$ moves in a circle of radius $R\cos\lambda$ about the axis:
+
+<Formula label="Effective g With Latitude">
+$$g_{eff} = g - \omega^2 R\cos^2\lambda$$
+
+- **Equator** ($\lambda = 0$): $g_{eff} = g - \omega^2 R$ (minimum)
+- **Poles** ($\lambda = 90°$): $g_{eff} = g$ (maximum, no rotational effect)
+</Formula>
+
+If Earth spun about 17× faster, $\omega^2 R$ would equal $g$ at the equator, and objects there would become weightless.
+
+---
+
+## SECTION 5 — Gravitational Potential Energy
+
+---
+
+### 5.1 The General Expression
+
+Near the surface we used $U = mgh$, valid only for small heights where $g$ is constant. The general expression, taking $U = 0$ at infinity, is:
+
+<Formula label="Gravitational Potential Energy">
+$$U = -\frac{GMm}{r}$$
+
+It is **negative** because gravity does positive work as masses come together from infinity. The reference $U(\infty) = 0$ is the natural choice.
+</Formula>
+
+**Consistency with $mgh$:** The change in $U$ when raised from $R$ to $R+h$ (small $h$) is
+
+$$\Delta U = -\frac{GMm}{R+h} + \frac{GMm}{R} \approx \frac{GMm}{R^2}h = mgh \;\checkmark$$
+
+---
+
+### 5.2 Potential Energy of a System
+
+For more than two masses, sum over all **pairs**:
+
+$$U_{system} = -G\left(\frac{m_1m_2}{r_{12}} + \frac{m_2m_3}{r_{23}} + \frac{m_1m_3}{r_{13}}\right)$$
+
+---
+
+## SECTION 6 — Gravitational Potential
+
+---
+
+### 6.1 Definition
+
+The **gravitational potential** $V$ is the potential energy per unit mass — the work done per unit mass in bringing a test mass from infinity to that point:
+
+<Formula label="Gravitational Potential">
+$$V = \frac{U}{m} = -\frac{GM}{r}$$
+
+SI unit: J/kg. The field is the negative gradient of the potential:
+$$\vec{E}_g = -\frac{dV}{dr}$$
+</Formula>
+
+---
+
+### 6.2 Potential of Spherical Bodies
+
+| Region | Uniform Solid Sphere | Spherical Shell |
+|--------|---------------------|-----------------|
+| Outside ($r > R$) | $-\frac{GM}{r}$ | $-\frac{GM}{r}$ |
+| Surface ($r = R$) | $-\frac{GM}{R}$ | $-\frac{GM}{R}$ |
+| Inside ($r < R$) | $-\frac{GM(3R^2 - r^2)}{2R^3}$ | $-\frac{GM}{R}$ (constant) |
+
+<Callout type="info">
+**Inside a Shell: Field Zero, Potential Not Zero**
+
+A common confusion: inside a shell the field is zero, but the potential is **not** zero — it is constant at $-GM/R$. Zero field means no force (the potential is flat), but the potential itself retains the surface value. Field measures the *slope* of potential, not its value.
+</Callout>
+
+**Potential at the centre of a solid sphere** (set $r = 0$): $V_{centre} = -\dfrac{3GM}{2R} = \dfrac{3}{2}V_{surface}$.
+
+---
+
+## SECTION 7 — Escape Velocity
+
+---
+
+### 7.1 Derivation
+
+The **escape velocity** is the minimum speed needed to project a body from a planet's surface so that it never returns (just reaches infinity with zero speed).
+
+<Step n={1}>
+Total energy at the surface = total energy at infinity (energy conservation):
+$$\frac{1}{2}mv_e^2 - \frac{GMm}{R} = 0 + 0$$
+</Step>
+
+<Step n={2}>
+Solve for $v_e$:
+$$v_e = \sqrt{\frac{2GM}{R}}$$
+</Step>
+
+<Step n={3}>
+Using $g = GM/R^2$:
+$$v_e = \sqrt{2gR}$$
+</Step>
+
+<Formula label="Escape Velocity">
+$$v_e = \sqrt{\frac{2GM}{R}} = \sqrt{2gR}$$
+
+For Earth: $v_e \approx 11.2$ km/s. It is **independent of the mass** and the direction of projection of the escaping body.
+</Formula>
+
+---
+
+## SECTION 8 — Satellites and Orbital Motion
+
+---
+
+### 8.1 Orbital Velocity
+
+For a satellite in a circular orbit of radius $r$ (from the centre), gravity provides the centripetal force:
+
+<Step n={1}>
+$$\frac{GMm}{r^2} = \frac{mv_o^2}{r}$$
+</Step>
+
+<Step n={2}>
+$$v_o = \sqrt{\frac{GM}{r}}$$
+</Step>
+
+<Formula label="Orbital Velocity">
+$$v_o = \sqrt{\frac{GM}{r}} = R\sqrt{\frac{g}{r}}$$
+
+For a satellite just above the surface ($r \approx R$): $v_o = \sqrt{gR} \approx 7.9$ km/s.
+</Formula>
+
+<Callout type="tip">
+**The √2 Relation**
+
+$$v_e = \sqrt{2}\,v_o$$
+
+The escape velocity from a point equals $\sqrt{2}$ times the orbital velocity at that point. A satellite in low orbit needs its speed multiplied by only $\sqrt{2} \approx 1.41$ to break free entirely.
+</Callout>
+
+---
+
+### 8.2 Time Period of a Satellite
+
+From $v_o = \frac{2\pi r}{T}$ and $v_o = \sqrt{GM/r}$:
+
+<Formula label="Time Period of a Satellite">
+$$T = 2\pi\sqrt{\frac{r^3}{GM}}$$
+
+This is Kepler's third law for circular orbits: $T^2 \propto r^3$.
+</Formula>
+
+---
+
+### 8.3 Energy of an Orbiting Satellite
+
+<Step n={1}>
+Kinetic energy: $KE = \frac{1}{2}mv_o^2 = \frac{1}{2}\cdot\frac{GMm}{r} = +\frac{GMm}{2r}$
+</Step>
+
+<Step n={2}>
+Potential energy: $PE = -\frac{GMm}{r}$
+</Step>
+
+<Step n={3}>
+Total energy: $E = KE + PE = \frac{GMm}{2r} - \frac{GMm}{r} = -\frac{GMm}{2r}$
+</Step>
+
+<Formula label="Orbital Energetics">
+$$KE = +\frac{GMm}{2r}, \quad PE = -\frac{GMm}{r}, \quad E = -\frac{GMm}{2r}$$
+
+Useful relations: $\quad PE = 2E, \quad KE = -E = |E|, \quad PE = -2\,KE$
+</Formula>
+
+<Callout type="important">
+**Why Total Energy Is Negative**
+
+A **negative** total energy means the satellite is **bound** — it cannot escape. The **binding energy** (the energy you must add to free it) is $+\frac{GMm}{2r}$. As the orbit shrinks ($r$ decreases), $E$ becomes *more* negative — the satellite is more tightly bound, yet moves *faster* (higher $KE$). This is the famous counterintuitive result: atmospheric drag makes a satellite **speed up** as it spirals down.
+</Callout>
+
+---
+
+### 8.4 Geostationary Satellites
+
+A **geostationary** satellite appears fixed in the sky. It must satisfy:
+
+1. Orbital period $T = 24$ h (matches Earth's rotation)
+2. Orbit in the **equatorial plane**
+3. Revolve **west to east** (same sense as Earth)
+
+Solving $T = 2\pi\sqrt{r^3/GM}$ with $T = 86400$ s gives:
+
+$$r \approx 42{,}200 \text{ km} \quad\Rightarrow\quad h \approx 36{,}000 \text{ km above the surface}$$
+
+Geostationary satellites are used for communication and broadcasting (the dish never needs to track them).
+
+---
+
+### 8.5 SVG: Orbital Energy
+
+<svg width="380" height="200" viewBox="0 0 380 200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="110" cy="110" r="34" fill="#1e40af"/>
+  <text x="110" y="115" textAnchor="middle" fontSize="12" fill="white" fontWeight="bold">M</text>
+  <ellipse cx="110" cy="110" rx="120" ry="70" fill="none" stroke="#94a3b8" strokeWidth="1.5" strokeDasharray="5,4"/>
+  <circle cx="230" cy="110" r="9" fill="#dc2626"/>
+  <text x="240" y="100" fontSize="11" fill="#dc2626" fontWeight="bold">m</text>
+  <line x1="230" y1="110" x2="230" y2="70" stroke="#16a34a" strokeWidth="2.5" markerEnd="url(#orbV)"/>
+  <defs>
+    <marker id="orbV" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <text x="236" y="66" fontSize="11" fill="#16a34a">v₀</text>
+  <line x1="110" y1="110" x2="230" y2="110" stroke="#64748b" strokeWidth="1"/>
+  <text x="160" y="125" fontSize="11" fill="#64748b">r</text>
+  <text x="280" y="150" fontSize="11" fill="#334155">KE = +GMm/2r</text>
+  <text x="280" y="168" fontSize="11" fill="#334155">PE = −GMm/r</text>
+  <text x="280" y="186" fontSize="11" fill="#dc2626" fontWeight="bold">E = −GMm/2r</text>
+</svg>
+
+---
+
+## SECTION 9 — Kepler's Laws
+
+---
+
+### 9.1 The Three Laws
+
+<Formula label="Kepler's Laws of Planetary Motion">
+**1. Law of Orbits:** Every planet moves in an **ellipse** with the Sun at one focus.
+
+**2. Law of Areas:** The line joining a planet to the Sun sweeps out **equal areas in equal times** — areal velocity is constant.
+
+**3. Law of Periods:** $T^2 \propto a^3$, where $a$ is the semi-major axis: $\quad T^2 = \dfrac{4\pi^2}{GM}a^3$
+</Formula>
+
+---
+
+### 9.2 Second Law = Conservation of Angular Momentum
+
+The areal velocity is:
+
+$$\frac{dA}{dt} = \frac{L}{2m} = \text{constant}$$
+
+Since gravity is a **central force**, it exerts no torque about the Sun, so the planet's angular momentum $L$ is conserved. The second law is simply angular-momentum conservation in disguise.
+
+**Consequence:** A planet moves **fastest at perihelion** (closest) and **slowest at aphelion** (farthest). Conservation of angular momentum gives:
+
+$$v_p\, r_p = v_a\, r_a \qquad (m v_p r_p = m v_a r_a)$$
+
+---
+
+### 9.3 Elliptical Orbits — Key Relations
+
+For an ellipse with semi-major axis $a$, perihelion distance $r_p$ and aphelion distance $r_a$:
+
+$$r_p + r_a = 2a$$
+
+The total energy depends only on the semi-major axis:
+
+$$E = -\frac{GMm}{2a}$$
+
+(For a circular orbit, $a = r$, recovering $E = -GMm/2r$.)
+
+<svg width="380" height="200" viewBox="0 0 380 200" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="190" cy="100" rx="150" ry="90" fill="none" stroke="#1e40af" strokeWidth="2"/>
+  <circle cx="280" cy="100" r="14" fill="#f59e0b"/>
+  <text x="276" y="105" fontSize="11" fill="white" fontWeight="bold">S</text>
+  <circle cx="40" cy="100" r="7" fill="#dc2626"/>
+  <text x="20" y="95" fontSize="11" fill="#dc2626">aphelion</text>
+  <circle cx="340" cy="100" r="7" fill="#16a34a"/>
+  <text x="310" y="90" fontSize="11" fill="#16a34a">perihelion</text>
+  <line x1="40" y1="100" x2="340" y2="100" stroke="#94a3b8" strokeWidth="1" strokeDasharray="4,3"/>
+  <text x="150" y="118" fontSize="11" fill="#64748b">2a</text>
+  <path d="M 280,100 L 340,100 L 332,80 Z" fill="#16a34a" opacity="0.3"/>
+  <path d="M 280,100 L 40,100 L 48,124 Z" fill="#dc2626" opacity="0.3"/>
+  <text x="55" y="160" fontSize="11" fill="#64748b">Equal areas swept in equal times (fast near S, slow far from S)</text>
+</svg>
+
+---
+
+## SECTION 10 — Weightlessness
+
+---
+
+### 10.1 True vs Apparent Weight
+
+**Apparent weight** is the normal reaction $N$ a surface exerts — what a weighing scale reads. **Weightlessness** ($N = 0$) occurs whenever a body is in **free fall** — accelerating purely under gravity.
+
+- In an **orbiting satellite**, both the satellite and astronaut accelerate toward Earth at exactly the local $g$. There is no relative acceleration, so $N = 0$ — the astronaut floats. Gravity is **not** zero in orbit (it's about 90% of surface value at the ISS); the astronaut is simply in continuous free fall.
+- In a **freely falling lift**, occupants feel weightless for the same reason.
+
+<Callout type="warning">
+**"Zero Gravity" Is a Misnomer**
+
+Astronauts in orbit are not beyond Earth's gravity — gravity is what *keeps them in orbit*. They feel weightless because they and their spacecraft fall together at the same rate. The correct term is **microgravity** or **free fall**, not "zero gravity."
+</Callout>
+
+---
+
+## SECTION 11 — Advanced Applications
+
+---
+
+### 11.1 Two-Body / Binary Star Problem
+
+Two stars of masses $m_1$ and $m_2$ orbit their common centre of mass, separated by distance $d$. They share a common period:
+
+$$T = 2\pi\sqrt{\frac{d^3}{G(m_1 + m_2)}}$$
+
+Each orbits the CM in a circle whose radius is inversely proportional to its mass: $r_1/r_2 = m_2/m_1$.
+
+---
+
+### 11.2 Velocity in an Elliptical Orbit (Vis-Viva)
+
+The speed at any point in an orbit (circular or elliptical) at distance $r$, with semi-major axis $a$:
+
+<Formula label="Vis-Viva Equation">
+$$v^2 = GM\left(\frac{2}{r} - \frac{1}{a}\right)$$
+</Formula>
+
+For a circular orbit ($r = a$): $v^2 = GM/r$. For escape ($a \to \infty$): $v^2 = 2GM/r$. A single equation that unifies all orbital speeds.
+
+---
+
+### 11.3 Effect of Air Drag on a Satellite
+
+As a satellite loses energy to atmospheric drag, $r$ decreases. Since $E = -GMm/2r$ becomes more negative, $r$ shrinks. But $v = \sqrt{GM/r}$ **increases** as $r$ decreases. So drag, paradoxically, makes the satellite **move faster** while spiralling inward — the lost energy comes from PE, which falls twice as fast as KE rises.
+
+---
+
+### 11.4 Gravitational Field at the Centre of a Ring / on its Axis
+
+For a ring of mass $M$ and radius $R$, at a point on its axis distance $x$ from the centre:
+
+$$E_g = \frac{GMx}{(R^2 + x^2)^{3/2}}, \qquad V = -\frac{GM}{\sqrt{R^2 + x^2}}$$
+
+The field is **zero at the centre** ($x = 0$) by symmetry and maximum at $x = R/\sqrt{2}$.
+
+---
+
+## SECTION 12 — Error Analysis
+
+---
+
+| # | Mistake | Correct Approach |
+|---|---------|-----------------|
+| 1 | Using $U = mgh$ for large heights | Valid only for $h \ll R$; use $U = -GMm/r$ generally |
+| 2 | Forgetting $U$ is negative | Gravitational PE is $-GMm/r$ with the $U(\infty)=0$ convention |
+| 3 | Thinking $g$ falls equally with height and depth | $g$ falls **twice as fast** with height ($2h/R$) as with depth ($d/R$) |
+| 4 | Believing escape velocity depends on launch direction or mass | $v_e = \sqrt{2gR}$ — independent of both |
+| 5 | Thinking gravity is zero in orbit | Gravity provides the centripetal force; astronauts are in free fall, not zero-g |
+| 6 | Confusing zero field with zero potential inside a shell | Field $= 0$ but potential $= -GM/R$ (constant, nonzero) inside a shell |
+| 7 | Using $v_e = \sqrt{2}v_o$ at different radii | The relation holds at the **same point**; both depend on $r$ |
+| 8 | Thinking a slower satellite orbits lower | Lower orbits are **faster** ($v \propto 1/\sqrt{r}$); drag speeds a satellite up |
+| 9 | Applying Kepler's 3rd law with radius instead of semi-major axis | $T^2 \propto a^3$ uses the semi-major axis $a$, not the instantaneous $r$ |
+| 10 | Conserving KE in elliptical orbit | KE varies; **total energy** and **angular momentum** are conserved |
+| 11 | Adding gravitational potentials as vectors | Potential is a **scalar** — add algebraically; field is the vector |
+| 12 | Using $g$ as constant when computing escape/orbital energy | Use the full $-GMm/r$ form; $g$ is only the surface value |
+
+---
+
+## SECTION 13 — Solved Examples
+
+---
+
+### JEE Main Level Examples
+
+**M1.** Find the acceleration due to gravity at a height equal to the Earth's radius. ($g = 9.8$ m/s²)
+
+**Solution:**
+$g_h = g\left(\frac{R}{R+h}\right)^2 = g\left(\frac{R}{2R}\right)^2 = \frac{g}{4} = \mathbf{2.45 \text{ m/s}^2}$
+
+---
+
+**M2.** At what depth is the value of $g$ half its surface value?
+
+**Solution:**
+$g_d = g(1 - d/R) = g/2 \Rightarrow d/R = 1/2 \Rightarrow d = \mathbf{R/2}$
+
+---
+
+**M3.** Find the escape velocity from a planet of mass $2M_E$ and radius $2R_E$ (where Earth's $v_e = 11.2$ km/s).
+
+**Solution:**
+$v_e = \sqrt{2GM/R} \propto \sqrt{M/R}$
+
+$\frac{v_e'}{v_e} = \sqrt{\frac{2M_E/2R_E}{M_E/R_E}} = \sqrt{1} = 1$
+
+$v_e' = \mathbf{11.2 \text{ km/s}}$
+
+---
+
+**M4.** A satellite orbits at height $R$ above Earth's surface. Find its orbital velocity. ($g = 10$ m/s², $R = 6.4\times10^6$ m)
+
+**Solution:**
+$r = 2R$, $v_o = \sqrt{GM/r} = \sqrt{gR^2/2R} = \sqrt{gR/2}$
+
+$v_o = \sqrt{\frac{10 \times 6.4\times10^6}{2}} = \sqrt{3.2\times10^7} \approx \mathbf{5.66 \text{ km/s}}$
+
+---
+
+**M5.** Two satellites orbit at radii $r$ and $4r$. Find the ratio of their periods.
+
+**Solution:**
+$T \propto r^{3/2}$, so $\frac{T_2}{T_1} = \left(\frac{4r}{r}\right)^{3/2} = 4^{3/2} = \mathbf{8}$
+
+---
+
+**M6.** The gravitational potential at a point is $-5\times10^7$ J/kg. Find the work done in bringing a 2 kg mass from infinity to that point.
+
+**Solution:**
+$W = m\,V = 2 \times (-5\times10^7) = \mathbf{-1\times10^8 \text{ J}}$
+
+(Negative: gravity does the work; the mass is bound.)
+
+---
+
+**M7.** Find the total energy of a 1000 kg satellite in a circular orbit of radius $7\times10^6$ m. ($GM = 4\times10^{14}$ m³/s²)
+
+**Solution:**
+$E = -\frac{GMm}{2r} = -\frac{4\times10^{14}\times1000}{2\times7\times10^6} = -\frac{4\times10^{17}}{1.4\times10^7} \approx \mathbf{-2.86\times10^{10} \text{ J}}$
+
+---
+
+**M8.** A body weighs 90 N at the surface. What is its weight at a height $R/2$?
+
+**Solution:**
+$W_h = W\left(\frac{R}{R+R/2}\right)^2 = 90\left(\frac{R}{1.5R}\right)^2 = 90\times\frac{4}{9} = \mathbf{40 \text{ N}}$
+
+---
+
+**M9.** Find the orbital period of a satellite just above the Moon's surface. ($g_{moon} = 1.6$ m/s², $R_{moon} = 1.74\times10^6$ m)
+
+**Solution:**
+$T = 2\pi\sqrt{R/g} = 2\pi\sqrt{\frac{1.74\times10^6}{1.6}} = 2\pi\sqrt{1.09\times10^6} = 2\pi(1043) \approx \mathbf{6555 \text{ s}} \approx 1.82 \text{ h}$
+
+---
+
+**M10.** By what percentage does $g$ change at the equator due to Earth's rotation? ($\omega = 7.3\times10^{-5}$ rad/s, $R = 6.4\times10^6$ m, $g = 9.8$ m/s²)
+
+**Solution:**
+$\omega^2 R = (7.3\times10^{-5})^2 \times 6.4\times10^6 = 5.33\times10^{-9}\times6.4\times10^6 = 0.034$ m/s²
+
+$\frac{\Delta g}{g} = \frac{0.034}{9.8} \approx \mathbf{0.35\%}$ reduction
+
+---
+
+**M11.** The escape velocity from Earth is 11.2 km/s. A body is projected at 22.4 km/s. Find its speed far from Earth (ignore other bodies).
+
+**Solution:**
+Energy conservation: $\frac{1}{2}v^2 - \frac{GM}{R} = \frac{1}{2}v_\infty^2$
+
+$\frac{1}{2}v^2 - \frac{1}{2}v_e^2 = \frac{1}{2}v_\infty^2$ (since $GM/R = \frac{1}{2}v_e^2$)
+
+$v_\infty = \sqrt{v^2 - v_e^2} = \sqrt{22.4^2 - 11.2^2} = 11.2\sqrt{4-1} = 11.2\sqrt{3} \approx \mathbf{19.4 \text{ km/s}}$
+
+---
+
+**M12.** A planet has the same density as Earth but twice the radius. Compare its surface $g$ with Earth's.
+
+**Solution:**
+$g = \frac{4}{3}\pi G\rho R \propto R$ (same $\rho$)
+
+$\frac{g'}{g} = \frac{R'}{R} = 2 \Rightarrow g' = \mathbf{2g}$
+
+---
+
+### JEE Advanced Level Examples
+
+**A1.** A comet moves in an elliptical orbit. At perihelion ($r_p = 0.5$ AU) its speed is 60 km/s. Find its speed at aphelion ($r_a = 2$ AU).
+
+**Solution:**
+Angular momentum conservation: $v_p r_p = v_a r_a$
+
+$v_a = v_p\frac{r_p}{r_a} = 60\times\frac{0.5}{2} = \mathbf{15 \text{ km/s}}$
+
+---
+
+**A2.** A particle is dropped from a height $R$ (above the surface) and falls to the Earth. Find its speed on reaching the surface. ($g$ = surface gravity, $R$ = Earth's radius)
+
+**Solution:**
+Energy conservation from $r = 2R$ to $r = R$:
+$$-\frac{GMm}{2R} + 0 = -\frac{GMm}{R} + \frac{1}{2}mv^2$$
+
+$$\frac{1}{2}v^2 = \frac{GM}{R} - \frac{GM}{2R} = \frac{GM}{2R} = \frac{gR}{2}$$
+
+$$v = \sqrt{gR}$$
+
+(Notably the same as low-orbit speed — but here it's radial, not orbital.)
+
+---
+
+**A3.** Three identical particles of mass $m$ are placed at the vertices of an equilateral triangle of side $a$. Find (a) the net force on any one particle, (b) the gravitational potential energy of the system, (c) the speed each must be given (tangentially) to orbit their common centre maintaining the triangle.
+
+**Solution:**
+
+(a) Each particle feels two forces of magnitude $\frac{Gm^2}{a^2}$ at 60° to each other. Resultant:
+$$F = 2\cdot\frac{Gm^2}{a^2}\cos30° = \sqrt{3}\,\frac{Gm^2}{a^2}$$
+
+(b) Three pairs: $U = -3\cdot\frac{Gm^2}{a} = -\frac{3Gm^2}{a}$
+
+(c) The net force provides centripetal force toward the centroid, at distance $r = \frac{a}{\sqrt{3}}$:
+$$\sqrt{3}\frac{Gm^2}{a^2} = \frac{mv^2}{r} = \frac{mv^2\sqrt{3}}{a} \quad\Rightarrow\quad v = \sqrt{\frac{Gm}{a}}$$
+
+---
+
+**A4.** A satellite of mass $m$ is in a circular orbit of radius $r$. It is to be transferred to a larger circular orbit of radius $2r$. Find the minimum energy required.
+
+**Solution:**
+$$E_i = -\frac{GMm}{2r}, \qquad E_f = -\frac{GMm}{2(2r)} = -\frac{GMm}{4r}$$
+
+$$\Delta E = E_f - E_i = -\frac{GMm}{4r} + \frac{GMm}{2r} = \frac{GMm}{4r}$$
+
+The minimum energy required is $\dfrac{GMm}{4r}$.
+
+---
+
+**A5.** A tunnel is bored straight through the centre of a uniform Earth. A ball is dropped in. Show that it executes simple harmonic motion and find the period.
+
+**Solution:**
+
+At depth $d$, the effective gravity is $g_d = g(1 - d/R)$, i.e., at distance $x = R - d$ from the centre:
+$$g_x = g\frac{x}{R}$$
+
+directed toward the centre. The restoring acceleration is:
+$$a = -\frac{g}{R}x$$
+
+This is SHM with $\omega^2 = g/R$, so:
+$$T = 2\pi\sqrt{\frac{R}{g}} \approx 84 \text{ minutes}$$
+
+Remarkably, this equals the period of a satellite skimming the surface.
+
+---
+
+## SECTION 14 — Practice Problems
+
+---
+
+### JEE Main Practice Problems
+
+**P1.** Find $g$ at a height of 10 km above Earth's surface. ($g = 9.8$ m/s², $R = 6400$ km)
+
+**P2.** At what height above the surface is $g$ reduced to 1% of its surface value?
+
+**P3.** Find the escape velocity from the Moon. ($g_{moon} = 1.6$ m/s², $R_{moon} = 1740$ km)
+
+**P4.** A geostationary satellite orbits at $r = 4.2\times10^7$ m. Find its orbital speed.
+
+**P5.** Two planets have radii in ratio 2:3 and densities in ratio 3:2. Find the ratio of their surface gravities.
+
+**P6.** A satellite's orbital radius is increased by 1%. Find the percentage change in its period.
+
+**P7.** Find the gravitational potential energy of a 100 kg satellite at height $R$ above the surface. ($GM = 4\times10^{14}$, $R = 6.4\times10^6$ m)
+
+**P8.** A body is projected vertically with half the escape velocity. Find the maximum height reached (in terms of $R$).
+
+**P9.** Calculate the binding energy of a 500 kg satellite in a circular orbit of radius $8\times10^6$ m. ($GM = 4\times10^{14}$)
+
+**P10.** Find the ratio of KE to PE (magnitude) for a satellite in a circular orbit.
+
+**P11.** A planet's year is 8 Earth-years. Find the ratio of its orbital radius to Earth's.
+
+**P12.** Three masses each 2 kg are at the corners of an equilateral triangle of side 1 m. Find the net gravitational force on one of them.
+
+**P13.** The mass of a planet is 10× Earth's and its radius is 2× Earth's. Find the ratio of escape velocities.
+
+**P14.** A satellite is moved from an orbit of radius $r$ to $3r$. Find the ratio of its new to old kinetic energy.
+
+**P15.** Find the gravitational field at a point on the axis of a ring (mass 5 kg, radius 0.3 m) at distance 0.4 m from the centre.
+
+---
+
+### JEE Advanced Practice Problems
+
+**Q1.** A particle is projected from the surface of Earth with speed $v = \sqrt{1.5\,gR}$. Find the maximum height it reaches above the surface.
+
+**Q2.** Two concentric shells of masses $M_1$ and $M_2$ have radii $R_1 < R_2$. Find the gravitational field and potential at distances (a) $r < R_1$, (b) $R_1 < r < R_2$, (c) $r > R_2$.
+
+**Q3.** A satellite is in a circular orbit of radius $r$. Its speed is suddenly increased by a factor $k$ (tangentially). For what range of $k$ does it remain bound? For $k = \sqrt{2}$, describe the resulting trajectory.
+
+**Q4.** A spherical cavity of radius $R/2$ is carved out of a uniform solid sphere of radius $R$ and mass $M$, the cavity touching the surface and passing through the centre. Find the gravitational field at the centre of the cavity.
+
+**Q5.** Derive the vis-viva equation $v^2 = GM\left(\frac{2}{r} - \frac{1}{a}\right)$ from conservation of energy and angular momentum for an elliptical orbit.
+
+**Q6.** A satellite in a circular orbit of radius $r$ collides with and sticks to a stationary space-debris of equal mass. Find the new orbit's properties (the combined object's subsequent path).
+
+**Q7.** Two stars of masses $m$ and $2m$ separated by $d$ orbit their common centre of mass. Find the period and the orbital speed of each star.
+
+**Q8.** A uniform rod of mass $M$ and length $L$ lies along a line. Find the gravitational field at a point on the line, distance $a$ from the nearer end.
+
+**Q9.** Inside a tunnel dug along a chord (not through the centre) of a uniform Earth, show that a particle executes SHM and find the period. How does it compare to the through-centre tunnel?
+
+**Q10.** A satellite is launched into a circular orbit of radius $r$. Due to a small tangential thrust, it spirals slowly outward. Show that during this process its kinetic energy decreases even though work is being done on it, and explain the energy bookkeeping.
+
+---
+
+## SECTION 15 — PYQ Analysis
+
+---
+
+### JEE Main Trends (2019–2024)
+
+| Topic | Frequency | Common Question Type |
+|-------|-----------|---------------------|
+| Variation of $g$ (height/depth/latitude) | Very High | Direct formula |
+| Orbital velocity & period | Very High | Numerical |
+| Escape velocity | High | Ratio / comparison |
+| Orbital energy & binding energy | High | $E = -GMm/2r$ |
+| Gravitational potential & PE | Medium | Scalar addition |
+| Kepler's third law | Medium | $T^2 \propto a^3$ |
+
+---
+
+### JEE Advanced Trends (2019–2024)
+
+| Topic | Frequency | Format |
+|-------|-----------|--------|
+| Elliptical orbits (angular momentum + energy) | Very High | Multi-step / Integer |
+| Field & potential of composite bodies (cavity) | High | Multi-correct |
+| Shell theorem applications | High | Conceptual + Numerical |
+| Tunnel-through-Earth SHM | Medium | Derivation / Integer |
+| Orbit transfer & energy | Medium | Numerical |
+| Binary / two-body systems | Medium | Analytical |
+
+**JEE Advanced Key Pattern:** Orbital problems hinge on **two conserved quantities** — total energy ($E = -GMm/2a$) and angular momentum ($mvr = $ const at perihelion/aphelion). For field/potential of carved or composite bodies, use **superposition** (full body minus the removed piece). The tunnel-SHM and cavity-field problems are perennial favourites.
+
+---
+
+## SECTION 16 — Final Revision Module
+
+---
+
+### Complete Formula Sheet
+
+<Formula label="Gravitation — Master Formula Sheet">
+
+**Universal law:** $F = \dfrac{Gm_1m_2}{r^2}$ ; $G = 6.674\times10^{-11}$ N·m²/kg²
+
+**Field:** $E_g = \dfrac{GM}{r^2}$ (point/outside) ; $\dfrac{GMr}{R^3}$ (inside solid sphere) ; $0$ (inside shell)
+
+**Surface gravity:** $g = \dfrac{GM}{R^2} = \dfrac{4}{3}\pi G\rho R$
+
+**Variation:** height $g_h = g\left(\frac{R}{R+h}\right)^2 \approx g(1-\frac{2h}{R})$ ; depth $g_d = g(1-\frac{d}{R})$ ; latitude $g_\lambda = g - \omega^2 R\cos^2\lambda$
+
+**Potential:** $V = -\dfrac{GM}{r}$ (outside) ; $-\dfrac{GM(3R^2-r^2)}{2R^3}$ (inside solid sphere) ; $-\dfrac{GM}{R}$ (inside shell)
+
+**Potential energy:** $U = -\dfrac{GMm}{r}$ ; system: sum over all pairs
+
+**Escape velocity:** $v_e = \sqrt{\dfrac{2GM}{R}} = \sqrt{2gR} \approx 11.2$ km/s
+
+**Orbital velocity:** $v_o = \sqrt{\dfrac{GM}{r}}$ ; $v_e = \sqrt{2}\,v_o$
+
+**Period:** $T = 2\pi\sqrt{\dfrac{r^3}{GM}}$
+
+**Orbital energy:** $KE = \dfrac{GMm}{2r}$ ; $PE = -\dfrac{GMm}{r}$ ; $E = -\dfrac{GMm}{2r}$ ; binding energy $= \dfrac{GMm}{2r}$
+
+**Kepler:** (1) ellipse, (2) $\frac{dA}{dt} = \frac{L}{2m}$ const, (3) $T^2 = \frac{4\pi^2}{GM}a^3$
+
+**Elliptical orbit:** $r_p + r_a = 2a$ ; $v_p r_p = v_a r_a$ ; $E = -\dfrac{GMm}{2a}$
+
+**Vis-viva:** $v^2 = GM\left(\dfrac{2}{r} - \dfrac{1}{a}\right)$
+
+**Tunnel through centre:** $T = 2\pi\sqrt{\dfrac{R}{g}} \approx 84$ min
+
+</Formula>
+
+---
+
+### Concept Map
+
+**Gravitation**
+
+$F = \dfrac{Gm_1m_2}{r^2}$ → universal, attractive, central, conservative
+
+↓ per unit mass:
+
+**Field** $E_g = GM/r^2$ (vector) and **Potential** $V = -GM/r$ (scalar), linked by $E_g = -dV/dr$
+
+↓ surface:
+
+$g = GM/R^2$ → varies with height, depth, latitude
+
+↓ energy:
+
+$U = -GMm/r$ → **escape** ($v_e = \sqrt{2gR}$) when $E \geq 0$
+
+↓ orbits:
+
+$v_o = \sqrt{GM/r}$, $E = -GMm/2r$ → **Kepler's laws** govern shape, area, period
+
+---
+
+### Last-Minute Tips
+
+<Callout type="tip">
+**5 Power Techniques**
+
+1. **Two conserved quantities for orbits:** total energy ($E = -GMm/2a$) and angular momentum ($v_p r_p = v_a r_a$). Almost every elliptical-orbit problem falls to these two.
+
+2. **Superposition for composite bodies:** field/potential of a sphere-with-cavity = (full sphere) − (the removed small sphere), each treated as a point mass at its own centre when outside.
+
+3. **The energy relations** $KE = -E$, $PE = 2E$, $PE = -2KE$ let you find any one orbital energy from another instantly.
+
+4. **$v_e = \sqrt{2}\,v_o$** at the same point — a fast sanity check and a shortcut for "what extra speed to escape" questions.
+
+5. **Potential is scalar:** for multiple masses, add potentials algebraically (no angles), then differentiate or use energy. Far easier than vector field sums.
+</Callout>
+
+<Callout type="warning">
+**3 Classic JEE Traps**
+
+1. **Inside a shell:** field is zero but **potential is not** — it stays constant at $-GM/R$. Don't set the potential to zero.
+
+2. **Lower orbit = faster, not slower.** Since $v \propto 1/\sqrt{r}$, a satellite losing energy to drag spirals inward and **speeds up**. The energy paradox is resolved because PE drops twice as fast as KE rises.
+
+3. **Kepler's third law uses the semi-major axis $a$**, not the instantaneous distance $r$. For an ellipse, $T^2 \propto a^3$ — using $r$ at perihelion or aphelion is wrong.
+</Callout>
+
+---
+
+*Module created by the Physics Mastery faculty team — Senior JEE Faculty · IIT Physics Professors · Olympiad Mentors*
+
+*For JEE Main · JEE Advanced · NEET · Physics Olympiad*

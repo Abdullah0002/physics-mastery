@@ -1,0 +1,166 @@
+---
+title: Simple Harmonic Motion — Theory
+description: SHM equations, energy, pendulums, springs, superposition, and damped oscillations for JEE & NEET.
+difficulty: HARD
+tags: [SHM, oscillations, pendulum, spring, energy, damping]
+---
+
+## 1. Definition of SHM
+
+A particle executes SHM if its restoring force is proportional to displacement and directed toward equilibrium:
+
+<Formula label="Restoring Force (SHM condition)">
+$$F = -kx, \quad a = -\omega^2 x$$
+</Formula>
+
+where $\omega = \sqrt{k/m}$ = angular frequency.
+
+---
+
+## 2. Equations of Motion
+
+Standard solution to $\ddot{x} = -\omega^2 x$:
+
+$$x(t) = A\sin(\omega t + \phi)$$
+
+where $A$ = amplitude, $\phi$ = initial phase.
+
+<Formula label="Velocity in SHM">
+$$v = \frac{dx}{dt} = A\omega\cos(\omega t + \phi) = \omega\sqrt{A^2 - x^2}$$
+</Formula>
+
+<Formula label="Acceleration in SHM">
+$$a = -\omega^2 x = -\omega^2 A\sin(\omega t + \phi)$$
+</Formula>
+
+---
+
+## 3. Useful Relations
+
+| Quantity | Formula |
+|---|---|
+| Angular frequency | $\omega = 2\pi f = 2\pi/T$ |
+| Time period | $T = 2\pi/\omega$ |
+| Max velocity | $v_{max} = A\omega$ (at $x=0$) |
+| Max acceleration | $a_{max} = A\omega^2$ (at $x=\pm A$) |
+
+---
+
+## 4. Energy in SHM
+
+<Formula label="Kinetic Energy">
+$$K = \frac{1}{2}m\omega^2(A^2 - x^2)$$
+</Formula>
+
+<Formula label="Potential Energy">
+$$U = \frac{1}{2}m\omega^2 x^2 = \frac{1}{2}kx^2$$
+</Formula>
+
+<Formula label="Total Mechanical Energy">
+$$E = K + U = \frac{1}{2}m\omega^2 A^2 = \frac{1}{2}kA^2 = \text{constant}$$
+</Formula>
+
+<Callout type="tip">
+Total energy is constant and proportional to $A^2$. At equilibrium ($x=0$): $K = E$, $U = 0$. At extreme position ($x = \pm A$): $K = 0$, $U = E$.
+</Callout>
+
+---
+
+## 5. Spring Systems
+
+### Single Spring
+
+$$T = 2\pi\sqrt{\frac{m}{k}}$$
+
+### Series Springs
+
+$$\frac{1}{k_{eff}} = \frac{1}{k_1} + \frac{1}{k_2}, \quad T = 2\pi\sqrt{\frac{m}{k_{eff}}}$$
+
+### Parallel Springs
+
+$$k_{eff} = k_1 + k_2$$
+
+### Spring Hanging Vertically
+
+The equilibrium shifts downward by $mg/k$. The time period is the same as for horizontal spring.
+
+---
+
+## 6. Simple Pendulum
+
+For small oscillations ($\theta < 15°$):
+
+<Formula label="Time Period — Simple Pendulum">
+$$T = 2\pi\sqrt{\frac{L}{g}}$$
+</Formula>
+
+- Independent of mass and amplitude (for small $\theta$).
+- $T$ increases if $g$ decreases (e.g., at higher altitude or in a lift accelerating downward).
+
+**Effective $g$ in non-inertial frame:**
+- Lift accelerating up: $g_{eff} = g + a$, $T$ decreases.
+- Lift accelerating down: $g_{eff} = g - a$, $T$ increases.
+- Free fall: $T \to \infty$ (weightlessness).
+
+---
+
+## 7. Physical Pendulum
+
+Any rigid body oscillating about a pivot:
+
+$$T = 2\pi\sqrt{\frac{I}{Mg\,d}}$$
+
+where $I$ = moment of inertia about pivot, $d$ = distance from pivot to CoM.
+
+---
+
+## 8. Compound / Equivalent Pendulum
+
+The simple pendulum of equivalent length $L_{eq}$:
+
+$$L_{eq} = \frac{I}{Md} = d + \frac{I_{cm}}{Md}$$
+
+---
+
+## 9. Superposition of Two SHMs
+
+Two SHMs along the same line, same frequency:
+
+$$x_1 = A_1\sin(\omega t), \quad x_2 = A_2\sin(\omega t + \delta)$$
+
+Resultant:
+
+$$A_R = \sqrt{A_1^2 + A_2^2 + 2A_1A_2\cos\delta}, \quad \tan\phi = \frac{A_2\sin\delta}{A_1 + A_2\cos\delta}$$
+
+- $\delta = 0$: $A_R = A_1 + A_2$ (constructive)
+- $\delta = \pi$: $A_R = |A_1 - A_2|$ (destructive)
+
+---
+
+## 10. Damped Oscillations
+
+With damping force $-b\dot{x}$, the amplitude decays:
+
+$$x(t) = A_0\,e^{-bt/2m}\cos(\omega_d t + \phi)$$
+
+$$\omega_d = \sqrt{\omega_0^2 - \left(\frac{b}{2m}\right)^2} < \omega_0$$
+
+**Quality factor:** $Q = \omega_0 m/b$.
+
+---
+
+## 11. Resonance
+
+When driving frequency $= \omega_0$ (natural frequency), amplitude is maximum. With damping, maximum amplitude occurs just below $\omega_0$.
+
+---
+
+## 12. SHM in Different Physical Systems
+
+| System | Period |
+|---|---|
+| Mass on spring ($k$) | $2\pi\sqrt{m/k}$ |
+| Simple pendulum | $2\pi\sqrt{L/g}$ |
+| Physical pendulum | $2\pi\sqrt{I/(Mgd)}$ |
+| LC circuit | $2\pi\sqrt{LC}$ |
+| Torsional pendulum | $2\pi\sqrt{I/C}$ where $C$ = torsional constant |

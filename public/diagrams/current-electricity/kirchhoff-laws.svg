@@ -1,0 +1,53 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 300" width="580" height="300" font-family="Arial, sans-serif">
+  <rect width="580" height="300" fill="#f8f9fa" rx="10"/>
+  <text x="290" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a2d5a">Kirchhoff's Laws</text>
+
+  <!-- KCL (left panel) -->
+  <text x="145" y="50" text-anchor="middle" font-size="12" fill="#333" font-weight="bold">KCL: Junction Rule</text>
+  <circle cx="145" cy="165" r="8" fill="#4a6fa5"/>
+  <!-- Incoming currents -->
+  <line x1="60"  y1="120" x2="140" y2="162" stroke="#e05252" stroke-width="2" marker-end="url(#ra)"/>
+  <text x="70"  y="112" font-size="11" fill="#e05252">I&#x2081;</text>
+  <line x1="60"  y1="210" x2="140" y2="168" stroke="#e05252" stroke-width="2" marker-end="url(#ra)"/>
+  <text x="70"  y="222" font-size="11" fill="#e05252">I&#x2082;</text>
+  <!-- Outgoing currents -->
+  <line x1="153" y1="160" x2="228" y2="120" stroke="#2980b9" stroke-width="2" marker-end="url(#ra)"/>
+  <text x="230" y="112" font-size="11" fill="#2980b9">I&#x2083;</text>
+  <line x1="153" y1="168" x2="228" y2="208" stroke="#2980b9" stroke-width="2" marker-end="url(#ra)"/>
+  <text x="230" y="222" font-size="11" fill="#2980b9">I&#x2084;</text>
+  <text x="145" y="255" text-anchor="middle" font-size="11" fill="#555">I&#x2081;+I&#x2082; = I&#x2083;+I&#x2084;</text>
+  <text x="145" y="272" text-anchor="middle" font-size="10" fill="#777">&#x03A3;I_in = &#x03A3;I_out</text>
+
+  <!-- KVL (right panel) -->
+  <text x="435" y="50" text-anchor="middle" font-size="12" fill="#333" font-weight="bold">KVL: Loop Rule</text>
+  <!-- Loop rectangle -->
+  <rect x="320" y="65" width="230" height="150" rx="8" fill="none" stroke="#888" stroke-width="1.5"/>
+  <!-- Battery -->
+  <line x1="320" y1="100" x2="320" y2="116" stroke="#333" stroke-width="1.5"/>
+  <line x1="310" y1="118" x2="330" y2="118" stroke="#333" stroke-width="2.5"/>
+  <line x1="314" y1="125" x2="326" y2="125" stroke="#333" stroke-width="1.5"/>
+  <line x1="320" y1="127" x2="320" y2="140" stroke="#333" stroke-width="1.5"/>
+  <text x="310" y="115" font-size="11" fill="#333">+</text>
+  <text x="310" y="132" font-size="11" fill="#333">-</text>
+  <text x="302" y="122" text-anchor="end" font-size="11" fill="#555">ε</text>
+  <!-- R1 top -->
+  <rect x="360" y="58" width="50" height="18" rx="4" fill="white" stroke="#e05252" stroke-width="2"/>
+  <text x="385" y="71" text-anchor="middle" font-size="11" fill="#e05252">R&#x2081;</text>
+  <!-- R2 right -->
+  <rect x="538" y="110" width="18" height="50" rx="4" fill="white" stroke="#e05252" stroke-width="2"/>
+  <text x="566" y="140" font-size="11" fill="#e05252">R&#x2082;</text>
+  <!-- R3 bottom -->
+  <rect x="370" y="198" width="50" height="18" rx="4" fill="white" stroke="#e05252" stroke-width="2"/>
+  <text x="395" y="211" text-anchor="middle" font-size="11" fill="#e05252">R&#x2083;</text>
+  <!-- Loop direction arrow -->
+  <path d="M400,140 A55,45 0 1,1 399,140" fill="none" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="435" y="255" text-anchor="middle" font-size="11" fill="#555">&#x03A3;EMF = &#x03A3;IR  (around loop)</text>
+  <text x="435" y="272" text-anchor="middle" font-size="10" fill="#777">ε - IR&#x2081; - IR&#x2082; - IR&#x2083; = 0</text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="ra" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+      <path d="M0,0 L7,3.5 L0,7 Z" fill="#555"/>
+    </marker>
+  </defs>
+</svg>

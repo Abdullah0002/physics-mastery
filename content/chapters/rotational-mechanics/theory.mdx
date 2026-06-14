@@ -1,0 +1,981 @@
+---
+title: "Rotational Mechanics — Complete Theory"
+description: "The most comprehensive Rotational Mechanics resource for JEE Main, JEE Advanced and NEET. Moment of inertia, parallel and perpendicular axis theorems, torque, angular momentum and its conservation, rotational energy, rolling motion, instantaneous axis, toppling, and angular impulse — from first principles to Olympiad level."
+difficulty: "HARD"
+tags: ["rotation", "moment-of-inertia", "torque", "angular-momentum", "rolling-motion", "parallel-axis-theorem", "rotational-kinetic-energy", "instantaneous-axis", "toppling", "angular-impulse"]
+---
+
+# Rotational Mechanics — Complete Theory
+
+*The most thorough module — built for JEE Main · JEE Advanced · NEET · Physics Olympiad*
+
+---
+
+## SECTION 1 — The Big Picture
+
+---
+
+### 1.1 Why Rotation Is Different
+
+Until now every object was a "point" — all its mass at one place, moving along one path. But real bodies **spin**. A flywheel stores energy by spinning. A gymnast tucks to spin faster. A rolling ball is simultaneously moving forward *and* turning. A door swings about its hinges. None of this can be described by treating the object as a single point.
+
+Rotational mechanics is the complete, parallel toolkit to translational mechanics. Every translational quantity has a rotational twin, every translational law has a rotational version. Master the analogy, and half the chapter is already done.
+
+---
+
+### 1.2 The Master Analogy: Rotation ↔ Translation
+
+| Translational | Rotational |
+|---|---|
+| Displacement $x$ | Angular displacement $\theta$ |
+| Velocity $v$ | Angular velocity $\omega$ |
+| Acceleration $a$ | Angular acceleration $\alpha$ |
+| Mass $m$ (inertia) | Moment of inertia $I$ |
+| Force $F$ | Torque $\tau$ |
+| Momentum $p = mv$ | Angular momentum $L = I\omega$ |
+| $F = ma$ | $\tau = I\alpha$ |
+| $F = dp/dt$ | $\tau = dL/dt$ |
+| $KE = \frac{1}{2}mv^2$ | $KE = \frac{1}{2}I\omega^2$ |
+| Work $W = Fx$ | Work $W = \tau\theta$ |
+| Power $P = Fv$ | Power $P = \tau\omega$ |
+| Impulse $J = F\,t$ | Angular impulse $= \tau\, t$ |
+
+<Callout type="important">
+**The Single Most Useful Idea in This Chapter**
+
+Whenever you can write a translational equation, you can write its rotational analogue by swapping each quantity for its twin. The physics is the same; only the symbols change. The one genuinely new concept you must learn deeply is the **moment of inertia** — the rotational version of mass.
+</Callout>
+
+---
+
+## SECTION 2 — Rotational Kinematics
+
+---
+
+### 2.1 The Equations
+
+For **constant angular acceleration** $\alpha$, the equations mirror linear SUVAT exactly:
+
+<Formula label="Rotational Kinematics (constant α)">
+$$\omega = \omega_0 + \alpha t$$
+$$\theta = \omega_0 t + \tfrac{1}{2}\alpha t^2$$
+$$\omega^2 = \omega_0^2 + 2\alpha\theta$$
+$$\theta = \tfrac{\omega_0 + \omega}{2}\,t$$
+</Formula>
+
+### 2.2 Linking Angular and Linear
+
+For a point at distance $r$ from the axis:
+
+$$v = r\omega, \qquad a_t = r\alpha, \qquad a_c = r\omega^2 = \frac{v^2}{r}$$
+
+where $a_t$ is the tangential acceleration (changes speed) and $a_c$ is the centripetal acceleration (changes direction).
+
+---
+
+## SECTION 3 — Moment of Inertia
+
+---
+
+### 3.1 Definition
+
+The **moment of inertia** measures an object's resistance to angular acceleration — the rotational analogue of mass. It depends not only on how much mass an object has, but on **how that mass is distributed** relative to the axis.
+
+<Formula label="Moment of Inertia">
+Discrete: $\quad I = \sum_i m_i r_i^2$
+
+Continuous: $\quad I = \int r^2\, dm$
+
+where $r_i$ (or $r$) is the **perpendicular distance** of the mass element from the axis of rotation.
+
+SI unit: kg·m²
+</Formula>
+
+<Callout type="warning">
+**Moment of Inertia Is Not a Fixed Property of a Body**
+
+Unlike mass, $I$ depends on the **axis chosen**. The same rod has $I = ML^2/12$ about its centre but $ML^2/3$ about its end. Always state the axis.
+</Callout>
+
+---
+
+### 3.2 Radius of Gyration
+
+The **radius of gyration** $k$ is the distance from the axis at which the entire mass could be concentrated to give the same moment of inertia:
+
+$$I = Mk^2 \qquad \Rightarrow \qquad k = \sqrt{\frac{I}{M}}$$
+
+For a solid sphere, $k = \sqrt{2/5}\,R \approx 0.632R$. It is a convenient single number that captures mass distribution.
+
+---
+
+### 3.3 Derivation — MOI of a Uniform Rod (about its centre)
+
+A rod of mass $M$, length $L$, linear density $\lambda = M/L$, rotating about a perpendicular axis through its centre.
+
+<Step n={1}>
+Take an element of length $dx$ at distance $x$ from the centre. Its mass: $dm = \lambda\, dx$.
+</Step>
+
+<Step n={2}>
+Its contribution to $I$: $dI = x^2\, dm = \lambda x^2\, dx$.
+</Step>
+
+<Step n={3}>
+Integrate over the full rod, $x = -L/2$ to $+L/2$:
+$$I = \int_{-L/2}^{L/2} \lambda x^2\, dx = \lambda\left[\frac{x^3}{3}\right]_{-L/2}^{L/2} = \lambda \cdot \frac{2}{3}\cdot\frac{L^3}{8} = \frac{\lambda L^3}{12}$$
+</Step>
+
+<Step n={4}>
+Since $\lambda L = M$:
+$$I = \frac{ML^2}{12}$$
+</Step>
+
+---
+
+### 3.4 Standard Moments of Inertia
+
+| Body | Axis | Moment of Inertia | $k^2/R^2$ |
+|------|------|-------------------|-----------|
+| Thin rod (length $L$) | ⊥ through centre | $\frac{1}{12}ML^2$ | — |
+| Thin rod (length $L$) | ⊥ through end | $\frac{1}{3}ML^2$ | — |
+| Ring (radius $R$) | central, ⊥ to plane | $MR^2$ | $1$ |
+| Ring (radius $R$) | diameter | $\frac{1}{2}MR^2$ | — |
+| Disc (radius $R$) | central, ⊥ to plane | $\frac{1}{2}MR^2$ | $\frac{1}{2}$ |
+| Disc (radius $R$) | diameter | $\frac{1}{4}MR^2$ | — |
+| Solid cylinder (radius $R$) | central axis | $\frac{1}{2}MR^2$ | $\frac{1}{2}$ |
+| Hollow cylinder (thin, radius $R$) | central axis | $MR^2$ | $1$ |
+| Solid sphere (radius $R$) | diameter | $\frac{2}{5}MR^2$ | $\frac{2}{5}$ |
+| Hollow sphere / shell (radius $R$) | diameter | $\frac{2}{3}MR^2$ | $\frac{2}{3}$ |
+| Rectangular plate ($a \times b$) | ⊥ through centre | $\frac{1}{12}M(a^2+b^2)$ | — |
+
+<Callout type="tip">
+**The "$k^2/R^2$" column is gold for rolling problems.** Every rolling result — acceleration, energy split, minimum friction — depends only on this single ratio. Commit these four to memory: ring/hollow cylinder $= 1$, disc/solid cylinder $= \tfrac{1}{2}$, hollow sphere $= \tfrac{2}{3}$, solid sphere $= \tfrac{2}{5}$.
+</Callout>
+
+---
+
+## SECTION 4 — The Two Theorems
+
+---
+
+### 4.1 Parallel Axis Theorem
+
+<Formula label="Parallel Axis Theorem">
+$$I = I_{cm} + Md^2$$
+
+where $I_{cm}$ is the moment of inertia about an axis through the centre of mass, and $d$ is the perpendicular distance to a **parallel** axis.
+</Formula>
+
+**Example — rod about its end:**
+
+$$I_{end} = I_{cm} + M\left(\frac{L}{2}\right)^2 = \frac{ML^2}{12} + \frac{ML^2}{4} = \frac{ML^2}{3} \;\checkmark$$
+
+---
+
+### 4.2 Perpendicular Axis Theorem (planar bodies only)
+
+<Formula label="Perpendicular Axis Theorem">
+$$I_z = I_x + I_y$$
+
+Valid **only for flat (planar) laminae**. $z$ is the axis perpendicular to the plane; $x$ and $y$ are two perpendicular axes lying in the plane, all three meeting at one point.
+</Formula>
+
+**Example — disc about a diameter:**
+
+By symmetry $I_x = I_y = I_{diam}$. The perpendicular axis theorem gives $I_z = 2I_{diam}$, and we know $I_z = \tfrac{1}{2}MR^2$, so:
+
+$$I_{diam} = \frac{1}{2}I_z = \frac{1}{4}MR^2 \;\checkmark$$
+
+---
+
+### 4.3 SVG: The Two Theorems
+
+<svg width="420" height="200" viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg">
+  <text x="20" y="20" fontSize="12" fill="#334155" fontWeight="bold">Parallel axis</text>
+  <ellipse cx="90" cy="110" rx="55" ry="40" fill="#dbeafe" stroke="#1e40af" strokeWidth="1.5"/>
+  <line x1="90" y1="50" x2="90" y2="170" stroke="#16a34a" strokeWidth="2" strokeDasharray="4,3"/>
+  <text x="78" y="46" fontSize="11" fill="#16a34a">cm</text>
+  <circle cx="90" cy="110" r="3" fill="#16a34a"/>
+  <line x1="160" y1="50" x2="160" y2="170" stroke="#dc2626" strokeWidth="2"/>
+  <text x="150" y="46" fontSize="11" fill="#dc2626">axis</text>
+  <line x1="90" y1="135" x2="160" y2="135" stroke="#334155" strokeWidth="1"/>
+  <text x="115" y="150" fontSize="11" fill="#334155">d</text>
+  <text x="20" y="192" fontSize="11" fill="#64748b">I = I_cm + Md²</text>
+  <text x="250" y="20" fontSize="12" fill="#334155" fontWeight="bold">Perpendicular axis</text>
+  <ellipse cx="320" cy="110" rx="60" ry="20" fill="#fef3c7" stroke="#b45309" strokeWidth="1.5"/>
+  <line x1="320" y1="110" x2="320" y2="45" stroke="#dc2626" strokeWidth="2"/>
+  <text x="326" y="50" fontSize="11" fill="#dc2626">z</text>
+  <line x1="260" y1="110" x2="380" y2="110" stroke="#16a34a" strokeWidth="2"/>
+  <text x="384" y="113" fontSize="11" fill="#16a34a">x</text>
+  <line x1="300" y1="135" x2="340" y2="85" stroke="#3b82f6" strokeWidth="2"/>
+  <text x="342" y="86" fontSize="11" fill="#3b82f6">y</text>
+  <text x="250" y="192" fontSize="11" fill="#64748b">I_z = I_x + I_y  (flat bodies)</text>
+</svg>
+
+---
+
+## SECTION 5 — Torque
+
+---
+
+### 5.1 Definition
+
+**Torque** is the rotational analogue of force — the "turning effect" of a force about an axis.
+
+<Formula label="Torque">
+$$\vec{\tau} = \vec{r} \times \vec{F} \qquad \tau = rF\sin\theta = F \cdot r_\perp$$
+
+where $\vec{r}$ is the position vector from the axis to the point of application, $\theta$ is the angle between $\vec{r}$ and $\vec{F}$, and $r_\perp = r\sin\theta$ is the **moment arm** (perpendicular distance from axis to the line of force).
+
+SI unit: N·m
+</Formula>
+
+**Direction (right-hand rule):** curl the fingers of the right hand from $\vec{r}$ toward $\vec{F}$; the thumb points along $\vec{\tau}$.
+
+<Callout type="tip">
+**Maximize torque** by (1) applying force perpendicular to $\vec{r}$ ($\theta = 90°$), and (2) applying it as far from the axis as possible (large $r$). This is why door handles are placed at the edge, opposite the hinge.
+</Callout>
+
+---
+
+### 5.2 Newton's Second Law for Rotation
+
+<Formula label="Rotational Newton's Second Law">
+$$\tau_{net} = I\alpha$$
+
+The net torque about an axis equals the moment of inertia about that axis times the angular acceleration.
+</Formula>
+
+---
+
+### 5.3 SVG: Torque and Moment Arm
+
+<svg width="360" height="210" viewBox="0 0 360 210" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="tqF" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#dc2626"/>
+    </marker>
+  </defs>
+  <circle cx="70" cy="150" r="6" fill="#334155"/>
+  <text x="55" y="172" fontSize="12" fill="#334155">axis O</text>
+  <line x1="70" y1="150" x2="260" y2="80" stroke="#1e40af" strokeWidth="2.5"/>
+  <text x="160" y="105" fontSize="12" fill="#1e40af">r</text>
+  <circle cx="260" cy="80" r="5" fill="#1e40af"/>
+  <line x1="260" y1="80" x2="320" y2="35" stroke="#dc2626" strokeWidth="2.5" markerEnd="url(#tqF)"/>
+  <text x="322" y="32" fontSize="12" fill="#dc2626" fontWeight="bold">F</text>
+  <path d="M 290,60 A 25,25 0 0,0 278,92" fill="none" stroke="#334155" strokeWidth="1.2"/>
+  <text x="295" y="82" fontSize="11" fill="#334155" fontStyle="italic">θ</text>
+  <line x1="70" y1="150" x2="296" y2="63" stroke="#94a3b8" strokeWidth="1" strokeDasharray="3,3"/>
+  <line x1="70" y1="150" x2="120" y2="55" stroke="#16a34a" strokeWidth="1.5" strokeDasharray="4,3"/>
+  <text x="78" y="95" fontSize="11" fill="#16a34a">r⊥ = r sinθ</text>
+  <text x="30" y="200" fontSize="11" fill="#64748b">τ = r F sinθ = F · r⊥</text>
+</svg>
+
+---
+
+## SECTION 6 — Rotational Kinetic Energy and Work
+
+---
+
+### 6.1 Rotational Kinetic Energy
+
+A body rotating about a fixed axis has kinetic energy:
+
+<Formula label="Rotational Kinetic Energy">
+$$KE_{rot} = \frac{1}{2}I\omega^2 = \frac{L^2}{2I}$$
+
+(directly analogous to $\frac{1}{2}mv^2 = \frac{p^2}{2m}$)
+</Formula>
+
+### 6.2 Work–Energy Theorem (Rotational)
+
+$$W = \int \tau\, d\theta = \Delta KE_{rot} = \frac{1}{2}I\omega_2^2 - \frac{1}{2}I\omega_1^2$$
+
+For constant torque: $W = \tau\,\theta$. Power: $P = \tau\omega$.
+
+---
+
+## SECTION 7 — Angular Momentum
+
+---
+
+### 7.1 Definition
+
+<Formula label="Angular Momentum">
+For a particle: $\quad \vec{L} = \vec{r}\times\vec{p} = m(\vec{r}\times\vec{v}), \qquad L = mvr\sin\phi$
+
+For a rigid body about a fixed axis: $\quad L = I\omega$
+
+SI unit: kg·m²/s = J·s
+</Formula>
+
+### 7.2 The Rotational Newton's Law (most general form)
+
+<Formula label="Torque and Angular Momentum">
+$$\vec{\tau}_{ext} = \frac{d\vec{L}}{dt}$$
+</Formula>
+
+### 7.3 Conservation of Angular Momentum
+
+<Formula label="Conservation of Angular Momentum">
+$$\text{If } \tau_{ext} = 0, \quad L = I\omega = \text{constant}$$
+
+$$I_1\omega_1 = I_2\omega_2$$
+</Formula>
+
+<Callout type="important">
+**The Spinning Skater**
+
+When a skater pulls in her arms, her moment of inertia $I$ decreases. With no external torque, $L = I\omega$ is conserved, so $\omega$ **increases** — she spins faster. Her rotational kinetic energy $\frac{1}{2}I\omega^2 = \frac{L^2}{2I}$ actually *increases* (smaller $I$, same $L$); the extra energy comes from the **work her muscles do** pulling her arms inward against the centrifugal effect.
+</Callout>
+
+---
+
+### 7.4 Angular Momentum of a Body in Combined Motion
+
+For a body that both translates and rotates, the total angular momentum about a point O is:
+
+$$\vec{L}_O = \underbrace{\vec{r}_{cm}\times M\vec{v}_{cm}}_{\text{orbital (CM motion)}} + \underbrace{I_{cm}\,\vec{\omega}}_{\text{spin about CM}}$$
+
+---
+
+## SECTION 8 — Rolling Motion
+
+---
+
+### 8.1 The Rolling Condition
+
+**Pure rolling** (rolling without slipping) means the contact point has zero velocity relative to the surface. This links translation and rotation:
+
+<Formula label="Pure Rolling Condition">
+$$v_{cm} = R\omega \qquad a_{cm} = R\alpha$$
+</Formula>
+
+The contact point is the **instantaneous axis of rotation** — momentarily at rest. The top of the wheel moves at $2v_{cm}$, the centre at $v_{cm}$, and the contact point at $0$.
+
+---
+
+### 8.2 SVG: Velocity Distribution in Rolling
+
+<svg width="300" height="240" viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="rollV" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <line x1="20" y1="200" x2="280" y2="200" stroke="#334155" strokeWidth="2"/>
+  <circle cx="150" cy="120" r="80" fill="none" stroke="#1e40af" strokeWidth="2"/>
+  <circle cx="150" cy="120" r="4" fill="#334155"/>
+  <text x="158" y="124" fontSize="11" fill="#334155">C</text>
+  <line x1="150" y1="40" x2="240" y2="40" stroke="#3b82f6" strokeWidth="2.5" markerEnd="url(#rollV)"/>
+  <text x="200" y="32" fontSize="11" fill="#3b82f6">2v</text>
+  <circle cx="150" cy="40" r="4" fill="#3b82f6"/>
+  <text x="120" y="35" fontSize="10" fill="#64748b">top</text>
+  <line x1="150" y1="120" x2="195" y2="120" stroke="#3b82f6" strokeWidth="2.5" markerEnd="url(#rollV)"/>
+  <text x="165" y="138" fontSize="11" fill="#3b82f6">v</text>
+  <circle cx="150" cy="200" r="5" fill="#dc2626"/>
+  <text x="158" y="218" fontSize="10" fill="#dc2626">contact: v = 0 (IAR)</text>
+  <text x="30" y="232" fontSize="11" fill="#64748b">Top moves at 2v, centre at v, contact point at rest</text>
+</svg>
+
+---
+
+### 8.3 Kinetic Energy of a Rolling Body
+
+Total KE = translational + rotational:
+
+<Formula label="Kinetic Energy of Rolling">
+$$KE = \frac{1}{2}Mv_{cm}^2 + \frac{1}{2}I_{cm}\omega^2 = \frac{1}{2}Mv_{cm}^2\left(1 + \frac{k^2}{R^2}\right)$$
+
+using $I_{cm} = Mk^2$ and $\omega = v_{cm}/R$.
+</Formula>
+
+**Energy split** (fraction in rotation):
+
+| Body | $\frac{KE_{rot}}{KE_{total}}$ | $\frac{KE_{trans}}{KE_{total}}$ |
+|------|------|------|
+| Ring / hollow cylinder | $\frac{1}{2}$ | $\frac{1}{2}$ |
+| Disc / solid cylinder | $\frac{1}{3}$ | $\frac{2}{3}$ |
+| Hollow sphere | $\frac{2}{5}$ | $\frac{3}{5}$ |
+| Solid sphere | $\frac{2}{7}$ | $\frac{5}{7}$ |
+
+---
+
+### 8.4 Rolling Down an Incline — Full Derivation
+
+A body (mass $M$, radius $R$, $I = Mk^2$) rolls without slipping down an incline of angle $\theta$.
+
+<svg width="360" height="220" viewBox="0 0 360 220" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="incF" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#16a34a"/>
+    </marker>
+    <marker id="incG" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#dc2626"/>
+    </marker>
+  </defs>
+  <polygon points="40,190 320,190 320,70" fill="#e2e8f0" stroke="#334155" strokeWidth="2"/>
+  <path d="M 90,190 A 50,50 0 0,1 102,158" fill="none" stroke="#334155" strokeWidth="1.2"/>
+  <text x="100" y="182" fontSize="12" fill="#334155" fontStyle="italic">θ</text>
+  <circle cx="235" cy="113" r="26" fill="none" stroke="#1e40af" strokeWidth="2"/>
+  <circle cx="235" cy="113" r="3" fill="#334155"/>
+  <line x1="235" y1="113" x2="278" y2="145" stroke="#dc2626" strokeWidth="2.5" markerEnd="url(#incG)"/>
+  <text x="280" y="150" fontSize="11" fill="#dc2626">Mg</text>
+  <line x1="218" y1="135" x2="190" y2="156" stroke="#16a34a" strokeWidth="2.5" markerEnd="url(#incF)"/>
+  <text x="160" y="156" fontSize="11" fill="#16a34a">f (up incline)</text>
+  <text x="50" y="212" fontSize="11" fill="#64748b">Friction provides the torque that makes it roll</text>
+</svg>
+
+<Step n={1}>
+**Translation** along the incline (taking down-incline positive). Gravity component drives it; friction $f$ opposes:
+$$Mg\sin\theta - f = Ma_{cm}$$
+</Step>
+
+<Step n={2}>
+**Rotation** about the centre. Only friction has a moment arm about the centre (gravity and normal act through it):
+$$fR = I\alpha = Mk^2\cdot\frac{a_{cm}}{R} \quad\Rightarrow\quad f = \frac{Mk^2 a_{cm}}{R^2}$$
+</Step>
+
+<Step n={3}>
+Substitute into the translation equation:
+$$Mg\sin\theta = Ma_{cm} + \frac{Mk^2 a_{cm}}{R^2} = Ma_{cm}\left(1 + \frac{k^2}{R^2}\right)$$
+</Step>
+
+<Formula label="Acceleration of a Rolling Body Down an Incline">
+$$a_{cm} = \frac{g\sin\theta}{1 + \dfrac{k^2}{R^2}}$$
+</Formula>
+
+**Acceleration ranking** (steeper effective deceleration for larger $k^2/R^2$):
+
+| Body | $a_{cm}$ |
+|------|----------|
+| Solid sphere | $\frac{5}{7}g\sin\theta$ |
+| Solid cylinder / disc | $\frac{2}{3}g\sin\theta$ |
+| Hollow sphere | $\frac{3}{5}g\sin\theta$ |
+| Ring / hollow cylinder | $\frac{1}{2}g\sin\theta$ |
+
+<Callout type="tip">
+**The Race Down the Ramp**
+
+Release a solid sphere, a disc, and a ring from the same height. The order of finish — fastest to slowest — is **solid sphere → disc → hollow sphere → ring**, decided solely by $k^2/R^2$. Mass and radius do **not** matter. A heavy ring loses to a light sphere every time.
+</Callout>
+
+---
+
+### 8.5 Minimum Friction for Pure Rolling
+
+From Step 2, $f = \dfrac{Mk^2 a_{cm}}{R^2}$. Substituting $a_{cm}$ and requiring $f \le \mu_s N = \mu_s Mg\cos\theta$:
+
+<Formula label="Minimum Coefficient of Friction for Pure Rolling">
+$$\mu_{min} = \frac{\tan\theta}{1 + \dfrac{R^2}{k^2}} = \frac{(k^2/R^2)}{1 + (k^2/R^2)}\tan\theta$$
+</Formula>
+
+| Body | $\mu_{min}$ |
+|------|-------------|
+| Solid sphere | $\frac{2}{7}\tan\theta$ |
+| Disc / solid cylinder | $\frac{1}{3}\tan\theta$ |
+| Ring / hollow cylinder | $\frac{1}{2}\tan\theta$ |
+
+If the actual $\mu$ is less than $\mu_{min}$, the body **rolls and slips** simultaneously, and $v_{cm} \ne R\omega$.
+
+---
+
+### 8.6 Velocity at the Bottom (Energy Method)
+
+By energy conservation, dropping height $h$:
+
+$$Mgh = \frac{1}{2}Mv^2\left(1 + \frac{k^2}{R^2}\right) \quad\Rightarrow\quad v = \sqrt{\frac{2gh}{1 + \dfrac{k^2}{R^2}}}$$
+
+Same ordering as acceleration: the solid sphere reaches the bottom fastest with the highest speed.
+
+---
+
+## SECTION 9 — Rolling With Slipping
+
+---
+
+### 9.1 When Rolling and Slipping Coexist
+
+If friction is insufficient (or a body is given a spin/velocity that violates $v = R\omega$), the contact point slides. Then:
+
+- $v_{cm} \ne R\omega$
+- **Kinetic friction** acts: $f_k = \mu_k N$ (its direction opposes the relative slipping of the contact point)
+- Translation and rotation evolve **independently** until $v_{cm} = R\omega$ is reached, after which it rolls purely.
+
+### 9.2 Classic Example — Ball Given Initial Velocity, No Spin
+
+A ball is projected with speed $v_0$ but no rotation ($\omega_0 = 0$) on a rough floor. Friction acts backward (slowing translation) but its torque spins the ball up:
+
+- Translation: $v = v_0 - \mu_k g\, t$
+- Rotation: $\omega = \dfrac{\mu_k g}{k^2/R \cdot R}\,t$ ... using $\tau = f_k R = I\alpha$: $\alpha = \dfrac{\mu_k g R}{k^2}$
+
+Pure rolling begins when $v = R\omega$. For a **solid sphere** ($k^2 = \tfrac{2}{5}R^2$), this gives the well-known result:
+
+$$v_{roll} = \frac{5}{7}v_0, \qquad t_{roll} = \frac{2v_0}{7\mu_k g}$$
+
+---
+
+## SECTION 10 — Equilibrium and Toppling
+
+---
+
+### 10.1 Conditions for Rigid-Body Equilibrium
+
+A rigid body is in equilibrium when **both**:
+
+$$\sum \vec{F} = 0 \qquad \text{and} \qquad \sum \vec{\tau} = 0$$
+
+(net force zero → no translation; net torque zero → no rotation). Torque can be taken about **any** point when the body is in equilibrium.
+
+---
+
+### 10.2 Toppling vs Sliding
+
+A block (width $a$, height $h$) on a rough floor is pushed by a horizontal force $F$ at height $y$.
+
+- **Sliding** begins when $F > \mu_s Mg$.
+- **Toppling** begins when the torque of $F$ about the leading bottom edge exceeds the restoring torque of the weight:
+$$F\,y > Mg\cdot\frac{a}{2} \quad\Rightarrow\quad F_{topple} = \frac{Mga}{2y}$$
+
+The block **slides** if $\mu_s Mg < F_{topple}$ and **topples** if $F_{topple} < \mu_s Mg$. Tall, narrow blocks (small $a$, large $h$) topple; short, wide blocks slide.
+
+<Callout type="tip">
+**Quick test:** Compare $\mu_s$ with $\dfrac{a}{2y}$. If $\mu_s < \dfrac{a}{2y}$ → slides first. If $\mu_s > \dfrac{a}{2y}$ → topples first.
+</Callout>
+
+---
+
+## SECTION 11 — Angular Impulse and Rotational Collisions
+
+---
+
+### 11.1 Angular Impulse
+
+<Formula label="Angular Impulse–Momentum Theorem">
+$$\int \tau\, dt = \Delta L = I\omega_2 - I\omega_1$$
+
+The angular impulse of a torque equals the change in angular momentum.
+</Formula>
+
+### 11.2 Collisions Involving Rotation
+
+When an object strikes a pivoted body (e.g., a bullet hitting a hinged rod, or a particle sticking to a rotating disc), **angular momentum about the pivot is conserved** during the impact (the hinge force passes through the pivot, so it exerts no torque about it).
+
+$$L_{before} = L_{after} \quad\Rightarrow\quad mv\,d = I_{total}\,\omega$$
+
+<Callout type="warning">
+**Choose the Pivot Wisely**
+
+In a collision with a hinged body, linear momentum is **not** conserved (the hinge exerts an unknown impulsive force). But angular momentum **about the hinge** *is* conserved, because that hinge force has zero moment arm about the hinge. Always take angular momentum about the point where the unknown impulsive force acts.
+</Callout>
+
+---
+
+## SECTION 12 — Error Analysis
+
+---
+
+| # | Mistake | Correct Approach |
+|---|---------|-----------------|
+| 1 | Treating $I$ as a fixed property like mass | $I$ depends on the axis; always specify the axis |
+| 2 | Using perpendicular axis theorem on 3D bodies | It applies **only** to flat (planar) laminae |
+| 3 | Adding "centripetal force" as a torque | Forces through the axis (gravity at CM, normal, hinge) produce zero torque about that axis |
+| 4 | Assuming $v = R\omega$ always | Only true for **pure rolling**; fails when slipping occurs |
+| 5 | Forgetting rotational KE in rolling energy | $KE = \frac{1}{2}Mv^2 + \frac{1}{2}I\omega^2$, not just $\frac{1}{2}Mv^2$ |
+| 6 | Friction always opposes motion in rolling | In pure rolling down an incline, friction acts **up** the incline and does **no work** |
+| 7 | Conserving linear momentum in a hinged collision | Hinge exerts impulsive force; conserve **angular momentum about the hinge** instead |
+| 8 | Believing heavier/larger bodies roll down faster | Acceleration depends only on $k^2/R^2$, not on $M$ or $R$ |
+| 9 | Using $\tau = I\alpha$ about an accelerating point | Valid about the CM or a fixed axis; about other moving points, extra terms appear |
+| 10 | Thinking rolling friction does work and dissipates energy | Static friction in pure rolling does **zero** work; mechanical energy is conserved |
+| 11 | Wrong MOI in parallel axis theorem | $d$ is the distance between the **parallel axes**, and $I_{cm}$ must be about the CM axis |
+| 12 | Spinning skater: thinking KE is conserved | $L$ is conserved, not KE; KE increases by the work the skater does pulling arms in |
+
+---
+
+## SECTION 13 — Solved Examples
+
+---
+
+### JEE Main Level Examples
+
+**M1.** Find the moment of inertia of a uniform rod (mass 3 kg, length 2 m) about an axis through one end, perpendicular to the rod.
+
+**Solution:**
+$I = \frac{1}{3}ML^2 = \frac{1}{3}(3)(2)^2 = \mathbf{4 \text{ kg·m}^2}$
+
+---
+
+**M2.** A disc of mass 2 kg and radius 0.5 m rotates at 10 rad/s. Find its rotational kinetic energy.
+
+**Solution:**
+$I = \frac{1}{2}MR^2 = \frac{1}{2}(2)(0.25) = 0.25$ kg·m²
+
+$KE = \frac{1}{2}I\omega^2 = \frac{1}{2}(0.25)(100) = \mathbf{12.5 \text{ J}}$
+
+---
+
+**M3.** A torque of 20 N·m acts on a wheel of moment of inertia 4 kg·m². Find the angular acceleration.
+
+**Solution:**
+$\alpha = \tau/I = 20/4 = \mathbf{5 \text{ rad/s}^2}$
+
+---
+
+**M4.** A solid sphere rolls down an incline of 30°. Find its acceleration. ($g = 10$ m/s²)
+
+**Solution:**
+$a = \frac{g\sin\theta}{1 + 2/5} = \frac{5}{7}g\sin30° = \frac{5}{7}(10)(0.5) = \mathbf{3.57 \text{ m/s}^2}$
+
+---
+
+**M5.** A solid cylinder and a ring of the same mass and radius roll down the same incline. Find the ratio of their accelerations.
+
+**Solution:**
+$a_{cyl} = \frac{2}{3}g\sin\theta$, $a_{ring} = \frac{1}{2}g\sin\theta$
+
+$\frac{a_{cyl}}{a_{ring}} = \frac{2/3}{1/2} = \mathbf{4:3}$
+
+---
+
+**M6.** A solid sphere of mass 1 kg and radius 0.1 m rolls without slipping at 2 m/s. Find its total kinetic energy.
+
+**Solution:**
+$KE = \frac{1}{2}Mv^2\left(1 + \frac{2}{5}\right) = \frac{1}{2}(1)(4)\left(\frac{7}{5}\right) = 2 \times 1.4 = \mathbf{2.8 \text{ J}}$
+
+---
+
+**M7.** A child (treated as a point mass 20 kg) stands at the rim of a rotating disc (mass 40 kg, radius 2 m) turning at 2 rad/s. The child walks to the centre. Find the new angular velocity.
+
+**Solution:**
+$I_1 = \frac{1}{2}(40)(4) + 20(4) = 80 + 80 = 160$ kg·m²
+
+$I_2 = \frac{1}{2}(40)(4) + 0 = 80$ kg·m²
+
+$\omega_2 = \frac{I_1\omega_1}{I_2} = \frac{160 \times 2}{80} = \mathbf{4 \text{ rad/s}}$
+
+---
+
+**M8.** Find the minimum coefficient of friction for a disc to roll without slipping down a 45° incline.
+
+**Solution:**
+$\mu_{min} = \frac{1}{3}\tan45° = \frac{1}{3} \approx \mathbf{0.33}$
+
+---
+
+**M9.** A flywheel of moment of inertia 0.2 kg·m² is accelerated from rest to 100 rad/s in 10 s. Find the torque applied and the work done.
+
+**Solution:**
+$\alpha = 100/10 = 10$ rad/s². $\tau = I\alpha = 0.2 \times 10 = \mathbf{2 \text{ N·m}}$
+
+$W = \Delta KE = \frac{1}{2}(0.2)(100)^2 = \mathbf{1000 \text{ J}}$
+
+---
+
+**M10.** A ring and a disc of equal mass and radius are released from the same height on an incline. Find the ratio of their speeds at the bottom.
+
+**Solution:**
+$v = \sqrt{\frac{2gh}{1 + k^2/R^2}}$
+
+$\frac{v_{disc}}{v_{ring}} = \sqrt{\frac{1 + 1}{1 + 1/2}} = \sqrt{\frac{2}{1.5}} = \sqrt{\frac{4}{3}} = \frac{2}{\sqrt{3}} \approx \mathbf{1.15}$
+
+---
+
+**M11.** A bullet of mass 10 g moving at 400 m/s strikes and embeds in the rim of a stationary disc (mass 2 kg, radius 0.5 m) free to rotate about its centre. Find the angular velocity just after impact.
+
+**Solution:**
+Angular momentum about centre is conserved:
+$mvR = (I_{disc} + mR^2)\omega$
+
+$0.01 \times 400 \times 0.5 = \left[\frac{1}{2}(2)(0.25) + 0.01(0.25)\right]\omega$
+
+$2 = [0.25 + 0.0025]\omega = 0.2525\,\omega$
+
+$\omega = \mathbf{7.92 \text{ rad/s}}$
+
+---
+
+**M12.** A block of width 0.4 m and height 1.2 m sits on a floor with $\mu_s = 0.3$. A horizontal force is applied at the top. Will it slide or topple first?
+
+**Solution:**
+Topple condition compares $\mu_s$ with $\frac{a}{2y}$, with $y = 1.2$ m (top), $a = 0.4$ m:
+
+$\frac{a}{2y} = \frac{0.4}{2.4} = 0.167$
+
+Since $\mu_s = 0.3 > 0.167$, the block **topples** before it slides.
+
+---
+
+### JEE Advanced Level Examples
+
+**A1.** A uniform rod of mass $M$ and length $L$ is pivoted at one end and held horizontal, then released. Find (a) the initial angular acceleration, (b) the angular velocity when it becomes vertical, (c) the speed of the free end at that instant.
+
+**Solution:**
+
+(a) Torque about pivot from weight (acting at centre): $\tau = Mg\cdot\frac{L}{2}$. With $I = \frac{1}{3}ML^2$:
+$$\alpha = \frac{\tau}{I} = \frac{MgL/2}{ML^2/3} = \frac{3g}{2L}$$
+
+(b) Energy conservation — CM falls by $L/2$:
+$$Mg\frac{L}{2} = \frac{1}{2}I\omega^2 = \frac{1}{2}\cdot\frac{ML^2}{3}\omega^2 \quad\Rightarrow\quad \omega = \sqrt{\frac{3g}{L}}$$
+
+(c) Speed of free end: $v = L\omega = \sqrt{3gL}$
+
+<Callout type="info">
+Note the initial acceleration of the free end is $L\alpha = \frac{3g}{2} = 1.5g > g$. A coin placed at the end of the rod lags behind — the rod's tip falls faster than free fall.
+</Callout>
+
+---
+
+**A2.** A solid sphere is given an initial velocity $v_0$ on a rough horizontal surface with no initial spin. Find the velocity when pure rolling begins and the distance travelled during slipping. ($\mu_k$ = coefficient of kinetic friction)
+
+**Solution:**
+
+During slipping, friction $f = \mu_k Mg$ acts backward:
+- Translation: $v = v_0 - \mu_k g\,t$
+- Rotation: $\alpha = \frac{f R}{I} = \frac{\mu_k Mg R}{\frac{2}{5}MR^2} = \frac{5\mu_k g}{2R}$, so $\omega = \frac{5\mu_k g}{2R}t$
+
+Pure rolling when $v = R\omega$:
+$$v_0 - \mu_k g t = \frac{5\mu_k g}{2}t \quad\Rightarrow\quad t = \frac{2v_0}{7\mu_k g}$$
+
+$$v_{roll} = v_0 - \mu_k g\cdot\frac{2v_0}{7\mu_k g} = v_0 - \frac{2v_0}{7} = \frac{5v_0}{7}$$
+
+Distance during slipping (using $v^2 = v_0^2 - 2\mu_k g\,s$, with $v = \frac{5v_0}{7}$):
+$$s = \frac{v_0^2 - (5v_0/7)^2}{2\mu_k g} = \frac{v_0^2(1 - 25/49)}{2\mu_k g} = \frac{12v_0^2}{49\mu_k g}$$
+
+---
+
+**A3.** A uniform rod of mass $M$ and length $L$ lies on a frictionless table. A particle of mass $m$ moving with speed $v$ perpendicular to the rod strikes one end and sticks. Find the angular velocity of the system and the velocity of its centre of mass after impact.
+
+**Solution:**
+
+The centre of mass of the combined system lies at distance $d = \frac{mL/2}{M+m}$ from the rod's centre (toward the struck end).
+
+**Linear momentum** (no external horizontal force on the table): $mv = (M+m)v_{cm}$
+$$v_{cm} = \frac{mv}{M+m}$$
+
+**Angular momentum about the combined CM** is conserved. Using $I_{system}$ about the combined CM (rod's $\frac{ML^2}{12}$ shifted by $d$, plus the particle at distance $\frac{L}{2}-d$), the angular velocity is:
+$$\omega = \frac{m v \left(\frac{L}{2} - d\right)}{I_{system}}$$
+
+where $I_{system} = \frac{ML^2}{12} + Md^2 + m\left(\frac{L}{2}-d\right)^2$. Substituting $d = \frac{mL}{2(M+m)}$ and simplifying gives the standard result:
+$$\omega = \frac{6mv}{(M + 4m)L}$$
+
+---
+
+**A4.** A disc of radius $R$ rotating with angular velocity $\omega_0$ about its central axis is gently placed on a rough horizontal floor (its centre stationary). Find the time and the final angular velocity when it begins pure rolling.
+
+**Solution:**
+
+Initially the contact point slips backward, so kinetic friction $f = \mu_k Mg$ acts forward, accelerating the centre while decelerating the spin.
+
+- Translation: $v = \mu_k g\, t$
+- Rotation: $\alpha = \frac{fR}{I} = \frac{\mu_k Mg R}{\frac{1}{2}MR^2} = \frac{2\mu_k g}{R}$, so $\omega = \omega_0 - \frac{2\mu_k g}{R}t$
+
+Pure rolling when $v = R\omega$:
+$$\mu_k g t = R\omega_0 - 2\mu_k g t \quad\Rightarrow\quad t = \frac{R\omega_0}{3\mu_k g}$$
+
+$$v = \mu_k g\cdot\frac{R\omega_0}{3\mu_k g} = \frac{R\omega_0}{3} \quad\Rightarrow\quad \omega_{final} = \frac{v}{R} = \frac{\omega_0}{3}$$
+
+---
+
+**A5.** A solid sphere rolls without slipping up an incline of angle $\theta$ with initial speed $v_0$ at the bottom. Find the distance it travels up the incline before momentarily stopping.
+
+**Solution:**
+
+Energy conservation (rolling, friction does no work):
+$$\frac{1}{2}Mv_0^2\left(1 + \frac{2}{5}\right) = Mg h = Mg(s\sin\theta)$$
+
+$$\frac{7}{10}Mv_0^2 = Mgs\sin\theta \quad\Rightarrow\quad s = \frac{7v_0^2}{10g\sin\theta}$$
+
+---
+
+## SECTION 14 — Practice Problems
+
+---
+
+### JEE Main Practice Problems
+
+**P1.** Find the MOI of a ring (mass 0.5 kg, radius 0.4 m) about a tangent in its plane. *(Hint: parallel axis from the diameter.)*
+
+**P2.** A wheel rotating at 300 rpm is brought to rest in 10 s by a constant torque. Find the angular retardation and number of revolutions before stopping.
+
+**P3.** A solid cylinder rolls down a 37° incline. Find its acceleration and the minimum $\mu$ for pure rolling. ($\sin37° = 0.6$, $\cos37° = 0.8$)
+
+**P4.** A torque of 50 N·m is applied to a flywheel ($I = 10$ kg·m²) for 4 s. Find the final angular velocity and the work done (starting from rest).
+
+**P5.** A hollow sphere and a solid sphere of equal mass and radius are released from the top of an incline. What is the ratio of times to reach the bottom?
+
+**P6.** A disc (mass 4 kg, radius 0.5 m) rotates at 20 rad/s. A 1 kg ring of the same radius is dropped coaxially onto it. Find the common angular velocity.
+
+**P7.** A particle of mass 0.2 kg moves in a circle of radius 0.5 m at 4 m/s. Find its angular momentum about the centre.
+
+**P8.** A uniform rod (mass 2 kg, length 1 m) rotates about its centre at 6 rad/s. Find its angular momentum and rotational KE.
+
+**P9.** A solid sphere rolling at 7 m/s approaches an incline. To what height will it rise (rolling throughout)? ($g = 10$ m/s²)
+
+**P10.** A block (width 0.3 m, height 0.9 m, $\mu_s = 0.4$) is pushed horizontally at its top. Determine whether it slides or topples first.
+
+**P11.** A force $\vec{F} = 3\hat{i} + 4\hat{j}$ N acts at point $\vec{r} = 2\hat{i} + \hat{j}$ m. Find the torque about the origin.
+
+**P12.** A merry-go-round (disc, mass 100 kg, radius 2 m) rotates at 1 rad/s. A 50 kg person jumps on at the rim. Find the new angular velocity.
+
+**P13.** A ring of radius $R$ rolls without slipping at speed $v$. Find the speed of the topmost point and a point at the same height as the centre.
+
+**P14.** Find the radius of gyration of a solid sphere about a tangent line.
+
+**P15.** A flywheel stores 5000 J of rotational KE at 50 rad/s. Find its moment of inertia.
+
+---
+
+### JEE Advanced Practice Problems
+
+**Q1.** A uniform rod of length $L$ hangs vertically from a frictionless pivot at the top. A bullet of mass $m$ moving horizontally at $v$ strikes the bottom end and embeds. Find (a) the angular velocity just after, (b) the maximum angle the rod swings, in terms of $m$, $M$ (rod mass), $L$, $v$, $g$.
+
+**Q2.** A solid sphere and a hollow sphere of the same mass and radius roll down an incline. Show that the difference in their accelerations is $\frac{4}{35}g\sin\theta$ and identify which is faster.
+
+**Q3.** A yo-yo (model as a disc of mass $M$, radius $R$) unwinds from a string wrapped around its axle. Find the linear acceleration of its centre and the tension in the string.
+
+**Q4.** A uniform disc rolls without slipping. Prove that its kinetic energy equals $\frac{3}{4}Mv_{cm}^2$ and that this equals $\frac{1}{2}I_{contact}\omega^2$, where $I_{contact}$ is the moment of inertia about the instantaneous contact point.
+
+**Q5.** A rod of mass $M$, length $L$ is rotating on a frictionless table about its centre at $\omega_0$. Two beads of mass $m$ each, initially at the centre, slide out to the ends. Find the final angular velocity and the change in kinetic energy.
+
+**Q6.** A sphere is projected up a rough incline with sufficient friction for pure rolling, with initial speed $v_0$. Find (a) how far up it goes, (b) its speed when it returns to the starting point.
+
+**Q7.** A ladder of mass $M$ and length $L$ leans against a smooth wall and a rough floor at angle $\theta$. Find the minimum coefficient of friction at the floor for equilibrium.
+
+**Q8.** A disc rotating at $\omega_0$ is placed on a rough surface. Determine the work done by friction from release until pure rolling begins, and verify it equals the loss in kinetic energy.
+
+**Q9.** A solid cylinder rolls without slipping on a plank that itself lies on a frictionless floor. A horizontal force $F$ is applied to the plank. Find the acceleration of the cylinder's centre.
+
+**Q10.** Two identical discs spin in opposite directions at $\omega$ about their common (frictionless) axle and are pressed together face-to-face. Friction between faces brings them to a common state. Find the final angular velocity and the fraction of KE lost.
+
+---
+
+## SECTION 15 — PYQ Analysis
+
+---
+
+### JEE Main Trends (2019–2024)
+
+| Topic | Frequency | Common Question Type |
+|-------|-----------|---------------------|
+| Moment of inertia (standard bodies, theorems) | Very High | Direct calculation |
+| Rolling on incline (acceleration, $\mu_{min}$) | Very High | Formula application |
+| Angular momentum conservation (skater, disc) | High | $I_1\omega_1 = I_2\omega_2$ |
+| Rotational KE / energy of rolling | High | Energy split |
+| Torque and $\tau = I\alpha$ | High | Numerical |
+| Toppling vs sliding | Medium | Conceptual |
+
+---
+
+### JEE Advanced Trends (2019–2024)
+
+| Topic | Frequency | Format |
+|-------|-----------|--------|
+| Rolling with slipping (transition to pure rolling) | Very High | Multi-step / Integer |
+| Hinged-rod + bullet collision (angular momentum) | High | Paragraph / Integer |
+| Combined translation + rotation (yo-yo, plank) | High | Multi-correct |
+| Instantaneous axis of rotation | Medium | Conceptual + Numerical |
+| Energy methods with rolling | Very High | Integer |
+| Ladder / equilibrium problems | Medium | Numerical |
+
+**JEE Advanced Key Pattern:** The signature rotational problem combines **three tools** — Newton's law for translation ($F = Ma$), Newton's law for rotation ($\tau = I\alpha$), and the rolling constraint ($a = R\alpha$) — solved as a simultaneous system. For collisions, conserve **angular momentum about the pivot**. For "how fast / how high," use **energy conservation** with the full $\frac{1}{2}Mv^2(1 + k^2/R^2)$.
+
+---
+
+## SECTION 16 — Final Revision Module
+
+---
+
+### Complete Formula Sheet
+
+<Formula label="Rotational Mechanics — Master Formula Sheet">
+
+**Kinematics:** $\omega = \omega_0 + \alpha t$ ; $\theta = \omega_0 t + \frac{1}{2}\alpha t^2$ ; $\omega^2 = \omega_0^2 + 2\alpha\theta$
+
+**Linear ↔ angular:** $v = r\omega$ ; $a_t = r\alpha$ ; $a_c = r\omega^2$
+
+**Moment of inertia:** $I = \sum m_i r_i^2 = \int r^2 dm = Mk^2$
+
+**Parallel axis:** $I = I_{cm} + Md^2$
+
+**Perpendicular axis (planar):** $I_z = I_x + I_y$
+
+**Standard MOI:** rod (centre) $\frac{ML^2}{12}$, rod (end) $\frac{ML^2}{3}$, ring $MR^2$, disc $\frac{MR^2}{2}$, solid sphere $\frac{2}{5}MR^2$, shell $\frac{2}{3}MR^2$, solid cylinder $\frac{MR^2}{2}$
+
+**Torque:** $\vec{\tau} = \vec{r}\times\vec{F}$ ; $\tau = rF\sin\theta$ ; $\tau_{net} = I\alpha = \frac{dL}{dt}$
+
+**Angular momentum:** $\vec{L} = \vec{r}\times\vec{p}$ ; $L = I\omega$ ; conserved if $\tau_{ext} = 0$
+
+**Rotational KE:** $\frac{1}{2}I\omega^2 = \frac{L^2}{2I}$ ; Work $= \tau\theta$ ; Power $= \tau\omega$
+
+**Rolling condition:** $v_{cm} = R\omega$ ; $a_{cm} = R\alpha$
+
+**Rolling KE:** $\frac{1}{2}Mv^2\left(1 + \frac{k^2}{R^2}\right)$
+
+**Rolling down incline:** $a = \dfrac{g\sin\theta}{1 + k^2/R^2}$ ; $v_{bottom} = \sqrt{\dfrac{2gh}{1 + k^2/R^2}}$
+
+**Min friction for rolling:** $\mu_{min} = \dfrac{(k^2/R^2)\tan\theta}{1 + k^2/R^2}$
+
+**Sphere with no spin → rolling:** $v_{roll} = \frac{5}{7}v_0$ ; $t = \frac{2v_0}{7\mu_k g}$
+
+**Toppling:** $F_{topple} = \frac{Mga}{2y}$ ; topples if $\mu_s > \frac{a}{2y}$
+
+**Angular impulse:** $\int\tau\,dt = \Delta L$
+
+</Formula>
+
+---
+
+### Concept Map
+
+**Rotational Mechanics**
+
+$I = \sum m_i r_i^2$ → the rotational "mass" (axis-dependent)
+
+↓ apply theorems (parallel / perpendicular axis) to find $I$ about any axis
+
+$\tau = I\alpha = \dfrac{dL}{dt}$ → rotational Newton's law
+
+↓ two branches:
+
+**No external torque** → $L = I\omega$ conserved → skater, collapsing disc, hinged collisions
+
+**Rolling** → $v = R\omega$ links translation + rotation → solve $F=Ma$, $\tau=I\alpha$, $a=R\alpha$ together
+
+↓ energy:
+
+$KE = \frac{1}{2}Mv^2 + \frac{1}{2}I\omega^2$ → races down inclines, decided by $k^2/R^2$
+
+---
+
+### Last-Minute Tips
+
+<Callout type="tip">
+**5 Power Techniques**
+
+1. **The three-equation system:** For any rolling-with-friction problem, write $F = Ma$ (translation), $\tau = I\alpha$ (rotation about CM), and $a = R\alpha$ (constraint). Three equations, three unknowns ($a$, $\alpha$, $f$).
+
+2. **$k^2/R^2$ decides everything in rolling:** acceleration, energy split, and minimum friction all depend only on this ratio — never on $M$ or $R$. Memorize the four values.
+
+3. **Hinged collisions → angular momentum about the hinge.** Linear momentum is not conserved (the hinge pushes back), but the hinge force has zero torque about itself.
+
+4. **Energy method for "how fast / how high":** use $\frac{1}{2}Mv^2(1 + k^2/R^2)$ for the rolling body's KE — it bundles translation and rotation into one clean term.
+
+5. **IAR shortcut:** Treating the contact point as a fixed pivot, a rolling body's KE is $\frac{1}{2}I_{contact}\omega^2$ — sometimes the fastest route, since gravity and the unknown friction both act through known points.
+</Callout>
+
+<Callout type="warning">
+**3 Classic JEE Traps**
+
+1. **Friction direction in rolling:** rolling down an incline, static friction points **up** the incline (it provides the torque to spin the body up) and does **zero work**. Don't assume it opposes the centre's motion.
+
+2. **$v = R\omega$ is only for pure rolling.** The instant a problem says "insufficient friction," "frictionless then rough," or "spinning then dropped," you must treat translation and rotation independently until $v = R\omega$ is reached.
+
+3. **Skater's energy:** angular momentum is conserved when she pulls her arms in — **not** kinetic energy. KE increases, and the increase equals the work her muscles do.
+</Callout>
+
+---
+
+*Module created by the Physics Mastery faculty team — Senior JEE Faculty · IIT Physics Professors · Olympiad Mentors*
+
+*For JEE Main · JEE Advanced · NEET · Physics Olympiad*

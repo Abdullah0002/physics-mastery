@@ -1,0 +1,1335 @@
+---
+title: "Circular Motion — Complete Theory"
+description: "The most comprehensive circular motion resource for JEE Main, JEE Advanced and NEET. Uniform and non-uniform circular motion, centripetal acceleration, centripetal force, vertical circles, conical pendulum, banking of roads, and rotating frames — from first principles to Olympiad level."
+difficulty: "HARD"
+tags: ["circular-motion", "centripetal-force", "centripetal-acceleration", "vertical-circle", "conical-pendulum", "banked-road", "angular-velocity", "non-uniform-circular-motion", "pseudo-force", "rotating-frame"]
+---
+
+# Circular Motion — Complete Theory
+
+*The most thorough circular motion module — built for JEE Main · JEE Advanced · NEET · Physics Olympiad*
+
+---
+
+## SECTION 1 — The Big Picture
+
+---
+
+### 1.1 What Is Circular Motion?
+
+A stone on a string swung overhead. The Moon orbiting Earth. A car turning a corner. A charged particle spiralling in a magnetic field. An electron in a Bohr orbit. All of these involve **circular motion** — motion along a circular path.
+
+What makes circular motion special is that **the direction of velocity changes continuously**, even if speed stays constant. And from Newton's Second Law, a changing velocity means a net force must be acting.
+
+This net force — always directed toward the centre of the circle — is called the **centripetal force**. Understanding it is the key to mastering this entire chapter.
+
+---
+
+### 1.2 Kinematics vs Dynamics of Circular Motion
+
+| Aspect | Kinematics | Dynamics |
+|--------|-----------|----------|
+| Question | How does the particle move? | What forces cause this motion? |
+| Tools | $\omega$, $\alpha$, $v$, $a_c$, $a_t$ | Newton's 2nd Law: $F_{net} = ma$ |
+| Key result | $a_c = v^2/r = \omega^2 r$ | Identify what provides $F_c = mv^2/r$ |
+
+---
+
+## SECTION 2 — Angular Kinematics
+
+---
+
+### 2.1 Angular Quantities
+
+For a particle moving in a circle of radius $r$:
+
+| Quantity | Symbol | Definition | SI Unit |
+|----------|--------|-----------|---------|
+| Angular displacement | $\theta$ | Arc length / radius = $s/r$ | radian (rad) |
+| Angular velocity | $\omega$ | $d\theta/dt$ | rad/s |
+| Angular acceleration | $\alpha$ | $d\omega/dt$ | rad/s² |
+| Frequency | $f$ | Revolutions per second | Hz |
+| Time period | $T$ | Time for one revolution | s |
+
+**Relationships:**
+
+$$\omega = 2\pi f = \frac{2\pi}{T} \qquad v = r\omega \qquad T = \frac{2\pi}{\omega}$$
+
+---
+
+### 2.2 Equations of Circular Kinematics
+
+For **constant angular acceleration** $\alpha$, the rotational analogues of the linear SUVAT equations are:
+
+| Linear | Rotational |
+|--------|-----------|
+| $v = u + at$ | $\omega = \omega_0 + \alpha t$ |
+| $s = ut + \frac{1}{2}at^2$ | $\theta = \omega_0 t + \frac{1}{2}\alpha t^2$ |
+| $v^2 = u^2 + 2as$ | $\omega^2 = \omega_0^2 + 2\alpha\theta$ |
+| $s = \frac{u+v}{2}t$ | $\theta = \frac{\omega_0+\omega}{2}t$ |
+
+---
+
+### 2.3 Linear and Angular Quantities
+
+For a particle at radius $r$ from the rotation axis:
+
+$$v = r\omega$$
+
+$$a_t = r\alpha \quad \text{(tangential acceleration)}$$
+
+$$a_c = r\omega^2 = \frac{v^2}{r} \quad \text{(centripetal acceleration)}$$
+
+---
+
+## SECTION 3 — Centripetal Acceleration
+
+---
+
+### 3.1 Derivation from First Principles
+
+Consider a particle moving in a circle of radius $r$ with constant speed $v$. At time $t$, it is at point P with velocity $\vec{v}_1$. At time $t + \Delta t$, it is at Q with velocity $\vec{v}_2$.
+
+The speed is constant ($|\vec{v}_1| = |\vec{v}_2| = v$) but the direction has changed by angle $\Delta\theta$.
+
+The change in velocity: $|\Delta\vec{v}| = 2v\sin(\Delta\theta/2) \approx v\Delta\theta$ (for small $\Delta\theta$)
+
+The arc length: $\Delta s = r\Delta\theta$, so $\Delta t = r\Delta\theta/v$
+
+Centripetal acceleration magnitude:
+
+$$a_c = \lim_{\Delta t \to 0} \frac{|\Delta\vec{v}|}{\Delta t} = \frac{v\Delta\theta}{r\Delta\theta/v} = \frac{v^2}{r}$$
+
+<Step n={1}>
+At P, velocity is $\vec{v}_1$ (tangent to circle). At Q (angle $\Delta\theta$ later), velocity is $\vec{v}_2$ (tangent at Q).
+</Step>
+
+<Step n={2}>
+$|\Delta\vec{v}| = 2v\sin(\Delta\theta/2) \approx v\Delta\theta$ for small $\Delta\theta$.
+</Step>
+
+<Step n={3}>
+Direction of $\Delta\vec{v}$: for small $\Delta\theta$, it bisects the angle between $\vec{v}_1$ and $\vec{v}_2$, pointing toward the centre.
+</Step>
+
+<Step n={4}>
+$a_c = |\Delta\vec{v}|/\Delta t = v\Delta\theta / (r\Delta\theta/v) = v^2/r$, directed toward centre.
+</Step>
+
+<Formula label="Centripetal Acceleration">
+$$\vec{a}_c = -\frac{v^2}{r}\hat{r} = -\omega^2 r\,\hat{r}$$
+
+Magnitude: $a_c = \dfrac{v^2}{r} = \omega^2 r = v\omega$
+
+Direction: toward the centre of the circle
+</Formula>
+
+---
+
+### 3.2 Physical Meaning
+
+Centripetal acceleration is purely a **change in direction** of velocity — not a change in speed. It is always perpendicular to $\vec{v}$, always pointing toward the centre.
+
+<Callout type="warning">
+**Centripetal ≠ Centrifugal**
+
+Centripetal acceleration is real — it is the acceleration of the particle as observed in an inertial frame.
+
+Centrifugal "force" is a pseudo force that appears only in the rotating frame of reference. In the ground frame, **there is no centrifugal force**. A stone in circular motion is NOT being "flung outward" — it is constantly being pulled inward.
+</Callout>
+
+---
+
+## SECTION 4 — Centripetal Force
+
+---
+
+### 4.1 What Provides the Centripetal Force?
+
+Centripetal force is NOT a new type of force. It is the **net inward force** that results from forces already present (gravity, tension, normal reaction, friction, etc.).
+
+<Formula label="Centripetal Force">
+$$F_c = \frac{mv^2}{r} = m\omega^2 r$$
+
+This must be provided by real forces (tension, gravity, normal reaction, friction, etc.).
+</Formula>
+
+<Callout type="important">
+**The Most Critical Insight in This Chapter**
+
+"Centripetal force" is not listed alongside gravity and tension in a free body diagram. Instead, when you draw the FBD and apply Newton's 2nd Law toward the centre:
+
+$$\sum F_{toward\,centre} = \frac{mv^2}{r}$$
+
+Whatever combination of real forces adds up to $mv^2/r$ inward is providing the centripetal force.
+</Callout>
+
+---
+
+### 4.2 What Provides Centripetal Force in Common Situations
+
+| Situation | What provides $F_c$ |
+|-----------|---------------------|
+| Stone on string (horizontal circle) | Tension $T$ |
+| Satellite orbiting Earth | Gravity $mg'$ |
+| Car on flat curved road | Static friction |
+| Car on banked road (ideal speed) | Component of normal force |
+| Electron in Bohr orbit | Electrostatic attraction |
+| Ball in vertical circle (at top) | Tension + Weight (both inward) |
+| Ball in vertical circle (at bottom) | Tension − Weight (tension inward, weight outward) |
+
+---
+
+## SECTION 5 — Uniform Circular Motion
+
+---
+
+### 5.1 Characteristics
+
+In **uniform circular motion (UCM)**, speed is constant.
+
+- Speed: $v = $ constant
+- Angular velocity: $\omega = $ constant
+- Tangential acceleration: $a_t = 0$
+- Centripetal acceleration: $a_c = v^2/r$ (constant magnitude, varying direction)
+- Net force: purely centripetal, magnitude $mv^2/r$
+- Kinetic energy: constant (since speed is constant)
+- Work done by centripetal force: **zero** (force $\perp$ displacement at every instant)
+
+---
+
+### 5.2 SVG: Uniform Circular Motion
+
+<svg width="360" height="360" viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="ucmV" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+    <marker id="ucmC" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#dc2626"/>
+    </marker>
+    <marker id="ucmT" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <circle cx="180" cy="180" r="120" fill="none" stroke="#cbd5e1" strokeWidth="2" strokeDasharray="6,4"/>
+  <circle cx="180" cy="180" r="5" fill="#334155"/>
+  <text x="188" y="184" fontSize="12" fill="#334155">O</text>
+  <circle cx="300" cy="180" r="10" fill="#3b82f6"/>
+  <text x="314" y="185" fontSize="12" fill="#3b82f6" fontWeight="bold">P</text>
+  <line x1="300" y1="180" x2="300" y2="110" stroke="#3b82f6" strokeWidth="2.5" markerEnd="url(#ucmV)"/>
+  <text x="306" y="108" fontSize="12" fill="#3b82f6" fontWeight="bold">v</text>
+  <line x1="300" y1="180" x2="230" y2="180" stroke="#dc2626" strokeWidth="2.5" markerEnd="url(#ucmC)"/>
+  <text x="225" y="173" fontSize="11" fill="#dc2626">a_c = v²/r</text>
+  <line x1="180" y1="180" x2="300" y2="180" stroke="#94a3b8" strokeWidth="1.5" strokeDasharray="4,3"/>
+  <text x="232" y="172" fontSize="11" fill="#94a3b8">r</text>
+  <circle cx="265" cy="74" r="10" fill="#60a5fa" opacity="0.5"/>
+  <line x1="265" y1="74" x2="210" y2="56" stroke="#3b82f6" strokeWidth="2" markerEnd="url(#ucmV)" opacity="0.5"/>
+  <circle cx="95" cy="265" r="10" fill="#60a5fa" opacity="0.3"/>
+  <line x1="95" y1="265" x2="150" y2="280" stroke="#3b82f6" strokeWidth="2" markerEnd="url(#ucmV)" opacity="0.3"/>
+  <text x="55" y="338" fontSize="11" fill="#64748b">v ⊥ r always; a_c always toward O</text>
+</svg>
+
+---
+
+## SECTION 6 — Non-Uniform Circular Motion
+
+---
+
+### 6.1 Tangential and Centripetal Acceleration
+
+When speed changes as the particle moves in a circle, there is a **tangential acceleration** $a_t$ in addition to centripetal acceleration $a_c$.
+
+$$a_t = \frac{dv}{dt} = r\alpha$$
+
+$$a_c = \frac{v^2}{r} = r\omega^2$$
+
+**Total acceleration:**
+
+$$\vec{a} = \vec{a}_c + \vec{a}_t$$
+
+$$|\vec{a}| = \sqrt{a_c^2 + a_t^2} = \sqrt{\left(\frac{v^2}{r}\right)^2 + \left(\frac{dv}{dt}\right)^2}$$
+
+The angle $\phi$ that $\vec{a}$ makes with the radius:
+
+$$\tan\phi = \frac{a_t}{a_c} = \frac{r\alpha}{r\omega^2} = \frac{\alpha}{\omega^2}$$
+
+---
+
+### 6.2 Work and Energy in Non-Uniform Circular Motion
+
+Only the tangential force $F_t = ma_t$ does work (since centripetal force is perpendicular to motion).
+
+$$\text{Power} = F_t \cdot v = ma_t v$$
+
+$$\Delta KE = \int F_t \, ds = \int ma_t \, v \, dt$$
+
+---
+
+## SECTION 7 — Vertical Circular Motion
+
+---
+
+### 7.1 Complete Vertical Circle — String
+
+A ball of mass $m$ attached to a string of length $L$ is swung in a vertical circle.
+
+<svg width="360" height="380" viewBox="0 0 360 380" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="vcA" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#334155"/>
+    </marker>
+    <marker id="vcG" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#16a34a"/>
+    </marker>
+    <marker id="vcR" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#dc2626"/>
+    </marker>
+    <marker id="vcB" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <circle cx="180" cy="190" r="130" fill="none" stroke="#e2e8f0" strokeWidth="2"/>
+  <circle cx="180" cy="190" r="6" fill="#334155"/>
+  <text x="188" y="195" fontSize="12" fill="#334155">O</text>
+  <circle cx="180" cy="60" r="10" fill="#dc2626"/>
+  <text x="193" y="64" fontSize="12" fill="#dc2626" fontWeight="bold">TOP</text>
+  <line x1="180" y1="190" x2="180" y2="60" stroke="#94a3b8" strokeWidth="1.5" strokeDasharray="4,3"/>
+  <line x1="180" y1="60" x2="180" y2="105" stroke="#dc2626" strokeWidth="2.5" markerEnd="url(#vcR)"/>
+  <text x="186" y="103" fontSize="10" fill="#dc2626">T</text>
+  <line x1="180" y1="60" x2="180" y2="102" stroke="#16a34a" strokeWidth="2" strokeDasharray="3,2"/>
+  <line x1="180" y1="60" x2="180" y2="92" stroke="#16a34a" strokeWidth="2.5" markerEnd="url(#vcG)"/>
+  <text x="155" y="91" fontSize="10" fill="#16a34a">mg</text>
+  <circle cx="180" cy="320" r="10" fill="#3b82f6"/>
+  <text x="193" y="324" fontSize="12" fill="#3b82f6" fontWeight="bold">BOTTOM</text>
+  <line x1="180" y1="320" x2="180" y2="265" stroke="#dc2626" strokeWidth="2.5" markerEnd="url(#vcR)"/>
+  <text x="186" y="265" fontSize="10" fill="#dc2626">T</text>
+  <line x1="180" y1="320" x2="180" y2="367" stroke="#16a34a" strokeWidth="2.5" markerEnd="url(#vcG)"/>
+  <text x="186" y="365" fontSize="10" fill="#16a34a">mg</text>
+  <circle cx="50" cy="190" r="10" fill="#8b5cf6"/>
+  <text x="18" y="185" fontSize="10" fill="#8b5cf6">SIDE</text>
+  <line x1="50" y1="190" x2="98" y2="190" stroke="#dc2626" strokeWidth="2.5" markerEnd="url(#vcR)"/>
+  <text x="100" y="188" fontSize="10" fill="#dc2626">T</text>
+  <line x1="50" y1="190" x2="50" y2="238" stroke="#16a34a" strokeWidth="2.5" markerEnd="url(#vcG)"/>
+  <text x="56" y="236" fontSize="10" fill="#16a34a">mg</text>
+  <text x="55" y="360" fontSize="11" fill="#64748b">Fig: Vertical circle — forces at top, bottom, and side</text>
+</svg>
+
+---
+
+### 7.2 Applying Newton's Second Law at Each Point
+
+**At the TOP** (both $T$ and $mg$ point toward centre, i.e., downward):
+
+$$T + mg = \frac{mv_{top}^2}{L}$$
+
+$$T = \frac{mv_{top}^2}{L} - mg$$
+
+**At the BOTTOM** ($T$ points toward centre (upward), $mg$ points away (downward)):
+
+$$T - mg = \frac{mv_{bot}^2}{L}$$
+
+$$T = \frac{mv_{bot}^2}{L} + mg$$
+
+**At the SIDE** ($T$ points toward centre (horizontal), $mg$ points downward — perpendicular to radius):
+
+$$T = \frac{mv_{side}^2}{L} \qquad \text{(centripetal equation)}$$
+
+$mg$ only affects tangential acceleration at this point, not tension.
+
+---
+
+### 7.3 Minimum Speed at Top — Condition for Complete Circle
+
+The string can only **pull**, never push. So tension $T \geq 0$ always.
+
+At the top, $T$ is minimum (because weight assists centripetal). For minimum tension = 0:
+
+$$0 + mg = \frac{mv_{top,min}^2}{L} \Rightarrow v_{top,min} = \sqrt{gL}$$
+
+<Formula label="Minimum Speed at Top of Vertical Circle (String)">
+$$v_{top,min} = \sqrt{gL}$$
+
+At this speed, tension = 0 (string is barely taut). For complete circle: $v_{top} \geq \sqrt{gL}$
+</Formula>
+
+---
+
+### 7.4 Minimum Speed at Bottom
+
+Using energy conservation from bottom to top:
+
+$$\frac{1}{2}mv_{bot}^2 = \frac{1}{2}mv_{top}^2 + mg(2L)$$
+
+$$v_{bot}^2 = v_{top}^2 + 4gL$$
+
+For minimum condition ($v_{top} = \sqrt{gL}$):
+
+<Formula label="Minimum Speed at Bottom for Complete Vertical Circle">
+$$v_{bot,min} = \sqrt{5gL}$$
+</Formula>
+
+---
+
+### 7.5 Tension at Bottom for Minimum Condition
+
+$$T_{bottom} = \frac{mv_{bot}^2}{L} + mg = \frac{m \cdot 5gL}{L} + mg = 5mg + mg = 6mg$$
+
+At the instant of minimum speed for complete rotation, tension at the bottom is **6 times the weight**. This is why swing chains must be strong.
+
+---
+
+### 7.6 General Point — Angle $\theta$ from the Bottom
+
+We now find the tension and speed at **any** point on the circle. Let $\theta$ be measured from the bottom, so $\theta = 0$ at the bottom, $\theta = 90°$ at the side, and $\theta = 180°$ at the top.
+
+<svg width="340" height="340" viewBox="0 0 340 340" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="gaT" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#dc2626"/>
+    </marker>
+    <marker id="gaG" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <circle cx="170" cy="170" r="120" fill="none" stroke="#e2e8f0" strokeWidth="2"/>
+  <circle cx="170" cy="170" r="5" fill="#334155"/>
+  <text x="178" y="174" fontSize="12" fill="#334155">O</text>
+  <line x1="170" y1="170" x2="170" y2="290" stroke="#94a3b8" strokeWidth="1.5" strokeDasharray="4,3"/>
+  <line x1="170" y1="170" x2="262" y2="93" stroke="#94a3b8" strokeWidth="1.5"/>
+  <path d="M 170,250 A 80,80 0 0,0 234,122" fill="none" stroke="#334155" strokeWidth="1.5"/>
+  <text x="200" y="240" fontSize="13" fill="#334155" fontStyle="italic">θ</text>
+  <circle cx="262" cy="93" r="11" fill="#3b82f6" stroke="#1e40af" strokeWidth="2"/>
+  <line x1="262" y1="93" x2="205" y2="140" stroke="#dc2626" strokeWidth="2.5" markerEnd="url(#gaT)"/>
+  <text x="210" y="120" fontSize="12" fill="#dc2626" fontWeight="bold">T</text>
+  <line x1="262" y1="93" x2="262" y2="143" stroke="#16a34a" strokeWidth="2.5" markerEnd="url(#gaG)"/>
+  <text x="268" y="135" fontSize="12" fill="#16a34a" fontWeight="bold">mg</text>
+  <text x="40" y="320" fontSize="11" fill="#64748b">Fig: Bob at angle θ from the bottom — T inward, mg downward</text>
+</svg>
+
+<Step n={1}>
+**Height and speed.** The bob rises a height $h = L(1 - \cos\theta)$ above the bottom. By energy conservation from the bottom:
+$$v^2 = v_{bot}^2 - 2gL(1 - \cos\theta)$$
+</Step>
+
+<Step n={2}>
+**Radial component of gravity.** The outward radial direction makes angle $\theta$ with the downward vertical, so the component of gravity along the **inward** radial direction is $-mg\cos\theta$ (gravity points outward in the lower half, inward in the upper half).
+</Step>
+
+<Step n={3}>
+**Newton's 2nd Law (inward positive).** Tension acts inward; gravity contributes $-mg\cos\theta$ inward:
+$$T - mg\cos\theta = \frac{mv^2}{L} \quad\Rightarrow\quad T = \frac{mv^2}{L} + mg\cos\theta$$
+</Step>
+
+**Verification at the three key points:**
+
+| Point | $\theta$ | Formula gives | Correct? |
+|-------|----------|---------------|----------|
+| Bottom | $0°$ | $T = mv_{bot}^2/L + mg$ | ✓ |
+| Side | $90°$ | $T = mv_{side}^2/L$ | ✓ |
+| Top | $180°$ | $T = mv_{top}^2/L - mg$ | ✓ |
+
+<Formula label="Tension at a General Angle (measured from bottom)">
+$$T = \frac{mv^2}{L} + mg\cos\theta$$
+
+Substituting $v^2 = v_{bot}^2 - 2gL(1-\cos\theta)$ gives tension directly in terms of the launch speed:
+
+$$T = \frac{mv_{bot}^2}{L} + mg(3\cos\theta - 2)$$
+</Formula>
+
+---
+
+### 7.7 Vertical Circle — Rod vs String
+
+| Feature | String (flexible) | Rod (rigid) |
+|---------|-----------------|-------------|
+| Can push? | No ($T \geq 0$) | Yes (compression possible) |
+| Min speed at top | $\sqrt{gL}$ | Can be **zero** |
+| Min speed at bottom | $\sqrt{5gL}$ | $\sqrt{4gL}$ (just enough energy) |
+| Condition for complete circle | $v_{bot} \geq \sqrt{5gL}$ | $v_{bot} \geq \sqrt{4gL}$ (and $v_{top} \geq 0$) |
+
+**Rod derivation:** At the top, normal force from rod can be inward (tension) or outward (compression). Minimum speed: $v_{top} = 0$.
+
+Energy: $\frac{1}{2}mv_{bot}^2 = \frac{1}{2}m(0)^2 + mg(2L) \Rightarrow v_{bot,min} = \sqrt{4gL}$
+
+---
+
+### 7.8 Critical Situations in Vertical Circle
+
+**Case 1: $v_{bot} < \sqrt{2gL}$**
+Ball doesn't reach horizontal (side) level. Oscillates in lower arc like a pendulum.
+
+**Case 2: $\sqrt{2gL} \leq v_{bot} < \sqrt{5gL}$**
+Ball goes past horizontal but string goes slack before reaching top. It then follows projectile motion.
+
+The angle $\theta$ at which string goes slack (T = 0):
+
+$$0 = \frac{mv^2}{L} + mg\cos\theta \Rightarrow v^2 = -gL\cos\theta$$
+
+Using energy: $v^2 = v_{bot}^2 - 2gL(1-\cos\theta)$
+
+$$-gL\cos\theta = v_{bot}^2 - 2gL + 2gL\cos\theta$$
+
+$$3gL\cos\theta = v_{bot}^2 - 2gL$$
+
+$$\cos\theta = \frac{v_{bot}^2 - 2gL}{3gL}$$
+
+(Valid only when $\cos\theta > -1$, i.e., $v_{bot}^2 > 0$ always, and $\cos\theta < 1$, i.e., $v_{bot}^2 < 5gL$) ✓
+
+**Case 3: $v_{bot} \geq \sqrt{5gL}$**
+Complete vertical circle — string taut throughout.
+
+---
+
+## SECTION 8 — Vertical Circular Motion — Track (Inside)
+
+---
+
+### 8.1 Ball Inside a Circular Track
+
+When a ball moves inside a circular track (like a loop-the-loop), the normal force from the track can act inward or outward:
+
+**At the TOP** (inside of loop): Normal force $N$ acts **downward** (toward centre). Both $N$ and $mg$ are centripetal.
+
+$$N + mg = \frac{mv^2}{r}$$
+
+Condition for contact ($N \geq 0$): $v_{top} \geq \sqrt{gr}$
+
+**At the BOTTOM** (inside of loop): Normal force $N$ acts **upward** (toward centre).
+
+$$N - mg = \frac{mv^2}{r} \Rightarrow N = \frac{mv^2}{r} + mg$$
+
+**Minimum speed at top:** $v_{top,min} = \sqrt{gR}$
+
+**Minimum speed at bottom:** $v_{bot,min} = \sqrt{5gR}$ (from energy conservation)
+
+<Callout type="info">
+**String vs Track Analogy**
+
+- String ball: String can only pull → $T \geq 0$ → same minimum conditions
+- Track (inside): Track can only push (normal) → $N \geq 0$ → same minimum conditions
+- Rod: Can both push and pull → no minimum speed condition at top
+</Callout>
+
+---
+
+## SECTION 9 — Conical Pendulum
+
+---
+
+### 9.1 Setup and Analysis
+
+A conical pendulum consists of a mass $m$ on a string of length $L$ making angle $\theta$ with the vertical. The mass moves in a horizontal circle.
+
+<svg width="320" height="320" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="cpA" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#334155"/>
+    </marker>
+    <marker id="cpG" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#dc2626"/>
+    </marker>
+    <marker id="cpT" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#16a34a"/>
+    </marker>
+    <marker id="cpC" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <line x1="160" y1="30" x2="160" y2="80" stroke="#334155" strokeWidth="3" strokeLinecap="round"/>
+  <rect x="140" y="15" width="40" height="15" rx="3" fill="#94a3b8"/>
+  <line x1="160" y1="80" x2="270" y2="220" stroke="#334155" strokeWidth="2.5"/>
+  <circle cx="270" cy="220" r="12" fill="#3b82f6" stroke="#1e40af" strokeWidth="2"/>
+  <ellipse cx="160" cy="220" rx="110" ry="22" fill="none" stroke="#cbd5e1" strokeWidth="1.5" strokeDasharray="5,3"/>
+  <line x1="160" y1="80" x2="160" y2="220" stroke="#94a3b8" strokeWidth="1.5" strokeDasharray="4,3"/>
+  <line x1="160" y1="220" x2="270" y2="220" stroke="#94a3b8" strokeWidth="1.5" strokeDasharray="4,3"/>
+  <path d="M 160,105 A 35,35 0 0,1 175,130" fill="none" stroke="#334155" strokeWidth="1.5"/>
+  <text x="174" y="125" fontSize="13" fill="#334155" fontStyle="italic">θ</text>
+  <line x1="270" y1="220" x2="220" y2="162" stroke="#16a34a" strokeWidth="2.5" markerEnd="url(#cpT)"/>
+  <text x="208" y="158" fontSize="12" fill="#16a34a" fontWeight="bold">T</text>
+  <line x1="270" y1="220" x2="270" y2="268" stroke="#dc2626" strokeWidth="2.5" markerEnd="url(#cpG)"/>
+  <text x="276" y="266" fontSize="12" fill="#dc2626" fontWeight="bold">mg</text>
+  <line x1="270" y1="220" x2="215" y2="220" stroke="#3b82f6" strokeWidth="2.5" markerEnd="url(#cpC)"/>
+  <text x="195" y="218" fontSize="10" fill="#3b82f6">T sinθ</text>
+  <text x="55" y="305" fontSize="11" fill="#64748b">Fig: Conical pendulum — T sinθ provides centripetal force</text>
+</svg>
+
+**Equations:**
+
+Vertical equilibrium: $T\cos\theta = mg$ ...(i)
+
+Horizontal (centripetal): $T\sin\theta = \frac{mv^2}{r} = mr\omega^2$ ...(ii)
+
+where $r = L\sin\theta$ (radius of circle).
+
+Dividing (ii) by (i):
+
+$$\tan\theta = \frac{r\omega^2}{g} = \frac{L\sin\theta \cdot \omega^2}{g}$$
+
+$$\cos\theta = \frac{g}{L\omega^2}$$
+
+<Formula label="Conical Pendulum">
+$$\cos\theta = \frac{g}{L\omega^2} \qquad \omega = \sqrt{\frac{g}{L\cos\theta}}$$
+
+$$T = \frac{2\pi}{\omega} = 2\pi\sqrt{\frac{L\cos\theta}{g}} \qquad v = \sqrt{gL\sin\theta\tan\theta}$$
+</Formula>
+
+**Key observations:**
+- As $\omega$ increases, $\cos\theta$ decreases → $\theta$ increases (cone opens up)
+- At $\omega \to \infty$: $\theta \to 90°$, string becomes horizontal
+- At $\omega \to 0$: $\theta \to 0°$, pendulum hangs vertically
+- Time period $T = 2\pi\sqrt{h/g}$ where $h = L\cos\theta$ is the vertical height
+
+---
+
+## SECTION 10 — Motion in a Horizontal Circle
+
+---
+
+### 10.1 Car on a Flat Circular Road
+
+A car of mass $m$ moves at speed $v$ on a flat circular road of radius $R$.
+
+Centripetal force is provided by **static friction** between tyres and road:
+
+$$\frac{mv^2}{R} \leq \mu_s mg$$
+
+$$v_{max} = \sqrt{\mu_s gR}$$
+
+<Callout type="tip">
+**JEE Insight**
+
+Note: The maximum speed depends on $\mu_s$ (static), not $\mu_k$. The tyres are not sliding — they are in rolling contact with the road. The friction is static (at the contact patch).
+</Callout>
+
+---
+
+### 10.2 Banking of Roads
+
+When a road is banked at angle $\theta$, the normal force has a horizontal component pointing toward the centre — this helps provide centripetal force.
+
+<svg width="380" height="260" viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="brA" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#334155"/>
+    </marker>
+    <marker id="brG" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#dc2626"/>
+    </marker>
+    <marker id="brN" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#16a34a"/>
+    </marker>
+    <marker id="brF" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+  </defs>
+  <polygon points="80,220 300,220 260,120 120,120" fill="#e2e8f0" stroke="#334155" strokeWidth="2"/>
+  <rect x="155" y="95" width="70" height="35" rx="5" fill="#3b82f6" stroke="#1e40af" strokeWidth="2"/>
+  <text x="190" y="118" textAnchor="middle" fontSize="12" fill="white" fontWeight="bold">car</text>
+  <path d="M 120,120 A 30,30 0 0,1 148,107" fill="none" stroke="#334155" strokeWidth="1.5"/>
+  <text x="138" y="118" fontSize="12" fill="#334155" fontStyle="italic">θ</text>
+  <line x1="190" y1="112" x2="160" y2="48" stroke="#16a34a" strokeWidth="2.5" markerEnd="url(#brN)"/>
+  <text x="138" y="45" fontSize="12" fill="#16a34a" fontWeight="bold">N</text>
+  <line x1="190" y1="112" x2="190" y2="175" stroke="#dc2626" strokeWidth="2.5" markerEnd="url(#brG)"/>
+  <text x="196" y="173" fontSize="12" fill="#dc2626" fontWeight="bold">mg</text>
+  <line x1="160" y1="48" x2="132" y2="48" stroke="#16a34a" strokeWidth="1.5" strokeDasharray="4,3"/>
+  <line x1="132" y1="48" x2="132" y2="80" stroke="#16a34a" strokeWidth="1.5" strokeDasharray="4,3"/>
+  <text x="110" y="68" fontSize="10" fill="#16a34a">N cosθ</text>
+  <text x="90" y="55" fontSize="10" fill="#3b82f6">N sinθ →</text>
+  <text x="60" y="245" fontSize="11" fill="#64748b">Fig: Banked road — N sinθ provides centripetal force</text>
+</svg>
+
+**Without friction (ideal banking):**
+
+Vertical: $N\cos\theta = mg$ ...(i)
+
+Horizontal (centripetal): $N\sin\theta = \frac{mv^2}{R}$ ...(ii)
+
+Dividing: $\tan\theta = \frac{v^2}{Rg}$
+
+<Formula label="Ideal Banking Angle / Speed">
+$$\tan\theta = \frac{v^2}{Rg} \qquad v_{ideal} = \sqrt{Rg\tan\theta}$$
+</Formula>
+
+At this speed: no friction needed, no tendency to slide inward or outward.
+
+---
+
+### 10.3 Banking with Friction
+
+**Minimum speed** (car tends to slide inward → friction acts outward up the bank):
+
+$$v_{min} = \sqrt{\frac{Rg(\tan\theta - \mu_s)}{1 + \mu_s\tan\theta}}$$
+
+**Maximum speed** (car tends to slide outward → friction acts inward down the bank):
+
+$$v_{max} = \sqrt{\frac{Rg(\tan\theta + \mu_s)}{1 - \mu_s\tan\theta}}$$
+
+<Formula label="Speed Range on Banked Road with Friction">
+$$\sqrt{\frac{Rg(\tan\theta - \mu)}{1 + \mu\tan\theta}} \leq v \leq \sqrt{\frac{Rg(\tan\theta + \mu)}{1 - \mu\tan\theta}}$$
+</Formula>
+
+**Derivation of $v_{max}$:**
+
+When car tends to slide outward, friction $f = \mu_s N$ acts down the bank (inward component helps centripetal).
+
+Vertical: $N\cos\theta - \mu_s N\sin\theta = mg \Rightarrow N = \frac{mg}{\cos\theta - \mu_s\sin\theta}$
+
+Horizontal: $N\sin\theta + \mu_s N\cos\theta = \frac{mv^2}{R}$
+
+$N(\sin\theta + \mu_s\cos\theta) = \frac{mv^2}{R}$
+
+Substituting $N$:
+
+$\frac{mg(\sin\theta + \mu_s\cos\theta)}{\cos\theta - \mu_s\sin\theta} = \frac{mv^2}{R}$
+
+$v^2 = Rg\cdot\frac{\sin\theta + \mu_s\cos\theta}{\cos\theta - \mu_s\sin\theta} = Rg\cdot\frac{\tan\theta + \mu_s}{1 - \mu_s\tan\theta}$ ✓
+
+---
+
+### 10.4 Cyclist on Circular Road (Lean Angle)
+
+A cyclist leans inward at angle $\theta$ to the vertical to maintain circular motion.
+
+The resultant of normal force and friction provides centripetal force:
+
+$$\tan\theta = \frac{v^2}{Rg}$$
+
+This is the **lean angle** from vertical. Numerically same as banking angle for the same speed and radius.
+
+---
+
+## SECTION 11 — Circular Motion in a Vertical Plane — Advanced
+
+---
+
+### 11.1 Bead on a Rotating Hoop
+
+A bead of mass $m$ slides on a smooth circular hoop (radius $R$) which rotates with angular velocity $\omega$ about a vertical diameter.
+
+Let the bead be at angle $\theta$ from the bottom.
+
+Forces: Weight $mg$ (down), Normal from hoop $N$ (radially inward, perpendicular to hoop surface).
+
+For steady circular motion at angle $\theta$ (bead at fixed position on hoop):
+
+The bead moves in a horizontal circle of radius $r = R\sin\theta$, so its centripetal acceleration is $\omega^2 R\sin\theta$, directed horizontally toward the axis.
+
+The normal force from the wire is perpendicular to the hoop and therefore has **no component along the tangent** to the hoop. Resolving along the tangential direction (along the wire), only gravity contributes, and it must supply the tangential component of the centripetal acceleration:
+
+$$\underbrace{mg\sin\theta}_{\text{gravity along tangent}} = \underbrace{m\omega^2 R\sin\theta\cos\theta}_{\text{tangential part of centripetal accel.}}$$
+
+$$g\sin\theta = \omega^2 R\sin\theta\cos\theta$$
+
+Either $\sin\theta = 0$ ($\theta = 0$, bottom) or:
+
+$$\cos\theta = \frac{g}{\omega^2 R}$$
+
+<Formula label="Bead on Rotating Hoop — Equilibrium">
+$$\cos\theta = \frac{g}{\omega^2 R}$$
+
+Valid only when $\omega^2 R > g$ (otherwise only $\theta = 0$ is equilibrium).
+</Formula>
+
+---
+
+### 11.2 Particle on Inner Surface of Sphere
+
+A particle moves on the smooth inner surface of a sphere (radius $R$) in a horizontal circle at height $h$ below the top.
+
+The particle is at angle $\theta$ from the vertical (top). Height below top = $R - R\cos\theta = R(1-\cos\theta)$.
+
+Normal $N$ from sphere: radially inward (toward centre of sphere).
+
+Vertical: $N\cos\theta = mg$ ...(i)
+
+Horizontal (centripetal): $N\sin\theta = m\omega^2 R\sin\theta$ ...(ii)
+
+From (ii): $N = m\omega^2 R$
+
+From (i): $m\omega^2 R\cos\theta = mg \Rightarrow \omega = \sqrt{g/(R\cos\theta)}$
+
+Time period: $T = 2\pi/\omega = 2\pi\sqrt{R\cos\theta/g}$
+
+---
+
+## SECTION 12 — Non-Inertial Rotating Frame
+
+---
+
+### 12.1 Centrifugal Force — Pseudo Force in Rotating Frame
+
+In a **rotating reference frame** (angular velocity $\omega$), every object experiences a pseudo force called the **centrifugal force**:
+
+<Formula label="Centrifugal Force (Pseudo Force in Rotating Frame)">
+$$\vec{F}_{centrifugal} = +m\omega^2 r \hat{r}$$
+
+Direction: radially outward from the rotation axis. Magnitude: $m\omega^2 r$.
+</Formula>
+
+This is exactly equal and opposite to the centripetal force, which is why objects appear to be in equilibrium in the rotating frame.
+
+**In rotating frame:** Object in circular motion → centrifugal force outward balances centripetal force inward → apparent equilibrium.
+
+**In inertial frame:** Object in circular motion → real inward force (centripetal) → object accelerates toward centre.
+
+---
+
+### 12.2 Centrifugal Force in Conical Pendulum (Rotating Frame)
+
+In the rotating frame of the conical pendulum:
+
+Radially: $T\sin\theta = m\omega^2 r$ (centrifugal balances tension component)
+
+Vertically: $T\cos\theta = mg$
+
+Same result as before — as expected.
+
+---
+
+### 12.3 Coriolis Force
+
+In a rotating frame, there is an additional pseudo force called the **Coriolis force** when an object moves within the rotating frame:
+
+$$\vec{F}_{Coriolis} = -2m\vec{\omega} \times \vec{v}'$$
+
+where $\vec{v}'$ is the velocity in the rotating frame.
+
+For JEE, Coriolis force is beyond the standard syllabus but occasionally appears in JEE Advanced. It causes cyclones, trade winds, and the deflection of artillery shells.
+
+---
+
+## SECTION 13 — Advanced Applications
+
+---
+
+### 13.1 Death Well / Wall of Death
+
+A motorcyclist rides inside a cylindrical wall ("death well"). The wall provides a normal force $N$ horizontally (inward = centripetal), while static friction vertically supports the rider:
+
+Centripetal: $N = \frac{mv^2}{r}$
+
+Vertical: $f = mg$ (friction upward balances weight)
+
+For the rider not to slide down: $f \leq \mu_s N$
+
+$$mg \leq \mu_s \frac{mv^2}{r} \Rightarrow v \geq \sqrt{\frac{gr}{\mu_s}}$$
+
+**Minimum speed:**
+
+<Formula label="Death Well (Wall of Death)">
+$$v_{min} = \sqrt{\frac{gr}{\mu_s}}$$
+</Formula>
+
+---
+
+### 13.2 Car Over a Hump (Convex Bridge)
+
+A car of mass $m$ moves at speed $v$ over a convex bridge of radius $R$.
+
+At the top of the hump, centripetal direction is downward (toward centre of curvature).
+
+Newton's 2nd Law: $mg - N = \frac{mv^2}{R}$
+
+$$N = m\left(g - \frac{v^2}{R}\right)$$
+
+**Normal force decreases as speed increases.** At maximum speed, $N = 0$:
+
+$$v_{max} = \sqrt{gR}$$
+
+Above this speed, the car leaves the road.
+
+---
+
+### 13.3 Car in a Valley (Concave Bridge)
+
+At the bottom of a valley of radius $R$:
+
+$N - mg = \frac{mv^2}{R}$
+
+$$N = m\left(g + \frac{v^2}{R}\right) > mg$$
+
+Passenger feels heavier.
+
+---
+
+### 13.4 Circular Motion and Springs
+
+A mass $m$ on a frictionless table is connected to a spring (natural length $l_0$, constant $k$) and moves in a circle of radius $r$.
+
+Spring extension: $x = r - l_0$
+
+Spring force = centripetal force:
+
+$$k(r - l_0) = m\omega^2 r$$
+
+$$r = \frac{kl_0}{k - m\omega^2}$$
+
+(Valid for $k > m\omega^2$; if $\omega^2 = k/m$, resonance — $r \to \infty$)
+
+---
+
+## SECTION 14 — Error Analysis
+
+---
+
+| # | Mistake | Correct Approach |
+|---|---------|-----------------|
+| 1 | Treating centripetal force as a separate force in FBD | Centripetal force = net inward force from real forces; never add it separately |
+| 2 | Confusing centripetal and centrifugal forces | Centripetal is real (inertial frame); centrifugal is pseudo (rotating frame only) |
+| 3 | $v_{top,min} = 0$ for string | $v_{top,min} = \sqrt{gL}$ for string; 0 only for rigid rod |
+| 4 | Using $\mu_k$ for maximum speed on curved road | Use $\mu_s$ (tyres don't slide — rolling contact) |
+| 5 | Forgetting normal force changes at top vs bottom of circular loop | $N_{top} = mv^2/r - mg$; $N_{bot} = mv^2/r + mg$ |
+| 6 | Wrong sign: at top, saying $N - mg = mv^2/r$ | At top: both $N$ and $mg$ point inward → $N + mg = mv^2/r$ |
+| 7 | In banked road, ignoring friction gives wrong $v_{max}$ | Friction significantly increases $v_{max}$; always check if friction is given |
+| 8 | Thinking work done by centripetal force is non-zero | Centripetal force ⊥ velocity → zero work done, kinetic energy unchanged in UCM |
+| 9 | Forgetting tension at top for minimum speed = 0, not minimum $N$ | For string: $T_{min} = 0$ (string slack). For track: $N_{min} = 0$ (leaves track). Same condition. |
+| 10 | Using wrong formula for conical pendulum period | $T = 2\pi\sqrt{L\cos\theta / g} = 2\pi\sqrt{h/g}$ where $h$ = vertical height |
+| 11 | In conical pendulum, increasing $\omega$ increases $\theta$ — not decreasing it | As $\omega \uparrow$, $\cos\theta = g/\omega^2 L$ decreases, so $\theta \uparrow$ (opens wider) |
+| 12 | Forgetting that rod can provide compression at top | At top of vertical circle with rod, normal force can be outward (rod pushes) |
+
+---
+
+## SECTION 15 — Solved Examples
+
+---
+
+### JEE Main Level Examples
+
+**M1.** A stone of mass 0.5 kg is tied to a string of length 1 m and swung in a horizontal circle at 2 rev/s. Find tension and centripetal force.
+
+**Solution:**
+$\omega = 2 \times 2\pi = 4\pi$ rad/s. $v = r\omega = 1 \times 4\pi = 4\pi$ m/s.
+
+$F_c = m\omega^2 r = 0.5 \times (4\pi)^2 \times 1 = 0.5 \times 16\pi^2 \approx \mathbf{78.9 \text{ N}}$
+
+Tension $= F_c$ (string provides centripetal force) $= \mathbf{78.9 \text{ N}}$
+
+---
+
+**M2.** Find the minimum speed at the top of a vertical circle (string length 1.5 m). ($g = 10$ m/s²)
+
+**Solution:**
+$v_{top,min} = \sqrt{gL} = \sqrt{10 \times 1.5} = \sqrt{15} \approx \mathbf{3.87 \text{ m/s}}$
+
+---
+
+**M3.** A ball completes a vertical circle with string length 2 m. Find minimum speed at the bottom.
+
+**Solution:**
+$v_{bot,min} = \sqrt{5gL} = \sqrt{5 \times 10 \times 2} = \sqrt{100} = \mathbf{10 \text{ m/s}}$
+
+---
+
+**M4.** A car of mass 1000 kg moves at 20 m/s on a flat curved road of radius 100 m. Find the centripetal force and minimum $\mu_s$.
+
+**Solution:**
+$F_c = mv^2/r = 1000 \times 400/100 = \mathbf{4000 \text{ N}}$
+
+$\mu_s \geq F_c/(mg) = 4000/10000 = \mathbf{0.4}$
+
+---
+
+**M5.** A road is banked at 30°. Find ideal speed for a curve of radius 50 m. ($g = 10$ m/s²)
+
+**Solution:**
+$v = \sqrt{Rg\tan\theta} = \sqrt{50 \times 10 \times \tan 30°} = \sqrt{500/\sqrt{3}} = \sqrt{288.7} \approx \mathbf{17 \text{ m/s}}$
+
+---
+
+**M6.** A conical pendulum has string length 1 m and makes 30° with vertical. Find $\omega$ and $T$.
+
+**Solution:**
+$\omega = \sqrt{g/(L\cos\theta)} = \sqrt{10/(1 \times \cos 30°)} = \sqrt{10/0.866} = \sqrt{11.55} \approx 3.4$ rad/s
+
+$T = 2\pi/\omega \approx 1.85$ s
+
+Or: $T = 2\pi\sqrt{L\cos\theta/g} = 2\pi\sqrt{0.866/10} \approx \mathbf{1.85 \text{ s}}$
+
+---
+
+**M7.** A ball of mass 0.2 kg swings in a vertical circle (string 0.8 m). Speed at top = 4 m/s. Find tension at top and bottom. ($g = 10$ m/s²)
+
+**Solution:**
+$T_{top} = m(v^2/L - g) = 0.2(16/0.8 - 10) = 0.2(20-10) = \mathbf{2 \text{ N}}$
+
+By energy conservation: $v_{bot}^2 = v_{top}^2 + 4gL = 16 + 32 = 48$
+
+$T_{bot} = m(v_{bot}^2/L + g) = 0.2(48/0.8 + 10) = 0.2(60+10) = \mathbf{14 \text{ N}}$
+
+---
+
+**M8.** A car passes over a convex bridge (radius 40 m) at 20 m/s. Find normal force on 1000 kg car. ($g = 10$ m/s²)
+
+**Solution:**
+$N = m(g - v^2/R) = 1000(10 - 400/40) = 1000(10-10) = \mathbf{0 \text{ N}}$
+
+The car is on the verge of leaving the road!
+
+---
+
+**M9.** Find the maximum speed a car can take a convex bridge of radius 25 m. ($g = 10$ m/s²)
+
+**Solution:**
+$v_{max} = \sqrt{gR} = \sqrt{10 \times 25} = \sqrt{250} \approx \mathbf{15.8 \text{ m/s}}$
+
+---
+
+**M10.** A motorcyclist rides at 10 m/s inside a cylindrical wall of radius 5 m. Find minimum $\mu_s$. ($g = 10$ m/s²)
+
+**Solution:**
+$\mu_s \geq gr/v^2 = 10 \times 5/100 = \mathbf{0.5}$
+
+---
+
+**M11.** A particle moves in a circle of radius 2 m with angular velocity increasing at $\alpha = 3$ rad/s². At $t = 2$ s (starting from rest), find total acceleration.
+
+**Solution:**
+$\omega = \alpha t = 6$ rad/s. $a_c = \omega^2 r = 36 \times 2 = 72$ m/s².
+
+$a_t = r\alpha = 2 \times 3 = 6$ m/s².
+
+$a_{total} = \sqrt{72^2 + 6^2} = \sqrt{5184 + 36} = \sqrt{5220} \approx \mathbf{72.2 \text{ m/s}^2}$
+
+---
+
+**M12.** At what angle should a conical pendulum string make with the vertical if period = 1 s? (String length 1 m, $g = 10$ m/s²)
+
+**Solution:**
+$T = 2\pi\sqrt{L\cos\theta/g}$
+
+$1 = 2\pi\sqrt{\cos\theta/10}$
+
+$\cos\theta = 10/(4\pi^2) \approx 10/39.5 \approx 0.253$
+
+$\theta \approx \arccos(0.253) \approx \mathbf{75.3°}$
+
+---
+
+**M13.** A ball on a string (2 m) swings in a vertical circle. String breaks at $T = 25 N$. Ball mass = 0.5 kg. Find max speed at bottom. ($g = 10$ m/s²)
+
+**Solution:**
+$T_{bot} = mv_{bot}^2/L + mg$
+
+$25 = 0.5 v^2/2 + 0.5 \times 10 = 0.25v^2 + 5$
+
+$v^2 = 80 \Rightarrow v = \mathbf{4\sqrt{5} \approx 8.9 \text{ m/s}}$
+
+---
+
+**M14.** A particle moves in a circle of radius 0.5 m. Its speed at $t = 0$ is 2 m/s and increases at 1 m/s². Find magnitude of acceleration at $t = 2$ s.
+
+**Solution:**
+$v = 2 + 1\times2 = 4$ m/s. $a_c = v^2/r = 16/0.5 = 32$ m/s². $a_t = 1$ m/s².
+
+$a = \sqrt{32^2 + 1^2} \approx \mathbf{32.0 \text{ m/s}^2}$
+
+---
+
+**M15.** A road is banked at angle $\theta = \arctan(0.5)$ with $\mu_s = 0.3$. Radius = 100 m. Find $v_{min}$ and $v_{max}$. ($g = 10$ m/s²)
+
+**Solution:**
+$\tan\theta = 0.5$, $\mu = 0.3$, $R = 100$ m.
+
+$v_{min} = \sqrt{\dfrac{Rg(\tan\theta - \mu)}{1 + \mu\tan\theta}} = \sqrt{\dfrac{100\times10\times(0.5-0.3)}{1+0.3\times0.5}} = \sqrt{\dfrac{200}{1.15}} = \sqrt{173.9} \approx \mathbf{13.2 \text{ m/s}}$
+
+$v_{max} = \sqrt{\dfrac{Rg(\tan\theta + \mu)}{1 - \mu\tan\theta}} = \sqrt{\dfrac{100\times10\times(0.5+0.3)}{1-0.15}} = \sqrt{\dfrac{800}{0.85}} = \sqrt{941} \approx \mathbf{30.7 \text{ m/s}}$
+
+---
+
+### JEE Advanced Level Examples
+
+**A1.** A ball (mass $m$, string length $L$) is performing vertical circular motion. Find the difference in tension at the bottom and at the top.
+
+**Solution:**
+$T_{bot} = mv_{bot}^2/L + mg$
+
+$T_{top} = mv_{top}^2/L - mg$
+
+$T_{bot} - T_{top} = m(v_{bot}^2 - v_{top}^2)/L + 2mg$
+
+By energy conservation: $v_{bot}^2 - v_{top}^2 = 4gL$
+
+$$T_{bot} - T_{top} = \frac{m \cdot 4gL}{L} + 2mg = 4mg + 2mg = \mathbf{6mg}$$
+
+This is constant regardless of the speed! A beautiful result.
+
+---
+
+**A2.** A particle is given a velocity $v_0$ at the bottom of a smooth vertical circular track (radius $R$). Find the angle $\theta$ from the bottom at which the particle leaves the track, given $v_0 = \sqrt{2gR}$.
+
+**Solution:**
+The particle is on the inside of the track, so the track can only push **inward**; it leaves the moment $N = 0$.
+
+Let $\theta$ be measured from the bottom. By energy conservation, with $v_0^2 = 2gR$:
+
+$$v^2 = v_0^2 - 2gR(1-\cos\theta) = 2gR\cos\theta$$
+
+The radial equation has the same form as the string result of §7.6, with the normal force $N$ in place of tension:
+
+$$N = \frac{mv^2}{R} + mg\cos\theta$$
+
+Substituting $v^2 = 2gR\cos\theta$:
+
+$$N = \frac{m(2gR\cos\theta)}{R} + mg\cos\theta = 3mg\cos\theta$$
+
+Setting $N = 0$ gives $\cos\theta = 0 \Rightarrow \theta = 90°$.
+
+**The particle leaves the track at the side — $90°$ from the bottom**, at the level of the centre, where it momentarily has zero speed.
+
+---
+
+**A3.** A particle slides on a smooth sphere (radius $R$) starting from rest at the top. Find the angle at which it leaves the sphere.
+
+**Solution:**
+Let $\theta$ = angle from the top. Height descended = $R - R\cos\theta = R(1-\cos\theta)$.
+
+$v^2 = 2gR(1-\cos\theta)$
+
+Normal force $N$ from sphere (outward from sphere surface, radially outward from center):
+
+Radially inward (centripetal): $mg\cos\theta - N = mv^2/R$
+
+$N = mg\cos\theta - mv^2/R = mg\cos\theta - m \cdot 2g(1-\cos\theta)$
+
+$N = mg\cos\theta - 2mg + 2mg\cos\theta = 3mg\cos\theta - 2mg = mg(3\cos\theta - 2)$
+
+For $N = 0$: $3\cos\theta = 2 \Rightarrow \cos\theta = 2/3$
+
+$$\theta = \arccos(2/3) \approx 48.2°$$
+
+Height descended when it leaves: $R(1 - 2/3) = R/3$ from top.
+
+---
+
+**A4.** A ball (mass $m$) is suspended from the ceiling by a string of length $L$. It is given a horizontal push at the bottom position and just completes a vertical circle. At what angle (from the vertical) does the string become slack if the string length is the same but the ball is given speed $v_0 = \sqrt{3gL}$ (less than minimum)?
+
+**Solution:**
+String becomes slack when $T = 0$. Using the general-angle tension from §7.6 (with $\theta$ measured from the bottom):
+
+$$T = \frac{mv_{bot}^2}{L} + mg(3\cos\theta - 2)$$
+
+With $v_{bot}^2 = 3gL$:
+
+$$T = \frac{m(3gL)}{L} + mg(3\cos\theta - 2) = 3mg + 3mg\cos\theta - 2mg = mg(1 + 3\cos\theta)$$
+
+$T = 0 \Rightarrow 1 + 3\cos\theta = 0 \Rightarrow \cos\theta = -1/3$
+
+$\theta = \arccos(-1/3) \approx 109.5°$ from bottom (which is $70.5°$ past the horizontal, in the upper half).
+
+---
+
+**A5.** On a rough banked road ($\theta$, $\mu$, radius $R$), find the speed at which friction is zero (no tendency to slide either way). Also find the minimum radius of curvature for a car to safely negotiate the bend at 30 m/s on a road banked at 15° with $\mu = 0.3$. ($g = 10$ m/s²)
+
+**Solution (Part 1):** Friction is zero at ideal speed: $v = \sqrt{Rg\tan\theta}$
+
+**Part 2:** Using $v_{max}$ formula:
+
+$v_{max}^2 = Rg\cdot\dfrac{\tan15° + 0.3}{1 - 0.3\tan15°}$
+
+$\tan 15° = 2 - \sqrt{3} \approx 0.268$
+
+$v_{max}^2 = Rg\cdot\dfrac{0.268 + 0.3}{1 - 0.3\times0.268} = Rg\cdot\dfrac{0.568}{0.9196} = 0.617Rg$
+
+For $v_{max} = 30$ m/s:
+
+$900 = 0.617 \times R \times 10 \Rightarrow R_{min} = 900/6.17 \approx \mathbf{145.9 \text{ m}}$
+
+---
+
+## SECTION 16 — Practice Problems
+
+---
+
+### JEE Main Practice Problems
+
+**P1.** A particle moves in a circle of radius 0.4 m with constant speed 2 m/s. Find centripetal acceleration and centripetal force (mass = 0.1 kg).
+
+**P2.** A ball on a string (1.5 m) makes 60 rpm in a horizontal circle. Find tension (mass = 0.2 kg, $g = 10$ m/s²).
+
+**P3.** Find minimum speed at top and bottom for a ball to complete a vertical circle of radius 1.2 m. ($g = 10$ m/s²)
+
+**P4.** A car (1500 kg) moves at 15 m/s on a flat road (radius 80 m). Find minimum $\mu_s$.
+
+**P5.** A road is banked at 20°. What is the ideal speed for radius = 60 m? ($g = 10$ m/s²)
+
+**P6.** A conical pendulum has period 2 s. Find angle with vertical. (String length = 1.5 m, $g = 10$ m/s²)
+
+**P7.** A particle goes over a hill (radius 50 m). Find maximum speed for maintaining contact. ($g = 10$ m/s²)
+
+**P8.** In death-well problem, $r = 8$ m, $\mu_s = 0.4$. Find minimum speed. ($g = 10$ m/s²)
+
+**P9.** A ball (0.3 kg) swings in a vertical circle (radius 1 m). Speed at bottom = 6 m/s. Find tension at bottom, side, and top.
+
+**P10.** A car goes over a concave bridge (radius 30 m) at 10 m/s. Find normal force on 800 kg car.
+
+**P11.** A string (length 0.5 m) breaks at 50 N. Mass = 0.25 kg. Find maximum RPM before breaking.
+
+**P12.** A particle moves in a vertical circle. Tension at bottom is 3 times tension at top. Find $v_{bot}/v_{top}$.
+
+**P13.** A bead (1 kg) slides on a smooth circular hoop (radius 0.5 m) rotating at 6 rad/s. Find equilibrium angle.
+
+**P14.** A bullet (mass $m$, speed $u$) embeds in a pendulum bob (mass $M$, string length $L$) hanging at rest. Find minimum $u$ for complete revolution.
+
+**P15.** A particle tied to a string performs vertical circular motion. At what point is tension maximum? At what point is it minimum?
+
+---
+
+### JEE Advanced Practice Problems
+
+**Q1.** Prove that for a ball performing vertical circular motion on a string, $T_{bottom} - T_{top} = 6mg$ regardless of speed, as long as the string remains taut throughout.
+
+**Q2.** A ball slides inside a smooth spherical bowl (radius $R$). It is projected horizontally with speed $v$ from the bottom. Find the height to which it rises and the angle at which it leaves the bowl if it goes beyond $90°$ from bottom.
+
+**Q3.** A particle slides down from the top of a smooth sphere (radius $R$). Find: (a) angle where it leaves, (b) velocity when it leaves, (c) where it lands (distance from center of sphere base).
+
+**Q4.** A car goes over a series of bumps described by $y = A\sin(kx)$. Find maximum speed for the car to remain in contact with the road throughout. Express in terms of $A$, $k$, and $g$.
+
+**Q5.** A motorcyclist inside a vertical cylinder (radius $R$, $\mu_s$) starts at the bottom and spirals upward. How fast must he go to safely traverse a height $H$?
+
+**Q6.** A particle moves in a horizontal circle on a rough cone (half-angle $\alpha$, $\mu$) at radius $r$ from axis. Find the range of angular velocities for equilibrium.
+
+**Q7.** A bead is threaded on a smooth wire bent into a vertical circle (radius $R$). The circle is rotated about its vertical diameter with angular velocity $\omega$. Find all equilibrium positions of the bead.
+
+**Q8.** In a banked road problem, a car has its wheels at the inner and outer edges of the road (width $d$, height of center of mass $h$). If the banking angle is $\theta$, find the maximum and minimum speeds for which the car does not topple (ignoring slipping).
+
+**Q9.** A particle is projected inside a smooth circular tube of radius $R$ (in a vertical plane) with speed $v_0$ at the bottom. Find the force exerted by the tube on the particle when the particle is at the top, for $v_0 < \sqrt{5gR}$.
+
+**Q10.** A double conical pendulum: mass $m$ hangs from a fixed point by two strings of length $L_1$ and $L_2$ making angles $\theta_1$ and $\theta_2$ with the vertical respectively. The mass rotates in a horizontal circle. Find $\omega$ in terms of $L_1$, $L_2$, $\theta_1$, $\theta_2$.
+
+---
+
+## SECTION 17 — PYQ Analysis
+
+---
+
+### JEE Main Trends (2019–2024)
+
+| Topic | Frequency | Common Question Type |
+|-------|-----------|---------------------|
+| Centripetal force + tension in vertical circle | Very High | Numerical (4 marks) |
+| Minimum speed for complete vertical circle | High | Conceptual + Numerical |
+| Banking of roads (ideal speed) | High | Formula application |
+| Normal force on bridges (hump/valley) | Medium | Direct formula |
+| Conical pendulum (period/angle) | Medium | Numerical |
+| Death well (minimum speed) | Low–Medium | Numerical |
+
+---
+
+### JEE Advanced Trends (2019–2024)
+
+| Topic | Frequency | Format |
+|-------|-----------|--------|
+| Vertical circle — tension at various points | High | Multi-correct / Integer |
+| Particle sliding off smooth sphere | High | Analytical derivation |
+| Non-uniform circular motion (power, acceleration) | Medium | Multi-correct |
+| Bead on rotating hoop | Medium | Analytical |
+| Banked road with friction (speed range) | Medium | Numerical |
+| Circular motion + energy conservation combined | Very High | Paragraph / Integer |
+
+**JEE Advanced Key Insight:** Circular motion is almost never tested in isolation — it is combined with energy conservation, Newton's laws, and often rotation. The most powerful tool is: (1) draw FBD, (2) write radial equation $\sum F_{inward} = mv^2/r$, (3) use energy conservation between two points.
+
+---
+
+## SECTION 18 — Final Revision Module
+
+---
+
+### Complete Formula Sheet
+
+<Formula label="Circular Motion — Master Formula Sheet">
+
+**Angular velocity:** $\omega = 2\pi f = 2\pi/T$
+
+**Linear ↔ angular:** $v = r\omega$ ; $a_t = r\alpha$ ; $a_c = r\omega^2 = v^2/r$
+
+**Centripetal force:** $F_c = mv^2/r = mr\omega^2$
+
+**UCM — work done by $F_c$:** Zero (always perpendicular to motion)
+
+**Total acceleration:** $a = \sqrt{a_c^2 + a_t^2}$
+
+**Vertical circle (string):**
+
+- Min speed at top: $v_{top,min} = \sqrt{gL}$
+- Min speed at bottom: $v_{bot,min} = \sqrt{5gL}$
+- Tension difference: $T_{bot} - T_{top} = 6mg$ (always!)
+- String slacks at: $\cos\theta = (v_{bot}^2 - 2gL)/(3gL)$
+
+**Vertical circle (rod):**
+
+- Min speed at top: $v_{top,min} = 0$
+- Min speed at bottom: $v_{bot,min} = \sqrt{4gL}$
+
+**Conical pendulum:** $\cos\theta = g/(\omega^2 L)$ ; $T = 2\pi\sqrt{L\cos\theta/g}$
+
+**Flat circular road:** $v_{max} = \sqrt{\mu_s gR}$
+
+**Ideal banking:** $v = \sqrt{Rg\tan\theta}$ ; $\tan\theta = v^2/(Rg)$
+
+**Banked road (with friction):** $v_{min} = \sqrt{Rg\cdot\dfrac{\tan\theta-\mu}{1+\mu\tan\theta}}$ ; $v_{max} = \sqrt{Rg\cdot\dfrac{\tan\theta+\mu}{1-\mu\tan\theta}}$
+
+**Convex bridge:** $N = m(g - v^2/R)$ ; leaves at $v = \sqrt{gR}$
+
+**Concave bridge:** $N = m(g + v^2/R)$
+
+**Death well:** $v_{min} = \sqrt{gr/\mu_s}$
+
+**Particle leaves sphere** (start from top): $\cos\theta = 2/3$ ($\theta$ from top)
+
+**Bead on rotating hoop:** $\cos\theta = g/(\omega^2 R)$
+
+**Spring on table:** $r = kl_0/(k - m\omega^2)$
+
+</Formula>
+
+---
+
+### Concept Map
+
+**Circular Motion**
+
+Core: $F_c = mv^2/r$ (toward centre) ← always provided by real forces
+
+↓
+
+Applications:
+- **Vertical circle** → tension varies with position → use energy conservation + Newton's 2nd Law
+- **Conical pendulum** → $T\sin\theta$ is centripetal, $T\cos\theta$ = weight
+- **Banked road** → $N\sin\theta$ is centripetal (ideal) → friction adjusts for other speeds
+- **Bridges** → $N$ decreases over hump, increases in valley
+- **Rotating frame** → add centrifugal pseudo force outward
+
+---
+
+### Last-Minute Tips
+
+<Callout type="tip">
+**5 Key Reminders**
+
+1. **Centripetal force is not a new force** — always identify what real force(s) provide it and write $\sum F_{inward} = mv^2/r$.
+
+2. **Vertical circle string tension:** $T_{bot} - T_{top} = 6mg$ always. Minimum speed at bottom is $\sqrt{5gL}$, tension at bottom under minimum condition is $6mg$.
+
+3. **Banked road friction direction** depends on speed: below ideal speed → tends to slide inward → friction points outward (up the bank); above ideal speed → tends to slide outward → friction points inward (down the bank).
+
+4. **Conical pendulum period** is $2\pi\sqrt{h/g}$ where $h = L\cos\theta$ is the vertical height, NOT the string length. As $\omega$ increases, $h$ decreases, and so does $T$.
+
+5. **Particle leaving a surface**: $N = 0$ condition. Solve for position and speed simultaneously using energy conservation and Newton's 2nd Law.
+</Callout>
+
+<Callout type="warning">
+**3 Marks-Killing Traps**
+
+1. **At the TOP of a vertical circle with a string:** $T + mg = mv^2/r$ (both T and mg point inward). Students often write $T - mg = mv^2/r$ (the bottom equation) by mistake.
+
+2. **Minimum speed for complete circle** — this is $\sqrt{5gL}$ at the **bottom**. At the **top**, it is $\sqrt{gL}$. In the exam, always state which point you're referring to.
+
+3. **Banked road formula:** The ideal speed formula $v = \sqrt{Rg\tan\theta}$ has NO friction term. If $\mu$ is given but you're asked for "ideal speed," friction is zero at ideal speed. Don't use the $\mu$ terms in the formula.
+</Callout>
+
+---
+
+*Module created by the Physics Mastery faculty team — Senior JEE Faculty · IIT Physics Professors · Olympiad Mentors*
+
+*For JEE Main · JEE Advanced · NEET · Physics Olympiad*

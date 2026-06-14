@@ -1,0 +1,129 @@
+---
+title: Center of Mass — Formula Sheet
+description: Key formulas for Center of Mass for JEE & NEET.
+---
+
+## Center of Mass — Discrete System
+
+<Formula label="CoM Position (x-component)">
+$$x_{\text{cm}} = \frac{\sum m_i x_i}{\sum m_i} = \frac{m_1 x_1 + m_2 x_2 + \cdots}{m_1 + m_2 + \cdots}$$
+</Formula>
+
+<Formula label="CoM Position (3D)">
+$$\vec{r}_{\text{cm}} = \frac{\sum m_i \vec{r}_i}{M}$$
+</Formula>
+
+<Formula label="Velocity of Center of Mass">
+$$\vec{v}_{\text{cm}} = \frac{\sum m_i \vec{v}_i}{M} = \frac{\vec{p}_{\text{total}}}{M}$$
+</Formula>
+
+<Formula label="Acceleration of Center of Mass">
+$$\vec{a}_{\text{cm}} = \frac{\vec{F}_{\text{ext}}}{M}$$
+</Formula>
+
+---
+
+## Center of Mass — Continuous Bodies
+
+<Formula label="CoM of Continuous Body">
+$$\vec{r}_{\text{cm}} = \frac{\int \vec{r}\,dm}{\int dm}$$
+</Formula>
+
+| Shape | CoM Location |
+|-------|-------------|
+| Uniform rod (length L) | L/2 from one end |
+| Semicircular arc (radius R) | $2R/\pi$ from center |
+| Semicircular disc (radius R) | $4R/(3\pi)$ from center |
+| Solid hemisphere (radius R) | $3R/8$ from flat face |
+| Hollow hemisphere (radius R) | $R/2$ from flat face |
+| Solid cone (height h) | $h/4$ from base |
+| Hollow cone (height h) | $h/3$ from base |
+| Triangle (height h) | $h/3$ from base |
+
+---
+
+## CoM of Remaining Body
+
+<Formula label="CoM after Removing Part">
+$$x_{\text{cm,remaining}} = \frac{M x_{\text{cm,whole}} - m\,x_{\text{cm,removed}}}{M - m}$$
+</Formula>
+
+---
+
+## Motion of CoM and Newton's Laws
+
+<Formula label="Internal Forces Cancel">
+$$\vec{F}_{\text{int}} = 0 \implies \vec{F}_{\text{ext}} = M\vec{a}_{\text{cm}}$$
+</Formula>
+
+<Formula label="CoM of Isolated System">
+$$\vec{F}_{\text{ext}} = 0 \implies \vec{v}_{\text{cm}} = \text{const} \implies \vec{r}_{\text{cm}} = \text{const (if initially at rest)}$$
+</Formula>
+
+<Callout type="important">
+In an explosion or internal interaction, the CoM continues on the same path with no change in velocity — only the external force changes CoM motion.
+</Callout>
+
+---
+
+## Impulse and Momentum
+
+<Formula label="Impulse-Momentum Theorem">
+$$\vec{J} = \int \vec{F}\,dt = \Delta\vec{p} = m(\vec{v}_f - \vec{v}_i)$$
+</Formula>
+
+<Formula label="Conservation of Linear Momentum">
+$$\vec{F}_{\text{ext}} = 0 \implies \vec{p}_{\text{total}} = \text{constant}$$
+$$m_1\vec{v}_1 + m_2\vec{v}_2 = m_1\vec{u}_1 + m_2\vec{u}_2$$
+</Formula>
+
+<Formula label="Recoil Velocity (Gun-Bullet)">
+$$M V + m v = 0 \implies V = -\frac{mv}{M}$$
+</Formula>
+
+---
+
+## Rocket Equation (Tsiolkovsky)
+
+<Formula label="Rocket Thrust">
+$$F_{\text{thrust}} = v_r \frac{dm}{dt}$$
+$$\text{(where } v_r \text{ = exhaust speed relative to rocket, } dm/dt \text{ = fuel burn rate)}$$
+</Formula>
+
+<Formula label="Rocket Equation (no gravity)">
+$$v - u = v_r \ln\!\left(\frac{m_0}{m}\right)$$
+</Formula>
+
+<Formula label="Rocket Equation (with gravity, vertical)">
+$$v = u + v_r \ln\!\left(\frac{m_0}{m}\right) - gt$$
+</Formula>
+
+<Formula label="Burn Time and Mass">
+$$m = m_0 - \dot{m}\,t \quad \text{(where } \dot{m} \text{ is mass flow rate)}$$
+</Formula>
+
+---
+
+## Kinetic Energy in CoM Frame
+
+<Formula label="KE in Lab Frame vs CoM Frame">
+$$KE_{\text{lab}} = KE_{\text{cm}} + \frac{1}{2}Mv_{\text{cm}}^2$$
+$$KE_{\text{cm}} = \frac{1}{2}\mu\,v_{\text{rel}}^2, \quad \mu = \frac{m_1 m_2}{m_1+m_2}$$
+</Formula>
+
+<Formula label="Reduced Mass">
+$$\mu = \frac{m_1 m_2}{m_1 + m_2}$$
+</Formula>
+
+---
+
+## 2D Collision
+
+<Formula label="2D Elastic Collision Angle (equal masses, one at rest)">
+$$\theta_1 + \theta_2 = 90°$$
+</Formula>
+
+<Formula label="Oblique Elastic Collision — Momentum Components">
+$$m_1 u_1 = m_1 v_1\cos\theta_1 + m_2 v_2\cos\theta_2$$
+$$0 = m_1 v_1\sin\theta_1 - m_2 v_2\sin\theta_2$$
+</Formula>

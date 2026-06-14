@@ -1,0 +1,161 @@
+---
+title: Vectors — Formula Sheet
+description: Key formulas for Vectors for JEE & NEET.
+---
+
+## Vector Representation
+
+<Formula label="Vector in Component Form">
+$$\vec{A} = A_x\,\hat{i} + A_y\,\hat{j} + A_z\,\hat{k}$$
+</Formula>
+
+<Formula label="Magnitude of a Vector">
+$$|\vec{A}| = A = \sqrt{A_x^2 + A_y^2 + A_z^2}$$
+</Formula>
+
+<Formula label="Unit Vector">
+$$\hat{A} = \frac{\vec{A}}{|\vec{A}|}$$
+</Formula>
+
+<Formula label="Direction Cosines">
+$$\cos\alpha = \frac{A_x}{A},\quad \cos\beta = \frac{A_y}{A},\quad \cos\gamma = \frac{A_z}{A}$$
+$$\cos^2\alpha + \cos^2\beta + \cos^2\gamma = 1$$
+</Formula>
+
+---
+
+## Vector Addition & Subtraction
+
+<Formula label="Triangle Law of Vector Addition">
+$$\vec{R} = \vec{A} + \vec{B}$$
+</Formula>
+
+<Formula label="Parallelogram Law — Magnitude">
+$$R = \sqrt{A^2 + B^2 + 2AB\cos\theta}$$
+</Formula>
+
+<Formula label="Parallelogram Law — Direction">
+$$\tan\phi = \frac{B\sin\theta}{A + B\cos\theta}$$
+</Formula>
+
+<Formula label="Magnitude of Difference">
+$$|\vec{A} - \vec{B}| = \sqrt{A^2 + B^2 - 2AB\cos\theta}$$
+</Formula>
+
+<Callout type="tip">
+Maximum resultant = $A + B$ (when $\theta = 0°$); Minimum resultant = $|A - B|$ (when $\theta = 180°$).
+</Callout>
+
+---
+
+## Resolution of Vectors
+
+<Formula label="2D Resolution">
+$$A_x = A\cos\theta,\quad A_y = A\sin\theta$$
+</Formula>
+
+<Formula label="3D Resolution along Axes">
+$$\vec{A} = A\cos\alpha\,\hat{i} + A\cos\beta\,\hat{j} + A\cos\gamma\,\hat{k}$$
+</Formula>
+
+---
+
+## Dot Product (Scalar Product)
+
+<Formula label="Dot Product — Algebraic">
+$$\vec{A}\cdot\vec{B} = AB\cos\theta$$
+</Formula>
+
+<Formula label="Dot Product — Component Form">
+$$\vec{A}\cdot\vec{B} = A_xB_x + A_yB_y + A_zB_z$$
+</Formula>
+
+<Formula label="Standard Dot Products">
+$$\hat{i}\cdot\hat{i} = \hat{j}\cdot\hat{j} = \hat{k}\cdot\hat{k} = 1;\quad \hat{i}\cdot\hat{j} = \hat{j}\cdot\hat{k} = \hat{k}\cdot\hat{i} = 0$$
+</Formula>
+
+<Formula label="Angle Between Two Vectors">
+$$\cos\theta = \frac{\vec{A}\cdot\vec{B}}{AB}$$
+</Formula>
+
+<Formula label="Projection of A on B">
+$$\text{proj}_{\vec{B}}\vec{A} = \frac{\vec{A}\cdot\vec{B}}{B}$$
+</Formula>
+
+---
+
+## Cross Product (Vector Product)
+
+<Formula label="Cross Product — Magnitude">
+$$|\vec{A}\times\vec{B}| = AB\sin\theta$$
+</Formula>
+
+<Formula label="Cross Product — Determinant Form">
+$$\vec{A}\times\vec{B} = \begin{vmatrix}\hat{i} & \hat{j} & \hat{k}\\ A_x & A_y & A_z\\ B_x & B_y & B_z\end{vmatrix}$$
+$$= \hat{i}(A_yB_z - A_zB_y) - \hat{j}(A_xB_z - A_zB_x) + \hat{k}(A_xB_y - A_yB_x)$$
+</Formula>
+
+<Formula label="Standard Cross Products">
+$$\hat{i}\times\hat{j}=\hat{k},\quad \hat{j}\times\hat{k}=\hat{i},\quad \hat{k}\times\hat{i}=\hat{j}$$
+$$\hat{i}\times\hat{i}=\hat{j}\times\hat{j}=\hat{k}\times\hat{k}=\vec{0}$$
+</Formula>
+
+<Formula label="Anti-commutativity">
+$$\vec{A}\times\vec{B} = -\vec{B}\times\vec{A}$$
+</Formula>
+
+<Formula label="Area of Parallelogram">
+$$\text{Area} = |\vec{A}\times\vec{B}|$$
+</Formula>
+
+<Formula label="Area of Triangle">
+$$\text{Area} = \frac{1}{2}|\vec{A}\times\vec{B}|$$
+</Formula>
+
+---
+
+## Scalar Triple Product
+
+<Formula label="Scalar Triple Product">
+$$\vec{A}\cdot(\vec{B}\times\vec{C}) = \begin{vmatrix}A_x & A_y & A_z\\ B_x & B_y & B_z\\ C_x & C_y & C_z\end{vmatrix}$$
+</Formula>
+
+<Formula label="Volume of Parallelepiped">
+$$V = |\vec{A}\cdot(\vec{B}\times\vec{C})|$$
+</Formula>
+
+<Callout type="tip">
+Cyclic permutation leaves the scalar triple product unchanged: $\vec{A}\cdot(\vec{B}\times\vec{C}) = \vec{B}\cdot(\vec{C}\times\vec{A}) = \vec{C}\cdot(\vec{A}\times\vec{B})$.
+</Callout>
+
+---
+
+## Differentiation of Vectors
+
+<Formula label="Derivative of a Vector">
+$$\frac{d\vec{A}}{dt} = \frac{dA_x}{dt}\hat{i} + \frac{dA_y}{dt}\hat{j} + \frac{dA_z}{dt}\hat{k}$$
+</Formula>
+
+<Formula label="Derivative of Dot Product">
+$$\frac{d}{dt}(\vec{A}\cdot\vec{B}) = \dot{\vec{A}}\cdot\vec{B} + \vec{A}\cdot\dot{\vec{B}}$$
+</Formula>
+
+<Formula label="Derivative of Cross Product">
+$$\frac{d}{dt}(\vec{A}\times\vec{B}) = \dot{\vec{A}}\times\vec{B} + \vec{A}\times\dot{\vec{B}}$$
+</Formula>
+
+---
+
+## Special Vector Identities
+
+<Formula label="BAC-CAB Rule">
+$$\vec{A}\times(\vec{B}\times\vec{C}) = \vec{B}(\vec{A}\cdot\vec{C}) - \vec{C}(\vec{A}\cdot\vec{B})$$
+</Formula>
+
+<Formula label="Condition for Parallel Vectors">
+$$\vec{A}\times\vec{B} = \vec{0} \iff \vec{A} \parallel \vec{B}$$
+</Formula>
+
+<Formula label="Condition for Perpendicular Vectors">
+$$\vec{A}\cdot\vec{B} = 0 \iff \vec{A} \perp \vec{B}$$
+</Formula>

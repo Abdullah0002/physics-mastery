@@ -1,0 +1,1341 @@
+---
+title: "Friction — Complete Theory"
+description: "The most comprehensive friction resource for JEE Main, JEE Advanced and NEET. Static friction, kinetic friction, angle of repose, angle of friction, inclined planes, ladder problems, belt friction, rolling friction — from first principles to Olympiad level."
+difficulty: "MEDIUM"
+tags: ["friction", "static-friction", "kinetic-friction", "angle-of-repose", "angle-of-friction", "inclined-plane", "ladder", "rolling-friction", "belt-friction", "coulomb-friction"]
+---
+
+# Friction — Complete Theory
+
+*The most thorough friction module — built for JEE Main · JEE Advanced · NEET · Physics Olympiad*
+
+---
+
+## SECTION 1 — The Big Picture of Friction
+
+---
+
+### 1.1 What Is Friction?
+
+Run your finger across sandpaper — you feel resistance. Push a heavy box across the floor — you need sustained effort just to keep it moving. Tires grip the road, screws hold in wood, chalk marks a blackboard. All of these phenomena share one root cause: **friction**.
+
+Friction is the **force that opposes relative motion or tendency of relative motion** between two surfaces in contact.
+
+Without friction:
+- You could not walk (your feet would slip backward)
+- Cars could not accelerate or brake
+- Screws, nails, and bolts would be useless
+- No musical instrument would make sound by bowing
+
+Yet friction also wastes energy, wears down machinery, and generates unwanted heat. Understanding it precisely — not just "friction opposes motion" — is what separates a JEE topper from an average student.
+
+---
+
+### 1.2 Microscopic Origin
+
+Even surfaces that look smooth are microscopically rough. Zoom in on any surface and you see peaks (asperities) and valleys. When two surfaces are pressed together:
+
+1. Asperities interlock at the contact points
+2. Real contact area is far smaller than apparent area
+3. Breaking these interlocks requires force
+
+At a deeper level, friction is **electromagnetic in origin** — the repulsion between electron clouds of atoms at the contact surface.
+
+<Callout type="info">
+**Remarkable Fact**
+
+The actual contact area between two surfaces is typically less than 1% of their apparent geometric area, even for surfaces that appear perfectly flat. This is why real contact force (and therefore friction) depends on normal force, not on apparent area.
+</Callout>
+
+---
+
+### 1.3 Types of Friction
+
+| Type | When it acts | Formula | Direction |
+|------|-------------|---------|-----------|
+| **Static friction** | No relative sliding | $0 \leq f_s \leq \mu_s N$ | Opposes tendency of motion |
+| **Kinetic (sliding) friction** | During relative sliding | $f_k = \mu_k N$ | Opposes relative motion |
+| **Rolling friction** | During rolling | $f_r = \mu_r N$ ($\mu_r \ll \mu_k$) | Opposes rolling direction |
+| **Fluid friction** | In fluids (viscosity) | $F = 6\pi\eta r v$ (Stokes) | Opposes motion through fluid |
+
+For JEE Main and Advanced, the primary focus is static and kinetic friction.
+
+---
+
+## SECTION 2 — Static Friction
+
+---
+
+### 2.1 The Self-Adjusting Nature of Static Friction
+
+Static friction is remarkable: it adjusts its magnitude to exactly balance whatever force tries to cause relative motion, up to a maximum limit.
+
+**Experiment:** Place a block on a rough table. Apply a gradually increasing horizontal force $F$.
+
+| Applied Force $F$ | Static Friction $f_s$ | Motion |
+|-------------------|----------------------|--------|
+| 0 | 0 | At rest |
+| 5 N | 5 N | At rest |
+| 10 N | 10 N | At rest |
+| 15 N (= $f_{s,max}$) | 15 N | On verge of sliding |
+| 16 N | 14 N (kinetic) | Sliding |
+
+This self-adjusting behaviour is a **constraint force** — static friction is whatever value is needed to maintain no relative motion, subject to the constraint $f_s \leq \mu_s N$.
+
+---
+
+### 2.2 Limiting Friction
+
+<Formula label="Limiting (Maximum) Static Friction">
+$$f_{s,max} = \mu_s N$$
+</Formula>
+
+where $\mu_s$ is the **coefficient of static friction** (dimensionless) and $N$ is the normal force.
+
+**Key facts:**
+- $\mu_s$ depends only on the pair of materials in contact and surface condition, not on area or speed
+- Typical values: rubber on concrete ≈ 0.8–1.0, steel on steel ≈ 0.7–0.8, ice on ice ≈ 0.03–0.05
+- When block is on the verge of motion, $f_s = \mu_s N$ (equality, not inequality)
+
+<Callout type="warning">
+**The Most Misunderstood Fact in Friction**
+
+Static friction is NOT always $\mu_s N$. That is only its **maximum** value. Actual static friction can be anything from 0 to $\mu_s N$.
+
+Example: A 10 kg block on a surface with $\mu_s = 0.5$. If no horizontal force is applied, friction = **0** (not $0.5 \times 10 \times 10 = 50$ N). Friction adjusts to oppose whatever force is trying to cause motion.
+</Callout>
+
+---
+
+### 2.3 Coefficient of Static Friction — Empirical Laws
+
+The **Amontons–Coulomb Laws of Friction** (empirical, not derived from first principles):
+
+1. Friction force is proportional to normal force: $f_s \leq \mu_s N$
+2. Friction is independent of the apparent contact area
+3. Kinetic friction is independent of sliding speed (approximately)
+
+These laws are remarkably accurate for dry surfaces over a wide range of conditions. They break down at very high pressures, very high speeds, or at the nanoscale.
+
+---
+
+## SECTION 3 — Kinetic Friction
+
+---
+
+### 3.1 Definition and Formula
+
+Once surfaces begin sliding, the friction force drops to a lower, nearly constant value:
+
+<Formula label="Kinetic Friction">
+$$f_k = \mu_k N$$
+</Formula>
+
+where $\mu_k$ is the **coefficient of kinetic friction**.
+
+**Always: $\mu_k < \mu_s$**
+
+This is why:
+- It takes more force to start a heavy box sliding than to keep it sliding
+- Anti-lock braking systems (ABS) keep tires on the verge of sliding (static friction) rather than fully sliding (kinetic friction), giving more braking force
+
+---
+
+### 3.2 Properties of Kinetic Friction
+
+- **Constant magnitude** (independent of speed, for moderate speeds)
+- **Independent of contact area**
+- **Opposes relative motion** (always acts opposite to the direction of sliding)
+- **Smaller than maximum static friction**: $f_k = \mu_k N < \mu_s N$
+
+---
+
+### 3.3 The Friction Graph
+
+<svg width="420" height="280" viewBox="0 0 420 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="fgA" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#1e293b"/>
+    </marker>
+  </defs>
+  <line x1="55" y1="225" x2="395" y2="225" stroke="#1e293b" strokeWidth="2" markerEnd="url(#fgA)"/>
+  <line x1="55" y1="225" x2="55" y2="30" stroke="#1e293b" strokeWidth="2" markerEnd="url(#fgA)"/>
+  <text x="398" y="230" fontSize="12" fill="#1e293b">F (applied)</text>
+  <text x="10" y="33" fontSize="12" fill="#1e293b">f</text>
+  <line x1="55" y1="225" x2="195" y2="85" stroke="#3b82f6" strokeWidth="3"/>
+  <circle cx="195" cy="85" r="4" fill="#3b82f6"/>
+  <line x1="195" y1="85" x2="215" y2="105" stroke="#94a3b8" strokeWidth="2" strokeDasharray="4,3"/>
+  <line x1="215" y1="105" x2="380" y2="105" stroke="#dc2626" strokeWidth="3"/>
+  <line x1="195" y1="85" x2="195" y2="225" stroke="#cbd5e1" strokeWidth="1.5" strokeDasharray="5,3"/>
+  <line x1="55" y1="85" x2="195" y2="85" stroke="#cbd5e1" strokeWidth="1.5" strokeDasharray="5,3"/>
+  <line x1="55" y1="105" x2="215" y2="105" stroke="#cbd5e1" strokeWidth="1.5" strokeDasharray="5,3"/>
+  <text x="12" y="89" fontSize="11" fill="#3b82f6" fontWeight="bold">μₛN</text>
+  <text x="12" y="109" fontSize="11" fill="#dc2626" fontWeight="bold">μₖN</text>
+  <text x="178" y="240" fontSize="10" fill="#64748b">F_lim</text>
+  <text x="80" y="160" fontSize="11" fill="#3b82f6" fontStyle="italic" transform="rotate(-44, 115, 160)">f = F (static)</text>
+  <text x="268" y="93" fontSize="11" fill="#dc2626" fontStyle="italic">f = μₖN (kinetic)</text>
+  <rect x="100" y="190" width="16" height="4" fill="#3b82f6" rx="1"/>
+  <text x="120" y="196" fontSize="10" fill="#3b82f6">Static regime</text>
+  <rect x="100" y="205" width="16" height="4" fill="#dc2626" rx="1"/>
+  <text x="120" y="211" fontSize="10" fill="#dc2626">Kinetic regime</text>
+  <text x="55" y="265" fontSize="11" fill="#64748b">Fig 1: Friction force vs applied force</text>
+</svg>
+
+**Observations from the graph:**
+1. Static region: $f = F$ (straight line, slope = 1) until $F = \mu_s N$
+2. At limiting friction: peak at $f = \mu_s N$
+3. Kinetic region: drops to $f_k = \mu_k N$ and stays constant
+
+---
+
+## SECTION 4 — Direction of Friction
+
+---
+
+### 4.1 The Cardinal Rule
+
+<Callout type="important">
+**Friction opposes the RELATIVE MOTION (or tendency of relative motion) between the two surfaces in contact — not the absolute motion of either body.**
+</Callout>
+
+This distinction matters enormously. The relative motion is the motion of the surface of one body as seen from the other body.
+
+---
+
+### 4.2 Finding Friction Direction — Systematic Method
+
+<Step n={1}>
+**Identify the two surfaces in contact** (e.g., block bottom and table top).
+</Step>
+
+<Step n={2}>
+**Determine the tendency of relative motion** of one surface with respect to the other. Ask: "If friction were absent, which way would the block slide on the table?"
+</Step>
+
+<Step n={3}>
+**Friction opposes that tendency.** It acts opposite to the direction in which the block would slide without friction.
+</Step>
+
+---
+
+### 4.3 Common Cases Where Direction Is Non-Obvious
+
+**Case 1: Block on accelerating truck**
+
+A block sits on a truck that accelerates forward. If the block has insufficient friction, it would slide backward relative to the truck. Therefore, friction on the block acts **forward** (in the direction of truck's acceleration).
+
+**Case 2: Block dragged by a rope on a rough surface**
+
+The block tends to slide forward relative to the ground. Friction on block acts **backward**.
+
+**Case 3: A person walking**
+
+When you push your foot backward against the ground, the ground pushes you forward. Friction on your foot from the ground acts **forward** (this is what propels you).
+
+**Case 4: Block on a rotating turntable**
+
+Block tends to slide outward (due to its inertia in the rotating frame). Static friction acts **inward** (toward center) to keep the block rotating with the turntable.
+
+---
+
+## SECTION 5 — Angle of Friction and Angle of Repose
+
+---
+
+### 5.1 Angle of Friction
+
+When friction is at its maximum value, the resultant of normal reaction $N$ and friction $f_{max}$ makes an angle $\lambda$ with the normal:
+
+$$\tan\lambda = \frac{f_{max}}{N} = \frac{\mu_s N}{N} = \mu_s$$
+
+<Formula label="Angle of Friction">
+$$\lambda = \arctan(\mu_s)$$
+</Formula>
+
+The **cone of friction** (or friction cone) is a cone of half-angle $\lambda$ around the normal direction. If the resultant applied force lies within this cone, no sliding occurs. If it lies outside, sliding occurs.
+
+<svg width="340" height="280" viewBox="0 0 340 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="cfA" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#334155"/>
+    </marker>
+    <marker id="cfG" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#16a34a"/>
+    </marker>
+    <marker id="cfB" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <line x1="170" y1="250" x2="170" y2="50" stroke="#334155" strokeWidth="2" markerEnd="url(#cfA)"/>
+  <text x="175" y="48" fontSize="12" fill="#334155">N (normal)</text>
+  <line x1="170" y1="250" x2="100" y2="100" stroke="#64748b" strokeWidth="1.5" strokeDasharray="5,3"/>
+  <line x1="170" y1="250" x2="240" y2="100" stroke="#64748b" strokeWidth="1.5" strokeDasharray="5,3"/>
+  <ellipse cx="170" cy="100" rx="70" ry="18" fill="none" stroke="#64748b" strokeWidth="1.5" strokeDasharray="5,3"/>
+  <path d="M 170,230 A 30,30 0 0,0 149,213" fill="none" stroke="#334155" strokeWidth="1.5"/>
+  <text x="143" y="232" fontSize="12" fill="#334155" fontStyle="italic">λ</text>
+  <line x1="170" y1="250" x2="148" y2="212" stroke="#16a34a" strokeWidth="2.5" markerEnd="url(#cfG)"/>
+  <text x="115" y="215" fontSize="11" fill="#16a34a">f_max</text>
+  <line x1="170" y1="250" x2="215" y2="120" stroke="#3b82f6" strokeWidth="2.5" markerEnd="url(#cfB)"/>
+  <text x="220" y="140" fontSize="11" fill="#3b82f6">R (resultant)</text>
+  <text x="60" y="270" fontSize="11" fill="#64748b">Fig 2: Cone of friction (half-angle = λ = arctan μₛ)</text>
+</svg>
+
+---
+
+### 5.2 Angle of Repose
+
+The **angle of repose** $\theta_r$ is the maximum angle of an inclined surface at which an object placed on it will remain stationary without sliding.
+
+**Derivation:**
+
+On an incline of angle $\theta$:
+- Component of gravity along incline: $mg\sin\theta$ (down)
+- Normal force: $N = mg\cos\theta$
+- Maximum static friction: $\mu_s mg\cos\theta$ (up the incline)
+
+For equilibrium: $mg\sin\theta \leq \mu_s mg\cos\theta$
+
+$$\tan\theta \leq \mu_s$$
+
+At the critical angle (angle of repose):
+
+<Formula label="Angle of Repose">
+$$\tan\theta_r = \mu_s \qquad \Rightarrow \qquad \theta_r = \lambda \text{ (angle of friction)}$$
+</Formula>
+
+**The angle of repose equals the angle of friction.** This is a beautiful and exact relationship.
+
+<Callout type="tip">
+**Practical Use**
+
+If you see a problem stating "block just begins to slide at angle $\theta$," then $\mu_s = \tan\theta$.
+
+Conversely, to find whether a block will slide: compare $\tan\theta$ with $\mu_s$.
+- $\tan\theta < \mu_s$: Block stays (static friction < limiting value)
+- $\tan\theta = \mu_s$: Block on verge of sliding
+- $\tan\theta > \mu_s$: Block slides (kinetic friction takes over)
+</Callout>
+
+---
+
+## SECTION 6 — Friction on Inclined Planes
+
+---
+
+### 6.1 Block Sliding Down a Rough Incline
+
+<svg width="440" height="290" viewBox="0 0 440 290" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="ipR" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#dc2626"/>
+    </marker>
+    <marker id="ipG" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#16a34a"/>
+    </marker>
+    <marker id="ipO" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="ipB" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#8b5cf6"/>
+    </marker>
+  </defs>
+  <polygon points="30,255 370,255 370,90" fill="#f0f9ff" stroke="#334155" strokeWidth="2"/>
+  <path d="M 350,255 A 45,45 0 0,0 323,220" fill="none" stroke="#334155" strokeWidth="1.5"/>
+  <text x="325" y="250" fontSize="14" fill="#334155" fontStyle="italic">θ</text>
+  <g transform="rotate(-33.7, 200, 178)">
+    <rect x="175" y="155" width="50" height="46" rx="4" fill="#3b82f6" stroke="#1e40af" strokeWidth="2"/>
+  </g>
+  <line x1="200" y1="178" x2="200" y2="248" stroke="#dc2626" strokeWidth="2.5" markerEnd="url(#ipR)"/>
+  <text x="207" y="244" fontSize="12" fill="#dc2626" fontWeight="bold">mg</text>
+  <line x1="200" y1="165" x2="158" y2="100" stroke="#16a34a" strokeWidth="2.5" markerEnd="url(#ipG)"/>
+  <text x="130" y="95" fontSize="12" fill="#16a34a" fontWeight="bold">N</text>
+  <line x1="200" y1="178" x2="152" y2="150" stroke="#8b5cf6" strokeWidth="2.5" markerEnd="url(#ipB)"/>
+  <text x="118" y="152" fontSize="12" fill="#8b5cf6" fontWeight="bold">f</text>
+  <line x1="200" y1="178" x2="250" y2="208" stroke="#f59e0b" strokeWidth="1.8" strokeDasharray="4,3"/>
+  <text x="254" y="217" fontSize="10" fill="#f59e0b">mg sinθ</text>
+  <line x1="200" y1="178" x2="168" y2="228" stroke="#f59e0b" strokeWidth="1.8" strokeDasharray="4,3"/>
+  <text x="120" y="238" fontSize="10" fill="#f59e0b">mg cosθ</text>
+  <text x="30" y="280" fontSize="11" fill="#64748b">Fig 3: Block sliding DOWN rough incline — friction acts UP the incline</text>
+</svg>
+
+**Forces on block (axes: along incline, perpendicular to incline):**
+
+Perpendicular to incline (no acceleration):
+$$N = mg\cos\theta$$
+
+Along incline (positive = down, block slides down so $f$ acts up):
+$$ma = mg\sin\theta - f_k = mg\sin\theta - \mu_k N = mg\sin\theta - \mu_k mg\cos\theta$$
+
+<Formula label="Acceleration Down a Rough Incline">
+$$a = g(\sin\theta - \mu_k\cos\theta)$$
+</Formula>
+
+**Condition for sliding:** $a > 0 \Rightarrow \sin\theta > \mu_k\cos\theta \Rightarrow \tan\theta > \mu_k$
+
+Since $\mu_k < \mu_s$, the condition for sliding is more easily met with kinetic friction ($\mu_k$) than the condition for starting to slide ($\mu_s$). Once sliding, $\mu_k$ is what matters.
+
+---
+
+### 6.2 Block Pushed Up a Rough Incline
+
+When a block is pushed up, both gravity component ($mg\sin\theta$) and kinetic friction ($\mu_k mg\cos\theta$) act **down** the incline.
+
+Deceleration going up:
+$$a_{up} = g(\sin\theta + \mu_k\cos\theta) \quad \text{(magnitude)}$$
+
+**Important:** $a_{up} > a_{down}$ — a block decelerates faster going up than it accelerates going down.
+
+---
+
+### 6.3 Block in Equilibrium on Rough Incline
+
+For a block to remain stationary on an incline, static friction adjusts to balance:
+
+$$f_s = mg\sin\theta \quad \text{(static friction, up the incline)}$$
+
+This is valid as long as:
+$$mg\sin\theta \leq \mu_s mg\cos\theta \Rightarrow \tan\theta \leq \mu_s$$
+
+If an additional force $F$ is applied, friction adjusts accordingly.
+
+---
+
+### 6.4 Range of Applied Force for Equilibrium on Rough Incline
+
+A block of mass $m$ on a rough incline (angle $\theta > \theta_r$). What range of force $P$ (applied along the incline) keeps the block in equilibrium?
+
+**Case A: Block tends to slide down** (friction acts up):
+
+$$P + \mu_s mg\cos\theta \geq mg\sin\theta$$
+$$P \geq mg(\sin\theta - \mu_s\cos\theta) = mg\tan(\theta - \lambda)\cos\theta$$
+
+**Case B: Block tends to slide up** (friction acts down):
+
+$$P \leq mg\sin\theta + \mu_s mg\cos\theta$$
+$$P \leq mg(\sin\theta + \mu_s\cos\theta) = mg\tan(\theta + \lambda)\cos\theta$$
+
+<Formula label="Range of Force for Equilibrium on Incline">
+$$mg(\sin\theta - \mu_s\cos\theta) \leq P \leq mg(\sin\theta + \mu_s\cos\theta)$$
+</Formula>
+
+---
+
+## SECTION 7 — Horizontal Force on Block on Incline
+
+---
+
+### 7.1 Horizontal Force Applied to Block on Rough Incline
+
+This is a high-frequency JEE topic. A horizontal force $P$ is applied to a block (mass $m$) on a rough incline (angle $\theta$, coefficient $\mu$).
+
+<svg width="420" height="280" viewBox="0 0 420 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="hfR" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#dc2626"/>
+    </marker>
+    <marker id="hfG" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#16a34a"/>
+    </marker>
+    <marker id="hfB" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+    <marker id="hfP" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#7c3aed"/>
+    </marker>
+  </defs>
+  <polygon points="30,248 355,248 355,95" fill="#f0f9ff" stroke="#334155" strokeWidth="2"/>
+  <path d="M 335,248 A 40,40 0 0,0 311,218" fill="none" stroke="#334155" strokeWidth="1.5"/>
+  <text x="313" y="242" fontSize="13" fill="#334155" fontStyle="italic">θ</text>
+  <g transform="rotate(-33.7, 193,170)">
+    <rect x="168" y="150" width="50" height="40" rx="4" fill="#60a5fa" stroke="#1e40af" strokeWidth="2"/>
+  </g>
+  <line x1="193" y1="170" x2="193" y2="238" stroke="#dc2626" strokeWidth="2.5" markerEnd="url(#hfR)"/>
+  <text x="200" y="234" fontSize="11" fill="#dc2626" fontWeight="bold">mg</text>
+  <line x1="193" y1="158" x2="152" y2="92" stroke="#16a34a" strokeWidth="2.5" markerEnd="url(#hfG)"/>
+  <text x="126" y="87" fontSize="11" fill="#16a34a" fontWeight="bold">N</text>
+  <line x1="193" y1="170" x2="260" y2="170" stroke="#7c3aed" strokeWidth="2.5" markerEnd="url(#hfP)"/>
+  <text x="265" y="168" fontSize="11" fill="#7c3aed" fontWeight="bold">P</text>
+  <text x="35" y="270" fontSize="11" fill="#64748b">Fig 4: Horizontal force P applied to block on rough incline</text>
+</svg>
+
+**Step 1: Find normal force.**
+
+Resolve forces perpendicular to incline:
+$$N = mg\cos\theta + P\sin\theta$$
+
+Note: $P$ has a component $P\sin\theta$ pressing the block into the incline, increasing $N$.
+
+**Step 2: Check tendency of motion** (assume block tends to slide up when $P$ is large):
+
+Along incline (up positive):
+$$P\cos\theta - mg\sin\theta - \mu_s N = 0 \quad \text{(just about to slide up)}$$
+
+Substituting $N$:
+$$P\cos\theta - mg\sin\theta - \mu_s(mg\cos\theta + P\sin\theta) = 0$$
+
+$$P(\cos\theta - \mu_s\sin\theta) = mg(\sin\theta + \mu_s\cos\theta)$$
+
+<Formula label="Horizontal Force to Just Slide Block UP Incline">
+$$P = mg \cdot \frac{\sin\theta + \mu_s\cos\theta}{\cos\theta - \mu_s\sin\theta} = mg\tan(\theta + \lambda)$$
+</Formula>
+
+where $\lambda = \arctan\mu_s$ is the angle of friction.
+
+---
+
+### 7.2 Minimum Force to Move a Block on a Horizontal Surface
+
+A block (mass $m$) on a rough horizontal surface ($\mu_s$). Force $F$ applied at angle $\alpha$ above horizontal. Find $\alpha$ that minimises $F$ to just start motion.
+
+**Normal force:** $N = mg - F\sin\alpha$
+
+**Along horizontal (about to slide):** $F\cos\alpha = \mu_s N = \mu_s(mg - F\sin\alpha)$
+
+$$F(\cos\alpha + \mu_s\sin\alpha) = \mu_s mg$$
+
+$$F = \frac{\mu_s mg}{\cos\alpha + \mu_s\sin\alpha}$$
+
+To minimise $F$, maximise the denominator $D = \cos\alpha + \mu_s\sin\alpha$:
+
+$$\frac{dD}{d\alpha} = -\sin\alpha + \mu_s\cos\alpha = 0 \Rightarrow \tan\alpha = \mu_s \Rightarrow \alpha = \lambda$$
+
+<Formula label="Minimum Force to Move Block on Flat Surface">
+$$F_{min} = \frac{\mu_s mg}{\sqrt{1 + \mu_s^2}} = mg\sin\lambda$$
+
+Applied at angle $\alpha = \lambda$ (angle of friction) above horizontal.
+</Formula>
+
+<Callout type="tip">
+**Beautiful Result**
+
+The minimum force to move a block is always applied at angle equal to the angle of friction $\lambda = \arctan\mu_s$. This is true both for sliding on a horizontal surface and for pushing up an incline. The physics: you're most efficiently using your force when the applied force direction is exactly perpendicular to the resultant of $N$ and $f_{max}$.
+</Callout>
+
+---
+
+## SECTION 8 — Two-Block Systems with Friction
+
+---
+
+### 8.1 Block on Block — Force on Lower Block
+
+Block A (mass $M$) on rough floor ($\mu_1$). Block B (mass $m$) on top of A. Friction between B and A has coefficient $\mu_2$. Force $F$ applied to A.
+
+<svg width="380" height="220" viewBox="0 0 380 220" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="bbA" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#334155"/>
+    </marker>
+    <marker id="bbR" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#dc2626"/>
+    </marker>
+    <marker id="bbP" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#7c3aed"/>
+    </marker>
+  </defs>
+  <rect x="30" y="185" width="330" height="12" rx="2" fill="#94a3b8"/>
+  <rect x="70" y="130" width="200" height="55" rx="6" fill="#93c5fd" stroke="#1e40af" strokeWidth="2"/>
+  <text x="170" y="163" textAnchor="middle" fontSize="15" fill="#1e40af" fontWeight="bold">A (M)</text>
+  <rect x="110" y="85" width="120" height="45" rx="5" fill="#a78bfa" stroke="#5b21b6" strokeWidth="2"/>
+  <text x="170" y="112" textAnchor="middle" fontSize="15" fill="#5b21b6" fontWeight="bold">B (m)</text>
+  <line x1="270" y1="158" x2="320" y2="158" stroke="#7c3aed" strokeWidth="2.5" markerEnd="url(#bbP)"/>
+  <text x="325" y="156" fontSize="12" fill="#7c3aed" fontWeight="bold">F</text>
+  <line x1="170" y1="130" x2="120" y2="130" stroke="#dc2626" strokeWidth="2" markerEnd="url(#bbR)"/>
+  <text x="92" y="128" fontSize="10" fill="#dc2626">f₂ (on A from B)</text>
+  <line x1="170" y1="85" x2="220" y2="85" stroke="#dc2626" strokeWidth="2" markerEnd="url(#bbR)"/>
+  <text x="224" y="83" fontSize="10" fill="#dc2626">f₂ (on B from A)</text>
+  <line x1="170" y1="185" x2="110" y2="185" stroke="#dc2626" strokeWidth="2" markerEnd="url(#bbR)"/>
+  <text x="55" y="183" fontSize="10" fill="#dc2626">f₁ (floor on A)</text>
+  <text x="60" y="210" fontSize="11" fill="#64748b">Fig 5: Block on block — force on lower block</text>
+</svg>
+
+**Total normal force on floor:** $N_1 = (M + m)g$
+
+**Friction from floor on A:** $f_1 = \mu_1(M+m)g$
+
+**Friction from A on B and B on A:** $f_2 = \mu_2 mg$ (maximum if B slides on A)
+
+**Case 1: A and B move together** (no sliding between them):
+
+$$a = \frac{F - f_1}{M+m} = \frac{F - \mu_1(M+m)g}{M+m}$$
+
+For B to move with A, friction must provide B's acceleration. In B's free body diagram only friction $f_2$ acts horizontally:
+
+$$f_2 = ma = \frac{m\big(F - \mu_1(M+m)g\big)}{M+m}$$
+
+For no slipping between A and B, we need $f_2 \leq \mu_2 mg$:
+
+$$\frac{m\big(F - \mu_1(M+m)g\big)}{M+m} \leq \mu_2 mg \quad\Rightarrow\quad F \leq (\mu_1 + \mu_2)(M+m)g$$
+
+**Maximum $F$ for no slipping:**
+
+<Formula label="Max Force for No Slipping (Block on Block)">
+$$F_{max} = \mu_1(M+m)g + \mu_2(M+m)g = (M+m)(\mu_1 + \mu_2)g$$
+</Formula>
+
+**Case 2: A slides under B** (F exceeds $F_{max}$):
+
+- Friction on B from A: $f_2 = \mu_2 mg$ (kinetic, forward on B)
+- Friction on A from floor: $f_1 = \mu_1(M+m)g$ (backward on A)
+- Friction on A from B (reaction): $\mu_2 mg$ (backward on A)
+
+$$a_B = \frac{\mu_2 mg}{m} = \mu_2 g$$
+
+$$a_A = \frac{F - \mu_1(M+m)g - \mu_2 mg}{M}$$
+
+---
+
+### 8.2 Force on Upper Block
+
+Same setup but force $F$ applied to B (upper block).
+
+**Maximum $F$ for no slipping between A and B.** For the blocks to move together, A must accelerate along with B. Treating both as one system (floor friction $f_1 = \mu_1(M+m)g$ opposes motion):
+
+$$a = \frac{F - \mu_1(M+m)g}{M+m}$$
+
+The only horizontal forces on the lower block A are the friction $f_2$ from B (forward, since B is driven forward and drags A) and the floor friction (backward):
+
+$$Ma = f_2 - \mu_1(M+m)g$$
+
+Solving for $f_2$ and substituting $a$:
+
+$$f_2 = Ma + \mu_1(M+m)g = \frac{MF + \mu_1 m(M+m)g}{M+m}$$
+
+For no slipping we need $f_2 \leq \mu_2 mg$:
+
+$$\frac{MF + \mu_1 m(M+m)g}{M+m} \leq \mu_2 mg \quad\Rightarrow\quad F \leq \frac{(M+m)mg(\mu_2 - \mu_1)}{M}$$
+
+This requires $\mu_2 > \mu_1$; otherwise no force on the upper block can keep the two moving together against the floor friction.
+
+---
+
+## SECTION 9 — Ladder Problems
+
+---
+
+### 9.1 Ladder Against Smooth Wall, Rough Floor
+
+A uniform ladder (mass $m$, length $L$) leans against a smooth wall at angle $\theta$ with the floor.
+
+**Forces:**
+- Weight $mg$ at centre ($L/2$ from base)
+- Normal from wall $N_W$ (horizontal, pointing away from wall) at top
+- Normal from floor $N_F$ (vertical, upward) at base
+- Friction from floor $f$ (horizontal) at base
+
+<svg width="340" height="320" viewBox="0 0 340 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="ldA" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#334155"/>
+    </marker>
+    <marker id="ldR" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#dc2626"/>
+    </marker>
+    <marker id="ldG" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#16a34a"/>
+    </marker>
+    <marker id="ldB" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+    <marker id="ldV" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#7c3aed"/>
+    </marker>
+  </defs>
+  <rect x="25" y="265" width="275" height="12" rx="2" fill="#94a3b8"/>
+  <rect x="250" y="40" width="12" height="235" rx="2" fill="#94a3b8"/>
+  <line x1="60" y1="265" x2="252" y2="52" stroke="#1e40af" strokeWidth="6" strokeLinecap="round"/>
+  <line x1="60" y1="265" x2="110" y2="265" stroke="#16a34a" strokeWidth="2.5" markerEnd="url(#ldG)"/>
+  <text x="112" y="263" fontSize="11" fill="#16a34a" fontWeight="bold">f</text>
+  <line x1="60" y1="265" x2="60" y2="213" stroke="#3b82f6" strokeWidth="2.5" markerEnd="url(#ldB)"/>
+  <text x="64" y="212" fontSize="11" fill="#3b82f6" fontWeight="bold">N_F</text>
+  <line x1="156" y1="158" x2="156" y2="208" stroke="#dc2626" strokeWidth="2.5" markerEnd="url(#ldR)"/>
+  <text x="160" y="208" fontSize="11" fill="#dc2626" fontWeight="bold">mg</text>
+  <line x1="252" y1="52" x2="200" y2="52" stroke="#7c3aed" strokeWidth="2.5" markerEnd="url(#ldV)"/>
+  <text x="180" y="49" fontSize="11" fill="#7c3aed" fontWeight="bold">N_W</text>
+  <path d="M 60,255 A 25,25 0 0,1 80,240" fill="none" stroke="#334155" strokeWidth="1.5"/>
+  <text x="80" y="257" fontSize="12" fill="#334155" fontStyle="italic">θ</text>
+  <text x="40" y="305" fontSize="11" fill="#64748b">Fig 6: Ladder leaning against smooth wall (rough floor)</text>
+</svg>
+
+**Equilibrium conditions:**
+
+Horizontal: $f = N_W$
+
+Vertical: $N_F = mg$
+
+Torque about base (anti-clockwise positive):
+
+$$N_W \cdot L\sin\theta - mg \cdot \frac{L}{2}\cos\theta = 0$$
+
+$$N_W = \frac{mg\cos\theta}{2\sin\theta} = \frac{mg}{2\tan\theta}$$
+
+Since $f = N_W$:
+
+$$f = \frac{mg}{2\tan\theta}$$
+
+**For the ladder not to slip:** $f \leq \mu_s N_F$
+
+$$\frac{mg}{2\tan\theta} \leq \mu_s mg \Rightarrow \tan\theta \geq \frac{1}{2\mu_s}$$
+
+**Minimum safe angle:**
+
+$$\tan\theta_{min} = \frac{1}{2\mu_s} \qquad \Rightarrow \qquad \theta_{min} = \arctan\left(\frac{1}{2\mu_s}\right)$$
+
+---
+
+### 9.2 Person Climbing the Ladder
+
+If a person of mass $M$ climbs to height $h$ along the ladder:
+
+Torque about base:
+$$N_W \cdot L\sin\theta = mg \cdot \frac{L}{2}\cos\theta + Mg \cdot h\cos\theta$$
+
+Friction condition: $f = N_W \leq \mu_s(m+M)g$
+
+---
+
+## SECTION 10 — Rolling Friction
+
+---
+
+### 10.1 What Is Rolling Friction?
+
+When a wheel rolls on a surface, the contact zone undergoes repeated compression and relaxation (elastic deformation). The leading edge of the contact zone presses down, while the trailing edge lifts. This creates a net resistive torque opposing rolling.
+
+**Rolling friction force:**
+$$f_r = \mu_r N$$
+
+where $\mu_r \ll \mu_k$. Typical values: $\mu_r \approx 0.001$–$0.005$ for steel on steel (rail transport), $\mu_r \approx 0.01$–$0.03$ for rubber on concrete.
+
+**Why wheels are better than sliders:** Rolling friction is typically 100–1000 times smaller than sliding friction. This is the fundamental reason wheels revolutionised transportation.
+
+---
+
+### 10.2 Conditions for Pure Rolling (No Slipping)
+
+For a wheel of radius $R$ rolling without slipping:
+
+$$v_{centre} = R\omega$$
+
+The contact point is instantaneously at rest. Static friction acts at the contact point but does no work (contact point has zero velocity).
+
+**Friction in rolling without slipping is static friction**, not kinetic.
+
+---
+
+## SECTION 11 — Belt and Pulley Friction
+
+---
+
+### 11.1 Belt Friction (Capstan Equation)
+
+When a rope or belt wraps around a cylinder (like a rope over a rough capstan), the tension increases exponentially with the angle of wrap:
+
+$$T_2 = T_1 e^{\mu\theta}$$
+
+where $T_1$ = smaller tension, $T_2$ = larger tension, $\theta$ = total angle of wrap (radians), $\mu$ = coefficient of friction.
+
+This is the **capstan equation** — it explains why a small force can hold a large load when a rope is wrapped around a post multiple times.
+
+<Callout type="info">
+**Capstan Effect in Practice**
+
+A rope wrapped $n$ times around a post (angle of wrap $= 2\pi n$ radians) with $\mu = 0.3$:
+
+$T_2/T_1 = e^{0.3 \times 2\pi} = e^{1.885} \approx 6.6$ per wrap.
+
+With 3 wraps: $T_2/T_1 = e^{0.3 \times 6\pi} \approx 286$.
+
+One person holding 1 N can resist 286 N force! This is why sailors could control heavy ship sails.
+</Callout>
+
+---
+
+## SECTION 12 — Advanced Applications
+
+---
+
+### 12.1 Friction and Circular Motion — Vehicle on Curved Road
+
+**Flat circular road:** A car of mass $m$ moving at speed $v$ on a flat road of radius $R$.
+
+Centripetal force provided by static friction:
+
+$$\frac{mv^2}{R} \leq \mu_s mg$$
+
+$$v_{max} = \sqrt{\mu_s gR}$$
+
+**Banked road:** Road banked at angle $\theta$. Even without friction, a component of normal force provides centripetal force:
+
+$$N\sin\theta = \frac{mv^2}{R} \qquad N\cos\theta = mg$$
+
+$$v_{ideal} = \sqrt{Rg\tan\theta}$$
+
+(At this speed, no friction is needed.) For higher or lower speeds, friction helps.
+
+---
+
+### 12.2 Friction in Pulley Problems
+
+When a string passes over a **rough pulley** (or a rough peg), the belt friction equation applies:
+
+$$\frac{T_2}{T_1} = e^{\mu\alpha}$$
+
+where $\alpha$ is the angle of contact. For a half-turn ($\alpha = \pi$):
+
+$$\frac{T_2}{T_1} = e^{\mu\pi}$$
+
+For JEE problems involving a string over a rough nail or peg, use this ratio.
+
+---
+
+### 12.3 Two Blocks Connected Over a Rough Incline
+
+Block A on rough incline (angle $\theta$, $\mu$), string over smooth pulley at top, block B hanging vertically.
+
+**For system to move (A up, B down):**
+$$m_B g - T = m_B a$$
+$$T - m_A g\sin\theta - \mu m_A g\cos\theta = m_A a$$
+
+Adding: $a = \frac{(m_B - m_A\sin\theta - \mu m_A\cos\theta)g}{m_A + m_B}$
+
+**Range of $m_B$ for equilibrium:**
+
+$$m_A(\sin\theta - \mu\cos\theta) \leq m_B \leq m_A(\sin\theta + \mu\cos\theta)$$
+
+---
+
+## SECTION 13 — Impending Motion and Friction Cones
+
+---
+
+### 13.1 Three States of Friction
+
+For any contact surface, friction is in one of three states:
+
+| State | Condition | Friction magnitude | Direction |
+|-------|-----------|-------------------|-----------|
+| No tendency to move | No external force component along surface | 0 | — |
+| Static (below limit) | $F_{applied} < f_{s,max}$ | $= F_{applied}$ | Opposes tendency |
+| Limiting | $F_{applied} = f_{s,max}$ | $= \mu_s N$ | Opposes tendency |
+| Kinetic | $F_{applied} > f_{s,max}$ | $= \mu_k N$ | Opposes relative motion |
+
+---
+
+### 13.2 Self-Locking
+
+A screw or wedge is "self-locking" when the angle of the thread/wedge is less than the angle of friction. In such cases, no force is needed to maintain the position — friction alone prevents reversal.
+
+**Condition for self-locking:** $\alpha < \lambda$ (where $\alpha$ = lead angle, $\lambda$ = angle of friction)
+
+This is why screws don't unscrew themselves and wedges stay put.
+
+---
+
+## SECTION 14 — Error Analysis
+
+---
+
+| # | Mistake | Correct Approach |
+|---|---------|-----------------|
+| 1 | Assuming $f = \mu_s N$ always | Static friction is $f \leq \mu_s N$; equals $\mu_s N$ only at limiting case |
+| 2 | Using $\mu_k$ instead of $\mu_s$ for stationary bodies | Use $\mu_k$ only when body is actually sliding |
+| 3 | Forgetting that $\mu_k < \mu_s$ | The transition from static to kinetic involves a drop in friction |
+| 4 | Wrong direction of friction on one of two connected bodies | On block A, friction from B is reaction to friction on B from A — opposite directions |
+| 5 | Friction $= \mu N$ on incline but using $N = mg$ | On incline: $N = mg\cos\theta$, so $f_k = \mu mg\cos\theta$ |
+| 6 | Forgetting friction changes sign when motion reverses | A block going up has both gravity and friction opposing it; coming down, only gravity opposes, friction now opposes downward motion |
+| 7 | In ladder problems, forgetting torque equation | Three equations needed: $\sum F_x = 0$, $\sum F_y = 0$, $\sum \tau = 0$ |
+| 8 | Taking angle of repose = $\arctan(\mu_k)$ | Angle of repose = $\arctan(\mu_s)$ (static friction, not kinetic) |
+| 9 | Applying belt friction formula for smooth pulleys | $T_2 = T_1 e^{\mu\theta}$ only for rough pulley/peg |
+| 10 | Forgetting normal force increases when force has component into surface | $N = mg + F\sin\alpha$ when force has component pressing block into surface |
+
+---
+
+## SECTION 15 — SVG Diagrams Summary
+
+---
+
+### Diagram: Friction Regimes on Incline
+
+<svg width="420" height="200" viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="irA" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#334155"/>
+    </marker>
+  </defs>
+  <rect x="10" y="155" width="120" height="35" rx="6" fill="#dcfce7" stroke="#16a34a" strokeWidth="2"/>
+  <text x="70" y="170" textAnchor="middle" fontSize="11" fill="#16a34a" fontWeight="bold">STATIC</text>
+  <text x="70" y="183" textAnchor="middle" fontSize="10" fill="#16a34a">tan θ ≤ μₛ</text>
+  <rect x="150" y="155" width="120" height="35" rx="6" fill="#fef9c3" stroke="#ca8a04" strokeWidth="2"/>
+  <text x="210" y="170" textAnchor="middle" fontSize="11" fill="#ca8a04" fontWeight="bold">LIMITING</text>
+  <text x="210" y="183" textAnchor="middle" fontSize="10" fill="#ca8a04">tan θ = μₛ</text>
+  <rect x="290" y="155" width="120" height="35" rx="6" fill="#fee2e2" stroke="#dc2626" strokeWidth="2"/>
+  <text x="350" y="170" textAnchor="middle" fontSize="11" fill="#dc2626" fontWeight="bold">SLIDING</text>
+  <text x="350" y="183" textAnchor="middle" fontSize="10" fill="#dc2626">tan θ > μₛ</text>
+  <line x1="10" y1="140" x2="400" y2="140" stroke="#334155" strokeWidth="1.5" markerEnd="url(#irA)"/>
+  <text x="405" y="145" fontSize="11" fill="#334155">θ</text>
+  <line x1="70" y1="135" x2="70" y2="145" stroke="#334155" strokeWidth="2"/>
+  <line x1="210" y1="135" x2="210" y2="145" stroke="#334155" strokeWidth="2"/>
+  <line x1="290" y1="135" x2="290" y2="145" stroke="#334155" strokeWidth="2"/>
+  <text x="60" y="130" fontSize="10" fill="#334155">0</text>
+  <text x="195" y="130" fontSize="10" fill="#ca8a04">θᵣ</text>
+  <text x="278" y="130" fontSize="10" fill="#dc2626">θᵣ+</text>
+  <text x="100" y="60" textAnchor="middle" fontSize="12" fill="#334155">Block stationary</text>
+  <text x="100" y="78" textAnchor="middle" fontSize="11" fill="#64748b">f = mg sinθ</text>
+  <text x="100" y="95" textAnchor="middle" fontSize="11" fill="#64748b">N = mg cosθ</text>
+  <text x="350" y="60" textAnchor="middle" fontSize="12" fill="#dc2626">Block slides</text>
+  <text x="350" y="78" textAnchor="middle" fontSize="11" fill="#64748b">f = μₖN</text>
+  <text x="350" y="95" textAnchor="middle" fontSize="11" fill="#64748b">a = g(sinθ − μₖcosθ)</text>
+  <text x="80" y="30" fontSize="11" fill="#64748b">Fig 7: Three friction regimes on incline as angle θ increases</text>
+</svg>
+
+---
+
+## SECTION 16 — Solved Examples
+
+---
+
+### JEE Main Level Examples
+
+**M1.** A 5 kg block on a rough surface ($\mu_s = 0.5$, $\mu_k = 0.4$, $g = 10$ m/s²). Applied force = 20 N. Find friction and acceleration.
+
+**Solution:**
+$f_{s,max} = 0.5 \times 5 \times 10 = 25$ N. Since $20 < 25$: block stays. $f_s = 20$ N, $a = 0$.
+
+---
+
+**M2.** Same block, applied force = 30 N.
+
+**Solution:**
+$30 > 25$ N → slides. $f_k = 0.4 \times 50 = 20$ N.
+$a = (30 - 20)/5 = \mathbf{2 \text{ m/s}^2}$
+
+---
+
+**M3.** A block of 4 kg on a rough 37° incline ($\mu_k = 0.3$). Find acceleration as it slides down. ($g = 10$ m/s²)
+
+**Solution:**
+$N = 4 \times 10 \times \cos 37° = 32$ N. $f_k = 0.3 \times 32 = 9.6$ N.
+$mg\sin 37° = 24$ N.
+$a = (24 - 9.6)/4 = \mathbf{3.6 \text{ m/s}^2}$
+
+---
+
+**M4.** What is the minimum coefficient of static friction needed for a block to remain on a 30° incline without sliding?
+
+**Solution:**
+$\mu_s \geq \tan 30° = \dfrac{1}{\sqrt{3}} \approx \mathbf{0.577}$
+
+---
+
+**M5.** A block of 3 kg is pushed along a horizontal rough surface ($\mu_k = 0.25$) by a force 15 N applied at 37° below horizontal. Find acceleration. ($g = 10$ m/s²)
+
+**Solution:**
+$F_y = -15\sin 37° = -9$ N (pressing down). $N = 3 \times 10 + 9 = 39$ N.
+$f_k = 0.25 \times 39 = 9.75$ N.
+$a = (15\cos 37° - 9.75)/3 = (12 - 9.75)/3 = \mathbf{0.75 \text{ m/s}^2}$
+
+---
+
+**M6.** A block on a rough incline (angle 45°, $\mu_s = 0.6$). Is it in equilibrium? Find friction.
+
+**Solution:**
+A block stays in equilibrium on an incline only if $\tan\theta \leq \mu_s$. Here $\tan 45° = 1 > \mu_s = 0.6$, so the block **cannot** be in equilibrium — it slides down.
+
+Equivalently, the angle of repose is $\theta_r = \arctan\mu_s = \arctan 0.6 \approx 31°$; since $45° > 31°$, sliding is expected. The maximum friction available, $\mu_s mg\cos45° \approx 0.42\,mg$, is less than the driving component $mg\sin45° \approx 0.71\,mg$.
+
+---
+
+**M7.** A 10 kg ladder (length 5 m) leans against a smooth wall at 60° to the floor. $\mu_s = 0.4$ between ladder and floor. Find friction and whether ladder slips. ($g = 10$ m/s²)
+
+**Solution:**
+$N_W = \dfrac{mg}{2\tan\theta} = \dfrac{100}{2\tan 60°} = \dfrac{100}{2\sqrt{3}} = \dfrac{50}{\sqrt{3}} \approx 28.9$ N
+
+$f = N_W \approx 28.9$ N. $N_F = mg = 100$ N.
+
+$\mu_s N_F = 0.4 \times 100 = 40$ N $> 28.9$ N → **Ladder does not slip**. ✓
+
+---
+
+**M8.** Find the minimum angle for the same ladder not to slip. ($\mu_s = 0.4$)
+
+**Solution:**
+$\tan\theta_{min} = \dfrac{1}{2\mu_s} = \dfrac{1}{0.8} = 1.25$
+
+$\theta_{min} = \arctan(1.25) \approx \mathbf{51.3°}$
+
+---
+
+**M9.** A block (5 kg) is on a rough horizontal surface. A force is applied at what angle (above horizontal) gives minimum required force to start motion? $\mu_s = 0.4$, $g = 10$ m/s².
+
+**Solution:**
+Optimal angle = angle of friction = $\arctan(0.4) \approx 21.8°$
+
+$F_{min} = \dfrac{\mu_s mg}{\sqrt{1+\mu_s^2}} = \dfrac{0.4 \times 50}{\sqrt{1.16}} = \dfrac{20}{1.077} \approx \mathbf{18.6 \text{ N}}$
+
+---
+
+**M10.** Block A (6 kg) on rough floor ($\mu_k = 0.3$). Block B (2 kg) sits on top of A. $\mu_s = 0.4$ between A and B. Force 30 N is applied to A. Do they move together? ($g = 10$ m/s²)
+
+**Solution:**
+$f_1 = 0.3 \times (6+2) \times 10 = 24$ N (floor on A).
+
+If together: $a = (30 - 24)/8 = 0.75$ m/s².
+
+Required friction on B: $f_2 = 2 \times 0.75 = 1.5$ N.
+
+$f_{2,max} = 0.4 \times 2 \times 10 = 8$ N $\gg 1.5$ N → **They move together**. $f_2 = 1.5$ N.
+
+---
+
+**M11.** Same system but force = 80 N. Find accelerations.
+
+**Solution:**
+If together: $a = (80-24)/8 = 7$ m/s². Required friction on B: $2 \times 7 = 14$ N.
+
+$f_{2,max} = 8$ N $< 14$ N → **They slide**.
+
+$a_B = f_{2}/m_B = 8/2 = 4$ m/s² (friction from A on B, forward, kinetic now)
+
+$a_A = (80 - 24 - 8)/6 = 48/6 = \mathbf{8 \text{ m/s}^2}$
+
+---
+
+**M12.** A chain (mass 5 kg, length 2 m) lies on a rough table ($\mu_s = 0.3$). Find max hanging length. ($g = 10$ m/s²)
+
+**Solution:**
+$f_{max} = \dfrac{\mu_s}{1+\mu_s} = \dfrac{0.3}{1.3} = 0.231$
+
+Maximum hanging length $= 0.231 \times 2 \approx \mathbf{0.46 \text{ m}}$
+
+---
+
+**M13.** A block is projected **up** a rough incline (37°, $\mu_k = 0.2$) with initial speed 5 m/s. Find the distance it travels before stopping. ($g = 10$ m/s²)
+
+**Solution:**
+Going up, both gravity and friction act down the slope, so the deceleration is:
+
+$$a = g(\sin 37° + \mu_k\cos 37°) = 10(0.6 + 0.2 \times 0.8) = 7.6 \text{ m/s}^2$$
+
+$v^2 = u^2 - 2as \Rightarrow 0 = 25 - 2 \times 7.6 \times s$
+
+$s = 25/15.2 \approx \mathbf{1.64 \text{ m}}$
+
+---
+
+**M14.** A block of mass 2 kg is placed on a block of mass 8 kg. The lower block is on a smooth floor. $\mu = 0.3$ between blocks. A force 20 N is applied to the lower block. Find accelerations. ($g = 10$ m/s²)
+
+**Solution:**
+Floor is smooth. Friction only between blocks.
+
+If together: $a = 20/10 = 2$ m/s². Friction needed on upper block: $2 \times 2 = 4$ N.
+
+$f_{max} = 0.3 \times 2 \times 10 = 6$ N $> 4$ N → **Move together**. $a = \mathbf{2 \text{ m/s}^2}$.
+
+---
+
+**M15.** Find max force on upper block (same system) before slipping starts.
+
+**Solution:**
+Force $F$ on lower block. Together: $a = F/10$.
+
+Friction on upper block: $2F/10 = F/5 \leq 6$ N.
+
+$F_{max} = 30$ N. At this force, $a = 3$ m/s².
+
+---
+
+### JEE Advanced Level Examples
+
+**A1.** Block A (3 kg) on rough incline (37°, $\mu_s = 0.5$, $\mu_k = 0.4$). Block B (2 kg) hangs vertically, connected by string. Find range of B's mass for equilibrium. ($g = 10$ m/s²)
+
+**Solution:**
+Forces on A (along incline):
+- $mg_A\sin 37° = 18$ N (down incline)
+- $f_{max} = \mu_s \times 3 \times 10 \times \cos 37° = 0.5 \times 24 = 12$ N
+
+**Case 1: B too heavy — system moves, A goes up:**
+$T = m_B g$; for A: $T - 18 - 12 = 0 \Rightarrow T = 30$ N $\Rightarrow m_B = 3$ kg.
+
+**Case 2: B too light — system moves, A goes down:**
+$T - m_B g = 0$; for A: $18 - 12 - T = 0 \Rightarrow T = 6$ N $\Rightarrow m_B = 0.6$ kg.
+
+**Equilibrium range: $0.6 \text{ kg} \leq m_B \leq 3 \text{ kg}$**
+
+---
+
+**A2.** A horizontal force $P$ is applied to a block (3 kg) on a rough incline (53°, $\mu_s = 0.4$). Find (a) $P$ to just move block up, (b) $P$ to just prevent block from sliding down. ($g = 10$ m/s²)
+
+**Solution:**
+$\lambda = \arctan 0.4 \approx 21.8°$
+
+**(a) Just moving up:** $P = mg\tan(\theta + \lambda) = 30\tan(53° + 21.8°) = 30\tan(74.8°) = 30 \times 3.73 \approx \mathbf{112 \text{ N}}$
+
+**(b) Just preventing slide down:** $P = mg\tan(\theta - \lambda) = 30\tan(53° - 21.8°) = 30\tan(31.2°) = 30 \times 0.606 \approx \mathbf{18.2 \text{ N}}$
+
+---
+
+**A3.** Three blocks A, B, C stacked vertically (C on B on A on rough floor). Masses: $m_A = 4$ kg, $m_B = 3$ kg, $m_C = 2$ kg. $\mu$ between all surfaces = 0.3. Force 80 N on A. Do all blocks move together? If not, find accelerations. ($g = 10$ m/s²)
+
+**Solution:**
+Total mass = 9 kg. Floor friction: $f_1 = 0.3 \times 9 \times 10 = 27$ N.
+
+If together: $a = (80 - 27)/9 = 53/9 \approx 5.89$ m/s²
+
+Friction needed to accelerate C: $f_{C} = 2 \times 5.89 = 11.78$ N.
+$f_{max,BC} = 0.3 \times 2 \times 10 = 6$ N $< 11.78$ N → C **slips** on B.
+
+Now check B+C as system on A:
+Friction needed to accelerate B+C: $5 \times 5.89 = 29.4$ N.
+$f_{max,AB} = 0.3 \times 5 \times 10 = 15$ N $< 29.4$ N → B **slips** on A too.
+
+All three blocks slip on each other.
+
+$a_C = f_{BC}/m_C$: C receives kinetic friction from B: $f_{k,BC} = 0.3 \times 2 \times 10 = 6$ N.
+$a_C = 6/2 = 3$ m/s²
+
+$a_B$: Friction from C on B = 6 N (backward). Friction from A on B = $f_{k,AB} = 0.3 \times 5 \times 10 = 15$ N (forward).
+$a_B = (15 - 6)/3 = 3$ m/s²
+
+Interesting: $a_B = a_C = 3$ m/s². So B and C actually move together (no relative motion)! We must recheck: if B and C move together, we need friction on B from A to be $\leq f_{max,AB} = 15$ N.
+
+If B+C together: net force on B+C from A (friction) = $(m_B + m_C) \times a_{BC}$. From A: $a_A$ needs to be found.
+
+$a_A = (80 - f_{1,floor} - f_{AB,kinetic})/m_A$
+
+$f_{floor} = 0.3 \times 9 \times 10 = 27$ N. $f_{AB} = 15$ N (B+C slip on A).
+
+$a_A = (80 - 27 - 15)/4 = 38/4 = 9.5$ m/s²
+
+Friction on B+C from A: 15 N → $a_{BC} = 15/5 = 3$ m/s².
+
+Verify B, C don't slip: needed friction between B and C to give C acceleration 3 m/s² = $2 \times 3 = 6$ N ≤ $f_{max,BC} = 6$ N. Exactly at limit!
+
+**Accelerations:** $a_A = 9.5$ m/s², $a_{B+C} = 3$ m/s². B and C move together.
+
+---
+
+**A4.** A rope of mass $m$ and length $L$ is placed on a rough table with coefficient $\mu$. The rope hangs over the edge. Initially a length $\ell_0$ hangs. The system starts from rest. Find velocity when length $\ell$ hangs. (Assume $\ell_0$ is greater than the minimum hanging length for motion.)
+
+**Solution:**
+Let $x$ = hanging length at any time. On-table length = $L - x$.
+
+Weight of hanging part: $\dfrac{mx}{L} g$
+
+Friction on table part (kinetic, opposing motion): $\mu \cdot \dfrac{m(L-x)}{L} g$
+
+Net force: $F_{net} = \dfrac{mg}{L}[x - \mu(L-x)] = \dfrac{mg}{L}[x(1+\mu) - \mu L]$
+
+By Newton's 2nd Law: $m \ddot{x} = \dfrac{mg}{L}[x(1+\mu) - \mu L]$
+
+Using $v\,dv/dx = \ddot{x}$:
+
+$v\,\dfrac{dv}{dx} = \dfrac{g}{L}[(1+\mu)x - \mu L]$
+
+$v^2 = \dfrac{2g}{L}\int_{\ell_0}^{\ell} [(1+\mu)x - \mu L]\,dx$
+
+$= \dfrac{2g}{L}\left[\frac{(1+\mu)}{2}(x^2) - \mu Lx\right]_{\ell_0}^{\ell}$
+
+$= \dfrac{g}{L}\left[(1+\mu)(\ell^2 - \ell_0^2) - 2\mu L(\ell - \ell_0)\right]$
+
+$$v = \sqrt{\dfrac{g(\ell - \ell_0)[(1+\mu)(\ell+\ell_0) - 2\mu L]}{L}}$$
+
+---
+
+**A5.** A person stands on a plank on a rough floor. The plank can slide on the floor ($\mu_1$). The person can slide on the plank ($\mu_2$). The person pushes horizontally against a wall. Find conditions under which the person stays still relative to the plank.
+
+**Solution:**
+Let force person exerts on wall = $F$. By Newton's 3rd, wall pushes person with $F$ (horizontal, away from wall).
+
+For person: $F - f_{person-plank} = m_{person} \cdot a_{person}$
+
+For plank: $f_{person-plank} - f_{floor-plank} = m_{plank} \cdot a_{plank}$
+
+For person to stay still relative to plank: $a_{person} = a_{plank}$.
+
+Let $a$ = common acceleration.
+
+$(m_p + m_P) a = F - f_{floor} = F - \mu_1(m_p + m_P)g$ (if plank slides on floor)
+
+Friction between person and plank:
+$m_p a = F - f_{person-plank}$ → $f_{person-plank} = F - m_p a = F - \dfrac{m_p(F - \mu_1(m_p+m_P)g)}{m_p+m_P}$
+
+$= \dfrac{Fm_P + m_p\mu_1(m_p+m_P)g}{m_p+m_P} = \dfrac{m_P F}{m_p+m_P} + m_p\mu_1 g$
+
+For no slipping: $f_{person-plank} \leq \mu_2 m_p g$:
+
+$\dfrac{m_P F}{m_p+m_P} + m_p\mu_1 g \leq \mu_2 m_p g$
+
+$F \leq \dfrac{(m_p+m_P)m_p(\mu_2 - \mu_1)g}{m_P}$
+
+(requires $\mu_2 > \mu_1$ for any valid force range)
+
+---
+
+## SECTION 17 — Practice Problems
+
+---
+
+### JEE Main Practice Problems
+
+**P1.** A block (8 kg) rests on a rough floor ($\mu_s = 0.45$, $\mu_k = 0.35$, $g = 10$ m/s²). Find (a) minimum force to start motion, (b) friction force when 30 N is applied, (c) acceleration when 40 N is applied.
+
+**P2.** A block of 5 kg is on a rough incline (30°, $\mu_k = 0.2$). Is it in equilibrium? If force 10 N is applied up the incline, find friction. ($g = 10$ m/s²)
+
+**P3.** Two blocks (4 kg and 6 kg) are on a rough horizontal surface ($\mu_k = 0.2$ for both). They are connected by a string. Force 40 N is applied to the 6 kg block. Find acceleration and tension. ($g = 10$ m/s²)
+
+**P4.** A block (3 kg) on a 45° rough incline ($\mu_s = 0.6$, $\mu_k = 0.4$). Find: (a) Is it in equilibrium? (b) If it slides, what is its acceleration? ($g = 10$ m/s²)
+
+**P5.** A ladder (4 m, 12 kg) leans against a smooth wall at 60° to floor ($\mu_s = 0.5$). Find minimum angle for safety. Can a man of 60 kg stand at the top without the ladder slipping?
+
+**P6.** A block (2 kg) on rough floor ($\mu_s = 0.4$). A force 5 N is applied at 53° above horizontal. Will the block move? Find friction. ($g = 10$ m/s²)
+
+**P7.** What angle above horizontal should a 10 N force be applied to a 3 kg block ($\mu_s = 0.3$, $g = 10$ m/s²) to minimise the force needed to move it? What is this minimum force?
+
+**P8.** Block A (5 kg) on rough horizontal surface ($\mu_k = 0.3$). Block B (3 kg) on top of A ($\mu = 0.5$ between A and B). Force 60 N applied to A. Do they move together? Find accelerations. ($g = 10$ m/s²)
+
+**P9.** A chain of mass 4 kg and length 3 m lies on a rough table ($\mu_s = 0.25$). Find maximum hanging length.
+
+**P10.** A block (5 kg) is pushed up a rough incline (37°, $\mu_k = 0.3$) with initial speed 8 m/s. Find distance before stopping and time to return to bottom. ($g = 10$ m/s²)
+
+**P11.** A 2 kg block slides down a rough 30° incline with constant velocity. Find $\mu_k$.
+
+**P12.** Block A (3 kg, smooth floor) has block B (1 kg) on top ($\mu_{AB} = 0.4$). Force 8 N on A. Find (a) $a$ if they move together, (b) check if this is possible, (c) find individual accelerations if they slip. ($g = 10$ m/s²)
+
+**P13.** A horizontal force is applied to a 5 kg block on a rough 30° incline to keep it stationary. $\mu_s = 0.4$. Find the range of horizontal force. ($g = 10$ m/s²)
+
+**P14.** Two blocks (2 kg and 3 kg) are stacked (3 on top of 2). A force 20 N is applied to the 2 kg block on rough floor ($\mu_{floor} = 0.2$, $\mu_{between} = 0.3$). Find accelerations. ($g = 10$ m/s²)
+
+**P15.** A block of 4 kg is on a rough horizontal surface and connected by a string over a smooth pulley to a 3 kg hanging mass. $\mu_k = 0.3$. Find acceleration and tension. ($g = 10$ m/s²)
+
+---
+
+### JEE Advanced Practice Problems
+
+**Q1.** Block A (5 kg) on rough incline (37°, $\mu_s = 0.5$, $\mu_k = 0.4$) connected to block B (hanging). Find range of B's mass for equilibrium. What is $a$ if $m_B = 6$ kg? ($g = 10$ m/s²)
+
+**Q2.** A plank of mass $M$ on rough floor ($\mu_1$). Block of mass $m$ on plank ($\mu_2$). Force $F$ applied to block (horizontally). Find accelerations of plank and block when they slip, and condition for no slipping.
+
+**Q3.** A block (mass $m$) is on a rough incline (angle $\theta$, $\mu$). A string connected to it runs horizontally over a smooth pulley to a hanging mass. At what mass of hanging block will the block on incline just start to move up?
+
+**Q4.** A and B are two blocks connected over a smooth pulley. A (3 kg) is on a rough incline (30°, $\mu = 0.3$). B (2 kg) hangs. System starts from rest. Find (a) acceleration, (b) velocity after 2 s. ($g = 10$ m/s²)
+
+**Q5.** A rope of mass $m_r$ and length $L$ hangs with part ($x_0$) on a rough table ($\mu$). The part hanging is $L - x_0$. Find (a) minimum $x_0$ for rope not to slide, (b) acceleration if $x_0 = L/3$ and $\mu = 0.2$.
+
+**Q6.** A block rests on a rough incline (angle $\theta$, $\mu$). A force $P$ is applied at angle $\phi$ to the incline surface. Show that the minimum force to just move the block up the incline is $P_{min} = mg\sin(\theta + \lambda)/\cos(\phi - \lambda)$, where $\lambda = \arctan\mu$.
+
+**Q7.** In a double-block system: Block A (6 kg) on rough floor ($\mu_{k1} = 0.3$), Block B (4 kg) on top of A ($\mu_{k2} = 0.4$ between A and B). Force $F_A = 50$ N on A, force $F_B = 20$ N on B in opposite direction. Find accelerations. ($g = 10$ m/s²)
+
+**Q8.** A uniform ladder of mass $m$ and length $L$ leans against a rough wall (coefficient $\mu_W$) and rough floor (coefficient $\mu_F$). Find the minimum angle $\theta$ for equilibrium.
+
+**Q9.** A block (2 kg) is placed on a plank (6 kg, smooth floor). Force applied to plank: $F = 30t$ N (increasing with time). $\mu = 0.25$ between block and plank. At what time $t$ does the block start to slip? ($g = 10$ m/s²)
+
+**Q10.** Three blocks A (2 kg), B (4 kg), C (6 kg) are arranged so that A sits on B which sits on C which is on a rough floor ($\mu_f = 0.1$). $\mu_{AB} = 0.4$, $\mu_{BC} = 0.3$. Find maximum force applied to B such that: (a) A, B, C all move together, (b) only A and B move together on C. ($g = 10$ m/s²)
+
+---
+
+## SECTION 18 — PYQ Analysis
+
+---
+
+### JEE Main Trends (2019–2024)
+
+| Topic | Frequency | Common Traps |
+|-------|-----------|-------------|
+| Block on rough incline (acceleration) | Very High | Using $N = mg$ instead of $mg\cos\theta$ |
+| Two-block systems (block-on-block) | High | Direction of friction on each block |
+| Angle of repose | Medium | Confusing $\mu_s$ vs $\mu_k$ |
+| Minimum force at optimal angle | Medium | Forgetting angle = angle of friction |
+| Chain/rope on table | Low–Medium | Fraction formula $\mu/(1+\mu)$ |
+| Ladder problems | Low | Torque equation needed |
+
+---
+
+### JEE Advanced Trends (2019–2024)
+
+| Topic | Frequency | Format |
+|-------|-----------|--------|
+| Block-on-block with different $\mu$ | Very High | Multi-correct |
+| Friction on incline + pulley system | High | Integer |
+| Range of forces / range of masses for equilibrium | High | Analytical |
+| Variable friction problems | Medium | Paragraph |
+| Rope/chain dynamics | Medium | Multi-correct |
+
+**Key JEE Advanced Insight:** Problems frequently ask for the **range** of some quantity (mass, force, angle) for which a system is in equilibrium. This requires analysing two limiting cases: tendency to move in each direction, with friction reversing accordingly.
+
+---
+
+## SECTION 19 — Final Revision Module
+
+---
+
+### Formula Sheet
+
+<Formula label="Friction — Complete Formula Sheet">
+
+**Static friction:** $0 \leq f_s \leq \mu_s N$
+
+**Limiting friction:** $f_{s,max} = \mu_s N$
+
+**Kinetic friction:** $f_k = \mu_k N$, always $\mu_k < \mu_s$
+
+**Angle of friction:** $\tan\lambda = \mu_s$
+
+**Angle of repose:** $\tan\theta_r = \mu_s$ (equals angle of friction)
+
+**On smooth incline:** $a = g\sin\theta$
+
+**Sliding DOWN rough incline:** $a = g(\sin\theta - \mu_k\cos\theta)$
+
+**Sliding UP rough incline:** $a = g(\sin\theta + \mu_k\cos\theta)$ (deceleration)
+
+**Equilibrium on rough incline:** $\tan\theta \leq \mu_s$
+
+**Horizontal force to push block up incline:** $P = mg\tan(\theta + \lambda)$
+
+**Minimum force on flat surface:** $F_{min} = mg\sin\lambda$, at angle $\alpha = \lambda$ above horizontal
+
+**Max fraction of chain hanging:** $f_{max} = \dfrac{\mu_s}{1+\mu_s}$
+
+**Ladder (smooth wall):** $N_W = \dfrac{mg}{2\tan\theta}$; min angle: $\tan\theta_{min} = \dfrac{1}{2\mu_s}$
+
+**Belt/rope friction (capstan):** $T_2 = T_1 e^{\mu\alpha}$
+
+**Range of $P$ (along incline) for equilibrium:**
+$mg(\sin\theta - \mu_s\cos\theta) \leq P \leq mg(\sin\theta + \mu_s\cos\theta)$
+
+</Formula>
+
+---
+
+### Last-Minute Tips
+
+<Callout type="tip">
+**5 Golden Rules for Friction Problems**
+
+1. **Static friction is self-adjusting** — always calculate $f_{s,max}$ first, then compare with the applied force component to decide if the body moves.
+
+2. **Check the direction carefully** — friction opposes *relative motion* between surfaces, not the absolute motion of the body. Draw both surfaces and ask "which way would one surface slide on the other?"
+
+3. **Always recalculate $N$** — on inclined planes, with angled forces, or in elevators, $N \neq mg$.
+
+4. **For equilibrium range problems** — solve two separate cases: (a) object about to slide in one direction, (b) about to slide the other way. The equilibrium range lies between these two limits.
+
+5. **For block-on-block** — draw separate FBDs and remember friction is an internal force for the combined system but an external force for each individual block.
+</Callout>
+
+<Callout type="warning">
+**3 Traps That Kill Marks**
+
+1. **Angle of repose trap:** $\tan\theta_r = \mu_s$ (not $\mu_k$!). A block placed on an incline starts sliding based on static friction, not kinetic.
+
+2. **Friction can be zero even on rough surfaces** — if no force tries to cause relative motion, friction is zero. "Rough surface" doesn't mean there's always friction.
+
+3. **In block-on-block problems** — when the lower block has a force applied, the friction on the UPPER block is forward (it's being dragged along). Don't draw it backward just because "friction opposes motion."
+</Callout>
+
+---
+
+*Module created by the Physics Mastery faculty team — Senior JEE Faculty · IIT Physics Professors · Olympiad Mentors*
+
+*For JEE Main · JEE Advanced · NEET · Physics Olympiad*

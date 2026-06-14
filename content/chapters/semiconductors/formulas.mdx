@@ -1,0 +1,147 @@
+---
+title: Semiconductors — Formula Sheet
+description: Key formulas for Semiconductors for JEE & NEET.
+---
+
+## Energy Band Theory
+
+<Formula label="Band Gap Values">
+$$E_g(\text{Si}) \approx 1.1\ \text{eV}, \quad E_g(\text{Ge}) \approx 0.67\ \text{eV}$$
+$$E_g(\text{GaAs}) \approx 1.43\ \text{eV}$$
+$$\text{Conductor: } E_g = 0;\quad \text{Insulator: } E_g > 3\ \text{eV}$$
+</Formula>
+
+---
+
+## Intrinsic Semiconductors
+
+<Formula label="Intrinsic Carrier Concentration">
+$$n_i = \sqrt{n_e \cdot n_h}$$
+$$n_e = n_h = n_i \quad \text{(intrinsic)}$$
+$$n_i^2 = AT^3 e^{-E_g/k_BT} \quad \text{(temperature dependence)}$$
+</Formula>
+
+<Formula label="Mass Action Law">
+$$n_e \cdot n_h = n_i^2 \quad \text{(at thermal equilibrium, any doping level)}$$
+</Formula>
+
+<Formula label="Conductivity of Intrinsic Semiconductor">
+$$\sigma = n_i e(\mu_e + \mu_h)$$
+$$\text{(} \mu_e, \mu_h \text{ = electron and hole mobilities)}$$
+</Formula>
+
+---
+
+## Extrinsic Semiconductors
+
+<Formula label="n-type Semiconductor (donor doping N_D)">
+$$n_e \approx N_D \gg n_i, \quad n_h = \frac{n_i^2}{N_D}$$
+$$\text{Majority carriers: electrons; minority: holes}$$
+</Formula>
+
+<Formula label="p-type Semiconductor (acceptor doping N_A)">
+$$n_h \approx N_A \gg n_i, \quad n_e = \frac{n_i^2}{N_A}$$
+$$\text{Majority carriers: holes; minority: electrons}$$
+</Formula>
+
+<Formula label="Charge Neutrality">
+$$n_e + N_A^- = n_h + N_D^+ \quad \text{(for compensated doping)}$$
+</Formula>
+
+---
+
+## p-n Junction Diode
+
+<Formula label="Contact (Built-in) Potential">
+$$V_0 = \frac{k_BT}{e}\ln\frac{N_A N_D}{n_i^2}$$
+$$V_0 \approx 0.3\ \text{V (Ge)}, \quad V_0 \approx 0.7\ \text{V (Si) at room temp}$$
+</Formula>
+
+<Formula label="Depletion Width">
+$$W = \sqrt{\frac{2\varepsilon(V_0 \pm V_f)}{e}\left(\frac{N_A + N_D}{N_A N_D}\right)}$$
+$$\text{(+ for reverse bias, − for forward bias)}$$
+</Formula>
+
+<Formula label="Diode Current (Shockley Equation)">
+$$I = I_0\left(e^{eV/\eta k_BT} - 1\right)$$
+$$I_0 = \text{reverse saturation current}, \quad \eta = 1\text{ (Ge)}, 2\text{ (Si)}$$
+</Formula>
+
+<Formula label="Dynamic Resistance">
+$$r_d = \frac{dV}{dI} = \frac{\eta k_BT}{eI} \approx \frac{26}{I(\text{mA})}\ \Omega \quad (\eta = 1, T = 300\ \text{K})$$
+</Formula>
+
+---
+
+## Special Diodes
+
+<Formula label="Zener Diode (Voltage Regulation)">
+$$V_{\text{out}} = V_Z \quad \text{(in breakdown region)}$$
+$$R_s = \frac{V_{\text{in}} - V_Z}{I_Z + I_L}$$
+</Formula>
+
+<Formula label="Photodiode (Reverse Biased)">
+$$I \propto \text{light intensity} \quad \text{(reverse current increases with light)}$$
+</Formula>
+
+---
+
+## Transistors (BJT)
+
+<Formula label="Transistor Relations">
+$$I_E = I_B + I_C$$
+$$\alpha = \frac{I_C}{I_E} < 1, \quad \beta = \frac{I_C}{I_B} \gg 1$$
+$$\alpha = \frac{\beta}{\beta+1}, \quad \beta = \frac{\alpha}{1-\alpha}$$
+$$\beta \text{ (h}_{FE}\text{): typical range 50–300}$$
+</Formula>
+
+<Formula label="Common Emitter — Current Gain">
+$$A_I = \beta = \frac{I_C}{I_B}$$
+</Formula>
+
+<Formula label="Common Emitter — Voltage Gain">
+$$A_V = -\beta\frac{R_C}{r_i}$$
+$$\text{(} r_i \text{ = input resistance, } R_C \text{ = collector resistance)}$$
+</Formula>
+
+<Formula label="Common Emitter — Power Gain">
+$$A_P = A_I \times A_V = \beta^2 \frac{R_C}{r_i}$$
+</Formula>
+
+---
+
+## Logic Gates
+
+| Gate | Boolean | Truth Condition |
+|------|---------|----------------|
+| AND | $Y = A \cdot B$ | Y=1 only when all inputs=1 |
+| OR | $Y = A + B$ | Y=1 when any input=1 |
+| NOT | $Y = \bar{A}$ | Y=0 when A=1 |
+| NAND | $Y = \overline{A\cdot B}$ | Y=0 only when all inputs=1 |
+| NOR | $Y = \overline{A+B}$ | Y=1 only when all inputs=0 |
+| XOR | $Y = A\oplus B$ | Y=1 when inputs differ |
+| XNOR | $Y = \overline{A\oplus B}$ | Y=1 when inputs are same |
+
+<Formula label="De Morgan's Theorems">
+$$\overline{A\cdot B} = \bar{A} + \bar{B}$$
+$$\overline{A + B} = \bar{A}\cdot\bar{B}$$
+</Formula>
+
+<Callout type="tip">
+NAND and NOR are universal gates — any logic circuit can be built using only NAND gates (or only NOR gates).
+</Callout>
+
+---
+
+## Rectifiers
+
+<Formula label="Half-Wave Rectifier Output">
+$$V_{\text{dc}} = \frac{V_m}{\pi}, \quad I_{\text{dc}} = \frac{I_m}{\pi}$$
+$$\text{Ripple factor} = 1.21, \quad \text{Efficiency} = 40.6\%$$
+</Formula>
+
+<Formula label="Full-Wave Rectifier Output">
+$$V_{\text{dc}} = \frac{2V_m}{\pi}, \quad I_{\text{dc}} = \frac{2I_m}{\pi}$$
+$$\text{Ripple factor} = 0.48, \quad \text{Efficiency} = 81.2\%$$
+$$\text{Output frequency} = 2f_{\text{input}}$$
+</Formula>

@@ -1,0 +1,216 @@
+---
+title: Current Electricity — Formula Sheet
+description: Complete formula reference for Current Electricity — JEE Advanced level, covering microscopic relations, resistance, EMF, Kirchhoff, bridges, potentiometer, galvanometer, Joule heating, and advanced network techniques.
+---
+
+## Microscopic Relations
+
+<Formula label="Electric Current">
+$$i = \frac{dq}{dt}, \qquad i = neAv_d$$
+</Formula>
+
+<Formula label="Drift Velocity">
+$$\vec{v}_d = -\frac{e\tau}{m}\vec{E}, \qquad v_d = \mu E$$
+</Formula>
+
+<Formula label="Mobility">
+$$\mu = \frac{v_d}{E} = \frac{e\tau}{m} \qquad \text{unit: m}^2\,\text{V}^{-1}\,\text{s}^{-1}$$
+</Formula>
+
+<Formula label="Microscopic Ohm's Law">
+$$\vec{J} = \sigma\vec{E}, \qquad \sigma = \frac{ne^2\tau}{m}, \qquad \rho = \frac{1}{\sigma} = \frac{m}{ne^2\tau}$$
+</Formula>
+
+<Formula label="Non-uniform Current Density">
+$$i = \int \vec{J}\cdot d\vec{A} = \int_0^R J(r)\,2\pi r\,dr$$
+</Formula>
+
+---
+
+## Resistance
+
+<Formula label="Macroscopic Resistance">
+$$R = \frac{\rho L}{A}, \qquad V = iR$$
+</Formula>
+
+<Formula label="Temperature Dependence">
+$$\rho_T = \rho_0[1+\alpha(T-T_0)], \qquad R_T = R_0[1+\alpha(T-T_0)]$$
+</Formula>
+
+<Formula label="Stretching a Wire (volume conserved)">
+$$R' = k^2 R \quad \text{(if length stretched by factor }k\text{)}$$
+$$R \propto L^2, \quad R \propto \frac{1}{A^2}, \quad R \propto \frac{1}{r^4}$$
+</Formula>
+
+<Formula label="Tapered Conductor (radius a to b, length ℓ)">
+$$R = \frac{\rho\ell}{\pi ab}$$
+</Formula>
+
+<Formula label="Junction Surface Charge Density">
+$$\sigma_s = \varepsilon_0\,J\,(\rho_2 - \rho_1)$$
+</Formula>
+
+<Formula label="Series Combination">
+$$R_s = R_1 + R_2 + \cdots \qquad \text{(same current, voltages add)}$$
+</Formula>
+
+<Formula label="Parallel Combination">
+$$\frac{1}{R_p} = \frac{1}{R_1} + \frac{1}{R_2} + \cdots, \qquad R_p = \frac{R_1 R_2}{R_1+R_2}$$
+</Formula>
+
+<Formula label="Current Divider (parallel)">
+$$i_1 = i\frac{R_2}{R_1+R_2}, \qquad i_2 = i\frac{R_1}{R_1+R_2}$$
+</Formula>
+
+<Formula label="Voltage Divider (series)">
+$$V_1 = V\frac{R_1}{R_1+R_2}$$
+</Formula>
+
+---
+
+## EMF and Internal Resistance
+
+<Formula label="Terminal Voltage">
+$$V = \varepsilon - ir \quad \text{(discharging)}, \qquad V = \varepsilon + ir \quad \text{(charging)}$$
+$$i = \frac{\varepsilon}{R+r}, \qquad i_{\max}(\text{short circuit}) = \frac{\varepsilon}{r}$$
+</Formula>
+
+<Formula label="Cells in Series">
+$$\varepsilon_{\text{eq}} = \sum\varepsilon_i, \qquad r_{\text{eq}} = \sum r_i, \qquad i = \frac{n\varepsilon}{R+nr}$$
+</Formula>
+
+<Formula label="Cells in Parallel (identical)">
+$$\varepsilon_{\text{eq}} = \varepsilon, \qquad r_{\text{eq}} = \frac{r}{n}, \qquad i = \frac{\varepsilon}{R+r/n}$$
+</Formula>
+
+<Formula label="Mixed Grouping (m rows × n cells in series)">
+$$i = \frac{n\varepsilon}{R + nr/m}, \qquad \text{max when } \frac{nr}{m} = R$$
+</Formula>
+
+<Formula label="Unequal Cells in Parallel">
+$$\varepsilon_{\text{eq}} = \frac{\varepsilon_1/r_1 + \varepsilon_2/r_2}{1/r_1 + 1/r_2}, \qquad \frac{1}{r_{\text{eq}}} = \frac{1}{r_1} + \frac{1}{r_2}$$
+</Formula>
+
+<Formula label="Maximum Power Transfer">
+$$P_{\max} \text{ when } R = r, \qquad P_{\max} = \frac{\varepsilon^2}{4r}, \qquad \eta = 50\%$$
+</Formula>
+
+---
+
+## Kirchhoff's Laws
+
+<Formula label="KCL — Junction Rule">
+$$\sum i = 0 \quad \text{(at any junction — conservation of charge)}$$
+</Formula>
+
+<Formula label="KVL — Loop Rule">
+$$\sum \Delta V = 0 \quad \text{(around any closed loop — conservation of energy)}$$
+$$-iR \text{ along current}, \quad +iR \text{ against current}$$
+$$+\varepsilon \text{ entering } -\text{ terminal}, \quad -\varepsilon \text{ entering } +\text{ terminal}$$
+</Formula>
+
+---
+
+## Wheatstone Bridge & Meter Bridge
+
+<Formula label="Balanced Wheatstone Bridge">
+$$\frac{P}{Q} = \frac{R}{S} \implies i_g = 0$$
+</Formula>
+
+<Formula label="Meter Bridge">
+$$X = R\frac{\ell}{100-\ell} \qquad (\ell = \text{balance length in cm})$$
+</Formula>
+
+---
+
+## Potentiometer
+
+<Formula label="Potential Gradient">
+$$k = \frac{V_{\text{wire}}}{L} = \frac{i\rho}{A} \quad \text{(V/m)}, \qquad \varepsilon = k\ell$$
+</Formula>
+
+<Formula label="Comparing EMFs">
+$$\frac{\varepsilon_1}{\varepsilon_2} = \frac{\ell_1}{\ell_2}$$
+</Formula>
+
+<Formula label="Internal Resistance via Potentiometer">
+$$r = R\left(\frac{\ell_1 - \ell_2}{\ell_2}\right)$$
+</Formula>
+
+---
+
+## Galvanometer Conversions
+
+<Formula label="Shunt (Ammeter conversion)">
+$$S = \frac{i_g G}{I - i_g} \qquad \text{(connected in parallel)}$$
+$$R_{\text{ammeter}} = \frac{GS}{G+S} \approx 0$$
+</Formula>
+
+<Formula label="Series Resistance (Voltmeter conversion)">
+$$R_v = \frac{V}{i_g} - G \qquad \text{(connected in series)}$$
+$$R_{\text{voltmeter}} = G + R_v \to \infty$$
+</Formula>
+
+---
+
+## Joule Heating
+
+<Formula label="Heat Generated">
+$$H = i^2Rt = \frac{V^2}{R}t = Vit \quad \text{(joules)}$$
+$$P = i^2R = \frac{V^2}{R} = Vi$$
+</Formula>
+
+<Formula label="Bulb Resistance from Rating">
+$$R = \frac{V_0^2}{P_0} \qquad (V_0, P_0 = \text{rated voltage and power})$$
+</Formula>
+
+| Connection | Use | Brighter bulb |
+|---|---|---|
+| Series (same $i$) | $P = i^2 R \propto R$ | Higher wattage rating = lower $R$ → **dimmer** |
+| Parallel (same $V$) | $P = V^2/R \propto 1/R$ | Higher wattage rating = lower $R$ → **brighter** |
+
+---
+
+## Advanced Network Techniques
+
+<Formula label="Star–Delta (Delta → Star)">
+$$R_A = \frac{R_{AB}R_{CA}}{\Sigma R}, \quad R_B = \frac{R_{AB}R_{BC}}{\Sigma R}, \quad R_C = \frac{R_{BC}R_{CA}}{\Sigma R}$$
+$$\text{where } \Sigma R = R_{AB}+R_{BC}+R_{CA}$$
+</Formula>
+
+<Formula label="Star–Delta (Star → Delta)">
+$$R_{AB} = \frac{R_A R_B + R_B R_C + R_C R_A}{R_C}, \quad \text{(cyclically)}$$
+</Formula>
+
+<Formula label="Symmetric Case">
+$$R_Y = \frac{R_\Delta}{3}, \qquad R_\Delta = 3R_Y$$
+</Formula>
+
+<Formula label="Infinite Ladder">
+$$X = \frac{R_1 + \sqrt{R_1^2 + 4R_1 R_2}}{2}$$
+$$\text{For } R_1 = R_2 = R: \quad X = \phi R = \frac{(1+\sqrt{5})}{2}R$$
+</Formula>
+
+<Formula label="Cube of Resistors (12 equal resistors R)">
+$$R_{\text{edge}} = \frac{7}{12}R, \qquad R_{\text{face diagonal}} = \frac{3}{4}R, \qquad R_{\text{body diagonal}} = \frac{5}{6}R$$
+</Formula>
+
+<Callout type="tip">
+**Cube memory trick:** The ordering $\dfrac{7}{12} < \dfrac{3}{4} < \dfrac{5}{6}$ makes sense — closer corners $\Rightarrow$ more paths $\Rightarrow$ lower resistance.
+</Callout>
+
+---
+
+## Resistor Colour Code
+
+Mnemonic: **B B ROY of Great Britain had a Very Good Wife**
+
+| Colour | Digit | Colour | Digit |
+|---|---|---|---|
+| Black | 0 | Green | 5 |
+| Brown | 1 | Blue | 6 |
+| Red | 2 | Violet | 7 |
+| Orange | 3 | Grey | 8 |
+| Yellow | 4 | White | 9 |
+
+Gold = $\pm5\%$ tolerance, Silver = $\pm10\%$ tolerance.

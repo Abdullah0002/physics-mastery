@@ -1,0 +1,116 @@
+---
+title: Electromagnetic Waves — Formula Sheet
+description: Key formulas for Electromagnetic Waves for JEE & NEET.
+---
+
+## Maxwell's Equations (Integral Form)
+
+<Formula label="Gauss's Law for Electricity">
+$$\oint \vec{E}\cdot d\vec{A} = \frac{Q_{\text{enc}}}{\varepsilon_0}$$
+</Formula>
+
+<Formula label="Gauss's Law for Magnetism">
+$$\oint \vec{B}\cdot d\vec{A} = 0 \quad \text{(no magnetic monopoles)}$$
+</Formula>
+
+<Formula label="Faraday's Law">
+$$\oint \vec{E}\cdot d\vec{l} = -\frac{d\Phi_B}{dt}$$
+</Formula>
+
+<Formula label="Ampere-Maxwell Law">
+$$\oint \vec{B}\cdot d\vec{l} = \mu_0\left(I + \varepsilon_0\frac{d\Phi_E}{dt}\right) = \mu_0(I + I_d)$$
+$$I_d = \varepsilon_0\frac{d\Phi_E}{dt} \quad \text{(displacement current)}$$
+</Formula>
+
+---
+
+## Speed of EM Waves
+
+<Formula label="Speed of Light (EM wave in vacuum)">
+$$c = \frac{1}{\sqrt{\mu_0\varepsilon_0}} = 3\times10^8\ \text{m s}^{-1}$$
+$$\mu_0 = 4\pi\times10^{-7}\ \text{H m}^{-1}, \quad \varepsilon_0 = 8.854\times10^{-12}\ \text{F m}^{-1}$$
+</Formula>
+
+<Formula label="Speed in Medium">
+$$v = \frac{c}{n} = \frac{1}{\sqrt{\mu\varepsilon}} = \frac{c}{\sqrt{K\mu_r}}$$
+$$n = \sqrt{K\mu_r} \approx \sqrt{K} \text{ for non-magnetic media}$$
+</Formula>
+
+<Formula label="Relation between E and B in EM Wave">
+$$\frac{E_0}{B_0} = c, \quad E = cB \quad \text{(at every point and time)}$$
+$$\vec{E}\times\vec{B} \parallel \hat{k} \quad \text{(direction of propagation)}$$
+</Formula>
+
+---
+
+## EM Wave Equations
+
+<Formula label="Plane EM Wave (propagating in x-direction)">
+$$E_y = E_0\sin(kx - \omega t), \quad B_z = B_0\sin(kx - \omega t)$$
+$$k = \frac{\omega}{c} = \frac{2\pi}{\lambda}$$
+</Formula>
+
+<Formula label="EM Wave in Medium">
+$$v = \frac{1}{\sqrt{\mu\varepsilon}}, \quad k = \frac{\omega}{v}$$
+</Formula>
+
+---
+
+## Energy and Intensity
+
+<Formula label="Energy Density of EM Wave">
+$$u = u_E + u_B = \varepsilon_0 E^2 = \frac{B^2}{\mu_0}$$
+$$u_E = \frac{1}{2}\varepsilon_0 E^2 = u_B = \frac{B^2}{2\mu_0} \quad \text{(equal)}$$
+</Formula>
+
+<Formula label="Poynting Vector">
+$$\vec{S} = \frac{\vec{E}\times\vec{B}}{\mu_0}, \quad |\vec{S}| = \frac{EB}{\mu_0} = \frac{E^2}{\mu_0 c}$$
+</Formula>
+
+<Formula label="Intensity (Average)">
+$$I = \langle S \rangle = \frac{E_0^2}{2\mu_0 c} = \frac{c\varepsilon_0 E_0^2}{2} = \frac{c B_0^2}{2\mu_0}$$
+$$I = \frac{P}{4\pi r^2} \quad \text{(isotropic point source)}$$
+</Formula>
+
+---
+
+## Radiation Pressure
+
+<Formula label="Radiation Pressure (completely absorbed surface)">
+$$P_{\text{rad}} = \frac{I}{c} = \frac{u}{1} \cdot \frac{c}{c} = u_{\text{avg}}$$
+</Formula>
+
+<Formula label="Radiation Pressure (perfectly reflecting surface)">
+$$P_{\text{rad}} = \frac{2I}{c}$$
+</Formula>
+
+---
+
+## EM Spectrum
+
+| Name | Wavelength Range | Frequency Range |
+|------|-----------------|----------------|
+| Radio waves | > 0.1 m | < 3 GHz |
+| Microwaves | 1 mm – 0.1 m | 3 GHz – 300 GHz |
+| Infrared | 700 nm – 1 mm | 3×10¹¹ – 4×10¹⁴ Hz |
+| Visible | 400 – 700 nm | 4×10¹⁴ – 7×10¹⁴ Hz |
+| Ultraviolet | 1 – 400 nm | 7×10¹⁴ – 3×10¹⁷ Hz |
+| X-rays | 0.001 – 10 nm | 3×10¹⁶ – 3×10¹⁹ Hz |
+| Gamma rays | < 0.01 nm | > 3×10¹⁹ Hz |
+
+<Callout type="tip">
+Visible spectrum (VIBGYOR): Violet (~400 nm) to Red (~700 nm). Red light has highest wavelength, least frequency, least energy.
+</Callout>
+
+---
+
+## Displacement Current
+
+<Formula label="Displacement Current Density">
+$$J_d = \varepsilon_0\frac{\partial E}{\partial t}$$
+$$I_d = \varepsilon_0\frac{d\Phi_E}{dt}$$
+</Formula>
+
+<Callout type="important">
+Displacement current $I_d$ is NOT a real current — it is a time-varying electric flux that creates a magnetic field exactly like a real current.
+</Callout>

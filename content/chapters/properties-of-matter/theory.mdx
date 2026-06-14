@@ -1,0 +1,161 @@
+---
+title: Properties of Matter — Theory
+description: Elasticity, surface tension, fluid statics, Bernoulli's theorem, and viscosity for JEE & NEET.
+difficulty: MEDIUM
+tags: [elasticity, stress, strain, surface-tension, viscosity, fluid-statics]
+---
+
+## 1. Elastic Properties
+
+### Stress and Strain
+
+<Formula label="Stress">
+$$\sigma = \frac{F}{A} \quad \text{(Pa = N/m}^2\text{)}$$
+</Formula>
+
+<Formula label="Strain">
+$$\epsilon = \frac{\Delta L}{L} \quad \text{(dimensionless)}$$
+</Formula>
+
+**Types of stress/strain:**
+- Longitudinal (tensile/compressive)
+- Shear (tangential force)
+- Volume (bulk compression)
+
+### Young's Modulus
+
+<Formula label="Young's Modulus">
+$$Y = \frac{\text{Longitudinal stress}}{\text{Longitudinal strain}} = \frac{F L}{A \Delta L}$$
+</Formula>
+
+### Bulk Modulus
+
+$$B = -\frac{P}{\Delta V/V} = \frac{\text{Volume stress}}{\text{Volume strain}}$$
+
+**Compressibility:** $\kappa = 1/B$
+
+### Shear Modulus (Modulus of Rigidity)
+
+$$\eta = \frac{\text{Shear stress}}{\text{Shear strain}} = \frac{F/A}{\theta}$$
+
+**Relation (for isotropic material):** $Y = 3B(1-2\sigma_P)$, $Y = 2\eta(1+\sigma_P)$ where $\sigma_P$ = Poisson's ratio.
+
+---
+
+## 2. Elastic Potential Energy
+
+Energy stored in a stretched/compressed wire:
+
+<Formula label="Elastic PE in wire">
+$$U = \frac{1}{2}\cdot\text{stress}\cdot\text{strain}\cdot\text{volume} = \frac{F^2 L}{2AY}$$
+</Formula>
+
+---
+
+## 3. Fluid Statics
+
+### Pressure
+
+$$P = \frac{F}{A}, \quad P = \rho g h \quad (\text{gauge pressure at depth }h)$$
+
+Absolute pressure $= P_{atm} + \rho g h$.
+
+### Pascal's Law
+
+Pressure applied to an enclosed fluid is transmitted equally in all directions. Used in hydraulic press:
+
+$$\frac{F_1}{A_1} = \frac{F_2}{A_2}$$
+
+### Archimedes' Principle
+
+Buoyant force $= $ weight of fluid displaced:
+
+$$F_b = \rho_{fluid}\cdot V_{submerged}\cdot g$$
+
+**Flotation:** Body floats when $F_b = mg$, i.e., $\rho_{body}/\rho_{fluid} = V_{submerged}/V_{total}$.
+
+---
+
+## 4. Surface Tension
+
+Surface tension $T$ = force per unit length along a surface (N/m), or energy per unit area (J/m²).
+
+**Excess pressure inside:**
+
+<Formula label="Excess Pressure — Soap Bubble (two surfaces)">
+$$\Delta P = \frac{4T}{R}$$
+</Formula>
+
+<Formula label="Excess Pressure — Liquid Drop or Air Bubble in liquid (one surface)">
+$$\Delta P = \frac{2T}{R}$$
+</Formula>
+
+### Capillary Rise
+
+$$h = \frac{2T\cos\theta}{\rho g r}$$
+
+where $\theta$ = contact angle, $r$ = radius of tube. Water in glass: $\theta \approx 0°$ (rise). Mercury in glass: $\theta > 90°$ (depression).
+
+---
+
+## 5. Viscosity
+
+Viscous force between layers of fluid:
+
+$$F = \eta A \frac{dv}{dy}$$
+
+where $\eta$ = coefficient of dynamic viscosity (Pa·s), $dv/dy$ = velocity gradient.
+
+### Stokes' Law
+
+Drag force on a sphere of radius $r$ moving at velocity $v$ in a viscous fluid:
+
+$$F_{drag} = 6\pi\eta r v$$
+
+### Terminal Velocity
+
+When drag + buoyancy = weight:
+
+<Formula label="Terminal Velocity (sphere)">
+$$v_t = \frac{2r^2(\rho_s - \rho_f)g}{9\eta}$$
+</Formula>
+
+---
+
+## 6. Bernoulli's Theorem
+
+For steady, incompressible, non-viscous fluid flow:
+
+<Formula label="Bernoulli's Equation">
+$$P + \frac{1}{2}\rho v^2 + \rho g h = \text{constant}$$
+</Formula>
+
+### Continuity Equation
+
+$$A_1 v_1 = A_2 v_2 \quad (\text{volume flow rate constant})$$
+
+### Applications
+
+| Application | Key result |
+|---|---|
+| Venturimeter | $v \propto 1/\sqrt{A}$ at constriction |
+| Torricelli's theorem | $v = \sqrt{2gh}$ (hole in tank) |
+| Lift on aerofoil | $P_{bottom} > P_{top}$ (higher $v$ on top) |
+
+<Callout type="warning">
+Bernoulli applies only to **ideal** fluids (non-viscous, incompressible, streamline flow). Real fluids lose energy to viscosity and turbulence.
+</Callout>
+
+---
+
+## 7. Summary
+
+| Quantity | Formula |
+|---|---|
+| Young's modulus | $Y = FL/(A\Delta L)$ |
+| Pressure at depth | $P_0 + \rho g h$ |
+| Excess pressure — drop | $2T/R$ |
+| Excess pressure — soap bubble | $4T/R$ |
+| Capillary rise | $2T\cos\theta/(\rho g r)$ |
+| Terminal velocity | $2r^2(\rho_s-\rho_f)g/(9\eta)$ |
+| Bernoulli | $P + \frac{1}{2}\rho v^2 + \rho g h = c$ |

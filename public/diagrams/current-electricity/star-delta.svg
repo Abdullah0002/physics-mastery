@@ -1,0 +1,57 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" width="560" height="300" font-family="Arial, sans-serif">
+  <rect width="560" height="300" fill="#f8f9fa" rx="10"/>
+  <text x="280" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a2d5a">Star (Y) ↔ Delta (Δ) Transformation</text>
+
+  <!-- STAR (left) -->
+  <text x="140" y="50" text-anchor="middle" font-size="13" fill="#333" font-weight="bold">Star (Y)</text>
+  <!-- Center node O -->
+  <circle cx="140" cy="180" r="6" fill="#4a6fa5"/>
+  <text x="148" y="178" font-size="11" fill="#4a6fa5">O</text>
+  <!-- Node A (top) -->
+  <circle cx="140" cy="80" r="6" fill="#333"/>
+  <text x="132" y="76" font-size="12" fill="#333" font-weight="bold">A</text>
+  <!-- Node B (bottom-left) -->
+  <circle cx="72" cy="250" r="6" fill="#333"/>
+  <text x="56" y="262" font-size="12" fill="#333" font-weight="bold">B</text>
+  <!-- Node C (bottom-right) -->
+  <circle cx="208" cy="250" r="6" fill="#333"/>
+  <text x="212" y="262" font-size="12" fill="#333" font-weight="bold">C</text>
+  <!-- Arms -->
+  <line x1="140" y1="86"  x2="140" y2="174" stroke="#555" stroke-width="1.5"/>
+  <rect x="118" y="118" width="44" height="18" rx="4" fill="white" stroke="#e05252" stroke-width="2"/>
+  <text x="140" y="131" text-anchor="middle" font-size="11" fill="#e05252">R_A</text>
+  <line x1="134" y1="184" x2="78"  y2="244" stroke="#555" stroke-width="1.5"/>
+  <rect x="78"  y="194" width="44" height="18" rx="4" fill="white" stroke="#e05252" stroke-width="2" transform="rotate(-60,100,203)"/>
+  <text x="100" y="215" text-anchor="middle" font-size="11" fill="#e05252" transform="rotate(-60,100,215)">R_B</text>
+  <line x1="146" y1="184" x2="202" y2="244" stroke="#555" stroke-width="1.5"/>
+  <rect x="168" y="194" width="44" height="18" rx="4" fill="white" stroke="#e05252" stroke-width="2" transform="rotate(60,190,203)"/>
+  <text x="182" y="216" text-anchor="middle" font-size="11" fill="#e05252" transform="rotate(60,182,216)">R_C</text>
+
+  <!-- Arrow between -->
+  <text x="280" y="175" text-anchor="middle" font-size="20" fill="#888">⇄</text>
+
+  <!-- DELTA (right) -->
+  <text x="420" y="50" text-anchor="middle" font-size="13" fill="#333" font-weight="bold">Delta (Δ)</text>
+  <!-- Nodes A, B, C -->
+  <circle cx="420" cy="80"  r="6" fill="#333"/>
+  <text x="412" y="76" font-size="12" fill="#333" font-weight="bold">A</text>
+  <circle cx="352" cy="250" r="6" fill="#333"/>
+  <text x="336" y="262" font-size="12" fill="#333" font-weight="bold">B</text>
+  <circle cx="488" cy="250" r="6" fill="#333"/>
+  <text x="492" y="262" font-size="12" fill="#333" font-weight="bold">C</text>
+  <!-- AB side -->
+  <line x1="416" y1="84"  x2="356" y2="244" stroke="#555" stroke-width="1.5"/>
+  <rect x="356" y="144" width="50" height="18" rx="4" fill="white" stroke="#2980b9" stroke-width="2" transform="rotate(-62,381,153)"/>
+  <text x="376" y="158" text-anchor="middle" font-size="11" fill="#2980b9" transform="rotate(-62,376,158)">R_AB</text>
+  <!-- AC side -->
+  <line x1="424" y1="84"  x2="484" y2="244" stroke="#555" stroke-width="1.5"/>
+  <rect x="454" y="144" width="50" height="18" rx="4" fill="white" stroke="#2980b9" stroke-width="2" transform="rotate(62,479,153)"/>
+  <text x="464" y="160" text-anchor="middle" font-size="11" fill="#2980b9" transform="rotate(62,464,160)">R_AC</text>
+  <!-- BC side -->
+  <line x1="358" y1="250" x2="482" y2="250" stroke="#555" stroke-width="1.5"/>
+  <rect x="395" y="240" width="50" height="18" rx="4" fill="white" stroke="#2980b9" stroke-width="2"/>
+  <text x="420" y="253" text-anchor="middle" font-size="11" fill="#2980b9">R_BC</text>
+
+  <!-- Formulas -->
+  <text x="280" y="280" text-anchor="middle" font-size="10" fill="#555">Δ→Y: R_A = R_AB·R_AC/Σ   |   Y→Δ: R_AB = R_A+R_B+R_A·R_B/R_C</text>
+</svg>

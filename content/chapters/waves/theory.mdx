@@ -1,0 +1,155 @@
+---
+title: Waves — Theory
+description: Wave equation, superposition, standing waves, beats, and Doppler effect for JEE & NEET.
+difficulty: HARD
+tags: [waves, standing-waves, beats, Doppler, superposition, wave-equation]
+---
+
+## 1. Types of Waves
+
+- **Transverse:** Particle displacement perpendicular to wave propagation (e.g., light, string waves).
+- **Longitudinal:** Particle displacement parallel to wave propagation (e.g., sound, compression waves).
+
+---
+
+## 2. Wave Parameters
+
+| Parameter | Symbol | Relation |
+|---|---|---|
+| Wavelength | $\lambda$ | distance between successive identical points |
+| Frequency | $f$ | oscillations per second |
+| Time period | $T$ | $1/f$ |
+| Wave speed | $v$ | $v = f\lambda = \lambda/T$ |
+| Angular frequency | $\omega$ | $2\pi f$ |
+| Wave number | $k$ | $2\pi/\lambda = \omega/v$ |
+
+---
+
+## 3. Wave Equation
+
+For a wave traveling in the +$x$ direction:
+
+<Formula label="Progressive Wave">
+$$y(x,t) = A\sin(kx - \omega t + \phi_0) = A\sin\left(\frac{2\pi}{\lambda}x - \frac{2\pi}{T}t\right)$$
+</Formula>
+
+- $A$ = amplitude
+- Particle velocity: $v_p = \partial y/\partial t = -A\omega\cos(kx-\omega t)$
+- Particle acceleration: $a_p = -A\omega^2\sin(kx-\omega t) = -\omega^2 y$
+
+**Speed of a wave on string:**
+
+<Formula label="Wave speed on string">
+$$v = \sqrt{\frac{T}{\mu}}$$
+</Formula>
+
+where $T$ = tension, $\mu$ = mass per unit length.
+
+---
+
+## 4. Energy and Intensity
+
+Energy per unit length: $\frac{1}{2}\mu\omega^2 A^2$ (for string wave).
+
+**Intensity:** $I \propto A^2 \propto 1/r^2$ (for spherical wave in 3D).
+
+---
+
+## 5. Principle of Superposition
+
+When two or more waves overlap, the net displacement is the **algebraic sum** of individual displacements.
+
+$$y = y_1 + y_2$$
+
+---
+
+## 6. Standing Waves
+
+Two identical waves traveling in opposite directions:
+
+$$y_1 = A\sin(kx-\omega t), \quad y_2 = A\sin(kx+\omega t)$$
+
+$$y = y_1+y_2 = 2A\sin(kx)\cos(\omega t)$$
+
+- **Nodes:** $2A\sin(kx)=0 \Rightarrow kx = n\pi \Rightarrow x = n\lambda/2$
+- **Antinodes:** $|2A\sin(kx)| = 2A \Rightarrow kx = (2n+1)\pi/2 \Rightarrow x = (2n+1)\lambda/4$
+
+---
+
+## 7. Standing Waves on a String
+
+**Both ends fixed** (string/open pipe analogy):
+
+$$L = n\frac{\lambda}{2} \Rightarrow \lambda_n = \frac{2L}{n}, \quad f_n = \frac{nv}{2L}$$
+
+$n = 1$ is the **fundamental** (first harmonic). All harmonics present.
+
+<Formula label="Fundamental frequency (string)">
+$$f_1 = \frac{1}{2L}\sqrt{\frac{T}{\mu}}$$
+</Formula>
+
+---
+
+## 8. Beats
+
+Two waves of slightly different frequencies $f_1$ and $f_2$:
+
+<Formula label="Beat Frequency">
+$$f_{beat} = |f_1 - f_2|$$
+</Formula>
+
+The amplitude modulates at $f_{beat}$: loudness oscillates $f_{beat}$ times per second.
+
+---
+
+## 9. Doppler Effect (Sound)
+
+Apparent frequency when source and observer are in relative motion:
+
+<Formula label="Doppler Effect">
+$$f' = f\cdot\frac{v + v_O}{v - v_S}$$
+</Formula>
+
+**Sign convention (most common form):**
+- $v_O$ is **+ve** when observer moves **toward** source.
+- $v_S$ is **+ve** when source moves **toward** observer.
+- $v$ = speed of sound in medium.
+
+| Situation | Result |
+|---|---|
+| Source and observer approaching | $f' > f$ (blue shift) |
+| Source and observer receding | $f' < f$ (red shift) |
+| Observer moves toward stationary source | $f' = f(v+v_O)/v$ |
+| Source moves toward stationary observer | $f' = fv/(v-v_S)$ |
+
+<Callout type="warning">
+Doppler effect depends on **relative motion** but is **not symmetric** in sound — it matters whether the source or observer is moving. In light (special relativity), it is symmetric.
+</Callout>
+
+---
+
+## 10. Reflection at Boundaries
+
+- **Fixed end (rigid boundary):** Wave reflected with **phase change of $\pi$** (crest → trough). Reflected wave: $-A$.
+- **Free end (loose boundary):** Wave reflected **without** phase change.
+
+---
+
+## 11. Resonance in Strings
+
+Resonance occurs when the string length accommodates a whole number of half-wavelengths:
+
+$$f_n = \frac{n}{2L}\sqrt{\frac{T}{\mu}}, \quad n = 1, 2, 3, \ldots$$
+
+---
+
+## 12. Summary
+
+| Quantity | Formula |
+|---|---|
+| Wave speed | $v = f\lambda$ |
+| Speed on string | $\sqrt{T/\mu}$ |
+| Standing wave | $y = 2A\sin(kx)\cos(\omega t)$ |
+| Fundamental (fixed ends) | $f_1 = v/(2L)$ |
+| Beat frequency | $ \vert f_1 - f_2 \vert $ |
+| Doppler (toward) | $f' = f(v+v_O)/(v-v_S)$ |

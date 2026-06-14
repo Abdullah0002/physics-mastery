@@ -1,0 +1,35 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280" font-family="Georgia,serif" font-size="13">
+  <defs>
+    <marker id="arr-b" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#2563eb"/></marker>
+    <marker id="arr-g" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#16a34a"/></marker>
+    <marker id="arr-r" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#dc2626"/></marker>
+    <marker id="arr-p" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#7c3aed"/></marker>
+  </defs>
+  <rect width="440" height="280" fill="#fafafa" rx="8"/>
+  <text x="220" y="22" text-anchor="middle" font-size="15" font-weight="bold" fill="#111">Relative Velocity</text>
+  <!-- Ground line -->
+  <line x1="30" y1="200" x2="410" y2="200" stroke="#9ca3af" stroke-width="2"/>
+  <text x="220" y="218" text-anchor="middle" font-size="11" fill="#6b7280">Ground (reference)</text>
+  <!-- Object A: car on left -->
+  <rect x="60" y="168" width="50" height="32" fill="#bfdbfe" stroke="#2563eb" stroke-width="2" rx="3"/>
+  <text x="85" y="188" text-anchor="middle" font-size="12" font-weight="bold" fill="#1d4ed8">A</text>
+  <!-- vA arrow -->
+  <line x1="110" y1="183" x2="168" y2="183" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arr-b)"/>
+  <text x="139" y="175" text-anchor="middle" font-size="12" fill="#2563eb">v&#x2081;</text>
+  <!-- Object B: car on right -->
+  <rect x="270" y="168" width="50" height="32" fill="#bbf7d0" stroke="#16a34a" stroke-width="2" rx="3"/>
+  <text x="295" y="188" text-anchor="middle" font-size="12" font-weight="bold" fill="#166534">B</text>
+  <!-- vB arrow -->
+  <line x1="320" y1="183" x2="378" y2="183" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arr-g)"/>
+  <text x="349" y="175" text-anchor="middle" font-size="12" fill="#16a34a">v&#x2082;</text>
+  <!-- relative velocity formula box -->
+  <rect x="115" y="38" width="210" height="70" fill="#fff" stroke="#e5e7eb" rx="6"/>
+  <text x="220" y="60" text-anchor="middle" font-size="13" fill="#374151" font-weight="bold">Relative velocity of A w.r.t. B:</text>
+  <text x="220" y="82" text-anchor="middle" font-size="14" fill="#7c3aed" font-weight="bold">v&#x2090;&#x2091; = v&#x2081; - v&#x2082;</text>
+  <text x="220" y="100" text-anchor="middle" font-size="12" fill="#6b7280">(vector subtraction)</text>
+  <!-- relative vel arrow under ground -->
+  <line x1="110" y1="240" x2="230" y2="240" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#arr-p)"/>
+  <text x="170" y="232" text-anchor="middle" font-size="12" fill="#7c3aed">v&#x2090;&#x2091; = v&#x2081; - v&#x2082;</text>
+  <!-- same direction note -->
+  <text x="220" y="263" text-anchor="middle" font-size="11" fill="#6b7280">Same direction: |v&#x2090;&#x2091;| = |v&#x2081; - v&#x2082;|  |  Opposite: |v&#x2090;&#x2091;| = v&#x2081; + v&#x2082;</text>
+</svg>
