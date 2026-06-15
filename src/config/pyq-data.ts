@@ -27,6 +27,34 @@ export interface PYQEntry {
   repeatYears: number[];
 }
 
+// Shared matching tables for JEE Advanced 2017 Paper-1 Section 3 (rendered as HTML).
+const TD = "border:1px solid #cbd5e1;padding:4px 8px";
+const TH = "border:1px solid #cbd5e1;padding:4px 8px;background:#f1f5f9;font-weight:600";
+
+const ADV17_EB_TABLE =
+  `<div style='overflow-x:auto'><table style='border-collapse:collapse;font-size:13px;margin:8px 0'>` +
+  `<thead><tr><th style='${TH}'>Column 1 (velocity)</th><th style='${TH}'>Column 2 (field E)</th><th style='${TH}'>Column 3 (field B)</th></tr></thead><tbody>` +
+  `<tr><td style='${TD}'>(I) Electron, $\\vec{v}=2\\frac{E_0}{B_0}\\hat{x}$</td><td style='${TD}'>(i) $\\vec{E}=E_0\\hat{z}$</td><td style='${TD}'>(P) $\\vec{B}=-B_0\\hat{x}$</td></tr>` +
+  `<tr><td style='${TD}'>(II) Electron, $\\vec{v}=\\frac{E_0}{B_0}\\hat{y}$</td><td style='${TD}'>(ii) $\\vec{E}=-E_0\\hat{y}$</td><td style='${TD}'>(Q) $\\vec{B}=B_0\\hat{x}$</td></tr>` +
+  `<tr><td style='${TD}'>(III) Proton, $\\vec{v}=0$</td><td style='${TD}'>(iii) $\\vec{E}=-E_0\\hat{x}$</td><td style='${TD}'>(R) $\\vec{B}=B_0\\hat{y}$</td></tr>` +
+  `<tr><td style='${TD}'>(IV) Proton, $\\vec{v}=2\\frac{E_0}{B_0}\\hat{x}$</td><td style='${TD}'>(iv) $\\vec{E}=E_0\\hat{x}$</td><td style='${TD}'>(S) $\\vec{B}=B_0\\hat{z}$</td></tr>` +
+  `</tbody></table></div>`;
+
+// Mini P–V plots for column 3 (1 = start, 2 = end of path).
+const PV_ISOBAR = "<svg width='80' height='56' xmlns='http://www.w3.org/2000/svg'><line x1='14' y1='6' x2='14' y2='46' stroke='#334155'/><line x1='14' y1='46' x2='72' y2='46' stroke='#334155'/><text x='3' y='13' font-size='9'>P</text><text x='66' y='55' font-size='9'>V</text><line x1='24' y1='18' x2='62' y2='18' stroke='#1e40af' stroke-width='2'/><circle cx='24' cy='18' r='2.5' fill='#dc2626'/><circle cx='62' cy='18' r='2.5' fill='#dc2626'/><text x='19' y='14' font-size='8'>1</text><text x='63' y='14' font-size='8'>2</text></svg>";
+const PV_ADIABAT = "<svg width='80' height='56' xmlns='http://www.w3.org/2000/svg'><line x1='14' y1='6' x2='14' y2='46' stroke='#334155'/><line x1='14' y1='46' x2='72' y2='46' stroke='#334155'/><text x='3' y='13' font-size='9'>P</text><text x='66' y='55' font-size='9'>V</text><path d='M24,10 Q30,42 66,42' fill='none' stroke='#1e40af' stroke-width='2'/><circle cx='24' cy='10' r='2.5' fill='#dc2626'/><circle cx='66' cy='42' r='2.5' fill='#dc2626'/><text x='27' y='12' font-size='8'>1</text><text x='66' y='38' font-size='8'>2</text></svg>";
+const PV_ISOTHERM = "<svg width='80' height='56' xmlns='http://www.w3.org/2000/svg'><line x1='14' y1='6' x2='14' y2='46' stroke='#334155'/><line x1='14' y1='46' x2='72' y2='46' stroke='#334155'/><text x='3' y='13' font-size='9'>P</text><text x='66' y='55' font-size='9'>V</text><path d='M22,14 Q40,40 68,43' fill='none' stroke='#1e40af' stroke-width='2'/><circle cx='22' cy='14' r='2.5' fill='#dc2626'/><circle cx='68' cy='43' r='2.5' fill='#dc2626'/><text x='25' y='15' font-size='8'>1</text><text x='66' y='39' font-size='8'>2</text></svg>";
+const PV_ISOCHOR = "<svg width='80' height='56' xmlns='http://www.w3.org/2000/svg'><line x1='14' y1='6' x2='14' y2='46' stroke='#334155'/><line x1='14' y1='46' x2='72' y2='46' stroke='#334155'/><text x='3' y='13' font-size='9'>P</text><text x='66' y='55' font-size='9'>V</text><line x1='40' y1='12' x2='40' y2='42' stroke='#1e40af' stroke-width='2'/><circle cx='40' cy='12' r='2.5' fill='#dc2626'/><circle cx='40' cy='42' r='2.5' fill='#dc2626'/><text x='44' y='15' font-size='8'>1</text><text x='44' y='44' font-size='8'>2</text></svg>";
+
+const ADV17_PV_TABLE =
+  `<div style='overflow-x:auto'><table style='border-collapse:collapse;font-size:13px;margin:8px 0'>` +
+  `<thead><tr><th style='${TH}'>Column 1 (work $W_{1\\to2}$ on gas)</th><th style='${TH}'>Column 2 (process)</th><th style='${TH}'>Column 3 (P–V plot)</th></tr></thead><tbody>` +
+  `<tr><td style='${TD}'>(I) $W_{1\\to2}=\\frac{1}{\\gamma-1}(P_2V_2-P_1V_1)$</td><td style='${TD}'>(i) Isothermal</td><td style='${TD}'>(P) ${PV_ISOBAR}</td></tr>` +
+  `<tr><td style='${TD}'>(II) $W_{1\\to2}=-PV_2+PV_1$</td><td style='${TD}'>(ii) Isochoric</td><td style='${TD}'>(Q) ${PV_ADIABAT}</td></tr>` +
+  `<tr><td style='${TD}'>(III) $W_{1\\to2}=0$</td><td style='${TD}'>(iii) Isobaric</td><td style='${TD}'>(R) ${PV_ISOTHERM}</td></tr>` +
+  `<tr><td style='${TD}'>(IV) $W_{1\\to2}=-nRT\\ln\\frac{V_2}{V_1}$</td><td style='${TD}'>(iv) Adiabatic</td><td style='${TD}'>(S) ${PV_ISOCHOR}</td></tr>` +
+  `</tbody></table></div>`;
+
 export const PYQ_ENTRIES: PYQEntry[] = [
   // ══ JEE MAIN 2024 ═══════════════════════════════════════════════════════════
   {
@@ -855,6 +883,493 @@ export const PYQ_ENTRIES: PYQEntry[] = [
     marks: 4,
     negativeMarks: 1,
     tags: ["beats", "sound-waves", "frequency"],
+  },
+
+  // ══ JEE ADVANCED 2017 — Paper 1 ═══════════════════════════════════════════════
+  {
+    id: "pyq-ja17-p1-q1",
+    exam: "JEE_ADVANCED",
+    year: 2017,
+    session: "Paper 1",
+    chapterSlug: "kinetic-theory-of-gases",
+    chapterTitle: "Kinetic Theory of Gases (KTG)",
+    isRepeat: false,
+    repeatYears: [],
+    content:
+      "A flat plate is moving normal to its plane through a gas under the action of a constant force $F$. The gas is kept at a very low pressure. The speed of the plate $v$ is much less than the average speed $u$ of the gas molecules. Which of the following options is/are true?",
+    options: [
+      { id: "A", content: "The pressure difference between the leading and trailing faces of the plate is proportional to $uv$" },
+      { id: "B", content: "The resistive force experienced by the plate is proportional to $v$" },
+      { id: "C", content: "The plate will continue to move with constant non-zero acceleration, at all times" },
+      { id: "D", content: "At a later time the external force $F$ balances the resistive force" },
+    ],
+    correctAnswer: ["A", "B", "D"],
+    solution:
+      "Molecules striking the leading face return faster than those leaving the trailing face. The momentum transfer rate gives a pressure difference $\\Delta P \\propto \\rho\\, u\\, v$, so [A] is true and the net resistive force $\\propto v$ [B].\nSince the resistive force grows with $v$, the acceleration decreases over time (not constant), so [C] is false. Eventually $v$ becomes large enough that the resistive force equals $F$ (terminal velocity), so [D] is true.",
+    hint: "The drag from molecular collisions on a body moving slowly through a rarefied gas is linear in $v$.",
+    explanation: "Net force $= F - kv$; acceleration $\\to 0$ as $v \\to F/k$ (terminal speed).",
+    type: "MCQ_MULTIPLE",
+    difficulty: "ADVANCED",
+    marks: 4,
+    negativeMarks: 2,
+    tags: ["kinetic-theory", "drag", "rarefied-gas", "terminal-velocity"],
+  },
+  {
+    id: "pyq-ja17-p1-q2",
+    exam: "JEE_ADVANCED",
+    year: 2017,
+    session: "Paper 1",
+    chapterSlug: "center-of-mass",
+    chapterTitle: "Center of Mass",
+    isRepeat: false,
+    repeatYears: [],
+    content:
+      "A block of mass $M$ has a circular cut with a frictionless surface as shown. The block rests on the horizontal frictionless surface of a fixed table. Initially the right edge of the block is at $x = 0$, in a coordinate system fixed to the table. A point mass $m$ is released from rest at the topmost point of the path as shown and it slides down. When the mass loses contact with the block, its position is $x$ and its velocity is $v$. At that instant, which of the following options is/are correct?\n\n<svg width='320' height='200' viewBox='0 0 320 200' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='165' x2='300' y2='165' stroke='#334155' stroke-width='2'/><rect x='50' y='80' width='150' height='85' fill='#e8f0fe' stroke='#1e40af' stroke-width='2'/><path d='M120,80 A80,80 0 0,1 200,160' fill='white' stroke='#1e40af' stroke-width='1.5' stroke-dasharray='4 3'/><circle cx='120' cy='80' r='6' fill='#dc2626'/><text x='100' y='77' font-size='12' fill='#dc2626'>m</text><text x='70' y='130' font-size='14' fill='#1e40af'>M</text><line x1='120' y1='66' x2='200' y2='66' stroke='#334155'/><text x='155' y='61' font-size='11'>R</text><line x1='214' y1='80' x2='214' y2='160' stroke='#334155'/><text x='218' y='124' font-size='11'>R</text><line x1='200' y1='80' x2='200' y2='182' stroke='#94a3b8' stroke-dasharray='3 2'/><text x='188' y='194' font-size='11'>x=0</text></svg>",
+    options: [
+      { id: "A", content: "The position of the point mass $m$ is $x = -\\sqrt{2}\\,\\frac{mR}{M+m}$" },
+      { id: "B", content: "The velocity of the point mass $m$ is $v = \\sqrt{\\dfrac{2gR}{1+\\frac{m}{M}}}$" },
+      { id: "C", content: "The $x$ component of displacement of the centre of mass of the block $M$ is $-\\dfrac{mR}{M+m}$" },
+      { id: "D", content: "The velocity of the block $M$ is $V = -\\dfrac{m}{M}\\sqrt{2gR}$" },
+    ],
+    correctAnswer: ["B", "C"],
+    solution:
+      "No external horizontal force acts, so horizontal momentum is conserved: $mv = MV$, and the centre of mass has no horizontal displacement.\nEnergy conservation (drop of height $R$): $mgR = \\frac{1}{2}mv^2 + \\frac{1}{2}MV^2$. Using $V = mv/M$: $mgR = \\frac{1}{2}mv^2\\left(1+\\frac{m}{M}\\right)$, giving $v = \\sqrt{\\dfrac{2gR}{1+m/M}}$ [B].\nBecause the CM stays fixed and $m$ moves a horizontal distance $R$ relative to the block, the block's CM shifts by $-\\dfrac{mR}{M+m}$ [C].\n[D] is wrong: $V = \\dfrac{m}{M}v \\ne \\dfrac{m}{M}\\sqrt{2gR}$.",
+    hint: "Horizontal momentum is conserved and the centre of mass does not move horizontally.",
+    explanation: "Relative horizontal displacement of $m$ with respect to the block is $R$; splitting by mass ratio gives the block displacement $-mR/(M+m)$.",
+    type: "MCQ_MULTIPLE",
+    difficulty: "ADVANCED",
+    marks: 4,
+    negativeMarks: 2,
+    tags: ["momentum-conservation", "centre-of-mass", "energy-conservation"],
+  },
+  {
+    id: "pyq-ja17-p1-q3",
+    exam: "JEE_ADVANCED",
+    year: 2017,
+    session: "Paper 1",
+    chapterSlug: "waves",
+    chapterTitle: "Waves",
+    isRepeat: false,
+    repeatYears: [],
+    content:
+      "A block $M$ hangs vertically at the bottom end of a uniform rope of constant mass per unit length. The top end of the rope is attached to a fixed rigid support at $O$. A transverse wave pulse (Pulse 1) of wavelength $\\lambda_0$ is produced at point $O$ on the rope. The pulse takes time $T_{OA}$ to reach point $A$. If the wave pulse of wavelength $\\lambda_0$ is produced at point $A$ (Pulse 2) without disturbing the position of $M$, it takes time $T_{AO}$ to reach point $O$. Which of the following options is/are correct?\n\n<svg width='200' height='250' viewBox='0 0 200 250' xmlns='http://www.w3.org/2000/svg'><rect x='55' y='15' width='90' height='12' fill='#94a3b8'/><line x1='100' y1='27' x2='100' y2='200' stroke='#334155' stroke-width='3'/><text x='78' y='42' font-size='13' font-style='italic'>O</text><text x='110' y='44' font-size='11'>Pulse 1</text><rect x='82' y='200' width='36' height='30' fill='#e8f0fe' stroke='#1e40af' stroke-width='2'/><text x='95' y='220' font-size='13' fill='#1e40af'>M</text><text x='66' y='220' font-size='13' font-style='italic'>A</text><text x='110' y='197' font-size='11'>Pulse 2</text></svg>",
+    options: [
+      { id: "A", content: "The time $T_{AO} = T_{OA}$" },
+      { id: "B", content: "The velocities of the two pulses (Pulse 1 and Pulse 2) are the same at the midpoint of rope" },
+      { id: "C", content: "The wavelength of Pulse 1 becomes longer when it reaches point $A$" },
+      { id: "D", content: "The velocity of any pulse along the rope is independent of its frequency and wavelength" },
+    ],
+    correctAnswer: ["A", "D"],
+    solution:
+      "Tension at height $y$ above the block is $T(y) = (M + \\mu y)g$, so the wave speed $v = \\sqrt{T/\\mu}$ depends only on position. The total travel time $\\int dy/v(y)$ is the same in both directions, so $T_{AO} = T_{OA}$ [A].\nA transverse pulse on a string is non-dispersive — its speed depends on tension and linear density, not on frequency or wavelength [D].\n[C] is false: going down from $O$ to $A$ the tension decreases, so $v$ decreases and $\\lambda = v/f$ becomes shorter, not longer.",
+    hint: "Wave speed on a rope depends only on the local tension, which varies with height.",
+    explanation: "Tension is largest near the support and least near the block, so the pulse slows as it descends.",
+    type: "MCQ_MULTIPLE",
+    difficulty: "ADVANCED",
+    marks: 4,
+    negativeMarks: 2,
+    tags: ["transverse-waves", "wave-speed", "tension", "non-dispersive"],
+  },
+  {
+    id: "pyq-ja17-p1-q4",
+    exam: "JEE_ADVANCED",
+    year: 2017,
+    session: "Paper 1",
+    chapterSlug: "thermal-physics",
+    chapterTitle: "Thermal Physics",
+    isRepeat: false,
+    repeatYears: [],
+    content:
+      "A human body has a surface area of approximately $1\\ \\text{m}^2$. The normal body temperature is $10\\ \\text{K}$ above the surrounding room temperature $T_0$. Take the room temperature to be $T_0 = 300\\ \\text{K}$. For $T_0 = 300\\ \\text{K}$, the value of $\\sigma T_0^4 = 460\\ \\text{Wm}^{-2}$ (where $\\sigma$ is the Stefan–Boltzmann constant). Which of the following options is/are correct?",
+    options: [
+      { id: "A", content: "The amount of energy radiated by the body in 1 second is close to 60 Joules" },
+      { id: "B", content: "If the surrounding temperature reduces by a small amount $\\Delta T_0 \\ll T_0$, then to maintain the same body temperature the same (living) human being needs to radiate $\\Delta W = 4\\sigma T_0^3\\,\\Delta T_0$ more energy per unit time" },
+      { id: "C", content: "Reducing the exposed surface area of the body (e.g. by curling up) allows humans to maintain the same body temperature while reducing the energy lost by radiation" },
+      { id: "D", content: "If the body temperature rises significantly then the peak in the spectrum of electromagnetic radiation emitted by the body would shift to longer wavelengths" },
+    ],
+    correctAnswer: ["C"],
+    solution:
+      "The total power radiated by the body is $\\sigma A T^4 = \\sigma A (310)^4 \\approx 460 \\times (310/300)^4 \\approx 524\\ \\text{W}$, far from 60 J, so [A] is wrong.\n[B] is wrong: the body radiates $\\sigma A T_{body}^4$, which does not change when $T_0$ changes; the extra requirement is on net loss, and the phrasing \"radiate more\" is incorrect.\n[C] is correct: radiated power $\\propto$ exposed area, so curling up lowers the loss.\n[D] is wrong: by Wien's law $\\lambda_{peak} \\propto 1/T$, so a higher temperature shifts the peak to shorter wavelengths.",
+    hint: "Distinguish total radiated power ($\\sigma A T^4$) from net loss; recall Wien's displacement law.",
+    explanation: "Wien: $\\lambda_{peak} T = \\text{const}$, so hotter bodies peak at shorter wavelengths.",
+    type: "MCQ_MULTIPLE",
+    difficulty: "ADVANCED",
+    marks: 4,
+    negativeMarks: 2,
+    tags: ["stefan-boltzmann", "radiation", "wien-law"],
+  },
+  {
+    id: "pyq-ja17-p1-q5",
+    exam: "JEE_ADVANCED",
+    year: 2017,
+    session: "Paper 1",
+    chapterSlug: "electromagnetic-induction",
+    chapterTitle: "Electromagnetic Induction (EMI)",
+    isRepeat: false,
+    repeatYears: [],
+    content:
+      "A circular insulated copper wire loop is twisted to form two loops of area $A$ and $2A$ as shown. At the point of crossing the wires remain electrically insulated from each other. The entire loop lies in the plane (of the paper). A uniform magnetic field $\\vec{B}$ points into the plane of the paper. At $t = 0$, the loop starts rotating about the common diameter as axis with a constant angular velocity $\\omega$ in the magnetic field. Which of the following options is/are correct?\n\n<svg width='240' height='280' viewBox='0 0 240 280' xmlns='http://www.w3.org/2000/svg'><g fill='#64748b' font-size='12'><text x='45' y='40'>×</text><text x='110' y='40'>×</text><text x='175' y='40'>×</text><text x='45' y='95'>×</text><text x='175' y='95'>×</text><text x='45' y='150'>×</text><text x='175' y='150'>×</text><text x='45' y='205'>×</text><text x='175' y='205'>×</text><text x='110' y='240'>×</text></g><circle cx='120' cy='80' r='45' fill='none' stroke='#1e40af' stroke-width='2'/><text x='98' y='84' font-size='12'>area A</text><circle cx='120' cy='185' r='62' fill='none' stroke='#1e40af' stroke-width='2'/><text x='98' y='189' font-size='12'>area 2A</text><text x='150' y='52' font-size='15' font-weight='bold'>B</text><line x1='120' y1='18' x2='120' y2='258' stroke='#334155' stroke-dasharray='5 4'/><text x='100' y='274' font-size='14'>ω</text></svg>",
+    options: [
+      { id: "A", content: "The emf induced in the loop is proportional to the sum of the areas of the two loops" },
+      { id: "B", content: "The amplitude of the maximum net emf induced due to both the loops is equal to the amplitude of maximum emf induced in the smaller loop alone" },
+      { id: "C", content: "The net emf induced due to both the loops is proportional to $\\cos\\omega t$" },
+      { id: "D", content: "The rate of change of the flux is maximum when the plane of the loops is perpendicular to plane of the paper" },
+    ],
+    correctAnswer: ["B", "D"],
+    solution:
+      "Because the loop is twisted, the two loops are wound in opposite senses, so their emfs subtract: $\\varepsilon_{net} = B(2A)\\omega\\sin\\omega t - BA\\omega\\sin\\omega t = BA\\omega\\sin\\omega t$.\n[A] is wrong — the net emf $\\propto (2A - A) = A$, not the sum $3A$.\n[B] is correct — the net amplitude $BA\\omega$ equals the amplitude of the smaller loop alone.\n[C] is wrong — $\\varepsilon \\propto \\sin\\omega t$, not $\\cos\\omega t$ (flux is maximum at $t = 0$).\n[D] is correct — $d\\Phi/dt$ is maximum when the loop plane contains $\\vec{B}$, i.e. is perpendicular to the paper.",
+    hint: "Opposite winding sense means the two emfs subtract.",
+    explanation: "$\\Phi = B\\,\\text{area}\\cos\\omega t \\Rightarrow \\varepsilon = -d\\Phi/dt \\propto \\sin\\omega t$; net $\\propto (2A-A)$.",
+    type: "MCQ_MULTIPLE",
+    difficulty: "ADVANCED",
+    marks: 4,
+    negativeMarks: 2,
+    tags: ["emi", "rotating-loop", "faraday-law"],
+  },
+  {
+    id: "pyq-ja17-p1-q6",
+    exam: "JEE_ADVANCED",
+    year: 2017,
+    session: "Paper 1",
+    chapterSlug: "alternating-current",
+    chapterTitle: "Alternating Current (AC)",
+    isRepeat: false,
+    repeatYears: [],
+    content:
+      "In the circuit shown, $L = 1\\ \\mu\\text{H}$, $C = 1\\ \\mu\\text{F}$ and $R = 1\\ \\text{k}\\Omega$. They are connected in series with an a.c. source $V = V_0\\sin\\omega t$ as shown. Which of the following options is/are correct?\n\n<svg width='340' height='120' viewBox='0 0 340 120' xmlns='http://www.w3.org/2000/svg'><line x1='40' y1='30' x2='80' y2='30' stroke='#334155' stroke-width='2'/><path d='M80,30 q5,-12 10,0 q5,-12 10,0 q5,-12 10,0 q5,-12 10,0' fill='none' stroke='#1e40af' stroke-width='2'/><text x='88' y='15' font-size='10'>L</text><line x1='120' y1='30' x2='152' y2='30' stroke='#334155' stroke-width='2'/><line x1='158' y1='17' x2='158' y2='43' stroke='#1e40af' stroke-width='2'/><line x1='166' y1='17' x2='166' y2='43' stroke='#1e40af' stroke-width='2'/><text x='156' y='13' font-size='10'>C</text><line x1='166' y1='30' x2='195' y2='30' stroke='#334155' stroke-width='2'/><path d='M195,30 l6,-9 l8,18 l8,-18 l8,18 l6,-9' fill='none' stroke='#1e40af' stroke-width='2'/><text x='212' y='17' font-size='10'>R</text><line x1='231' y1='30' x2='300' y2='30' stroke='#334155' stroke-width='2'/><line x1='300' y1='30' x2='300' y2='92' stroke='#334155' stroke-width='2'/><line x1='40' y1='30' x2='40' y2='92' stroke='#334155' stroke-width='2'/><circle cx='170' cy='92' r='16' fill='none' stroke='#334155' stroke-width='2'/><text x='163' y='97' font-size='13'>~</text><line x1='40' y1='92' x2='154' y2='92' stroke='#334155' stroke-width='2'/><line x1='186' y1='92' x2='300' y2='92' stroke='#334155' stroke-width='2'/><text x='150' y='114' font-size='10'>V₀ sin ωt</text></svg>",
+    options: [
+      { id: "A", content: "The current will be in phase with the voltage if $\\omega = 10^4\\ \\text{rad.s}^{-1}$" },
+      { id: "B", content: "The frequency at which the current will be in phase with the voltage is independent of $R$" },
+      { id: "C", content: "At $\\omega \\sim 0$ the current flowing through the circuit becomes nearly zero" },
+      { id: "D", content: "At $\\omega \\gg 10^6\\ \\text{rad.s}^{-1}$, the circuit behaves like a capacitor" },
+    ],
+    correctAnswer: ["B", "C"],
+    solution:
+      "Resonance (current in phase with voltage) occurs at $\\omega_0 = \\dfrac{1}{\\sqrt{LC}} = \\dfrac{1}{\\sqrt{10^{-6}\\cdot10^{-6}}} = 10^6\\ \\text{rad.s}^{-1}$.\n[A] is wrong ($10^4 \\ne 10^6$). [B] is correct — $\\omega_0$ does not depend on $R$.\n[C] is correct — as $\\omega \\to 0$, $X_C = 1/(\\omega C) \\to \\infty$ blocks the current.\n[D] is wrong — for $\\omega \\gg \\omega_0$, $X_L = \\omega L$ dominates, so the circuit behaves like an inductor, not a capacitor.",
+    hint: "Resonance: $\\omega_0 = 1/\\sqrt{LC}$, independent of $R$.",
+    explanation: "Low $\\omega$: capacitor blocks; high $\\omega$: inductor dominates.",
+    type: "MCQ_MULTIPLE",
+    difficulty: "ADVANCED",
+    marks: 4,
+    negativeMarks: 2,
+    tags: ["lcr-series", "resonance", "reactance"],
+  },
+  {
+    id: "pyq-ja17-p1-q7",
+    exam: "JEE_ADVANCED",
+    year: 2017,
+    session: "Paper 1",
+    chapterSlug: "ray-optics",
+    chapterTitle: "Ray Optics",
+    isRepeat: false,
+    repeatYears: [],
+    content:
+      "For an isosceles prism of angle $A$ and refractive index $\\mu$, it is found that the angle of minimum deviation $\\delta_m = A$. Which of the following options is/are correct?",
+    options: [
+      { id: "A", content: "For the angle of incidence $i_1 = A$, the ray inside the prism is parallel to the base of the prism" },
+      { id: "B", content: "For this prism, the refractive index $\\mu$ and the angle of prism $A$ are related as $A = \\frac{1}{2}\\cos^{-1}\\left(\\frac{\\mu}{2}\\right)$" },
+      { id: "C", content: "At minimum deviation, the incident angle $i_1$ and the refracting angle $r_1$ at the first refracting surface are related by $r_1 = (i_1/2)$" },
+      { id: "D", content: "For this prism, the emergent ray at the second surface will be tangential to the surface when the angle of incidence at the first surface is $i_1 = \\sin^{-1}\\left[\\sin A\\sqrt{4\\cos^2\\frac{A}{2}-1} - \\cos A\\right]$" },
+    ],
+    correctAnswer: ["A", "C", "D"],
+    solution:
+      "With $\\delta_m = A$: $\\mu = \\dfrac{\\sin\\frac{A+\\delta_m}{2}}{\\sin\\frac{A}{2}} = \\dfrac{\\sin A}{\\sin\\frac{A}{2}} = 2\\cos\\frac{A}{2}$.\n[A] correct: at minimum deviation $i_1 = \\frac{A+\\delta_m}{2} = A$, and the ray inside runs parallel to the base.\n[B] wrong: $\\mu = 2\\cos\\frac{A}{2} \\Rightarrow A = 2\\cos^{-1}\\!\\left(\\frac{\\mu}{2}\\right)$, not $\\frac{1}{2}\\cos^{-1}(\\mu/2)$.\n[C] correct: at minimum deviation $r_1 = A/2$ and $i_1 = A$, so $r_1 = i_1/2$.\n[D] correct: setting the second-surface refraction angle to $90^\\circ$ (grazing emergence) and using $\\mu = 2\\cos\\frac{A}{2}$ gives the stated $i_1$.",
+    hint: "At minimum deviation the path is symmetric: $i_1 = (A+\\delta_m)/2$ and $r_1 = A/2$.",
+    explanation: "$\\mu = 2\\cos(A/2)$ is the key relation for $\\delta_m = A$.",
+    type: "MCQ_MULTIPLE",
+    difficulty: "ADVANCED",
+    marks: 4,
+    negativeMarks: 2,
+    tags: ["prism", "minimum-deviation", "refraction"],
+  },
+  {
+    id: "pyq-ja17-p1-q8",
+    exam: "JEE_ADVANCED",
+    year: 2017,
+    session: "Paper 1",
+    chapterSlug: "properties-of-matter",
+    chapterTitle: "Properties of Matter",
+    isRepeat: false,
+    repeatYears: [],
+    content:
+      "A drop of liquid of radius $R = 10^{-2}\\ \\text{m}$ having surface tension $S = \\dfrac{0.1}{4\\pi}\\ \\text{Nm}^{-1}$ divides itself into $K$ identical drops. In this process the total change in the surface energy $\\Delta U = 10^{-3}\\ \\text{J}$. If $K = 10^\\alpha$ then the value of $\\alpha$ is",
+    options: null,
+    correctAnswer: 6,
+    solution:
+      "Volume is conserved: $r = R/K^{1/3}$. The increase in surface energy is\n$\\Delta U = S\\,(K\\cdot 4\\pi r^2 - 4\\pi R^2) = 4\\pi S R^2\\left(K^{1/3} - 1\\right)$.\nSubstituting $S = \\frac{0.1}{4\\pi}$ and $R = 10^{-2}$:\n$\\Delta U = 0.1\\times10^{-4}\\left(K^{1/3}-1\\right) = 10^{-5}\\left(K^{1/3}-1\\right)$.\nSetting $\\Delta U = 10^{-3}$: $K^{1/3} - 1 = 100 \\approx K^{1/3}$, so $K = 10^6$ and $\\alpha = 6$.",
+    hint: "Surface energy change $= S \\times$ (increase in total surface area).",
+    explanation: "Smaller drops have far more total area, raising the surface energy.",
+    type: "INTEGER",
+    difficulty: "ADVANCED",
+    marks: 3,
+    negativeMarks: 0,
+    tags: ["surface-tension", "surface-energy", "drops"],
+  },
+  {
+    id: "pyq-ja17-p1-q9",
+    exam: "JEE_ADVANCED",
+    year: 2017,
+    session: "Paper 1",
+    chapterSlug: "atoms",
+    chapterTitle: "Atoms",
+    isRepeat: false,
+    repeatYears: [],
+    content:
+      "An electron in a hydrogen atom undergoes a transition from an orbit with quantum number $n_i$ to another with quantum number $n_f$. $V_i$ and $V_f$ are respectively the initial and final potential energies of the electron. If $\\dfrac{V_i}{V_f} = 6.25$, then the smallest possible $n_f$ is",
+    options: null,
+    correctAnswer: 5,
+    solution:
+      "The potential energy of the electron is $V_n \\propto -\\dfrac{1}{n^2}$, so $\\dfrac{V_i}{V_f} = \\dfrac{n_f^2}{n_i^2} = 6.25 = \\left(\\dfrac{5}{2}\\right)^2$.\nHence $\\dfrac{n_f}{n_i} = \\dfrac{5}{2}$. The smallest integers satisfying this are $n_i = 2$, $n_f = 5$. So the smallest possible $n_f = 5$.",
+    hint: "Potential energy in the Bohr model scales as $1/n^2$.",
+    explanation: "$6.25 = (5/2)^2$ forces $n_f : n_i = 5 : 2$.",
+    type: "INTEGER",
+    difficulty: "ADVANCED",
+    marks: 3,
+    negativeMarks: 0,
+    tags: ["bohr-model", "hydrogen-atom", "potential-energy"],
+  },
+  {
+    id: "pyq-ja17-p1-q10",
+    exam: "JEE_ADVANCED",
+    year: 2017,
+    session: "Paper 1",
+    chapterSlug: "ray-optics",
+    chapterTitle: "Ray Optics",
+    isRepeat: false,
+    repeatYears: [],
+    content:
+      "A monochromatic light is travelling in a medium of refractive index $n = 1.6$. It enters a stack of glass layers from the bottom side at an angle $\\theta = 30^\\circ$. The interfaces of the glass layers are parallel to each other. The refractive indices of different glass layers are monotonically decreasing as $n_m = n - m\\Delta n$, where $n_m$ is the refractive index of the $m^{th}$ slab and $\\Delta n = 0.1$. The ray is refracted out parallel to the interface between the $(m-1)^{th}$ and $m^{th}$ slabs from the right side of the stack. What is the value of $m$?\n\n<svg width='300' height='220' viewBox='0 0 300 220' xmlns='http://www.w3.org/2000/svg'><rect x='60' y='30' width='180' height='22' fill='#eff6ff' stroke='#94a3b8'/><text x='66' y='45' font-size='9'>m      n − mΔn</text><rect x='60' y='52' width='180' height='22' fill='#dbeafe' stroke='#94a3b8'/><text x='66' y='67' font-size='9'>m−1   n − (m−1)Δn</text><rect x='60' y='95' width='180' height='20' fill='#eff6ff' stroke='#94a3b8'/><text x='66' y='109' font-size='9'>2      n − 2Δn</text><rect x='60' y='115' width='180' height='20' fill='#dbeafe' stroke='#94a3b8'/><text x='66' y='129' font-size='9'>1      n − Δn</text><rect x='60' y='135' width='180' height='22' fill='#bfdbfe' stroke='#94a3b8'/><text x='66' y='150' font-size='9'>n</text><line x1='90' y1='205' x2='130' y2='157' stroke='#dc2626' stroke-width='1.5'/><line x1='130' y1='157' x2='152' y2='135' stroke='#dc2626' stroke-width='1.5'/><line x1='152' y1='135' x2='180' y2='95' stroke='#dc2626' stroke-width='1.5' stroke-dasharray='3 2'/><line x1='180' y1='63' x2='245' y2='63' stroke='#dc2626' stroke-width='1.5'/><text x='92' y='200' font-size='10'>θ=30°</text></svg>",
+    options: null,
+    correctAnswer: 8,
+    solution:
+      "Snell's law across the parallel interfaces keeps $n_m\\sin\\theta_m$ constant: $n\\sin\\theta = 1.6\\sin 30^\\circ = 0.8$.\nThe ray emerges parallel to an interface when the refraction angle is $90^\\circ$, i.e. $n_m\\sin 90^\\circ = 0.8$, so $n_m = 0.8$.\nWith $n_m = n - m\\Delta n = 1.6 - 0.1\\,m = 0.8 \\Rightarrow m = 8$.",
+    hint: "The product $n\\sin\\theta$ is conserved across parallel layers; grazing emergence means the angle is $90^\\circ$.",
+    explanation: "Set $n_m = n\\sin\\theta = 0.8$ and solve $1.6 - 0.1m = 0.8$.",
+    type: "INTEGER",
+    difficulty: "ADVANCED",
+    marks: 3,
+    negativeMarks: 0,
+    tags: ["snells-law", "refraction", "layered-medium"],
+  },
+  {
+    id: "pyq-ja17-p1-q11",
+    exam: "JEE_ADVANCED",
+    year: 2017,
+    session: "Paper 1",
+    chapterSlug: "sound-waves",
+    chapterTitle: "Sound Waves",
+    isRepeat: false,
+    repeatYears: [],
+    content:
+      "A stationary source emits sound of frequency $f_0 = 492\\ \\text{Hz}$. The sound is reflected by a large car approaching the source with a speed of $2\\ \\text{ms}^{-1}$. The reflected signal is received by the source and superposed with the original. What will be the beat frequency of the resulting signal in Hz? (Given that the speed of sound in air is $330\\ \\text{ms}^{-1}$ and the car reflects the sound at the frequency it has received.)",
+    options: null,
+    correctAnswer: 6,
+    solution:
+      "The car (a moving observer approaching) receives $f_1 = f_0\\dfrac{c+v}{c}$. It re-emits $f_1$ as a moving source approaching the source, which receives $f_2 = f_1\\dfrac{c}{c-v} = f_0\\dfrac{c+v}{c-v}$.\n$f_2 = 492\\times\\dfrac{332}{328}$. Beat frequency $= f_2 - f_0 = 492\\left(\\dfrac{332}{328}-1\\right) = 492\\times\\dfrac{4}{328} = 6\\ \\text{Hz}$.",
+    hint: "Apply the Doppler effect twice — car as observer, then car as source.",
+    explanation: "$f_2 = f_0(c+v)/(c-v)$; beats $= f_2 - f_0 = 6$ Hz.",
+    type: "INTEGER",
+    difficulty: "ADVANCED",
+    marks: 3,
+    negativeMarks: 0,
+    tags: ["doppler-effect", "beats", "reflection"],
+  },
+  {
+    id: "pyq-ja17-p1-q12",
+    exam: "JEE_ADVANCED",
+    year: 2017,
+    session: "Paper 1",
+    chapterSlug: "nuclei",
+    chapterTitle: "Nuclei",
+    isRepeat: false,
+    repeatYears: [],
+    content:
+      "$^{131}\\text{I}$ is an isotope of Iodine that $\\beta$ decays to an isotope of Xenon with a half-life of 8 days. A small amount of a serum labelled with $^{131}\\text{I}$ is injected into the blood of a person. The activity of the amount of $^{131}\\text{I}$ injected was $2.4\\times10^5$ Becquerel (Bq). It is known that the injected serum will get distributed uniformly in the blood stream in less than half an hour. After 11.5 hours, 2.5 ml of blood is drawn from the person's body, and gives an activity of 115 Bq. The total volume of blood in the person's body, in liters is approximately (you may use $e^x \\approx 1+x$ for $|x|\\ll1$ and $\\ln 2 \\approx 0.7$).",
+    options: null,
+    correctAnswer: 5,
+    solution:
+      "Decay constant $\\lambda = \\dfrac{\\ln 2}{8\\times24}$ per hour. After $t = 11.5$ h, the surviving fraction is $e^{-\\lambda t} = e^{-0.7\\times11.5/192} \\approx 1 - 0.042 \\approx 0.958$.\nTotal remaining activity $= 2.4\\times10^5\\times0.958 \\approx 2.3\\times10^5$ Bq.\nMeasured concentration $= 115\\ \\text{Bq} / 2.5\\ \\text{ml} = 46\\ \\text{Bq/ml}$.\nTotal blood volume $= \\dfrac{2.3\\times10^5}{46} = 5000\\ \\text{ml} = 5$ litres.",
+    hint: "Account for radioactive decay over 11.5 h, then divide total activity by the measured activity per ml.",
+    explanation: "Volume $=$ total remaining activity $\\div$ activity per unit volume.",
+    type: "INTEGER",
+    difficulty: "ADVANCED",
+    marks: 3,
+    negativeMarks: 0,
+    tags: ["radioactivity", "half-life", "activity"],
+  },
+  {
+    id: "pyq-ja17-p1-q13",
+    exam: "JEE_ADVANCED",
+    year: 2017,
+    session: "Paper 1",
+    chapterSlug: "magnetism",
+    chapterTitle: "Magnetism & Moving Charges",
+    isRepeat: false,
+    repeatYears: [],
+    content:
+      "In which case will the particle move in a straight line with **constant** velocity?\n\nA charged particle (electron or proton) is introduced at the origin with a given initial velocity $\\vec{v}$, in uniform fields $\\vec{E}$ and $\\vec{B}$ ($E_0, B_0 > 0$). Match using the table:\n\n" +
+      ADV17_EB_TABLE,
+    options: [
+      { id: "A", content: "(III) (ii) (R)" },
+      { id: "B", content: "(IV) (i) (S)" },
+      { id: "C", content: "(III) (iii) (P)" },
+      { id: "D", content: "(II) (iii) (S)" },
+    ],
+    correctAnswer: "D",
+    solution:
+      "Constant velocity needs zero net force: $q(\\vec{E} + \\vec{v}\\times\\vec{B}) = 0$.\nTake (II) electron $\\vec{v} = \\frac{E_0}{B_0}\\hat{y}$, (iii) $\\vec{E} = -E_0\\hat{x}$, (S) $\\vec{B} = B_0\\hat{z}$:\n$\\vec{v}\\times\\vec{B} = \\frac{E_0}{B_0}\\hat{y}\\times B_0\\hat{z} = E_0\\hat{x}$. For the electron ($q = -e$): $\\vec{F} = -e(-E_0\\hat{x} + E_0\\hat{x}) = 0$. The particle moves with constant velocity. Hence (II)(iii)(S).",
+    hint: "Net force zero requires the electric force to cancel the magnetic force $q\\vec{v}\\times\\vec{B}$.",
+    explanation: "This is the velocity-selector condition $E = vB$ with the forces opposed.",
+    type: "MCQ_SINGLE",
+    difficulty: "ADVANCED",
+    marks: 3,
+    negativeMarks: 1,
+    tags: ["lorentz-force", "velocity-selector", "matching"],
+  },
+  {
+    id: "pyq-ja17-p1-q14",
+    exam: "JEE_ADVANCED",
+    year: 2017,
+    session: "Paper 1",
+    chapterSlug: "magnetism",
+    chapterTitle: "Magnetism & Moving Charges",
+    isRepeat: false,
+    repeatYears: [],
+    content:
+      "In which case will the particle describe a helical path with axis along the positive $z$ direction?\n\nA charged particle (electron or proton) is introduced at the origin with a given initial velocity $\\vec{v}$, in uniform fields $\\vec{E}$ and $\\vec{B}$ ($E_0, B_0 > 0$). Match using the table:\n\n" +
+      ADV17_EB_TABLE,
+    options: [
+      { id: "A", content: "(IV) (i) (S)" },
+      { id: "B", content: "(II) (ii) (R)" },
+      { id: "C", content: "(III) (iii) (P)" },
+      { id: "D", content: "(IV) (ii) (R)" },
+    ],
+    correctAnswer: "A",
+    solution:
+      "A helix with axis along $+z$ needs $\\vec{B}$ along $z$ (circular motion in the $xy$-plane) plus an accelerating force along $+z$.\nTake (IV) proton $\\vec{v} = 2\\frac{E_0}{B_0}\\hat{x}$, (i) $\\vec{E} = E_0\\hat{z}$, (S) $\\vec{B} = B_0\\hat{z}$:\n$\\vec{B}\\parallel\\hat{z}$ makes the $x$-velocity circulate in the $xy$-plane, while $\\vec{E} = E_0\\hat{z}$ accelerates the proton along $+z$. The result is a helix of increasing pitch with axis $+z$. Hence (IV)(i)(S).",
+    hint: "Helix axis = direction of $\\vec{B}$; an $E$ along that axis gives the forward drift.",
+    explanation: "Circular motion (from $\\vec{v}\\perp\\vec{B}$) plus uniform $+z$ acceleration = helix along $+z$.",
+    type: "MCQ_SINGLE",
+    difficulty: "ADVANCED",
+    marks: 3,
+    negativeMarks: 1,
+    tags: ["helical-motion", "lorentz-force", "matching"],
+  },
+  {
+    id: "pyq-ja17-p1-q15",
+    exam: "JEE_ADVANCED",
+    year: 2017,
+    session: "Paper 1",
+    chapterSlug: "magnetism",
+    chapterTitle: "Magnetism & Moving Charges",
+    isRepeat: false,
+    repeatYears: [],
+    content:
+      "In which case would the particle move in a straight line along the negative direction of the $y$-axis (i.e. move along $-\\hat{y}$)?\n\nA charged particle (electron or proton) is introduced at the origin with a given initial velocity $\\vec{v}$, in uniform fields $\\vec{E}$ and $\\vec{B}$ ($E_0, B_0 > 0$). Match using the table:\n\n" +
+      ADV17_EB_TABLE,
+    options: [
+      { id: "A", content: "(II) (iii) (Q)" },
+      { id: "B", content: "(III) (ii) (R)" },
+      { id: "C", content: "(IV) (ii) (S)" },
+      { id: "D", content: "(III) (ii) (P)" },
+    ],
+    correctAnswer: "B",
+    solution:
+      "Take (III) proton $\\vec{v} = 0$, (ii) $\\vec{E} = -E_0\\hat{y}$, (R) $\\vec{B} = B_0\\hat{y}$:\nInitially $\\vec{v} = 0$, so the magnetic force is zero. The electric force $q\\vec{E} = e(-E_0\\hat{y})$ pushes the proton along $-\\hat{y}$. As it speeds up, its velocity stays parallel to $\\vec{B}\\,(\\parallel\\hat{y})$, so $\\vec{v}\\times\\vec{B} = 0$ throughout. The proton moves in a straight line along $-\\hat{y}$. Hence (III)(ii)(R).",
+    hint: "If the velocity stays parallel to $\\vec{B}$, the magnetic force is always zero.",
+    explanation: "$\\vec{E}$ along $-\\hat{y}$ and $\\vec{B}$ along $\\hat{y}$: motion stays collinear with $\\vec{B}$, so only $\\vec{E}$ acts.",
+    type: "MCQ_SINGLE",
+    difficulty: "ADVANCED",
+    marks: 3,
+    negativeMarks: 1,
+    tags: ["lorentz-force", "straight-line-motion", "matching"],
+  },
+  {
+    id: "pyq-ja17-p1-q16",
+    exam: "JEE_ADVANCED",
+    year: 2017,
+    session: "Paper 1",
+    chapterSlug: "thermodynamics",
+    chapterTitle: "Thermodynamics",
+    isRepeat: false,
+    repeatYears: [],
+    content:
+      "Which of the following options is the only correct representation of a process in which $\\Delta U = \\Delta Q - P\\Delta V$?\n\nAn ideal gas undergoes a cyclic process; consider only the path from state 1 to state 2. $W$ is the work done on the gas. Match using the table:\n\n" +
+      ADV17_PV_TABLE,
+    options: [
+      { id: "A", content: "(II) (iv) (R)" },
+      { id: "B", content: "(III) (iii) (P)" },
+      { id: "C", content: "(II) (iii) (S)" },
+      { id: "D", content: "(II) (iii) (P)" },
+    ],
+    correctAnswer: "D",
+    solution:
+      "$\\Delta U = \\Delta Q - P\\Delta V$ is the first law with work on the gas $W = -P\\Delta V$ — this is an isobaric (constant-pressure) process.\nColumn 1: (II) $W_{1\\to2} = -PV_2 + PV_1 = -P\\Delta V$. Column 2: (iii) Isobaric. Column 3: (P) the horizontal $P$–$V$ line. Hence (II)(iii)(P).",
+    hint: "$W = -P\\Delta V$ (constant $P$) corresponds to an isobaric process.",
+    explanation: "Constant pressure $\\Rightarrow$ horizontal line on the $P$–$V$ diagram.",
+    type: "MCQ_SINGLE",
+    difficulty: "ADVANCED",
+    marks: 3,
+    negativeMarks: 1,
+    tags: ["first-law", "isobaric", "matching"],
+  },
+  {
+    id: "pyq-ja17-p1-q17",
+    exam: "JEE_ADVANCED",
+    year: 2017,
+    session: "Paper 1",
+    chapterSlug: "thermodynamics",
+    chapterTitle: "Thermodynamics",
+    isRepeat: false,
+    repeatYears: [],
+    content:
+      "Which one of the following options is the correct combination?\n\nAn ideal gas undergoes a cyclic process; consider only the path from state 1 to state 2. $W$ is the work done on the gas. Match using the table:\n\n" +
+      ADV17_PV_TABLE,
+    options: [
+      { id: "A", content: "(IV) (ii) (S)" },
+      { id: "B", content: "(III) (ii) (S)" },
+      { id: "C", content: "(II) (iv) (P)" },
+      { id: "D", content: "(II) (iv) (R)" },
+    ],
+    correctAnswer: "B",
+    solution:
+      "Column 1: (III) $W_{1\\to2} = 0$ means no work, which happens at constant volume. Column 2: (ii) Isochoric. Column 3: (S) the vertical $P$–$V$ line (constant $V$). Hence (III)(ii)(S).",
+    hint: "Zero work on the gas means no change in volume.",
+    explanation: "Isochoric $\\Rightarrow$ vertical line on the $P$–$V$ diagram, $W = 0$.",
+    type: "MCQ_SINGLE",
+    difficulty: "ADVANCED",
+    marks: 3,
+    negativeMarks: 1,
+    tags: ["isochoric", "work-done", "matching"],
+  },
+  {
+    id: "pyq-ja17-p1-q18",
+    exam: "JEE_ADVANCED",
+    year: 2017,
+    session: "Paper 1",
+    chapterSlug: "thermodynamics",
+    chapterTitle: "Thermodynamics",
+    isRepeat: false,
+    repeatYears: [],
+    content:
+      "Which one of the following options correctly represents a thermodynamic process that is used as a correction in the determination of the speed of sound in an ideal gas?\n\nAn ideal gas undergoes a cyclic process; consider only the path from state 1 to state 2. $W$ is the work done on the gas. Match using the table:\n\n" +
+      ADV17_PV_TABLE,
+    options: [
+      { id: "A", content: "(I) (ii) (Q)" },
+      { id: "B", content: "(IV) (ii) (R)" },
+      { id: "C", content: "(III) (iv) (R)" },
+      { id: "D", content: "(I) (iv) (Q)" },
+    ],
+    correctAnswer: "D",
+    solution:
+      "Laplace's correction to Newton's formula for the speed of sound treats sound propagation as an adiabatic process.\nColumn 1: (I) $W_{1\\to2} = \\frac{1}{\\gamma-1}(P_2V_2 - P_1V_1)$ is the adiabatic work. Column 2: (iv) Adiabatic. Column 3: (Q) the steeper adiabatic curve. Hence (I)(iv)(Q).",
+    hint: "Sound propagation in a gas is adiabatic (Laplace correction).",
+    explanation: "Adiabatic work $W = \\frac{1}{\\gamma-1}(P_2V_2 - P_1V_1)$; the $P$–$V$ curve is steeper than the isotherm.",
+    type: "MCQ_SINGLE",
+    difficulty: "ADVANCED",
+    marks: 3,
+    negativeMarks: 1,
+    tags: ["adiabatic", "speed-of-sound", "laplace-correction", "matching"],
   },
 ];
 
