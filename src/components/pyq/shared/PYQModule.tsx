@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Search, Moon, Sun, Bookmark, X, FileX2 } from "lucide-react";
 import type { ChapterPYQData, PYQQuestion, Difficulty } from "./types";
 import { PYQQuestionCard } from "./PYQQuestionCard";
+import { TheoryPanel } from "./TheoryPanel";
 import { useBookmarks } from "./useBookmarks";
 
 const DIFFICULTIES: Difficulty[] = ["Easy", "Medium", "Hard"];
@@ -123,6 +124,9 @@ export function PYQModule({
             </button>
           )}
         </header>
+
+        {/* Theory / Revision Notes */}
+        {data.theory && <TheoryPanel theory={data.theory} />}
 
         {/* Controls */}
         <div className="mb-6 space-y-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-700 dark:bg-slate-900">

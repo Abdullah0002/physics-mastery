@@ -4,6 +4,76 @@
   "exam": "JEE Main 2026 (January)",
   "source": "MathonGo JEE Main 2026 (January) Question Bank",
   "topics": ["Motion In One Dimension", "Motion In Two Dimensions"],
+  "theory": {
+    "summary": "Describing motion in 1-D and 2-D: equations of motion, graphs, projectiles and relative velocity.",
+    "sections": [
+      {
+        "heading": "Basic Definitions",
+        "points": [
+          "Distance = total path length (scalar, ≥ 0); Displacement = change in position (vector).",
+          "Average velocity = Δx/Δt;  Average speed = distance/time (speed ≥ |velocity|).",
+          "Instantaneous velocity v = dx/dt;  acceleration a = dv/dt = d²x/dt².",
+          "Speed increases when v and a have the same sign; decreases when they oppose."
+        ]
+      },
+      {
+        "heading": "Equations of Motion (uniform a)",
+        "points": [
+          "v = u + at",
+          "s = ut + ½at²",
+          "v² = u² + 2as",
+          "Distance in nth second:  sₙ = u + (a/2)(2n − 1).",
+          "Valid ONLY for constant acceleration."
+        ]
+      },
+      {
+        "heading": "Calculus & Variable Acceleration",
+        "points": [
+          "v = dx/dt,  a = dv/dt.",
+          "When a depends on position: a = v·(dv/dx).",
+          "x = ∫v dt,  v = ∫a dt (use initial conditions).",
+          "Turning point ⇔ v = 0 (velocity changes sign)."
+        ]
+      },
+      {
+        "heading": "Motion Graphs",
+        "points": [
+          "x–t graph: slope = velocity.",
+          "v–t graph: slope = acceleration; area under curve = displacement.",
+          "a–t graph: area under curve = change in velocity.",
+          "For a v–x line, a = v·(dv/dx) is also linear in x."
+        ]
+      },
+      {
+        "heading": "Motion Under Gravity",
+        "points": [
+          "Free fall from rest: v = gt,  h = ½gt²  (take g = 9.8 or 10 m/s²).",
+          "Up–down symmetry: time up = time down; speed at a height is same going up or down.",
+          "Equally-spaced drops: between the 1st and Nth drop there are (N − 1) equal intervals."
+        ]
+      },
+      {
+        "heading": "Projectile Motion",
+        "points": [
+          "Horizontal: vₓ = u cosθ (constant). Vertical: vᵧ = u sinθ − gt.",
+          "Time of flight T = 2u sinθ / g.",
+          "Maximum height H = u² sin²θ / 2g.",
+          "Range R = u² sin2θ / g;  R is maximum (= u²/g) at θ = 45°.",
+          "Path is a parabola; KE at the top = (KE at launch)·cos²θ.",
+          "Speed at equal heights is equal (energy conservation, no friction)."
+        ]
+      },
+      {
+        "heading": "Relative Velocity",
+        "points": [
+          "v(A relative to B) = v_A − v_B.",
+          "River-boat, minimum TIME: steer straight across ⇒ t = width / v_boat; drift = v_river · t.",
+          "River-boat, shortest PATH (zero drift): head upstream so the cross-component cancels the current.",
+          "Rain–man: relative velocity decides the angle to hold an umbrella."
+        ]
+      }
+    ]
+  },
   "questions": [
     {
       "id": "kin-1d-2026-jan28-s2-q1",

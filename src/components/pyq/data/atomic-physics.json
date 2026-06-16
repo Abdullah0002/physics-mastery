@@ -4,6 +4,64 @@
   "exam": "JEE Main 2026 (January)",
   "source": "MathonGo JEE Main 2026 (January) Question Bank",
   "topics": ["Atomic Physics"],
+  "theory": {
+    "summary": "Bohr model of hydrogen-like atoms, energy/radius/velocity scaling, spectral series and Rutherford scattering.",
+    "sections": [
+      {
+        "heading": "Bohr's Postulates",
+        "points": [
+          "Electrons revolve only in certain stationary orbits without radiating.",
+          "Angular momentum is quantised: L = mvr = n·h/(2π) = nℏ,  n = 1, 2, 3…",
+          "Energy is emitted/absorbed only on a jump: hν = E₂ − E₁.",
+          "So 2πL/h = n directly (handy shortcut)."
+        ]
+      },
+      {
+        "heading": "Radius, Velocity, Energy (hydrogen-like, charge Z)",
+        "points": [
+          "Radius:  rₙ = 0.529 (n²/Z) Å  ⇒  r ∝ n²/Z.",
+          "Speed:  vₙ = 2.18 × 10⁶ (Z/n) m/s  ⇒  v ∝ Z/n.",
+          "Energy:  Eₙ = −13.6 (Z²/n²) eV  ⇒  E ∝ −Z²/n².",
+          "Combining: r ∝ n/v (eliminating Z) — equal radii ⇒ n ∝ v."
+        ]
+      },
+      {
+        "heading": "Spectral Series (emission)",
+        "points": [
+          "Rydberg formula: 1/λ = R Z² (1/n₁² − 1/n₂²),  R = 1.097 × 10⁷ m⁻¹.",
+          "Lyman (n₁ = 1): ultraviolet.  Balmer (n₁ = 2): visible.  Paschen/Brackett/Pfund (n₁ = 3/4/5): infrared.",
+          "Largest wavelength of a series = first line (n₁ → n₁+1).",
+          "Smallest wavelength = series limit (n₁ → ∞):  λ_min = n₁²/R."
+        ]
+      },
+      {
+        "heading": "Energy Levels & Transitions",
+        "points": [
+          "Ground state of H: E₁ = −13.6 eV; ionisation energy = +13.6 eV.",
+          "Excitation energy = Eₙ − E₁ (energy to raise the electron from ground state).",
+          "Number of spectral lines from level n (to all lower): n(n − 1)/2.",
+          "Photon energy E (eV) and wavelength λ (nm): E = 1240/λ."
+        ]
+      },
+      {
+        "heading": "Rutherford Scattering",
+        "points": [
+          "Distance of closest approach (head-on): all KE → electrostatic PE.",
+          "KE = (1/4πε₀)·(2e)(Ze)/r_min  ⇒  r_min = (1/4πε₀)·2Ze²/KE.",
+          "α-particle carries charge 2e; gold nucleus Ze (Z = 79).",
+          "Typical r_min for MeV α on heavy nuclei ≈ 10⁻¹⁴ m."
+        ]
+      },
+      {
+        "heading": "Useful Constants",
+        "points": [
+          "1 eV = 1.6 × 10⁻¹⁹ J;  electron charge e = 1.6 × 10⁻¹⁹ C.",
+          "1/4πε₀ = 9 × 10⁹ N·m²/C²;  h = 6.63 × 10⁻³⁴ J·s.",
+          "Bohr radius a₀ = 0.529 Å;  hc = 1240 eV·nm."
+        ]
+      }
+    ]
+  },
   "questions": [
     {
       "id": "atom-2026-jan21-s2-q1",

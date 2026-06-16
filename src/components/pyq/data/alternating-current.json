@@ -4,6 +4,72 @@
   "exam": "JEE Main 2026 (January)",
   "source": "MathonGo JEE Main 2026 (January) Question Bank",
   "topics": ["Alternating Current"],
+  "theory": {
+    "summary": "AC quantities, reactance & impedance, power factor, resonance and LC oscillations.",
+    "sections": [
+      {
+        "heading": "AC Quantities & RMS",
+        "points": [
+          "Sinusoidal source: V = V₀ sin ωt,  i = i₀ sin(ωt ± φ);  ω = 2πf.",
+          "RMS value of a sinusoid: V_rms = V₀/√2,  I_rms = I₀/√2.",
+          "Mean value over a full cycle = 0; mean over a half cycle = 2V₀/π.",
+          "RMS by definition: I_rms = √( (1/T)∫₀ᵀ i² dt ) — works for any waveform (e.g. a ramp ⇒ i₀/√3)."
+        ]
+      },
+      {
+        "heading": "Reactance",
+        "points": [
+          "Inductive reactance:  X_L = ωL = 2πfL  (∝ frequency).",
+          "Capacitive reactance:  X_C = 1/(ωC) = 1/(2πfC)  (∝ 1/frequency).",
+          "Resistor: V and I in phase. Inductor: V leads I by 90°. Capacitor: I leads V by 90°."
+        ]
+      },
+      {
+        "heading": "Series LCR Impedance",
+        "points": [
+          "Net reactance: X = X_L − X_C (sign tells inductive/capacitive).",
+          "Impedance: Z = √(R² + (X_L − X_C)²).",
+          "Phase angle: tan φ = (X_L − X_C)/R.",
+          "Current amplitude: i₀ = V₀/Z;  I_rms = V_rms/Z."
+        ]
+      },
+      {
+        "heading": "Power & Power Factor",
+        "points": [
+          "Average power: P = V_rms·I_rms·cos φ.",
+          "Power factor: cos φ = R/Z.",
+          "Pure L or C consumes no average power (wattless current, cos φ = 0).",
+          "Only the resistor dissipates power: P = I²_rms·R."
+        ]
+      },
+      {
+        "heading": "Resonance (Series LCR)",
+        "points": [
+          "At resonance X_L = X_C ⇒ ω₀ = 1/√(LC),  f₀ = 1/(2π√(LC)).",
+          "Z is minimum (= R), current is MAXIMUM, power factor = 1.",
+          "Peak current at resonance: i₀ = V₀/R.",
+          "Used to find C or L from the resonance/maximum-current condition."
+        ]
+      },
+      {
+        "heading": "LC Oscillations",
+        "points": [
+          "Charge oscillates: q = q₀ cos ωt with ω = 1/√(LC) (no resistance).",
+          "Energy shuttles between capacitor and inductor; total energy is conserved.",
+          "Capacitor energy ∝ cos²(ωt), inductor energy ∝ sin²(ωt).",
+          "Frequency of LC oscillation: f = 1/(2π√(LC))."
+        ]
+      },
+      {
+        "heading": "Real Inductor & Transformer",
+        "points": [
+          "A real inductor (coil) has resistance R in series: stores ½LI²_rms, dissipates I²_rms·R.",
+          "Transformer (ideal): V_s/V_p = N_s/N_p = I_p/I_s;  power in = power out.",
+          "Quality factor Q = ω₀L/R = (1/R)√(L/C) measures sharpness of resonance."
+        ]
+      }
+    ]
+  },
   "questions": [
     {
       "id": "ac-2026-jan21-s2-q1",

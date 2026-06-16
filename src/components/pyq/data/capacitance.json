@@ -4,6 +4,64 @@
   "exam": "JEE Main 2026 (January)",
   "source": "MathonGo JEE Main 2026 (January) Question Bank",
   "topics": ["Capacitance"],
+  "theory": {
+    "summary": "Capacitors, the parallel-plate formula, dielectrics, series/parallel combinations, energy and charge sharing.",
+    "sections": [
+      {
+        "heading": "Definition & Parallel-Plate",
+        "points": [
+          "Capacitance: C = Q/V (farad). It depends only on geometry and the medium.",
+          "Parallel plate (vacuum): C = ε₀A/d.",
+          "With a dielectric filling the gap: C = K ε₀A/d  (K = dielectric constant ≥ 1).",
+          "C increases by increasing area A or decreasing separation d."
+        ]
+      },
+      {
+        "heading": "Combinations",
+        "points": [
+          "Series: 1/C_eq = 1/C₁ + 1/C₂ + …  ⇒  C_eq < smallest capacitor; same charge on each.",
+          "Parallel: C_eq = C₁ + C₂ + …  ⇒  same voltage across each.",
+          "Layers STACKED across the gap (vary thickness) → series.",
+          "Layers SIDE-BY-SIDE (vary area) → parallel."
+        ]
+      },
+      {
+        "heading": "Dielectrics",
+        "points": [
+          "A dielectric polarises (bound-charge displacement); it does NOT conduct free charge.",
+          "Partially-filled slab of thickness t: behaves like effective gap d_eff = (d − t) + t/K.",
+          "Battery CONNECTED (V constant): Q = CV, so Q changes with C.",
+          "Battery DISCONNECTED (Q constant): V = Q/C, so V changes with C."
+        ]
+      },
+      {
+        "heading": "Energy Stored",
+        "points": [
+          "U = ½CV² = ½QV = Q²/(2C).",
+          "Energy density in the field: u = ½ε₀E² (½Kε₀E² with dielectric).",
+          "Force of attraction between the plates: F = Q²/(2ε₀A) = ½ε₀E²·A."
+        ]
+      },
+      {
+        "heading": "Charge Sharing",
+        "points": [
+          "Connecting two capacitors: charge is conserved; they reach a common potential.",
+          "Common voltage: V = (C₁V₁ + C₂V₂)/(C₁ + C₂).",
+          "Final charge splits in proportion to capacitance (Q ∝ C at common V).",
+          "Some energy is always LOST (as heat/radiation) during redistribution."
+        ]
+      },
+      {
+        "heading": "Capacitor in a DC Circuit",
+        "points": [
+          "In the steady state a fully-charged capacitor carries NO current (acts as an open circuit).",
+          "Ignore the capacitor branch when finding steady-state currents.",
+          "Then Q = C × (voltage across the element the capacitor is in parallel with).",
+          "Time constant of charging/discharging through R: τ = RC."
+        ]
+      }
+    ]
+  },
   "questions": [
     {
       "id": "cap-2026-jan21-s2-q1",

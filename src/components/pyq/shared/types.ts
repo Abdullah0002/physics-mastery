@@ -33,6 +33,19 @@ export interface PYQQuestion {
   commonMistakes: string[];
 }
 
+export interface TheorySection {
+  /** Section heading, e.g. "Equations of Motion (uniform acceleration)". */
+  heading: string;
+  /** Bullet points; may contain unicode math. */
+  points: string[];
+}
+
+export interface ChapterTheory {
+  /** One-line overview of the chapter. */
+  summary: string;
+  sections: TheorySection[];
+}
+
 export interface ChapterPYQData {
   /** URL slug, e.g. "kinematics". Used for the route and the bookmark storage key. */
   slug: string;
@@ -40,5 +53,7 @@ export interface ChapterPYQData {
   exam: string;
   source: string;
   topics: string[];
+  /** Optional theory / revision notes shown above the questions. */
+  theory?: ChapterTheory;
   questions: PYQQuestion[];
 }
