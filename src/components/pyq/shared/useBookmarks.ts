@@ -2,36 +2,34 @@
 
 import { useCallback, useEffect, useState } from "react";
 
-const STORAGE_KEY = "kinematics-pyq-bookmarks";
-
 /**
- * Persisted bookmark set backed by localStorage.
+ * Persisted bookmark set backed by localStorage, scoped per chapter via `storageKey`.
  * Safe for SSR: reads localStorage only after mount.
  */
-export function useBookmarks() {
+export function useBookmarks(storageKey: string) {
   const [bookmarks, setBookmarks] = useState<Set<string>>(new Set());
   const [hydrated, setHydrated] = useState(false);
 
-  // Load once on mount.
+  // Load once on mount (and whenever the key changes).
   useEffect(() => {
     try {
-      const raw = localStorage.getItem(STORAGE_KEY);
-      if (raw) setBookmarks(new Set(JSON.parse(raw) as string[]));
+      const raw = localStorage.getItem(storageKey);
+      setBookmarks(raw ? new Set(JSON.parse(raw) as string[]) : new Set());
     } catch {
-      /* ignore malformed storage */
+      setBookmarks(new Set());
     }
     setHydrated(true);
-  }, []);
+  }, [storageKey]);
 
   // Persist whenever the set changes (after hydration).
   useEffect(() => {
     if (!hydrated) return;
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify([...bookmarks]));
+      localStorage.setItem(storageKey, JSON.stringify([...bookmarks]));
     } catch {
       /* storage may be unavailable (private mode) */
     }
-  }, [bookmarks, hydrated]);
+  }, [bookmarks, hydrated, storageKey]);
 
   const toggleBookmark = useCallback((id: string) => {
     setBookmarks((prev) => {

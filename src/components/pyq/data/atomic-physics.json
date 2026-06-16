@@ -1,0 +1,109 @@
+{
+  "slug": "atomic-physics",
+  "chapter": "Atomic Physics",
+  "exam": "JEE Main 2026 (January)",
+  "source": "MathonGo JEE Main 2026 (January) Question Bank",
+  "topics": ["Atomic Physics"],
+  "questions": [
+    {
+      "id": "atom-2026-jan21-s2-q1",
+      "topic": "Atomic Physics",
+      "year": "2026",
+      "session": "JEE Main 2026 (21 January Shift 2)",
+      "difficulty": "Easy",
+      "concept": "Bohr model: energy levels Eₙ = −E₀/n² and quantised angular momentum L = nℏ = n·h/2π.",
+      "question": "The energy of an electron in an orbit of the Bohr's atom is −0.04 E₀ eV where E₀ is the ground state energy. If L is the angular momentum of the electron in this orbit and h is the Planck's constant, then 2πL/h is:",
+      "options": ["5", "6", "2", "4"],
+      "answer": "Option (1)  2πL/h = 5",
+      "answerIndex": 0,
+      "diagram": "",
+      "solution": "In Bohr's model the energy levels are Eₙ = −E₀/n², where E₀ is the (magnitude of the) ground-state energy.\n\nStep 1 — Find the principal quantum number n:\n  Eₙ = −0.04 E₀  ⇒  −E₀/n² = −0.04 E₀\n  ⇒ 1/n² = 0.04 = 1/25\n  ⇒ n² = 25  ⇒  n = 5.\n\nStep 2 — Angular momentum is quantised:\n  L = nℏ = n · h/(2π).\n\nStep 3 — Therefore:\n  2πL/h = 2π · (n h/2π) / h = n = 5.\n\n∴ Option (1) 5.",
+      "shortcut": "2πL/h is just n in disguise (since L = n·h/2π). So you only need n: from −E₀/n² = −0.04E₀ ⇒ n² = 1/0.04 = 25 ⇒ n = 5. Answer = n = 5.",
+      "commonMistakes": [
+        "Reading 0.04 as n and answering 4 — you must invert: n² = 1/0.04 = 25.",
+        "Forgetting that L = n·h/2π, so 2πL/h reduces exactly to n.",
+        "Mixing up E₀ (ground state) with Eₙ; the −0.04 factor compares to the ground state, giving 1/n²."
+      ]
+    },
+    {
+      "id": "atom-2026-jan23-s1-q2",
+      "topic": "Atomic Physics",
+      "year": "2026",
+      "session": "JEE Main 2026 (23 January Shift 1)",
+      "difficulty": "Medium",
+      "concept": "Hydrogen spectral series: using 1/λ = R(1/n₁² − 1/n₂²) to find maximum/minimum wavelengths of the Lyman, Balmer and Paschen series.",
+      "question": "In the hydrogen atom spectrum (R → Rydberg's constant):\nA. the maximum wavelength of the radiation of Lyman series is 4/(3R)\nB. the Balmer series lies in the visible region of the spectrum\nC. the minimum wavelength of the radiation of Paschen series is 9/R\nD. the minimum wavelength of Lyman series is 5/(4R)\n\nChoose the correct answer from the options given below:",
+      "options": ["B, D Only", "A, B and C Only", "A, B and D Only", "A, B Only"],
+      "answer": "Option (2)  A, B and C Only",
+      "answerIndex": 1,
+      "diagram": "",
+      "solution": "Use 1/λ = R(1/n₁² − 1/n₂²). Largest λ ⇒ smallest energy gap (adjacent levels); smallest λ ⇒ largest gap (n₂ = ∞).\n\nStatement A — Lyman MAXIMUM wavelength (n₁=1, n₂=2):\n  1/λ = R(1 − 1/4) = 3R/4 ⇒ λ = 4/(3R). ✓ TRUE\n\nStatement B — Balmer series lies in the visible region. ✓ TRUE (well-known: Hα, Hβ … are visible).\n\nStatement C — Paschen MINIMUM wavelength (series limit, n₁=3, n₂=∞):\n  1/λ = R(1/9 − 0) = R/9 ⇒ λ = 9/R. ✓ TRUE\n\nStatement D — Lyman MINIMUM wavelength (series limit, n₁=1, n₂=∞):\n  1/λ = R(1 − 0) = R ⇒ λ = 1/R, NOT 5/(4R). ✗ FALSE\n\nCorrect statements: A, B, C.\n\n∴ Option (2).",
+      "shortcut": "Maximum λ of a series = first line (n₁→n₁+1); minimum λ = series limit (n₁→∞), which is simply λ_min = n₁²/R. So Lyman limit = 1/R, Balmer limit = 4/R, Paschen limit = 9/R. That instantly confirms C and kills D.",
+      "commonMistakes": [
+        "Swapping 'maximum' and 'minimum' wavelength — max λ is the smallest jump, min λ is the series limit (n₂ = ∞).",
+        "For the Lyman limit, writing 5/(4R) (a Balmer-type value) instead of 1/R.",
+        "Doubting that the Balmer series is visible — it is the standard visible-region hydrogen series."
+      ]
+    },
+    {
+      "id": "atom-2026-jan22-s2-q3",
+      "topic": "Atomic Physics",
+      "year": "2026",
+      "session": "JEE Main 2026 (22 January Shift 2)",
+      "difficulty": "Hard",
+      "concept": "Spectral wavelengths: first fix R from the Lyman series limit, then compute the longest wavelengths (first lines) of the Balmer and Paschen series and subtract.",
+      "question": "The smallest wavelength of Lyman series is 91 nm. The difference between the largest wavelengths of Paschen and Balmer series is nearly ____ nm.",
+      "options": ["1550", "1217", "1875", "1784"],
+      "answer": "Option (2)  ≈ 1217 nm",
+      "answerIndex": 1,
+      "diagram": "",
+      "solution": "Step 1 — Find R from the Lyman series limit (smallest λ, n₁=1, n₂=∞):\n  1/λ = R(1) ⇒ R = 1/λ = 1/91 nm⁻¹.\n\nStep 2 — Largest wavelength of Balmer (first line, n₁=2, n₂=3):\n  1/λ_B = R(1/4 − 1/9) = R(5/36) = (1/91)(5/36)\n  ⇒ λ_B = 91 × 36 / 5 = 655.2 nm.\n\nStep 3 — Largest wavelength of Paschen (first line, n₁=3, n₂=4):\n  1/λ_P = R(1/9 − 1/16) = R(7/144) = (1/91)(7/144)\n  ⇒ λ_P = 91 × 144 / 7 = 1872 nm.\n\nStep 4 — Difference:\n  Δλ = λ_P − λ_B = 1872 − 655.2 = 1216.8 ≈ 1217 nm.\n\n∴ Option (2).",
+      "shortcut": "The Lyman series limit gives R = 1/91 nm⁻¹ in one line (1/λ = R·1). 'Largest wavelength' of any series = its first line: Balmer 2→3 (factor 5/36) and Paschen 3→4 (factor 7/144). Then λ = 91/(factor). Δλ ≈ 1217 nm.",
+      "commonMistakes": [
+        "Using the wrong transitions for the LARGEST wavelength — it is the first line (n₁→n₁+1), not the series limit.",
+        "Computing the Paschen line as 3→∞ (its smallest λ) instead of 3→4 (its largest λ).",
+        "Arithmetic slips: λ_B = 91×36/5 = 655.2 nm and λ_P = 91×144/7 = 1872 nm."
+      ]
+    },
+    {
+      "id": "atom-2026-jan21-s1-q4",
+      "topic": "Atomic Physics",
+      "year": "2026",
+      "session": "JEE Main 2026 (21 January Shift 1)",
+      "difficulty": "Medium",
+      "concept": "Distance of closest approach in Rutherford scattering: the alpha particle's kinetic energy is fully converted to electrostatic potential energy at r_min.",
+      "question": "If an alpha particle with energy 7.7 MeV is bombarded on a thin gold foil, the closest distance from the nucleus it can reach is ____ m. (Atomic number of gold = 79 and 1/4πε₀ = 9 × 10⁹ in SI units)",
+      "options": ["3.85 × 10⁻¹⁶", "3.85 × 10⁻¹⁴", "2.95 × 10⁻¹⁶", "2.95 × 10⁻¹⁴"],
+      "answer": "Option (4)  2.95 × 10⁻¹⁴ m",
+      "answerIndex": 3,
+      "diagram": "",
+      "solution": "At the closest approach, the alpha particle momentarily stops; all its kinetic energy becomes electrostatic potential energy between the alpha (charge 2e) and the gold nucleus (charge Ze):\n  KE = (1/4πε₀) · (2e)(Ze) / r_min\n  ⇒ r_min = (1/4πε₀) · 2Ze² / KE.\n\nPlug in numbers (e = 1.6 × 10⁻¹⁹ C, Z = 79, KE = 7.7 MeV = 7.7 × 10⁶ × 1.6 × 10⁻¹⁹ J):\n  r_min = [9 × 10⁹ × 2 × 79 × (1.6 × 10⁻¹⁹)²] / [7.7 × 10⁶ × 1.6 × 10⁻¹⁹]\n\nSimplify by cancelling one factor of (1.6 × 10⁻¹⁹):\n  r_min = (9 × 10⁹ × 2 × 79 × 1.6 × 10⁻¹⁹) / (7.7 × 10⁶) × 10³ ... working the powers:\n  = (2275.2 / 7.7) × 10⁻¹⁴\n  = 2.95 × 10⁻¹⁴ m.\n\n∴ Option (4) 2.95 × 10⁻¹⁴ m.",
+      "shortcut": "Memorise r_min = (1/4πε₀)·2Ze²/KE with KE in joules. Convert MeV → J using 1 eV = 1.6 × 10⁻¹⁹ J; one factor of e cancels with the e² on top, leaving a single 1.6 × 10⁻¹⁹. For α on heavy nuclei the answer is ~10⁻¹⁴ m, which rules out the 10⁻¹⁶ options at a glance.",
+      "commonMistakes": [
+        "Forgetting the alpha particle carries charge 2e (not e), dropping the factor of 2.",
+        "Leaving KE in MeV or eV instead of converting to joules.",
+        "Power-of-ten errors — the correct order of magnitude is 10⁻¹⁴ m; 10⁻¹⁶ answers are distractors."
+      ]
+    },
+    {
+      "id": "atom-2026-jan24-s1-q5",
+      "topic": "Atomic Physics",
+      "year": "2026",
+      "session": "JEE Main 2026 (24 January Shift 1)",
+      "difficulty": "Medium",
+      "concept": "Bohr model scaling for hydrogen-like atoms: orbital speed v ∝ Z/n and radius r ∝ n²/Z, so r ∝ n/v; equal radii fix the ratio of quantum numbers.",
+      "question": "Two electrons are moving in orbits of two hydrogen-like atoms with speeds 3 × 10⁵ m/s and 2.5 × 10⁵ m/s respectively. If the radii of these orbits are nearly the same, then the possible order of energy states are ____ respectively.",
+      "options": ["8 and 10", "9 and 8", "10 and 12", "6 and 5"],
+      "answer": "Option (4)  6 and 5",
+      "answerIndex": 3,
+      "diagram": "",
+      "solution": "For hydrogen-like atoms (Bohr model):\n  orbital speed  v ∝ Z/n\n  orbital radius  r ∝ n²/Z\n\nEliminate Z. From v ∝ Z/n we get Z ∝ v·n, so:\n  r ∝ n²/Z ∝ n²/(v·n) = n/v.\n  ⇒ r ∝ n/v.\n\nThe radii are nearly the same:\n  n₁/v₁ = n₂/v₂\n  ⇒ n₁/n₂ = v₁/v₂ = (3 × 10⁵)/(2.5 × 10⁵) = 3/2.5 = 6/5.\n\nSo the quantum numbers are in the ratio 6 : 5, i.e. the orbits are n = 6 and n = 5.\n\n∴ Option (4) 6 and 5.",
+      "shortcut": "Combine the two Bohr scalings into r ∝ n/v. Equal radii ⇒ n ∝ v ⇒ n₁ : n₂ = v₁ : v₂ = 3 : 2.5 = 6 : 5. The smallest integer pair in that ratio is (6, 5).",
+      "commonMistakes": [
+        "Using r ∝ n² alone (forgetting the Z dependence) — both v and r depend on Z, which must be eliminated, giving r ∝ n/v.",
+        "Inverting the ratio: faster electron (higher v) corresponds to the higher n here because n ∝ v at fixed r.",
+        "Picking a ratio-equivalent but non-minimal pair; 6 : 5 is the intended simplest order."
+      ]
+    }
+  ]
+}

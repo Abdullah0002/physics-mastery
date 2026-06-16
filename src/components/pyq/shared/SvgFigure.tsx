@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * Renders trusted inline SVG markup (authored in this module's JSON, not user input).
+ * Renders trusted inline SVG markup (authored in the module's JSON, not user input).
  * The wrapper makes the SVG fully responsive and theme-aware (SVGs use currentColor).
  */
 export function SvgFigure({

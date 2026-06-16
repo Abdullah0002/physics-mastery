@@ -2,12 +2,10 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { Search, Moon, Sun, Bookmark, X, FileX2 } from "lucide-react";
-import data from "./kinematics-pyq.json";
-import type { KinematicsPYQData, KinematicsQuestion, Difficulty } from "./types";
-import { KinematicsQuestionCard } from "./KinematicsQuestionCard";
+import type { ChapterPYQData, PYQQuestion, Difficulty } from "./types";
+import { PYQQuestionCard } from "./PYQQuestionCard";
 import { useBookmarks } from "./useBookmarks";
 
-const PYQ = data as KinematicsPYQData;
 const DIFFICULTIES: Difficulty[] = ["Easy", "Medium", "Hard"];
 
 function FilterChip({
@@ -35,13 +33,17 @@ function FilterChip({
   );
 }
 
-export function KinematicsPYQModule({
+export function PYQModule({
+  data,
   showThemeToggle = true,
 }: {
+  data: ChapterPYQData;
   /** Set false if the host app already manages the `dark` class on <html>. */
   showThemeToggle?: boolean;
 }) {
-  const { isBookmarked, toggleBookmark, bookmarks, hydrated } = useBookmarks();
+  const { isBookmarked, toggleBookmark, bookmarks, hydrated } = useBookmarks(
+    `pyq-bookmarks-${data.slug}`
+  );
 
   const [query, setQuery] = useState("");
   const [difficulty, setDifficulty] = useState<Difficulty | "All">("All");
@@ -50,7 +52,6 @@ export function KinematicsPYQModule({
   const [onlyBookmarks, setOnlyBookmarks] = useState(false);
   const [isDark, setIsDark] = useState(false);
 
-  // Sync local toggle with the document's current theme on mount.
   useEffect(() => {
     if (!showThemeToggle) return;
     setIsDark(document.documentElement.classList.contains("dark"));
@@ -63,24 +64,25 @@ export function KinematicsPYQModule({
   };
 
   const years = useMemo(
-    () => [...new Set(PYQ.questions.map((q) => q.year))].sort((a, b) => b.localeCompare(a)),
-    []
+    () => [...new Set(data.questions.map((q) => q.year))].sort((a, b) => b.localeCompare(a)),
+    [data.questions]
   );
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return PYQ.questions.filter((item: KinematicsQuestion) => {
+    return data.questions.filter((item: PYQQuestion) => {
       if (difficulty !== "All" && item.difficulty !== difficulty) return false;
       if (year !== "All" && item.year !== year) return false;
       if (topic !== "All" && item.topic !== topic) return false;
       if (onlyBookmarks && !isBookmarked(item.id)) return false;
       if (q) {
-        const haystack = `${item.question} ${item.concept} ${item.session} ${item.solution} ${item.topic}`.toLowerCase();
+        const haystack =
+          `${item.question} ${item.concept} ${item.session} ${item.solution} ${item.topic}`.toLowerCase();
         if (!haystack.includes(q)) return false;
       }
       return true;
     });
-  }, [query, difficulty, year, topic, onlyBookmarks, isBookmarked]);
+  }, [data.questions, query, difficulty, year, topic, onlyBookmarks, isBookmarked]);
 
   const resetFilters = () => {
     setQuery("");
@@ -93,6 +95,8 @@ export function KinematicsPYQModule({
   const hasActiveFilters =
     query || difficulty !== "All" || year !== "All" || topic !== "All" || onlyBookmarks;
 
+  const showTopicFilter = data.topics.length > 1;
+
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 transition-colors dark:bg-slate-950 dark:text-slate-100">
       <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
@@ -100,11 +104,11 @@ export function KinematicsPYQModule({
         <header className="mb-6 flex flex-wrap items-center justify-between gap-3">
           <div>
             <p className="text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">
-              {PYQ.exam}
+              {data.exam}
             </p>
-            <h1 className="text-2xl font-bold sm:text-3xl">{PYQ.chapter} — PYQ Bank</h1>
+            <h1 className="text-2xl font-bold sm:text-3xl">{data.chapter} — PYQ Bank</h1>
             <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
-              {PYQ.questions.length} previous-year questions with full solutions, shortcuts &amp;
+              {data.questions.length} previous-year questions with full solutions, shortcuts &amp;
               diagrams.
             </p>
           </div>
@@ -145,15 +149,17 @@ export function KinematicsPYQModule({
           </div>
 
           {/* Topic filter */}
-          <div className="flex flex-col gap-1.5">
-            <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">Topic</span>
-            <div className="flex flex-wrap gap-1.5">
-              <FilterChip label="All Topics" active={topic === "All"} onClick={() => setTopic("All")} />
-              {PYQ.topics.map((t) => (
-                <FilterChip key={t} label={t} active={topic === t} onClick={() => setTopic(t)} />
-              ))}
+          {showTopicFilter && (
+            <div className="flex flex-col gap-1.5">
+              <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">Topic</span>
+              <div className="flex flex-wrap gap-1.5">
+                <FilterChip label="All Topics" active={topic === "All"} onClick={() => setTopic("All")} />
+                {data.topics.map((t) => (
+                  <FilterChip key={t} label={t} active={topic === t} onClick={() => setTopic(t)} />
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
           <div className="flex flex-wrap gap-x-8 gap-y-3">
             {/* Difficulty filter */}
@@ -219,7 +225,7 @@ export function KinematicsPYQModule({
               )}
             </div>
             <span className="text-xs text-slate-500 dark:text-slate-400">
-              {filtered.length} of {PYQ.questions.length} questions
+              {filtered.length} of {data.questions.length} questions
             </span>
           </div>
         </div>
@@ -236,7 +242,7 @@ export function KinematicsPYQModule({
         ) : (
           <div className="space-y-5">
             {filtered.map((q, i) => (
-              <KinematicsQuestionCard
+              <PYQQuestionCard
                 key={q.id}
                 question={q}
                 index={i}
@@ -248,11 +254,11 @@ export function KinematicsPYQModule({
         )}
 
         <footer className="mt-8 text-center text-xs text-slate-400 dark:text-slate-600">
-          Source: {PYQ.source}
+          Source: {data.source}
         </footer>
       </div>
     </div>
   );
 }
 
-export default KinematicsPYQModule;
+export default PYQModule;

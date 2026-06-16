@@ -1,0 +1,109 @@
+{
+  "slug": "alternating-current",
+  "chapter": "Alternating Current",
+  "exam": "JEE Main 2026 (January)",
+  "source": "MathonGo JEE Main 2026 (January) Question Bank",
+  "topics": ["Alternating Current"],
+  "questions": [
+    {
+      "id": "ac-2026-jan21-s2-q1",
+      "topic": "Alternating Current",
+      "year": "2026",
+      "session": "JEE Main 2026 (21 January Shift 2)",
+      "difficulty": "Medium",
+      "concept": "LC oscillations: energy sloshes sinusoidally between capacitor and inductor; the capacitor energy varies as cos²(ωt) with ω = 1/√(LC).",
+      "question": "A capacitor C is first charged fully with potential difference of V₀ and disconnected from the battery. The charged capacitor is connected across an inductor having inductance L. In t s, 25% of the initial energy in the capacitor is transferred to the inductor. The value of t is ____ s.",
+      "options": ["π√(LC) / 3", "π√(LC) / 6", "π√(LC) / 2", "π·√(LC / 2)"],
+      "answer": "Option (2)  t = π√(LC) / 6",
+      "answerIndex": 1,
+      "diagram": "",
+      "solution": "In an LC circuit the charge (and hence the capacitor voltage) oscillates as q = q₀ cos(ωt), with angular frequency ω = 1/√(LC).\n\nEnergy stored in the capacitor:\n  E_C(t) = q²/2C = E₀ cos²(ωt),  where E₀ = ½ C V₀² is the initial energy.\n\n25% of the energy has gone to the inductor ⇒ 75% still remains in the capacitor:\n  cos²(ωt) = 0.75  ⇒  sin²(ωt) = 0.25  ⇒  sin(ωt) = 0.5\n  ⇒ ωt = π/6.\n\nTherefore:\n  t = (π/6) / ω = (π/6)·√(LC) = π√(LC) / 6.\n\n∴ Option (2).",
+      "shortcut": "Energy in the capacitor ∝ cos²(ωt). 'x % transferred to inductor' ⇒ cos²(ωt) = (1 − x). Here cos²(ωt) = 0.75 ⇒ ωt = π/6. Multiply by 1/ω = √(LC). Memorise ω = 1/√(LC) for LC circuits — no resistance involved.",
+      "commonMistakes": [
+        "Using sin²(ωt) = 0.75 instead of cos²(ωt) = 0.75 — the capacitor STARTS with all the energy, so its share follows cos².",
+        "Forgetting that ω = 1/√(LC), so 1/ω = √(LC); writing t = π/6 without the √(LC) factor.",
+        "Confusing 'energy transferred' (25%) with the angle directly (e.g. taking ωt = π/4)."
+      ]
+    },
+    {
+      "id": "ac-2026-jan23-s1-q2",
+      "topic": "Alternating Current",
+      "year": "2026",
+      "session": "JEE Main 2026 (23 January Shift 1)",
+      "difficulty": "Medium",
+      "concept": "Series LCR resonance: peak current is maximum when X_L = X_C, giving the resonance/capacitance relation C = 1/(ω²L).",
+      "question": "Using a variable frequency a.c. voltage source the maximum current measured in the given LCR circuit is 50 mA for V = 5 sin(100t). The values of L and R are shown in the figure (L = 2 H, R = 100 Ω). The capacitance of the capacitor (C) used is ____ μF.",
+      "options": [],
+      "answer": "C = 50 μF",
+      "answerIndex": -1,
+      "diagram": "<svg viewBox='0 0 360 210' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Series LCR circuit: inductor L = 2 H, capacitor C, resistor R = 100 ohm, AC source V = 5 sin(100t)'><rect x='40' y='45' width='280' height='115' fill='none' stroke='currentColor' stroke-width='2'/><path d='M62,45 a7.5,7.5 0 0 1 15,0 a7.5,7.5 0 0 1 15,0 a7.5,7.5 0 0 1 15,0 a7.5,7.5 0 0 1 15,0' fill='none' stroke='#2563eb' stroke-width='2.5'/><text x='62' y='30' font-size='13' fill='currentColor'>L = 2 H</text><line x1='176' y1='33' x2='176' y2='57' stroke='#2563eb' stroke-width='2.5'/><line x1='186' y1='33' x2='186' y2='57' stroke='#2563eb' stroke-width='2.5'/><line x1='150' y1='45' x2='176' y2='45' stroke='currentColor' stroke-width='2'/><line x1='186' y1='45' x2='225' y2='45' stroke='currentColor' stroke-width='2'/><text x='173' y='72' font-size='13' fill='currentColor'>C</text><path d='M232,45 l5,-9 l10,18 l10,-18 l10,18 l10,-18 l5,9' fill='none' stroke='#2563eb' stroke-width='2.5'/><text x='240' y='30' font-size='13' fill='currentColor'>R = 100 Ω</text><circle cx='180' cy='160' r='17' fill='none' stroke='#2563eb' stroke-width='2.5'/><path d='M169,160 q5.5,-9 11,0 q5.5,9 11,0' fill='none' stroke='#2563eb' stroke-width='2'/><text x='150' y='198' font-size='13' fill='currentColor'>V = 5 sin(100t)</text></svg>",
+      "solution": "From V = 5 sin(100t): peak voltage V₀ = 5 V, angular frequency ω = 100 rad/s.\n\nThe maximum current (over all driving frequencies) occurs at RESONANCE, where X_L = X_C and the impedance is purely R.\n  Peak current at resonance: I₀ = V₀ / R = 5 / 100 = 0.05 A = 50 mA ✓ (matches the given value, confirming resonance).\n\nResonance condition (X_L = X_C):\n  ωL = 1/(ωC)\n  ⇒ C = 1/(ω²L) = 1 / (100² × 2) = 1 / 20000 = 5 × 10⁻⁵ F.\n\nConvert: 5 × 10⁻⁵ F = 50 × 10⁻⁶ F = 50 μF.\n\n∴ C = 50 μF.",
+      "shortcut": "Maximum current with a variable-frequency source ⇒ the circuit is at resonance ⇒ use C = 1/(ω²L) directly. Read ω straight off V = 5 sin(100t) ⇒ ω = 100. Then C = 1/(100²·2) = 50 μF. (The 50 mA just confirms I₀ = V₀/R at resonance.)",
+      "commonMistakes": [
+        "Trying to use I = V/Z with a general impedance — at maximum current the reactances cancel, so only R matters.",
+        "Mixing peak and rms: here the 50 mA is the PEAK current (I₀ = V₀/R = 5/100), not I_rms.",
+        "Arithmetic with powers of ten: 1/20000 = 5 × 10⁻⁵ F = 50 μF, not 5 μF."
+      ]
+    },
+    {
+      "id": "ac-2026-jan28-s2-q3",
+      "topic": "Alternating Current",
+      "year": "2026",
+      "session": "JEE Main 2026 (28 January Shift 2)",
+      "difficulty": "Hard",
+      "concept": "Real inductor (L in series with internal resistance R): magnetic energy ½LI²_rms gives L, power I²_rms·R gives R, then X_L = ωL.",
+      "question": "An inductor stores 16 J of magnetic field energy and dissipates 32 W of thermal energy due to its resistance when an a.c. current of 2 A (rms) and frequency 50 Hz flows through it. The ratio of inductive reactance to its resistance is ____. (π = 3.14)",
+      "options": [],
+      "answer": "X_L / R = 314",
+      "answerIndex": -1,
+      "diagram": "",
+      "solution": "Given: magnetic energy U = 16 J, thermal power P = 32 W, I_rms = 2 A, f = 50 Hz.\n\nStep 1 — Find L from the stored magnetic energy:\n  U = ½ L I²_rms\n  16 = ½ · L · (2)² = ½ · L · 4 = 2L\n  ⇒ L = 8 H.\n\nStep 2 — Find R from the dissipated power:\n  P = I²_rms · R\n  32 = (2)² · R = 4R\n  ⇒ R = 8 Ω.\n\nStep 3 — Inductive reactance:\n  X_L = ωL = 2πfL = 2 × 3.14 × 50 × 8 = 2512 Ω.\n\nStep 4 — Required ratio:\n  X_L / R = 2512 / 8 = 314.\n\n∴ X_L / R = 314.",
+      "shortcut": "Both U and P use I²_rms = 4, so L = 2U/I² = 32/4 = 8 H and R = P/I² = 32/4 = 8 Ω. Then X_L/R = ωL/R = 2πfL/R = 2π·50·8/8 = 100π = 314. Notice L = R numerically here, so the ratio is just ω = 2πf = 100π.",
+      "commonMistakes": [
+        "Using peak current instead of rms in ½LI² and I²R (the problem already gives rms, so use it directly).",
+        "Forgetting the factor ½ in the magnetic energy U = ½LI², which would double L.",
+        "Computing ω = f instead of ω = 2πf, dropping the factor 2π = 6.28."
+      ]
+    },
+    {
+      "id": "ac-2026-jan28-s1-q4",
+      "topic": "Alternating Current",
+      "year": "2026",
+      "session": "JEE Main 2026 (28 January Shift 1)",
+      "difficulty": "Easy",
+      "concept": "RMS value of a time-varying current by definition: I_rms = √( (1/T)∫₀ᵀ i² dt ) for a linearly rising (ramp) current.",
+      "question": "The electric current in the circuit is given as i = i₀(t/T). The r.m.s current for the period t = 0 to t = T is ____.",
+      "options": ["i₀", "i₀/√6", "i₀/√3", "i₀/√2"],
+      "answer": "Option (3)  i₀/√3",
+      "answerIndex": 2,
+      "diagram": "",
+      "solution": "By definition, the rms current over one period is:\n  I_rms = √( (1/T) ∫₀ᵀ i² dt )\n\nSubstitute i = i₀ (t/T):\n  i² = i₀² (t²/T²)\n  ∫₀ᵀ i² dt = (i₀²/T²) ∫₀ᵀ t² dt = (i₀²/T²) · (T³/3) = i₀² T / 3.\n\nDivide by T and take the square root:\n  I_rms = √( (1/T) · i₀² T / 3 ) = √( i₀² / 3 ) = i₀/√3.\n\n∴ Option (3) i₀/√3.",
+      "shortcut": "For a linear ramp from 0 to i₀, the mean of the square of a line is (peak²)/3 (just like the area-weighted average of t² over [0,T] is T²/3). So I_rms = i₀/√3 instantly. Compare: for a full sine wave it would be i₀/√2.",
+      "commonMistakes": [
+        "Taking the simple average (i₀/2) instead of the root-mean-square — rms squares first, then averages, then square-roots.",
+        "Confusing the ramp result i₀/√3 with the sinusoid result i₀/√2.",
+        "Integrating i instead of i² inside the rms definition."
+      ]
+    },
+    {
+      "id": "ac-2026-jan24-s1-q5",
+      "topic": "Alternating Current",
+      "year": "2026",
+      "session": "JEE Main 2026 (24 January Shift 1)",
+      "difficulty": "Medium",
+      "concept": "Series LCR impedance and power factor: net reactance X = X_C − X_L, impedance Z = √(R²+X²), power factor cos φ = R/Z.",
+      "question": "For the series LCR circuit connected with 220 V, 50 Hz a.c source as shown in the figure, the power factor is α/10. The values shown are X_L = 70 Ω, X_C = 150 Ω, R = 60 Ω. The value of α is ____.",
+      "options": ["10", "4", "6", "8"],
+      "answer": "Option (3)  α = 6",
+      "answerIndex": 2,
+      "diagram": "<svg viewBox='0 0 360 215' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Series LCR circuit with 220 V 50 Hz source, inductive reactance 70 ohm, capacitive reactance 150 ohm, resistance 60 ohm'><rect x='40' y='55' width='280' height='115' fill='none' stroke='currentColor' stroke-width='2'/><circle cx='180' cy='55' r='17' fill='none' stroke='#2563eb' stroke-width='2.5'/><path d='M169,55 q5.5,-9 11,0 q5.5,9 11,0' fill='none' stroke='#2563eb' stroke-width='2'/><text x='150' y='28' font-size='13' fill='currentColor'>220 V, 50 Hz</text><path d='M55,170 a7.5,7.5 0 0 1 15,0 a7.5,7.5 0 0 1 15,0 a7.5,7.5 0 0 1 15,0 a7.5,7.5 0 0 1 15,0' fill='none' stroke='#2563eb' stroke-width='2.5' transform='rotate(180 70 170)'/><text x='42' y='200' font-size='12' fill='currentColor'>L (X_L=70Ω)</text><line x1='176' y1='158' x2='176' y2='182' stroke='#2563eb' stroke-width='2.5'/><line x1='186' y1='158' x2='186' y2='182' stroke='#2563eb' stroke-width='2.5'/><line x1='150' y1='170' x2='176' y2='170' stroke='currentColor' stroke-width='2'/><line x1='186' y1='170' x2='225' y2='170' stroke='currentColor' stroke-width='2'/><text x='150' y='200' font-size='12' fill='currentColor'>C (X_C=150Ω)</text><path d='M232,170 l5,-9 l10,18 l10,-18 l10,18 l10,-18 l5,9' fill='none' stroke='#2563eb' stroke-width='2.5'/><text x='250' y='200' font-size='12' fill='currentColor'>R = 60 Ω</text></svg>",
+      "solution": "Step 1 — Net reactance (capacitive dominates here):\n  X = X_C − X_L = 150 − 70 = 80 Ω.\n\nStep 2 — Impedance:\n  Z = √(R² + X²) = √(60² + 80²) = √(3600 + 6400) = √10000 = 100 Ω.\n  (This is the classic 6–8–10 right triangle.)\n\nStep 3 — Power factor:\n  cos φ = R / Z = 60 / 100 = 0.6.\n\nStep 4 — Given power factor = α/10:\n  0.6 = α/10  ⇒  α = 6.\n\n∴ Option (3) α = 6.",
+      "shortcut": "Spot the 6-8-10 triangle: R = 60, |X_C − X_L| = 80 ⇒ Z = 100. Power factor = R/Z = 0.6 immediately. The 220 V / 50 Hz are distractors — power factor needs only R and Z.",
+      "commonMistakes": [
+        "Adding X_L and X_C instead of subtracting — in a series LCR the reactances oppose, so X = |X_C − X_L|.",
+        "Using X (= 80) instead of R (= 60) in the numerator of the power factor; cos φ = R/Z, not X/Z.",
+        "Wasting time computing current from 220 V — the source values aren't needed for the power factor."
+      ]
+    }
+  ]
+}

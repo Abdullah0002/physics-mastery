@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { KinematicsPYQModule } from "@/components/pyq/kinematics/KinematicsPYQModule";
+import { PYQModule } from "@/components/pyq/shared/PYQModule";
+import { PYQ_CHAPTERS } from "@/components/pyq/data";
 
 export const metadata: Metadata = {
   title: "Kinematics PYQs — JEE Main 2026",
@@ -9,7 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function KinematicsPyqPage() {
-  // The host layout already manages the global `dark` class, so hide the
-  // module's standalone toggle here. Set to true when used outside the app.
-  return <KinematicsPYQModule showThemeToggle={false} />;
+  return <PYQModule data={PYQ_CHAPTERS.kinematics} showThemeToggle={false} />;
 }

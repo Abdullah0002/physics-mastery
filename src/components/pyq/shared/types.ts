@@ -1,9 +1,9 @@
-// Types for the Kinematics PYQ module.
+// Shared types for all chapter PYQ modules.
 // Self-contained: no dependency on Prisma or app-wide types, so the module is portable.
 
 export type Difficulty = "Easy" | "Medium" | "Hard";
 
-export interface KinematicsQuestion {
+export interface PYQQuestion {
   /** Stable unique id, also used as the bookmark key. */
   id: string;
   /** Topic within the chapter, e.g. "Motion In One Dimension". */
@@ -21,7 +21,7 @@ export interface KinematicsQuestion {
   options: string[];
   /** Human-readable correct answer. */
   answer: string;
-  /** Zero-based index of the correct option within `options`. */
+  /** Zero-based index of the correct option within `options`, or -1 for numeric/integer answers. */
   answerIndex: number;
   /** Inline SVG markup for the question diagram, or "" if none. */
   diagram: string;
@@ -33,10 +33,12 @@ export interface KinematicsQuestion {
   commonMistakes: string[];
 }
 
-export interface KinematicsPYQData {
+export interface ChapterPYQData {
+  /** URL slug, e.g. "kinematics". Used for the route and the bookmark storage key. */
+  slug: string;
   chapter: string;
   exam: string;
   source: string;
   topics: string[];
-  questions: KinematicsQuestion[];
+  questions: PYQQuestion[];
 }

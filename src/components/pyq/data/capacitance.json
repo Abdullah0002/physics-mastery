@@ -1,0 +1,149 @@
+{
+  "slug": "capacitance",
+  "chapter": "Capacitance",
+  "exam": "JEE Main 2026 (January)",
+  "source": "MathonGo JEE Main 2026 (January) Question Bank",
+  "topics": ["Capacitance"],
+  "questions": [
+    {
+      "id": "cap-2026-jan21-s2-q1",
+      "topic": "Capacitance",
+      "year": "2026",
+      "session": "JEE Main 2026 (21 January Shift 2)",
+      "difficulty": "Medium",
+      "concept": "Capacitor in steady-state DC: no current flows through the capacitor branch, so it charges to the voltage across the element it is connected in parallel with; Q = CV.",
+      "question": "The charge stored by the capacitor C in the given circuit in the steady state is ____ μC.",
+      "options": ["5", "12.5", "10", "7.5"],
+      "answer": "Option (3)  10 μC",
+      "answerIndex": 2,
+      "diagram": "<svg viewBox='0 0 340 260' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Circuit with 2.5 V battery, 1 ohm, capacitor C = 5 microfarad, and parallel 2, 3 (diode), 4 (diode) ohm branches'><line x1='45' y1='35' x2='45' y2='235' stroke='currentColor' stroke-width='2'/><line x1='295' y1='35' x2='295' y2='235' stroke='currentColor' stroke-width='2'/><line x1='45' y1='35' x2='93' y2='35' stroke='currentColor' stroke-width='2'/><line x1='93' y1='22' x2='93' y2='48' stroke='#2563eb' stroke-width='2'/><line x1='103' y1='28' x2='103' y2='42' stroke='#2563eb' stroke-width='4'/><line x1='103' y1='35' x2='188' y2='35' stroke='currentColor' stroke-width='2'/><path d='M188,35 l5,-8 l8,16 l8,-16 l8,16 l8,-16 l5,8' fill='none' stroke='#2563eb' stroke-width='2'/><line x1='240' y1='35' x2='295' y2='35' stroke='currentColor' stroke-width='2'/><text x='70' y='15' font-size='12' fill='currentColor'>2.5 V</text><text x='200' y='17' font-size='12' fill='currentColor'>1 Ω</text><line x1='45' y1='95' x2='160' y2='95' stroke='currentColor' stroke-width='2'/><line x1='160' y1='80' x2='160' y2='110' stroke='#2563eb' stroke-width='2.5'/><line x1='172' y1='80' x2='172' y2='110' stroke='#2563eb' stroke-width='2.5'/><line x1='172' y1='95' x2='295' y2='95' stroke='currentColor' stroke-width='2'/><text x='110' y='128' font-size='12' fill='currentColor'>C = 5 μF</text><line x1='45' y1='150' x2='198' y2='150' stroke='currentColor' stroke-width='2'/><path d='M198,150 l5,-8 l8,16 l8,-16 l8,16 l8,-16 l5,8' fill='none' stroke='#2563eb' stroke-width='2'/><line x1='250' y1='150' x2='295' y2='150' stroke='currentColor' stroke-width='2'/><text x='212' y='140' font-size='12' fill='currentColor'>2 Ω</text><line x1='45' y1='195' x2='150' y2='195' stroke='currentColor' stroke-width='2'/><polygon points='150,188 150,202 162,195' fill='none' stroke='#2563eb' stroke-width='2'/><line x1='162' y1='187' x2='162' y2='203' stroke='#2563eb' stroke-width='2'/><line x1='162' y1='195' x2='198' y2='195' stroke='currentColor' stroke-width='2'/><path d='M198,195 l5,-8 l8,16 l8,-16 l8,16 l8,-16 l5,8' fill='none' stroke='#2563eb' stroke-width='2'/><line x1='250' y1='195' x2='295' y2='195' stroke='currentColor' stroke-width='2'/><text x='212' y='185' font-size='12' fill='currentColor'>3 Ω</text><line x1='45' y1='235' x2='150' y2='235' stroke='currentColor' stroke-width='2'/><polygon points='162,228 162,242 150,235' fill='none' stroke='#2563eb' stroke-width='2'/><line x1='150' y1='227' x2='150' y2='243' stroke='#2563eb' stroke-width='2'/><line x1='162' y1='235' x2='198' y2='235' stroke='currentColor' stroke-width='2'/><path d='M198,235 l5,-8 l8,16 l8,-16 l8,16 l8,-16 l5,8' fill='none' stroke='#2563eb' stroke-width='2'/><line x1='250' y1='235' x2='295' y2='235' stroke='currentColor' stroke-width='2'/><text x='212' y='225' font-size='12' fill='currentColor'>4 Ω</text></svg>",
+      "solution": "In the steady state no current flows through the capacitor branch (a fully-charged capacitor blocks DC). The capacitor simply charges up to the potential difference across the branch it is connected in parallel with.\n\nStep 1 — Find the steady-state current in the conducting loop.\nWith the diodes set so that the current path is the 1 Ω (source) and the 4 Ω resistor, the total resistance is:\n  R = 1 + 4 = 5 Ω\n  i = EMF / R = 2.5 / 5 = 0.5 A.\n\nStep 2 — Voltage across the capacitor.\nThe capacitor reads the voltage across the 4 Ω resistor:\n  V_C = i × 4 = 0.5 × 4 = 2 V.\n\nStep 3 — Charge on the capacitor:\n  Q = C V_C = 5 μF × 2 V = 10 μC.\n\n∴ Option (3) 10 μC.",
+      "shortcut": "Two reflexes for steady-state capacitor problems: (1) the capacitor carries NO current, so ignore its branch for current calculation; (2) Q = C × (voltage across whatever the cap is parallel to). Here i = 2.5/5 = 0.5 A, V_C = 0.5×4 = 2 V, Q = 10 μC.",
+      "commonMistakes": [
+        "Letting current flow through the capacitor branch — in steady state the capacitor is fully charged and acts as an open circuit.",
+        "Taking V_C as the full source EMF (2.5 V) instead of the drop across the 4 Ω resistor (2 V).",
+        "Unit slip: Q = 5 μF × 2 V = 10 μC (keep μ consistent)."
+      ]
+    },
+    {
+      "id": "cap-2026-jan23-s1-q2",
+      "topic": "Capacitance",
+      "year": "2026",
+      "session": "JEE Main 2026 (23 January Shift 1)",
+      "difficulty": "Hard",
+      "concept": "Composite dielectric capacitor: split into series/parallel sub-capacitors. Stacking (different thickness) → series; side-by-side (different area) → parallel.",
+      "question": "The space between the plates of a parallel plate capacitor of capacitance C (without any dielectric) is now filled with three dielectric slabs of dielectric constants K₁ = 2, K₂ = 3 and K₃ = 5 (as shown in the figure). If the new capacitance is (n/3)C then the value of n is ____.",
+      "options": [],
+      "answer": "n = 8",
+      "answerIndex": -1,
+      "diagram": "<svg viewBox='0 0 320 235' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Parallel plate capacitor: top half full area dielectric K1, bottom half split into K2 (left) and K3 (right)'><line x1='90' y1='30' x2='230' y2='30' stroke='currentColor' stroke-width='3'/><line x1='160' y1='15' x2='160' y2='30' stroke='currentColor' stroke-width='2'/><text x='154' y='13' font-size='14' fill='currentColor'>+</text><line x1='90' y1='190' x2='230' y2='190' stroke='currentColor' stroke-width='3'/><line x1='160' y1='190' x2='160' y2='205' stroke='currentColor' stroke-width='2'/><text x='155' y='220' font-size='15' fill='currentColor'>−</text><rect x='90' y='30' width='140' height='160' fill='none' stroke='currentColor' stroke-width='1.5'/><line x1='90' y1='110' x2='230' y2='110' stroke='currentColor' stroke-width='1.5'/><line x1='160' y1='110' x2='160' y2='190' stroke='currentColor' stroke-width='1.5'/><text x='152' y='75' font-size='14' font-style='italic' fill='currentColor'>K₁</text><text x='118' y='155' font-size='14' font-style='italic' fill='currentColor'>K₂</text><text x='188' y='155' font-size='14' font-style='italic' fill='currentColor'>K₃</text><text x='58' y='75' font-size='12' fill='currentColor'>d/2</text><text x='58' y='155' font-size='12' fill='currentColor'>d/2</text><line x1='80' y1='30' x2='80' y2='110' stroke='currentColor' stroke-width='1'/><line x1='80' y1='110' x2='80' y2='190' stroke='currentColor' stroke-width='1'/><text x='148' y='46' font-size='12' fill='currentColor'>A</text><text x='112' y='185' font-size='11' fill='currentColor'>A/2</text></svg>",
+      "solution": "Let C = ε₀A/d be the (empty) capacitance. Take the plate area A and gap d.\n\nThe slab arrangement makes three sub-capacitors:\n\nTop half (full area A, thickness d/2, dielectric K₁):\n  C₁ = K₁ ε₀A / (d/2) = 2K₁ · (ε₀A/d) = 2K₁ C = 2(2)C = 4C.\n\nBottom half — two side-by-side capacitors (each area A/2, thickness d/2):\n  C₂ = K₂ ε₀(A/2)/(d/2) = K₂ (ε₀A/d) = K₂ C = 3C\n  C₃ = K₃ ε₀(A/2)/(d/2) = K₃ (ε₀A/d) = K₃ C = 5C\nThey are side-by-side ⇒ in PARALLEL:\n  C_bottom = C₂ + C₃ = 3C + 5C = 8C.\n\nThe top block and the bottom block are STACKED (one above the other) ⇒ in SERIES:\n  1/C' = 1/C₁ + 1/C_bottom = 1/4C + 1/8C = (2 + 1)/8C = 3/8C\n  ⇒ C' = 8C/3.\n\nCompare with C' = (n/3)C ⇒ n = 8.\n\n∴ n = 8.",
+      "shortcut": "Rule of thumb: slabs stacked across the gap (vary thickness) → SERIES; slabs side-by-side (vary area) → PARALLEL. Half-area, half-thickness each give a clean factor: C₁ = 2K₁C, C₂ = K₂C, C₃ = K₃C. Combine: bottom = 8C (parallel), then series with top 4C ⇒ 8C/3 ⇒ n = 8.",
+      "commonMistakes": [
+        "Swapping series and parallel — vertical stacking is series, horizontal splitting is parallel.",
+        "Forgetting the geometric factors: halving the thickness doubles C, halving the area halves C.",
+        "Adding the top and bottom capacitances directly (treating everything as parallel)."
+      ]
+    },
+    {
+      "id": "cap-2026-jan28-s2-q3",
+      "topic": "Capacitance",
+      "year": "2026",
+      "session": "JEE Main 2026 (28 January Shift 2)",
+      "difficulty": "Medium",
+      "concept": "Conceptual statements on capacitance: series-combination bound, polarization (bound-charge displacement) in dielectrics, the parallel-plate formula, and equipotential surfaces of a point charge.",
+      "question": "Identify the correct statements:\nA. Effective capacitance of a series combination of capacitors is always smaller than the smallest capacitance of the capacitor in the combination.\nB. When a dielectric medium is placed between the charged plates of a capacitor, displacement of charges cannot occur due to insulation property of dielectric.\nC. Increasing of area of capacitor plate or decreasing of thickness of dielectric is an alternate method to increase the capacitance.\nD. For a point charge, concentric spherical shells centered at the location of the charge are equipotential surfaces.\n\nChoose the correct answer from the options given below:",
+      "options": ["B and D Only", "A, B and C Only", "C and D Only", "A, C and D Only"],
+      "answer": "Option (4)  A, C and D Only",
+      "answerIndex": 3,
+      "diagram": "",
+      "solution": "Statement A — TRUE. For a series combination, 1/C_eff = 1/C₁ + 1/C₂ + …, so 1/C_eff is larger than any single 1/Cᵢ, which means C_eff < C_min (smaller than the smallest capacitor).\n\nStatement B — FALSE. A dielectric does allow displacement of BOUND charges (polarization) — that is exactly how it works. It only prevents the movement of FREE charges. So the claim that 'displacement of charges cannot occur' is wrong.\n\nStatement C — TRUE. From C = ε₀ε_r A / d, capacitance increases if the area A is increased or the separation/thickness d is decreased.\n\nStatement D — TRUE. The potential of a point charge is V = kq/r, which depends only on the distance r. Hence concentric spheres (constant r) are equipotential surfaces.\n\nCorrect statements: A, C, D.\n\n∴ Option (4).",
+      "shortcut": "Knock out the false one fast: B is wrong because dielectrics work BY displacing bound charge (polarization). Every option that omits B is a candidate; A, C, D are all standard true results ⇒ option (4).",
+      "commonMistakes": [
+        "Believing a dielectric blocks all charge displacement — it permits bound-charge (polarization) displacement; only free charge is immobile.",
+        "Doubting A: for series, 1/C_eff = Σ 1/Cᵢ guarantees C_eff is below the smallest member.",
+        "Overlooking that V = kq/r ⇒ spheres of constant r are equipotentials (statement D)."
+      ]
+    },
+    {
+      "id": "cap-2026-jan24-s2-q4",
+      "topic": "Capacitance",
+      "year": "2026",
+      "session": "JEE Main 2026 (24 January Shift 2)",
+      "difficulty": "Hard",
+      "concept": "Comparing composite-dielectric capacitors: split each arrangement into series/parallel sub-capacitors and compare the resulting expressions for k₁ > k₂.",
+      "question": "Three parallel plate capacitors each with area A and separation d are filled with two dielectrics (k₁ and k₂) in the following fashion (see figure, k₁ > k₂). Which of the following is true?",
+      "options": ["C_C > C_A > C_B", "C_C > C_B > C_A", "C_A > C_C > C_B", "C_B > C_C > C_A"],
+      "answer": "Option (3)  C_A > C_C > C_B",
+      "answerIndex": 2,
+      "diagram": "<svg viewBox='0 0 360 150' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Three capacitor dielectric configurations A, B and C'><text x='48' y='20' font-size='13' font-weight='bold' fill='currentColor'>(A)</text><rect x='20' y='30' width='80' height='80' fill='none' stroke='currentColor' stroke-width='1.5'/><line x1='20' y1='70' x2='100' y2='70' stroke='currentColor' stroke-width='1.5'/><line x1='60' y1='70' x2='60' y2='110' stroke='currentColor' stroke-width='1.5'/><text x='53' y='55' font-size='12' font-style='italic' fill='currentColor'>k₁</text><text x='34' y='95' font-size='12' font-style='italic' fill='currentColor'>k₁</text><text x='74' y='95' font-size='12' font-style='italic' fill='currentColor'>k₂</text><text x='168' y='20' font-size='13' font-weight='bold' fill='currentColor'>(B)</text><rect x='140' y='30' width='80' height='80' fill='none' stroke='currentColor' stroke-width='1.5'/><line x1='140' y1='70' x2='220' y2='70' stroke='currentColor' stroke-width='1.5'/><line x1='180' y1='70' x2='180' y2='110' stroke='currentColor' stroke-width='1.5'/><text x='173' y='55' font-size='12' font-style='italic' fill='currentColor'>k₂</text><text x='154' y='95' font-size='12' font-style='italic' fill='currentColor'>k₁</text><text x='194' y='95' font-size='12' font-style='italic' fill='currentColor'>k₂</text><text x='288' y='20' font-size='13' font-weight='bold' fill='currentColor'>(C)</text><rect x='260' y='30' width='80' height='80' fill='none' stroke='currentColor' stroke-width='1.5'/><line x1='260' y1='70' x2='340' y2='70' stroke='currentColor' stroke-width='1.5'/><line x1='300' y1='30' x2='300' y2='110' stroke='currentColor' stroke-width='1.5'/><text x='274' y='55' font-size='12' font-style='italic' fill='currentColor'>k₁</text><text x='314' y='55' font-size='12' font-style='italic' fill='currentColor'>k₂</text><text x='274' y='95' font-size='12' font-style='italic' fill='currentColor'>k₂</text><text x='314' y='95' font-size='12' font-style='italic' fill='currentColor'>k₁</text></svg>",
+      "solution": "Let C = ε₀A/d. Each square is half-thickness on top/bottom and (where split) half-area left/right. Work out each.\n\nConfiguration A (top: k₁ full; bottom: k₁ | k₂ side-by-side):\n  Top (area A, gap d/2, k₁): K₁C-type = K₁C/... combining the stack gives\n  C_A = K₁C/2 + K₁K₂C/(K₁+K₂) = K₁C · [ (K₁ + 2K₂) / (2(K₁+K₂)) ].\n\nConfiguration B (top: k₂ full; bottom: k₁ | k₂):\n  C_B = K₂C/2 + K₁K₂C/(K₁+K₂) = K₂C · [ (K₁ + 2K₂) / (2(K₁+K₂)) ].\n\nConfiguration C (top: k₁ | k₂; bottom: k₂ | k₁) — left and right columns are each a series of k₁ and k₂, then the two columns in parallel:\n  C_C = 2 K₁K₂C / (K₁ + K₂).\n\nCompare (with K₁ > K₂):\n  • C_A vs C_B: they share the same bracket factor, but C_A has K₁ in front and C_B has K₂. Since K₁ > K₂ ⇒ C_A > C_B.\n  • C_C is the symmetric (series-then-parallel) value, which lies between C_A and C_B.\n\nHence C_A > C_C > C_B.\n\n∴ Option (3).",
+      "shortcut": "Intuition beats algebra here: capacitance is largest when the high-k dielectric occupies more of the cross-section in PARALLEL (config A favours k₁), smallest when k₂ dominates (config B), and the fully symmetric mix (C) sits in between. With k₁ > k₂ ⇒ C_A > C_C > C_B.",
+      "commonMistakes": [
+        "Misreading the figure and assigning the wrong dielectric to top/bottom or left/right cells.",
+        "Treating a stacked (series) pair as parallel — half-thickness layers above each other are in series.",
+        "Assuming the symmetric arrangement C is the largest; it is the middle value between A and B."
+      ]
+    },
+    {
+      "id": "cap-2026-jan22-s2-q5",
+      "topic": "Capacitance",
+      "year": "2026",
+      "session": "JEE Main 2026 (22 January Shift 2)",
+      "difficulty": "Medium",
+      "concept": "Charge sharing between capacitors: when a charged capacitor is connected to an uncharged one, total charge is conserved and both reach a common potential.",
+      "question": "A capacitor P with capacitance 10 × 10⁻⁶ F is fully charged with a potential difference of 6.0 V and disconnected from the battery. The charged capacitor P is connected across another capacitor Q with capacitance 20 × 10⁻⁶ F. The charge on capacitor Q when equilibrium is established will be α × 10⁻⁵ C (assume capacitor Q does not have any charge initially). The value of α is ____.",
+      "options": [],
+      "answer": "α = 4",
+      "answerIndex": -1,
+      "diagram": "",
+      "solution": "Step 1 — Initial charge on P:\n  Q_P = C_P V = (10 × 10⁻⁶)(6.0) = 60 × 10⁻⁶ C.\n\nStep 2 — When P is connected across the uncharged Q, charge redistributes until both have the SAME potential. Total charge is conserved:\n  Q_total = 60 × 10⁻⁶ C,  C_total = C_P + C_Q = (10 + 20) × 10⁻⁶ = 30 × 10⁻⁶ F.\n  Common voltage V_f = Q_total / C_total = (60 × 10⁻⁶)/(30 × 10⁻⁶) = 2 V.\n\nStep 3 — Charge on Q:\n  Q_Q = C_Q V_f = (20 × 10⁻⁶)(2) = 40 × 10⁻⁶ C = 4 × 10⁻⁵ C.\n\nCompare with α × 10⁻⁵ ⇒ α = 4.\n\n∴ α = 4.",
+      "shortcut": "Common voltage after sharing: V_f = (total charge)/(total capacitance) = C_P V /(C_P + C_Q) = 60/30 = 2 V. Then Q_Q = C_Q V_f = 20×10⁻⁶×2 = 4×10⁻⁵ C ⇒ α = 4. Charge splits in proportion to capacitance.",
+      "commonMistakes": [
+        "Assuming the charge splits equally — it splits in proportion to capacitance (Q ∝ C at common V).",
+        "Using energy conservation instead of charge conservation; energy is actually lost in the redistribution.",
+        "Forgetting Q starts uncharged, so all 60 μC is the conserved total."
+      ]
+    },
+    {
+      "id": "cap-2026-jan23-s2-q6",
+      "topic": "Capacitance",
+      "year": "2026",
+      "session": "JEE Main 2026 (23 January Shift 2)",
+      "difficulty": "Medium",
+      "concept": "Partially-filled capacitor (battery connected, V constant): effective gap d_eff = d_air + d_diel/k; the charge ratio fixes the dielectric constant.",
+      "question": "A parallel plate capacitor with plate separation 5 mm is charged by a battery. On introducing a mica sheet of 2 mm and maintaining the connections of the plates with the terminals of the battery, it is found that it draws 25% more charge from the battery. The dielectric constant of mica is ____.",
+      "options": ["1.0", "2.5", "2.0", "1.5"],
+      "answer": "Option (3)  2.0",
+      "answerIndex": 2,
+      "diagram": "",
+      "solution": "Original capacitor (gap 5 mm, all air):\n  C₁ = ε₀A / 5.\n\nAfter inserting a 2 mm mica sheet (dielectric constant k), 3 mm of air remains. The slab and air gap are in series, equivalent to an effective separation:\n  d_eff = 3 + 2/k  (in mm).\n  ⇒ C₂ = ε₀A / (3 + 2/k).\n\nBattery stays connected ⇒ V is constant ⇒ Q = CV, so the charge ratio equals the capacitance ratio:\n  Q₂/Q₁ = C₂/C₁ = [ε₀A/(3 + 2/k)] / [ε₀A/5] = 5 / (3 + 2/k).\n\nGiven 25% more charge ⇒ Q₂ = 1.25 Q₁:\n  5 / (3 + 2/k) = 1.25\n  5 = 1.25 (3 + 2/k)\n  5 = 3.75 + 2.5/k\n  1.25 = 2.5/k\n  ⇒ k = 2.\n\n∴ Option (3) k = 2.0.",
+      "shortcut": "Battery connected ⇒ V fixed ⇒ Q ∝ C. Replace the slab by an effective air gap d_eff = d_air + t/k. Set C₂/C₁ = d₁/d_eff = 1.25 and solve. Here 5/(3 + 2/k) = 1.25 ⇒ k = 2.",
+      "commonMistakes": [
+        "Using d_eff = d − t + t·k instead of d − t + t/k — the dielectric REDUCES the effective gap, so it is t/k.",
+        "Holding charge constant (that is the disconnected-battery case); here the battery stays connected so V is constant.",
+        "Treating 25% more as a factor of 0.25 rather than 1.25."
+      ]
+    },
+    {
+      "id": "cap-2026-jan21-s1-q7",
+      "topic": "Capacitance",
+      "year": "2026",
+      "session": "JEE Main 2026 (21 January Shift 1)",
+      "difficulty": "Medium",
+      "concept": "Dielectric slab partially filling the gap: the filled and empty regions act as two capacitors in series.",
+      "question": "A parallel plate capacitor has capacitance C, when there is vacuum within the parallel plates. A sheet having thickness (1/3)ʳᵈ of the separation between the plates and relative permittivity K is introduced between the plates. The new capacitance of the system is:",
+      "options": ["4KC/(3K − 1)", "3CK²/(2K + 1)²", "3KC/(2K + 1)", "CK/(2 + K)"],
+      "answer": "Option (3)  3KC/(2K + 1)",
+      "answerIndex": 2,
+      "diagram": "",
+      "solution": "Original capacitance: C = ε₀A/d.\n\nInsert a slab of thickness d/3 (relative permittivity K). The remaining 2d/3 is vacuum. These two regions are in SERIES.\n\nVacuum region (thickness 2d/3):\n  C₁ = ε₀A / (2d/3) = (3/2)(ε₀A/d) = 3C/2.\n\nDielectric region (thickness d/3):\n  C₂ = K ε₀A / (d/3) = 3K (ε₀A/d) = 3KC.\n\nSeries combination:\n  1/C_new = 1/C₁ + 1/C₂ = 2/(3C) + 1/(3KC) = (2K + 1)/(3KC)\n  ⇒ C_new = 3KC / (2K + 1).\n\n∴ Option (3).",
+      "shortcut": "Partial slab ⇒ series of two capacitors. Thinner region = larger capacitance: vacuum 2d/3 → 3C/2, dielectric d/3 → 3KC. Add reciprocals: 1/C_new = 2/3C + 1/3KC = (2K+1)/3KC ⇒ C_new = 3KC/(2K+1). Sanity check: K=1 gives C, as it must.",
+      "commonMistakes": [
+        "Treating the slab + gap as parallel instead of series (they share the same charge, so series).",
+        "Getting the thickness factors wrong: C ∝ 1/thickness, so 2d/3 → 3C/2 and d/3 → 3KC.",
+        "Not sanity-checking with K = 1 (the formula must reduce to the original C)."
+      ]
+    }
+  ]
+}
