@@ -1,0 +1,183 @@
+{
+  "chapter": "Kinematics",
+  "exam": "JEE Main 2026 (January)",
+  "source": "MathonGo JEE Main 2026 (January) Question Bank",
+  "topics": ["Motion In One Dimension", "Motion In Two Dimensions"],
+  "questions": [
+    {
+      "id": "kin-1d-2026-jan28-s2-q1",
+      "topic": "Motion In One Dimension",
+      "year": "2026",
+      "session": "JEE Main 2026 (28 January Shift 2)",
+      "difficulty": "Hard",
+      "concept": "Calculus-based kinematics: deriving velocity and acceleration from a position-time polynomial; locating turning points (v = 0) and interpreting the sign of acceleration.",
+      "question": "A particle starts moving from time t = 0 and its coordinate is given as x(t) = 4t³ − 3t.\n\nA. The particle returns to its original position (origin) 0.866 units (of time) later.\nB. The particle is 1 unit away from origin at its turning point.\nC. Acceleration of the particle is non-negative.\nD. The particle is 0.5 units away from origin at its turning point.\nE. Particle never turns back as acceleration is non-negative.\n\nChoose the correct answer from the options given below:",
+      "options": [
+        "A, B, C Only",
+        "C, E Only",
+        "A, C Only",
+        "A, C, D Only"
+      ],
+      "answer": "A, B, C Only",
+      "answerIndex": 0,
+      "diagram": "",
+      "solution": "Given x(t) = 4t³ − 3t.\nDifferentiate to get velocity and acceleration:\n  v(t) = dx/dt = 12t² − 3\n  a(t) = dv/dt = 24t\n\nStatement A — return to origin:\nSet x(t) = 0 ⇒ 4t³ − 3t = 0 ⇒ t(4t² − 3) = 0\n⇒ t = 0  or  t = √(3/4) = √3 / 2 ≈ 0.866.\nSo the particle is back at the origin 0.866 time-units later. ✓ TRUE\n\nStatement B & D — turning point:\nTurning point ⇒ v(t) = 0 ⇒ 12t² − 3 = 0 ⇒ t² = 1/4 ⇒ t = 0.5 (taking t ≥ 0).\nPosition there: x(0.5) = 4(0.5)³ − 3(0.5) = 4(0.125) − 1.5 = 0.5 − 1.5 = −1.\nDistance from origin = |−1| = 1 unit.\n⇒ B (1 unit) is TRUE; D (0.5 unit) is FALSE.\n\nStatement C — sign of acceleration:\na(t) = 24t. For t ≥ 0, a(t) ≥ 0 (it is 0 at t = 0 and positive after). ✓ TRUE (non-negative).\n\nStatement E — 'never turns back':\nThe particle DOES turn back at t = 0.5 s (velocity changes sign there because v(0) = −3 < 0, then becomes positive). A non-negative acceleration does NOT forbid turning when the initial velocity is negative. ✗ FALSE.\n\nCorrect statements: A, B, C.\n\n∴ Option (1) A, B, C Only.",
+      "shortcut": "Don't solve everything blindly — scan the options. Statements B and D contradict each other (1 unit vs 0.5 unit) and only B appears in any option, so the turning-point distance must be 1 unit. Statement C (a = 24t ≥ 0) is obviously true and rules out option (2). That instantly points to (1).",
+      "commonMistakes": [
+        "Reading 'acceleration non-negative' as 'speed always increasing' and concluding the particle never reverses — but v(0) = −3 < 0, so it first moves backward then turns at t = 0.5 s.",
+        "Computing √(3/4) as 0.75 instead of √3/2 ≈ 0.866.",
+        "Forgetting to take the magnitude for 'distance from origin' (x = −1 ⇒ distance = 1, not −1)."
+      ]
+    },
+    {
+      "id": "kin-1d-2026-jan24-s2-q2",
+      "topic": "Motion In One Dimension",
+      "year": "2026",
+      "session": "JEE Main 2026 (24 January Shift 2)",
+      "difficulty": "Medium",
+      "concept": "Relating an acceleration–position graph to a velocity–position graph using a = v (dv/dx).",
+      "question": "The velocity (v) – Distance (x) graph is shown in the figure (velocity decreases linearly with distance). Which graph represents the acceleration (a) versus distance (x) variation of this system?",
+      "options": [
+        "<svg viewBox='0 0 220 170' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Option 1: straight line, positive slope, negative intercept, crossing the x-axis'><line x1='35' y1='12' x2='35' y2='158' stroke='currentColor' stroke-width='1.5'/><line x1='20' y1='95' x2='205' y2='95' stroke='currentColor' stroke-width='1.5'/><text x='22' y='20' font-size='12' fill='currentColor'>a</text><text x='198' y='112' font-size='12' fill='currentColor'>x</text><line x1='35' y1='142' x2='198' y2='40' stroke='#2563eb' stroke-width='2.5'/></svg>",
+        "<svg viewBox='0 0 220 170' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Option 2: straight line with negative slope'><line x1='35' y1='12' x2='35' y2='158' stroke='currentColor' stroke-width='1.5'/><line x1='20' y1='150' x2='205' y2='150' stroke='currentColor' stroke-width='1.5'/><text x='22' y='20' font-size='12' fill='currentColor'>a</text><text x='198' y='145' font-size='12' fill='currentColor'>x</text><line x1='40' y1='30' x2='198' y2='148' stroke='#2563eb' stroke-width='2.5'/></svg>",
+        "<svg viewBox='0 0 220 170' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Option 3: straight line through origin, positive slope'><line x1='35' y1='12' x2='35' y2='158' stroke='currentColor' stroke-width='1.5'/><line x1='20' y1='150' x2='205' y2='150' stroke='currentColor' stroke-width='1.5'/><text x='22' y='20' font-size='12' fill='currentColor'>a</text><text x='198' y='145' font-size='12' fill='currentColor'>x</text><line x1='35' y1='150' x2='198' y2='35' stroke='#2563eb' stroke-width='2.5'/></svg>",
+        "<svg viewBox='0 0 220 170' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Option 4: horizontal constant line'><line x1='35' y1='12' x2='35' y2='158' stroke='currentColor' stroke-width='1.5'/><line x1='20' y1='150' x2='205' y2='150' stroke='currentColor' stroke-width='1.5'/><text x='22' y='20' font-size='12' fill='currentColor'>a</text><text x='198' y='145' font-size='12' fill='currentColor'>x</text><line x1='35' y1='60' x2='198' y2='60' stroke='#2563eb' stroke-width='2.5'/></svg>"
+      ],
+      "answer": "Option (1) — a straight line of positive slope crossing the x-axis (negative intercept).",
+      "answerIndex": 0,
+      "diagram": "<svg viewBox='0 0 300 220' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Velocity versus distance: straight line decreasing from the v-axis to the x-axis'><line x1='45' y1='15' x2='45' y2='185' stroke='currentColor' stroke-width='2'/><line x1='30' y1='185' x2='285' y2='185' stroke='currentColor' stroke-width='2'/><polygon points='45,10 41,20 49,20' fill='currentColor'/><polygon points='290,185 280,181 280,189' fill='currentColor'/><text x='28' y='22' font-size='15' font-style='italic' fill='currentColor'>v</text><text x='280' y='205' font-size='15' font-style='italic' fill='currentColor'>x</text><text x='30' y='200' font-size='13' fill='currentColor'>O</text><line x1='45' y1='40' x2='235' y2='185' stroke='#2563eb' stroke-width='3'/><circle cx='45' cy='40' r='3.5' fill='#2563eb'/><circle cx='235' cy='185' r='3.5' fill='#2563eb'/></svg>",
+      "solution": "The v–x graph is a straight line that decreases linearly with distance, so we can write:\n  v = v₀ − k x    (where v₀ is the intercept on the v-axis and k > 0 is the magnitude of the slope, k = v₀/x_max)\n\nAcceleration is NOT dv/dt directly available here; use the position form:\n  a = dv/dt = (dv/dx)(dx/dt) = v · (dv/dx)\n\nHere dv/dx = −k (constant), so:\n  a = (v₀ − k x)(−k) = −k v₀ + k² x\n\nThis is LINEAR in x:\n  • slope = +k²  (positive),\n  • intercept at x = 0 is a = −k v₀  (negative).\n\nSo on the a–x graph, acceleration starts at a negative value (when x = 0, where v is maximum), increases linearly, and reaches zero when x = x_max (where v = 0). That is a straight line of positive slope cutting the x-axis from below — Option (1).\n\nWhy not the others:\n  (2) negative slope — wrong, slope is +k².\n  (3) line through the origin — wrong, the intercept −k v₀ ≠ 0.\n  (4) constant a — wrong, a clearly depends on x.\n\n∴ Option (1).",
+      "shortcut": "For any v–x straight line, a = v(dv/dx). Since dv/dx is a constant (the slope) and v is linear in x, the product a is ALSO linear in x. Just check the sign: motion is in the +x direction with v decreasing, so the particle is decelerating ⇒ a is negative where v is largest (x = 0) and rises to 0 where v = 0 ⇒ positive-slope line with a negative intercept.",
+      "commonMistakes": [
+        "Using a = dv/dx (forgetting the extra factor of v). The correct relation is a = v·dv/dx.",
+        "Assuming acceleration is constant just because the v–x line is straight — it is the v–t line being straight that gives constant a, not v–x.",
+        "Picking the line through the origin (option 3) by ignoring the non-zero intercept −k v₀."
+      ]
+    },
+    {
+      "id": "kin-1d-2026-jan23-s2-q3",
+      "topic": "Motion In One Dimension",
+      "year": "2026",
+      "session": "JEE Main 2026 (23 January Shift 2)",
+      "difficulty": "Medium",
+      "concept": "Multi-stage 1-D motion: free fall under gravity followed by uniform deceleration, combined with displacement bookkeeping.",
+      "question": "A paratrooper jumps from an aeroplane and opens a parachute after 2 s of free fall and starts decelerating with 3 m/s². At 10 m height from the ground, while descending with the help of the parachute, the speed of the paratrooper is 5 m/s. The initial height of the aeroplane is ____ m. (g = 10 m/s²)",
+      "options": ["82.5", "20", "62.5", "92.5"],
+      "answer": "92.5",
+      "answerIndex": 3,
+      "diagram": "",
+      "solution": "Stage 1 — Free fall for 2 s (starts from rest, u = 0):\n  Velocity gained: v₁ = u + g t = 0 + 10 × 2 = 20 m/s\n  Distance fallen:  h₁ = ½ g t² = ½ × 10 × 2² = 20 m\n\nStage 2 — Parachute open, deceleration a = −3 m/s², from v₁ = 20 m/s down to v₂ = 5 m/s (reached at 10 m above ground):\n  Use v₂² = v₁² + 2 a h₂:\n  5² = 20² + 2(−3) h₂\n  25 = 400 − 6 h₂\n  6 h₂ = 375 ⇒ h₂ = 62.5 m\n\nStage 3 — Remaining height above ground = 10 m (given).\n\nTotal initial height of the aeroplane:\n  H = h₁ + h₂ + 10 = 20 + 62.5 + 10 = 92.5 m\n\n∴ Option (4) 92.5 m.",
+      "shortcut": "Break the fall into stages and add the segment lengths: free-fall drop (½gt² = 20 m) + decelerated drop (from v²=u²+2as ⇒ 375/6 = 62.5 m) + the final 10 m. Memorise that after t s of free fall from rest, v = gt and s = ½gt² — both fall straight out.",
+      "commonMistakes": [
+        "Forgetting to add the last 10 m above the ground, giving 82.5 (option 1) — a deliberate distractor.",
+        "Using +3 instead of −3 for the deceleration in v² = u² + 2as.",
+        "Treating the 2 s of free fall as already including the parachute deceleration, or starting Stage 1 with a non-zero initial speed."
+      ]
+    },
+    {
+      "id": "kin-1d-2026-jan28-s1-q4",
+      "topic": "Motion In One Dimension",
+      "year": "2026",
+      "session": "JEE Main 2026 (28 January Shift 1)",
+      "difficulty": "Hard",
+      "concept": "Equally-spaced falling drops: using a common time interval and free-fall distance s = ½gt² to find the position of a chosen drop at a chosen instant.",
+      "question": "Water drops fall from a tap on the floor, 5 m below, at regular intervals of time. The first drop strikes the floor when the sixth drop begins to fall. The height at which the fourth drop will be from the ground, at the instant when the first drop strikes the ground, is ____ m. (g = 10 m/s²)",
+      "options": ["4.2", "2.5", "4.0", "3.8"],
+      "answer": "4.2",
+      "answerIndex": 0,
+      "diagram": "",
+      "solution": "Step 1 — Time for the first drop to fall 5 m (from rest):\n  5 = ½ g t² = ½ × 10 × t² ⇒ t² = 1 ⇒ t = 1 s\n\nStep 2 — Find the interval between successive drops.\nWhen the 1st drop hits the floor, the 6th drop is just beginning. Between drop 1 and drop 6 there are 5 equal intervals:\n  5 T = 1 s ⇒ T = 0.2 s\n\nStep 3 — Age of the 4th drop at this instant.\nDrop 4 starts 3 intervals after drop 1, so when drop 1 has fallen for 1 s, drop 4 has been falling for:\n  t₄ = 1 − 3T = 1 − 3(0.2) = 1 − 0.6 = 0.4 s\n\nStep 4 — Distance fallen by drop 4:\n  s₄ = ½ g t₄² = ½ × 10 × (0.4)² = 5 × 0.16 = 0.8 m\n\nStep 5 — Height of drop 4 above the ground:\n  h₄ = 5 − 0.8 = 4.2 m\n\n∴ Option (1) 4.2 m.",
+      "shortcut": "Count intervals, not drops: drops 1→6 means 5 gaps, so T = total time / 5 = 1/5 = 0.2 s. The nth drop's age = (1 − (n−1)T). Plug into ½g t² and subtract from 5 m. Here drop 4 ⇒ age 0.4 s ⇒ fallen 0.8 m ⇒ height 4.2 m.",
+      "commonMistakes": [
+        "Using 6 intervals (or 4) instead of 5 between the 1st and 6th drop — there are always (count − 1) gaps.",
+        "Computing the age of drop 4 as 4T or (4−1)T = 0.6 s of falling instead of 1 − 3T = 0.4 s.",
+        "Reporting the distance fallen (0.8 m) instead of the height above ground (5 − 0.8 = 4.2 m)."
+      ]
+    },
+    {
+      "id": "kin-2d-2026-jan21-s2-q1",
+      "topic": "Motion In Two Dimensions",
+      "year": "2026",
+      "session": "JEE Main 2026 (21 January Shift 2)",
+      "difficulty": "Medium",
+      "concept": "Relative velocity / river-boat problem: minimum crossing time is achieved by heading straight across; computing the resulting downstream drift for a round trip.",
+      "question": "A river of width 200 m is flowing from west to east with a speed of 18 km/h. A boat, moving with speed of 36 km/h in still water, is made to travel one round trip (bank to bank of the river). Minimum time taken by the boat for this journey and also the displacement along the river bank are ____ and ____ respectively.",
+      "options": [
+        "20 s and 100 m",
+        "40 s and 0 m",
+        "40 s and 200 m",
+        "40 s and 100 m"
+      ],
+      "answer": "40 s and 200 m",
+      "answerIndex": 2,
+      "diagram": "",
+      "solution": "Convert units (multiply km/h by 5/18 to get m/s):\n  River speed   v_r = 18 × 5/18 = 5 m/s\n  Boat speed    v_b = 36 × 5/18 = 10 m/s\n  Width         d = 200 m\n\nMinimum-time strategy:\nThe crossing time depends only on the velocity component perpendicular to the banks. It is smallest when the boat points straight across (heading at 90° to the bank), giving the full v_b across.\n  Time for one crossing: t = d / v_b = 200 / 10 = 20 s\n  Round trip (across and back): T = 2t = 2 × 20 = 40 s\n\nDisplacement along the bank (drift):\nWhile crossing, the river carries the boat downstream.\n  First crossing drift:  x₁ = v_r × t = 5 × 20 = 100 m (eastward)\n  On the return trip, to keep minimum time the boat again heads straight across, but the river STILL flows east, so the drift is again eastward:\n  Return drift:          x₂ = v_r × t = 5 × 20 = 100 m (eastward)\n\nTotal displacement along the bank = x₁ + x₂ = 100 + 100 = 200 m.\n\n∴ Option (3) 40 s and 200 m.",
+      "shortcut": "For minimum crossing time, ALWAYS steer perpendicular to the flow — the cross-stream speed is then the full boat speed, and the stream speed is irrelevant to the time. Drift per leg = v_r × t. Key trap: the current pushes the same way (downstream) on both legs, so drifts ADD, not cancel ⇒ total drift = 2 × (v_r·t) = 200 m.",
+      "commonMistakes": [
+        "Thinking the downstream drift cancels on the return trip (giving 0 m) — it does not, because the river keeps flowing east on both legs.",
+        "Confusing 'minimum time' with 'zero drift / shortest path'. Heading upstream to cancel drift gives a longer time, not the minimum.",
+        "Forgetting to double the time for the round trip (20 s is one-way only)."
+      ]
+    },
+    {
+      "id": "kin-2d-2026-jan23-s1-q2",
+      "topic": "Motion In Two Dimensions",
+      "year": "2026",
+      "session": "JEE Main 2026 (23 January Shift 1)",
+      "difficulty": "Medium",
+      "concept": "Projectile kinetic energy: KE depends only on speed; at the top only the horizontal velocity survives, and by energy conservation the launch and landing speeds (same height) are equal.",
+      "question": "An object is projected with kinetic energy K from a point A at an angle 60° with the horizontal. The ratio of the difference in kinetic energies at points B and C to that at point A (see figure), in the absence of air friction, is:",
+      "options": ["1 : 4", "2 : 3", "3 : 4", "1 : 2"],
+      "answer": "3 : 4",
+      "answerIndex": 2,
+      "diagram": "<svg viewBox='0 0 340 200' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Projectile trajectory: launched from A at 60 degrees, apex at B, landing at C on the same level'><line x1='20' y1='170' x2='325' y2='170' stroke='currentColor' stroke-width='2'/><path d='M40,170 C110,30 230,30 300,170' fill='none' stroke='#2563eb' stroke-width='2.5' stroke-dasharray='5 4'/><circle cx='40' cy='170' r='4' fill='#dc2626'/><circle cx='170' cy='65' r='4' fill='#dc2626'/><circle cx='300' cy='170' r='4' fill='#dc2626'/><text x='22' y='188' font-size='14' font-weight='bold' fill='currentColor'>A</text><text x='165' y='55' font-size='14' font-weight='bold' fill='currentColor'>B</text><text x='305' y='188' font-size='14' font-weight='bold' fill='currentColor'>C</text><line x1='40' y1='170' x2='86' y2='130' stroke='currentColor' stroke-width='2'/><polygon points='86,130 76,131 83,138' fill='currentColor'/><path d='M68,170 A28,28 0 0 0 58,151' fill='none' stroke='currentColor' stroke-width='1.5'/><text x='70' y='160' font-size='12' fill='currentColor'>60°</text><line x1='150' y1='60' x2='196' y2='60' stroke='currentColor' stroke-width='2'/><polygon points='196,60 187,56 187,64' fill='currentColor'/></svg>",
+      "solution": "Let the launch speed at A be v, so KE_A = K = ½ m v².\nHorizontal velocity (constant throughout): vₓ = v cos 60° = v/2.\n\nAt A (launch):  KE_A = K.\n\nAt B (highest point): vertical velocity = 0, only vₓ remains.\n  speed at B = vₓ = v cos 60° = v/2\n  KE_B = ½ m (v/2)² = ¼ (½ m v²) = K/4.\n\nAt C (same height as A, no friction): by energy conservation the speed equals the launch speed.\n  KE_C = K.\n\nDifference in kinetic energies at B and C:\n  |KE_B − KE_C| = |K/4 − K| = 3K/4.\n\nRequired ratio:\n  (KE_B − KE_C) : KE_A = (3K/4) : K = 3 : 4.\n\n∴ Option (3) 3 : 4.",
+      "shortcut": "Two facts collapse this instantly: (i) at the apex KE = KE_A·cos²θ = K cos²60° = K/4; (ii) at the same launch height (C) KE = K (energy conservation). So the difference is K − K/4 = 3K/4, and the ratio to K is 3 : 4.",
+      "commonMistakes": [
+        "Taking KE at the top as zero — only the VERTICAL velocity is zero there; the horizontal component still carries kinetic energy.",
+        "Using cos 60° instead of cos²60° for the KE at the apex (KE ∝ v², so it scales with the square of the cosine).",
+        "Assuming KE_C < KE_A; with no air friction and equal height, KE_C = KE_A exactly."
+      ]
+    },
+    {
+      "id": "kin-2d-2026-jan22-s1-q3",
+      "topic": "Motion In Two Dimensions",
+      "year": "2026",
+      "session": "JEE Main 2026 (22 January Shift 1)",
+      "difficulty": "Easy",
+      "concept": "Projectile motion: the horizontal velocity component is constant, so equating it at two instants relates the speeds and direction angles.",
+      "question": "A projectile is thrown upward at an angle 60° with the horizontal. The speed of the projectile is 20 m/s when its direction of motion is 45° with the horizontal. The initial speed of the projectile is ____ m/s.",
+      "options": ["20√2", "40", "40√2", "20√3"],
+      "answer": "20√2",
+      "answerIndex": 0,
+      "diagram": "",
+      "solution": "The horizontal component of velocity stays constant throughout the flight (no horizontal acceleration).\n\nAt launch (angle 60°, speed u):\n  vₓ = u cos 60° = u/2.\n\nAt the instant the direction is 45° (speed 20 m/s):\n  vₓ = 20 cos 45° = 20/√2.\n\nEquate the (constant) horizontal components:\n  u/2 = 20/√2\n  u = 40/√2 = 40√2 / 2 = 20√2 m/s.\n\n∴ Option (1) 20√2 m/s.",
+      "shortcut": "u cosθ₀ is invariant. So u cos60° = v cos45° ⇒ u = v·(cos45° / cos60°) = 20 · ( (1/√2) / (1/2) ) = 20 · (2/√2) = 20√2. Just take the ratio of cosines — no need to resolve vertical components at all.",
+      "commonMistakes": [
+        "Equating the speeds instead of the horizontal components (the speed changes during flight; only vₓ is constant).",
+        "Using sine instead of cosine for the horizontal component.",
+        "Algebra slip with √2: 40/√2 must be rationalised to 20√2, not left as 40."
+      ]
+    },
+    {
+      "id": "kin-2d-2026-jan24-s1-q4",
+      "topic": "Motion In Two Dimensions",
+      "year": "2026",
+      "session": "JEE Main 2026 (24 January Shift 1)",
+      "difficulty": "Medium",
+      "concept": "Projectile launched at 45°: using time-to-apex to get the initial speed, then evaluating the vertical displacement at the landing time on a raised target.",
+      "question": "A boy throws a ball into air at 45° from the horizontal to land it on the roof of a building of height H. If the ball attains maximum height in 2 s and lands on the building in 3 s after launch, then the value of H is ____ m. (g = 10 m/s²)",
+      "options": ["15", "20", "25", "10"],
+      "answer": "15",
+      "answerIndex": 0,
+      "diagram": "",
+      "solution": "Let the launch speed be v₀ at 45°, so the vertical component is:\n  v₀ᵧ = v₀ sin 45° = v₀/√2.\n\nStep 1 — Use the time to reach maximum height (vertical velocity = 0 at the apex, t = 2 s):\n  0 = v₀ᵧ − g t\n  v₀ᵧ = g t = 10 × 2 = 20 m/s.\n  (So v₀/√2 = 20 ⇒ v₀ = 20√2 m/s.)\n\nStep 2 — Vertical displacement at the landing time t = 3 s (this height equals H, the roof height):\n  H = v₀ᵧ t − ½ g t²\n  H = 20 × 3 − ½ × 10 × 3²\n  H = 60 − 45 = 15 m.\n\n∴ Option (1) 15 m.",
+      "shortcut": "Only the vertical motion matters for height. v₀ᵧ = g × (time to apex) = 10 × 2 = 20 m/s. Then H = v₀ᵧ·t − ½g t² at t = 3 s = 60 − 45 = 15 m. The 45° angle is only needed if you also want v₀.",
+      "commonMistakes": [
+        "Plugging in the total flight characteristics and computing the maximum height (20 m at t = 2 s) instead of the height at the actual landing time t = 3 s.",
+        "Forgetting that the ball is on its way DOWN at t = 3 s (it passed the apex at 2 s), so H < H_max.",
+        "Mishandling the 45° angle — for the vertical motion only v₀ᵧ = g·t_apex is needed."
+      ]
+    }
+  ]
+}
