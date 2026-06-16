@@ -5,6 +5,7 @@ import { capacitance } from "./capacitance";
 import { currentElectricity } from "./current-electricity";
 import { movingChargesMagnetism } from "./moving-charges-magnetism";
 import { magnetismAndMatter } from "./magnetism-and-matter";
+import { electromagneticInduction } from "./electromagnetic-induction";
 
 export const LEARN_CHAPTERS = {
   electrostatics,
@@ -12,6 +13,7 @@ export const LEARN_CHAPTERS = {
   "current-electricity": currentElectricity,
   "moving-charges-magnetism": movingChargesMagnetism,
   "magnetism-and-matter": magnetismAndMatter,
+  "electromagnetic-induction": electromagneticInduction,
 } satisfies Record<string, ChapterLearnModule>;
 
 export type LearnSlug = keyof typeof LEARN_CHAPTERS;
@@ -22,6 +24,7 @@ export const LEARN_CHAPTER_LIST: ChapterLearnModule[] = [
   currentElectricity,
   movingChargesMagnetism,
   magnetismAndMatter,
+  electromagneticInduction,
 ];
 
 export function getLearnChapter(slug: string): ChapterLearnModule | undefined {
