@@ -5,6 +5,8 @@ import { siteConfig } from "@/config/site";
 import { CLASS_11_CHAPTERS, CLASS_12_CHAPTERS } from "@/config/curriculum";
 import { getChapterContent } from "@/lib/mdx/mdx-utils";
 import { KatexRenderer } from "@/components/mdx/KatexRenderer";
+import { getLearnChapter } from "@/components/learn/data";
+import { ChapterLearnModule } from "@/components/learn/shared/ChapterLearnModule";
 
 const ALL_CHAPTERS = [...CLASS_11_CHAPTERS, ...CLASS_12_CHAPTERS];
 
@@ -28,6 +30,16 @@ export default async function ChapterTheoryPage({ params }: Props) {
   const { slug } = await params;
   const chapter = ALL_CHAPTERS.find((c) => c.slug === slug);
   if (!chapter) notFound();
+
+  // Prefer the rich, interactive Learn module when one exists for this chapter.
+  const learn = getLearnChapter(slug);
+  if (learn) {
+    return (
+      <div className="container py-6">
+        <ChapterLearnModule data={learn} embedded />
+      </div>
+    );
+  }
 
   const result = await getChapterContent(slug, "theory");
 

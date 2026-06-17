@@ -206,9 +206,12 @@ function TopicBlock({ topic }: { topic: Topic }) {
 export function ChapterLearnModule({
   data,
   showThemeToggle = false,
+  embedded = false,
 }: {
   data: ModuleData;
   showThemeToggle?: boolean;
+  /** When true, drop the full-page chrome (background + big title) to nest inside another layout. */
+  embedded?: boolean;
 }) {
   const [isDark, setIsDark] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
@@ -246,8 +249,8 @@ export function ChapterLearnModule({
   );
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100">
-      <div className="mx-auto flex max-w-6xl gap-6 px-4 py-8 sm:px-6">
+    <div className={embedded ? "" : "min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100"}>
+      <div className={`mx-auto flex max-w-6xl gap-6 ${embedded ? "py-2" : "px-4 py-8 sm:px-6"}`}>
         {/* Sidebar nav (desktop) */}
         <aside className="hidden w-60 shrink-0 lg:block">
           <nav className="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto rounded-2xl border border-slate-200 bg-white p-3 text-sm shadow-sm dark:border-slate-700 dark:bg-slate-900">
@@ -273,15 +276,19 @@ export function ChapterLearnModule({
         {/* Main content */}
         <main className="min-w-0 flex-1">
           <header className="mb-6 flex flex-wrap items-start justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">
-                {data.exams}
-              </p>
-              <h1 className="text-2xl font-bold sm:text-3xl">{data.chapter}</h1>
-              <p className="mt-1 max-w-2xl text-sm text-slate-500 dark:text-slate-400">
-                {data.summary}
-              </p>
-            </div>
+            {embedded ? (
+              <p className="max-w-2xl text-sm text-slate-500 dark:text-slate-400">{data.summary}</p>
+            ) : (
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">
+                  {data.exams}
+                </p>
+                <h1 className="text-2xl font-bold sm:text-3xl">{data.chapter}</h1>
+                <p className="mt-1 max-w-2xl text-sm text-slate-500 dark:text-slate-400">
+                  {data.summary}
+                </p>
+              </div>
+            )}
             <div className="flex items-center gap-2">
               <button
                 type="button"
