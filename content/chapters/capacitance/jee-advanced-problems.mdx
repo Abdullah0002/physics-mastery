@@ -1,0 +1,254 @@
+---
+title: Capacitance — JEE Advanced Problems (Original, Fully Solved)
+description: 20 original JEE Advanced level problems on Capacitance — symmetry networks, bridge & cube, infinite ladders, force on dielectric by the energy method, multi-dielectric slabs, plus multiple-correct and matrix-match questions with complete solutions.
+difficulty: HARD
+tags: [capacitance, JEE-Advanced, networks, dielectric, energy-method, multiple-correct, matrix-match]
+---
+
+<Callout type="info">
+**Advanced expectations.** These reward *method selection* — symmetry, energy method, node-charge equations — over plug-and-chug. Give each problem an honest 5–8 minutes before opening the solution. Single-correct unless labelled **[Multiple Correct]** or **[Matrix Match]**.
+</Callout>
+
+---
+
+## SECTION A — Networks & Symmetry
+
+### Problem 1
+Twelve identical capacitors of capacitance $C$ are connected along the edges of a cube. The equivalent capacitance across a **body diagonal** is:
+
+<details>
+<summary>**Solution**</summary>
+
+By symmetry the three edges meeting at the input corner are equivalent (equipotential set $B$), and the three at the output corner are equivalent (set $D$). The cube reduces to three stages: input→$B$ (3 caps in parallel $=3C$), $B$→$D$ (6 caps in parallel $=6C$), $D$→output ($3C$), all in **series**:
+$$\frac{1}{C_{eq}}=\frac{1}{3C}+\frac{1}{6C}+\frac{1}{3C}=\frac{2+1+2}{6C}=\frac{5}{6C}\ \Rightarrow\ \boxed{C_{eq}=\tfrac{6}{5}C=1.2C.}$$
+</details>
+
+### Problem 2
+A balanced Wheatstone bridge of capacitors has arms $C_1=2,\,C_2=4,\,C_3=3,\,C_4=6\,\mu\text F$ and a bridge capacitor $C_5=10\,\mu\text F$. Find $C_{eq}$ across the supply corners.
+
+<details>
+<summary>**Solution**</summary>
+
+Balance test: $C_1/C_2=2/4=1/2$ and $C_3/C_4=3/6=1/2$ → **balanced**, so $C_5$ carries no charge and is removed.
+$C_1$–$C_3$ in series? No — the arms are $C_1,C_2$ on top path and $C_3,C_4$ on bottom path. Series pairs: top $=\dfrac{2\cdot4}{2+4}=\dfrac{8}{6}=\dfrac43\,\mu\text F$; bottom $=\dfrac{3\cdot6}{3+6}=2\,\mu\text F$. Parallel:
+$$C_{eq}=\tfrac43+2=\boxed{\tfrac{10}{3}\,\mu\text F\approx3.33\,\mu\text F.}$$
+</details>
+
+### Problem 3
+An infinite ladder repeats a series capacitor $C$ followed by a shunt capacitor $C$. Find the input capacitance $C_{eq}$.
+
+<details>
+<summary>**Solution**</summary>
+
+Self-similarity: $C_{eq}=C_{\text{shunt}}\parallel\!\big(C_{\text{series}}\ \text{in series with}\ C_{eq}\big)$:
+$$C_{eq}=C+\left(\frac{1}{C}+\frac{1}{C_{eq}}\right)^{-1}=C+\frac{C\,C_{eq}}{C+C_{eq}}.$$
+Let $x=C_{eq}/C$: $x=1+\dfrac{x}{1+x}\Rightarrow x(1+x)=(1+x)+x\Rightarrow x^2- x-1=0.$
+$$x=\frac{1+\sqrt5}{2}\ \Rightarrow\ \boxed{C_{eq}=\frac{1+\sqrt5}{2}\,C\approx1.618\,C}$$
+(the golden ratio — a classic result).
+</details>
+
+### Problem 4
+Five capacitors: a $1\,\mu\text F$ between A–B, $2\,\mu\text F$ B–C, $2\,\mu\text F$ A–D, $4\,\mu\text F$ D–C, and $5\,\mu\text F$ across B–D. Is the bridge balanced? Find $C_{AC}$.
+
+<details>
+<summary>**Solution**</summary>
+
+Balance needs $\dfrac{C_{AB}}{C_{BC}}=\dfrac{C_{AD}}{C_{DC}}$: $\dfrac{1}{2}$ vs $\dfrac{2}{4}=\dfrac12$ → **balanced**, drop the $5\,\mu\text F$. Top series $\dfrac{1\cdot2}{3}=\dfrac23$; bottom series $\dfrac{2\cdot4}{6}=\dfrac43$. Parallel: $\dfrac23+\dfrac43=\boxed{2\,\mu\text F.}$
+</details>
+
+---
+
+## SECTION B — Energy, Forces & Dielectrics
+
+### Problem 5
+A parallel-plate capacitor (plate width $b$, gap $d$) is connected to a battery $V$. A dielectric slab ($K$) is inserted a distance $x$. Find the force on the slab and its direction.
+
+<details>
+<summary>**Solution**</summary>
+
+$C(x)=\dfrac{\varepsilon_0 b}{d}\big[L+(K-1)x\big]$, so $\dfrac{dC}{dx}=\dfrac{\varepsilon_0 b(K-1)}{d}$. With the battery on ($V$ fixed):
+$$F=+\frac12 V^2\frac{dC}{dx}=\boxed{\frac{\varepsilon_0 b(K-1)V^2}{2d}}$$
+directed so as to **pull the slab in** (increase overlap). Note it is independent of $x$.
+</details>
+
+### Problem 6
+A capacitor with $Q$ fixed ($Q$ constant, battery removed) has the same slab partly inserted. Show the magnitude of the pull-in force in terms of $Q$.
+
+<details>
+<summary>**Solution**</summary>
+
+With $Q$ fixed: $F=-\dfrac{dU}{dx}\Big|_Q=\dfrac{Q^2}{2C^2}\dfrac{dC}{dx}$. Using $\dfrac{dC}{dx}=\dfrac{\varepsilon_0 b(K-1)}{d}$:
+$$F=\frac{Q^2}{2C^2}\cdot\frac{\varepsilon_0 b(K-1)}{d}.$$
+Substituting $V=Q/C$ recovers $F=\tfrac12V^2\,dC/dx$ — **the same inward force** expressed via the instantaneous voltage. The slab is still pulled in, even though $U$ *decreases*.
+</details>
+
+### Problem 7
+A capacitor is half-filled (across the **area**) with a dielectric $K$. Compare the surface charge densities on the dielectric-covered half vs the air half when connected to a battery $V$.
+
+<details>
+<summary>**Solution**</summary>
+
+Both halves share the same $V$ and gap $d$, so $E=V/d$ is the same in both. Free surface densities: dielectric side $\sigma_1=K\varepsilon_0E$, air side $\sigma_2=\varepsilon_0E$.
+$$\boxed{\frac{\sigma_1}{\sigma_2}=K.}$$
+The dielectric half holds $K$ times more free charge — which is why the parallel model $C=\dfrac{\varepsilon_0}{d}(KA_1+A_2)$ works.
+</details>
+
+### Problem 8
+Two dielectric slabs ($K_1,K_2$, each thickness $d/2$) fill a capacitor. A potential $V$ is applied. Find the ratio of the electric fields $E_1/E_2$ inside the slabs.
+
+<details>
+<summary>**Solution**</summary>
+
+Stacked = series ⇒ same $D=\varepsilon_0 K E$ (no free charge between slabs). So $K_1E_1=K_2E_2$:
+$$\boxed{\frac{E_1}{E_2}=\frac{K_2}{K_1}.}$$
+The field is **larger in the lower-$K$ slab** — the origin of dielectric-breakdown failures starting in the weaker layer.
+</details>
+
+### Problem 9
+A capacitor $C_0$ is charged to $V_0$ (battery removed) with energy $U_0$. A dielectric $K=3$ is inserted. Find the work done by the external agent (or field) during insertion.
+
+<details>
+<summary>**Solution**</summary>
+
+$Q$ fixed: $U_f=\dfrac{Q^2}{2(KC_0)}=\dfrac{U_0}{K}=\dfrac{U_0}{3}.$ Energy lost by the field $=U_0-U_0/3=\dfrac{2U_0}{3}$, which is the work done **by the field on the slab** (the slab is pulled in). The external agent does **negative** work $-\dfrac{2U_0}{3}$ (it must hold the slab back). **Answer: field does $+\tfrac23U_0$.**
+</details>
+
+### Problem 10
+A soap bubble of radius $r$ carries surface charge density $\sigma$. Find the outward electrostatic pressure.
+
+<details>
+<summary>**Solution**</summary>
+
+Electrostatic pressure equals the energy density just outside: $P=\dfrac{\sigma^2}{2\varepsilon_0}=\tfrac12\varepsilon_0E^2$ with $E=\sigma/\varepsilon_0$ at the surface. $\boxed{P=\dfrac{\sigma^2}{2\varepsilon_0}}$ (outward — tends to expand the bubble).
+</details>
+
+---
+
+## SECTION C — Multiple Correct
+
+### Problem 11 [Multiple Correct]
+A charged parallel-plate capacitor is **isolated** (battery removed). The plate separation is increased. Which are correct?
+**(A)** Charge stays constant **(B)** Voltage increases **(C)** Energy increases **(D)** Field between plates increases
+
+<details>
+<summary>**Solution**</summary>
+
+$Q$ fixed (A ✓). $E=Q/\varepsilon_0A$ unchanged (D ✗). $C\downarrow$, so $V=Q/C\uparrow$ (B ✓). $U=Q^2/2C\uparrow$ (you do work) (C ✓). **Correct: A, B, C.**
+</details>
+
+### Problem 12 [Multiple Correct]
+A capacitor stays **connected to a battery** $V$ while a dielectric $K$ is inserted. Which increase?
+**(A)** Capacitance **(B)** Charge **(C)** Energy stored **(D)** Electric field
+
+<details>
+<summary>**Solution**</summary>
+
+$V$ fixed: $C\to KC_0$ (A ✓), $Q=CV\to KQ_0$ (B ✓), $U=\tfrac12CV^2\to KU_0$ (C ✓), $E=V/d$ unchanged (D ✗). **Correct: A, B, C.**
+</details>
+
+### Problem 13 [Multiple Correct]
+For two capacitors in **series**:
+**(A)** Same charge on both **(B)** Same voltage on both **(C)** Smaller cap has larger voltage **(D)** $C_{eq}<$ both
+
+<details>
+<summary>**Solution**</summary>
+
+Series: same charge (A ✓), voltages differ (B ✗), $V\propto1/C$ so smaller cap → larger $V$ (C ✓), $C_{eq}$ less than the smallest (D ✓). **Correct: A, C, D.**
+</details>
+
+### Problem 14 [Multiple Correct]
+When two capacitors at different potentials are connected:
+**(A)** Total charge is conserved **(B)** Total energy is conserved **(C)** Energy is always lost **(D)** Final potentials are equal
+
+<details>
+<summary>**Solution**</summary>
+
+Charge conserved (A ✓). Energy is lost as heat/radiation (B ✗, C ✓). They reach a common potential (D ✓). **Correct: A, C, D.**
+</details>
+
+---
+
+## SECTION D — Matrix Match
+
+### Problem 15 [Matrix Match]
+A parallel-plate capacitor undergoes the operations in **Column I**; match the resulting change in the quantity to **Column II**. (Battery state as stated.)
+
+| Column I | Column II |
+|---|---|
+| (P) Insert $K=2$, battery connected → change in $Q$ | (1) ×2 |
+| (Q) Insert $K=2$, battery removed → change in $V$ | (2) ÷2 |
+| (R) Double plate area, battery removed → change in $V$ | (3) ÷2 |
+| (S) Halve separation, charge fixed → change in $U$ | (4) ÷2 |
+
+<details>
+<summary>**Solution**</summary>
+
+- (P) $V$ fixed: $Q=CV\to KQ_0=2Q_0$ → **(1) ×2**.
+- (Q) $Q$ fixed: $V=Q/C\to V_0/K=V_0/2$ → **(2) ÷2**.
+- (R) $Q$ fixed, $C\to2C_0$: $V=Q/C\to V_0/2$ → **(3) ÷2**.
+- (S) $Q$ fixed, $d\to d/2$ ⇒ $C\to2C_0$: $U=Q^2/2C\to U_0/2$ → **(4) ÷2**.
+
+**P→1, Q→2, R→3, S→4.**
+</details>
+
+### Problem 16 [Matrix Match]
+Match each configuration (**Column I**) with its equivalent capacitance (**Column II**), all base caps $=C$.
+
+| Column I | Column II |
+|---|---|
+| (P) Two in series | (1) $2C$ |
+| (Q) Two in parallel | (2) $C/2$ |
+| (R) Cube, body diagonal (12 caps) | (3) $1.2C$ |
+| (S) Infinite C-series/C-shunt ladder | (4) $1.618C$ |
+
+<details>
+<summary>**Solution**</summary>
+
+(P) series $=C/2$ → **(2)**. (Q) parallel $=2C$ → **(1)**. (R) cube body diagonal $=\tfrac65C=1.2C$ → **(3)**. (S) golden-ratio ladder $=1.618C$ → **(4)**. **P→2, Q→1, R→3, S→4.**
+</details>
+
+---
+
+## SECTION E — Integer / Numerical Answer
+
+### Problem 17
+A $C_0=10\,\mu\text F$ capacitor charged to $100\,\text V$ is connected (positive-to-positive) to an identical uncharged one. The percentage of the original energy lost is ___ %.
+
+<details>
+<summary>**Solution**</summary>
+
+For equal caps, common $V=50\,\text V$. $U_i=\tfrac12(10\,\mu)(100)^2=50\,\text{mJ}$; $U_f=\tfrac12(20\,\mu)(50)^2=25\,\text{mJ}$. Loss $=25\,\text{mJ}=$ **50%.**
+</details>
+
+### Problem 18
+A dielectric slab of $K=3$ and thickness $2\,\text{mm}$ is placed in a $5\,\text{mm}$ air gap. The capacitance increases by a factor (to 2 d.p.) of ___.
+
+<details>
+<summary>**Solution**</summary>
+
+$\dfrac{C}{C_0}=\dfrac{d}{d-t(1-1/K)}=\dfrac{5}{5-2(1-1/3)}=\dfrac{5}{5-2(2/3)}=\dfrac{5}{5-1.333}=\dfrac{5}{3.667}=\textbf{1.36.}$
+</details>
+
+### Problem 19
+In a balanced bridge, the bridge capacitor is $7\,\mu\text F$. The charge it carries (in $\mu$C) is ___.
+
+<details>
+<summary>**Solution**</summary>
+
+Balanced ⇒ its two ends are equipotential ⇒ $V=0$ across it ⇒ $Q=CV=$ **0 μC.**
+</details>
+
+### Problem 20
+Three capacitors $C,2C,3C$ are connected in series across $11\,\text V$. The voltage (in V) across the $C$ capacitor is ___.
+
+<details>
+<summary>**Solution**</summary>
+
+Series ⇒ same $Q=C_{eq}V$. $\dfrac1{C_{eq}}=\dfrac1C+\dfrac1{2C}+\dfrac1{3C}=\dfrac{6+3+2}{6C}=\dfrac{11}{6C}\Rightarrow C_{eq}=\dfrac{6C}{11}.$ $Q=\dfrac{6C}{11}\cdot11=6C.$ $V_C=Q/C=$ **6 V.** (Smallest cap → largest share.)
+</details>
+
+---
+
+<Callout type="important">
+**Strategy recap for Advanced:** (1) symmetry/balance first — kill zero-charge branches; (2) self-similarity for infinite nets; (3) energy method $F=\pm dU/dx$ for forces — decide $Q$-fixed vs $V$-fixed; (4) $D$-continuity ($K_1E_1=K_2E_2$) for stacked dielectrics; (5) when stuck, node-charge conservation never fails.
+</Callout>

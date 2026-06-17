@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 280" width="560" height="280" font-family="Arial, sans-serif">
+  <rect width="560" height="280" fill="#f8f9fa" rx="10"/>
+  <text x="280" y="26" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a2d5a">Wheatstone Bridge of Capacitors</text>
+  <!-- nodes: A left(70,140) B top(230,70) D bottom(230,210) C right(390,140) -->
+  <circle cx="70" cy="140" r="4" fill="#333"/><text x="52" y="145" font-size="12" fill="#333">A</text>
+  <circle cx="230" cy="70" r="4" fill="#333"/><text x="226" y="60" font-size="12" fill="#333">B</text>
+  <circle cx="230" cy="210" r="4" fill="#333"/><text x="226" y="230" font-size="12" fill="#333">D</text>
+  <circle cx="390" cy="140" r="4" fill="#333"/><text x="398" y="145" font-size="12" fill="#333">C</text>
+  <!-- A-B : C1 -->
+  <line x1="70" y1="140" x2="135" y2="100" stroke="#333" stroke-width="2"/>
+  <line x1="150" y1="113" x2="172" y2="83" stroke="#e05252" stroke-width="3"/>
+  <line x1="158" y1="118" x2="180" y2="88" stroke="#e05252" stroke-width="3"/>
+  <line x1="180" y1="92" x2="230" y2="70" stroke="#333" stroke-width="2"/>
+  <text x="120" y="85" font-size="12" fill="#e05252">C&#8321;</text>
+  <!-- B-C : C2 -->
+  <line x1="230" y1="70" x2="290" y2="100" stroke="#333" stroke-width="2"/>
+  <line x1="305" y1="86" x2="327" y2="116" stroke="#2980b9" stroke-width="3"/>
+  <line x1="313" y1="81" x2="335" y2="111" stroke="#2980b9" stroke-width="3"/>
+  <line x1="335" y1="113" x2="390" y2="140" stroke="#333" stroke-width="2"/>
+  <text x="330" y="85" font-size="12" fill="#2980b9">C&#8322;</text>
+  <!-- A-D : C3 -->
+  <line x1="70" y1="140" x2="135" y2="180" stroke="#333" stroke-width="2"/>
+  <line x1="150" y1="167" x2="172" y2="197" stroke="#27ae60" stroke-width="3"/>
+  <line x1="158" y1="162" x2="180" y2="192" stroke="#27ae60" stroke-width="3"/>
+  <line x1="180" y1="190" x2="230" y2="210" stroke="#333" stroke-width="2"/>
+  <text x="120" y="205" font-size="12" fill="#27ae60">C&#8323;</text>
+  <!-- D-C : C4 -->
+  <line x1="230" y1="210" x2="290" y2="180" stroke="#333" stroke-width="2"/>
+  <line x1="305" y1="194" x2="327" y2="164" stroke="#c47f0a" stroke-width="3"/>
+  <line x1="313" y1="199" x2="335" y2="169" stroke="#c47f0a" stroke-width="3"/>
+  <line x1="335" y1="167" x2="390" y2="140" stroke="#333" stroke-width="2"/>
+  <text x="330" y="205" font-size="12" fill="#c47f0a">C&#8324;</text>
+  <!-- B-D bridge : C5 -->
+  <line x1="230" y1="70" x2="230" y2="120" stroke="#333" stroke-width="2"/>
+  <line x1="215" y1="120" x2="245" y2="120" stroke="#7a5cc4" stroke-width="3"/>
+  <line x1="215" y1="130" x2="245" y2="130" stroke="#7a5cc4" stroke-width="3"/>
+  <line x1="230" y1="130" x2="230" y2="210" stroke="#333" stroke-width="2"/>
+  <text x="250" y="128" font-size="12" fill="#7a5cc4">C&#8325;</text>
+  <!-- terminals -->
+  <line x1="40" y1="140" x2="70" y2="140" stroke="#333" stroke-width="2"/>
+  <line x1="390" y1="140" x2="420" y2="140" stroke="#333" stroke-width="2"/>
+  <text x="280" y="258" text-anchor="middle" font-size="13" fill="#1a2d5a">Balanced when C&#8321;/C&#8322; = C&#8323;/C&#8324;  &#8658;  C&#8325; carries no charge (remove it)</text>
+</svg>

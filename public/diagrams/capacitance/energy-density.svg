@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 280" width="520" height="280" font-family="Arial, sans-serif">
+  <rect width="520" height="280" fill="#f8f9fa" rx="10"/>
+  <text x="260" y="26" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a2d5a">Energy Lives in the Field</text>
+  <rect x="150" y="60" width="10" height="160" fill="#e05252"/>
+  <rect x="360" y="60" width="10" height="160" fill="#2980b9"/>
+  <text x="140" y="52" font-size="13" font-weight="bold" fill="#e05252">+Q</text>
+  <text x="358" y="52" font-size="13" font-weight="bold" fill="#2980b9">-Q</text>
+  <!-- shaded field region -->
+  <rect x="160" y="60" width="200" height="160" fill="#ece4fb"/>
+  <!-- field arrows -->
+  <defs><marker id="ad" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#7a5cc4"/></marker></defs>
+  <line x1="175" y1="90" x2="345" y2="90" stroke="#7a5cc4" stroke-width="2" marker-end="url(#ad)"/>
+  <line x1="175" y1="140" x2="345" y2="140" stroke="#7a5cc4" stroke-width="2" marker-end="url(#ad)"/>
+  <line x1="175" y1="190" x2="345" y2="190" stroke="#7a5cc4" stroke-width="2" marker-end="url(#ad)"/>
+  <text x="260" y="245" text-anchor="middle" font-size="16" font-weight="bold" fill="#7a5cc4">u = &#189;&#949;&#8320;E&#178;</text>
+  <text x="260" y="266" text-anchor="middle" font-size="12" fill="#555">energy per unit volume, spread through the gap</text>
+  <text x="260" y="120" text-anchor="middle" font-size="12" fill="#5a3da0">double E, quadruple u</text>
+</svg>

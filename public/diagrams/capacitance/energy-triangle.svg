@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" width="520" height="300" font-family="Arial, sans-serif">
+  <rect width="520" height="300" fill="#f8f9fa" rx="10"/>
+  <text x="260" y="26" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a2d5a">Energy Stored = Area under V-Q Line</text>
+  <line x1="70" y1="250" x2="470" y2="250" stroke="#333" stroke-width="1.5"/>
+  <line x1="70" y1="250" x2="70" y2="60" stroke="#333" stroke-width="1.5"/>
+  <text x="474" y="254" font-size="13" fill="#555">Q</text>
+  <text x="60" y="58" text-anchor="end" font-size="13" fill="#555">V</text>
+  <!-- line slope 1/C -->
+  <line x1="70" y1="250" x2="400" y2="90" stroke="#e05252" stroke-width="2.5"/>
+  <polygon points="70,250 400,250 400,90" fill="#fde2e2" opacity="0.7"/>
+  <line x1="400" y1="250" x2="400" y2="90" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="400" y="268" text-anchor="middle" font-size="12" fill="#777">Q</text>
+  <line x1="70" y1="90" x2="400" y2="90" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="62" y="94" text-anchor="end" font-size="12" fill="#777">V</text>
+  <text x="250" y="200" text-anchor="middle" font-size="16" font-weight="bold" fill="#e05252">U = &#189;QV</text>
+  <text x="250" y="222" text-anchor="middle" font-size="11" fill="#999">triangle, not rectangle</text>
+  <text x="200" y="120" font-size="12" fill="#e05252">slope = 1/C</text>
+  <text x="260" y="290" text-anchor="middle" font-size="12" fill="#555">U = &#189;QV = &#189;CV&#178; = Q&#178;/2C</text>
+</svg>

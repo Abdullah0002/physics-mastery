@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240" width="560" height="240" font-family="Arial, sans-serif">
+  <rect width="560" height="240" fill="#f8f9fa" rx="10"/>
+  <text x="280" y="26" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a2d5a">Infinite Ladder (Self-Similar)</text>
+  <line x1="30" y1="60" x2="500" y2="60" stroke="#333" stroke-width="2"/>
+  <line x1="30" y1="180" x2="500" y2="180" stroke="#333" stroke-width="2"/>
+  <!-- series caps on top rail -->
+  <g stroke="#e05252" stroke-width="3">
+    <line x1="80" y1="48" x2="80" y2="72"/><line x1="92" y1="48" x2="92" y2="72"/>
+    <line x1="220" y1="48" x2="220" y2="72"/><line x1="232" y1="48" x2="232" y2="72"/>
+    <line x1="360" y1="48" x2="360" y2="72"/><line x1="372" y1="48" x2="372" y2="72"/>
+  </g>
+  <text x="86" y="42" text-anchor="middle" font-size="11" fill="#e05252">C&#8347;</text>
+  <text x="226" y="42" text-anchor="middle" font-size="11" fill="#e05252">C&#8347;</text>
+  <text x="366" y="42" text-anchor="middle" font-size="11" fill="#e05252">C&#8347;</text>
+  <!-- shunt caps -->
+  <g stroke="#2980b9" stroke-width="3">
+    <line x1="150" y1="105" x2="150" y2="135"/>
+    <line x1="290" y1="105" x2="290" y2="135"/>
+    <line x1="430" y1="105" x2="430" y2="135"/>
+  </g>
+  <line x1="135" y1="105" x2="165" y2="105" stroke="#2980b9" stroke-width="3"/>
+  <line x1="275" y1="105" x2="305" y2="105" stroke="#2980b9" stroke-width="3"/>
+  <line x1="415" y1="105" x2="445" y2="105" stroke="#2980b9" stroke-width="3"/>
+  <line x1="135" y1="135" x2="165" y2="135" stroke="#2980b9" stroke-width="3"/>
+  <line x1="275" y1="135" x2="305" y2="135" stroke="#2980b9" stroke-width="3"/>
+  <line x1="415" y1="135" x2="445" y2="135" stroke="#2980b9" stroke-width="3"/>
+  <line x1="150" y1="60" x2="150" y2="105" stroke="#333" stroke-width="2"/>
+  <line x1="290" y1="60" x2="290" y2="105" stroke="#333" stroke-width="2"/>
+  <line x1="430" y1="60" x2="430" y2="105" stroke="#333" stroke-width="2"/>
+  <line x1="150" y1="135" x2="150" y2="180" stroke="#333" stroke-width="2"/>
+  <line x1="290" y1="135" x2="290" y2="180" stroke="#333" stroke-width="2"/>
+  <line x1="430" y1="135" x2="430" y2="180" stroke="#333" stroke-width="2"/>
+  <text x="170" y="128" font-size="11" fill="#2980b9">C&#8346;</text>
+  <text x="480" y="125" font-size="22" fill="#333">...</text>
+  <text x="40" y="120" font-size="13" fill="#1a2d5a" font-weight="bold">C&#8331;&#8320;</text>
+  <text x="280" y="215" text-anchor="middle" font-size="12" fill="#555">Peel one cell: network unchanged &#8658; C&#8331;&#8320; = C&#8346; + (1/C&#8347; + 1/C&#8331;&#8320;)&#8315;&#185;  (solve quadratic)</text>
+</svg>

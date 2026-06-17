@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" width="560" height="300" font-family="Arial, sans-serif">
+  <rect width="560" height="300" fill="#f8f9fa" rx="10"/>
+  <text x="280" y="26" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a2d5a">Parallel-Plate Capacitor with Battery</text>
+  <line x1="60" y1="150" x2="60" y2="120" stroke="#333" stroke-width="2"/>
+  <line x1="48" y1="120" x2="72" y2="120" stroke="#333" stroke-width="4"/>
+  <line x1="52" y1="112" x2="68" y2="112" stroke="#333" stroke-width="2"/>
+  <line x1="60" y1="112" x2="60" y2="90" stroke="#333" stroke-width="2"/>
+  <text x="40" y="105" font-size="13" fill="#333">V</text>
+  <line x1="60" y1="90" x2="220" y2="90" stroke="#333" stroke-width="2"/>
+  <line x1="60" y1="150" x2="220" y2="150" stroke="#333" stroke-width="2"/>
+  <line x1="220" y1="90" x2="220" y2="110" stroke="#333" stroke-width="2"/>
+  <line x1="220" y1="150" x2="220" y2="190" stroke="#333" stroke-width="2"/>
+  <rect x="250" y="70" width="8" height="160" fill="#e05252"/>
+  <rect x="402" y="70" width="8" height="160" fill="#2980b9"/>
+  <line x1="220" y1="110" x2="254" y2="110" stroke="#333" stroke-width="2"/>
+  <line x1="406" y1="190" x2="406" y2="270" stroke="#333" stroke-width="2"/>
+  <line x1="220" y1="190" x2="406" y2="190" stroke="#333" stroke-width="2"/>
+  <text x="244" y="60" text-anchor="middle" font-size="15" font-weight="bold" fill="#e05252">+Q</text>
+  <text x="416" y="60" text-anchor="middle" font-size="15" font-weight="bold" fill="#2980b9">-Q</text>
+  <defs><marker id="ah" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#7a5cc4"/></marker></defs>
+  <line x1="262" y1="95"  x2="398" y2="95"  stroke="#7a5cc4" stroke-width="2" marker-end="url(#ah)"/>
+  <line x1="262" y1="125" x2="398" y2="125" stroke="#7a5cc4" stroke-width="2" marker-end="url(#ah)"/>
+  <line x1="262" y1="155" x2="398" y2="155" stroke="#7a5cc4" stroke-width="2" marker-end="url(#ah)"/>
+  <line x1="262" y1="185" x2="398" y2="185" stroke="#7a5cc4" stroke-width="2" marker-end="url(#ah)"/>
+  <text x="330" y="215" text-anchor="middle" font-size="13" fill="#7a5cc4">E = V/d (uniform)</text>
+  <path d="M262,72 C290,50 380,50 398,72" fill="none" stroke="#b9a4e0" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <path d="M262,228 C290,250 380,250 398,228" fill="none" stroke="#b9a4e0" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="330" y="285" text-anchor="middle" font-size="11" fill="#999">dashed = fringing field at edges</text>
+  <line x1="258" y1="245" x2="402" y2="245" stroke="#555" stroke-width="1"/>
+  <text x="330" y="242" text-anchor="middle" font-size="12" fill="#555">d</text>
+</svg>

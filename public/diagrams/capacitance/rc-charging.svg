@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 280" width="560" height="280" font-family="Arial, sans-serif">
+  <rect width="560" height="280" fill="#f8f9fa" rx="10"/>
+  <text x="280" y="26" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a2d5a">RC Charging and Discharging</text>
+  <line x1="70" y1="230" x2="520" y2="230" stroke="#333" stroke-width="1.5"/>
+  <line x1="70" y1="230" x2="70" y2="60" stroke="#333" stroke-width="1.5"/>
+  <text x="524" y="234" font-size="13" fill="#555">t</text>
+  <text x="60" y="60" text-anchor="end" font-size="13" fill="#555">q</text>
+  <!-- asymptote -->
+  <line x1="70" y1="75" x2="520" y2="75" stroke="#aaa" stroke-width="1" stroke-dasharray="5,4"/>
+  <text x="524" y="79" font-size="11" fill="#888">Q&#8320;</text>
+  <!-- charging curve -->
+  <path d="M70,230 Q140,110 210,88 Q320,72 520,75" fill="none" stroke="#e05252" stroke-width="2.5"/>
+  <text x="300" y="100" font-size="12" fill="#e05252">charging: q=Q&#8320;(1-e^(-t/RC))</text>
+  <!-- discharging curve -->
+  <path d="M70,75 Q140,150 210,185 Q320,222 520,228" fill="none" stroke="#2980b9" stroke-width="2.5" stroke-dasharray="6,3"/>
+  <text x="300" y="205" font-size="12" fill="#2980b9">discharging: q=Q&#8320;e^(-t/RC)</text>
+  <!-- tau marker -->
+  <line x1="160" y1="75" x2="160" y2="230" stroke="#555" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="160" y="246" text-anchor="middle" font-size="11" fill="#555">&#964;=RC</text>
+  <text x="120" y="150" font-size="9" fill="#e05252">0.63Q&#8320;</text>
+  <text x="280" y="270" text-anchor="middle" font-size="11" fill="#999">At t=0 cap acts as a wire; at steady state, as an open circuit</text>
+</svg>

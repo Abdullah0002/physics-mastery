@@ -1,146 +1,1225 @@
 ---
-title: Capacitance — Theory
-description: Capacitors, capacitance formula, combinations, energy stored, dielectrics, and RC circuits for JEE & NEET.
+title: Capacitance — Complete Theory (JEE Main + Advanced + NEET)
+description: The most comprehensive Capacitance module — from the physical meaning of a capacitor to dielectrics, energy density, capacitor networks, forces, and RC transients. Built from first principles with rigorous derivations, visual SVGs, and JEE-focused insight.
 difficulty: HARD
-tags: [capacitance, capacitor, dielectric, energy, RC-circuit]
+tags: [capacitance, capacitor, dielectric, polarization, energy-density, capacitor-networks, RC-circuit, JEE-Advanced]
 ---
 
-## 1. Capacitance
+<Callout type="info">
+**How to read this module.** Every topic follows the same rhythm — **Theory → Intuition → Derivation → Visualization → Common Mistakes → Solved Example → JEE Notes.** Do not skip the *Intuition* blocks; they are where the marks hide. Derivations use numbered <Step/> blocks — reproduce them with a closed book until they feel inevitable.
+</Callout>
 
-A capacitor stores charge. Capacitance $C$ relates charge to voltage:
+---
 
-<Formula label="Capacitance">
-$$C = \frac{Q}{V} \quad \text{(SI unit: farad, F = C/V)}$$
+# SECTION 1 — The Big Picture of Capacitance
+
+## 1.1 Theory — what capacitance really is
+
+A **capacitor** is a device that stores **electric charge** and, with it, **electrostatic potential energy**. Strip away the engineering and one idea remains:
+
+> **Capacitance is a measure of how much charge a conductor (or pair of conductors) can hold per unit "electrical pressure" (potential) applied to it.**
+
+Every isolated conductor has capacitance. Every *pair* of conductors has a mutual capacitance. The word "capacitor" is reserved for a deliberately engineered pair of conductors arranged to maximise this charge-storing ability in a small volume.
+
+## 1.2 Intuition — the water-tank analogy (and its limits)
+
+Picture charging a conductor like pumping air into a sealed tank:
+
+| Electrical quantity | Pneumatic analogy |
+|---|---|
+| Charge $Q$ | Amount of air pumped in |
+| Potential $V$ | Pressure built up |
+| Capacitance $C = Q/V$ | Tank's volume (how much air per unit pressure) |
+| Energy $U$ | Compressed-air energy stored |
+
+A *fat* tank (large $C$) holds lots of air at low pressure. A *thin* tank (small $C$) reaches high pressure after only a little air. The analogy captures the proportionality $Q = CV$, but it hides the truth that **the energy is stored in the electric field in the surrounding space**, not "inside" the plates. We will make that precise in Section 10.
+
+<Callout type="tip">
+**The one-line mental model:** Charging a capacitor is like *stretching a spring made of electric field lines.* Push charge on, field lines stretch, energy goes into the field. Let go, the field "snaps back" and returns the energy.
+</Callout>
+
+## 1.3 Why charges store energy
+
+Putting the second electron next to the first costs work — like charges repel. The third costs more, the fourth more still. Assembling charge $Q$ on a conductor therefore requires work, and that work is **banked as potential energy** in the field configuration. A capacitor is just the most efficient cupboard we know for that energy: it can release it in **microseconds**, far faster than any battery.
+
+This speed is the whole point. A battery stores *more* energy but delivers it slowly through chemistry. A capacitor stores *less* energy but dumps it almost instantly — which is exactly what a camera flash, a defibrillator, or a CPU voltage regulator needs.
+
+## 1.4 Historical development
+
+<Callout type="derivation">
+**A 250-year story in five names.**
+
+- **1745–46 — Kleist & Musschenbroek (Leyden jar).** The first capacitor: a water-filled glass jar that gave experimenters a violent shock, proving charge could be *stored*.
+- **1782 — Alessandro Volta.** Coined *capacità* (capacity) and recognised $Q \propto V$. The unit of potential, the **volt**, honours him.
+- **1837 — Michael Faraday.** Showed that filling the gap with an insulator ("dielectric") *increases* the stored charge. Introduced the field-line picture and the concept of the **dielectric constant**. The unit of capacitance, the **farad**, is his.
+- **1860s — James Clerk Maxwell.** Placed capacitance inside a complete field theory: energy lives in space with density $u=\tfrac12\varepsilon_0E^2$, and a *changing* field acts like a current (displacement current) — the idea that makes electromagnetic waves, and your Wi-Fi, possible.
+- **20th century onward.** Electrolytic, ceramic, tantalum, and now **supercapacitors** (farads in your palm) turn the principle into the backbone of all electronics.
+</Callout>
+
+## 1.5 Where capacitors hide in modern life
+
+| Application | What the capacitor does |
+|---|---|
+| **Mobile phones** | Decoupling/bypass caps stabilise the supply rail next to every chip; touchscreens *sense* your finger as a tiny change in capacitance. |
+| **Camera flash** | A big cap charges slowly from a 1.5 V cell (via a boost circuit) then dumps ~stored energy into the xenon tube in ~1 ms. |
+| **Power supplies (SMPS)** | Smoothing capacitors flatten rectified AC ripple into clean DC. |
+| **Electric vehicles** | Supercapacitors absorb regenerative-braking energy spikes that batteries are too slow to take. |
+| **Computers** | Each DRAM bit *is* a capacitor (charged = 1, empty = 0); motherboard caps filter the CPU supply. |
+| **Communication systems** | Tuning capacitors set radio resonant frequencies $f = 1/2\pi\sqrt{LC}$; coupling caps block DC while passing signals. |
+
+<Callout type="important">
+**Big-picture takeaway for JEE.** Three sentences carry 80% of the chapter:
+1. $C = Q/V$ depends **only on geometry and the medium** — never on $Q$ or $V$.
+2. Energy is stored **in the field**, with density $u = \tfrac12 \varepsilon_0 E^2$.
+3. Whether you hold $Q$ fixed (**isolated**) or $V$ fixed (**battery connected**) changes *everything* about how the system responds. Always ask this question first.
+</Callout>
+
+---
+
+# SECTION 2 — What Is a Capacitor?
+
+## 2.1 Theory — physical structure
+
+A capacitor is **two conductors separated by an insulator**, carrying **equal and opposite charges** $+Q$ and $-Q$. The conductors are the *plates*; the insulator (vacuum, air, mica, ceramic…) is the *dielectric*. The defining feature is that the two conductors are close together, so almost all field lines that leave $+Q$ land on $-Q$.
+
+<Diagram src="/diagrams/capacitance/capacitor-basic.svg" alt="Parallel plate capacitor with +Q and -Q plates, uniform field lines between them, connected to a battery of EMF V" caption="A parallel-plate capacitor. The battery transfers charge until the plate potential difference equals its EMF. Field lines run straight across the gap (uniform field); they bulge only at the edges — the 'fringing' field." />
+
+## 2.2 Intuition — why equal and opposite charges appear
+
+Connect two neutral plates to a battery. The battery is a *charge pump*: it lifts electrons off the plate wired to its **+** terminal and pushes them onto the plate wired to its **−** terminal.
+
+- Every electron *removed* from plate A leaves behind $+e$ → plate A becomes $+Q$.
+- Every electron *delivered* to plate B makes it $-Q$.
+
+The **same** electrons that leave A arrive at B. Charge is neither created nor destroyed — only *separated*. Hence the magnitudes are necessarily equal:
+
+$$|Q_A| = |Q_B| = Q.$$
+
+<Callout type="warning">
+A capacitor does **not** store net charge — the whole device is neutral ($+Q$ and $-Q$ sum to zero). It stores **separated charge**, and therefore **energy and field**. Saying "a capacitor stores charge" is shorthand; what it really banks is the *separation*.
+</Callout>
+
+## 2.3 The three ingredients you must name
+
+<Step n={1}>
+**Conductors.** Inside a conductor in electrostatic equilibrium, $\vec E = 0$ and the whole body is an equipotential. All the charge sits on the *surfaces facing the gap*. This is why only the facing-surface area matters.
+</Step>
+
+<Step n={2}>
+**Potential difference.** Because the plates are equipotentials at different potentials, there is a well-defined $V = V_+ - V_-$ between them. Work $qV$ is needed to carry charge $q$ from one plate to the other.
+</Step>
+
+<Step n={3}>
+**Electric field in the gap.** Field lines start on $+Q$, end on $-Q$, and point from high to low potential. For close plates the field is **uniform**: $E = V/d$.
+</Step>
+
+## 2.4 Common mistakes
+
+<Callout type="warning">
+- ❌ "The plate connected to + has charge, the other is neutral." → Both carry charge, equal and opposite.
+- ❌ "Charge flows *across* the gap." → No charge crosses an ideal dielectric; charge is rearranged *through the external wire*.
+- ❌ Confusing the **inner** facing surfaces (where the charge lives, $\pm Q$) with the outer surfaces (which carry zero charge for an ideal isolated capacitor with $+Q,-Q$).
+</Callout>
+
+## 2.5 Solved example
+
+> **Q.** A 100 V battery is connected across an air capacitor and transfers $5\,\mu\text{C}$ to it. How many electrons moved through the battery, and what is the charge on *each* plate?
+
+**Solution.** The charge separated is $Q = 5\,\mu\text C$, so one plate is $+5\,\mu\text C$ and the other $-5\,\mu\text C$. The number of electrons physically moved equals
+$$n = \frac{Q}{e} = \frac{5\times10^{-6}}{1.6\times10^{-19}} = 3.1\times10^{13}\ \text{electrons}.$$
+
+## 2.6 JEE notes
+
+<Callout type="tip">
+- The symbol convention: "$Q$ on a capacitor" always means the magnitude on **one** plate, not the sum.
+- For an **ideal** capacitor the field is entirely confined to the gap; the *fringing* field at the edges is what real engineers (and a few JEE Advanced problems) worry about.
+</Callout>
+
+---
+
+# SECTION 3 — Capacitance
+
+## 3.1 Theory — definition
+
+For an isolated conductor, raising its charge raises its potential in strict proportion, $Q \propto V$. The constant of proportionality is the **capacitance**:
+
+<Formula label="Definition of Capacitance">
+$$\boxed{\,C = \dfrac{Q}{V}\,}\qquad [\text{farad, } \mathrm{F} = \mathrm{C/V}]$$
 </Formula>
 
+For a **two-conductor** capacitor, $Q$ is the magnitude on either plate and $V$ is the potential *difference* between them.
+
+## 3.2 Intuition — capacitance is a "geometric willingness to hold charge"
+
+Here is the subtle point students miss for years:
+
+<Callout type="important">
+**Capacitance does not depend on $Q$ or $V$.** It is fixed the moment you fix the *shape, size, separation, and the medium*. If you double $Q$, then $V$ doubles too, and the ratio $Q/V = C$ is unchanged.
+
+$C$ answers a purely **geometric** question: *"For this arrangement of conductors, how many coulombs do I have to load on to raise the voltage by one volt?"*
+</Callout>
+
+Writing $C = Q/V$ and concluding "$C$ depends on $Q$ and $V$" is like writing speed $= \text{distance}/\text{time}$ and concluding a car's *top speed* depends on how far it has driven. The ratio is a property; the numerator and denominator are a particular state.
+
+## 3.3 Derivation that $C$ is geometry-only
+
+<Step n={1}>
+The field of any charge distribution scales linearly with the charge: double every source charge and $\vec E$ doubles everywhere (superposition).
+</Step>
+<Step n={2}>
+Potential difference $V = -\int \vec E\cdot d\vec\ell$ therefore also doubles.
+</Step>
+<Step n={3}>
+Hence $Q/V$ is **independent of the scale of $Q$** — it depends only on the *geometry* of the integration path and the *permittivity* of the medium. ∎
+</Step>
+
+## 3.4 SI unit, dimensions, practical interpretation
+
+- **Unit:** $1\ \text{farad} = 1\ \text{coulomb/volt}$. The farad is *enormous* — a 1 F cap the size of a fridge would be heroic. Real values: $\text{pF}\,(10^{-12})$, $\text{nF}\,(10^{-9})$, $\mu\text F\,(10^{-6})$.
+- **Dimensions:** From $C = Q/V$ and $V = $ energy/charge $= \mathrm{ML^2T^{-2}/(IT)}$,
+$$[C] = \frac{[Q]}{[V]} = \frac{\mathrm{IT}}{\mathrm{ML^2T^{-3}I^{-1}}} = \boxed{\mathrm{M^{-1}L^{-2}T^{4}I^{2}}}.$$
+- **Practical reading:** A $1\,\mu\text F$ cap charged to $10\,\text V$ holds $Q = CV = 10\,\mu\text C$ — about $6\times10^{13}$ electrons of imbalance.
+
+## 3.5 Common mistakes
+
+<Callout type="warning">
+- ❌ "$C$ increases if I charge it more." → No; $C$ is fixed by geometry/medium.
+- ❌ Forgetting that for a capacitor $V$ is a **difference**, not the potential of one plate relative to infinity.
+- ❌ Mixing units: always convert $\mu\text F, \text{nF}, \text{pF}$ to farads before plugging into energy formulas.
+</Callout>
+
+## 3.6 Solved example
+
+> **Q.** A conductor is given $0.2\,\mu\text C$ and its potential rises to $100\,\text V$. (a) Find $C$. (b) If an *extra* $0.2\,\mu\text C$ is added, what is the new potential and the new capacitance?
+
+**Solution.**
+(a) $C = Q/V = (0.2\times10^{-6})/100 = 2\times10^{-9}\,\text F = 2\,\text{nF}.$
+(b) $C$ is **unchanged** (geometry fixed). New $Q = 0.4\,\mu\text C \Rightarrow V = Q/C = (0.4\times10^{-6})/(2\times10^{-9}) = 200\,\text V.$ The voltage doubled; $C$ stayed $2\,\text{nF}$.
+
+## 3.7 JEE notes
+
+<Callout type="tip">
+When a problem says "the capacitance of the arrangement," it is asking for a number you can compute from *dimensions and the dielectric alone*. If charge or voltage appears in your final expression for $C$, you have made an error.
+</Callout>
+
 ---
 
-## 2. Parallel Plate Capacitor
+# SECTION 4 — Capacitance of an Isolated Spherical Conductor
 
-Two plates of area $A$ separated by distance $d$ (with vacuum):
+## 4.1 Theory
 
-<Formula label="Capacitance — Parallel Plate">
+An isolated sphere is a "one-plate capacitor" — its partner plate is the sphere of charge at infinity (potential zero).
+
+<Formula label="Isolated Sphere">
+$$\boxed{\,C = 4\pi\varepsilon_0 R\,}$$
+</Formula>
+
+## 4.2 Derivation from potential
+
+<Step n={1}>
+A conducting sphere of radius $R$ carrying charge $Q$ produces, *outside* itself, the field of a point charge: $E(r) = \dfrac{1}{4\pi\varepsilon_0}\dfrac{Q}{r^2}$ for $r\ge R$.
+</Step>
+<Step n={2}>
+Its surface potential (taking $V=0$ at infinity) is
+$$V = \frac{1}{4\pi\varepsilon_0}\frac{Q}{R}.$$
+</Step>
+<Step n={3}>
+Therefore
+$$C = \frac{Q}{V} = \frac{Q}{\dfrac{1}{4\pi\varepsilon_0}\dfrac{Q}{R}} = 4\pi\varepsilon_0 R. \qquad\blacksquare$$
+</Step>
+
+<Diagram src="/diagrams/capacitance/isolated-sphere.svg" alt="Isolated charged conducting sphere of radius R with radial electric field lines pointing outward and a graph of V versus r" caption="Isolated sphere: field is radial and lives outside the sphere; potential falls as 1/r outside and is constant inside. Capacitance C = 4πε₀R grows linearly with radius." />
+
+## 4.3 Intuition — bigger sphere, more capacitance
+
+A larger sphere spreads the same charge over more area, so its surface charge density and surface potential are lower → it can accept more charge before reaching any given voltage → larger $C$. Capacitance scales with a **length** ($R$), which is why $\varepsilon_0$ has units of F/m.
+
+<Callout type="tip">
+**Earth as a capacitor.** $R_\oplus \approx 6.4\times10^6\,\text m \Rightarrow C = 4\pi\varepsilon_0 R \approx 711\,\mu\text F$. Huge by lab standards — which is exactly why "earthing/grounding" can absorb stray charge without its potential budging. *This single number explains what a "ground" is.*
+</Callout>
+
+## 4.4 Concentric spheres (the natural extension)
+
+Two concentric shells (inner $a$, outer $b$) form a true two-conductor capacitor:
+$$C = 4\pi\varepsilon_0\frac{ab}{\,b-a\,}.$$
+Let $b\to\infty$ and you recover the isolated sphere $C\to 4\pi\varepsilon_0 a$. Let $b = a+d$ with $d\ll a$ and you recover the parallel-plate formula (Section 5) — a beautiful consistency check.
+
+## 4.5 Common mistakes
+
+<Callout type="warning">
+- ❌ Using $V = kQ/r$ *inside* the sphere. Inside a conductor $V$ is **constant** and equals the surface value $kQ/R$.
+- ❌ Writing $C = 4\pi\varepsilon_0 R^2$ (area instead of radius). Capacitance has dimensions of (permittivity × length).
+</Callout>
+
+## 4.6 Solved example
+
+> **Q.** Two isolated spheres of radii $R$ and $2R$ carry equal charge $Q$ and are then connected by a long thin wire. Find the final charge on each.
+
+**Solution.** Connected conductors share a common potential. $C_1 = 4\pi\varepsilon_0 R$, $C_2 = 4\pi\varepsilon_0(2R)$. Total charge $2Q$ splits in proportion to capacitance:
+$$Q_1 = 2Q\cdot\frac{C_1}{C_1+C_2} = 2Q\cdot\frac{1}{3} = \frac{2Q}{3},\qquad Q_2 = \frac{4Q}{3}.$$
+Charge distributes as $Q_1:Q_2 = R:2R = 1:2$. (Note: the smaller sphere ends at *higher* surface charge density — the seed of corona discharge and lightning rods.)
+
+## 4.7 JEE notes
+
+<Callout type="important">
+Memorise the family as one idea:
+$$\underbrace{4\pi\varepsilon_0 R}_{\text{isolated sphere}} \ \longrightarrow\ \underbrace{4\pi\varepsilon_0\frac{ab}{b-a}}_{\text{concentric spheres}}\ \longrightarrow\ \underbrace{\frac{\varepsilon_0 A}{d}}_{\text{thin-gap limit}}.$$
+On the surface of a charged conductor, $\sigma \propto 1/R$ (sharp points = high density = high field). This links capacitance directly to **lightning rods** and **Van de Graaff** generators.
+</Callout>
+
+---
+
+# SECTION 5 — The Parallel-Plate Capacitor
+
+## 5.1 Theory — structure and field
+
+Two flat conducting plates, each of area $A$, separated by a small gap $d$ (with $d \ll \sqrt A$), carrying $\pm Q$. Surface charge density $\sigma = Q/A$. Between the plates the fields of the two sheets **add**; outside, they **cancel**.
+
+<Diagram src="/diagrams/capacitance/parallel-plate-gauss.svg" alt="Parallel plate capacitor with a Gaussian pillbox enclosing part of the positive plate, showing field E only on the inner face" caption="Gauss's law applied to a pillbox straddling the +Q plate: flux pierces only the inner face (field outside ≈ 0), giving E = σ/ε₀ in the gap." />
+
+## 5.2 Derivation from Gauss's Law
+
+<Step n={1}>
+**Field of the pair.** A single infinite sheet of charge density $\sigma$ produces $E = \sigma/2\varepsilon_0$ on each side. Between the plates the two sheets ($+\sigma$ and $-\sigma$) point the same way and add:
+$$E = \frac{\sigma}{2\varepsilon_0} + \frac{\sigma}{2\varepsilon_0} = \frac{\sigma}{\varepsilon_0} = \frac{Q}{\varepsilon_0 A}.$$
+</Step>
+
+<Step n={2}>
+**Gauss-law confirmation.** Take a pillbox of face area $a$ straddling the $+Q$ plate, one face inside the conductor ($E=0$) and one in the gap. Only the gap face has flux:
+$$\oint \vec E\cdot d\vec A = E\,a = \frac{q_{enc}}{\varepsilon_0} = \frac{\sigma a}{\varepsilon_0}\ \Rightarrow\ E = \frac{\sigma}{\varepsilon_0}.$$
+</Step>
+
+<Step n={3}>
+**Potential difference.** The field is uniform, so
+$$V = E\,d = \frac{\sigma d}{\varepsilon_0} = \frac{Qd}{\varepsilon_0 A}.$$
+</Step>
+
+<Step n={4}>
+**Capacitance.**
+$$C = \frac{Q}{V} = \frac{Q}{\dfrac{Qd}{\varepsilon_0 A}} = \boxed{\dfrac{\varepsilon_0 A}{d}}.\qquad\blacksquare$$
+</Step>
+
+<Formula label="Parallel-Plate Capacitor (vacuum)">
 $$C_0 = \frac{\varepsilon_0 A}{d}$$
 </Formula>
 
-With dielectric (dielectric constant $K$):
+## 5.3 Assumptions, symmetry, limitations
 
-<Formula label="With Dielectric">
-$$C = KC_0 = \frac{K\varepsilon_0 A}{d}$$
-</Formula>
+<Callout type="derivation">
+**The derivation rides on four assumptions — name them in any "explain" question:**
+1. **Plates large, gap small** ($d \ll \sqrt{A}$): lets us treat plates as *infinite* sheets ⇒ uniform field.
+2. **Field uniform & confined** to the gap: ignores edge **fringing**. (Fringing slightly *raises* the true $C$.)
+3. **Conductors are equipotentials**, charge on facing surfaces only.
+4. **Linear, homogeneous medium** between plates.
 
-**Electric field inside (uniform):** $E = V/d = \sigma/\varepsilon_0 = \sigma K/\varepsilon$ (with dielectric: $E = V/d = Q/(KC_0 d)$).
+**Symmetry argument:** infinite-sheet symmetry forces $\vec E$ to be perpendicular to the plates and uniform — there is no other direction or position-dependence the field could choose.
 
----
+**Limitation:** Near the edges the field bulges out (fringing), so the real device has slightly larger capacitance and a non-uniform edge field. For JEE numericals we use the ideal $\varepsilon_0A/d$ unless told otherwise.
+</Callout>
 
-## 3. Spherical Capacitor
+## 5.4 Intuition
 
-Isolated sphere of radius $R$:
+$$C_0=\frac{\varepsilon_0 A}{d}:\quad \text{more area} = \text{more parking space for charge};\quad \text{smaller gap} = \text{stronger pull across, lower voltage for the same charge}.$$
 
-$$C = 4\pi\varepsilon_0 R$$
+## 5.5 Common mistakes
 
-Concentric spheres ($a < b$):
+<Callout type="warning">
+- ❌ Using $E = \sigma/2\varepsilon_0$ (single sheet) for the field *between* the plates. Between the plates it is $\sigma/\varepsilon_0$.
+- ❌ Forgetting $A$ is the area of **one** plate (the overlap area), not both combined.
+- ❌ Applying $\varepsilon_0 A/d$ when the gap is comparable to plate size — fringing is then not negligible.
+</Callout>
 
-$$C = 4\pi\varepsilon_0\frac{ab}{b-a}$$
+## 5.6 Solved example
 
----
+> **Q.** A parallel-plate capacitor has circular plates of radius $10\,\text{cm}$ separated by $1.0\,\text{mm}$ of air. Find $C$, and the charge at $200\,\text V$.
 
-## 4. Cylindrical Capacitor
+**Solution.** $A = \pi r^2 = \pi(0.10)^2 = 3.14\times10^{-2}\,\text m^2$.
+$$C_0 = \frac{\varepsilon_0 A}{d} = \frac{(8.85\times10^{-12})(3.14\times10^{-2})}{1.0\times10^{-3}} = 2.78\times10^{-10}\,\text F \approx 278\,\text{pF}.$$
+$$Q = C_0V = (2.78\times10^{-10})(200) = 5.6\times10^{-8}\,\text C = 56\,\text{nC}.$$
 
-Two coaxial cylinders, inner radius $a$, outer radius $b$, length $L$:
-
-$$C = \frac{2\pi\varepsilon_0 L}{\ln(b/a)}$$
-
----
-
-## 5. Combinations of Capacitors
-
-### Series
-
-$$\frac{1}{C_{eq}} = \frac{1}{C_1} + \frac{1}{C_2} + \cdots$$
-
-Same charge $Q$ on each. Voltages add: $V = V_1 + V_2$.
-
-### Parallel
-
-$$C_{eq} = C_1 + C_2 + \cdots$$
-
-Same voltage $V$ across each. Charges add: $Q = Q_1 + Q_2$.
+## 5.7 JEE notes
 
 <Callout type="tip">
-For two capacitors in series: $C_{eq} = C_1C_2/(C_1+C_2)$ and the voltage divides inversely with capacitance ($V_1/V_2 = C_2/C_1$).
+- $\varepsilon_0 = 8.85\times10^{-12}\,\text{F/m}$; a handy combo is $\dfrac{1}{4\pi\varepsilon_0}=9\times10^9$.
+- **Limiting-case sanity check:** the concentric-sphere formula with $b=a+d,\ d\ll a$ gives $C\to 4\pi\varepsilon_0 a^2/d = \varepsilon_0 A/d$ since $A = 4\pi a^2$. Same physics, different geometry.
 </Callout>
 
 ---
 
-## 6. Energy Stored in a Capacitor
+# SECTION 6 — Factors Affecting Capacitance
 
-<Formula label="Energy Stored">
-$$U = \frac{1}{2}QV = \frac{1}{2}CV^2 = \frac{Q^2}{2C}$$
-</Formula>
+## 6.1 Theory
 
-**Energy density in the electric field:**
+For the parallel plate, $C = K\varepsilon_0 A/d$. Three knobs control it:
 
-$$u = \frac{U}{Ad} = \frac{1}{2}\varepsilon_0 E^2 = \frac{1}{2}K\varepsilon_0 E^2 \text{ (with dielectric)}$$
+| Factor | Relationship | Direction |
+|---|---|---|
+| Plate area $A$ | $C \propto A$ | ↑ area ⇒ ↑ $C$ |
+| Separation $d$ | $C \propto 1/d$ | ↑ gap ⇒ ↓ $C$ |
+| Medium (dielectric $K$) | $C \propto K$ | ↑ $K$ ⇒ ↑ $C$ |
+
+## 6.2 Intuition — *why* each dependence, physically
+
+<Step n={1}>
+**Why $C\propto A$.** At a fixed voltage the field $E=V/d$ is fixed, so the surface density $\sigma=\varepsilon_0 E$ is fixed. More area at the same density means more total charge $Q=\sigma A$. Since $V$ is unchanged, $C=Q/V$ grows in proportion to $A$. *More area = more parking spots at the same "price" (voltage).*
+</Step>
+
+<Step n={2}>
+**Why $C\propto 1/d$.** Hold $Q$ fixed (so $E=\sigma/\varepsilon_0$ fixed). The voltage is $V=Ed$ — a *wider* gap means the same field acts over a longer distance, piling up more potential difference for the same charge. Bigger $V$ for fixed $Q$ ⇒ smaller $C$. *Equivalently: closer plates attract harder, so the $-Q$ plate "helps hold" more charge on $+Q$ at lower voltage.*
+</Step>
+
+<Step n={3}>
+**Why $C\propto K$.** The dielectric's molecules polarise and partly cancel the field, dropping $V$ for the same $Q$ — so $C=Q/V$ rises by the factor $K$. (Full story in Sections 11–13.)
+</Step>
+
+<Diagram src="/diagrams/capacitance/factors-affecting.svg" alt="Three side by side panels showing capacitance increasing with area, decreasing with plate separation, and increasing with dielectric constant" caption="The three knobs: C ∝ A (more overlap area), C ∝ 1/d (closer plates), C ∝ K (stronger dielectric). Geometry and medium set C — never the charge or voltage." />
+
+## 6.3 A caution about "$C \propto 1/d$"
+
+<Callout type="warning">
+$C\propto 1/d$ is **only** the ideal thin-gap result. As $d$ grows toward the plate size, fringing dominates and the simple inverse law fails. And you can never push $d\to 0$ indefinitely — the field $E=V/d$ eventually exceeds the **dielectric strength** and the gap breaks down (sparks). Real capacitors are a compromise between large $C$ (small $d$) and high voltage rating (large $d$).
+</Callout>
+
+## 6.4 Common mistakes
+
+<Callout type="warning">
+- ❌ Thinking doubling *both* plates' total area doubles $C$ — it's the **overlap** area of one plate that counts.
+- ❌ Assuming $C\propto 1/d$ holds for any $d$. It is a small-gap approximation.
+- ❌ Believing a higher voltage rating means higher capacitance. They trade off, not track.
+</Callout>
+
+## 6.5 Solved example
+
+> **Q.** A parallel-plate capacitor has capacitance $C$. Each plate's area is doubled, the separation is halved, and a slab of $K=3$ fills the gap. Find the new capacitance.
+
+**Solution.**
+$$C' = K\cdot\frac{(2A)}{(d/2)}\cdot\frac{\varepsilon_0}{1} = K\cdot 4\cdot\frac{\varepsilon_0 A}{d} = 3\times 4\times C = 12\,C.$$
+
+## 6.6 JEE notes
+
+<Callout type="tip">
+When a problem changes geometry, write $C' = C\times(\text{area factor})\times(1/\text{gap factor})\times(K)$ and multiply the factors. You almost never need to recompute from scratch.
+</Callout>
 
 ---
 
-## 7. Dielectrics in Capacitors
+# SECTION 7 — Combination of Capacitors
 
-When a dielectric is inserted (isolated capacitor, $Q$ constant):
-- $C$ increases by factor $K$
-- $V$ decreases by factor $K$
-- $E$ decreases by factor $K$
-- $U$ decreases by factor $K$
+## 7.1 Series combination
 
-When dielectric is inserted with battery connected ($V$ constant):
-- $C$ increases by factor $K$
-- $Q$ increases by factor $K$
-- $E$ unchanged
-- $U$ increases by factor $K$
+### Theory & the key invariant
+
+Capacitors are in **series** when they sit on a single charge-conserving wire path, so the **same charge $Q$** is induced on every capacitor.
+
+<Diagram src="/diagrams/capacitance/series-capacitors.svg" alt="Three capacitors C1, C2, C3 connected in series across a battery V, each carrying the same charge Q, with voltages V1, V2, V3 adding up to V" caption="Series: identical charge Q on every capacitor; the voltages add (V = V₁ + V₂ + V₃). The largest voltage sits across the smallest capacitor." />
+
+### Derivation
+
+<Step n={1}>
+The isolated conductor between two capacitors started neutral. Charge $+Q$ on the left plate of $C_2$ induces $-Q$ on the facing plate, leaving $+Q$ on the next — so **every** capacitor carries the same $Q$.
+</Step>
+<Step n={2}>
+Each capacitor's voltage is $V_i = Q/C_i$. The battery voltage is the sum (potential is additive along the path):
+$$V = V_1+V_2+V_3+\dots = \frac{Q}{C_1}+\frac{Q}{C_2}+\frac{Q}{C_3}+\dots$$
+</Step>
+<Step n={3}>
+Define $C_{eq} = Q/V$. Dividing by $Q$:
+$$\boxed{\dfrac{1}{C_{eq}} = \dfrac{1}{C_1}+\dfrac{1}{C_2}+\dfrac{1}{C_3}+\dots}\qquad\blacksquare$$
+</Step>
 
 <Callout type="important">
-These two scenarios give opposite energy results! With isolated capacitor: inserting dielectric releases energy (it's pulled in). With battery: energy increases (battery must supply extra charge).
+**Series facts to burn in:**
+- Same $Q$ on all. Voltages **add**.
+- $C_{eq}$ is **smaller than the smallest** capacitor.
+- Two caps: $C_{eq}=\dfrac{C_1C_2}{C_1+C_2}$ and $\dfrac{V_1}{V_2}=\dfrac{C_2}{C_1}$ (voltage divides **inversely** with $C$).
+- $n$ equal caps $C$ in series: $C_{eq}=C/n$.
+</Callout>
+
+## 7.2 Parallel combination
+
+### Theory & the key invariant
+
+Capacitors are in **parallel** when both plates of each connect to the same two nodes, so they share the **same voltage $V$**.
+
+<Diagram src="/diagrams/capacitance/parallel-capacitors.svg" alt="Three capacitors C1, C2, C3 connected in parallel across a battery V, each at the same voltage V, with charges Q1, Q2, Q3 adding up to total Q" caption="Parallel: identical voltage V across every capacitor; the charges add (Q = Q₁ + Q₂ + Q₃). The largest charge sits on the largest capacitor." />
+
+### Derivation
+
+<Step n={1}>
+Every capacitor sees the same $V$. Charge on each: $Q_i = C_iV$.
+</Step>
+<Step n={2}>
+Total charge drawn from the battery:
+$$Q = Q_1+Q_2+Q_3 = (C_1+C_2+C_3)V.$$
+</Step>
+<Step n={3}>
+$$\boxed{C_{eq} = C_1+C_2+C_3+\dots}\qquad\blacksquare$$
+</Step>
+
+<Callout type="important">
+**Parallel facts:**
+- Same $V$ on all. Charges **add**.
+- $C_{eq}$ is **larger than the largest** capacitor.
+- Charge divides in **direct** proportion to $C$: $Q_i = Q\,\dfrac{C_i}{\sum C}$.
+</Callout>
+
+## 7.3 The memory hook (vs resistors)
+
+<Callout type="tip">
+Capacitor formulas are the **mirror image** of resistor formulas:
+
+| | Resistors | Capacitors |
+|---|---|---|
+| Series | $R_{eq}=\sum R$ | $\frac{1}{C_{eq}}=\sum\frac1C$ |
+| Parallel | $\frac{1}{R_{eq}}=\sum\frac1R$ | $C_{eq}=\sum C$ |
+
+Reason: $R\propto$ "opposition to flow," while $C\propto$ "capacity to store." Series stacking adds *gap* (lowers $C$) but adds *length* (raises $R$).
+</Callout>
+
+## 7.4 Common mistakes
+
+<Callout type="warning">
+- ❌ Adding capacitances directly in series (that's the parallel rule).
+- ❌ Assuming the *bigger* capacitor takes the bigger voltage in series — it takes the **smaller** voltage.
+- ❌ Calling two capacitors "in series" just because they look adjacent — check whether the connecting node has **anything else** attached. If charge can leak off that node, they are *not* in simple series.
+</Callout>
+
+## 7.5 Solved example
+
+> **Q.** $C_1=2\,\mu\text F$ and $C_2=3\,\mu\text F$ in series across $10\,\text V$. Find $Q$, $V_1$, $V_2$.
+
+**Solution.** $C_{eq}=\dfrac{2\times3}{2+3}=1.2\,\mu\text F$. Same charge $Q=C_{eq}V=1.2\times10=12\,\mu\text C$.
+$$V_1=\frac{Q}{C_1}=\frac{12}{2}=6\,\text V,\qquad V_2=\frac{Q}{C_2}=\frac{12}{3}=4\,\text V.$$
+Check: $V_1+V_2=10\,\text V$ ✓, and the smaller cap ($C_1$) holds the larger voltage ✓.
+
+## 7.6 JEE notes
+
+<Callout type="tip">
+**Redraw before you compute.** 70% of network errors are *identification* errors, not arithmetic. Label the nodes with letters; capacitors sharing the *same pair* of node-letters are in parallel; a chain of caps through nodes with nothing else attached is in series.
 </Callout>
 
 ---
 
-## 8. Charge Sharing Between Capacitors
+# SECTION 8 — Advanced Capacitor Networks
 
-When two charged capacitors ($C_1, Q_1$) and ($C_2, Q_2$) are connected (positive to positive):
+<Callout type="info">
+This is where JEE Advanced lives. The tools: **symmetry**, **node-potential labelling**, **Wheatstone-balance**, **folding**, and **self-similarity** (infinite networks).
+</Callout>
 
-$$V_{common} = \frac{Q_1+Q_2}{C_1+C_2}$$
+## 8.1 Symmetry method
 
-Energy lost (as heat in resistance):
+If two nodes are **equivalent by symmetry** (the network looks identical when you swap them), they are at the **same potential** → the capacitor between them carries **no charge** and can be **removed** (or, if convenient, shorted). This single move cracks most "impossible-looking" networks.
 
-$$\Delta U = \frac{C_1 C_2(V_1-V_2)^2}{2(C_1+C_2)}$$
+## 8.2 Wheatstone bridge of capacitors
+
+<Diagram src="/diagrams/capacitance/bridge-network.svg" alt="Wheatstone bridge of five capacitors with a bridge capacitor C5 between the midpoints, showing the balance condition" caption="Capacitor bridge. When C₁/C₂ = C₃/C₄ the bridge is balanced, the midpoints are equipotential, and C₅ carries no charge — delete it and reduce by series/parallel." />
+
+<Formula label="Capacitor Bridge Balance">
+$$\frac{C_1}{C_2}=\frac{C_3}{C_4}\ \Rightarrow\ \text{bridge balanced} \Rightarrow C_5 \text{ carries no charge (remove it)}$$
+</Formula>
+
+When balanced: $C_5$ drops out; $C_1$–$C_3$ form one series arm, $C_2$–$C_4$ the other, and the two arms are in parallel.
+
+## 8.3 Cube of capacitors
+
+Twelve equal capacitors $C$ on the edges of a cube. By symmetry, group nodes by potential and use $C_{eq}$ across the **body diagonal**:
+$$C_{eq}^{\text{(body diagonal)}} = \frac{6}{5}\,C.$$
+(Method: the three edges at the input node are equivalent → equipotential; likewise the three at the output. Collapse and series–parallel reduce. Same symmetry tree as the resistor cube, with $C$ playing the role of conductance $1/R$.)
+
+## 8.4 Infinite ladder networks
+
+<Diagram src="/diagrams/capacitance/infinite-ladder.svg" alt="Infinite repeating ladder of capacitors with self-similar structure used to solve for equivalent capacitance" caption="Infinite ladder: because the network is self-similar, adding one more cell leaves C_eq unchanged. Set C_eq = f(C_eq) and solve the resulting quadratic." />
+
+**Trick (self-similarity):** the infinite network is unchanged if you peel off one cell, so $C_{eq}$ satisfies a fixed-point equation. For a ladder with series element $C_s$ and shunt element $C_p$:
+$$C_{eq} = C_p + \left(\frac{1}{C_s}+\frac{1}{C_{eq}}\right)^{-1}\!\!,$$
+a quadratic in $C_{eq}$ — keep the positive root.
+
+## 8.5 Other reduction tricks
+
+<Callout type="tip">
+- **Folding by symmetry plane:** points mirror-symmetric about a plane perpendicular to the battery axis are equipotential.
+- **Star–delta (Y–Δ) for capacitors:** exists, mirror of the resistor transform — use only when no symmetry helps.
+- **Infinite-grid / fractal nets:** look for the self-similar sub-block first; never try to sum term by term.
+- **"Remove zero-charge branches":** any branch between equipotential nodes can be deleted *or* shorted — pick whichever simplifies the redraw.
+</Callout>
+
+## 8.6 Solved example
+
+> **Q.** Five capacitors form a bridge: $C_1=C_2=C_3=C_4=2\,\mu\text F$ as the arms and $C_5=5\,\mu\text F$ across the bridge. Find $C_{eq}$ between the input and output corners.
+
+**Solution.** Balance test: $C_1/C_2 = 2/2 = 1 = C_3/C_4$ → **balanced**, so $C_5$ carries no charge and is removed. Then $C_1$–$C_3$ in series $=1\,\mu\text F$; $C_2$–$C_4$ in series $=1\,\mu\text F$; these two in parallel:
+$$C_{eq}=1+1=2\,\mu\text F.$$
+The $5\,\mu\text F$ bridge capacitor is irrelevant — a classic "distractor."
+
+## 8.7 JEE notes
+
+<Callout type="important">
+**Order of attack for any network:** (1) look for symmetry / balance → delete zero-charge branches; (2) relabel nodes and apply series/parallel; (3) only if both fail, set up **node-potential (charge-conservation) equations** $\sum Q_{\text{into node}} = 0$ with $Q = C\Delta V$. The node method never fails — it is your guaranteed fallback.
+</Callout>
 
 ---
 
-## 9. RC Circuit
+# SECTION 9 — Energy Stored in a Capacitor
 
-When a capacitor $C$ charges through resistance $R$ from voltage $V_0$:
+## 9.1 Theory & derivation from work done
 
-<Formula label="Charging">
-$$q(t) = Q_0\left(1 - e^{-t/RC}\right), \quad V_C = V_0\left(1-e^{-t/RC}\right)$$
-</Formula>
+Charging is not free: each extra increment of charge must be pushed against the voltage already present.
 
-<Formula label="Discharging">
-$$q(t) = Q_0\,e^{-t/RC}, \quad V_C = V_0\,e^{-t/RC}$$
-</Formula>
+<Step n={1}>
+At an intermediate stage the capacitor holds charge $q$ at voltage $v=q/C$. Moving the next bit $dq$ across costs
+$$dW = v\,dq = \frac{q}{C}\,dq.$$
+</Step>
+<Step n={2}>
+Integrate from $0$ to the final charge $Q$:
+$$U = \int_0^Q \frac{q}{C}\,dq = \frac{1}{C}\cdot\frac{Q^2}{2} = \frac{Q^2}{2C}.$$
+</Step>
+<Step n={3}>
+Using $Q=CV$, rewrite three equivalent ways:
+$$\boxed{\,U = \frac{Q^2}{2C} = \frac{1}{2}CV^2 = \frac{1}{2}QV\,}\qquad\blacksquare$$
+</Step>
 
-**Time constant:** $\tau = RC$. After time $\tau$: capacitor is ~63% charged.
+<Diagram src="/diagrams/capacitance/energy-triangle.svg" alt="Graph of voltage versus charge for a capacitor, a straight line through the origin, with the shaded triangular area representing stored energy one half Q V" caption="On a V–Q graph the capacitor is a straight line of slope 1/C. Work done = area under it = ½QV — the triangle, not the rectangle." />
+
+## 9.2 Intuition — why the factor ½
+
+If you (wrongly) wrote $U = QV$, you'd assume *all* the charge was moved across the *full* final voltage. But the first charge crossed an empty (0 V) capacitor for free; only the *last* charge paid the full $V$. The average price is $V/2$, hence $U=\tfrac12 QV$. **The ½ is the average voltage during charging** — the area of a triangle, not a rectangle.
+
+## 9.3 The battery-energy paradox (a JEE favourite)
+
+<Callout type="important">
+A battery of EMF $V$ pushing charge $Q$ onto a capacitor does work $W_{batt}=QV$. But the capacitor only stores $\tfrac12 QV$. **Where did the other half go?** Into **heat in the connecting wires' resistance** (and radiation) during charging — *independent of how small that resistance is.* Exactly 50% of the battery's work is always lost when charging an initially empty capacitor through a resistor. This is one of the most-tested conceptual points in the chapter.
+</Callout>
+
+## 9.4 Common mistakes
+
+<Callout type="warning">
+- ❌ Using $U=QV$ instead of $\tfrac12 QV$.
+- ❌ When the capacitor is **isolated** (fixed $Q$) and you change $C$, use $U=Q^2/2C$. When it's on a **battery** (fixed $V$), use $U=\tfrac12 CV^2$. Picking the wrong form gives the wrong *direction* of energy change.
+- ❌ Forgetting that the battery does $QV$ while the cap stores $\tfrac12 QV$ — the missing half is real, not an error.
+</Callout>
+
+## 9.5 Solved example
+
+> **Q.** A $4\,\mu\text F$ capacitor is charged to $50\,\text V$. (a) Energy stored? (b) It is then connected to an identical *uncharged* $4\,\mu\text F$ cap. Find the energy after sharing and the energy lost.
+
+**Solution.** (a) $U_i=\tfrac12 CV^2=\tfrac12(4\times10^{-6})(50)^2=5.0\times10^{-3}\,\text J=5\,\text{mJ}.$
+(b) Charge $Q=CV=200\,\mu\text C$ is conserved; total $C$ becomes $8\,\mu\text F$, so $V_f=Q/C_{tot}=200/8=25\,\text V$.
+$$U_f=\tfrac12(8\times10^{-6})(25)^2=2.5\,\text{mJ}\ \Rightarrow\ \Delta U_{lost}=5-2.5=2.5\,\text{mJ}.$$
+Half the energy is lost in the redistribution — see Section 18.
+
+## 9.6 JEE notes
+
+<Callout type="tip">
+Three forms, one rule of thumb: **fixed $Q$ → use $Q^2/2C$; fixed $V$ → use $\tfrac12 CV^2$.** They make the algebra of dielectric-insertion problems (Section 14) trivial.
+</Callout>
 
 ---
 
-## 10. Summary
+# SECTION 10 — Energy Density of the Electric Field
 
-| Quantity | Formula |
+## 10.1 Theory & derivation from capacitor energy
+
+Where does the energy *physically* reside? Not on the plates — **in the field that fills the gap.**
+
+<Step n={1}>
+Start from a parallel-plate cap: $U=\tfrac12 CV^2$, with $C=\varepsilon_0A/d$ and $V=Ed$:
+$$U = \frac12\left(\frac{\varepsilon_0 A}{d}\right)(Ed)^2 = \frac12\,\varepsilon_0 E^2\,(A d).$$
+</Step>
+<Step n={2}>
+The quantity $Ad$ is exactly the **volume** of the field-filled gap. Energy per unit volume is therefore
+$$u = \frac{U}{Ad} = \frac12\varepsilon_0 E^2.$$
+</Step>
+<Step n={3}>
+$$\boxed{\,u = \frac12\varepsilon_0 E^2\,}\quad\text{(vacuum)},\qquad u=\frac12 K\varepsilon_0 E^2 = \frac12\varepsilon E^2\ \text{(dielectric)}.\qquad\blacksquare$$
+</Step>
+
+<Diagram src="/diagrams/capacitance/energy-density.svg" alt="Capacitor gap shaded to show energy stored throughout the volume of the electric field, with the formula u = half epsilon naught E squared" caption="Energy is not 'on the plates' — it is spread through the field at density u = ½ε₀E². Double the field, quadruple the local energy." />
+
+## 10.2 Intuition & importance
+
+<Callout type="important">
+Although we *derived* $u=\tfrac12\varepsilon_0 E^2$ from a capacitor, the result is **universal**: *any* electric field, anywhere, carries this energy density. This is a conceptual earthquake — energy lives in **empty space** wherever a field exists. It is the idea that lets electromagnetic waves carry energy across a vacuum from the Sun to your skin, and it is the electric half of the total EM energy density $u=\tfrac12\varepsilon_0E^2+\tfrac{1}{2\mu_0}B^2$.
+</Callout>
+
+## 10.3 Common mistakes
+
+<Callout type="warning">
+- ❌ $u=\tfrac12\varepsilon_0 E$ (forgetting the square). Energy density goes as $E^2$.
+- ❌ Using vacuum $u=\tfrac12\varepsilon_0E^2$ inside a dielectric — use $\tfrac12\varepsilon E^2$ with $\varepsilon=K\varepsilon_0$.
+- ❌ Thinking the energy sits on the conductor surface; it is distributed through the field volume.
+</Callout>
+
+## 10.4 Solved example
+
+> **Q.** The field between two plates is $E=2\times10^{5}\,\text{V/m}$ in air. Find the energy density and the total energy if the gap volume is $5\times10^{-6}\,\text m^3$.
+
+**Solution.**
+$$u=\tfrac12\varepsilon_0E^2=\tfrac12(8.85\times10^{-12})(2\times10^5)^2=0.177\,\text{J/m}^3.$$
+$$U=u\cdot\text{Vol}=0.177\times5\times10^{-6}=8.85\times10^{-7}\,\text J\approx0.89\,\mu\text J.$$
+
+## 10.5 JEE notes
+
+<Callout type="tip">
+Energy density is the cleanest way to find **force on plates / on a dielectric** (Sections 16–17): compute how the field energy changes as a boundary moves, and force = $-\,dU/dx$. Often faster than summing forces.
+</Callout>
+
+---
+
+# SECTION 11 — Capacitor with a Dielectric
+
+## 11.1 Theory — what a dielectric is
+
+A **dielectric** is an insulator that, when placed in a field, develops *internal* charge separation (polarization) but conducts no free charge. Inserting one into a capacitor **always increases the capacitance** by the dielectric constant $K$.
+
+## 11.2 The molecular picture
+
+<Diagram src="/diagrams/capacitance/polarization.svg" alt="Dielectric slab between capacitor plates with molecular dipoles aligned, showing bound surface charges that partially cancel the plate field" caption="Inside the dielectric, molecular dipoles align with the field. Their charges cancel in the bulk but leave bound surface charges (−σ_b near +plate, +σ_b near −plate) that oppose and weaken the field." />
+
+There are two molecular origins:
+
+<Step n={1}>
+**Non-polar molecules** (H₂, O₂, CO₂): no permanent dipole. The external field *stretches* the electron cloud relative to the nucleus, **inducing** a dipole that points along $\vec E$. This is **electronic/induced polarization**.
+</Step>
+<Step n={2}>
+**Polar molecules** (H₂O, HCl): a *permanent* dipole exists but points randomly due to thermal motion. The field **torques** them toward alignment (against thermal disorder). This is **orientational polarization** — it weakens as temperature rises.
+</Step>
+
+## 11.3 Intuition — why $K>1$ always helps
+
+Aligned dipoles place a layer of **bound negative charge** against the positive plate and **bound positive charge** against the negative plate. These bound layers produce their own field $\vec E_p$ **opposing** the plate field $\vec E_0$. The net field drops:
+$$E = E_0 - E_p = \frac{E_0}{K}.$$
+Smaller field ⇒ smaller voltage $V=Ed$ for the *same* charge ⇒ larger $C=Q/V$. **The dielectric "hides" part of the plate charge, so the plates accept more.**
+
+## 11.4 Common mistakes
+
+<Callout type="warning">
+- ❌ Thinking a dielectric *conducts* a little. It does not move free charge; it only displaces bound charge slightly.
+- ❌ Believing the induced field can exceed and reverse the applied field. For a linear dielectric, $E_p < E_0$, so net field merely *shrinks* to $E_0/K$.
+- ❌ Forgetting that orientational polarization is **temperature-dependent** (Curie behaviour) while electronic polarization is not.
+</Callout>
+
+## 11.5 Solved example
+
+> **Q.** A field $E_0=3\times10^5$ V/m exists in vacuum between plates. A slab of $K=5$ is inserted (charge fixed). Find the field inside the slab.
+
+**Solution.** $E = E_0/K = 3\times10^5/5 = 6\times10^4$ V/m. The bound charges cut the field to one-fifth.
+
+## 11.6 JEE notes
+
+<Callout type="tip">
+Key relations to keep at your fingertips: with charge fixed, inserting $K$ gives $E\to E_0/K$, $V\to V_0/K$, $C\to KC_0$, $U\to U_0/K$. With the **battery on**, $V$ is pinned and the responses flip — Section 14.
+</Callout>
+
+---
+
+# SECTION 12 — Dielectric Constant
+
+## 12.1 Theory & definition
+
+The **dielectric constant** (relative permittivity) $K=\varepsilon_r$ is the factor by which the medium increases capacitance, equivalently the factor by which it cuts the field:
+$$K = \frac{C_{\text{medium}}}{C_{\text{vacuum}}} = \frac{\varepsilon}{\varepsilon_0} = \frac{E_0}{E}.$$
+
+## 12.2 Derivation of $C=K\varepsilon_0 A/d$
+
+<Step n={1}>
+With the dielectric filling the gap, the field is $E=E_0/K=\sigma/(K\varepsilon_0)$.
+</Step>
+<Step n={2}>
+Voltage: $V = Ed = \dfrac{\sigma d}{K\varepsilon_0}=\dfrac{Qd}{K\varepsilon_0 A}.$
+</Step>
+<Step n={3}>
+$$C=\frac{Q}{V}=\boxed{\frac{K\varepsilon_0 A}{d}}=KC_0.\qquad\blacksquare$$
+</Step>
+
+<Formula label="Parallel Plate with Dielectric">
+$$C = \frac{K\varepsilon_0 A}{d} = K\,C_0$$
+</Formula>
+
+## 12.3 Reference values (build number sense)
+
+| Medium | $K$ |
 |---|---|
-| Parallel plate $C$ | $\varepsilon_0 A/d$ |
-| With dielectric | $K\varepsilon_0 A/d$ |
-| Series combo | $1/C_{eq} = \Sigma(1/C_i)$ |
-| Parallel combo | $C_{eq} = \Sigma C_i$ |
-| Energy stored | $\frac{1}{2}CV^2 = Q^2/2C$ |
-| Energy density | $\frac{1}{2}\varepsilon_0 E^2$ |
-| RC time constant | $\tau = RC$ |
+| Vacuum | 1 (exactly) |
+| Air | 1.0006 (≈1) |
+| Paper | ~3.7 |
+| Mica | ~6 |
+| Glass | 5–10 |
+| Water | ~80 |
+| Barium titanate (ceramic) | ~1000+ |
+
+## 12.4 Common mistakes
+
+<Callout type="warning">
+- ❌ Treating air as having $K$ noticeably $>1$. For JEE, air $\approx$ vacuum unless stated.
+- ❌ Writing $C=\varepsilon_0 A/(Kd)$. The $K$ multiplies, it does not divide: $C=K\varepsilon_0A/d$.
+- ❌ Confusing $\varepsilon$ (absolute, $=K\varepsilon_0$) with $K$ (dimensionless ratio).
+</Callout>
+
+## 12.5 Solved example
+
+> **Q.** An air capacitor has $C_0=8\,\text{pF}$. The gap is then completely filled with mica ($K=6$). New capacitance?
+
+**Solution.** $C=KC_0=6\times8=48\,\text{pF}.$
+
+## 12.6 JEE notes
+
+<Callout type="tip">
+$K$ is *the* lever of the chapter. If a slab only **partially** fills the gap, you cannot just multiply by $K$ — you must treat the filled and empty regions as separate capacitors (Section 15).
+</Callout>
+
+---
+
+# SECTION 13 — Polarization of Dielectrics
+
+## 13.1 Theory — bound charge, polarization vector
+
+**Polarization** $\vec P$ is the dipole moment per unit volume. A uniformly polarized slab has zero net charge in its interior (dipoles cancel head-to-tail) but leaves **bound surface charge**:
+$$\sigma_b = P\quad(\text{on faces} \perp \vec P).$$
+
+## 13.2 Microscopic ↔ macroscopic bridge
+
+<Step n={1}>
+**Microscopic:** each molecule acquires dipole moment $\vec p = \alpha \vec E_{local}$ ($\alpha$ = polarizability). Summing $N$ per unit volume gives $\vec P = N\vec p$.
+</Step>
+<Step n={2}>
+**Macroscopic:** for a linear dielectric $\vec P = \varepsilon_0\chi_e\vec E$, with electric susceptibility $\chi_e = K-1$.
+</Step>
+<Step n={3}>
+**The three fields tie together** via the displacement $\vec D$:
+$$\vec D = \varepsilon_0\vec E + \vec P = \varepsilon_0 K\vec E,\qquad \sigma_b = P = \varepsilon_0(K-1)E = \left(1-\tfrac1K\right)\sigma_f.$$
+</Step>
+
+<Callout type="derivation">
+**Bound vs free charge — the cleanest statement.** On the dielectric surface facing the $+\sigma_f$ plate sits bound charge $-\sigma_b$. The net charge seen by the gap is $\sigma_f-\sigma_b=\sigma_f/K$, which is precisely why $E=\sigma_f/(K\varepsilon_0)=E_0/K$. The bound charge is *real* charge (you could in principle detect it) but it is **not free to move** through the material.
+</Callout>
+
+## 13.3 Common mistakes
+
+<Callout type="warning">
+- ❌ Treating bound charge as fictitious. It is real surface charge; it just isn't free.
+- ❌ Forgetting $\sigma_b = \sigma_f(1-1/K) < \sigma_f$ — bound charge can never fully cancel the free charge in a linear dielectric.
+- ❌ Mixing up $\vec D$, $\vec E$, $\vec P$. Mnemonic: $\vec D$ is sourced by **free** charge only; $\vec E$ by **all** charge; $\vec P$ by **bound** charge.
+</Callout>
+
+## 13.4 Solved example
+
+> **Q.** A dielectric $K=4$ fills a capacitor with free surface density $\sigma_f=8\,\mu\text{C/m}^2$. Find the bound surface charge density.
+
+**Solution.** $\sigma_b=\sigma_f(1-1/K)=8(1-1/4)=8(0.75)=6\,\mu\text{C/m}^2.$ Net density felt by the gap $=8-6=2\,\mu\text{C/m}^2=\sigma_f/K$ ✓.
+
+## 13.5 JEE notes
+
+<Callout type="tip">
+Advanced problems test $\sigma_b=\sigma_f(1-1/K)$ and $\vec D=\varepsilon_0 K\vec E$. Remember: **$D$ is continuous across a dielectric boundary when no free charge sits there** — this boundary condition cracks "slab partially inserted" field problems.
+</Callout>
+
+---
+
+# SECTION 14 — Dielectric Insertion: The Two Master Cases
+
+<Callout type="important">
+**The single most important decision in the chapter.** Before touching algebra, ask: **is the battery still connected?**
+- **Battery connected** → **$V$ is constant** (pinned to EMF).
+- **Battery disconnected** → **$Q$ is constant** (nowhere for charge to go).
+
+Everything else follows mechanically from $C=KC_0$ plus whichever of $Q$ or $V$ is frozen.
+</Callout>
+
+## 14.1 Case 1 — Battery connected ($V$ fixed)
+
+<Diagram src="/diagrams/capacitance/dielectric-insertion.svg" alt="Two scenarios of dielectric insertion: battery connected with V fixed and battery disconnected with Q fixed, showing arrows for which quantities rise or fall" caption="The two master cases. Left: battery connected, V fixed — Q, C, U all rise, E unchanged. Right: battery removed, Q fixed — V, E, U all fall, C rises." />
+
+$C\to KC_0$, with $V$ held:
+
+| Quantity | Change | Factor |
+|---|---|---|
+| Capacitance $C$ | increases | $\times K$ |
+| Voltage $V$ | unchanged | $\times 1$ |
+| Charge $Q=CV$ | increases | $\times K$ |
+| Field $E=V/d$ | unchanged | $\times 1$ |
+| Energy $U=\tfrac12 CV^2$ | increases | $\times K$ |
+
+**Where does the extra energy come from?** The battery pumps additional charge $\Delta Q=(K-1)C_0V$; it does work $V\Delta Q$, half stored, half dissipated.
+
+## 14.2 Case 2 — Battery disconnected ($Q$ fixed)
+
+$C\to KC_0$, with $Q$ held:
+
+| Quantity | Change | Factor |
+|---|---|---|
+| Capacitance $C$ | increases | $\times K$ |
+| Charge $Q$ | unchanged | $\times 1$ |
+| Voltage $V=Q/C$ | decreases | $\div K$ |
+| Field $E=V/d$ | decreases | $\div K$ |
+| Energy $U=Q^2/2C$ | decreases | $\div K$ |
+
+**Where did the energy go?** It did work **pulling the dielectric in** — the slab is sucked into the gap (Section 16). Energy left the field and became mechanical work (and heat).
+
+## 14.3 The master comparison table
+
+| Quantity | Battery ON ($V$ fixed) | Battery OFF ($Q$ fixed) |
+|---|---|---|
+| $C$ | $\times K$ | $\times K$ |
+| $Q$ | $\times K$ | unchanged |
+| $V$ | unchanged | $\div K$ |
+| $E$ | unchanged | $\div K$ |
+| $U$ | $\times K$ (rises) | $\div K$ (falls) |
+| Energy flow | battery supplies energy | field gives up energy to mechanical work |
+
+<Callout type="warning">
+**The trap:** students memorise "inserting a dielectric increases energy." Only true with the **battery on**. With the battery **off**, energy *decreases*. The opposite conclusions from the *same physical act* is the chapter's signature exam trick.
+</Callout>
+
+## 14.4 Solved example
+
+> **Q.** $C_0=2\,\mu\text F$ charged to $100\,\text V$. A slab $K=4$ is inserted. Find final $Q,V,U$ if (a) battery stays connected, (b) battery disconnected first.
+
+**Solution.** Initially $Q_0=200\,\mu\text C$, $U_0=\tfrac12(2)(100)^2\,\mu\text J=10\,\text{mJ}$, $C=KC_0=8\,\mu\text F$.
+**(a) Battery on ($V=100$):** $Q=CV=800\,\mu\text C$, $V=100\,\text V$, $U=\tfrac12(8)(100)^2=40\,\text{mJ}$ (×4).
+**(b) Battery off ($Q=200\,\mu\text C$):** $V=Q/C=200/8=25\,\text V$, $U=Q^2/2C=(200\times10^{-6})^2/(2\cdot8\times10^{-6})=2.5\,\text{mJ}$ (÷4).
+
+## 14.5 JEE notes
+
+<Callout type="tip">
+Write the frozen variable first ("$V$ fixed" or "$Q$ fixed"), then read every other quantity off $C=KC_0$. This converts a "hard" problem into ten seconds of bookkeeping.
+</Callout>
+
+---
+
+# SECTION 15 — Capacitors Partially Filled with Dielectric
+
+<Callout type="info">
+**Golden rule:** slice the capacitor into regions where the field is uniform, decide whether the slices are **in series** (stacked along the field / thickness) or **in parallel** (side by side across the area), and combine.
+</Callout>
+
+## 15.1 Dielectric slab of thickness $t < d$ (series along thickness)
+
+<Diagram src="/diagrams/capacitance/partial-fill.svg" alt="Two configurations of partially filled capacitor: a slab of thickness t spanning part of the gap (series), and a slab covering part of the area (parallel)" caption="Left: slab fills thickness t < d — model as two capacitors in series (dielectric region + air region). Right: slab covers area A₁ — model as two capacitors in parallel." />
+
+Treat the air part ($d-t$) and the slab part ($t$) as two series capacitors:
+$$C = \frac{\varepsilon_0 A}{(d-t)+\dfrac{t}{K}}.$$
+Equivalent neat form (slab effectively *shrinks* the gap by $t(1-1/K)$):
+$$C = \frac{\varepsilon_0 A}{d - t\left(1-\dfrac1K\right)}.$$
+A **conducting** slab is the $K\to\infty$ limit: $C=\dfrac{\varepsilon_0 A}{d-t}$ — it just deletes its own thickness from the gap, and its *position* doesn't matter.
+
+## 15.2 Dielectric covering part of the area (parallel across area)
+
+Slab of dielectric covers area $A_1$, the rest $A_2=A-A_1$ is air, both spanning the full gap $d$:
+$$C = \frac{K\varepsilon_0 A_1}{d} + \frac{\varepsilon_0 A_2}{d} = \frac{\varepsilon_0}{d}\big(KA_1+A_2\big).$$
+
+## 15.3 Two stacked dielectric slabs (series)
+
+Thicknesses $d_1,d_2$ with constants $K_1,K_2$ filling the whole area:
+$$C = \frac{\varepsilon_0 A}{\dfrac{d_1}{K_1}+\dfrac{d_2}{K_2}}.$$
+General $n$ stacked slabs: $\;C = \dfrac{\varepsilon_0 A}{\sum_i d_i/K_i}.$
+
+## 15.4 Two side-by-side dielectrics (parallel)
+
+Half-and-half across the area: $\;C = \dfrac{\varepsilon_0 A}{2d}(K_1+K_2).$
+
+## 15.5 Common mistakes
+
+<Callout type="warning">
+- ❌ Multiplying the whole $C_0$ by $K$ when the slab only partially fills the gap. You must series/parallel-combine.
+- ❌ Getting series vs parallel backwards: **along the field = series**, **across the area = parallel**.
+- ❌ For a metal slab, forgetting it is the $K\to\infty$ case and that its **location in the gap is irrelevant** (only its thickness matters).
+</Callout>
+
+## 15.6 Solved example
+
+> **Q.** $A=100\,\text{cm}^2$, $d=4\,\text{mm}$. A slab of $K=2$, thickness $3\,\text{mm}$ is inserted parallel to the plates. Find $C$.
+
+**Solution.** $A=10^{-2}\,\text m^2$, $\varepsilon_0 A=8.85\times10^{-14}$.
+$$C=\frac{\varepsilon_0 A}{d-t(1-1/K)}=\frac{8.85\times10^{-14}}{4\times10^{-3}-3\times10^{-3}(1-\tfrac12)}=\frac{8.85\times10^{-14}}{2.5\times10^{-3}}=3.54\times10^{-11}\,\text F\approx35.4\,\text{pF}.$$
+
+## 15.7 JEE notes
+
+<Callout type="tip">
+Decide series/parallel by asking: *does charge flow through both regions in turn (series) or split between them (parallel)?* Stacking along the field path → same charge → series. Splitting across area → same voltage → parallel.
+</Callout>
+
+---
+
+# SECTION 16 — Force on a Dielectric Slab
+
+## 16.1 Theory — why the slab gets sucked in
+
+A partially inserted dielectric experiences a **net inward force** that pulls it further into the gap. Microscopically, the **fringing field** at the gap mouth acts on the slab's induced dipoles; macroscopically, the system lowers its energy (battery off) or lets the battery do net positive work (battery on) by increasing the overlap.
+
+## 16.2 Derivation by the energy method
+
+<Step n={1}>
+Let the slab be inserted a length $x$ into a capacitor of width $L$, plate separation $d$, breadth $b$. Capacitance is two parallel pieces:
+$$C(x) = \frac{\varepsilon_0 b}{d}\Big[Kx + (L-x)\Big] = \frac{\varepsilon_0 b}{d}\big[L + (K-1)x\big].$$
+</Step>
+<Step n={2}>
+**Battery disconnected ($Q$ fixed):** $U=\dfrac{Q^2}{2C}$, and the force is
+$$F = -\frac{dU}{dx}\Big|_Q = \frac{Q^2}{2C^2}\frac{dC}{dx}.$$
+</Step>
+<Step n={3}>
+**Battery connected ($V$ fixed):** the battery does work too; the correct force is
+$$F = +\frac{dU}{dx}\Big|_V = \frac12 V^2\frac{dC}{dx}.$$
+With $\dfrac{dC}{dx}=\dfrac{\varepsilon_0 b(K-1)}{d}$, this gives
+$$\boxed{F = \frac{\varepsilon_0 b (K-1)V^2}{2d}}\quad(\text{constant, independent of }x,\ \text{directed inward}).$$
+</Step>
+
+<Diagram src="/diagrams/capacitance/force-on-dielectric.svg" alt="Dielectric slab partially inserted into a capacitor, fringing field at the edge pulling the slab inward with force F" caption="The fringing field at the gap mouth tugs the slab's induced dipoles inward. The net force is constant and directed so as to increase the dielectric overlap." />
+
+<Callout type="warning">
+**Sign subtlety that trips everyone.** Battery off: $F=-dU/dx|_Q$. Battery on: $F=+dU/dx|_V$. The opposite signs are because with the battery on, energy bookkeeping must include the battery's work $V\,dQ$. **Both cases give an inward force of the same magnitude** $\dfrac{\varepsilon_0 b(K-1)V^2}{2d}$ at the instant the voltage/field match — but be careful which $V$ you use.
+</Callout>
+
+## 16.3 Common mistakes
+
+<Callout type="warning">
+- ❌ Using $F=-dU/dx$ with the battery connected. With the battery on, the slab is pulled in even though $U$ *increases* — you must add the battery's work, flipping the sign.
+- ❌ Thinking the force depends on $x$. For the ideal slab it is **constant** until fully inserted.
+- ❌ Forgetting the force vanishes once the slab is fully inside (no fringing region left to act).
+</Callout>
+
+## 16.4 Solved example
+
+> **Q.** A slab ($K=3$) is partly inside a cap with $b=5\,\text{cm}$, $d=1\,\text{mm}$, held at $V=200\,\text V$. Find the pull-in force.
+
+**Solution.**
+$$F=\frac{\varepsilon_0 b(K-1)V^2}{2d}=\frac{(8.85\times10^{-12})(0.05)(2)(200)^2}{2(10^{-3})}=\frac{(8.85\times10^{-12})(0.05)(2)(4\times10^4)}{2\times10^{-3}}\approx1.77\times10^{-5}\,\text N.$$
+
+## 16.5 JEE notes
+
+<Callout type="tip">
+The energy method ($F=\pm dU/dx$) is the master key for *every* "force on a movable boundary" problem — dielectric slabs, movable plates, liquid dielectrics rising between vertical plates. Decide what's fixed ($Q$ or $V$), write $C(x)$, differentiate.
+</Callout>
+
+---
+
+# SECTION 17 — Force Between Capacitor Plates
+
+## 17.1 Theory
+
+The plates carry opposite charge, so they **attract**. But you must use the field due to **one** plate acting on the **other**, not the total field — a plate cannot exert force on itself.
+
+## 17.2 Derivation (two ways)
+
+<Step n={1}>
+**Field-on-charge method.** The field produced by *one* plate is $E_{\text{one}}=\sigma/2\varepsilon_0$. It acts on the charge $Q=\sigma A$ of the other plate:
+$$F = Q\,E_{\text{one}} = (\sigma A)\frac{\sigma}{2\varepsilon_0} = \frac{\sigma^2 A}{2\varepsilon_0} = \frac{Q^2}{2\varepsilon_0 A}.$$
+</Step>
+<Step n={2}>
+**Energy method (confirmation).** With $Q$ fixed, $U=\dfrac{Q^2 d}{2\varepsilon_0 A}$, so
+$$F = -\frac{dU}{dd} = -\frac{Q^2}{2\varepsilon_0 A}\ \Rightarrow\ |F| = \frac{Q^2}{2\varepsilon_0 A}.$$
+Both methods agree. ✓
+</Step>
+<Step n={3}>
+**Electrostatic pressure** (force per unit area):
+$$\boxed{\,P = \frac{F}{A} = \frac{\sigma^2}{2\varepsilon_0} = \frac12\varepsilon_0 E^2 = u\,}$$
+— the pressure equals the **energy density**. A beautiful, memorable result.
+</Step>
+
+## 17.3 Intuition — the factor-of-2 again
+
+The total field in the gap is $E=\sigma/\varepsilon_0$, but half of that is produced by the plate being acted on. A charge feels only the *other* plate's contribution, $\sigma/2\varepsilon_0$. Forgetting this and using the full $E$ doubles your answer — the single most common error here.
+
+## 17.4 Common mistakes
+
+<Callout type="warning">
+- ❌ Using $F=QE$ with the **total** field $E=\sigma/\varepsilon_0$. Use the field of the *other* plate, $\sigma/2\varepsilon_0$.
+- ❌ Thinking the plates repel. Opposite charges → **attraction** always.
+- ❌ Forgetting that with a dielectric or different $Q$/$V$ constraint the pressure formula adapts ($P=\tfrac12\varepsilon E^2$).
+</Callout>
+
+## 17.5 Solved example
+
+> **Q.** Plates of area $200\,\text{cm}^2$ carry $\sigma=2\,\mu\text{C/m}^2$. Find the attractive force.
+
+**Solution.** $A=2\times10^{-2}\,\text m^2$.
+$$F=\frac{\sigma^2 A}{2\varepsilon_0}=\frac{(2\times10^{-6})^2(2\times10^{-2})}{2(8.85\times10^{-12})}=\frac{4\times10^{-12}\cdot2\times10^{-2}}{1.77\times10^{-11}}\approx4.5\times10^{-3}\,\text N.$$
+
+## 17.6 JEE notes
+
+<Callout type="tip">
+"Electrostatic pressure $=\tfrac12\varepsilon_0E^2=$ energy density" is a one-line result that answers a whole family of questions: force to pull plates apart, pressure on a charged soap bubble ($\tfrac{\sigma^2}{2\varepsilon_0}$), and the tension in field lines.
+</Callout>
+
+---
+
+# SECTION 18 — Capacitor Circuits & Charge Redistribution
+
+## 18.1 The two conservation laws
+
+<Step n={1}>
+**Charge conservation.** On any **isolated** conductor (an "island" not touched by a battery), the *total* charge is fixed. When capacitors reconnect, charge merely redistributes across the island.
+</Step>
+<Step n={2}>
+**Potential / loop law (KVL).** Around any closed loop, the sum of potential changes is zero. For capacitors, $\sum \pm Q_i/C_i \pm \mathcal E = 0$.
+</Step>
+
+## 18.2 Charge sharing between two capacitors
+
+<Diagram src="/diagrams/capacitance/charge-sharing.svg" alt="Two capacitors initially charged to different voltages then connected by a switch, reaching a common potential with energy lost as heat" caption="Closing the switch lets charge flow until both capacitors reach a common potential V_common. Energy is always lost — even with zero resistance, as radiation." />
+
+Connect $C_1$ (charged to $V_1$) and $C_2$ (charged to $V_2$), positive plate to positive plate. Charge is conserved; final voltage is common:
+
+<Formula label="Common Potential">
+$$V_{common} = \frac{Q_1+Q_2}{C_1+C_2} = \frac{C_1V_1 + C_2V_2}{C_1+C_2}$$
+</Formula>
+
+## 18.3 Energy is always lost in sharing
+
+<Step n={1}>
+Initial energy $U_i = \tfrac12 C_1V_1^2 + \tfrac12 C_2V_2^2$; final $U_f=\tfrac12(C_1+C_2)V_{common}^2$.
+</Step>
+<Step n={2}>
+The difference is always **positive** (energy lost):
+$$\boxed{\Delta U = \frac{C_1C_2}{2(C_1+C_2)}\,(V_1-V_2)^2 \ \ge 0.}$$
+</Step>
+
+<Callout type="important">
+**The energy-loss paradox.** $\Delta U>0$ whenever $V_1\ne V_2$, **even if the connecting wire has zero resistance**. Where does it go? Into **heat** (any real $R$) and, in the idealised $R=0$ limit, into **electromagnetic radiation** from the transient current surge. *You cannot share charge between capacitors at different potentials without losing energy* — a deep and heavily-tested idea.
+</Callout>
+
+## 18.4 Opposite-polarity connection
+
+If the positive plate of one is joined to the **negative** plate of the other, charges partly cancel:
+$$V_{common} = \frac{|Q_1 - Q_2|}{C_1+C_2}.$$
+Watch the signs — this is a favourite sign-trap.
+
+## 18.5 Common mistakes
+
+<Callout type="warning">
+- ❌ Conserving *voltage* instead of *charge* during reconnection. Charge is conserved on the isolated island; voltage equalises.
+- ❌ Assuming energy is conserved in charge sharing. It never is (unless $V_1=V_2$).
+- ❌ Adding charges as $Q_1+Q_2$ for opposite-polarity joins — use $|Q_1-Q_2|$.
+</Callout>
+
+## 18.6 Solved example
+
+> **Q.** $C_1=3\,\mu\text F$ at $100\,\text V$, $C_2=2\,\mu\text F$ at $50\,\text V$, joined + to +. Find $V_{common}$ and $\Delta U$.
+
+**Solution.** $Q_1=300\,\mu\text C$, $Q_2=100\,\mu\text C$.
+$$V_{common}=\frac{300+100}{3+2}=80\,\text V,\qquad \Delta U=\frac{(3)(2)}{2(5)}(100-50)^2\,\mu\text J=\frac{6}{10}(2500)=1500\,\mu\text J=1.5\,\text{mJ}.$$
+
+## 18.7 JEE notes
+
+<Callout type="tip">
+For multi-capacitor circuits with batteries: assign an unknown charge to each isolated conductor, write **one charge-conservation equation per island** and **one loop equation per loop**, and solve. This systematic method never fails on JEE Advanced "find the charge on $C_3$" problems.
+</Callout>
+
+---
+
+# SECTION 19 — Transients: Charging & Discharging (Advanced Intro)
+
+<Callout type="info">
+This section is qualitative/semi-quantitative — full RC dynamics belong to Current Electricity, but the capacitor's behaviour at $t=0$ and $t=\infty$ is examined constantly.
+</Callout>
+
+## 19.1 Charging through a resistor
+
+<Diagram src="/diagrams/capacitance/rc-charging.svg" alt="RC charging and discharging curves: charge rising exponentially toward maximum and falling exponentially to zero, with time constant tau marked" caption="Charging: q(t) = Q₀(1 − e^(−t/RC)) rises to 63% of max in one time constant τ = RC. Discharging: q(t) = Q₀e^(−t/RC) falls to 37% in one τ." />
+
+<Formula label="Charging / Discharging">
+$$q_{\text{charge}}(t) = Q_0\left(1-e^{-t/RC}\right),\qquad q_{\text{discharge}}(t) = Q_0\,e^{-t/RC}$$
+</Formula>
+
+- **Time constant** $\tau = RC$ (units: seconds). After $t=\tau$: charged to $\approx63\%$, or discharged to $\approx37\%$.
+- **Current** $i(t)=\dfrac{V_0}{R}e^{-t/RC}$ — note current is *largest at $t=0$* and decays.
+
+## 19.2 The two reflexes every JEE student needs
+
+<Callout type="important">
+- **At $t=0$ (just switched):** an *uncharged* capacitor behaves like a **wire (short circuit)** — its voltage can't change instantly, so it offers no opposition yet. Maximum current flows.
+- **At $t=\infty$ (steady state):** a *fully charged* capacitor behaves like a **broken wire (open circuit)** — no current flows *through* it. Use this to find final charges in any DC network: **set all capacitor branches to "open" and solve the resistive circuit.**
+</Callout>
+
+## 19.3 Common mistakes
+
+<Callout type="warning">
+- ❌ Letting current flow "through" a fully charged capacitor in steady state. In DC steady state, capacitor current is **zero**.
+- ❌ Thinking the capacitor voltage can jump instantly. $V_C$ is continuous; it cannot change discontinuously (that would need infinite current).
+- ❌ Confusing $\tau=RC$ with a half-life. $63\%/37\%$ correspond to one $\tau$, not 50%.
+</Callout>
+
+## 19.4 Solved example
+
+> **Q.** $R=2\,\text{k}\Omega$, $C=5\,\mu\text F$, $V_0=10\,\text V$. Find $\tau$ and the charge after one time constant.
+
+**Solution.** $\tau=RC=(2000)(5\times10^{-6})=0.01\,\text s=10\,\text{ms}$. $Q_0=CV_0=50\,\mu\text C$. After $t=\tau$: $q=Q_0(1-e^{-1})=50(0.632)=31.6\,\mu\text C$.
+
+## 19.5 JEE notes
+
+<Callout type="tip">
+The "capacitor = open circuit in steady state" rule turns many fearsome-looking R–C–battery networks into trivial resistor problems for finding **final charges**. Master this single reflex.
+</Callout>
+
+---
+
+# SECTION 20 — Advanced JEE Insights
+
+## 20.1 Hidden assumptions to interrogate
+
+<Callout type="derivation">
+- *"Parallel plate"* silently assumes **uniform field & no fringing**. Valid only for $d\ll$ plate size.
+- *"Capacitor charged to $V$"* — check whether the **battery is still connected** before deciding what's fixed.
+- *"Slab inserted"* — is it **dielectric** ($K$ finite) or **conducting** ($K\to\infty$)? Totally different formulas.
+- *"Plates connected by a wire"* — they become **one conductor** at one potential; the capacitance between them is now irrelevant.
+</Callout>
+
+## 20.2 Symmetry & shortcut toolkit
+
+| Technique | When to use |
+|---|---|
+| **Equipotential merging** | Nodes equal by symmetry → join them, delete bridge caps |
+| **Wheatstone balance** $C_1/C_2=C_3/C_4$ | Bridge networks |
+| **Self-similarity** | Infinite ladders/grids |
+| **Open-circuit reflex** | Capacitors in steady-state DC networks |
+| **Energy method** $F=\pm dU/dx$ | Forces on movable plates/dielectrics |
+| **Series-shrinks-gap** $d\to d-t(1-1/K)$ | Partial-fill slabs |
+
+## 20.3 Limiting-case checks (your built-in error detector)
+
+<Callout type="tip">
+After any derivation, test extremes:
+- $K\to1$: dielectric result must reduce to the vacuum result.
+- $t\to0$ or $t\to d$: partial-fill must reduce to "no slab" or "full slab."
+- $b\to\infty$ (concentric spheres): must give the isolated-sphere $4\pi\varepsilon_0 a$.
+- $d\to0$: $C\to\infty$ — sanity, not catastrophe (until breakdown).
+
+If a limit misbehaves, your formula is wrong. This catches ~90% of algebra slips before they cost marks.
+</Callout>
+
+## 20.4 Top conceptual misconceptions (preview of the error bank)
+
+<Callout type="warning">
+1. "$C$ depends on $Q$ or $V$." — No, only geometry & medium.
+2. "Energy stored $=QV$." — It's $\tfrac12 QV$.
+3. "Dielectric always raises energy." — Only with battery on; with battery off it lowers it.
+4. "Charge sharing conserves energy." — Never (unless equal initial $V$).
+5. "Force on plates uses total field $\sigma/\varepsilon_0$." — Use $\sigma/2\varepsilon_0$.
+6. "Steady-state current flows through a capacitor." — Zero.
+7. "Bigger series cap takes bigger voltage." — Smaller cap does.
+
+(The full **Top-100** list lives in the *Common Mistakes* companion page.)
+</Callout>
+
+## 20.5 JEE notes — the meta-strategy
+
+<Callout type="important">
+**The 4-question pre-flight checklist for any capacitance problem:**
+1. **What is fixed — $Q$ or $V$?** (Battery on/off.)
+2. **What is the geometry / what's the medium?** (Find $C$.)
+3. **Is there symmetry or an open-circuit simplification?**
+4. **Which energy form fits — $\tfrac12CV^2$ or $Q^2/2C$?**
+
+Answer these four and almost every problem in this chapter unfolds in one or two lines.
+</Callout>
+
+---
+
+<Callout type="tip">
+**Continue your study:**
+- 📐 **Visual Learning** — every diagram in this module, collected and annotated.
+- ⚠️ **Top-100 Common Mistakes** — the dedicated error-analysis page.
+- 🧮 **Solved Examples & Practice** — 80 solved + 175 original problems (JEE Main & Advanced).
+- 📊 **PYQ Analysis** — what actually gets asked, and how often.
+- 📝 **Revision Sheet** — one-page formulas, concept map, last-minute tips.
+</Callout>
+

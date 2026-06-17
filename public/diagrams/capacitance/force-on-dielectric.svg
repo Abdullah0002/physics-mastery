@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 260" width="560" height="260" font-family="Arial, sans-serif">
+  <rect width="560" height="260" fill="#f8f9fa" rx="10"/>
+  <text x="280" y="26" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a2d5a">Force Pulling a Dielectric Inward</text>
+  <rect x="120" y="70" width="300" height="10" fill="#e05252"/>
+  <rect x="120" y="180" width="300" height="10" fill="#2980b9"/>
+  <text x="108" y="66" font-size="12" fill="#e05252">+Q</text>
+  <text x="108" y="200" font-size="12" fill="#2980b9">-Q</text>
+  <!-- dielectric partially inserted (right part inside) -->
+  <rect x="270" y="80" width="150" height="100" fill="#cfe8ff" opacity="0.85" stroke="#9cc4e4"/>
+  <text x="345" y="135" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a6fb5">K</text>
+  <!-- slab sticks out to the right -->
+  <rect x="420" y="80" width="70" height="100" fill="#cfe8ff" opacity="0.5" stroke="#9cc4e4" stroke-dasharray="4,3"/>
+  <!-- force arrow inward (to left) -->
+  <defs><marker id="af" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#c0392b"/></marker></defs>
+  <line x1="455" y1="130" x2="380" y2="130" stroke="#c0392b" stroke-width="3" marker-end="url(#af)"/>
+  <text x="455" y="118" font-size="13" font-weight="bold" fill="#c0392b">F</text>
+  <!-- fringing field near mouth -->
+  <path d="M270,70 C250,90 250,170 270,190" fill="none" stroke="#b9a4e0" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <path d="M255,65 C230,95 230,165 255,195" fill="none" stroke="#b9a4e0" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="200" y="135" text-anchor="middle" font-size="11" fill="#7a5cc4">fringing</text>
+  <text x="280" y="230" text-anchor="middle" font-size="13" fill="#1a2d5a">F = &#949;&#8320;b(K-1)V&#178;/2d  (constant, directed inward)</text>
+  <text x="280" y="250" text-anchor="middle" font-size="11" fill="#999">Energy method: F = &#177; dU/dx (sign depends on Q-fixed vs V-fixed)</text>
+</svg>

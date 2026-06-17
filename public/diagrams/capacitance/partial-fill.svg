@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 280" width="600" height="280" font-family="Arial, sans-serif">
+  <rect width="600" height="280" fill="#f8f9fa" rx="10"/>
+  <text x="300" y="26" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a2d5a">Partially Filled Capacitor</text>
+  <!-- Left: thickness t (series) -->
+  <text x="150" y="56" text-anchor="middle" font-size="13" font-weight="bold" fill="#27ae60">Slab across thickness = SERIES</text>
+  <rect x="70" y="80" width="160" height="10" fill="#e05252"/>
+  <rect x="70" y="200" width="160" height="10" fill="#2980b9"/>
+  <rect x="70" y="120" width="160" height="50" fill="#cfe8ff" opacity="0.8"/>
+  <text x="150" y="150" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a6fb5">K, thickness t</text>
+  <text x="150" y="108" text-anchor="middle" font-size="11" fill="#777">air</text>
+  <text x="150" y="190" text-anchor="middle" font-size="11" fill="#777">air</text>
+  <line x1="245" y1="90" x2="245" y2="200" stroke="#555" stroke-width="1"/>
+  <text x="255" y="148" font-size="11" fill="#555">d</text>
+  <text x="150" y="235" text-anchor="middle" font-size="12" fill="#1a2d5a">C = &#949;&#8320;A / (d - t(1-1/K))</text>
+  <!-- divider -->
+  <line x1="300" y1="45" x2="300" y2="265" stroke="#ddd" stroke-width="1.5"/>
+  <!-- Right: area A1 (parallel) -->
+  <text x="450" y="56" text-anchor="middle" font-size="13" font-weight="bold" fill="#27ae60">Slab across area = PARALLEL</text>
+  <rect x="370" y="80" width="160" height="10" fill="#e05252"/>
+  <rect x="370" y="200" width="160" height="10" fill="#2980b9"/>
+  <rect x="370" y="90" width="75" height="110" fill="#cfe8ff" opacity="0.8"/>
+  <text x="407" y="150" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a6fb5">K</text>
+  <text x="407" y="168" text-anchor="middle" font-size="10" fill="#777">A&#8321;</text>
+  <text x="490" y="150" text-anchor="middle" font-size="11" fill="#777">air</text>
+  <text x="490" y="168" text-anchor="middle" font-size="10" fill="#777">A&#8322;</text>
+  <text x="450" y="235" text-anchor="middle" font-size="12" fill="#1a2d5a">C = &#949;&#8320;(KA&#8321; + A&#8322;)/d</text>
+  <text x="300" y="262" text-anchor="middle" font-size="11" fill="#999">Along the field &#8594; series  |  Across the area &#8594; parallel</text>
+</svg>

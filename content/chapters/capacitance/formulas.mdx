@@ -1,127 +1,153 @@
 ---
-title: Capacitance — Formula Sheet
-description: Key formulas for Capacitance for JEE & NEET.
+title: Capacitance — Formula Sheet, Concept Map & Last-Minute Revision
+description: One-page Capacitance revision — every formula, a concept map, the Q-fixed vs V-fixed master table, and last-minute exam tips for JEE Main, JEE Advanced, and NEET.
+difficulty: MEDIUM
+tags: [capacitance, formula-sheet, revision, concept-map, JEE, NEET]
 ---
 
-## Capacitance and Capacitors
-
-<Formula label="Definition of Capacitance">
-$$C = \frac{Q}{V} \quad \text{[F = C V}^{-1}\text{]}$$
-</Formula>
-
-<Formula label="Parallel Plate Capacitor (vacuum)">
-$$C_0 = \frac{\varepsilon_0 A}{d}$$
-$$\varepsilon_0 = 8.854\times10^{-12}\ \text{F m}^{-1}$$
-</Formula>
-
-<Formula label="Parallel Plate Capacitor with Dielectric">
-$$C = \frac{K\varepsilon_0 A}{d} = KC_0 \quad (K = \text{dielectric constant} \geq 1)$$
-</Formula>
-
-<Formula label="Spherical Capacitor (inner R₁, outer R₂)">
-$$C = \frac{4\pi\varepsilon_0 R_1 R_2}{R_2 - R_1}$$
-$$\text{Isolated sphere: } C = 4\pi\varepsilon_0 R$$
-</Formula>
-
-<Formula label="Cylindrical Capacitor (length L, radii a, b)">
-$$C = \frac{2\pi\varepsilon_0 L}{\ln(b/a)}$$
-</Formula>
-
----
-
-## Combinations of Capacitors
-
-<Formula label="Series Combination">
-$$\frac{1}{C_{\text{eff}}} = \frac{1}{C_1} + \frac{1}{C_2} + \cdots$$
-$$\text{Charge same on each; voltage divides inversely}$$
-$$V_i = \frac{Q}{C_i}, \quad V_{\text{total}} = Q\sum\frac{1}{C_i}$$
-</Formula>
-
-<Formula label="Parallel Combination">
-$$C_{\text{eff}} = C_1 + C_2 + \cdots$$
-$$\text{Voltage same on each; charge divides proportionally}$$
-$$Q_i = C_i V, \quad Q_{\text{total}} = V\sum C_i$$
-</Formula>
-
----
-
-## Energy in a Capacitor
-
-<Formula label="Energy Stored in Capacitor">
-$$U = \frac{Q^2}{2C} = \frac{1}{2}CV^2 = \frac{QV}{2}$$
-</Formula>
-
-<Formula label="Energy Density in Electric Field">
-$$u = \frac{1}{2}\varepsilon_0 E^2 = \frac{1}{2}\varepsilon_0 K E^2 \text{ (with dielectric)}$$
-</Formula>
-
----
-
-## Effect of Dielectric
-
-<Formula label="With Dielectric — Battery Connected (V constant)">
-$$C' = KC, \quad Q' = KQ, \quad E' = E, \quad U' = KU$$
-</Formula>
-
-<Formula label="With Dielectric — Battery Disconnected (Q constant)">
-$$C' = KC, \quad V' = V/K, \quad E' = E/K, \quad U' = U/K$$
-</Formula>
-
-<Formula label="Force on Dielectric Slab (partially inserted, battery connected)">
-$$F = \frac{\varepsilon_0(K-1)V^2 b}{2d} \quad (b = \text{width of slab})$$
-</Formula>
-
----
-
-## Electric Field in Capacitor
-
-<Formula label="Electric Field between Plates">
-$$E = \frac{\sigma}{\varepsilon_0} = \frac{V}{d} \quad \text{(uniform field, no fringe)}$$
-$$\sigma = \frac{Q}{A}$$
-</Formula>
-
-<Formula label="Field with Dielectric (inside slab)">
-$$E_{\text{medium}} = \frac{E_0}{K} = \frac{\sigma}{K\varepsilon_0}$$
-</Formula>
-
----
-
-## RC Circuit
-
-<Formula label="Charging a Capacitor (through R, connected to EMF ε)">
-$$q(t) = C\varepsilon\left(1 - e^{-t/RC}\right) = Q_0\left(1 - e^{-t/\tau}\right)$$
-$$V_C(t) = \varepsilon\left(1 - e^{-t/\tau}\right)$$
-$$I(t) = \frac{\varepsilon}{R}e^{-t/\tau}$$
-$$\tau = RC \quad \text{(time constant)}$$
-</Formula>
-
-<Formula label="Discharging a Capacitor (through R)">
-$$q(t) = Q_0 e^{-t/\tau}$$
-$$V_C(t) = V_0 e^{-t/\tau}$$
-$$I(t) = \frac{V_0}{R}e^{-t/\tau}$$
-</Formula>
-
-<Formula label="Energy Dissipated in Charging (Heat in R)">
-$$U_R = \frac{1}{2}C\varepsilon^2 = U_C$$
-$$\text{(Half of energy from source is stored; half dissipated regardless of R)}$$
-</Formula>
-
-<Callout type="important">
-Energy dissipated in R = Energy stored in C = $\frac{1}{2}C\varepsilon^2$, regardless of R. This is a fundamental result.
+<Callout type="tip">
+**Use this the night before.** Everything you need on one page — formulas, the master decision table, the concept map, and the traps. If a line looks unfamiliar, jump back to the full **Theory** module.
 </Callout>
 
 ---
 
-## Capacitors in Various Arrangements
+## 1. Core Definitions
 
-<Formula label="Capacitor with Conducting Slab (thickness t)">
-$$C = \frac{\varepsilon_0 A}{d - t}$$
+<Formula label="Capacitance">
+$$C=\frac{Q}{V}\qquad [\text{F}=\text{C/V}],\qquad [C]=\mathrm{M^{-1}L^{-2}T^{4}I^{2}}$$
 </Formula>
 
-<Formula label="Capacitor with Multiple Dielectric Slabs (series)">
-$$C = \frac{\varepsilon_0 A}{t_1/K_1 + t_2/K_2 + \cdots}$$
+- $C$ depends **only** on geometry and medium — never on $Q$ or $V$.
+- $\varepsilon_0=8.85\times10^{-12}\,\text{F/m}$, $\ \dfrac{1}{4\pi\varepsilon_0}=9\times10^{9}$.
+
+---
+
+## 2. Capacitance of Standard Geometries
+
+| Geometry | Capacitance |
+|---|---|
+| Isolated sphere (radius $R$) | $C=4\pi\varepsilon_0 R$ |
+| Concentric spheres ($a<b$) | $C=4\pi\varepsilon_0\dfrac{ab}{b-a}$ |
+| Parallel plate (vacuum) | $C_0=\dfrac{\varepsilon_0 A}{d}$ |
+| Parallel plate (dielectric $K$) | $C=\dfrac{K\varepsilon_0 A}{d}=KC_0$ |
+| Cylindrical (coaxial, length $L$) | $C=\dfrac{2\pi\varepsilon_0 L}{\ln(b/a)}$ |
+
+---
+
+## 3. Field, Potential, Charge (Parallel Plate)
+
+$$\sigma=\frac{Q}{A},\qquad E=\frac{\sigma}{\varepsilon_0}=\frac{V}{d},\qquad V=Ed,\qquad E_{\text{with }K}=\frac{E_0}{K}.$$
+
+---
+
+## 4. Combinations
+
+<Formula label="Series and Parallel">
+$$\text{Series: }\ \frac{1}{C_{eq}}=\sum\frac{1}{C_i}\quad(\text{same }Q);\qquad \text{Parallel: }\ C_{eq}=\sum C_i\quad(\text{same }V)$$
 </Formula>
 
-<Formula label="Capacitor with Multiple Dielectric Slabs (parallel)">
-$$C = \frac{\varepsilon_0}{d}\left(K_1 A_1 + K_2 A_2 + \cdots\right)$$
+- Two in series: $C_{eq}=\dfrac{C_1C_2}{C_1+C_2}$, $\ \dfrac{V_1}{V_2}=\dfrac{C_2}{C_1}$.
+- Series $C_{eq}<$ smallest; parallel $C_{eq}>$ largest.
+- Charge in parallel: $Q_i=Q\dfrac{C_i}{\sum C}$.
+
+---
+
+## 5. Energy
+
+<Formula label="Energy Stored and Density">
+$$U=\frac{1}{2}QV=\frac{1}{2}CV^2=\frac{Q^2}{2C},\qquad u=\frac{1}{2}\varepsilon_0 E^2=\frac12 K\varepsilon_0E^2\ (\text{dielectric})$$
 </Formula>
+
+- Fixed $Q$ → use $Q^2/2C$. Fixed $V$ → use $\tfrac12CV^2$.
+- Battery does $QV$; cap stores $\tfrac12QV$; **50% lost** when charging from empty.
+
+---
+
+## 6. Dielectrics & Polarization
+
+$$K=\frac{C}{C_0}=\frac{E_0}{E}=\frac{\varepsilon}{\varepsilon_0},\quad \chi_e=K-1,\quad P=\varepsilon_0(K-1)E,\quad \sigma_b=\sigma_f\!\left(1-\frac1K\right),\quad D=\varepsilon_0KE.$$
+
+---
+
+## 7. Partial / Multi-Dielectric
+
+| Configuration | Capacitance |
+|---|---|
+| Slab thickness $t<d$ (along field) | $C=\dfrac{\varepsilon_0 A}{d-t(1-1/K)}$ |
+| Metal slab thickness $t$ | $C=\dfrac{\varepsilon_0 A}{d-t}$ |
+| Stacked slabs (series) | $C=\dfrac{\varepsilon_0 A}{\sum d_i/K_i}$ |
+| Side-by-side (parallel) | $C=\dfrac{\varepsilon_0}{d}\sum K_iA_i$ |
+| Stacked $D$-continuity | $K_1E_1=K_2E_2$ |
+
+---
+
+## 8. Forces
+
+$$F_{\text{plates}}=\frac{Q^2}{2\varepsilon_0 A}=\frac{\sigma^2A}{2\varepsilon_0},\qquad P=\frac{\sigma^2}{2\varepsilon_0}=\frac12\varepsilon_0E^2=u,$$
+$$F_{\text{on dielectric}}=\frac{\varepsilon_0 b(K-1)V^2}{2d}\quad(\text{inward; energy method }F=\pm\tfrac{dU}{dx}).$$
+
+---
+
+## 9. Charge Sharing & RC
+
+$$V_{common}=\frac{C_1V_1+C_2V_2}{C_1+C_2},\qquad \Delta U_{lost}=\frac{C_1C_2(V_1-V_2)^2}{2(C_1+C_2)}\ge0.$$
+$$q_{\text{charge}}=Q_0(1-e^{-t/RC}),\quad q_{\text{discharge}}=Q_0e^{-t/RC},\quad \tau=RC.$$
+
+---
+
+## 10. ⭐ The Master Table — Dielectric Insertion
+
+| Quantity | Battery ON ($V$ fixed) | Battery OFF ($Q$ fixed) |
+|---|---|---|
+| $C$ | ×$K$ | ×$K$ |
+| $Q$ | ×$K$ | unchanged |
+| $V$ | unchanged | ÷$K$ |
+| $E$ | unchanged | ÷$K$ |
+| $U$ | ×$K$ (rises) | ÷$K$ (falls) |
+
+<Callout type="important">
+**First question, every time:** *Is the battery connected ($V$ fixed) or removed ($Q$ fixed)?* This table then gives every answer.
+</Callout>
+
+---
+
+## 11. Concept Map
+
+```
+                         CAPACITANCE  C = Q/V
+                        (geometry + medium only)
+                                  |
+     +------------+---------------+----------------+---------------+
+ GEOMETRY      COMBOS          ENERGY           DIELECTRIC      CIRCUITS
+ sphere 4pe0R  series 1/SC    1/2 CV^2          C = K C0        charge sharing
+ plate e0A/d   parallel SC    u = 1/2 e0 E^2    sb=sf(1-1/K)    V_common, dU loss
+ cyl 2pe0L/ln  V~1/C (ser)    battery loses 1/2 E -> E0/K       steady state: OPEN
+               Q~C  (par)         |             D = e0 K E          |
+     +--------------+-------------+----- FORCES -----+- partial fill +
+                          F_plate = s^2 A / 2e0
+                          P = 1/2 e0 E^2 = u
+                          F_dielectric = e0 b (K-1) V^2 / 2d
+                                  |
+                        MASTER Q: Q-fixed or V-fixed?
+```
+
+---
+
+## 12. Last-Minute Tips
+
+<Callout type="tip">
+1. **Redraw every network** and label nodes before computing — most errors are identification, not algebra.
+2. **State what's fixed** ($Q$ or $V$) at the top of every dielectric/geometry-change problem.
+3. **Pick the right energy form:** $Q^2/2C$ (fixed $Q$) or $\tfrac12CV^2$ (fixed $V$).
+4. **Smaller series cap takes the larger voltage** — and may break down first.
+5. **Charge sharing always loses energy**; use the $\Delta U$ formula directly.
+6. **DC steady state:** capacitor = open circuit; solve the resistor network, then $Q=CV$.
+7. **Force uses $\sigma/2\varepsilon_0$** (other plate), not the full field.
+8. **Limiting-case check** every derived formula ($K\to1$, $t\to0$, $b\to\infty$).
+9. Units: convert μF/nF/pF → F **before** squaring in energy formulas.
+10. **Balanced bridge?** The bridge capacitor carries zero charge — ignore it.
+</Callout>
+
+<Callout type="important">
+**The seven non-negotiables:** $U=\tfrac12QV$ · field between plates $=\sigma/\varepsilon_0$ but force uses $\sigma/2\varepsilon_0$ · series same-$Q$ smaller-cap-bigger-$V$ · dielectric raises $U$ only with battery on · charge sharing always loses energy · steady-state cap current is zero · **always ask: $Q$ fixed or $V$ fixed?**
+</Callout>

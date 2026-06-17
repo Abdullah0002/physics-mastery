@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" font-family="Arial, sans-serif">
+  <rect width="600" height="300" fill="#f8f9fa" rx="10"/>
+  <text x="300" y="26" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a2d5a">Dielectric Insertion: The Two Master Cases</text>
+  <!-- left: battery on -->
+  <text x="150" y="56" text-anchor="middle" font-size="13" font-weight="bold" fill="#27ae60">Battery CONNECTED (V fixed)</text>
+  <line x1="60" y1="120" x2="60" y2="100" stroke="#333" stroke-width="2"/>
+  <line x1="50" y1="100" x2="70" y2="100" stroke="#333" stroke-width="4"/>
+  <line x1="54" y1="93" x2="66" y2="93" stroke="#333" stroke-width="2"/>
+  <line x1="60" y1="93" x2="60" y2="80" stroke="#333" stroke-width="2"/>
+  <line x1="60" y1="80" x2="110" y2="80" stroke="#333" stroke-width="2"/>
+  <line x1="60" y1="120" x2="110" y2="120" stroke="#333" stroke-width="2"/>
+  <rect x="110" y="75" width="8" height="90" fill="#e05252"/>
+  <rect x="200" y="75" width="8" height="90" fill="#2980b9"/>
+  <rect x="118" y="75" width="82" height="90" fill="#cfe8ff" opacity="0.7"/>
+  <line x1="110" y1="80" x2="110" y2="75" stroke="#333"/>
+  <line x1="200" y1="120" x2="200" y2="165" stroke="#333" stroke-width="2"/>
+  <text x="159" y="125" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a6fb5">K</text>
+  <text x="80" y="200" font-size="12" fill="#27ae60">C &#8593; xK</text>
+  <text x="80" y="218" font-size="12" fill="#27ae60">Q &#8593; xK</text>
+  <text x="80" y="236" font-size="12" fill="#999">V same, E same</text>
+  <text x="80" y="254" font-size="12" fill="#27ae60">U &#8593; xK (rises)</text>
+  <text x="80" y="276" font-size="11" fill="#555">battery supplies energy</text>
+  <!-- divider -->
+  <line x1="300" y1="45" x2="300" y2="285" stroke="#ddd" stroke-width="1.5"/>
+  <!-- right: battery off -->
+  <text x="450" y="56" text-anchor="middle" font-size="13" font-weight="bold" fill="#c0392b">Battery REMOVED (Q fixed)</text>
+  <rect x="410" y="75" width="8" height="90" fill="#e05252"/>
+  <rect x="500" y="75" width="8" height="90" fill="#2980b9"/>
+  <rect x="418" y="75" width="82" height="90" fill="#cfe8ff" opacity="0.7"/>
+  <text x="459" y="125" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a6fb5">K</text>
+  <line x1="380" y1="120" x2="410" y2="120" stroke="#333" stroke-width="2"/>
+  <line x1="380" y1="80" x2="410" y2="80" stroke="#333" stroke-width="2"/>
+  <line x1="380" y1="80" x2="380" y2="120" stroke="#333" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="356" y="104" font-size="11" fill="#c0392b">open</text>
+  <text x="400" y="200" font-size="12" fill="#27ae60">C &#8593; xK</text>
+  <text x="400" y="218" font-size="12" fill="#999">Q same</text>
+  <text x="400" y="236" font-size="12" fill="#c0392b">V &#8595; /K, E &#8595; /K</text>
+  <text x="400" y="254" font-size="12" fill="#c0392b">U &#8595; /K (falls)</text>
+  <text x="400" y="276" font-size="11" fill="#555">field does work pulling slab in</text>
+</svg>

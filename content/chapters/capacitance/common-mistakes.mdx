@@ -1,0 +1,179 @@
+---
+title: Capacitance — Top 100 Mistakes (and the Correct Thinking)
+description: The 100 most common conceptual and numerical errors JEE & NEET students make in Capacitance, each paired with the correct reasoning. Organised by topic for fast revision before the exam.
+difficulty: HARD
+tags: [capacitance, common-mistakes, misconceptions, exam-traps, JEE, NEET]
+---
+
+<Callout type="warning">
+**How to use this page.** Most marks in Capacitance are lost not to hard problems but to *predictable* traps. Read one block, cover the "Correct thinking," and re-derive it. If you can explain *why* the mistake is wrong, you will never repeat it under exam pressure.
+</Callout>
+
+---
+
+## A. Definition & Meaning of Capacitance (1–10)
+
+| # | ❌ Mistake | ✅ Correct thinking |
+|---|---|---|
+| 1 | "$C$ depends on $Q$." | $C=Q/V$ is a ratio fixed by **geometry + medium**. Change $Q$ and $V$ changes proportionally; $C$ is unchanged. |
+| 2 | "$C$ depends on $V$." | Same as above — $V$ is a *state*, not a property. |
+| 3 | "A capacitor stores net charge." | It stores **separated** charge ($+Q,-Q$); the device is neutral overall. |
+| 4 | "Capacitance needs two plates." | Even an **isolated** conductor has capacitance ($C=4\pi\varepsilon_0R$ for a sphere). |
+| 5 | "Bigger capacitor = physically bigger." | Not necessarily; a thin gap or high-$K$ dielectric gives large $C$ in a small volume. |
+| 6 | "Farad is a small unit." | The farad is **huge**; practical values are pF–μF. |
+| 7 | Using $Q$ as charge on *both* plates combined. | $Q$ = magnitude on **one** plate. |
+| 8 | "$V$ is the potential of the positive plate." | $V$ is the **difference** between the plates. |
+| 9 | Mixing $\mu$F, nF, pF in a formula. | Convert everything to farads first. |
+| 10 | "Capacitance changes when you charge it more." | No — geometry is unchanged, so $C$ is constant. |
+
+---
+
+## B. Parallel Plate & Geometry (11–22)
+
+| # | ❌ Mistake | ✅ Correct thinking |
+|---|---|---|
+| 11 | Field between plates $=\sigma/2\varepsilon_0$. | Between the plates it is $\sigma/\varepsilon_0$ (two sheets add). |
+| 12 | $A$ = total area of both plates. | $A$ = overlap area of **one** plate. |
+| 13 | $C\propto 1/d$ holds for any $d$. | Only for $d\ll$ plate size; fringing breaks it otherwise. |
+| 14 | Ignoring that $E=V/d$ can cause breakdown. | Too small a $d$ ⇒ field exceeds dielectric strength ⇒ spark. |
+| 15 | Using $\varepsilon_0 A/d$ for a sphere. | Sphere is $4\pi\varepsilon_0 R$; cylinder is $2\pi\varepsilon_0 L/\ln(b/a)$. |
+| 16 | "$C=4\pi\varepsilon_0R^2$." | It is $4\pi\varepsilon_0 R$ — capacitance ~ (permittivity × length). |
+| 17 | Using $V=kQ/r$ *inside* a charged sphere. | Inside a conductor $V$ is constant $=kQ/R$. |
+| 18 | Forgetting fringing raises real $C$. | Edge fields add a little extra capacitance. |
+| 19 | Treating air as $K\gg1$. | Air $\approx$ vacuum ($K\approx1.0006$). |
+| 20 | Doubling both plates doubles $C$. | Only the **overlap** area counts. |
+| 21 | Confusing $\varepsilon$ and $K$. | $\varepsilon=K\varepsilon_0$; $K$ is dimensionless. |
+| 22 | "Concentric-sphere and parallel-plate formulas are unrelated." | Parallel plate is the thin-gap limit of concentric spheres. |
+
+---
+
+## C. Series & Parallel Combinations (23–35)
+
+| # | ❌ Mistake | ✅ Correct thinking |
+|---|---|---|
+| 23 | Adding $C$ directly in series. | Series: $1/C_{eq}=\sum 1/C_i$. |
+| 24 | Using $1/C_{eq}=\sum 1/C_i$ in parallel. | Parallel: $C_{eq}=\sum C_i$. |
+| 25 | "Series $C_{eq}$ is bigger than each." | It is **smaller than the smallest**. |
+| 26 | "Bigger series cap takes more voltage." | Voltage divides **inversely** with $C$: smaller cap, bigger $V$. |
+| 27 | Different charge on series caps. | Series caps carry the **same** charge. |
+| 28 | Same charge on parallel caps. | Parallel caps share **voltage**, not charge. |
+| 29 | Calling adjacent caps "series" without checking the node. | If the connecting node has another branch, they are not simple series. |
+| 30 | Forgetting to convert a "two caps in series" into $C_1C_2/(C_1+C_2)$. | Memorise this shortcut. |
+| 31 | Treating capacitor combos like resistors. | They are **mirror images** of resistor rules. |
+| 32 | Not redrawing the circuit. | Relabel nodes; identify same-node pairs (parallel) vs chains (series). |
+| 33 | Charge divides equally in parallel. | It divides in proportion to $C_i$. |
+| 34 | Ignoring an isolated middle conductor's induced charge. | It forces equal $Q$ along the series path. |
+| 35 | Adding voltages in parallel. | Voltage is **common** in parallel. |
+
+---
+
+## D. Energy & Energy Density (36–48)
+
+| # | ❌ Mistake | ✅ Correct thinking |
+|---|---|---|
+| 36 | $U=QV$. | $U=\tfrac12 QV$ — the average voltage during charging is $V/2$. |
+| 37 | Using $\tfrac12CV^2$ when $Q$ is fixed. | Fixed $Q$ → use $Q^2/2C$. |
+| 38 | Using $Q^2/2C$ when $V$ is fixed. | Fixed $V$ → use $\tfrac12CV^2$. |
+| 39 | "Battery energy = capacitor energy." | Battery does $QV$; cap stores $\tfrac12QV$; the other half is lost. |
+| 40 | "No resistance ⇒ no energy loss when charging." | Exactly 50% is lost regardless of $R$ (heat/radiation). |
+| 41 | $u=\tfrac12\varepsilon_0E$. | $u=\tfrac12\varepsilon_0E^2$ (square the field). |
+| 42 | Using vacuum $u$ inside a dielectric. | Use $u=\tfrac12\varepsilon E^2=\tfrac12K\varepsilon_0E^2$. |
+| 43 | "Energy sits on the plates." | Energy is in the **field**, spread through the gap volume. |
+| 44 | Forgetting energy density is universal. | $u=\tfrac12\varepsilon_0E^2$ holds for *any* field, not just capacitors. |
+| 45 | Mismatched units in energy (μF with V). | Convert μF→F before squaring. |
+| 46 | "Doubling $E$ doubles $u$." | $u\propto E^2$, so it **quadruples**. |
+| 47 | Forgetting energy change sign in dielectric problems. | Depends on $Q$-fixed (falls) vs $V$-fixed (rises). |
+| 48 | Treating charge-sharing as energy-conserving. | Energy is always lost unless $V_1=V_2$. |
+
+---
+
+## E. Dielectrics & Polarization (49–66)
+
+| # | ❌ Mistake | ✅ Correct thinking |
+|---|---|---|
+| 49 | "$C=\varepsilon_0A/(Kd)$." | $K$ **multiplies**: $C=K\varepsilon_0A/d$. |
+| 50 | Multiplying by $K$ for a partial slab. | Partial fill ⇒ series/parallel combination, not a simple ×$K$. |
+| 51 | "Dielectric conducts a little." | It moves **bound** charge only; no free conduction. |
+| 52 | "Bound charge is fictitious." | It is real surface charge — just not free to move. |
+| 53 | "$\sigma_b$ can exceed $\sigma_f$." | $\sigma_b=\sigma_f(1-1/K)<\sigma_f$ always. |
+| 54 | Net gap charge $=\sigma_f$. | Net $=\sigma_f/K$ after bound charge cancels part. |
+| 55 | Field in dielectric $=E_0$. | Field drops to $E_0/K$. |
+| 56 | "Polar and non-polar polarise the same way." | Non-polar: induced dipoles. Polar: alignment of permanent dipoles. |
+| 57 | Ignoring temperature dependence. | Orientational polarization weakens as $T$ rises. |
+| 58 | Confusing $\vec D,\vec E,\vec P$. | $\vec D$←free charge, $\vec E$←all charge, $\vec P$←bound charge. |
+| 59 | Forgetting $\vec D=\varepsilon_0K\vec E$. | Key relation for boundary problems. |
+| 60 | "$D$ is discontinuous across a clean boundary." | $D_\perp$ is continuous when no free charge sits there. |
+| 61 | "A metal slab behaves like a dielectric of some finite $K$." | Metal slab = $K\to\infty$ limit. |
+| 62 | "Metal slab position matters." | Only its **thickness** matters; position is irrelevant. |
+| 63 | "Inserting dielectric always raises energy." | Only with **battery on**; with battery off energy **falls**. |
+| 64 | "Inserting dielectric always lowers energy." | Only with **battery off**. |
+| 65 | Forgetting the battery supplies extra charge ($V$ fixed). | $\Delta Q=(K-1)C_0V$ flows from the battery. |
+| 66 | Forgetting the slab is **pulled in** (battery off). | Field does work on the slab as $U$ decreases. |
+
+---
+
+## F. Dielectric Insertion — The Master Cases (67–76)
+
+| # | ❌ Mistake | ✅ Correct thinking |
+|---|---|---|
+| 67 | Not asking "is the battery connected?" | This single question decides everything. |
+| 68 | Holding $Q$ fixed with battery connected. | Battery connected ⇒ **$V$** fixed. |
+| 69 | Holding $V$ fixed with battery disconnected. | Disconnected ⇒ **$Q$** fixed. |
+| 70 | "$E$ changes with battery on." | $E=V/d$ is unchanged when $V$ is fixed. |
+| 71 | "$E$ unchanged with battery off." | $E$ drops by $K$ when $Q$ is fixed. |
+| 72 | "$Q$ rises with battery off." | $Q$ is constant when disconnected. |
+| 73 | "$V$ rises with battery on." | $V$ is pinned to the EMF. |
+| 74 | Using one energy formula for both cases. | Pick $\tfrac12CV^2$ ($V$ fixed) or $Q^2/2C$ ($Q$ fixed). |
+| 75 | Forgetting the dissipated half when battery charges extra. | Battery work $V\Delta Q$; half stored, half lost. |
+| 76 | Mixing up the rise/fall direction of $U$. | $V$ fixed: $U\times K$. $Q$ fixed: $U\div K$. |
+
+---
+
+## G. Forces (77–84)
+
+| # | ❌ Mistake | ✅ Correct thinking |
+|---|---|---|
+| 77 | $F=QE$ with total $E=\sigma/\varepsilon_0$. | Use the **other** plate's field $\sigma/2\varepsilon_0$. |
+| 78 | "Plates repel." | Opposite charges → **attract**. |
+| 79 | $F=-dU/dx$ with battery connected. | Battery on: $F=+\tfrac12V^2\,dC/dx$ (include battery work). |
+| 80 | "Force on dielectric depends on insertion depth $x$." | For the ideal slab it is **constant**. |
+| 81 | Forgetting pressure $=$ energy density. | $P=\sigma^2/2\varepsilon_0=\tfrac12\varepsilon_0E^2=u$. |
+| 82 | Using full field for plate pressure. | Half the field is self-field; use $\sigma/2\varepsilon_0$. |
+| 83 | Force persists after slab fully inside. | It vanishes (no fringing region left). |
+| 84 | Wrong sign of $dC/dx$. | $C$ increases as overlap increases ⇒ inward force. |
+
+---
+
+## H. Circuits, Charge Sharing & Transients (85–100)
+
+| # | ❌ Mistake | ✅ Correct thinking |
+|---|---|---|
+| 85 | Conserving voltage when reconnecting caps. | Conserve **charge** on the isolated island. |
+| 86 | "Charge sharing conserves energy." | Energy is lost: $\Delta U=\dfrac{C_1C_2(V_1-V_2)^2}{2(C_1+C_2)}$. |
+| 87 | Adding $Q_1+Q_2$ for opposite-polarity join. | Use $|Q_1-Q_2|$. |
+| 88 | "Common potential uses average of $V_1,V_2$." | Weighted by capacitance: $(C_1V_1+C_2V_2)/(C_1+C_2)$. |
+| 89 | Current flows through a charged cap in steady state. | Steady-state capacitor current is **zero**. |
+| 90 | "Capacitor voltage can jump instantly." | $V_C$ is continuous (jump needs infinite current). |
+| 91 | "At $t=0$ a charged cap is a short." | An **uncharged** cap is a short at $t=0$; a charged one holds its voltage. |
+| 92 | $\tau=RC$ means 50% charge. | One $\tau$ ⇒ 63% (charge) / 37% (discharge), not half. |
+| 93 | Wrong units for $\tau$. | $RC$ has units of seconds. |
+| 94 | Forgetting open-circuit trick for final charges. | In DC steady state, treat cap branches as open. |
+| 95 | Ignoring initial current $=V_0/R$. | Current is maximum at $t=0$, then decays. |
+| 96 | "Capacitor blocks AC." | It blocks **DC**, passes AC (reactance $1/\omega C$). |
+| 97 | Treating a wire across plates as still a capacitor. | A shorting wire makes both plates one conductor — $C$ irrelevant. |
+| 98 | Forgetting symmetry/zero-charge branches in networks. | Equipotential nodes ⇒ delete the bridge cap. |
+| 99 | Brute-forcing infinite networks term by term. | Use self-similarity (fixed-point equation). |
+| 100 | Not sanity-checking limits ($K\to1$, $t\to0$, $b\to\infty$). | Limiting cases catch ~90% of algebra slips. |
+
+---
+
+<Callout type="tip">
+**The 7 deadliest (memorise these cold):**
+1. $U=\tfrac12QV$, not $QV$.
+2. Field between plates $=\sigma/\varepsilon_0$, but force uses $\sigma/2\varepsilon_0$.
+3. Series caps: same $Q$, smaller cap takes bigger $V$, $C_{eq}<$ smallest.
+4. Dielectric raises energy **only** with the battery on.
+5. Charge sharing **always** loses energy.
+6. Steady-state capacitor current is **zero**.
+7. Always ask first: **is $Q$ fixed or $V$ fixed?**
+</Callout>
